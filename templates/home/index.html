@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block carousel %}
+    <div class="carousel carousel-slider center">
+        <div class="carousel-fixed-item center">
+            <a href="{% url 'event:home' %}" class="btn waves-effect white grey-text darken-text-2">
+                Register
+            </a>
+        </div>
+        <div class="carousel-item indigo darken-4 white-text" href="#one!">
+            <h1>
+                Get ready for Transcend!
+            </h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <h3>
+            <span>
+                Special Interest Groups (SIGs)
+            </span>
+        </h3>
+        {% for sig_choice in sigs %}
+        <div class="col s12 l3">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="/media/{{sig_choice.avatar}}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        {{sig_choice.name}}
+                        <i class="material-icons right">
+                            more_vert
+                        </i>
+                    </span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">
+                        {{sig_choice.name}}
+                        <i class="material-icons right">
+                            close
+                        </i>
+                    </span>
+                    <br>
+                    <p>
+                        {{sig_choice.description|safe}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+    <div id="counter" class="center row">
+        <h3>
+            <span>
+                In Numbers
+            </span>
+        </h3>
+        <div class="col l4 s12">
+            <h2 class="year"></h2>
+            <span>
+                Years In Operation
+            </span>
+        </div>
+        <div class="col l4 s12">
+            <h2 class="member"></h2>
+            <span>
+                Members This Year
+            </span>
+        </div>
+        <div class="col l4 s12">
+            <h2 class="project"></h2>
+            <span>
+                Projects This Year
+            </span>
+        </div>
+    </div>
+
+    <div class="center row">
+        <h3>
+            <span>
+                The Core
+            </span>
+        </h3>
+        <div class='flexrow'>
+            {% for member in core %}
+            <a class="core_img">
+                <div class="img__overlay">
+                    {{member.user.first_name}} {{member.user.last_name}}
+                    <br>
+                    {{member.role}}
+                </div>
+                <img src='media/{{member.user.avatar}}'>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% block scripts %}
+        {% load static %}
+        <script type="text/javascript">
+            var year = {{year}};
+            var project = {{project}};
+            var member = {{member}};
+        </script>
+        <script type="text/javascript" src="{% static 'js/home/main.js'%}"></script>
+    {% endblock scripts %}
+
+{% endblock content %}
