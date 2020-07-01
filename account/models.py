@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.conf import settings
-from .helperFunctions import default_user_avatar_path, user_avatar_upload_path, sig_avatar_upload_path
+from website.helperFunctions import default_user_avatar_path, user_avatar_upload_path, sig_avatar_upload_path
 
 class SIG(models.Model):
     name = models.CharField(
@@ -21,6 +21,10 @@ class SIG(models.Model):
         return self.name
 
 class User(AbstractUser):
+    GENDER_CHOICES = (
+        ('F', 'Female',),
+        ('M', 'Male',)
+    )
     phone_regex = RegexValidator(
         regex = r'^\+?1?\d{9,15}$', 
         message = "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
@@ -44,8 +48,9 @@ class User(AbstractUser):
         default = 2020, 
         editable = True
     )
-    male = models.BooleanField(
-        default = True
+    gender = models.CharField(
+        max_length = 1,
+        choices = GENDER_CHOICES
     )
     #Used as contact details for girls in case they are the point of contact for an event
     hostel_address = models.CharField(

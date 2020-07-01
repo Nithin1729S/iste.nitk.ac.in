@@ -5,12 +5,15 @@
             <div class="card">
                 <div class="card-content black-text">
                     <span class="center card-title">
-                        Edit Profile
+                        Edit Profile | {{user.first_name}} {{user.last_name}}
+                        <br>
+                        <br>
                     </span> 
+
                     <form method="POST" enctype="multipart/form-data" action="{% url 'account:edit'%}">
                         {% csrf_token %}
                         <div class="row">
-                            <div class="col s4">
+                            <div class="col s12 m4">
                                 <img class='responsive-img' src="{{user.avatar.url}}"/>
                                 <div class="file-field input-field">
                                     <div class="btn">
@@ -24,15 +27,31 @@
                                 <hr>
                                 <span>Click submit once you upload the image to view changes</span>
                             </div>
-                            <div class="col s8">
+                            <div class="col s12 m8">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        {{form.sigs}}
+                                        <label for="name-input">
+                                            {{form.sigs.label}}
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        {{form.gender}}
+                                        <label for="name-input">
+                                            {{form.gender.label}}
+                                        </label>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <i class="form-icon material-icons prefix">
-                                            person
+                                            email
                                         </i>
-                                        <input name="name" type="text" id="name-input" value="{{user.first_name}} {{user.last_name}}" disabled>
+                                        {{form.email}}
                                         <label for="name-input">
-                                            Name
+                                            {{form.email.label}}
                                         </label>
                                     </div>
                                 </div>
@@ -41,9 +60,9 @@
                                         <i class="form-icon material-icons prefix">
                                             date_range
                                         </i>
-                                        <input name="batch" type="text" id="batch-input" disabled>
-                                        <label for="batch-input">
-                                            Batch
+                                        {{form.batch_of}}
+                                        <label for="name-input">
+                                            {{form.batch_of.label}}
                                         </label>
                                     </div>
                                 </div>
@@ -52,9 +71,9 @@
                                         <i class="form-icon material-icons prefix">
                                             local_phone
                                         </i>
-                                        <input name="phone_number" type="text" id="batch-input" value="{{user.phone_number}}">
-                                        <label for="batch-input">
-                                            Contact Number
+                                        {{form.phone_number}}
+                                        <label for="name-input">
+                                            {{form.phone_number.label}}
                                         </label>
                                     </div>
                                 </div>
@@ -63,17 +82,16 @@
                                         <i class="form-icon material-icons prefix">
                                             home
                                         </i>
-                                        <input name="hostel_address" type="text" id="batch-input" value="{{user.hostel_address}}">
-                                        <label for="batch-input">
-                                            Hostel Address
+                                        {{form.hostel_address}}
+                                        <label for="name-input">
+                                            {{form.hostel_address.label}}
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    
                         <button class="btn waves-effect waves-light" type="submit" name="action">
-                            Submit
+                            Submit Changes
                             <i class="material-icons right">
                                 send
                             </i>

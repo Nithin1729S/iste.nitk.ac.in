@@ -6,18 +6,14 @@ $(document).ready(function() {
     $('select').formSelect();
     $( "#progress" ).slideToggle('slow');
     $('.fixed-action-btn').floatingActionButton();
+    
  });
  $('.carousel.carousel-slider').carousel({
-  fullWidth: true,
-  indicators: true
+    fullWidth: true,
+    indicators: true
 });
 
  $('body').on('touchstart', function() {});
- ////////////////////////////////////////////////////////////
-//
-// USED IN LOGIN.HTML
-//
-////////////////////////////////////////////////////////////
 
  $('#alert_close').click(function(){
     $( "#alert_box" ).fadeOut( "slow", function() {});
@@ -76,3 +72,12 @@ $('.projects_back').click(function(){
     $(this).toggleClass("animateLine", !!px);
   });
 
+function set_message_colour(message_type){
+    //Integer value for messages.ERROR, 20 for messages.INFO
+    if(message_type == 40){
+        $('#messages_card').addClass('red')
+    }
+    else{
+        $('#messages_card').addClass('green')
+    }
+}

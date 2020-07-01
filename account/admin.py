@@ -35,15 +35,6 @@ class UserAdmin(admin.ModelAdmin):
 @admin.register(SIG)
 class SIGAdmin(admin.ModelAdmin):
     list_display = ('name',)
-    
-    def save_model(self, request, obj, form, change):
-        if obj.pk:
-            orig_obj = SIG.objects.get(pk=obj.pk)
-            
-        else:
-            obj.set_password(obj.password)
-            
-        obj.save()
 
 @admin.register(Core)
 class CoreAdmin(admin.ModelAdmin):
