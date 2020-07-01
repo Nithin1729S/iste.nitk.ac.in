@@ -46,7 +46,6 @@ def deployView(request):
     application = get_wsgi_application()
     call_command('makemigrations')
     call_command('migrate')
-    call_command('runserver',  '0.0.0.0:8000')
 
     return render(request,'home/index.html',{})
 
