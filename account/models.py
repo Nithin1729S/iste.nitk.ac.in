@@ -42,15 +42,18 @@ class User(AbstractUser):
     )
     sigs = models.ManyToManyField(
         SIG, 
-        editable = True
+        editable = True,
+        blank = True
     )
     batch_of = models.IntegerField(
         default = 2020, 
-        editable = True
+        editable = True,
+        blank = True
     )
     gender = models.CharField(
         max_length = 1,
-        choices = GENDER_CHOICES
+        choices = GENDER_CHOICES,
+        blank = True
     )
     #Used as contact details for girls in case they are the point of contact for an event
     hostel_address = models.CharField(

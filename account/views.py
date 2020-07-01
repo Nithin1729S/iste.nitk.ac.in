@@ -10,26 +10,30 @@ from website.helperFunctions import user_avatar_upload_path
 from website.decorators import check_member_year
 
 def loginView(request):
-    if request.method != "POST":
+    context = {}
+
+    if request.method == "GET":
         form = LoginForm()
-        return render(request, 'account/login.html', {'form': form})
-
-    form = LoginForm(data = request.POST)
-
-    if form.is_valid():
-        user = authenticate(
-            request, 
-            username = form.cleaned_data['username'], 
-            password = form.cleaned_data['password']
-        )
-        login(request, user)
-        return redirect('home:index')
+        context['form'] = form
     else:
-        messages.add_message(
-            request,messages.ERROR,
-            'Invalid username or password'
-        )
-        return redirect('account:login')
+        form = LoginForm(data = request.POST)
+        context['form'] = form
+        if form.is_valid():
+            user = authenticate(
+                request, 
+                username = form.cleaned_data['username'], 
+                password = form.cleaned_data['password']
+            )
+            login(request, user)
+            return redirect('home:index')
+        else:
+            messages.add_message(
+                request,
+                messages.ERROR,
+                'Invalid username or password'
+            )    
+
+    return render(request, 'account/login.html', context)
 
 def logoutView(request):
     logout(request)
@@ -37,59 +41,70 @@ def logoutView(request):
 
 @login_required
 def editView(request):
-    if request.method != "POST":
+    context = {}
+
+    if request.method == "GET":
         form = EditProfileForm(instance = request.user)
-        return render(request, 'account/edit.html', {'form': form})
-    
-    user = request.user
-    user.phone_number = request.POST['phone_number']
-    newAvatar = request.FILES['avatar']
-    user.avatar = newAvatar
-    user.hostel_address = request.POST['hostel_address']
-    user.save()
+        context['form'] = form
+    else:
+        user = request.user
+        user.phone_number = request.POST['phone_number']
+        if request.FILES:
+            user.avatar = request.FILES['avatar']
+            user.hostel_address = request.POST['hostel_address']
+        user.save()
 
-    messages.add_message(
-        request,messages.INFO,
-        'Profile Updated'
-    )
-
-    return redirect('account:edit')
-
-@login_required
-def changePasswordView(request):
-    if request.method != "POST":
-        form = PasswordChangeForm(user = request.user)
-        return render(request, 'account/change_password.html', {'form': form})
-    
-    
-    form = PasswordChangeForm(user = request.user, data = request.POST)
-    #For some reason, PasswordChangeForm always returns invalid 
-    password_changeable = True
-
-    if not request.user.check_password(request.POST.get('old_password')):
-        messages.add_message(
-            request,
-            messages.ERROR,
-            'Old password incorrect'
+        form = EditProfileForm(
+            data = request.POST, 
+            files = request.FILES,
+            instance = request.user 
         )
-        password_changeable = False
+        context['form'] = form
 
-    if request.POST.get('new_password1') != request.POST.get('new_password2'):
-        messages.add_message(
-            request,
-            messages.ERROR,
-            'New password field does not match New password confirmation field'
-        )
-        password_changeable = False
-
-    if password_changeable:
-        request.user.set_password(request.POST.get('new_password1'))
-        request.user.save()
         messages.add_message(
             request,
             messages.INFO,
-            'Password Updated'
+            'Profile Updated'
         )
-        update_session_auth_hash(request, request.user)
 
-    return redirect('account:change_password')
+    return render(request, 'account/edit.html', context)
+
+@login_required
+def changePasswordView(request):
+    context = {}
+    if request.method == "GET":
+        form = PasswordChangeForm(user = request.user)
+        context['form'] = form
+    else:
+        form = PasswordChangeForm(user = request.user, data = request.POST)
+        #For some reason, PasswordChangeForm always returns invalid
+        #Hence is_valid is not used here 
+        password_changeable = True
+
+        if not request.user.check_password(request.POST.get('old_password')):
+            messages.add_message(
+                request,
+                messages.ERROR,
+                'Old password incorrect'
+            )
+            password_changeable = False
+
+        if request.POST.get('new_password1') != request.POST.get('new_password2'):
+            messages.add_message(
+                request,
+                messages.ERROR,
+                'New password field does not match New password confirmation field'
+            )
+            password_changeable = False
+
+        if password_changeable:
+            request.user.set_password(request.POST.get('new_password1'))
+            request.user.save()
+            messages.add_message(
+                request,
+                messages.INFO,
+                'Password Updated'
+            )
+            update_session_auth_hash(request, request.user)
+
+    return render(request, 'account/change_password.html', context)

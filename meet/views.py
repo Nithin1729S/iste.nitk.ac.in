@@ -15,7 +15,3 @@ def addView(request):
     if request.method != 'POST':
         return render(request, 'meet/add.html', {})
     
-
-
-
-
