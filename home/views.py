@@ -7,7 +7,7 @@ from django.views.decorators.http import require_POST
 from django.core.management import call_command
 from django.core.wsgi import get_wsgi_application 
 from django.conf import settings
-from git import cmd
+import subprocess
 
 def indexView(request):
     this_year = datetime.now().year
@@ -41,10 +41,12 @@ def indexView(request):
 @require_POST
 @csrf_exempt
 def deployView(request):
-    local_repository = cmd.Git(settings.BASE_DIR)
-    local_repository.pull()
+    subprocess.check_output(['git', 'pull'])
+    subprocess.check_output(['pip3', 'install', '-r', 'requirements.txt'])
     application = get_wsgi_application()
-    call_command('runserver',  '127.0.0.1:8000')
-    
+    call_command('makemigrations')
+    call_command('migrate')
+    call_command('runserver',  '0.0.0.0:8000')
+
     return render(request,'home/index.html',{})
 
