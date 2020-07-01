@@ -48,4 +48,3 @@ def deployView(request):
     call_command('migrate')
 
     return render(request,'home/index.html',{})
-

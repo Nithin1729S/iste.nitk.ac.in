@@ -30,7 +30,7 @@ def loginView(request):
 
 def logoutView(request):
     logout(request)
-    return redirect('home:home')
+    return redirect('home:index')
 
 @login_required
 def editView(request):
