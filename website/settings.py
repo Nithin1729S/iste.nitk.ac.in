@@ -24,14 +24,17 @@ SECRET_KEY = '!26-jz#r3v+n+k&4rf0%1iz*w5!#nh=eooup#(rf163@3c$1&6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'iste.nitk.ac.in', #Production Server
+    '207.148.29.48', #Test Server
+    'localhost', #Local Server
+]
 
 LOGIN_URL = '/account/login'
 
 AUTH_USER_MODEL = 'account.User'
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,8 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #3rd party apps
     'ckeditor',
     'ckeditor_uploader',
+    #Developed apps
     'home',
     'account',
     'event',
