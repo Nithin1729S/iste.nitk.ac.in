@@ -46,5 +46,14 @@
         </div>
     </div>
 </div>
+{% if user.is_authenticated %}
+<div class="row">
+    <div class="fixed-action-btn direction-top active" style="bottom: 45px; right: 24px;">
+        <a id="edit" href="{% url 'event:edit' event.id %}" class="btn btn-floating btn-large">
+            <i class="material-icons">edit</i>
+        </a>
+    </div>
+</div>
+{% endif %}
 
 {% endblock %}

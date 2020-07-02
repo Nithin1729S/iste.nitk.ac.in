@@ -25,11 +25,11 @@ def check_member_year(*years):
 
 def check_edit_access(model):
     def decorator(view):
-        def wrapped_view(request, obj_id, *args, **kwargs):
-            obj = model.objects.get(pk = obj_id)
+        def wrapped_view(request, *args, **kwargs):
+            obj = model.objects.get(pk = kwargs['event_id'])
             #Allow access only if user can edit the object
             if request.user in obj.editable_by.all():
-                return view(request, obj_id)
+                return view(request, *args, **kwargs)
             else:
                 raise PermissionDenied('You do not have access to view this page', '403.html')
 
@@ -39,9 +39,7 @@ def check_edit_access(model):
 
 def check_core_member(view):
     def wrapped_view(request, *args, **kwargs):
-        print(1)
         core_users = map(lambda obj: obj.user, Core.objects.all())
-        print('Core', core_users)
         #Allow access only if user is in core
         if request.user in core_users:
             return view(request)

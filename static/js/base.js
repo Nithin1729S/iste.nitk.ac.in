@@ -5,6 +5,7 @@ $(document).ready(function() {
     $('.tooltipped').tooltip();
     $('select').formSelect();
     searchableSelectfieldInit();    
+    $('.tap-target').tapTarget();
     $( "#progress" ).slideToggle('slow');
     $('.fixed-action-btn').floatingActionButton();
     
