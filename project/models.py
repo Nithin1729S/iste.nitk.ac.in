@@ -15,8 +15,10 @@ class Project(models.Model):
         default = "",
         max_length = 200
     )
-    members = models.ManyToManyField(User)
-    sig = models.ManyToManyField(SIG)
+    #Members of the project, 'editable_by' is used due 
+    #to RBAC logic used in @check_ edit_access decorator
+    editable_by = models.ManyToManyField(User)
+    sigs = models.ManyToManyField(SIG)
     year = models.IntegerField(
         choices = year_choices(),
         default=datetime.today().year

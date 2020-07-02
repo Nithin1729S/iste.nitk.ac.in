@@ -2,6 +2,7 @@
 $(document).ready(function() {
     $(".dropdown-trigger").dropdown();
     $('.sidenav').sidenav();
+    $('.collapsible').collapsible();
     $('.tooltipped').tooltip();
     $('select').formSelect();
     searchableSelectfieldInit();    

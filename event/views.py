@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Event
 from django.db.models import Q
+from .forms import EventForm
 from datetime import datetime
 from website.decorators import check_core_member, check_member_year, check_edit_access, login_required
 
@@ -29,6 +30,7 @@ def indexView(request):
 @check_core_member
 def addView(request):
     context = {}
+    form = EventForm()
     return render(request, 'event/add.html', context)
 
 @login_required
@@ -36,6 +38,9 @@ def addView(request):
 @check_edit_access(Event)
 def editView(request, event_id):
     context = {}
+    form = EventForm(
+        instance = Event.objects.get(event_id)
+    )
     return render(request, 'event/edit.html', context)
 
 def detailsView(request, event_name):
