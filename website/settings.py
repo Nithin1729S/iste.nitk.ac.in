@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'home',
     'account',
     'event',
-    'meet',
     'project',
     'recruitment'
 ]
@@ -149,7 +148,8 @@ SIG_CHOICES=(
     ('Clutch','CLUTCH'),
     ('Concrete','CONCRETE'),
     ('Create','CREATE'),
-    ('Catalyst','CATALYST')
+    ('Catalyst','CATALYST'),
+    ('All Club', 'ALL CLUB')
 )
 
 CKEDITOR_UPLOAD_PATH = "uploads/"

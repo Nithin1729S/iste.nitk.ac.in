@@ -1,13 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from django.core.files.storage import default_storage
 from django.contrib.auth import update_session_auth_hash
 from .models import User
 from .forms import LoginForm, PasswordChangeForm, EditProfileForm
 from website.helperFunctions import user_avatar_upload_path
-from website.decorators import check_member_year
+from website.decorators import check_member_year, login_required
 
 def loginView(request):
     context = {}

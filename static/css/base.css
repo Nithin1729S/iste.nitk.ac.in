@@ -200,3 +200,8 @@ textarea{
     text-align:center;
     background:#1a237e
 }
+
+.inline-icon {
+  vertical-align: bottom;
+  font-size: 22px !important;
+}

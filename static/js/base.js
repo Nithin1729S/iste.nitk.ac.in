@@ -4,6 +4,7 @@ $(document).ready(function() {
     $('.sidenav').sidenav();
     $('.tooltipped').tooltip();
     $('select').formSelect();
+    searchableSelectfieldInit();    
     $( "#progress" ).slideToggle('slow');
     $('.fixed-action-btn').floatingActionButton();
     
@@ -19,21 +20,52 @@ $(document).ready(function() {
     $( "#alert_box" ).fadeOut( "slow", function() {});
 });
 
+function searchableSelectfieldInit(){
 
-////////////////////////////////////////////////////////////
-//
-// USED IN APPLICANT_DEETS.HTML
-//
-////////////////////////////////////////////////////////////
-$("#show_about").click(function(){
-    $( "#details_form" ).slideToggle('slow');
-    $( "#about_sigs" ).slideToggle('slow');
-})
+    document.querySelectorAll('select[searchable]').forEach(elem => {
+        const select = elem.M_FormSelect;
+        const options = select.dropdownOptions.querySelectorAll('li:not(.optgroup)');
 
-$("#show_form").click(function(){
-    $( "#details_form" ).slideToggle('slow');
-    $( "#about_sigs" ).slideToggle('slow');
-})
+        const placeholderText = select.el.getAttribute('searchable');
+        const searchBox = document.createElement('div');
+        searchBox.style.padding = '6px 16px 0 16px';
+        searchBox.innerHTML = `
+            <input type="text" placeholder="${placeholderText}">
+            </input>`
+        select.dropdownOptions.prepend(searchBox);
+        
+        function filterOptions(event) {
+            const searchText = event.target.value.toLowerCase();
+            
+            options.forEach(option => {
+                const value = option.textContent.toLowerCase();
+                const display = value.indexOf(searchText) === -1 ? 'none' : 'block';
+                option.style.display = display;
+            });
+
+            select.dropdown.recalculateDimensions();
+        }
+
+        function focusSearchBox() {
+            searchBox.firstElementChild.focus({
+                preventScroll: true
+            });
+        }
+
+        select.dropdown.options.autoFocus = false;
+
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            select.input.addEventListener('click', focusSearchBox);
+            options.forEach(option => {
+                option.addEventListener('click', focusSearchBox);
+            });
+        }
+        searchBox.addEventListener('keyup', filterOptions);
+    });
+}
+
+
+
 ////////////////////////////////////////////////////////////
 //
 // USED IN PROJECT_LIST.HTML

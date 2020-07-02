@@ -2,20 +2,23 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 from ckeditor_uploader.fields import RichTextUploadingField
-from django.conf import settings
+from website.settings import SIG_CHOICES
 from website.helperFunctions import default_user_avatar_path, user_avatar_upload_path, sig_avatar_upload_path
 
 class SIG(models.Model):
     name = models.CharField(
         max_length = 9, 
-        choices = settings.SIG_CHOICES
+        choices = SIG_CHOICES
     )
     #Picture of the SIG
     avatar = models.ImageField(
         upload_to = sig_avatar_upload_path,
         blank = True
     )
-    description = RichTextUploadingField()
+    description = models.TextField(
+        blank = False,
+        editable = True
+    )
 
     def __str__(self):
         return self.name
@@ -46,7 +49,7 @@ class User(AbstractUser):
         blank = True
     )
     batch_of = models.IntegerField(
-        default = 2020, 
+        default = 2021, 
         editable = True,
         blank = True
     )

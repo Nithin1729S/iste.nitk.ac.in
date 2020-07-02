@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3><span>Upcoming Events</span></h3>
+
+<div class="row">
+    {% for event in events %}
+        <div class="col s12 m4">
+            <div class="card hoverable">
+                <div class="card-image">
+                    <img src="{{event.poster.url}}">
+                </div>
+                <div class="card-content">
+                    <p class="grey-text">
+                        <i class="inline-icon material-icons">date_range</i> 
+                        {{event.date_time | date:"d/m/Y P"}} 
+                    </p>
+                    <br>
+                    <p class="grey-text">
+                        <i class="inline-icon material-icons">location_on</i>{{event.venue}}
+                    </p>
+                    <br>
+                    <p class="grey-text">
+                        <i class="inline-icon material-icons">group</i>
+                        {% for sig in event.sigs.all %}
+                            {% if forloop.first %}
+                                {{sig}}
+                            {% else %}
+                                , {{sig}}
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                    <h5 class="center">{{event.name}}</h5>
+                </div>
+
+                <div class="card-action">
+                    <center><a class="indigo-text" href="{% url 'event:details' event.name %}">View Details</a></center>
+                </div>
+ 
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
