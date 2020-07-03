@@ -9,6 +9,8 @@ Follow <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> Python styl
 3. Include app name within the appropriate section in the `INSTALLED_APPS` variable in `website/settings.py`
 4. Assign namespaces to entry in `website/urls.py` to easily access app relative URLs in templates
 
+<a href="https://docs.djangoproject.com/en/3.0/ref/applications/">Learn about Django apps</a>
+
 Example - 
 ```
 #In website/urls.py
@@ -16,20 +18,6 @@ path('event/', include('event.urls', namespace = 'event')),
 
 #In event/urls.py
 path('edit/<event_id>', views.editView, name = 'edit'),
-```
-
-<a href="https://docs.djangoproject.com/en/3.0/ref/applications/">Learn about Django apps</a>
-
-Examples - 
-```
-#If the form is a ModelForm for a Model named Event
-class EventForm(forms.ModelForm):
-  #Form definition
-
-#If the form is a Form, name it depending on the function provided
-class ChangePasswordForm(forms.Form):
-  #Form definition
-
 ```
 
 ## Creating Forms
