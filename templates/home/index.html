@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block styles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/home/counter.css' %}"  media="screen,projection"/>
+{% endblock %}
+
 {% block carousel %}
     <div class="carousel carousel-slider center">
         <div class="carousel-fixed-item center">

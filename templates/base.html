@@ -3,7 +3,7 @@
 <html>
     <head>
         {% block head %}
-        {% endblock head %}
+        {% endblock %}
         <title>ISTE NITK Student Chapter</title>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,8 +14,9 @@
         <script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
         <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js'%}"></script>
         <script type="text/javascript" src="{% static 'js/counter.js'%}"></script>
-        <link type="text/css" rel="stylesheet" href="{% static 'css/counter.css' %}"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"  media="screen,projection"/>
+        {% block styles %}
+        {% endblock %}
     </head>
     <body>
         <ul id="mobile-menu" class="sidenav">
@@ -227,12 +228,12 @@
                 </div>
             {% endif %}
             {% block carousel %}
-            {% endblock carousel %} 
+            {% endblock %} 
             <div class="row"></div>
             <div class="row"></div> 
             <div class='container'>
                 {% block content %}
-                {% endblock content %}
+                {% endblock %}
             </div>
         </main>
         <footer class="page-footer">
