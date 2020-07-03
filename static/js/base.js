@@ -9,19 +9,34 @@ $(document).ready(function() {
     $('.tap-target').tapTarget();
     $( "#progress" ).slideToggle('slow');
     $('.fixed-action-btn').floatingActionButton();
-    
- });
- $('.carousel.carousel-slider').carousel({
+});
+$('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true
 });
 
- $('body').on('touchstart', function() {});
+//Enable touch interaction (mobile)
+$('body').on('touchstart', function() {});
 
- $('#alert_close').click(function(){
-    $( "#alert_box" ).fadeOut( "slow", function() {});
+//Close message (used for errors) box
+$('#alert_close').click(function(){
+    $( "#alert_box" ).slideToggle('slow');
 });
 
+//Set message box colour based on message type
+function setMessageColour(messageType){
+    $( "#alert_box" ).slideToggle('slow');
+    //Integer value for messages.ERROR, 20 for messages.INFO
+    if(messageType == 40){
+        
+        $('#messages_card').addClass('red')
+    }
+    else{
+        $('#messages_card').addClass('green')
+    }
+}
+
+//Used to make select fields searchable
 function searchableSelectfieldInit(){
 
     document.querySelectorAll('select[searchable]').forEach(elem => {
@@ -66,52 +81,32 @@ function searchableSelectfieldInit(){
     });
 }
 
-
-
-////////////////////////////////////////////////////////////
-//
-// USED IN PROJECT_LIST.HTML
-//
-////////////////////////////////////////////////////////////
-$('.projects_show').click(function(){
-	$('.projects_show').slideToggle('slow')
-	$("#projects"+this.id).slideToggle('slow')
-})
-$('.projects_back').click(function(){
-	$('.projects_show').slideToggle('slow')
-	$("#projects"+this.id).slideToggle('slow')
-})
-
-////////////////////////////////////////////////////////////
-//
-// USED FOR ALL PAGE HEADINGS
-//
-////////////////////////////////////////////////////////////
-;(function($, win) {
-    $.fn.inViewport = function(cb) {
-      return this.each(function(i,el) {
-        function visPx(){
-          var elH = $(el).outerHeight(),
-              H = $(win).height(),
-              r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
-          return cb.call(el, Math.max(0, t>0? Math.min(elH, H-t) : (b<H?b:H)));  
-        }
-        visPx();
-        $(win).on("resize scroll", visPx);
-      });
-    };
-  }(jQuery, window));
-  
-  $("h3 span").inViewport(function(px){
-    $(this).toggleClass("animateLine", !!px);
-  });
-
-function set_message_colour(message_type){
-    //Integer value for messages.ERROR, 20 for messages.INFO
-    if(message_type == 40){
-        $('#messages_card').addClass('red')
+//Function used to check if an element is in view
+function elementInViewport(elements){
+    for(element of elements){
+        var bounding = element.getBoundingClientRect()
+        if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= 
+            (window.innerWidth || document.documentElement.clientWidth) 
+            && bounding.bottom <= 
+            (window.innerHeight || document.documentElement.clientHeight)) {
+            return element
+        } 
     }
-    else{
-        $('#messages_card').addClass('green')
-    }
+    return false;
 }
+
+//Trigger elementInViewport on window scroll
+$(window).scroll(function(){
+    elements = document.getElementsByTagName('h3');
+    spans = []
+    for(element of elements){
+        spans.push(element.getElementsByTagName('span')[0]);
+    }
+    var visible = elementInViewport(spans);
+    if(visible){
+        if(!$(visible).hasClass("viewed")){
+            $(visible).toggleClass("animateLine");
+        }
+        $(visible).addClass("viewed")        
+    }
+})

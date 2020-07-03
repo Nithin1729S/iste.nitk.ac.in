@@ -38,3 +38,7 @@
       </div>
   {% endfor %}
 {% endblock %}
+{% block scripts %}
+  {% load static %}
+  <script type="text/javascript" src="{% static 'js/project/main.js'%}"></script>
+{% endblock %}

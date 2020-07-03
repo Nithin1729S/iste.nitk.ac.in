@@ -9,6 +9,7 @@ def indexView(request):
     projects = {}
     context = {}
     years = [r for r in range(2019, datetime.today().year+1)]
+    #Render projects as a 2D array indexed by year and sig
     for year in years:
         projects[year] = {}
         for sig in SIG.objects.all():
@@ -31,9 +32,7 @@ def addView(request):
 @check_edit_access(Project)
 def editView(request, project_id):
     context = {}
-    form = ProjectForm(
-        instance = Project.objects.get(project_id)
-    )
+
     return render(request, 'project/edit.html', context)
 
 def detailsView(request, project_name):

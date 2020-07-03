@@ -1,15 +1,15 @@
-
-$(window).scroll(check_position);
-$(document).ready(check_position);
-function check_position() {
-    var hT = $('#counter').offset().top,
-        hH = $('#counter').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH)){
-        count();
+//Trigger elementInViewport(refer base.js) on window scroll
+$(window).scroll(function(){
+    element = document.getElementById('counter');
+    var visible = elementInViewport([element]);
+    if(visible){
+        if(!$(visible).hasClass("viewed")){
+            count();
+        }
+        $(visible).addClass("viewed")        
     }
-}
+})
+
 function count(){
     $('.year').countTo({
         from: 0,
