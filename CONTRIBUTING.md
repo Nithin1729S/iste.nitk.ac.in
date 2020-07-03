@@ -110,6 +110,9 @@ def myView(request):
 2. Single spaces around `=` of attribute names can be avoided
 3. Try naming class names/element IDs using snake_case
 4. Files should be saved in `templates/app/template_name.html`, file name can be used to match its corresponding view function, avoid the `View` word from the function name.
+5. Refer to file fields using `{{obj.file_field.url}}`
+6. Refer to URLs using `{% url 'app_name:url_name' %}`
+7. Load static files using `{% static 'path_to_file' %}`
 
 ## CSS
 1. Make sure you use 4 spaces to indent code
