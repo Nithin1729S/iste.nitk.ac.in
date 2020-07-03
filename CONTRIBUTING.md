@@ -3,8 +3,11 @@
 ### Account
 
 `coremember` - A male core member in crypt and chronicle
+
 `fourthyear` - A male member in charge
+
 `thirdyear` - A male member in charge and crypt
+
 `secondyear` - A female member in charge, chronicle, crypt
 
 ### Event
