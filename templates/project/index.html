@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% block styles %}
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/project/main.css' %}"  media="screen,projection"/>
+{% endblock %}
 
 {% block content %}
 <h3><span>Projects</span></h3>     
@@ -9,7 +13,7 @@
   </div>
     <div hidden id="projects{{year}}" class="row">
     <div class="row center">
-      <a id="{{year}}" class=" projects_back">View projects from another year</a>
+      <a id="{{year}}" class="projects_back">View projects from another year</a>
     </div>
     <div class="row">
         {% for sig,list in yearly_projects.items %}
