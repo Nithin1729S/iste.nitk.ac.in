@@ -6,7 +6,7 @@ class EventForm(ModelForm):
         model = Event
         fields = '__all__'
     def __init__(self, *args, **kwargs):
-        super(AddEventForm, self).__init__(*args, **kwargs)
+        super(EventForm, self).__init__(*args, **kwargs)
         self.fields['sigs'].widget.attrs['searchable'] = 'Search for user'
         self.fields['editable_by'].widget.attrs['searchable'] = 'Search for user'
         
