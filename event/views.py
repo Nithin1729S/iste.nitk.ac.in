@@ -12,15 +12,15 @@ def indexView(request):
     if request.user.is_authenticated:
         #Show all events to club members
         events = Event.objects.exclude(
-            date_time__lte = today
+            date_time__lte=today
         )
     else:
         #Show events with poster, form_link, message to general public
         events = Event.objects.exclude(
-            Q(date_time__lte = today) |
-            Q(poster = '') |
-            Q(form_link = '') |
-            Q(publicity_message = '')
+            Q(date_time__lte=today) |
+            Q(poster='') |
+            Q(form_link='') |
+            Q(publicity_message='')
         )
     context['events'] = events 
 
@@ -39,13 +39,14 @@ def addView(request):
 def editView(request, event_id):
     context = {}
     form = EventForm(
-        instance = Event.objects.get(event_id)
+        instance=Event.objects.get(event_id)
     )
     return render(request, 'event/edit.html', context)
 
 def detailsView(request, event_name):
+    context = {}
     event = Event.objects.get(
-        name = event_name
+        name=event_name
     )
-    context = {'event': event}
+    context['event'] = event
     return render(request, 'event/details.html', context)
