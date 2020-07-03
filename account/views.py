@@ -15,13 +15,13 @@ def loginView(request):
         form = LoginForm()
         context['form'] = form
     else:
-        form = LoginForm(data = request.POST)
+        form = LoginForm(data=request.POST)
         context['form'] = form
         if form.is_valid():
             user = authenticate(
                 request, 
-                username = form.cleaned_data['username'], 
-                password = form.cleaned_data['password']
+                username=form.cleaned_data['username'], 
+                password=form.cleaned_data['password']
             )
             login(request, user)
             return redirect('home:index')
@@ -43,7 +43,7 @@ def editView(request):
     context = {}
 
     if request.method == "GET":
-        form = EditProfileForm(instance = request.user)
+        form = EditProfileForm(instance=request.user)
         context['form'] = form
     else:
         user = request.user
@@ -54,9 +54,9 @@ def editView(request):
         user.save()
 
         form = EditProfileForm(
-            data = request.POST, 
-            files = request.FILES,
-            instance = request.user 
+            data=request.POST, 
+            files=request.FILES,
+            instance=request.user 
         )
         context['form'] = form
 
@@ -72,10 +72,13 @@ def editView(request):
 def changePasswordView(request):
     context = {}
     if request.method == "GET":
-        form = PasswordChangeForm(user = request.user)
+        form = PasswordChangeForm(user=request.user)
         context['form'] = form
     else:
-        form = PasswordChangeForm(user = request.user, data = request.POST)
+        form = PasswordChangeForm(
+            user=request.user,
+            data=request.POST
+        )
         #For some reason, PasswordChangeForm always returns invalid
         #Hence is_valid is not used here 
         password_changeable = True
