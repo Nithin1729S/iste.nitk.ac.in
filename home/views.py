@@ -14,12 +14,12 @@ def indexView(request):
     years_in_operation = this_year-1995
     sigs = SIG.objects.all()
     member_count = User.objects.filter(
-        batch_of__in = [this_year+3, this_year+2, this_year+1]
+        batch_of__in=[this_year+3, this_year+2, this_year+1]
     ).count()
     
     sig_count = sigs.count()
     project_count = Project.objects.filter(
-        year = this_year
+        year=this_year
     ).count()
     
     project_count = 20
