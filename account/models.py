@@ -73,19 +73,8 @@ class Core(models.Model):
         User,
         on_delete = models.CASCADE
     )
-    #Role within the core - Convener, President etc.
+    #Role within the core - Convener, President, Crypt SIG Head etc.
     role = models.CharField(
         default = "",
         max_length = 100
-    )
-
-class SIGHead(models.Model):
-    user = models.ForeignKey(
-        User,
-        on_delete = models.CASCADE
-    )
-    #Type of sig head - Crypt SIG Head, Charge SIG Head etc.
-    role = models.CharField(
-        default="",
-        max_length=100
     )
