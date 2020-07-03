@@ -67,6 +67,7 @@ class Event(models.Model):
 3. Use a global `context` for the view, append key, value pairs to `context` appropriately for `GET` and `POST` blocks
 4. Return `render` only at the end of the function call, if you are not returning `redirect`
 5. If handling a request requires you to return `redirect`, the return statement can be included within the `GET` and `POST` blocks
+6. Return all form errors using the messaging framework, refer to `account.views.loginView` for example
 
 Examples -
 
