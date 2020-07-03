@@ -1,3 +1,9 @@
+# Contributing to the repository
+
+1. Fix issues already present or create a new issue to request for features
+2. Use appropriate commit messages while commiting your code
+3. Do not send merge requests to the master branch, all pull requests must be sent to the dev branch
+
 # Contributing to the backend
 
 Follow <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> Python style guide for writing code as much as you can. In brief, do not have lines longer than 80 characters, use snake_case for all local/global variable names, indent using 4 spaces, use a single space between all operators (=, +, -, etc.). Do not use single space around `=` while assigning function parameters.
