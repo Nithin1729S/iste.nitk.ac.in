@@ -14,8 +14,8 @@ def indexView(request):
         projects[year] = {}
         for sig in SIG.objects.all():
             projects[year][sig] = Project.objects.filter(
-                year = year,
-                sigs__name = sig.name
+                year=year,
+                sigs__name=sig.name
             )
     context['projects'] = projects
     return render(request, 'project/index.html', context)
@@ -38,7 +38,7 @@ def editView(request, project_id):
 def detailsView(request, project_name):
     context = {}
     project = Project.objects.get(
-        name = project_name
+        name=project_name
     )
     context['project'] = project
     return render(request, 'project/details.html', context)

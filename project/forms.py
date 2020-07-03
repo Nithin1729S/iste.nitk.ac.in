@@ -9,6 +9,6 @@ class ProjectForm(ModelForm):
             'editable_by': 'Members'
         }
     def __init__(self, *args, **kwargs):
-        super(AddProjectForm, self).__init__(*args, **kwargs)
+        super(ProjectForm, self).__init__(*args, **kwargs)
         self.fields['editable_by'].widget.attrs['searchable'] = 'Search for user'
         
