@@ -104,6 +104,9 @@ def changePasswordView(request):
                 messages.INFO,
                 'Password Updated'
             )
+            #Saves the pain of logging in again
             update_session_auth_hash(request, request.user)
 
+        context['form'] = form
+        
     return render(request, 'account/change_password.html', context)
