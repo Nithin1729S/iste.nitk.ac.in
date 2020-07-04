@@ -1,8 +1,10 @@
 # Contributing to the repository
 
-1. Fix issues already present or create a new issue to request for features
-2. Use appropriate commit messages while commiting your code
-3. Do not send merge requests to the master branch, all pull requests must be sent to the dev branch
+1. Read the code thoroughly, understand what components are there
+2. Reuse code as much as you can
+3. Fix issues already present or create a new issue to request for features
+4. Use appropriate commit messages while commiting your code
+5. Do not send merge requests to the master branch, all pull requests must be sent to the dev branch
 
 # Contributing to the backend
 
