@@ -26,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'iste.nitk.ac.in', #Production Server
-    '207.148.29.48', #Test Server
     'localhost', #Local Server
 ]
 
