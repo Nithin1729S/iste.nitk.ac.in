@@ -90,8 +90,12 @@ def addView(request):
 def editView(request, event_id):
     context = {}
     form = EventForm(
-        instance=Event.objects.get(event_id)
+        instance=Event.objects.get(id=event_id)
     )
+    if request.method == "GET":
+        pass
+    else:
+        pass
     return render(request, 'event/edit.html', context)
 
 def detailsView(request, event_name):
