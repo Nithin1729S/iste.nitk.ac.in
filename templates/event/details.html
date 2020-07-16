@@ -39,7 +39,26 @@
                 <p class=" grey-text text-darken-2">
                     {{event.publicity_message | safe}}
                 </p>
-            </div>
+                <!-- <div class="center row">
+                    <h3>
+                        <span>
+                            Point of Contacts
+                        </span>
+                    </h3>
+                    <div class='flexrow'>
+                        {% for member in contacts %}
+                        <a class="core_img">
+                            <div class="img__overlay">
+                                {{member.first_name}} {{member.last_name}}
+                                <br>
+                                {{member.phone_number}}
+                            </div>
+                            <img src='media/{{member.avatar}}'>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div> -->
 
             <div class="card-action">
                 <center>
