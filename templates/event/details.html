@@ -3,10 +3,15 @@
 <h3><span>{{event.name}}</span></h3>
 
 <div class="row">
-    <div class="col s12 m8 offset-m2">
-        <div class="card hoverable">
+    <div class="col l6 offset-l3 m8 offset-m2 s12">
+        <div class="card hoverable z-depth-3">
             <div class="card-image responsive-img">
                 <img src="{{event.poster.url}}">
+                {% if user.is_authenticated %}
+                    <a id="edit" href="{% url 'event:edit' event.id %}" class="halfway-fab btn-floating">
+                        <i class="material-icons">edit</i>
+                    </a>
+                {% endif %}
             </div>
             <div class="card-content">
                 <p class="grey-text">
@@ -69,14 +74,5 @@
         </div>
     </div>
 </div>
-{% if user.is_authenticated %}
-<div class="row">
-    <div class="fixed-action-btn direction-top active" style="bottom: 45px; right: 24px;">
-        <a id="edit" href="{% url 'event:edit' event.id %}" class="btn btn-floating btn-large">
-            <i class="material-icons">edit</i>
-        </a>
-    </div>
-</div>
-{% endif %}
 
 {% endblock %}

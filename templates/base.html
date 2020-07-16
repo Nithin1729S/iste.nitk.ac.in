@@ -26,21 +26,21 @@
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
-                            <a class="collapsible-header">My Profile<i class="material-icons">arrow_drop_down</i></a>
+                            <a class="collapsible-header waves-effect">My Profile<i class="material-icons">arrow_drop_down</i></a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li>
-                                        <a href="{% url 'account:edit' %}">
+                                        <a href="{% url 'account:edit' %}" class="waves-effect">
                                             Edit Profile
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'account:change_password' %}">
+                                        <a href="{% url 'account:change_password' %}" class="waves-effect">
                                             Change Password
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'account:logout' %}">
+                                        <a href="{% url 'account:logout' %}" class="waves-effect">
                                             Logout
                                         </a>
                                     </li>
@@ -52,16 +52,16 @@
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
-                            <a class="collapsible-header">Projects<i class="material-icons">arrow_drop_down</i></a>
+                            <a class="collapsible-header waves-effect">Projects<i class="material-icons">arrow_drop_down</i></a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li>
-                                        <a href="{% url 'project:add' %}">
+                                        <a href="{% url 'project:add' %}" class="waves-effect">
                                             Add Project
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'project:index' %}">
+                                        <a href="{% url 'project:index' %}" class="waves-effect">
                                             View Projects
                                         </a>
                                     </li>
@@ -73,16 +73,16 @@
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
-                            <a class="collapsible-header">Events<i class="material-icons">arrow_drop_down</i></a>
+                            <a class="collapsible-header waves-effect">Events<i class="material-icons">arrow_drop_down</i></a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li>
-                                        <a href="{% url 'event:add' %}">
+                                        <a href="{% url 'event:add' %}" class="waves-effect">
                                             Add Event
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'event:index' %}">
+                                        <a href="{% url 'event:index' %}" class="waves-effect">
                                             View Events
                                         </a>
                                     </li>
@@ -92,25 +92,25 @@
                     </ul>
                 </li>
             {% else %}
-                <li><a href="{% url 'account:login' %}">Login</a></li>
-                <li><a href="{% url 'event:index' %}">Events</a></li>
-                <li><a href="{% url 'project:index' %}">Projects</a></li>
+                <li><a href="{% url 'account:login' %}" class="waves-effect">Login</a></li>
+                <li><a href="{% url 'event:index' %}" class="waves-effect">Events</a></li>
+                <li><a href="{% url 'project:index' %}" class="waves-effect">Projects</a></li>
             {% endif %}
-            <li><a href="https://istenitk.wordpress.com/">Blog</a></li>
+            <li><a href="https://istenitk.wordpress.com/" class=" waves-effect">Blog</a></li>
         </ul>
         <ul id="user-action" class="dropdown-content">
             <li>
-                <a href="{% url 'account:edit' %}">
+                <a href="{% url 'account:edit' %}" class="waves-effect">
                     Edit Profile
                 </a>
             </li>
             <li>
-                <a href="{% url 'account:change_password' %}">
+                <a href="{% url 'account:change_password' %}" class="waves-effect">
                     Change Password
                 </a>
             </li>
             <li>
-                <a href="{% url 'account:logout' %}">
+                <a href="{% url 'account:logout' %}" class="waves-effect">
                     Logout
                 </a>
             </li>
@@ -118,24 +118,24 @@
 
         <ul id="event-action" class="dropdown-content">
             <li>
-                <a href="{% url 'event:index' %}">
+                <a href="{% url 'event:index' %}" class="waves-effect">
                     View Events
                 </a>
             </li>
             <li>
-                <a href="{% url 'event:add' %}">
+                <a href="{% url 'event:add' %}" class="waves-effect">
                     Add Event
                 </a>
             </li>
         </ul>
         <ul id="project-action" class="dropdown-content">
             <li>
-                <a href="{% url 'project:index' %}">
+                <a href="{% url 'project:index' %}" class="waves-effect">
                     View Projects
                 </a>
             </li>
             <li>
-                <a href="{% url 'project:add' %}">
+                <a href="{% url 'project:add' %}" class="waves-effect">
                     Add Project
                 </a>
             </li>
