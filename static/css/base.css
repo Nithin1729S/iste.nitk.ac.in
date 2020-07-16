@@ -163,3 +163,7 @@ textarea{
   vertical-align: bottom;
   font-size: 22px !important;
 }
+
+a.anchor {
+  padding-left: 30px;
+}
