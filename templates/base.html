@@ -10,6 +10,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.css' %}"  media="screen,projection"/>
+        <!--Import fontawesome.css for social media icons-->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <!--Let browser know website is optimized for mobile-->
         <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"  media="screen,projection"/>
         <script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
@@ -248,26 +250,37 @@
                         </p>
                     </div>
                     <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">
-                            Quick Access
-                        </h5>
-                        <ul>
-                            <li>
-                                <a class="white-text" href="{% url 'project:index' %}">
-                                    Projects
-                                </a>
-                            </li>
-                            <li>
-                                <a class="white-text" href="{% url 'event:index' %}">
-                                    Events
-                                </a>
-                            </li>
-                            <li>
-                                <a class="white-text" href="https://istenitk.wordpress.com/">
-                                    Blog
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="row">
+                            <h5 class="white-text">
+                                Quick Access
+                            </h5>
+                            <ul>
+                                <li>
+                                    <a class="white-text" href="{% url 'project:index' %}">
+                                        Projects
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="white-text" href="{% url 'event:index' %}">
+                                        Events
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="white-text" href="https://istenitk.wordpress.com/">
+                                        Blog
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.facebook.com/istenitk/" target="_blank" ><i class="center fa fa-facebook-square fa-2x white-text"></i></a>
+                            
+                            <a href="https://www.instagram.com/istenitk/" target="_blank" class="anchor"><i class="center fa fa-instagram fa-2x white-text"></i></a>
+                            
+                            <a href="http://www.youtube.com/c/istenitk" target="_blank" class="anchor"><i class="center fa fa-youtube-play fa-2x white-text"></i></a>
+                            
+                            <a href="https://www.linkedin.com/company/indian-society-for-technical-education-nitk-chapter/?originalSubdomain=in" target="_blank" class="anchor"><i class="center fa fa-linkedin fa-2x white-text"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
