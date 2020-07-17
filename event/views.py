@@ -41,28 +41,38 @@ def addView(request):
         form = EventForm(request.POST, request.FILES)
         context['form'] = form
         if form.is_valid():
-            data = form.cleaned_data
+            contacts = []
+            editable_by = []
+            sigs = []
+            
+            for id in request.POST['contacts']:
+                contacts.append(User.objects.get(id=int(id)))
+            
+            for id in request.POST['editable_by']:
+                editable_by.append(User.objects.get(id=int(id)))
 
+            for id in request.POST['sigs']:
+                sigs.append(SIG.objects.get(id=int(id)))
+            
             event = Event(
-                name=data['name'],
-                date_time=data['date_time'],
-                no_of_participants=data['no_of_participants'],
+                name=request.POST['name'],
+                date_time=request.POST['date_time'],
+                no_of_participants=request.POST['no_of_participants'],
                 poster=request.FILES['poster'],
-                form_link=data['form_link'],
-                publicity_message=data['publicity_message'],
-                venue=data['venue'],
+                form_link=request.POST['form_link'],
+                publicity_message=request.POST['publicity_message'],
+                venue=request.POST['venue']
             )
             event.save()
-
-            event.contacts.set(data['contacts'])
-            event.editable_by.set(data['editable_by'])
-            event.sigs.set(data['sigs'])
+            event.contacts.set(contacts)
+            event.editable_by.set(editable_by)
+            event.sigs.set(sigs)
             event.save()
 
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                'New event '+data['name']+' created successfully!'
+                'New event '+request.POST['name']+' created successfully!'
             )
 
             return redirect('/event/')
@@ -78,54 +88,20 @@ def addView(request):
 @check_member_year(3,4)
 @check_edit_access(Event)
 def editView(request, event_id):
-    context = {'id':event_id}
-    event = Event.objects.get(id=event_id)
-
+    context = {}
+    form = EventForm(
+        instance=Event.objects.get(id=event_id)
+    )
     if request.method == "GET":
-        form = EventForm(
-            instance=event
-        )
-        context['form'] = form
+        pass
     else:
-        form = EventForm(request.POST, request.FILES)
-        context['form'] = form
-        if form.is_valid():
-            data = form.cleaned_data
-
-            event.name = data['name']
-            event.date_time = data['date_time']
-            event.no_of_participants = data['no_of_participants']
-            if 'poster' in request.FILES:
-                event.poster = request.FILES['poster']
-            event.form_link = data['form_link']
-            event.publicity_message = data['publicity_message']
-            event.venue =data['venue']
-            event.save()
-
-            event.contacts.set(data['contacts'])
-            event.editable_by.set(data['editable_by'])
-            event.sigs.set(data['sigs'])
-            event.save()
-
-            messages.add_message(
-                request,
-                messages.SUCCESS,
-                data['name']+' edited successfully!'
-            )
-
-            return redirect('/event/')
-        else:
-            messages.add_message(
-                request,
-                messages.ERROR,
-                'Invalid event details'
-            )    
+        pass
     return render(request, 'event/edit.html', context)
 
 def detailsView(request, event_name):
     context = {}
     event = Event.objects.get(
-        name = event_name
+        name=event_name
     )
     context['event'] = event
     return render(request, 'event/details.html', context)
