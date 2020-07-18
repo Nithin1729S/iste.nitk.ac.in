@@ -51,6 +51,7 @@ def editView(request):
         user.hostel_address = request.POST['hostel_address']
         user.email = request.POST['email']
         if request.FILES:
+            print(request.FILES)
             user.avatar = request.FILES['avatar']
         user.save()
 
