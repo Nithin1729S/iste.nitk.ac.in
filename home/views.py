@@ -11,7 +11,10 @@ import subprocess
 
 def indexView(request):
     this_year = datetime.now().year
+    this_month = datetime.now().month
     years_in_operation = this_year-1995
+    if this_month<7:
+        this_year = this_year-1
     sigs = SIG.objects.all()
     member_count = User.objects.filter(
         batch_of__in=[this_year+3, this_year+2, this_year+1]
@@ -22,7 +25,6 @@ def indexView(request):
         year=this_year
     ).count()
     
-    project_count = 20
     member_count = User.objects.all().count()
     core = Core.objects.all()
     context = {

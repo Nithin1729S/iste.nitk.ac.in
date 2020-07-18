@@ -48,3 +48,6 @@ class Event(models.Model):
         blank=True,
         editable=True
     )
+
+    def __str__(self):
+        return self.name 

@@ -5,7 +5,7 @@ from .models import Event
 from django.db.models import Q
 from .forms import EventForm
 from datetime import datetime, timedelta
-from website.decorators import check_core_member, check_member_year, check_edit_access, login_required
+from website.decorators import check_core_member, check_member_year, check_edit_access_event, login_required
 
 def indexView(request):
     context = {}
@@ -75,7 +75,7 @@ def addView(request):
 
 @login_required
 @check_member_year(3,4)
-@check_edit_access(Event)
+@check_edit_access_event(Event)
 def editView(request, event_id):
     context = {'id':event_id}
     event = Event.objects.get(id=event_id)
