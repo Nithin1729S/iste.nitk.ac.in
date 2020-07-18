@@ -5,11 +5,12 @@
 <div class="row">
     {% for event in events %}
         <div class="col s12 m4">
-            <div class="card hoverable">
+            <div class="card hoverable large">
                 <div class="card-image">
                     <img src="{{event.poster.url}}">
                 </div>
                 <div class="card-content">
+                    <h5 class="center">{{event.name}}</h5>
                     <p class="grey-text">
                         <i class="inline-icon material-icons">date_range</i> 
                         {{event.date_time | date:"d/m/Y P"}} 
@@ -20,7 +21,7 @@
                     </p>
                     <br>
                     <p class="grey-text">
-                        <i class="inline-icon material-icons">group</i>
+                        <i class="inline-icon material-icons">polymer</i>
                         {% for sig in event.sigs.all %}
                             {% if forloop.first %}
                                 {{sig}}
@@ -29,7 +30,6 @@
                             {% endif %}
                         {% endfor %}
                     </p>
-                    <h5 class="center">{{event.name}}</h5>
                 </div>
 
                 <div class="card-action">

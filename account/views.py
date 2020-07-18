@@ -48,9 +48,11 @@ def editView(request):
     else:
         user = request.user
         user.phone_number = request.POST['phone_number']
+        user.hostel_address = request.POST['hostel_address']
+        user.email = request.POST['email']
         if request.FILES:
+            print(request.FILES)
             user.avatar = request.FILES['avatar']
-            user.hostel_address = request.POST['hostel_address']
         user.save()
 
         form = EditProfileForm(
@@ -58,7 +60,7 @@ def editView(request):
             files=request.FILES,
             instance=request.user 
         )
-        context['form'] = form
+        context['form'] = form 
 
         messages.add_message(
             request,

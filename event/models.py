@@ -13,6 +13,9 @@ class Event(models.Model):
     date_time = models.DateTimeField(
         auto_now=False
     )
+    no_of_participants = models.IntegerField(
+        default=3
+    )
     contacts = models.ManyToManyField(
         to=User
     )
