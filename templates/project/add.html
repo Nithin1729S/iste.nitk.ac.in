@@ -1,12 +1,94 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method="POST" action="{% url 'project:add'%}" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form}}
-    <hr>
-    <button class="btn waves-effect waves-light" type="submit" name="action">
-        Create project
-    </button>
-</form>
+<div class="row center">
+    <div class="col l6 offset-l3 m8 offset-m2 s12">
+        <div class="card">
+            <div class="card-content black-text">
+                <span class="center card-title">
+                    Add Project
+                </span> 
+                <form method="POST" action="{% url 'project:add'%}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="form-icon material-icons prefix">
+                                dashboard
+                            </i>
+                            
+                            {{form.name}}
+                            <label>
+                                Project {{form.name.label}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="form-icon material-icons prefix">
+                                event
+                            </i>
+                            {{form.tags}}
+                            <label>
+                                {{form.tags.label}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="form-icon material-icons prefix" style="left:10px">
+                                people
+                            </i>
+                            {{form.editable_by}}
+                            <label>
+                                {{form.editable_by.label}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="form-icon material-icons prefix" style="left:10px">
+                                polymer
+                            </i>
+                            {{form.sigs}}
+                            <label>
+                                {{form.sigs.label}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="form-icon material-icons prefix" style="left:10px">
+                                access_time
+                            </i>
+                            {{form.year}}
+                            <label>
+                                {{form.year.label}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="form-icon material-icons prefix">
+                                event
+                            </i>
+                            <textarea id="textarea" class="materialize-textarea" data-length="120"></textarea>
+                          <label>
+                            {{form.description.label}}
+                        </label>
+                        {{form.description}}
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                        Create project
+                        <i class="material-icons right">
+                            create
+                        </i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock content %}
