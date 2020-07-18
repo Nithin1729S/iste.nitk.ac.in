@@ -38,8 +38,8 @@
         </h3>
         {% for sig_choice in sigs %}
         <div class="col s12 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
+            <div class="card z-depth-3">
+                <div class="card-image waves-effect waves-block waves-light ">
                     <img class="activator" src="/media/{{sig_choice.avatar}}">
                 </div>
                 <div class="card-content">
@@ -102,7 +102,7 @@
         </h3>
         <div class='flexrow'>
             {% for member in core %}
-            <a class="core_img">
+            <a class="core_img z-depth-2">
                 <div class="img__overlay">
                     {{member.user.first_name}} {{member.user.last_name}}
                     <br>
