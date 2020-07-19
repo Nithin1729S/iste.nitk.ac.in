@@ -3,7 +3,7 @@
 <h3><span>{{event.name}}</span></h3>
 
 <div class="row">
-    <div class="col l6 offset-l3 m8 offset-m2 s12">
+    <div class="col l16 m8 offset-m2 s12">
         <div class="card hoverable z-depth-3">
             <div class="card-image responsive-img">
                 <img src="{{event.poster.url}}">
@@ -38,14 +38,27 @@
                     Maximum group members: {{event.no_of_participants}}
                 </p>
                 <br>
+
                 <div class="divider"></div>
                 <h5 class="center">About the event</h5>
                 <br>
                 <p class=" grey-text text-darken-2">
                     {{event.publicity_message | safe}}
-                </p>
-            </div>
-
+                </p><br>
+                
+                <div class="divider"></div><br>
+                <p class=" grey-text text-darken-2">
+                    Points of contact:<br>
+                    <ul>
+                        {% for member in event.contacts.all %}
+                            {% if member.gender == 'F' %}
+                                <li>{{member.first_name}} {{member.last_name}} : {{member.hostel_address}}</li>
+                            {% else %}
+                                <li>{{member.first_name}} {{member.last_name}} : {{member.phone_number}}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </p><br>
             <div class="card-action">
                 <center>
                     <a class="indigo-text" href="{{event.form_url}}">Register Now</a>
