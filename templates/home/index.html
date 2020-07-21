@@ -3,23 +3,23 @@
 {% block styles %}
     {% load static %}
     <link type="text/css" rel="stylesheet" href="{% static 'css/home/counter.css' %}"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/home/sig_cards.css' %}" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/home/home_items.css' %}" media="screen,projection"/>
 {% endblock %}
 
 {% block carousel %}
     <div class='indigo darken-4'>
-        <div id="homecarousel" class="carousel carousel-slider center">
+        <div id="homecarousel" class="carousel carousel-slider center carousel_images">
 
             <div class="carousel-item" href="#one!">
-                <img src='/./media/carousel_home/CryptoberCover.jpg' style="width: 80%;height: auto;"></img>
+                <img src='/./media/carousel_home/CryptoberCover.jpg'/>
             </div>
     
             <div class="carousel-item" href="#two!">
-                <img src='/./media/carousel_home/DSC_0009.JPG' style="width: 80%;height: auto;"></img>
+                <img src='/./media/carousel_home/DSC_0009.JPG'/>
             </div>
     
             <div class="carousel-item" href="#three!">
-                <img src='/./media/carousel_home/DSC_0014.JPG' style="width: 80%;height: auto;"></img>
+                <img src='/./media/carousel_home/DSC_0014.JPG'/>
             </div>
         </div>
         <br>
