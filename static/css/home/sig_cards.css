@@ -1,0 +1,15 @@
+.sigcard .card .card-reveal {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sigcard .card .card-reveal .card-title {
+    padding-bottom: 3%;
+}
+
+.sigcard .card .card-reveal hr {
+    border-bottom:0.2vh solid white;opacity: 0.7;
+}
+
+.sigcard .card .card-reveal p {
+    padding-top: 4%;opacity: 0.7;
+}

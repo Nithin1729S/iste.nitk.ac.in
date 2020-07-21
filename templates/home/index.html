@@ -3,6 +3,7 @@
 {% block styles %}
     {% load static %}
     <link type="text/css" rel="stylesheet" href="{% static 'css/home/counter.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/home/sig_cards.css' %}" media="screen,projection"/>
 {% endblock %}
 
 {% block carousel %}
@@ -37,7 +38,7 @@
             </span>
         </h3>
         {% for sig_choice in sigs %}
-        <div class="col s12 l3">
+        <div class="col s12 l3 sigcard">
             <div class="card z-depth-4">
                 <div class="card-image waves-effect waves-block waves-light ">
                     <img class="activator" src="/media/{{sig_choice.avatar}}">
@@ -50,15 +51,15 @@
                         </i>
                     </span>
                 </div>
-                <div class="card-reveal" style="background-color: rgba(0, 0, 0, 0.7);">
-                    <span class="card-title white-text" style="padding-bottom: 3%;">
+                <div class="card-reveal">
+                    <span class="card-title white-text">
                         {{sig_choice.name}}
                         <i class="material-icons right">
                             close
                         </i>
                     </span>
-                    <hr style="border-bottom:0.2vh solid white;opacity: 0.7;">
-                    <p class="white-text" style="padding-top: 4%;opacity: 0.7;">
+                    <hr>
+                    <p class="white-text">
                         {{sig_choice.description|safe}}
                     </p>
                 </div>
