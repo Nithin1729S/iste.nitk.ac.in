@@ -102,6 +102,48 @@
             </span>
         </h3>
         <div class='flexrow'>
+
+            {% for member in core %}
+            
+                <div style="padding: 1%;">
+
+                <!-- Card -->
+                <div class="card z-depth-4" style="height: 40vh;width:auto; object-fit: cover;">  <!-- Adjust size of card here -->
+                <!-- object-fit:cover centers the image and crops it out if resolution is too big-->
+
+                    <div class="card-image waves-effect waves-block waves-light">
+
+                        <!--card-image here-->
+                        <img class="activator" src="media/{{member.user.avatar}}" style="height: 40vh;width: auto;"> <!-- Make size of image match size of card-->
+                    
+                        <!-- Description on card-->
+                        <span class="card-title activator" style="background-color:rgba(0, 0,0, 0.5);width: 100%; font-size: 125%;">{{member.user.first_name}} {{member.user.last_name}}<br>{{member.role}}</b></span>
+                 
+                    </div>
+
+                    <div class="card-reveal" style="background-color: rgba(0,0,0,0.6);"> <!--On card-reveal-->
+                    
+                        <!-- Heading -->
+                        <span class="card-title white-text text-darken-4">{{member.user.first_name}} {{member.user.last_name}}<i class="material-icons right">close</i></span>
+                    
+                        <!-- Description for the member-->
+                        <p class="white-text">{{member.role}}</p>
+                    
+                        <!-- To add links for Instagram and Linkedin-->
+                        <p class="white-text" style="position: absolute;bottom: 5%;">Linkedin</p>
+                        <p class="white-text" style="position: absolute;bottom: 5%;right: 15%;">Insta</p>
+                    
+                    </div>
+                </div>
+                </div>
+                
+                
+          
+              
+            {% endfor %}
+        </div>
+                
+        <div class='flexrow'>
             {% for member in core %}
             <a class="core_img z-depth-2">
                 <div class="img__overlay">
