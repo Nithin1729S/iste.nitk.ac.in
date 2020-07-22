@@ -1,0 +1,12 @@
+.inst_list {
+    list-style-type: square; 
+    color:#1A237E;
+}
+
+.inst_list li a{
+    color: black;
+}
+
+.inst_list li {
+    padding:1%
+}

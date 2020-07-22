@@ -1,17 +1,53 @@
 {% extends 'base.html' %}
 {% load split %}
+
+{% block styles %}
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/recruitment/index.css' %}"  media="screen,projection"/>
+{% endblock %}
+
 {% block content %}
 <h3>Instructions</h3><br>
-aszdxfcgvh
-aesrdtyg
-awesrdtfyg<br>
+<ol class="inst_list">
+    <li>
+        <a class="flow-text">Instruction 1</a>
+    </li>
+        
+    <li>
+        <a class="flow-text">Instruction 2</a>
+    </li>
+        
+    <li>
+        <a class="flow-text">Instruction 3</a>
+    </li>
+        
+    <li>
+        <a class="flow-text">Instruction 4</a>
+    </li>
+</ol>
+<br>
 
 <h3>Special Interest Groups</h3><br>
+<div class="row">
 {% for sig in sigs %}
-    <a href="{% url 'recruitment:details' sig.name %}">
-        <img src="/media/{{sig.avatar}}"><br>
-    </a>
-    
+    <div class="col s12 l3">
+        <a href="{% url 'recruitment:details' sig.name %}">
+            <div class="card z-depth-4">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img src="/media/{{sig.avatar}}">
+                </div>
+                <div class="card-content indigo darken-3 waves-effect waves-block waves-light">
+                    <span class="card-title white-text text-darken-4">
+                        {{sig.name}}
+                        <i class="material-icons right">
+                            more_vert
+                        </i>
+                    </span>
+                </div>
+            </div>
+        </a>
+    </div>
 {% endfor %}
+</div>  
 
 {% endblock %}
