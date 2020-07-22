@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load split %}
+{% block content %}
+<h3>Instructions</h3><br>
+aszdxfcgvh
+aesrdtyg
+awesrdtfyg<br>
+
+<h3>Special Interest Groups</h3><br>
+{% for sig in sigs %}
+    <a href="{% url 'recruitment:details' sig.name %}">
+        <img src="/media/{{sig.avatar}}"><br>
+    </a>
+    
+{% endfor %}
+
+{% endblock %}
