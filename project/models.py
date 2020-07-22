@@ -23,9 +23,19 @@ class Project(models.Model):
         choices = year_choices(),
         default=datetime.today().year
     )
+    summary = models.TextField(
+        default="Project Summary",
+        blank=False,
+        editable=True
+    )
     description = RichTextUploadingField()
     isFeatured = models.BooleanField(
         default = False
+    )
+    img_url = models.TextField(
+        default="",
+        blank=False,
+        editable=True
     )
 
     def __str__(self):

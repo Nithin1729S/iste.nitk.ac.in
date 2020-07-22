@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load split %}
+{% block content %}
+
+{{sig.name}}<br>
+<img src="/media/{{sig.avatar}}"><br>
+{{sig.description}}
+<br>
+<h3>Projects {{year}} :</h3><br>
+{% for project in projects %}
+    <img src={{project.img_url}}><br>
+    {{project.name}}<br>
+    {{project.summary}}
+{% endfor %}
+<!-- Add button to view all the projects here. Don't link it to any page for now -->
+{% endblock %}

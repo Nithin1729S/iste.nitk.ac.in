@@ -20,6 +20,12 @@ class SIG(models.Model):
         editable=True
     )
 
+    summary = models.TextField(
+        default='SIG Summary',
+        blank=False,
+        editable=True
+    )
+
     def __str__(self):
         return self.name
 

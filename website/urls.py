@@ -11,5 +11,6 @@ urlpatterns = [
     path('account/', include('account.urls', namespace = 'account')),
     path('project/', include('project.urls', namespace = 'project')),
     path('event/', include('event.urls', namespace = 'event')),
+    path('sig/',include('sig.urls', namespace = 'sig')),
     path('ckeditor/',include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
