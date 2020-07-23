@@ -18,7 +18,8 @@ class Project(models.Model):
     #Members of the project, 'editable_by' is used due 
     #to RBAC logic used in @check_ edit_access decorator
     editable_by = models.ManyToManyField(User)
-    sigs = models.ManyToManyField(SIG)
+    sigs = models.ManyToManyField(
+        to=SIG)
     year = models.IntegerField(
         choices = year_choices(),
         default=datetime.today().year

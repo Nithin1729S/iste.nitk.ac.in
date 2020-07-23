@@ -19,7 +19,11 @@ class SIG(models.Model):
         blank=False,
         editable=True
     )
-
+    reg_url = models.TextField(
+        blank=False,
+        editable=True,
+        default=''
+    )
     summary = models.TextField(
         default='SIG Summary',
         blank=False,

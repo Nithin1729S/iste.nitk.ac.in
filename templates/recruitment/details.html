@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load split %}
+{% block content %}
+
+{% for round in rounds %}
+{{round.name}}
+{{round.sig}}
+{{round.description}}
+{% endfor %}
+
+{{reg_url}}
+{% endblock %}
