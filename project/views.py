@@ -6,18 +6,24 @@ from account.models import SIG,User
 from datetime import datetime
 from django.contrib import messages
 
-def indexView(request):
+def indexView(request, sig_name):
     projects = {}
     context = {}
-    years = [r for r in range(2019, datetime.today().year+1)]
+    # years = [r for r in range(2018, datetime.today().year+1)]
     #Render projects as a 2D array indexed by year and sig
-    for year in years:
-        projects[year] = {}
-        for sig in SIG.objects.all():
-            projects[year][sig] = Project.objects.filter(
-                year=year,
-                sigs__name=sig.name
-            )
+    # for year in years:
+    #     projects[year] = {}
+    #     for sig in SIG.objects.all():
+    #         projects[year][sig] = Project.objects.filter(
+    #             year=year,
+    #             sigs__name=sig.name
+    #         )
+    for year in range(2018,datetime.today().year+1):
+        projects[str(year)+'-'+str(year+1)[2:]] = Project.objects.filter(
+            sigs__name=sig_name,
+            year=year
+        )
+    context['sig_name'] = sig_name
     context['projects'] = projects
     return render(request, 'project/index.html', context)
 
@@ -87,10 +93,11 @@ def editView(request, project_id):
             )
     return render(request, 'project/edit.html', context)
 
-def detailsView(request, project_name):
+def detailsView(request, project_id):
+    print('In details')
     context = {}
     project = Project.objects.get(
-        name=project_name
+        id=project_id
     )
     context['project'] = project
     return render(request, 'project/details.html', context)

@@ -3,9 +3,10 @@ from project import views
 
 app_name = 'project'
 urlpatterns = [
-    path('', views.indexView, name='index'),
+    path('all/<sig_name>/', views.indexView, name='index'),
     path('add/', views.addView, name='add'),
     path('edit/<int:project_id>/', views.editView, name='edit'),
     #Make sure this is the last route always
-    path('<project_name>/', views.detailsView, name='details'),
+    path('<int:project_id>/', views.detailsView, name='details'),
+
 ]

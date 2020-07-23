@@ -50,7 +50,27 @@
                         </li>
                     </ul>
                 </li>
-                
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header waves-effect">Projects<i class="material-icons">arrow_drop_down</i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'project:add' %}" class="waves-effect">
+                                            Add Project
+                                        </a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="{% url 'project:index' %}" class="waves-effect">
+                                            View Projects
+                                        </a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
@@ -72,17 +92,10 @@
                         </li>
                     </ul>
                 </li>
-
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li>
-                            <li><a href="{% url 'project:add' %}" class="waves-effect">Add Project</a></li>
-                        </li>
-                    </ul>
-                </li>
             {% else %}
             <li><a href="{% url 'account:login' %}" class="waves-effect">Login</a></li>
             <li><a href="{% url 'event:index' %}" class="waves-effect">Events</a></li>
+            <!-- <li><a href="{% url 'project:index' %}" class="waves-effect">Projects</a></li> -->
             {% endif %}
             <li><a href="https://istenitk.wordpress.com/" class=" waves-effect">Blog</a></li>
         </ul>
@@ -116,6 +129,18 @@
                 </a>
             </li>
         </ul>
+        <ul id="project-action" class="dropdown-content">
+            <!-- <li>
+                <a href="{% url 'project:index' %}" class="waves-effect">
+                    View Projects
+                </a>
+            </li> -->
+            <li>
+                <a href="{% url 'project:add' %}" class="waves-effect">
+                    Add Project
+                </a>
+            </li>
+        </ul>
         <nav>
             <div class="nav-wrapper">
                 <a href="{% url 'home:index' %}" class="brand-logo">
@@ -139,7 +164,25 @@
                             </a>
                     </li>
                     {% endif %}
-                                       
+                    <li>
+                        <a href="{% url 'recruitment:index' %}">
+                            Get Recruited
+                        </a>
+                    </li>
+                    <li>
+                        {% if user.is_authenticated %}
+                            <a class="dropdown-trigger" href="#" data-target="project-action">
+                                Projects
+                                <i class="material-icons right">
+                                    arrow_drop_down
+                                </i>
+                            </a>
+                        {% else %}
+                            <!-- <a href="{% url 'project:index' %}">
+                                Projects
+                            </a> -->
+                        {% endif %}
+                    </li>
                     <li>
                         {% if user.is_authenticated %}
                             <a class="dropdown-trigger" href="#" data-target="event-action">
@@ -152,19 +195,6 @@
                             <a href="{% url 'event:index' %}">
                                 Events
                             </a>
-                        {% endif %}
-                    </li>
-                    <li>
-                        <a href="{% url 'recruitment:index' %}">
-                            Get Recruited
-                        </a>
-                    </li>
-                    <li>
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'project:add' %}">
-                                Add Project
-                            </a>
-                           
                         {% endif %}
                     </li>
                     <li>
@@ -226,7 +256,11 @@
                                 Quick Access
                             </h5>
                             <ul>
-                                
+                                <!-- <li>
+                                    <a class="white-text" href="{% url 'project:index' %}">
+                                        Projects
+                                    </a>
+                                </li> -->
                                 <li>
                                     <a class="white-text" href="{% url 'event:index' %}">
                                         Events

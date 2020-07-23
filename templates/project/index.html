@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% block styles %}
+<!-- {% block styles %}
     {% load static %}
     <link type="text/css" rel="stylesheet" href="{% static 'css/project/main.css' %}"  media="screen,projection"/>
-{% endblock %}
+{% endblock %} -->
 
 {% block content %}
-<h3><span>Projects</span></h3>     
-  {% for year,yearly_projects in projects.items %}
+<h3><span>{{sig_name}} Projects</span></h3>     
+  <!-- {% for year,yearly_projects in projects.items %}
   <div class="center flexrow">
     <h5 class="circle projects_show" id="{{year}}">{{ year }} - {{ year| add:1 }}<br></h5>
 
@@ -40,7 +40,17 @@
           {% endfor %}
         </div>
       </div>
-  {% endfor %}
+  {% endfor %} -->
+{% for year, yearly_projects in projects.items %}
+  <h5>{{ year }}</h5>
+  <ul>
+    {% for project in yearly_projects %}
+      <a href="{% url 'project:details' project.id %}"><li>{{project.name}}</li></a>
+    {% endfor %}
+  </ul>
+{% endfor %}
+ 
+
 {% endblock %}
 {% block scripts %}
   {% load static %}

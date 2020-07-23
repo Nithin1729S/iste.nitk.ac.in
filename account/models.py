@@ -91,3 +91,10 @@ class Core(models.Model):
     description = models.TextField(
         default=""
     )
+    email = models.EmailField(
+        blank=True
+    )
+    linkedin_url = models.CharField(
+        blank=True,
+        max_length=100
+    )

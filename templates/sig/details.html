@@ -67,7 +67,7 @@ div {
                 <div class="col l12">
                     <h6>{{project.summary}}
                     </h6>
-                    <center><a class="waves-effect waves-light btn-small">View Details</a></center><br>
+                    <center><a class="waves-effect waves-light btn-small" href="{% url 'project:details' project.id %}">View Details</a></center><br>
                </div>
             </div>
         </div>
@@ -96,8 +96,7 @@ div {
     </div> -->
 </div>
 {% endfor %}
-<!-- Add button to view all the projects here. Don't link it to any page for now -->
 <div class="row center">
-    <a class="waves-effect waves-light btn"><i class="material-icons small" style="vertical-align: bottom;">list</i>More Projects</a>
+    <a class="waves-effect waves-light btn" href="{% url 'project:index' sig %}"><i class="material-icons small" style="vertical-align: bottom;">list</i>More Projects</a>
 </div>
 {% endblock %}
