@@ -1,12 +1,29 @@
 {% extends 'base.html' %}
 {% load split %}
+
+{% block styles %}
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/recruitment/details.css' %}" media="screen,projection"/>
+{% endblock %}
+
 {% block content %}
 
+<h1>
+    {{rounds.0.sig}}
+</h1>
+
 {% for round in rounds %}
-{{round.name}}
-{{round.sig}}
-{{round.description}}
+<div class="flow-text">
+    <h2>
+        {{round.name}}
+    </h2>
+    <p>
+        {{round.description}}
+    </p>    
+</div>
 {% endfor %}
 
-{{reg_url}}
+<div class="center" id="RegisterButton">
+    <a href="{{reg_url}}" class="btn waves-effect indigo darken-4 white-text ">Register</a>
+</div>
 {% endblock %}
