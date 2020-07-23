@@ -20,7 +20,7 @@ div {
 }
 
 </style>
-<div class="row card z-depth-2">
+<div class="row">
     <div class="row center">
         <div class="col l12">
             <h3><span>{{sig.name}}</span></h3><br>
@@ -48,6 +48,7 @@ div {
         </span></h6>
         </div>
     </div>
+</div>
     <div class="row">
         <div class="col l10 offset-l1">
             <h4 class="left"><span>Projects {{year}}</span></h4>
@@ -65,18 +66,13 @@ div {
                 <h4 class="center">{{project.name}}</h4>
                 <div class="col l12">
                     <h6>{{project.summary}}
-                        
-                        Contrary to popular belief, Lorem Ipsum is not simp
-                        andom text. It has roots in a piece of classical Latin literature fro
-                        m 45 BC, making it over 2000 years old. Richard McClintock, a Latin p
-                        rofessor at Hampden-Sydney College in Virginia, looked up one of the m
-                        
                     </h6>
-                </div>
+                    <center><a class="waves-effect waves-light btn-small">View Details</a></center> 
+               </div>
             </div>
         </div>
     </div>
-    <div class="row proj-item">
+    <!-- <div class="row proj-item">
         <div class="col l10 offset-l1 z-depth-3">
             <div class="col l4 s12 proj-image center">
                     <img src={{project.img_url}} class="responsive-img" width="250px">    
@@ -93,14 +89,15 @@ div {
                         rofessor at Hampden-Sydney College in Virginia, looked up one of the m
                         
                     </h6>
+                    <center><a class="waves-effect waves-light btn-small">View Details</a></center>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 {% endfor %}
 <!-- Add button to view all the projects here. Don't link it to any page for now -->
 <div class="row center">
-    <a class="waves-effect waves-light btn"><i class="material-icons small" style="vertical-align: bottom;">arrow_back</i>Projects</a>
+    <a class="waves-effect waves-light btn"><i class="material-icons small" style="vertical-align: bottom;">list</i>More Projects</a>
 </div>
 {% endblock %}

@@ -163,12 +163,12 @@
                                 Login
                             </a>
                     </li>
+                    {% endif %}
                     <li>
-                        <a href="#">
+                        <a href="{% url 'recruitment:index' %}">
                             Get Recruited
                         </a>
                     </li>
-                    {% endif %}
                     <li>
                         {% if user.is_authenticated %}
                             <a class="dropdown-trigger" href="#" data-target="project-action">
