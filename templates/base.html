@@ -84,6 +84,7 @@
             <li><a href="{% url 'account:login' %}" class="waves-effect">Login</a></li>
             <li><a href="{% url 'event:index' %}" class="waves-effect">Events</a></li>
             {% endif %}
+            <li><a href="{% url 'team:index' %}">Our Team</a></li>
             <li><a href="https://istenitk.wordpress.com/" class=" waves-effect">Blog</a></li>
         </ul>
         <ul id="user-action" class="dropdown-content">
@@ -168,6 +169,11 @@
                         {% endif %}
                     </li>
                     <li>
+                        <a href="{% url 'team:index' %}">
+                            Our Team
+                        </a>
+                    </li>
+                    <li>
                         <a href="https://istenitk.wordpress.com/">
                             Blog
                         </a>
@@ -230,6 +236,11 @@
                                 <li>
                                     <a class="white-text" href="{% url 'event:index' %}">
                                         Events
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="white-text" href="{% url 'team:index' %}">
+                                        Our Team
                                     </a>
                                 </li>
                                 <li>

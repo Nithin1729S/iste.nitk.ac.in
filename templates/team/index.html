@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load split %}
+{% block content %}
+<h3>CORE</h3><br>
+{% for member in core %}
+    <img src="/media/{{member.user.avatar}}">
+    {{member.user.first_name}} {{member.user.second_name}}<br>
+    {{member.position}}<br>
+    <a href={{member.linkedin}}>Linkedin</a><br>
+    <!-- Add mail also here -->
+{% endfor %}
+
+<h3>EXECUTIVE MEMBERS:</h3>
+
+{% for member in team %}
+    {{member.first_name}} {{member.last_name}}<br>
+{% endfor %}
+
+{% endblock %}
