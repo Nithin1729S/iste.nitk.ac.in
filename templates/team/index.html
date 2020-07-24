@@ -1,18 +1,72 @@
 {% extends 'base.html' %}
 {% block content %}
-<h3>CORE</h3><br>
-{% for member in core %}
-    <img src="/media/{{member.user.avatar}}">
-    {{member.user.first_name}} {{member.user.second_name}}<br>
-    {{member.position}}<br>
-    <a href={{member.linkedin}}>Linkedin</a><br>
-    <!-- Add mail also here -->
-{% endfor %}
+<style>
+    .proj-item:nth-child(odd) div.proj-info {
+      float: left;
+    }
+    .proj-item:nth-child(odd) div.proj-image {
+      float: right;
+    }
+    .proj-item:nth-child(even) div.proj-info {
+      float: right;
+    }
+    .proj-item:nth-child(even) div.proj-image {
+      float: left;
+    }
+    div {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+</style>
+<div class="row">
+    <div class="row center">
+        <div class="col l12 s12">
+            <h3>CORE MEMBERS</h3><br>
+        </div>
+    </div>
+    {% for member in core %}
+    <div class="row proj-item">
+        <div class="col l10 offset-l1 s12 z-depth-2" style="padding: 20px;">
+            <div class="col l4 s12 proj-image center">
+                <img src="/media/{{member.user.avatar}}" class="responsive-img circle">
+            </div>
 
-<h3>EXECUTIVE MEMBERS:</h3>
+            <div class="col l8 s12">
+                <div class="row center">
+                    <h4>{{member.user.first_name}} {{member.user.second_name}} NAME1 NAME2</h4>
+                    <h6>{{member.position}} MEMBER POSITION</h6>
+                </div>
+                <div class="row center">
+                    <a href="{{member.linkedin}}" class="btn-large btn-floating waves-effect waves-light" target="_blank"><i class="center fa fa-linkedin fa-2x white-text"></i></a>
+                    &nbsp;
+                    <a href="" class="btn-large btn-floating waves-effect waves-light"><i class="material-icons">mail_outline</i></a>
+                    <!-- Add mail also here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
-{% for member in team %}
-    {{member.first_name}} {{member.last_name}}<br>
-{% endfor %}
+<div class="row">
+    <div class="row center">
+        <div class="col l12 s12">
+            <h3>EXECUTIVE MEMBERS</h3>
+        </div>
+    </div>
+    {% for member in team %}    
+    <div class="col l4 m6 s12 center">
+        <h6>{{member.first_name}} {{member.last_name}} HI</h6>
+    </div>
+    <div class="col l4 m6 s12 center">
+        <h6>{{member.first_name}} {{member.last_name}} HELLO</h6>
+    </div>
+    <div class="col l4 m6 s12 center">
+        <h6>{{member.first_name}} {{member.last_name}} BYE</h6>
+    </div>
+    {% endfor %}
+</div>
+
 
 {% endblock %}
