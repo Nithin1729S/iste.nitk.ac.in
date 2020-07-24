@@ -22,7 +22,7 @@ div {
 </style>
 <div class="row">
     <div class="row center">
-        <div class="col l12">
+        <div class="col l12 s12">
             <h3><span>{{sig.name}}</span></h3><br>
         </div>
     </div>
@@ -57,16 +57,15 @@ div {
     {% for project in projects %}
 
     <div class="row proj-item">
-        <div class="col l10 offset-l1 z-depth-3">
+        <div class="col l10 offset-l1 s12 z-depth-3">
             <div class="col l4 s12 proj-image center">
                     <img src={{project.img_url}} class="responsive-img" width="250px">    
                 
             </div>
-            <div class="col l8 center proj-info card-item">
+            <div class="col l8 s12 center proj-info card-item">
                 <h4 class="center">{{project.name}}</h4>
-                <div class="col l12">
-                    <h6>{{project.summary}}
-                    </h6>
+                <div class="col l12 s12">
+                    <h6 class="center">{{project.summary}}</h6>
                     <center><a class="waves-effect waves-light btn-small" href="{% url 'project:details' project.id %}">View Details</a></center><br>
                </div>
             </div>
