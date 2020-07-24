@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if isEmpty == 'True'%}
+<h3><span>No Events scheduled for now</span></h3>
+{% else %}
+
 <h3><span>Upcoming Events</span></h3>
 
 <div class="row">
@@ -40,5 +44,5 @@
         </div>
     {% endfor %}
 </div>
-
+{% endif %}
 {% endblock %}

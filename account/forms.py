@@ -10,5 +10,5 @@ class EditProfileForm(ModelForm):
     def __init__(self, *args, **kwargs): 
         super(EditProfileForm, self).__init__(*args, **kwargs)                       
         self.fields['gender'].disabled = True
-        self.fields['sigs'].disabled = True
+        # self.fields['sigs'].disabled = True
         self.fields['batch_of'].disabled = True

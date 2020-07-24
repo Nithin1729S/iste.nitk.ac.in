@@ -25,7 +25,7 @@ def indexView(request):
         year=this_year
     ).count()
     
-    member_count = User.objects.all().count()
+    member_count = User.objects.all().count() - 1
     core = Core.objects.all()
     context = {
         'core':core, 'sigs':sigs,
