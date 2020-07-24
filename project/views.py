@@ -83,7 +83,7 @@ def editView(request, project_id):
                 messages.SUCCESS,
                 'Project '+request.POST['name']+' edited successfully!'
             )
-            return redirect('/project/')
+            return redirect('project:details',project_id)
 
         else:
             messages.add_message(
