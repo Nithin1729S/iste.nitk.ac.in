@@ -15,5 +15,11 @@
 }
 
 .carousel_images .carousel-item img {
-    width: 80%;height: 70%;object-fit: cover;
+    width: 100%;height: 90vh;object-fit: cover;
 }
+
+.carousel.carousel-slider.center.carousel_images {
+    margin-top: -14%;
+}
+
+

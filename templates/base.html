@@ -22,26 +22,26 @@
         {% endblock %}
     </head>
     <body>
-        <ul id="mobile-menu" class="sidenav">
+        <ul id="mobile-menu" class="sidenav white-text" style="background-color: rgba(0,0,0,0.5);">
             {% if user.is_authenticated %}
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
-                            <a class="collapsible-header waves-effect">My Profile<i class="material-icons">arrow_drop_down</i></a>
+                            <a class="collapsible-header waves-effect white-text">My Profile<i class="material-icons">arrow_drop_down</i></a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li>
-                                        <a href="{% url 'account:edit' %}" class="waves-effect">
+                                        <a href="{% url 'account:edit' %}" class="waves-effect white-text">
                                             Edit Profile
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'account:change_password' %}" class="waves-effect">
+                                        <a href="{% url 'account:change_password' %}" class="waves-effect white-text">
                                             Change Password
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'account:logout' %}" class="waves-effect">
+                                        <a href="{% url 'account:logout' %}" class="waves-effect white-text">
                                             Logout
                                         </a>
                                     </li>
@@ -54,16 +54,16 @@
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
-                            <a class="collapsible-header waves-effect">Events<i class="material-icons">arrow_drop_down</i></a>
+                            <a class="collapsible-header waves-effect white-text">Events<i class="material-icons">arrow_drop_down</i></a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li>
-                                        <a href="{% url 'event:add' %}" class="waves-effect">
+                                        <a href="{% url 'event:add' %}" class="waves-effect white-text">
                                             Add Event
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'event:index' %}" class="waves-effect">
+                                        <a href="{% url 'event:index' %}" class="waves-effect white-text">
                                             View Events
                                         </a>
                                     </li>
@@ -76,19 +76,19 @@
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
-                            <li><a href="{% url 'project:add' %}" class="waves-effect">Add Project</a></li>
+                            <li><a href="{% url 'project:add' %}" class="waves-effect white-text">Add Project</a></li>
                         </li>
                     </ul>
                 </li>
             {% else %}
-            <li><a href="{% url 'account:login' %}" class="waves-effect">Login</a></li>
-            <li><a href="{% url 'event:index' %}" class="waves-effect">Events</a></li>
+            <li><a href="{% url 'account:login' %}" class="waves-effect white-text">Login</a></li>
+            <li><a href="{% url 'event:index' %}" class="waves-effect white-text">Events</a></li>
             {% endif %}
             <li class="no-padding">
                 <ul class="collapsible collapsible-accordion">
                     <li>
-                        <a class="collapsible-header waves-effect">SIGs<i class="material-icons">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
+                        <a class="collapsible-header waves-effect white-text">SIGs<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body white-text">
                             <ul>
                                 <li>
                                     <a href="{% url 'sig:details' 'Catalyst' %}" class="waves-effect">
@@ -212,8 +212,9 @@
                 </a>
             </li>
         </ul>
-        <nav>
-            <div class="nav-wrapper">
+        <div class="navbar-fixed">
+        <nav style="background-color: rgba(0,0,0,0);">
+            <div class="nav-wrapper" style="background-color:rgba(0,0,0,0.5);">
                 <a href="{% url 'home:index' %}" class="brand-logo">
                     <img width="75" src="/media/logo.png">
                 </a>
@@ -284,7 +285,9 @@
                 </ul>
             </div>
         </nav>
-
+    </div>
+    {% block carousel %}
+    {% endblock %} 
         <main>
             {% if messages %}
                 <div class="row" id="alert_box" style="display:none;">
@@ -309,8 +312,7 @@
                     </div>
                 </div>
             {% endif %}
-            {% block carousel %}
-            {% endblock %} 
+            
             <div class="row"></div>
             <div class="row"></div> 
             <div class='container'>
