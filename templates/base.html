@@ -22,12 +22,12 @@
         {% endblock %}
     </head>
     <body>
-        <ul id="mobile-menu" class="sidenav white-text" style="background-color: rgba(0,0,0,0.5);">
+        <ul id="mobile-menu" class="sidenav white-text back_transp">
             {% if user.is_authenticated %}
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
-                            <a class="collapsible-header waves-effect white-text">My Profile<i class="material-icons">arrow_drop_down</i></a>
+                            <a class="collapsible-header waves-effect white-text">My Profile<i class="material-icons white-text">arrow_drop_down</i></a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li>
@@ -54,7 +54,7 @@
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li>
-                            <a class="collapsible-header waves-effect white-text">Events<i class="material-icons">arrow_drop_down</i></a>
+                            <a class="collapsible-header waves-effect white-text">Events<i class="material-icons white-text">arrow_drop_down</i></a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li>
@@ -87,46 +87,46 @@
             <li class="no-padding">
                 <ul class="collapsible collapsible-accordion">
                     <li>
-                        <a class="collapsible-header waves-effect white-text">SIGs<i class="material-icons">arrow_drop_down</i></a>
-                        <div class="collapsible-body white-text">
+                        <a class="collapsible-header waves-effect white-text">SIGs<i class="material-icons white-text">arrow_drop_down</i></a>
+                        <div class="collapsible-body white-text back_transp">
                             <ul>
                                 <li>
-                                    <a href="{% url 'sig:details' 'Catalyst' %}" class="waves-effect">
+                                    <a href="{% url 'sig:details' 'Catalyst' %}" class="waves-effect white-text">
                                         Catalyst
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'sig:details' 'Charge' %}" class="waves-effect">
+                                    <a href="{% url 'sig:details' 'Charge' %}" class="waves-effect white-text">
                                         Charge
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'sig:details' 'Chronicle' %}" class="waves-effect">
+                                    <a href="{% url 'sig:details' 'Chronicle' %}" class="waves-effect white-text">
                                         Chronicle
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'sig:details' 'Clutch' %}" class="waves-effect">
+                                    <a href="{% url 'sig:details' 'Clutch' %}" class="waves-effect white-text">
                                         Clutch
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'sig:details' 'Concrete' %}" class="waves-effect">
+                                    <a href="{% url 'sig:details' 'Concrete' %}" class="waves-effect white-text">
                                         Concrete
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'sig:details' 'Create' %}" class="waves-effect">
+                                    <a href="{% url 'sig:details' 'Create' %}" class="waves-effect white-text">
                                         Create
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'sig:details' 'Credit' %}" class="waves-effect">
+                                    <a href="{% url 'sig:details' 'Credit' %}" class="waves-effect white-text">
                                         Credit
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'sig:details' 'Crypt' %}" class="waves-effect">
+                                    <a href="{% url 'sig:details' 'Crypt' %}" class="waves-effect white-text">
                                         Crypt
                                     </a>
                                 </li>
@@ -136,85 +136,85 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="{% url 'team:index' %}">Our Team</a></li>
-            <li><a href="https://istenitk.wordpress.com/" target="blank" class=" waves-effect">Blog</a></li>
+            <li><a class="white-text" href="{% url 'team:index' %}">Our Team</a></li>
+            <li><a class="white-text" href="https://istenitk.wordpress.com/" target="blank" class=" waves-effect">Blog</a></li>
         </ul>
-        <ul id="user-action" class="dropdown-content">
+        <ul id="user-action" class="dropdown-content back_transp">
             <li>
-                <a href="{% url 'account:edit' %}" class="waves-effect">
+                <a href="{% url 'account:edit' %}" class="waves-effect white-text">
                     Edit Profile
                 </a>
             </li>
             <li>
-                <a href="{% url 'account:change_password' %}" class="waves-effect">
+                <a href="{% url 'account:change_password' %}" class="waves-effect white-text">
                     Change Password
                 </a>
             </li>
             <li>
-                <a href="{% url 'account:logout' %}" class="waves-effect">
+                <a href="{% url 'account:logout' %}" class="waves-effect white-text">
                     Logout
                 </a>
             </li>
         </ul>
 
-        <ul id="event-action" class="dropdown-content">
+        <ul id="event-action" class="dropdown-content back_transp">
             <li>
-                <a href="{% url 'event:index' %}" class="waves-effect">
+                <a href="{% url 'event:index' %}" class="waves-effect white-text">
                     View Events
                 </a>
             </li>
             <li>
-                <a href="{% url 'event:add' %}" class="waves-effect">
+                <a href="{% url 'event:add' %}" class="waves-effect white-text">
                     Add Event
                 </a>
             </li>
         </ul>
 
-        <ul id="sig-action" class="dropdown-content">
+        <ul id="sig-action" class="dropdown-content back_transp">
             <li>
-                <a href="{% url 'sig:details' 'Catalyst' %}" class="waves-effect">
+                <a href="{% url 'sig:details' 'Catalyst' %}" class="waves-effect white-text">
                     Catalyst
                 </a>
             </li>
             <li>
-                <a href="{% url 'sig:details' 'Charge' %}" class="waves-effect">
+                <a href="{% url 'sig:details' 'Charge' %}" class="waves-effect white-text">
                     Charge
                 </a>
             </li>
             <li>
-                <a href="{% url 'sig:details' 'Chronicle' %}" class="waves-effect">
+                <a href="{% url 'sig:details' 'Chronicle' %}" class="waves-effect white-text">
                     Chronicle
                 </a>
             </li>
             <li>
-                <a href="{% url 'sig:details' 'Clutch' %}" class="waves-effect">
+                <a href="{% url 'sig:details' 'Clutch' %}" class="waves-effect white-text">
                     Clutch
                 </a>
             </li>
             <li>
-                <a href="{% url 'sig:details' 'Concrete' %}" class="waves-effect">
+                <a href="{% url 'sig:details' 'Concrete' %}" class="waves-effect white-text">
                     Concrete
                 </a>
             </li>
             <li>
-                <a href="{% url 'sig:details' 'Create' %}" class="waves-effect">
+                <a href="{% url 'sig:details' 'Create' %}" class="waves-effect white-text">
                     Create
                 </a>
             </li>
             <li>
-                <a href="{% url 'sig:details' 'Credit' %}" class="waves-effect">
+                <a href="{% url 'sig:details' 'Credit' %}" class="waves-effect white-text">
                     Credit
                 </a>
             </li>
             <li>
-                <a href="{% url 'sig:details' 'Crypt' %}" class="waves-effect">
+                <a href="{% url 'sig:details' 'Crypt' %}" class="waves-effect white-text">
                     Crypt
                 </a>
             </li>
         </ul>
         <div class="navbar-fixed">
-        <nav style="background-color: rgba(0,0,0,0);">
-            <div class="nav-wrapper" style="background-color:rgba(0,0,0,0.5);">
+        <nav class="back_transp">
+            <div class="nav-wrapper back_transp">
                 <a href="{% url 'home:index' %}" class="brand-logo">
                     <img width="75" src="/media/logo.png">
                 </a>

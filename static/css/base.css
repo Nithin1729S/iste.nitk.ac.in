@@ -167,3 +167,25 @@ textarea{
 a.anchor {
   padding-left: 30px;
 }
+
+.sidenav.white-text.back_transp {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.collapsible-body.white-text.back_transp
+{
+  background-color: rgba(0,0,0,0.5);
+}
+
+.dropdown-content.back_transp
+{
+  background-color: rgba(0,0,0,0.5);
+}
+
+nav.back_transp {
+  background-color: rgba(0,0,0,0);
+}
+
+.nav-wrapper.back_transp {
+  background-color: rgba(0,0,0,0.5);
+}
