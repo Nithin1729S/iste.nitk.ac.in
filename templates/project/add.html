@@ -68,6 +68,29 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
+                            <i class="form-icon material-icons prefix" style="left:10px">
+                                add_photo_alternate
+                            </i>
+                            {{form.img_url}}
+                            <label>
+                               Insert Project Image URL
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="form-icon material-icons prefix">
+                                event
+                            </i>
+                            <textarea id="textarea" class="materialize-textarea" data-length="120"></textarea>
+                          <label>
+                            Project Summary
+                        </label>
+                        {{form.summary}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
                             <i class="form-icon material-icons prefix">
                                 event
                             </i>
@@ -78,6 +101,7 @@
                         {{form.description}}
                         </div>
                     </div>
+                    
                     <button class="btn waves-effect waves-light" type="submit" name="action">
                         Create project
                         <i class="material-icons right">
