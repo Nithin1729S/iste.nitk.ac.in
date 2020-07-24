@@ -14,6 +14,7 @@
     padding-top: 4%;opacity: 0.7;
 }
 
+/*  Make sure to match the size of the image and the carousel*/
 .carousel_images .carousel-item img {
     width: 100%;
     height: 90vh;

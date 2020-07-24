@@ -86,6 +86,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: white;
+  font-family: 'GothamPro';
 }
 
 main {
@@ -166,4 +167,26 @@ textarea{
 
 a.anchor {
   padding-left: 30px;
+}
+
+.sidenav.white-text.back_transp {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.collapsible-body.back_transp
+{
+  background-color: rgba(0,0,0,0.5);
+}
+
+.dropdown-content.back_transp
+{
+  background-color: rgba(0,0,0,0.5);
+}
+
+nav.back_transp {
+  background-color: rgba(0,0,0,0);
+}
+
+.nav-wrapper.back_transp {
+  background-color: rgba(0,0,0,0.5);
 }
