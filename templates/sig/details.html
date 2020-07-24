@@ -23,7 +23,7 @@ div {
 <div class="row">
     <div class="row center">
         <div class="col l12 s12">
-            <h3><span>{{sig.name}}</span></h3><br>
+            <h3><span>{{sig.name}}</span></h3>
         </div>
     </div>
     <div class="row center">
@@ -31,56 +31,34 @@ div {
     </div>
     <div class="row">
         <div class="col l10 offset-l1">
-        <h6><span>{{sig.description}}
-        </span></h6>
+            <h6><span>{{sig.description}}</span></h6>
         </div>
     </div>
-</div>
+
     <div class="row">
         <div class="col l10 offset-l1">
             <h4 class="left"><span>Projects {{year}}</span></h4>
         </div>
     </div>
+</div>    
     {% for project in projects %}
-
-    <div class="row proj-item">
-        <div class="col l10 offset-l1 s12 z-depth-3">
-            <div class="col l4 s12 proj-image center">
-                    <img src={{project.img_url}} class="responsive-img" width="250px">    
-                
-            </div>
-            <div class="col l8 s12 center proj-info card-item">
-                <h4 class="center">{{project.name}}</h4>
-                <div class="col l12 s12">
-                    <h6 class="center">{{project.summary}}</h6>
-                    <center><a class="waves-effect waves-light btn-small" href="{% url 'project:details' project.id %}">View Details</a></center><br>
-               </div>
-            </div>
+<div class="row proj-item">
+    <div class="col l10 offset-l1 s12 z-depth-3">
+        <div class="col l4 s12 proj-image center">
+            <img src={{project.img_url}} class="responsive-img" height="250px" width="250px" style="padding-top: 25px;">
         </div>
-    </div>
-    <!-- <div class="row proj-item">
-        <div class="col l10 offset-l1 z-depth-3">
-            <div class="col l4 s12 proj-image center">
-                    <img src={{project.img_url}} class="responsive-img" width="250px">    
-                
-            </div>
-            <div class="col l8 center proj-info card-item">
-                <h4 class="center">{{project.name}}</h4>
-                <div class="col l12">
-                    <h6>{{project.summary}}
-                        
-                        Contrary to popular belief, Lorem Ipsum is not simp
-                        andom text. It has roots in a piece of classical Latin literature fro
-                        m 45 BC, making it over 2000 years old. Richard McClintock, a Latin p
-                        rofessor at Hampden-Sydney College in Virginia, looked up one of the m
-                        
-                    </h6>
-                    <center><a class="waves-effect waves-light btn-small">View Details</a></center>
+        <div class="col l8 s12 proj-info">
+            <h4 class="center">{{project.name}}</h4>
+            <div class="col l12 s12 center">
+                <h6 class="center">{{project.summary}}</h6>
+                <div class="row center">
+                    <a class="waves-effect waves-light btn-small" href="{% url 'project:details' project.id %}">View Details</a>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </div>
+
 {% endfor %}
 <div class="row center">
     <a class="waves-effect waves-light btn" href="{% url 'project:index' sig %}"><i class="material-icons small" style="vertical-align: bottom;">list</i>More Projects</a>
