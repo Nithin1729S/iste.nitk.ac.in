@@ -78,27 +78,21 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
-                            <i class="form-icon material-icons prefix">
-                                event
-                            </i>
-                            <textarea id="textarea" class="materialize-textarea" data-length="120"></textarea>
-                          <label>
-                            Project Summary
-                        </label>
-                        {{form.summary}}
+                        <div class="text-field col s10 valign-wrapper offset-s1">
+                            <label>
+                                {{form.summary.label}}
+                            </label>
+                            {{form.summary}}
+
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
-                            <i class="form-icon material-icons prefix">
-                                event
-                            </i>
-                            <textarea id="textarea" class="materialize-textarea" data-length="120"></textarea>
-                          <label>
-                            {{form.description.label}}
-                        </label>
-                        {{form.description}}
+                        <div class="text-field col s10 valign-wrapper offset-s1">
+                            <label>
+                                {{form.description.label}}
+                            </label>
+                            {{form.description}}
+
                         </div>
                     </div>
                     
