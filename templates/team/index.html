@@ -34,8 +34,8 @@
 
             <div class="col l8 s12">
                 <div class="row center">
-                    <h4>{{member.user.first_name}} {{member.user.second_name}} NAME1 NAME2</h4>
-                    <h6>{{member.position}} MEMBER POSITION</h6>
+                    <h4>{{member.user.first_name}} {{member.user.second_name}}</h4>
+                    <h6>{{member.position}}</h6>
                 </div>
                 <div class="row center">
                     <a href="{{member.linkedin}}" class="btn-large btn-floating waves-effect waves-light" target="_blank"><i class="center fa fa-linkedin fa-2x white-text"></i></a>
@@ -57,14 +57,16 @@
     </div>
     {% for member in team %}    
     <div class="col l4 m6 s12 center">
-        <h6>{{member.first_name}} {{member.last_name}} HI</h6>
+        <h6>{{member.first_name}} {{member.last_name}}</h6>
     </div>
+<!--    
     <div class="col l4 m6 s12 center">
         <h6>{{member.first_name}} {{member.last_name}} HELLO</h6>
     </div>
     <div class="col l4 m6 s12 center">
         <h6>{{member.first_name}} {{member.last_name}} BYE</h6>
     </div>
+-->
     {% endfor %}
 </div>
 
