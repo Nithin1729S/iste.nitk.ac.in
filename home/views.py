@@ -16,13 +16,11 @@ def indexView(request):
     if this_month<7:
         this_year = this_year-1
     sigs = SIG.objects.all()
-    print(this_year)
     member_count = User.objects.filter(
         batch_of__in=[this_year+3, this_year+2, this_year+1],
         # batch_of__gt=this_year-1,
         # is_active=True
     )
-    print(len(member_count))
     member_count = len(member_count)
     
     sig_count = sigs.count()
