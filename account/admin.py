@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SIG, User, Core
+from .models import SIG, User, Core, AuxCore
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
@@ -38,4 +38,8 @@ class SIGAdmin(admin.ModelAdmin):
 
 @admin.register(Core)
 class CoreAdmin(admin.ModelAdmin):
+    list_display = ('user','role')
+
+@admin.register(AuxCore)
+class AuxCoreAdmin(admin.ModelAdmin):
     list_display = ('user','role')

@@ -98,3 +98,23 @@ class Core(models.Model):
         blank=True,
         max_length=100
     )
+
+class AuxCore(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE
+    )
+    role = models.CharField(
+        default="",
+        max_length=100
+    )
+    description = models.TextField(
+        default=""
+    )
+    email = models.EmailField(
+        blank=True
+    )
+    linkedin_url = models.CharField(
+        blank=True,
+        max_length=100
+    )

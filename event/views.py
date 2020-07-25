@@ -24,8 +24,11 @@ def indexView(request):
             Q(form_link='') |
             Q(publicity_message='')
         )
+    print(events)
     if len(events)==0:
-        context['isEmpty'] = 'True'
+        context['isEmpty'] = True
+    else:
+        context['isEmpty'] = False
     context['events'] = events 
 
     return render(request, 'event/index.html', context)
