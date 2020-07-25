@@ -18,7 +18,11 @@ def indexView(request, sig_name):
     #             year=year,
     #             sigs__name=sig.name
     #         )
-    for year in range(2018,datetime.today().year+1):
+    if sig_name=='Catalyst':
+        start_year = 2019
+    else:
+        start_year = 2018
+    for year in range(start_year,datetime.today().year+1):
         projects[str(year)+'-'+str(year+1)[2:]] = Project.objects.filter(
             sigs__name=sig_name,
             year=year
@@ -94,7 +98,6 @@ def editView(request, project_id):
     return render(request, 'project/edit.html', context)
 
 def detailsView(request, project_id):
-    print('In details')
     context = {}
     project = Project.objects.get(
         id=project_id
