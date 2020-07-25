@@ -22,7 +22,7 @@ def indexView(request, sig_name):
         projects[str(year)+'-'+str(year+1)[2:]] = Project.objects.filter(
             sigs__name=sig_name,
             year=year
-        )
+        ).order_by('name')
     context['sig_name'] = sig_name
     context['projects'] = projects
     return render(request, 'project/index.html', context)
@@ -47,7 +47,7 @@ def addView(request):
                 messages.SUCCESS,
                 'New project '+request.POST['name']+' created successfully!'
             )
-            return redirect('/project/')
+            return redirect('/project/add/')
 
         else:
             messages.add_message(

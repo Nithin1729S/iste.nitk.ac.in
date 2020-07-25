@@ -1,46 +1,7 @@
 {% extends 'base.html' %}
-<!-- {% block styles %}
-    {% load static %}
-    <link type="text/css" rel="stylesheet" href="{% static 'css/project/main.css' %}"  media="screen,projection"/>
-{% endblock %} -->
-
 {% block content %}
 <h3><span>{{sig_name}} Projects</span></h3>     
-  <!-- {% for year,yearly_projects in projects.items %}
-  <div class="center flexrow">
-    <h5 class="circle projects_show" id="{{year}}">{{ year }} - {{ year| add:1 }}<br></h5>
 
-  </div>
-    <div hidden id="projects{{year}}" class="row">
-    <div class="row center">
-      <a id="{{year}}" class="projects_back">View projects from another year</a>
-    </div>
-    <div class="row">
-        {% for sig,list in yearly_projects.items %}
-            <div class="col s12 l3">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{sig.avatar.url}}">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{sig.name}}<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">{{sig.name}}<i class="material-icons right">close</i></span>
-                        <br>
-                        <ul>
-                        {% for project in list %}
-                            <li><a class="indigo-text" style="text-decoration: underline;" href="{% url 'project:details' project.name %}"> {{ project.name }}</a></li>
-                            <br>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-  {% endfor %} -->
 {% for year, yearly_projects in projects.items %}
   <h5>{{ year }}</h5>
   <ul>

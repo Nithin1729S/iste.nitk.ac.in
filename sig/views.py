@@ -18,7 +18,7 @@ def detailsView(request, sig_name):
     projects = Project.objects.filter(
         sigs__name=sig.name,
         year=this_year
-    )
+    ).order_by('name')
     context['year'] = str(this_year)+'-'+str(this_year+1)[2:]
     context['sig'] = sig
     context['projects'] = projects

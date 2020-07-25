@@ -12,7 +12,7 @@ def indexView(request):
         core_names.append(member.user.first_name + member.user.last_name)
     team = []
     for member in User.objects.all().order_by('first_name','last_name'):
-        if member.first_name+member.last_name not in core_names:
+        if member.first_name+member.last_name not in core_names and member.first_name!='ISTE' and member.is_active:
             team.append(member)
 
     context['core'] = core
