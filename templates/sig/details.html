@@ -15,8 +15,11 @@
   float: right;
 }
 div {
-    text-align: justify;
+    text-align: center;
     text-justify: inter-word;
+}
+#lineheight {
+    line-height: 130%;
 }
 
 </style>
@@ -31,7 +34,7 @@ div {
     </div>
     <div class="row">
         <div class="col l10 offset-l1">
-            <h6><span>{{sig.description}}</span></h6>
+            <h6 id="lineheight"><span>{{sig.description}}</span></h6>
         </div>
     </div>
 
