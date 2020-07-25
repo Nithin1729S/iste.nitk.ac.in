@@ -48,6 +48,34 @@
         </div>
     </div>
     {% endfor %}
+    <div class="row center">
+        <div class="col l12 s12">
+            <h3>AUXILLARY CORE MEMBERS</h3><br>
+        </div>
+    </div>
+    {% for member in aux_core %}
+    <div class="row proj-item">
+        <div class="col l10 offset-l1 s12 z-depth-2" style="padding: 20px;">
+            <div class="col l4 s12 proj-image center">
+                <img src="/media/{{member.user.avatar}}" class="responsive-img circle">
+            </div>
+
+            <div class="col l8 s12">
+                <div class="row center">
+                    <h4>{{member.user.first_name}} {{member.user.last_name}}</h4>
+                    <h6>{{member.role}}</h6>
+                    <p>{{member.description}}</p>
+                </div>
+                <div class="row center">
+                    <a href="{{member.linkedin_url}}" class="btn-large btn-floating waves-effect waves-light" target="_blank"><i class="center fa fa-linkedin fa-2x white-text"></i></a>
+                    &nbsp;
+                    <a href="mailto:{{member.email}}" class="btn-large btn-floating waves-effect waves-light"><i class="material-icons">mail_outline</i></a>
+                    <!-- Add mail also here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 
 <div class="row">

@@ -112,6 +112,25 @@
             </a>
             {% endfor %}
         </div>
+        <h3>
+            <span>
+                Auxillary Core
+            </span>
+        </h3>
+    
+                
+        <div class='flexrow'>
+            {% for member in aux_core %}
+            <a class="core_img z-depth-2">
+                <div class="img__overlay">
+                    {{member.user.first_name}} {{member.user.last_name}}
+                    <br>
+                    {{member.role}}
+                </div>
+                <img src='media/{{member.user.avatar}}'>
+            </a>
+            {% endfor %}
+        </div>
     </div>
     {% block scripts %}
         {% load static %}
