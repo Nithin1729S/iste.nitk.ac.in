@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load compress %}
+{% compress css %}
 <style>
     .proj-item:nth-child(odd) div.proj-info {
       float: left;
@@ -19,6 +21,7 @@
     }
     
 </style>
+{% endcompress %}
 <div class="row">
     <div class="row center">
         <div class="col l12 s12">

@@ -1,4 +1,5 @@
 {% load static %}
+{% load compress %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +9,7 @@
         <link rel = "icon" type = "image/png" href = "/media/logo_2.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--Import Google Icon Font-->
+        {% compress css%}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.css' %}"  media="screen,projection"/>
@@ -16,9 +18,12 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <!--Let browser know website is optimized for mobile-->
         <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"  media="screen,projection"/>
+        {% endcompress %}
+        {% compress js %}
         <script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
         <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js'%}"></script>
         <script type="text/javascript" src="{% static 'js/counter.js'%}"></script>
+        {% endcompress %}
         {% block styles %}
         {% endblock %}
     </head>
@@ -374,6 +379,7 @@
             </div>
             </div>
         </footer>
+        {% compress js %}
         <script type="text/javascript" src="{% static 'js/base.js'%}"></script>
         <script type="text/javascript">
             {% if messages %}
@@ -384,6 +390,7 @@
                 {% endfor %}
             {% endif %}
         </script>
+        {% endcompress %}
         {% block scripts %}
         {% endblock %}
     </body>

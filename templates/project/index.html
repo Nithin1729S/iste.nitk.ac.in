@@ -16,5 +16,8 @@
 {% endblock %}
 {% block scripts %}
   {% load static %}
+  {% load compress %}
+  {% compress js %}
   <script type="text/javascript" src="{% static 'js/project/main.js'%}"></script>
+  {% endcompress %}
 {% endblock %}
