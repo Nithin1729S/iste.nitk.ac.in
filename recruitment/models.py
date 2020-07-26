@@ -9,7 +9,7 @@ class Round(models.Model):
         max_length = 200
     )
     description = RichTextUploadingField()
-    sig = models.OneToOneField(
+    sig = models.ForeignKey(
         SIG,
         on_delete=models.CASCADE,
     )
