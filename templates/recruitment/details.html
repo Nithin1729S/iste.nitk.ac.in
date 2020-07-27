@@ -10,9 +10,9 @@
 {% block content %}
 
 <center>
-    <h1>
+    <h3>
         {{rounds.0.sig}} Recruitments
-    </h1>
+    </h3>
 </center>
 
 <br><br>
@@ -26,12 +26,12 @@
 {% for round in rounds %}
 <div class="card z-depth-4">
     <div class="roundec flow-text">
-        <h2>
+        <center><h4>
             {{round.name}}
-        </h2>
+        </h4>
         <p>{{round.date_time}}<br>
             {{round.description}}
-        </p>    
+        </p></center>    
     </div>
 </div>
 <br>

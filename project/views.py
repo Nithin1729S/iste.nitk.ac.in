@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from website.decorators import check_member_year, check_edit_access_project, login_required
+from website.decorators import check_member_year, check_edit_access_project, login_required, check_core_member
 from .forms import ProjectForm
 from .models import Project
 from account.models import SIG,User
@@ -32,7 +32,7 @@ def indexView(request, sig_name):
     return render(request, 'project/index.html', context)
 
 @login_required
-@check_member_year(3,4)
+@check_core_member
 def addView(request):
     context = {}
     if request.method == 'GET':
