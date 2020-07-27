@@ -1,5 +1,4 @@
 from django.db import models
-from ckeditor_uploader.fields import RichTextUploadingField
 from account.models import SIG
 
 # Create your models here.
@@ -8,13 +7,14 @@ class Round(models.Model):
         default = "",
         max_length = 200
     )
-    description = RichTextUploadingField()
+    description = models.TextField()
     sig = models.ForeignKey(
         SIG,
         on_delete=models.CASCADE,
     )
     date_time = models.DateTimeField(
-        auto_now=False
+        auto_now=False,
+        blank=True
     )
     isDone = models.BooleanField(
         default = False
