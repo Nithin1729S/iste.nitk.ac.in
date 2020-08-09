@@ -1,1 +1,44 @@
-FAQ
+{% extends 'base.html' %}
+{% load split %}
+
+{% block styles %}
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/recruitment/faq.css' %}"  media="screen,projection"/>
+{% endblock %}
+
+{% block content %}
+<h3>FAQ</h3><br>
+<div class="container">
+    <ol class="faq-list flow-text">
+        <li>
+            <p class="black-text">
+                <a class="ques">Can I apply for multiple SIGs?</a><br>
+                Yes. You can apply for as many SIGs as you want. Fill out the form for each SIG you want to apply for, here(insert link to registrations)
+            </p>
+        </li>
+        <li>
+            <p class="black-text">
+                <a class="ques">How will I know if I am selected for the next round?</a><br>
+                You will receive an email and a message on whatsapp/SMS regarding your selection for each round.
+            </p>
+        </li>
+        <li>
+            <p class="black-text">
+                <a class="ques">Where can I view the details for selection process?</a><br>
+                By referring to the link here, (insert link to home rec) then select the sig you want to check
+            </p>
+        </li>
+        <li>
+            <p class="black-text">
+                <a class="ques">I have a query not listed here, who can I contact?</a><br>
+                Amodh Shenoy: (insert number)<br>
+                Aditya Rastogi: 9886517191<br>
+                Nikhil Varghese: (insert number))
+            </p>
+        </li>
+    </ol>
+</div>
+
+<br><br>
+
+{% endblock %}

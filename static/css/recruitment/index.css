@@ -1,12 +1,9 @@
-.inst_list {
-    /* list-style-type: square;  */
+div.container ol.inst-list {
     color:#1A237E;
+    font-weight: 150;
+    list-style: square;  
 }
 
-.inst_list li a{
-    color: black;
-}
-
-.inst_list li {
+.inst-list li {
     padding:1%
 }
