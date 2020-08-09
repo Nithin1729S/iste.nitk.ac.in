@@ -10,6 +10,9 @@ def indexView(request):
     return render(request, 'recruitment/index.html',context)
 
 def detailView(request,sig_name):
+    if sig_name == 'faq':
+        return render(request, 'recruitment/faq.html')
+
     context = {}
     rounds = Round.objects.filter(
         sig__name=sig_name,
@@ -20,7 +23,4 @@ def detailView(request,sig_name):
     ).reg_url
     context['rounds'] = rounds
     context['reg_url'] = reg_url
-    return render(request, 'recruitment/details.html', context)
-
-def FAQView(request):
-    return render(request, 'recruitment/faq.html')
+    return render(request, 'recruitment/details.html', context)    
