@@ -19,8 +19,8 @@
 <div id="lineCont"> 
     <div id="line"></div>
 </div>
-<br><br>
-<div class="center flow-text hide-on-large-only" id="timelinePhones"></div>
+<br><br><br>
+<div class="center flow-text" id="timelinePhones"></div>
 <br><br><br><br>
 
 {% for round in rounds %}
@@ -30,21 +30,22 @@
             {{round.name}}
         </h4>
         <h5>{{round.date_time}}<br>
-            {{round.description}}
-        </h5></center>    
+        </h5></center> 
+        <a class="dec">{{round.description}}</a>
     </div>
 </div>
 <br>
 {% endfor %}
 
-<p class=" grey-text text-darken-2">
-    Points of contact:<br>
+<p class="grey-text text-darken-2">
+    <h4>Points of contact:</h4>
     <ul>
         {% for member in POC %}
                 <li>{{member.user.first_name}} {{member.user.last_name}} : <a href="tel:{{member.phone_number }}">{{member.user.phone_number}}</a></li>
         {% endfor %}
     </ul>
 </p>
+<br>
 <div class="center" id="RegisterButton">
     <a href="{{reg_url}}" class="btn waves-effect indigo darken-4 white-text z-depth-4">Register</a>
 </div>

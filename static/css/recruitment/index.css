@@ -1,9 +1,18 @@
 div.container ol.inst-list {
-    color:#1A237E;
+    color: #1A237E;
     font-weight: 150;
     list-style: square;  
 }
 
 .inst-list li {
     padding:1%
+}
+
+div.container ol li p a.ques {
+    font-weight: 400;
+    color: #1A237E;
+}
+
+a {
+    color:#1A237E;
 }

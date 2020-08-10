@@ -52,7 +52,7 @@ function makeCircles(names, isDone)
   for( i = 0; i < names.length; i++)
   {
     if (isDone[i].localeCompare("False") == 0 || isDone[i].localeCompare("false") == 0){
-      $("#timelinePhones").append('<div class="flow-text indigo-text text-darken-4 center">Next Round : <br>' + names[i] + '</div>');
+      $("#timelinePhones").append('<div class="flow-text indigo-text text-darken-4 center">Next Round : ' + names[i] + '</div>');
       break;
     }
     //Setting all rounds passed as active and displaying which round
