@@ -30,8 +30,8 @@
             {{round.name}}
         </h4>
         <h5>{{round.date_time}}<br>
-        </h5></center> 
-        <a class="dec">{{round.description}}</a>
+        </h5> 
+        <h5>{{round.description}}</h5></center>
     </div>
 </div>
 <br>
@@ -41,7 +41,7 @@
     <h4>Points of contact:</h4>
     <ul>
         {% for member in POC %}
-                <li>{{member.user.first_name}} {{member.user.last_name}} : <a href="tel:{{member.phone_number }}">{{member.user.phone_number}}</a></li>
+                <li><h5>{{member.user.first_name}} {{member.user.last_name}} : <a href="tel:{{member.phone_number }}">{{member.user.phone_number}}</a></h5></li>
         {% endfor %}
     </ul>
 </p>

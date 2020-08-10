@@ -17,9 +17,14 @@ class SIG(models.Model):
     )
     description = models.TextField(
         blank=False,
-        editable=True
+        editable=True,
     )
     reg_url = models.TextField(
+        blank=False,
+        editable=True,
+        default=''
+    )
+    test_url = models.TextField(
         blank=False,
         editable=True,
         default=''

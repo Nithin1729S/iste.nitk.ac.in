@@ -19,6 +19,10 @@ def detailView(request,sig_name):
         sig__name=sig_name,
     ).order_by('date_time')
 
+    if sig_name!='Chronicle' and sig_name!='Create':
+        context['test_url'] = SIG.objects.get(
+            name=sig_name
+        ).test_url
     reg_url = SIG.objects.get(
         name=sig_name
     ).reg_url
