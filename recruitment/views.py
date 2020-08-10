@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from account.models import SIG
 from .models import Round
+from account.models import Core
 
 # Create your views here.
 def indexView(request):
@@ -23,4 +24,5 @@ def detailView(request,sig_name):
     ).reg_url
     context['rounds'] = rounds
     context['reg_url'] = reg_url
+    context['POC'] = Core.objects.filter(role__contains=sig_name) 
     return render(request, 'recruitment/details.html', context)    

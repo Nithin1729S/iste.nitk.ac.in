@@ -54,7 +54,7 @@
                             {% if member.gender == 'F' %}
                                 <li>{{member.first_name}} {{member.last_name}} : {{member.hostel_address}}</li>
                             {% else %}
-                                <li>{{member.first_name}} {{member.last_name}} : {{member.phone_number}}</li>
+                                <li>{{member.first_name}} {{member.last_name}} : <a href="tel:{{member.phone_number }}">{{member.phone_number}}</a></li>
                             {% endif %}
                         {% endfor %}
                     </ul>
