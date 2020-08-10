@@ -292,8 +292,7 @@
             </div>
         </nav>
     </div>
-    {% block carousel %}
-    {% endblock %} 
+    
         <main>
             {% if messages %}
                 <div class="row" id="alert_box" style="display:none;">
@@ -318,7 +317,9 @@
                     </div>
                 </div>
             {% endif %}
-            
+
+            {% block carousel %}
+    {% endblock %} 
             <div class="row"></div>
             <div class="row"></div> 
             <div class='container'>

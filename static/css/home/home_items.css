@@ -22,9 +22,26 @@
 }
 
 .carousel.carousel-slider.center.carousel_images {
-    margin-top: -14%;
     width: 100%;
     height: 90vh;
 }
 
+@media only screen and (min-width : 1261px) {
+    #mobile-carousel {
+        display: none;
+    }
+    .carousel.carousel-slider.center.carousel_images {
+        margin-top: -4.2%;
+    } 
+}
+
+@media only screen and (max-width : 1260px) {
+    #desktop-carousel{
+        display: none;
+    }
+    .carousel.carousel-slider.center.carousel_images {
+        margin-top: -13.6%;
+    }
+    
+}
 
