@@ -41,11 +41,11 @@
     .carousel.carousel-slider.center.carousel_images {
         margin-top: -13.6%;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
     }
     .carousel_images .carousel-item img {
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         object-fit: cover;
     }
     
