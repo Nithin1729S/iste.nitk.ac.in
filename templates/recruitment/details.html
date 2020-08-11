@@ -41,7 +41,7 @@
     <h4>Point(s) of contact:</h4>
     <ul>
         {% for member in POC %}
-                <li><h5>{{member.user.first_name}} {{member.user.last_name}} : <a href="tel:{{member.phone_number }}">{{member.user.phone_number}}</a></h5></li>
+                <li><h5>{{member.user.first_name}} {{member.user.last_name}} : <a href="tel: {{member.user.phone_number }} ">{{member.user.phone_number}}</a></h5></li>
         {% endfor %}
     </ul>
 </p>

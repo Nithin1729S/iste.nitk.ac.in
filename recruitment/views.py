@@ -17,7 +17,7 @@ def detailView(request,sig_name):
     context = {}
     rounds = Round.objects.filter(
         sig__name=sig_name,
-    ).order_by('date_time')
+    ).order_by('name')
 
     if sig_name!='Chronicle' and sig_name!='Create':
         context['test_url'] = SIG.objects.get(
