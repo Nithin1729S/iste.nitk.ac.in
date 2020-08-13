@@ -3,6 +3,7 @@
 {% block content %}
 {% load compress %}
 {% compress css %}
+{% load static %}
 <style>
 .proj-item:nth-child(odd) div.proj-info {
   float: right;
@@ -44,7 +45,17 @@ div {
         <a class="waves-effect waves-light btn" href="{% url 'recruitment:details' sig %}">Apply for recruitment</a>
     </div> -->
     
-</div>    
+</div>
+<div class="col l12 s12 center">
+    <h4><span>See what our Core has to say about {{sig.name}}! </span></h4>
+</div>
+<div class="video-container center">
+    
+        <div class="video-container">
+            <iframe width="80%" height="70%" src="{{sig.website_talk_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+</div>
+        
 <div class="row">
     <div class="col l10 offset-l1">
         <h4 class="center"><span>Projects {{year}}</span></h4>

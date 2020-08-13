@@ -34,7 +34,11 @@ class SIG(models.Model):
         blank=False,
         editable=True
     )
-
+    website_talk_url = models.TextField(
+        blank=False,
+        editable=True,
+        default=''
+    )
     def __str__(self):
         return self.name
 
