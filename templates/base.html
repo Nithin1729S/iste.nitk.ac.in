@@ -87,8 +87,30 @@
                     </ul>
                 </li>
             {% else %}
+            
             <li><a href="{% url 'account:login' %}" class="waves-effect white-text">Login</a></li>
             <li><a href="{% url 'event:index' %}" class="waves-effect white-text">Events</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header waves-effect white-text">Recruitment<i class="material-icons white-text">arrow_drop_down</i></a>
+                        <div class="collapsible-body back_transp">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'recruitment:index' %}" class="waves-effect white-text">
+                                        Register
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'recruitment:details' 'faq' %}" class="waves-effect white-text">
+                                        FAQs
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
             {% endif %}
             <li class="no-padding">
                 <ul class="collapsible collapsible-accordion">
@@ -175,6 +197,18 @@
                 </a>
             </li>
         </ul>
+        <ul id="recs-action" class="dropdown-content back_transp">
+            <li>
+                <a href="{% url 'recruitment:index' %}" class="waves-effect white-text">
+                    Register
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'recruitment:details' 'faq' %}" class="waves-effect white-text">
+                    FAQs
+                </a>
+            </li>
+        </ul>
 
         <ul id="sig-action" class="dropdown-content back_transp">
             <li>
@@ -257,11 +291,14 @@
                             </a>
                         {% endif %}
                     </li>
-                    <!-- <li>
-                        <a href="{% url 'recruitment:index' %}">
-                            Get Recruited
-                        </a>
-                    </li> -->
+                    <li>
+                            <a class="dropdown-trigger" href="#" data-target="recs-action">
+                                Recruitment
+                                <i class="material-icons right">
+                                    arrow_drop_down
+                                </i>
+                            </a>
+                    </li>
                     <li>
                         {% if user.is_authenticated %}
                             <a href="{% url 'project:add' %}">
