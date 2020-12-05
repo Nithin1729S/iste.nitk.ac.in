@@ -1,0 +1,12 @@
+asgiref==3.3.1
+Django==3.0.7
+django-appconf==1.0.4
+django-ckeditor==5.9.0
+django-compressor==2.4
+django-js-asset==1.2.2
+Pillow==7.1.2
+pytz==2020.4
+rcssmin==1.0.6
+rjsmin==1.1.0
+six==1.15.0
+sqlparse==0.4.1
