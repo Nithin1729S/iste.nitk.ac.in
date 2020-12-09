@@ -1,3 +1,25 @@
+# Code Structure
+The SRC folder is the only one to be altered, public is to be left as is.
+The following folders and files are present in SRC:
+
+## index.js
+The main file for rendering, it renders the app and has basic imports as required, has to be left as is.
+
+## Constants.js
+The file containing constants. No constants are to be used in any other file without importing them from here. This is to contain any classNames, any strings or other constants required.
+
+## CSS
+This folder is to contain all required CSS files(one per component if needed)
+
+## Components
+All components(page links or reusable components) are to be declared here.
+
+## API
+Any and all API calls to the backend are to be declared/defined here and then used in the frontend(called by components as per requirement)
+
+## JS
+Any additional required JS for dynamic changes or animations are to be declared here(to allow reusability)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
