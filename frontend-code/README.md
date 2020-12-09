@@ -5,6 +5,9 @@ The following folders and files are present in SRC:
 ## index.js
 The main file for rendering, it renders the app and has basic imports as required, has to be left as is.
 
+## history.js
+create and export router history(to be left as is)
+
 ## Constants.js
 The file containing constants. No constants are to be used in any other file without importing them from here. This is to contain any classNames, any strings or other constants required.
 
