@@ -8,6 +8,7 @@ import HomeComponent from './HomeComponent';
 import EventComponent from './EventComponent';
 import SigComponent from './SigComponent';
 import TeamComponent from './TeamComponent';
+import '../css/constants.css';
 
 class App extends React.Component{
     render(){
