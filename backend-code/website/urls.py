@@ -15,4 +15,5 @@ urlpatterns = [
     path('sig/',include('sig.urls', namespace = 'sig')),
     path('team/',include('team.urls', namespace = 'team')),
     path('ckeditor/',include('ckeditor_uploader.urls')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

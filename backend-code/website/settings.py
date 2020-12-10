@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'compressor',
+    'rest_framework',
     #Developed apps
     'home',
     'account',
@@ -167,4 +168,10 @@ CKEDITOR_CONFIGS = {
             },
         ],
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
 }
