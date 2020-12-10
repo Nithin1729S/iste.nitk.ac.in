@@ -2,7 +2,7 @@ from django.shortcuts import render
 from project.models import Project
 from account.models import SIG
 from datetime import datetime
-from .serializers import SIGSerializer
+from sig.serializers import SIGSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 

@@ -39,7 +39,7 @@ class SIG(models.Model):
         editable=True,
         default=''
     )
-    def __str__(self):
+    def __str__(self):      
         return self.name
 
 class User(AbstractUser):

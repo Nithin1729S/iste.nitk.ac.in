@@ -3,104 +3,114 @@ from website.decorators import check_member_year, check_edit_access_project, log
 from .forms import ProjectForm
 from .models import Project
 from account.models import SIG,User
+from project.serializers import ProjectSerializer
 from datetime import datetime
 from django.contrib import messages
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
-def indexView(request, sig_name):
+@api_view(['GET'])
+def indexViewAll(request, sig_name):
     projects = {}
-    context = {}
-    # years = [r for r in range(2018, datetime.today().year+1)]
-    #Render projects as a 2D array indexed by year and sig
-    # for year in years:
-    #     projects[year] = {}
-    #     for sig in SIG.objects.all():
-    #         projects[year][sig] = Project.objects.filter(
-    #             year=year,
-    #             sigs__name=sig.name
-    #         )
     if sig_name=='Catalyst':
         start_year = 2019
     else:
         start_year = 2018
     for year in range(start_year,datetime.today().year+1):
-        projects[str(year)+'-'+str(year+1)[2:]] = Project.objects.filter(
+        projects_obj = Project.objects.filter(
             sigs__name=sig_name,
             year=year
         ).order_by('name')
-    context['sig_name'] = sig_name
-    context['projects'] = projects
-    return render(request, 'project/index.html', context)
+        projects_data = ProjectSerializer(projects_obj,many=True).data
+        projects[str(year)+'-'+str(year+1)[2:]] = projects_data
+    return Response(projects)
 
-@login_required
-@check_core_member
-def addView(request):
-    context = {}
-    if request.method == 'GET':
-        form = ProjectForm
-        context['form'] = form
-        return render(request, 'project/add.html', context)
+@api_view(['GET'])
+def indexViewCurrent(request, sig_name):
+    this_year = datetime.now().year
+    this_month = datetime.now().month
+    if this_month<7:
+        this_year = this_year-1
+    sig = SIG.objects.get(
+        name=sig_name
+    )
+    projects_obj = Project.objects.filter(
+        sigs__name=sig.name,
+        year=this_year
+    ).order_by('name')
+    projects_data = ProjectSerializer(projects_obj,many=True).data
+    return Response(projects_data)
 
-    else:
-        form = ProjectForm(request.POST, request.FILES)
-        context['form'] = form
-        if form.is_valid:
-            form.save()
+# @login_required
+# @check_core_member
+# def addView(request):
+#     context = {}
+#     if request.method == 'GET':
+#         form = ProjectForm
+#         context['form'] = form
+#         return render(request, 'project/add.html', context)
 
-            messages.add_message(
-                request,
-                messages.SUCCESS,
-                'New project '+request.POST['name']+' created successfully!'
-            )
-            return redirect('/project/add/')
+#     else:
+#         form = ProjectForm(request.POST, request.FILES)
+#         context['form'] = form
+#         if form.is_valid:
+#             form.save()
 
-        else:
-            messages.add_message(
-                request,
-                messages.ERROR,
-                'Invalid project details'
-            )
-    return render(request, 'project/add.html', context)
+#             messages.add_message(
+#                 request,
+#                 messages.SUCCESS,
+#                 'New project '+request.POST['name']+' created successfully!'
+#             )
+#             return redirect('/project/add/')
 
-@login_required
-@check_member_year(3,4)
-@check_edit_access_project(Project)
-def editView(request, project_id):
-    context = {}
-    form  = ProjectForm(
-        instance= Project.objects.get(id=project_id)
-        )
+#         else:
+#             messages.add_message(
+#                 request,
+#                 messages.ERROR,
+#                 'Invalid project details'
+#             )
+#     return render(request, 'project/add.html', context)
 
-    project = Project.objects.get(id=project_id)
-    context['project'] = project
-    if request.method == 'GET':
-        context['form'] = form
-        return render(request, 'project/edit.html', context)
+# @login_required
+# @check_member_year(3,4)
+# @check_edit_access_project(Project)
+# def editView(request, project_id):
+#     context = {}
+#     form  = ProjectForm(
+#         instance= Project.objects.get(id=project_id)
+#         )
 
-    else:
-        form = ProjectForm(request.POST, request.FILES,instance = project)
-        context['form'] = form
-        if form.is_valid:
-            form.save()
+#     project = Project.objects.get(id=project_id)
+#     context['project'] = project
+#     if request.method == 'GET':
+#         context['form'] = form
+#         return render(request, 'project/edit.html', context)
 
-            messages.add_message(
-                request,
-                messages.SUCCESS,
-                'Project '+request.POST['name']+' edited successfully!'
-            )
-            return redirect('project:details',project_id)
+#     else:
+#         form = ProjectForm(request.POST, request.FILES,instance = project)
+#         context['form'] = form
+#         if form.is_valid:
+#             form.save()
 
-        else:
-            messages.add_message(
-                request,
-                messages.ERROR,
-                'Invalid project details'
-            )
-    return render(request, 'project/edit.html', context)
+#             messages.add_message(
+#                 request,
+#                 messages.SUCCESS,
+#                 'Project '+request.POST['name']+' edited successfully!'
+#             )
+#             return redirect('project:details',project_id)
 
+#         else:
+#             messages.add_message(
+#                 request,
+#                 messages.ERROR,
+#                 'Invalid project details'
+#             )
+#     return render(request, 'project/edit.html', context)
+
+@api_view(['GET'])
 def detailsView(request, project_id):
-    context = {}
-    project = Project.objects.get(
+    project_obj = Project.objects.get(
         id=project_id
     )
-    context['project'] = project
-    return render(request, 'project/details.html', context)
+    project_data = ProjectSerializer(project_obj).data
+    return Response(project_data)

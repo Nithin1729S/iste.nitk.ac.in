@@ -7,7 +7,7 @@ admin.site.site_header = 'ISTE Website Admin Page'
 admin.site.index_title = 'Admin page'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls', namespace = 'home')),
+    path('home/', include('home.urls', namespace = 'home')),
     path('account/', include('account.urls', namespace = 'account')),
     path('project/', include('project.urls', namespace = 'project')),
     path('event/', include('event.urls', namespace = 'event')),

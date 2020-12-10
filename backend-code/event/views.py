@@ -1,36 +1,35 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from account.models import User,SIG
-from .models import Event
+from event.models import Event
+from event.serializers import EventSerializer
 from django.db.models import Q
-from .forms import EventForm
+from event.forms import EventForm
 from datetime import datetime, timedelta
 from website.decorators import check_core_member, check_member_year, check_edit_access_event, login_required
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
+@api_view(['GET'])
 def indexView(request):
-    context = {}
     yesterday = datetime.today() - timedelta(days=1)
 
     if request.user.is_authenticated:
         #Show all events to club members
-        events = Event.objects.exclude(
+        events_obj = Event.objects.exclude(
             date_time__lte=yesterday
         )
     else:
         #Show events with poster, form_link, message to general public
-        events = Event.objects.exclude(
+        events_obj = Event.objects.exclude(
             Q(date_time__lte=yesterday) |
             Q(poster='') |
             Q(form_link='') |
             Q(publicity_message='')
         )
-    if len(events)==0:
-        context['isEmpty'] = True
-    else:
-        context['isEmpty'] = False
-    context['events'] = events 
+    events_data = EventSerializer(events_obj, many=True, fields=['name','date_time','poster','sigs','venue']).data
+    return Response(events_data)
 
-    return render(request, 'event/index.html', context)
 
 @login_required
 @check_core_member
@@ -126,10 +125,10 @@ def editView(request, event_id):
             )
     return render(request, 'event/edit.html', context)
 
+@api_view(['GET'])
 def detailsView(request, event_name):
-    context = {}
-    event = Event.objects.get(
+    event_obj = Event.objects.get(
         name = event_name
     )
-    context['event'] = event
-    return render(request, 'event/details.html', context)
+    event_data = EventSerializer(event_obj).data
+    return Response(event_data)
