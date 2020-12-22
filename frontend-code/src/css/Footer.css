@@ -1,0 +1,13 @@
+.page-footer{
+    
+    
+    background-color: var(--primary) !important;
+}
+
+.anchor{
+    padding-left: 30px;
+}
+
+.text{
+    color: var(--secondary);
+}
