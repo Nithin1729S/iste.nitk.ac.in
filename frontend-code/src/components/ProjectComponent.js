@@ -4,7 +4,7 @@ import ProjectDetails from './ProjectDetails';
 
 class ProjectComponent extends React.Component{
     render(){
-        const id=19;
+        const id=21;
         return(
             <div>
                 <ProjectDetails id={id}/>

@@ -14,8 +14,9 @@ class ProjectDetails extends React.Component {
     }
      async fetchHome() {
         console.log("Fetching. . .")
-        const response=await axios.get(`http://127.0.0.1:8000/project/${this.props.id}`);
-        console.log(response);
+        const response=await axios.get(`http://127.0.0.1:8000/project/${this.props.id}/`);
+        this.setState({data:response.data});
+        console.log(this.state.data);
     }
 
     componentDidMount(){
@@ -24,10 +25,10 @@ class ProjectDetails extends React.Component {
 
 
     render() {
-        if(!this.state.data.length)
+        if(this.state.data.length===0)
             return<div>loading</div>;
         return (
-            <div className="projectDeatils container">
+            <div className="projectDetails container">
 
                 <div className="row-center">
                     <div className="col l6 offset -l3 s12" >
@@ -38,7 +39,7 @@ class ProjectDetails extends React.Component {
                                 <h3>{this.state.data.name}</h3>
                                 <div className="center">
                                     <h5>
-                                        {this.state.data.sigs.name}|{this.state.data.year}
+                                        {this.state.data.sigs[0].name}|{this.state.data.year}
                                     </h5>
 
                                 </div>
@@ -68,15 +69,17 @@ class ProjectDetails extends React.Component {
                             </div>
 
                             <div className="row mem" >
-                                <i class="material-icons">description</i><span className="member">Description</span>
+                                <i className="material-icons">description</i><span className="member">Description</span>
                             </div>
 
                             <div className="row ckeditor_content">
                                 <p>
+                                    {/* { this.state.data.description.replace(/<[^>]*>?/gm, '')} */}
                                     {this.state.data.description}
-                                </p> </div>
+                                </p> 
+                            </div>
                             <div className="row mem">
-                                <i class="material-icons">local_offer</i><span className="member">Tags</span>
+                                <i className="material-icons">local_offer</i><span className="member">Tags</span>
                             </div>
                             <div className="tags">
                                 {this.state.data.tags.split(',').map((tag) =>
