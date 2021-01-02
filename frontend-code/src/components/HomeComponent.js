@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import SigCards from './SigCards';
+import TheNumbers from './TheNumbers';
 
 class HomeComponent extends React.Component{
     constructor(props) {
@@ -25,7 +27,12 @@ class HomeComponent extends React.Component{
     render(){
         return(
             <div>
-                Hello HomeComponent
+                {
+                    this.state.homeData.sigs && <SigCards cardList={this.state.homeData.sigs}/>
+                }
+                {
+                    this.state.homeData.stats && <TheNumbers stats={this.state.homeData.stats}/>
+                }
             </div>
         );
     }
