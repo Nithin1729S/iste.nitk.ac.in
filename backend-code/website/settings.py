@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'compressor',
     'rest_framework',
+    'corsheaders',
     #Developed apps
     'home',
     'account',
@@ -65,6 +66,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #For django-cors-headers
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'website.urls'
@@ -175,3 +179,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
+
+#For whitelisting CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]

@@ -23,30 +23,30 @@ class Footer extends React.Component{
                                     </h5>
                                     <ul>
                                         <li>
-                                            <a href="" className="text">
+                                            <a href="/event" className="text">
                                                 Events
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="" className="text">
+                                            <a href="/team" className="text">
                                                 Our Team
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="" className="text">
+                                            <a href="https://istenitk.wordpress.com/" target="_blank" rel="noreferrer" className="text">
                                                 Blog
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="row">
-                                <a href="https://www.facebook.com/istenitk/" target="_blank" ><i className="center fa fa-facebook-square fa-2x white-text"></i></a>
+                                <a href="https://www.facebook.com/istenitk/" target="_blank" rel="noreferrer" ><i className="center fa fa-facebook-square fa-2x white-text"></i></a>
 
-                                <a href="https://www.instagram.com/istenitk/" target="_blank" className="anchor"><i className="center fa fa-instagram fa-2x white-text"></i></a>
+                                <a href="https://www.instagram.com/istenitk/" target="_blank" rel="noreferrer" className="anchor"><i className="center fa fa-instagram fa-2x white-text"></i></a>
 
-                                <a href="http://www.youtube.com/c/istenitk" target="_blank" className="anchor"><i className="center fa fa-youtube-play fa-2x white-text"></i></a>
+                                <a href="http://www.youtube.com/c/istenitk" target="_blank" rel="noreferrer" className="anchor"><i className="center fa fa-youtube-play fa-2x white-text"></i></a>
 
-                                <a href="https://www.linkedin.com/company/indian-society-for-technical-education-nitk-chapter/?originalSubdomain=in" target="_blank" className="anchor"><i class="center fa fa-linkedin fa-2x white-text"></i></a>
+                                <a href="https://www.linkedin.com/company/indian-society-for-technical-education-nitk-chapter/?originalSubdomain=in" target="_blank" rel="noreferrer" className="anchor"><i class="center fa fa-linkedin fa-2x white-text"></i></a>
                                 </div>
                             </div>
                         </div>
