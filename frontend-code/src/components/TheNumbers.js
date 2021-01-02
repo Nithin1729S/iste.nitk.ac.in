@@ -1,5 +1,5 @@
 import React from 'react';
-import NumList from './NumbList'
+import NumList from './NumList'
 
 const TheNumbers = (props) => {
 

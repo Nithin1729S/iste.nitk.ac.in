@@ -20,13 +20,11 @@ class App extends React.Component{
                     <Route path='/' exact component={HomeComponent}/>
                     <Route path='/event' exact component ={EventComponent}/>
                     <Route path='/sig' exact component={SigComponent}/>
-                    <Route path='/team' exact component={TeamComponent}/>
-<<<<<<< HEAD
-                 </main>
-=======
+                    <Route path='/team' exact component={TeamComponent} />
                     <Route path='/project' exact component={ProjectComponent}/>
-                </div>
->>>>>>> 1f709e4c6e8bc2963de345a1a2e2285741a52b5a
+                 </main>
+                    
+                
                 <Footer/>
             </Router>
         );
