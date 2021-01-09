@@ -1,0 +1,16 @@
+
+.sidenav{
+    background-color: var(--navBarPrimary);
+}
+.collapsible-body {
+    background-color: var(--navBarPrimary) !important;
+}
+.dropdown-content {
+    background-color: var(--navBarPri) !important;
+}
+.frontsig {
+    background-color: var(--navBarPri) !important;
+}
+.catalyst {
+    background-color: var(--navBarPri) !important;
+}
