@@ -148,6 +148,7 @@ class Header extends React.Component {
                 </Link>
                     </li>
                 </ul>
+                <div className="navbar-fixed">
                 <nav style={{backgroundColor:"rgba(0,0,0,0.5)"}}>
                     <div className="nav-wrapper " style={{backgroundColor:"rgba(0,0,0,0.5)"}}>
                         <Link to="/" className="brand-logo">
@@ -200,6 +201,7 @@ class Header extends React.Component {
                         </ul>
                     </div>
                 </nav>
+                </div>
 
             </div>
 

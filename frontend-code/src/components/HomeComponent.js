@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import CoreImage from './CoreImage/CoreImage';
-
+import HomeCarousel from './HomeCarousel';
 import SigCards from './SigCards';
 import TheNumbers from './TheNumbers';
 
@@ -33,10 +33,9 @@ class HomeComponent extends React.Component{
             
             return (
                 <div>
-                
+                <HomeCarousel photosList={this.state.homeData.carousel}/>
                 <SigCards cardList={this.state.homeData.sigs}/>
                 <TheNumbers stats={this.state.homeData.stats}/>
-                
                 <CoreImage core={this.state.homeData.core} aux_core={this.state.homeData.aux_core} />
             </div>
                 
