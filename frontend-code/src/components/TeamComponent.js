@@ -18,7 +18,7 @@ class TeamComponent extends React.Component{
 
     componentDidMount(){
         console.log("Fetching. . .")
-        axios.get("team")
+        axios.get("http://127.0.0.1:8000/team/")
             .then(res => {
                 this.setState({
                     memberData: res.data,
