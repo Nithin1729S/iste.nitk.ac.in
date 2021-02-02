@@ -46,7 +46,7 @@ class Footer extends React.Component{
 
                                 <a href="http://www.youtube.com/c/istenitk" target="_blank" rel="noreferrer" className="anchor"><i className="center fa fa-youtube-play fa-2x white-text"></i></a>
 
-                                <a href="https://www.linkedin.com/company/indian-society-for-technical-education-nitk-chapter/?originalSubdomain=in" target="_blank" rel="noreferrer" className="anchor"><i class="center fa fa-linkedin fa-2x white-text"></i></a>
+                                <a href="https://www.linkedin.com/company/indian-society-for-technical-education-nitk-chapter/?originalSubdomain=in" target="_blank" rel="noreferrer" className="anchor"><i className="center fa fa-linkedin fa-2x white-text"></i></a>
                                 </div>
                             </div>
                         </div>

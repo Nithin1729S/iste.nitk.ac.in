@@ -73,7 +73,7 @@ class Header extends React.Component {
                             </li>
                         </ul>
                     </li>
-                    <li><Link className="white-text" href="/team/">Our Team</Link></li>
+                    <li><Link className="white-text" to="/team/">Our Team</Link></li>
                     <li><a href="https://istenitk.wordpress.com/" className="white-text" target="blank">Blog</a></li>
                 </ul>
                 <ul id="user-action" className="dropdown-content ">
@@ -181,7 +181,7 @@ class Header extends React.Component {
 
                             </li>
                             <li>
-                                <Link className="dropdown-trigger" href="/" data-target="sig-action">
+                                <Link className="dropdown-trigger" to="/" data-target="sig-action">
                                     SIGs
                             <i className="material-icons right">
                             arrow_drop_down 

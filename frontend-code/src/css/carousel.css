@@ -6,6 +6,7 @@
     .carousel{
         margin-top: -9vh;
         background-color: black;
+        height: 85vh;
     }
     .carousel.carousel-slider.center.carousel_images {
         width: 100%;
