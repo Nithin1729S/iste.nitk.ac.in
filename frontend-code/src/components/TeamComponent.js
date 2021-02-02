@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import MemberCard from './MemberCard';
-import MembersList from './MembersList'
+import MembersList from './MembersList';
 
 class TeamComponent extends React.Component{
 
@@ -36,10 +36,10 @@ class TeamComponent extends React.Component{
                             <h3>Core Members</h3><br />
                         </div>
                         {
-                            this.state.memberData.core.map((coreData)=>{
+                            this.state.memberData.core.map((coreData,index)=>{
                                 return(
                                     <div className="row proj-item">
-                                        <MemberCard key={coreData.id} name={coreData.user.first_name+ " " + coreData.user.last_name } role={coreData.role} content={coreData.description} linkedin={coreData.linkedin_url} email={"mailto:" + coreData.email} imgurl={coreData.user.avatar} />
+                                        <MemberCard key={coreData.id} isImageLeft={index%2==0} name={coreData.user.first_name+ " " + coreData.user.last_name } role={coreData.role} content={coreData.description} linkedin={coreData.linkedin_url} email={"mailto:" + coreData.email} imgurl={coreData.user.avatar} />
                                     </div>
                                 )
                             })
@@ -48,10 +48,10 @@ class TeamComponent extends React.Component{
                             <h3>Auxillary Core</h3><br />
                         </div>
                         {
-                            this.state.memberData.aux_core.map((auxCoreData)=>{
+                            this.state.memberData.aux_core.map((auxCoreData,index)=>{
                                 return(
                                     <div className="row proj-item">
-                                        <MemberCard key={auxCoreData.id} name={auxCoreData.user.first_name+ " " + auxCoreData.user.last_name } role={auxCoreData.role} content={auxCoreData.description} linkedin={auxCoreData.linkedin_url} email={"mailto:" + auxCoreData.email} imgurl={auxCoreData.user.avatar} />
+                                        <MemberCard key={auxCoreData.id} isImageLeft={index%2==0} name={auxCoreData.user.first_name+ " " + auxCoreData.user.last_name } role={auxCoreData.role} content={auxCoreData.description} linkedin={auxCoreData.linkedin_url} email={"mailto:" + auxCoreData.email} imgurl={auxCoreData.user.avatar} />
                                     </div>
                                 )
                             })
