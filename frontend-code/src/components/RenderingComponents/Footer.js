@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../../css/footer.css";
 
@@ -28,14 +29,14 @@ class Footer extends React.Component {
                   <h5 className="text">Quick Access</h5>
                   <ul>
                     <li>
-                      <a href="/event" className="text">
+                      <Link to="/event" className="text">
                         Events
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/team" className="text">
+                      <Link to="/team" className="text">
                         Our Team
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <a
