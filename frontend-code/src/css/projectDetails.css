@@ -1,0 +1,95 @@
+.projectDetails h5 {
+  display: block;
+  font-weight: 300;
+}
+
+.projectDetails .mem {
+  text-align: left;
+  border-bottom: 1px black solid;
+  margin-bottom: 20px;
+}
+
+.projectDetails body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: white;
+  font-family: "GothamPro";
+}
+
+.projectDetails .member {
+  font-size: 26px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.projectDetails h3 {
+  color: #1a237e;
+  text-align: center;
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: 1.9466666667rem 0 1.168rem 0;
+  font-weight: 300;
+}
+
+.projectDetails p {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.projectDetails .core_img {
+  border-radius: 100%;
+  display: flex;
+  flex: 0 0 150px;
+  height: 150px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: row;
+  width: 150px;
+  margin: 2%;
+}
+
+.projectDetails .core_img img {
+  height: 100%;
+}
+
+.projectDetails .img__overlay {
+  align-items: center;
+  flex-direction: row;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.25s;
+  z-index: 1;
+}
+
+.projectDetails .img__overlay:hover {
+  opacity: 1;
+}
+
+.projectDetails .img__overlay {
+  background-color: rgba(0, 0, 0, 1);
+  color: #fafafa;
+  font-size: 15px;
+}
+
+.projectDetails .flexrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projectDetails .ckeditor_content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

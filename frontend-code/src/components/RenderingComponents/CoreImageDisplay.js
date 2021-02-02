@@ -1,9 +1,8 @@
 import React from 'react';
-import '../../css/CoreImagesDisplay.css';
+
+import '../../css/coreImageDisplay.css';
 
 const CoreImageDisplay = props => {
-    console.log(props);
-    console.log("here");
     return (
         <div className="container">
          <div className="center row">

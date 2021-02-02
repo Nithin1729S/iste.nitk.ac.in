@@ -1,0 +1,11 @@
+.footer .page-footer {
+  background-color: var(--primary) !important;
+}
+
+.footer .anchor {
+  padding-left: 30px;
+}
+
+.footer .text {
+  color: var(--secondary);
+}

@@ -1,66 +1,39 @@
 :root {
-    --primary: #1a237e;
-    --secondary:#ffffff;
-    --navBarPrimary:rgba(0,0,0,0.5);
-    --navBarPri:rgba(0,0,0,0.85);
-    --navBarSecondary:#ffffff;
+  --primary: #1a237e;
+  --secondary: #ffffff;
+  --navBarPrimary: rgba(0, 0, 0, 0.5);
+  --navBarPri: rgba(0, 0, 0, 0.85);
+  --navBarSecondary: #ffffff;
 }
 
-*{
-    font-family: GothamPro;
+* {
+  font-family: GothamPro;
 }
 
-main{
-    flex: 1 0 auto;
+main {
+  flex: 1 0 auto;
 }
-
-
-
-
 
 /* css for sig cards on home page */
-.sigcard .card .card-reveal {
-    background-color: rgba(0, 0, 0, 0.7);
+
+
+h3,
+h2 {
+  color: #1a237e;
+  text-align: center;
 }
-.sigcard .card .card-reveal .card-title {
-    padding-bottom: 3%;
+.container {
+  width: 100%;
 }
 
-.sigcard .card .card-reveal hr {
-    border-bottom:0.2vh solid white;
-    opacity: 0.7;
-}
-
-.sigcard .card .card-reveal p {
-    padding-top: 4%;
-    opacity: 0.7;
-}
-
-.sigcard .card .card-reveal a{
-    background-color: darkblue;
-    padding: 2%;
-    color: white;
-}
-
-h3,h2{
-    color: #1a237e ;
-    text-align:center;
-}
-.container{
+@media only screen and (min-width: 1261px) {
+  .container {
     width: 100%;
+  }
 }
 
-
-@media only screen and (min-width : 1261px) {
-    .container{
-        width: 100%;
-    }
+@media only screen and (max-width: 1260px) {
+  .container {
+    width: 90%;
+  }
 }
-
-@media only screen and (max-width : 1260px) {
-    .container{
-        width: 90%;
-    }
-    
-}
-
