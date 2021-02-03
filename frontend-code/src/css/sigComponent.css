@@ -9,7 +9,6 @@
 }
 
 .videotitle {
-  color: var(--primary);
   font-weight: lighter;
 }
 
@@ -23,4 +22,5 @@
 
 h3, h4{
   font-weight: lighter;
+  color:var(--primary)
 }
