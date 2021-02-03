@@ -1,70 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap");
-.sigComponent .col l12 s12 {
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  font-family: "Anton", sans-serif;
-  color: blue;
-}
-.sigComponent h3 {
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  top: 10px;
-  font-family: "Anton", sans-serif;
-}
-
-.sigComponent col l10 offset-l1 {
-  display: flex;
-  margin: 20px;
-  font-family: "Montserrat", sans-serif;
-  padding-left: 10px;
-  padding-right: 10px;
-  opacity: 0.8;
-}
-.sigComponent body {
-  background-color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.sigComponent .video-container {
+  width:100%;
+  height: auto;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
 }
-.sigComponent .col l10 offset-l1 {
+
+.sigComponent{
+  padding-top: 5vh;
+}
+
+.videotitle {
+  color: var(--primary);
+  font-weight: lighter;
+}
+
+.description {
   line-height: 1.5;
   text-align: justify;
-  color: blue;
-}
-.sigComponent .video-container {
-  width: "80%";
-  height: "70%";
-  position: absolute;
-  left: 35%;
-  top: 8%;
-  border: 2px solid dotted;
+  padding:5%;
+  font-weight: lighter;
 }
 
-.sigComponent div {
-  text-align: justify;
-  text-justify: inter-word;
-}
-.sigComponent #lineheight {
-  line-height: 130%;
-}
 
-.sigComponent .responsive-img {
-  height: 250px;
-  width: 250px;
-  padding-top: 25px;
-}
-
-.sigComponent .row proj-item {
-  height: 100px;
-  width: 200px;
-  margin: 20px;
-  padding: 20px;
+h3, h4{
+  font-weight: lighter;
 }
