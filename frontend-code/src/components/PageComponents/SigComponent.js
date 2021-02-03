@@ -3,9 +3,8 @@ import axios from "axios";
 
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
-import { Link } from "react-router-dom";
 import "../../css/sigComponent.css";
-import ProjectCard from "../RenderingComponents/SigProjectCard"
+import ProjectCard from "../RenderingComponents/SigProjectCard";
 
 class SigComponent extends React.Component {
 	constructor(props) {
@@ -24,9 +23,7 @@ class SigComponent extends React.Component {
 	async fetchSig() {
 		//console.log("Fetching. . .");
 		await axios
-			.get(
-				`http://127.0.0.1:8000/sig/${this.props.location.state.sigName}/`
-			)
+			.get(`http://127.0.0.1:8000/sig/${this.props.location.state.sigName}/`)
 			.then((res) => {
 				this.setState({
 					sigData: res.data,
@@ -65,28 +62,21 @@ class SigComponent extends React.Component {
 					<div className="row">
 						<div className="col l12 s12">
 							<h3>
-								<span>
-									{this.props.location.state.sigName}
-								</span>
+								<span>{this.props.location.state.sigName}</span>
 							</h3>
 						</div>
 
 						<div className="col l12 s12">
 							<img
-								src={
-									"http://127.0.0.1:8000" +
-									this.state.sigData.avatar
-								}
+								src={"http://127.0.0.1:8000" + this.state.sigData.avatar}
 								className="responsive-img col s8 l4 center offset-l4 offset-s2"
 							/>
 						</div>
 
 						<div className="row">
-							<div className="col l10 offset-l1 s10 offset-s1 description flow-text">
+							<div className="col l8 offset-l2 s10 offset-s1 description flow-text">
 								<br />
-								<span>
-									{this.state.sigData.description}
-								</span>
+								<span>{this.state.sigData.description}</span>
 							</div>
 						</div>
 
@@ -94,15 +84,14 @@ class SigComponent extends React.Component {
 							<h4>
 								<span className="videotitle">
 									See what our Core has to say about{" "}
-									{this.props.location.state.sigName}
-									!
+									{this.props.location.state.sigName}!
 								</span>
 							</h4>
 						</div>
 						<div className="col l8 s10 offset-s1 offset-l2">
 							<div className="video-container center">
 								<iframe
-									src="https://www.youtube.com/embed/H299POjkwKc"
+									src={this.state.sigData.website_talk_url}
 									frameBorder="0"
 									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 									allowFullScreen
@@ -115,43 +104,24 @@ class SigComponent extends React.Component {
 						<div className="col l10 offset-l1 s10 offset-s1">
 							<h4 className="center">
 								<span>
-									Projects{" "}
-									{this.printYear(
-										this.state.projectData[0].year
-									)}
+									Projects {this.printYear(this.state.projectData[0].year)}
 								</span>
 							</h4>
 						</div>
 					</div>
 
-					<div className="row proj-item">
-						<div className="col l10 offset-l1 s12 z-depth-3">
-							<div className="col l4 s12 proj-image center">
-								<img className="responsive-img" />
-							</div>
-							<div className="col l8 s12 proj-info">
-								<h4 className="center">
-									{" "}
-									project name
-									{this.state.projectname}
-								</h4>
-								<div className="col l12 s12 center">
-									<h6 className="center">
-										{this.state.projectsummary}{" "}
-										This is project summary
-									</h6>
-									<div className="row center">
-										<Link
-											className="waves-effect waves-light btn-small"
-											to="/project"
-										>
-											View Details
-										</Link>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					{this.state.projectData.map((project, index) => {
+						return(<div className="row proj-item">
+							<ProjectCard
+								key={index}
+								isImageLeft={index % 2 === 0}
+								name={project.name}
+								description={project.summary}
+								imgurl={project.img_url}
+							/>
+						</div>);
+					})}
+					<br/>
 				</div>
 			);
 		} else return null;
