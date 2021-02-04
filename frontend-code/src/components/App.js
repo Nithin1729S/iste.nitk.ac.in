@@ -21,7 +21,7 @@ class App extends React.Component {
           <Route path="/event" exact component={EventComponent} />
           <Route path="/sig" exact component={SigComponent} />
           <Route path="/team" exact component={TeamComponent} />
-          <Route path="/project" exact component={ProjectComponent} />
+          <Route path="/project/:id" exact component={ProjectComponent} />
         </div>
         <Footer />
       </Router>

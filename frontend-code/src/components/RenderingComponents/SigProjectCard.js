@@ -1,6 +1,5 @@
 import React from "react";
-import "../../css/sigProjectCard.css"
-import { Link } from "react-router-dom";
+import "../../css/sigProjectCard.css";
 
 class ProjectCard extends React.Component {
 	render() {
@@ -19,7 +18,11 @@ class ProjectCard extends React.Component {
 		);
 		const imageCircleSmall = (
 			<div className="col hide-on-large-only s12 proj-image">
-				<img src={this.props.imgurl} className="responsive-img cardImage center" alt=""/>
+				<img
+					src={this.props.imgurl}
+					className="responsive-img cardImage center"
+					alt=""
+				/>
 			</div>
 		);
 		const Content = (
@@ -31,9 +34,12 @@ class ProjectCard extends React.Component {
 					</h6>
 					<div className="row center">
 						<div className="detButton">
-							<Link className="waves-effect waves-light btn-small btnColor" to="/project">
+								<a
+									href={"/project/"+this.props.projID}
+									className="waves-effect waves-light btn-small btnColor"
+								>
 								View Details
-							</Link>
+							</a>
 						</div>
 					</div>
 				</div>

@@ -115,6 +115,7 @@ class SigComponent extends React.Component {
 							<ProjectCard
 								key={index}
 								isImageLeft={index % 2 === 0}
+								projID = {project.id}
 								name={project.name}
 								description={project.summary}
 								imgurl={project.img_url}
