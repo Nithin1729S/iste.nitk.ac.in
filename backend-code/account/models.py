@@ -4,6 +4,15 @@ from django.core.validators import RegexValidator
 from ckeditor_uploader.fields import RichTextUploadingField
 from website.settings import SIG_CHOICES
 from website.helperFunctions import default_user_avatar_path, user_avatar_upload_path, sig_avatar_upload_path
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
 
 class SIG(models.Model):
     name = models.CharField(

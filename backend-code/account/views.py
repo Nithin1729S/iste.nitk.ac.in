@@ -7,36 +7,50 @@ from .models import User
 from .forms import LoginForm, PasswordChangeForm, EditProfileForm
 from website.helperFunctions import user_avatar_upload_path
 from website.decorators import check_member_year, login_required
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.authtoken.models import Token
 
+
+class CustomAuthToken(ObtainAuthToken):
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data,
+                                           context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        token, created = Token.objects.get_or_create(user=user)
+        return Response({
+            'token': token.key,
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'email': user.email
+        })
+
+
+@api_view(['POST'])
 def loginView(request):
-    context = {}
+    username = request.POST['username'].strip()
+    password = request.POST['password'].strip()
 
-    if request.method == "GET":
-        form = LoginForm()
-        context['form'] = form
+    user = authenticate(
+        request,
+        username=username,
+        password=password
+    )
+    if user is not None:
+        login(request, user)
+        return Response({'isLogin': True, 'msg': 'Login Successful'})
     else:
-        form = LoginForm(data=request.POST)
-        context['form'] = form
-        if form.is_valid():
-            user = authenticate(
-                request, 
-                username=form.cleaned_data['username'], 
-                password=form.cleaned_data['password']
-            )
-            login(request, user)
-            return redirect('home:index')
-        else:
-            messages.add_message(
-                request,
-                messages.ERROR,
-                'Invalid username or password'
-            )    
+        return Response({'isLogin': False, 'msg': 'Login Unsuccessful'}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
-    return render(request, 'account/login.html', context)
 
 def logoutView(request):
     logout(request)
     return redirect('home:index')
+
 
 @login_required
 def editView(request):
@@ -55,11 +69,11 @@ def editView(request):
         user.save()
 
         form = EditProfileForm(
-            data=request.POST, 
+            data=request.POST,
             files=request.FILES,
-            instance=request.user 
+            instance=request.user
         )
-        context['form'] = form 
+        context['form'] = form
 
         messages.add_message(
             request,
@@ -68,6 +82,7 @@ def editView(request):
         )
 
     return render(request, 'account/edit.html', context)
+
 
 @login_required
 def changePasswordView(request):
@@ -80,8 +95,8 @@ def changePasswordView(request):
             user=request.user,
             data=request.POST
         )
-        #For some reason, PasswordChangeForm always returns invalid
-        #Hence is_valid is not used here 
+        # For some reason, PasswordChangeForm always returns invalid
+        # Hence is_valid is not used here
         password_changeable = True
 
         if not request.user.check_password(request.POST.get('old_password')):
@@ -108,7 +123,7 @@ def changePasswordView(request):
                 messages.INFO,
                 'Password Updated'
             )
-            #Saves the pain of logging in again
+            # Saves the pain of logging in again
 
         context['form'] = form
 

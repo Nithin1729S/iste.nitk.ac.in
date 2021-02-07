@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'compressor',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     #Developed apps
     'home',
@@ -177,7 +178,10 @@ CKEDITOR_CONFIGS = {
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
 }
 
 #For whitelisting CORS
