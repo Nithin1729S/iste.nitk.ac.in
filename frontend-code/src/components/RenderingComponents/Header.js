@@ -29,10 +29,7 @@ class Header extends React.Component {
     return (
       <li key={sigName}>
         <Link
-          to={{
-            pathname: "/sig",
-            state: { sigName: sigName },
-          }}
+          to={`/sig/${sigName}`}
           className="waves-effect white-text"
         >
           {sigName}

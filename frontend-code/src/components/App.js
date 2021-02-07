@@ -19,7 +19,7 @@ class App extends React.Component {
         <div>
           <Route path="/" exact component={HomeComponent} />
           <Route path="/event" exact component={EventComponent} />
-          <Route path="/sig" exact component={SigComponent} />
+          <Route path="/sig/:name" exact component={SigComponent} />
           <Route path="/team" exact component={TeamComponent} />
           <Route path="/project/:id" exact component={ProjectComponent} />
         </div>

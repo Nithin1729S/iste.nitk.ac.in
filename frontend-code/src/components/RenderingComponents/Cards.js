@@ -41,10 +41,7 @@ class Card extends React.Component {
               <center>
                 <Link
                   className="waves-effect waves-ligth btn-small"
-                  to={{
-                    pathname: "/sig",
-                    state: { sigName: this.props.name },
-                  }}
+                  to={`/sig/${this.props.name}`}
                 >
                   View More
                 </Link>
