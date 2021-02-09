@@ -13,7 +13,7 @@ class LoginComponent extends React.Component {
     //TODO send api request to login and return message appropriately
     else {
       const user={username:this.state.username,password:this.state.password}
-      axios.post(`localhost:8000/get_auth_token/`, user )
+      axios.post(`http://127.0.0.1:8000/account/get_auth_token/`, user )
       .then(res => {
         console.log(res);
         console.log(res.data);
