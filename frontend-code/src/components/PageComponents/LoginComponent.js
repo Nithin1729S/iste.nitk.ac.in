@@ -1,23 +1,38 @@
 import React from "react";
-import axios from 'axios';
+import axios from "axios";
+import Cookies from "universal-cookie";
+import { withRouter } from "react-router-dom";
 
 import styles from "../../css/login.module.css";
 class LoginComponent extends React.Component {
   state = { username: "", password: "", errorMessage: "" };
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     if (this.state.username === "") {
       this.setState({ errorMessage: "Empty username is not valid" });
     } else if (this.state.password === "") {
       this.setState({ errorMessage: "Empty password is not valid" });
-    }
-    //TODO send api request to login and return message appropriately
-    else {
-      const user={username:this.state.username,password:this.state.password}
-      axios.post(`http://127.0.0.1:8000/account/get_auth_token/`, user )
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
+    } else {
+      const user = {
+        username: this.state.username,
+        password: this.state.password,
+      };
+      const { history } = this.props;
+      axios
+        .post(`http://127.0.0.1:8000/account/get_auth_token/`, user)
+        .then((res) => {
+          const cookie = new Cookies();
+          console.log(res.data);
+          cookie.set("AuthToken", res.data.token, { path: "/" });
+          cookie.set("firstName", res.data.first_name, { path: "/" });
+          history.push("/");
+          history.go(0);
+        })
+        .catch(() => {
+          this.setState({
+            errorMessage: "incorrect credentials, please try again",
+          });
+        });
     }
   };
   handleInput = (e) => {
@@ -36,7 +51,7 @@ class LoginComponent extends React.Component {
             <div className="card">
               <div className="card-content black-text">
                 <span className="center card-title">Member Login</span>
-                <>
+                <form onSubmit={this.handleSubmit}>
                   <p>{this.state.errorMessage}</p>
                   <input
                     type="hidden"
@@ -55,7 +70,7 @@ class LoginComponent extends React.Component {
                           <input
                             type="text"
                             name="username"
-                            autoFocus=""
+                            autoFocus={true}
                             id="id_username"
                             className={styles.input}
                             value={this.state.username}
@@ -88,12 +103,12 @@ class LoginComponent extends React.Component {
 
                   <button
                     className="btn waves-effect waves-light"
-                    onClick={this.handleSubmit}
+                    type="submit"
                   >
                     Submit
                     <i className="material-icons right">send</i>
                   </button>
-                </>
+                </form>
               </div>
             </div>
           </div>
@@ -102,4 +117,4 @@ class LoginComponent extends React.Component {
     );
   }
 }
-export default LoginComponent;
+export default withRouter(LoginComponent);

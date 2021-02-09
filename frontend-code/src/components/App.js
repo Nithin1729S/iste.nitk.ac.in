@@ -17,13 +17,13 @@ class App extends React.Component {
     return (
       <Router history={history}>
         <Header />
-        <div className='app-main'>
+        <div className="app-main">
           <Route path="/" exact component={HomeComponent} />
           <Route path="/event" exact component={EventComponent} />
           <Route path="/sig/:name" exact component={SigComponent} />
           <Route path="/team" exact component={TeamComponent} />
           <Route path="/project/:id" exact component={ProjectComponent} />
-          <Route path="/login" exact component={LoginComponent}/>
+          <Route path="/login" exact component={LoginComponent} />
         </div>
         <Footer />
       </Router>
