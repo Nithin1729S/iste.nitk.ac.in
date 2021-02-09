@@ -1,28 +1,28 @@
 @media only screen and (min-width: 601px) and (max-width: 1260px) {
-  .container {
+  .coreImageDisplay.container {
     width: 80%;
     border-radius: 0;
   }
 }
 
 @media only screen and (min-width: 1261px) {
-  .container {
+  .coreImageDisplay.container {
     width: 80%;
     border-radius: 0;
   }
 }
 
-h3 {
+.coreImageDisplay h3 {
   color: var(--primary);
   text-align: center;
 }
-h3 span {
+.coreImageDisplay h3 span {
   display: inline-block;
   position: relative;
   overflow: hidden;
 }
-h3 span:after,
-h3 span:before {
+.coreImageDisplay h3 span:after,
+.coreImageDisplay h3 span:before {
   content: "";
   height: 0.1rem;
   width: 100%;
@@ -31,20 +31,20 @@ h3 span:before {
   left: 0;
   transition: 3s;
 }
-h3 span:before {
-  background: #ccc;
+.coreImageDisplay h3 span:before {
+  background: var(--coreImageh3);
 }
 
-h3 span:after {
+.coreImageDisplay h3 span:after {
   background: var(--primary);
 
   left: 100%;
 }
-h3 span.animateLine:after {
+.coreImageDisplay h3 span.animateLine:after {
   left: -75%;
 }
 
-.core_img {
+.coreImageDisplay .core_img {
   border-radius: 100%;
   display: flex;
   flex: 0 0 150px;
@@ -57,11 +57,11 @@ h3 span.animateLine:after {
   margin: 2%;
 }
 
-.core_img img {
+.coreImageDisplay .core_img img {
   height: 100%;
 }
 
-.img__overlay {
+.coreImageDisplay .img__overlay {
   align-items: center;
   flex-direction: row;
   bottom: 0;
@@ -76,17 +76,17 @@ h3 span.animateLine:after {
   z-index: 1;
 }
 
-.img__overlay:hover {
+.coreImageDisplay .img__overlay:hover {
   opacity: 1;
 }
 
-.img__overlay {
-  background-color: rgba(0, 0, 0, 1);
-  color: #fafafa;
+.coreImageDisplay .img__overlay {
+  background-color: var(--ImageOverlayBackground);
+  color: var(--ImageOverlayText);
   font-size: 15px;
 }
 
-.flexrow {
+.coreImageDisplay .flexrow {
   display: flex;
   flex-direction: row;
   align-items: center;

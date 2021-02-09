@@ -4,7 +4,7 @@
   }
   .carousel {
     margin-top: -9vh;
-    background-color: black;
+    background-color: var(--carouselBackground);
     height: 94vh;
   }
   .carousel.carousel-slider.center.carousel_images {

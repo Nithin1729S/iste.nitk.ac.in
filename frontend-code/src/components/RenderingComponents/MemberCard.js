@@ -23,14 +23,14 @@ class MemberCard extends React.Component {
         <div className="row center">
           <a
             href={[this.props.linkedin]}
-            className="btn-large btn-floating waves-effect waves-light"
+            className="primary-link btn-large btn-floating waves-effect waves-light"
             target="_blank"
           >
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
           <a
             href={this.props.email}
-            className="btn-large btn-floating waves-effect waves-light"
+            className="primary-link btn-large btn-floating waves-effect waves-light"
           >
             <i className="material-icons">mail_outline</i>
           </a>

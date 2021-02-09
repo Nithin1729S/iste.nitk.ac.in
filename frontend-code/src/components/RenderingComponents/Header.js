@@ -43,7 +43,7 @@ class Header extends React.Component {
       <div className="header">
         <ul id="mobile-menu" className="sidenav white-text">
           <li>
-            <Link to="/account/login/" className="waves-effect white-text">
+            <Link to="/login/" className="waves-effect white-text">
               Login
             </Link>
           </li>
@@ -137,7 +137,7 @@ class Header extends React.Component {
               </Link>
               <ul className="right hide-on-med-and-down">
                 <li>
-                  <Link to="/account/login/">Login</Link>
+                  <Link to="/login/">Login</Link>
                 </li>
 
                 <li>

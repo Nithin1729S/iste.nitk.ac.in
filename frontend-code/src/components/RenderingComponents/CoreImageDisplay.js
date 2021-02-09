@@ -4,7 +4,7 @@ import '../../css/coreImageDisplay.css';
 
 const CoreImageDisplay = props => {
     return (
-        <div className="container">
+        <div className="coreImageDisplay container">
          <div className="center row">
                 <h3>
                     <span className="animateLine">

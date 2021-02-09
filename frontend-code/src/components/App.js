@@ -9,6 +9,7 @@ import EventComponent from "./PageComponents/EventComponent";
 import SigComponent from "./PageComponents/SigComponent";
 import TeamComponent from "./PageComponents/TeamComponent";
 import ProjectComponent from "./PageComponents/ProjectComponent";
+import LoginComponent from "./PageComponents/LoginComponent";
 import "../css/constants.css";
 
 class App extends React.Component {
@@ -16,12 +17,13 @@ class App extends React.Component {
     return (
       <Router history={history}>
         <Header />
-        <div>
+        <div className='app-main'>
           <Route path="/" exact component={HomeComponent} />
           <Route path="/event" exact component={EventComponent} />
           <Route path="/sig/:name" exact component={SigComponent} />
           <Route path="/team" exact component={TeamComponent} />
           <Route path="/project/:id" exact component={ProjectComponent} />
+          <Route path="/login" exact component={LoginComponent}/>
         </div>
         <Footer />
       </Router>
