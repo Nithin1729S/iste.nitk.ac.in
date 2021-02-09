@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import parse from 'html-react-parser';
 
 import "../../css/projectDetails.css";
 
@@ -67,8 +68,7 @@ class ProjectDetails extends React.Component {
 
               <div className="row ckeditor_content">
                 <p>
-                  {/* { this.state.data.description.replace(/<[^>]*>?/gm, '')} */}
-                  {this.state.data.description}
+                  {parse(this.state.data.description)}
                 </p>
               </div>
               <div className="row mem">

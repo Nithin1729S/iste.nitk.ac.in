@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+
 import "../../css/sigProjectCard.css";
 
 class ProjectCard extends React.Component {
@@ -34,12 +36,12 @@ class ProjectCard extends React.Component {
 					</h6>
 					<div className="row center">
 						<div className="detButton">
-								<a
-									href={"/project/"+this.props.projID}
+								<Link
+									to={`/project/${this.props.projID}`}
 									className="waves-effect waves-light btn-small btnColor"
 								>
 								View Details
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
