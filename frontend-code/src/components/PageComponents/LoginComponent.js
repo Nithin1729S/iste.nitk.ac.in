@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 
 import styles from "../../css/login.module.css";
 class LoginComponent extends React.Component {
@@ -10,7 +11,14 @@ class LoginComponent extends React.Component {
       this.setState({ errorMessage: "Empty password is not valid" });
     }
     //TODO send api request to login and return message appropriately
-    else console.log(`${this.state.username} ${this.state.password}`);
+    else {
+      const user={username:this.state.username,password:this.state.password}
+      axios.post(`localhost:8000/get_auth_token/`, user )
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+    }
   };
   handleInput = (e) => {
     if (e.target.name === "username") {
