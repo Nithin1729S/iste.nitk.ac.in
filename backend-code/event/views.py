@@ -7,8 +7,9 @@ from django.db.models import Q
 from event.forms import EventForm
 from datetime import datetime, timedelta
 from website.decorators import check_core_member, check_member_year, check_edit_access_event, login_required
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
 @api_view(['GET'])
 def indexView(request):
@@ -31,9 +32,32 @@ def indexView(request):
     return Response(events_data)
 
 
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def addView(request):
+    data = request.POST
+    print(data)
+    # event = Event(
+    #     name=data['name'],
+    #     date_time=data['date_time'],
+    #     no_of_participants=data['no_of_participants'],
+    #     poster=request.FILES['poster'],
+    #     form_link=data['form_link'],
+    #     publicity_message=data['publicity_message'],
+    #     venue=data['venue'],
+    # )
+    # event.save()
+    # event.contacts.set(data['contacts'])
+    # event.editable_by.set(data['editable_by'])
+    # event.sigs.set(data['sigs'])
+    # event.save()
+
+    return Response({'msg':'Event added successfully'})
+
+
 @login_required
 @check_core_member
-def addView(request):
+def addview(request):
     context = {}
 
     if request.method == "GET":
