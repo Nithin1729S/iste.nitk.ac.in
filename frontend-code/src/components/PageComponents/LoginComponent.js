@@ -44,6 +44,12 @@ class LoginComponent extends React.Component {
         }
     };
     render() {
+        const cookie = new Cookies();
+        if (cookie.get("firstName") !== undefined) {
+            const { history } = this.props;
+            alert("logout to login again");
+            history.push("/");
+        }
         return (
             <div className="container">
                 <div className={`row center ${styles.main}`}>
