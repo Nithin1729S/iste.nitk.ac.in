@@ -49,6 +49,7 @@ class LoginComponent extends React.Component {
             const { history } = this.props;
             alert("logout to login again");
             history.push("/");
+            return null;
         }
         return (
             <div className="container">
