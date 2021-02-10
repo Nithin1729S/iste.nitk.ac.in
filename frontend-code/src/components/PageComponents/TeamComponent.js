@@ -3,97 +3,85 @@ import axios from "axios";
 
 import MemberCard from "../RenderingComponents/MemberCard";
 
-class TeamComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      memberData: {
-        core: [],
-        aux_core: [],
-        members: [],
-      },
-    };
-  }
-
-  componentDidMount() {
-    console.log("Fetching. . .");
-    axios.get("http://127.0.0.1:8000/team/").then((res) => {
-      this.setState({
-        memberData: res.data,
-      });
-      console.log(this.state.memberData);
-    });
-  }
-  render() {
+const DataHeader = (props) => {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="row center">
-            <div className="col l12 s12">
-              <h3>Core Members</h3>
-              <br />
-            </div>
-            {this.state.memberData.core.map((coreData, index) => {
-              return (
-                <div className="row proj-item">
-                  <MemberCard
-                    key={coreData.id}
-                    isImageLeft={index % 2 == 0}
-                    name={
-                      coreData.user.first_name + " " + coreData.user.last_name
-                    }
-                    role={coreData.role}
-                    content={coreData.description}
-                    linkedin={coreData.linkedin_url}
-                    email={"mailto:" + coreData.email}
-                    imgurl={coreData.user.avatar}
-                  />
-                </div>
-              );
-            })}
-            <div className="col l12 s12">
-              <h3>Auxillary Core</h3>
-              <br />
-            </div>
-            {this.state.memberData.aux_core.map((auxCoreData, index) => {
-              return (
-                <div className="row proj-item">
-                  <MemberCard
-                    key={auxCoreData.id}
-                    isImageLeft={index % 2 == 0}
-                    name={
-                      auxCoreData.user.first_name +
-                      " " +
-                      auxCoreData.user.last_name
-                    }
-                    role={auxCoreData.role}
-                    content={auxCoreData.description}
-                    linkedin={auxCoreData.linkedin_url}
-                    email={"mailto:" + auxCoreData.email}
-                    imgurl={auxCoreData.user.avatar}
-                  />
-                </div>
-              );
-            })}
-          </div>
+        <div className="col l12 s12">
+            <h3>{props.header}</h3>
+            <br />
         </div>
-        <div className="row">
-          <div className="row center">
-            <div className="col l12 s12">
-              <h3>Executive Members</h3>
-            </div>
-            {this.state.memberData.members.map((memberInfo) => {
-              const name = memberInfo.first_name + " " + memberInfo.last_name;
-              return (
-                <div className="col l4 m6 s12 center">
-                  <h6 key={memberInfo.id}>{name}</h6>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
     );
-  }
+};
+
+const DataItem = (props) => {
+    return (
+        <div className="row proj-item">
+            <MemberCard
+                key={props.data.id}
+                isImageLeft={props.index % 2 == 0}
+                name={`${props.data.user.first_name} ${props.data.user.last_name}`}
+                role={props.data.role}
+                content={props.data.description}
+                linkedin={props.data.linkedin_url}
+                email={"mailto:" + props.data.email}
+                imgurl={props.data.user.avatar}
+            />
+        </div>
+    );
+};
+
+const MemberList = (props) => {
+    const name = props.memberInfo.first_name + " " + props.last_name;
+    return (
+        <div className="col l4 m6 s12 center">
+            <h6 key={props.memberInfo.id}>{name}</h6>
+        </div>
+    );
+};
+
+class TeamComponent extends React.Component {
+    state = {
+        memberData: {
+            core: [],
+            aux_core: [],
+            members: [],
+        },
+    };
+
+    componentDidMount() {
+        console.log("Fetching. . .");
+        axios.get("http://127.0.0.1:8000/team/").then((res) => {
+            this.setState({
+                memberData: res.data,
+            });
+            console.log(this.state.memberData);
+        });
+    }
+
+    render() {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="row center">
+                        <DataHeader header="Core Members" />
+                        {this.state.memberData.core.map((data, index) => {
+                            return <DataItem data={data} index={index} />;
+                        })}
+                        <DataHeader header="Auxillary Core Members" />
+                        {this.state.memberData.aux_core.map((data, index) => {
+                            return <DataItem data={data} index={index} />;
+                        })}
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="row center">
+                        <DataHeader header="Executive Members" />
+                        {this.state.memberData.members.map((memberInfo) => {
+                            <MemberList memberInfo={memberInfo} />;
+                        })}
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 export default TeamComponent;
