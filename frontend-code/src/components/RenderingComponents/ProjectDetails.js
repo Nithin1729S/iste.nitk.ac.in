@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
 
 import "../../css/projectDetails.css";
 
@@ -49,13 +49,12 @@ class ProjectDetails extends React.Component {
                 <div className="center row">
                   <div className="flexrow">
                     {this.state.data.editable_by.map((person) => (
-                      <a className="core_img z-depth-2" href="">
+                      <div className="core_img z-depth-2" href="">
                         <div className="img__overlay">
                           {person.first_name} {person.last_name}
-                          <br></br>
                         </div>
-                        <img src={person.avatar} alt=""></img>
-                      </a>
+                        <img src={person.avatar} alt="" />
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -67,9 +66,7 @@ class ProjectDetails extends React.Component {
               </div>
 
               <div className="row ckeditor_content">
-                <p>
-                  {parse(this.state.data.description)}
-                </p>
+                <p>{parse(this.state.data.description)}</p>
               </div>
               <div className="row mem">
                 <i className="material-icons">local_offer</i>

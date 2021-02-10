@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 
 import MemberCard from "../RenderingComponents/MemberCard";
-import MembersList from "../RenderingComponents/MembersList";
 
 class TeamComponent extends React.Component {
   constructor(props) {
@@ -84,12 +83,10 @@ class TeamComponent extends React.Component {
               <h3>Executive Members</h3>
             </div>
             {this.state.memberData.members.map((memberInfo) => {
+              const name = memberInfo.first_name + " " + memberInfo.last_name;
               return (
                 <div className="col l4 m6 s12 center">
-                  <MembersList
-                    key={memberInfo.id}
-                    name={memberInfo.first_name + " " + memberInfo.last_name}
-                  />
+                  <h6 key={memberInfo.id}>{name}</h6>
                 </div>
               );
             })}
