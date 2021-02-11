@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
+from website.permissions import IsCoreMember
 from account.models import User,SIG
 from event.models import Event
 from event.serializers import EventSerializer
@@ -33,7 +34,7 @@ def indexView(request):
 
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated,IsCoreMember])
 def addView(request):
     data = request.POST
     print(data)
