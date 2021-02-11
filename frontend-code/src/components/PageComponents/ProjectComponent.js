@@ -14,11 +14,7 @@ class ProjectComponent extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <ProjectDetails id={this.state.id} />
-            </div>
-        );
+        return <ProjectDetails id={this.state.id} />;
     }
 }
 export default ProjectComponent;

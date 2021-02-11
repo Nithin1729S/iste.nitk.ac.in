@@ -121,7 +121,7 @@ class EventAdd extends React.Component {
                                 <br />
                                 <div className="row">
                                     <div className="file-field input-field col s7 push-s2">
-                                        <div className="btn">
+                                        <button className="btn waves-effect">
                                             <span>Poster</span>
                                             <input
                                                 type="file"
@@ -129,7 +129,7 @@ class EventAdd extends React.Component {
                                                 accept="image/*"
                                                 id="img"
                                             />
-                                        </div>
+                                        </button>
                                         <div className="file-path-wrapper">
                                             <input
                                                 className="file-path validate"

@@ -78,7 +78,7 @@ class EventComponent extends React.Component {
                                           <center>
                                               <Link
                                                   className="indigo-text"
-                                                  to="/eventdetails"
+                                                  to={`/event/view/${event.name}`}
                                               >
                                                   View Details
                                               </Link>
