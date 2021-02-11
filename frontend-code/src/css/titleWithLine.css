@@ -1,0 +1,30 @@
+h3.title {
+    color: var(--primary);
+    text-align: center;
+}
+h3.title span {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+h3.title span:after,
+h3.title span:before {
+    content: "";
+    height: 0.1rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    transition: 3s;
+}
+h3.title span:before {
+    background: var(--coreImageh3);
+}
+
+h3.title span:after {
+    background: var(--primary);
+    left: 100%;
+}
+h3.title span.animateLine:after {
+    left: -75%;
+}

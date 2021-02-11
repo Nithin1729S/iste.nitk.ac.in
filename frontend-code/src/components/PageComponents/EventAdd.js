@@ -1,26 +1,25 @@
 import React from "react";
 import Axios from "axios";
 
-class EventEdit extends React.Component {
+class EventAdd extends React.Component {
     state = {
-        event: [],
+        name: " ",
+        no_of_participants: " ",
+        date_time: " ",
+        contacts: " ",
+        editable_by: " ",
+        sigs: " ",
+        form_link: " ",
+        venue: " ",
+        publicity_message: " ",
+        poster: " ",
     };
-    componentDidMount() {
-        Axios.get("http://localhost:8000/event")
-            .then((result) => {
-                this.setState({
-                    events: result.data,
-                });
-            })
-            .catch((err) => console.log(err));
-    }
+
     submitHandler = (e) => {
         e.preventDefault();
-        Axios.post("http://localhost:8000/event", this.state)
-            .then((res) => console.log(res))
-            .catch((error) => {
-                console.log(error);
-            });
+        Axios.post("http://localhost:8000/event", this.state).catch((error) => {
+            console.log(error);
+        });
     };
 
     render() {
@@ -35,13 +34,13 @@ class EventEdit extends React.Component {
             venue,
             publicity_message,
             poster,
-        } = this.state.event[0];
+        } = this.state;
         return (
             <div className="row-center">
                 <div className="row">
                     <div className="card col s8 push-s2">
                         <div className="card-content black-text ">
-                            <h5 className="center card-title">Edit Event</h5>
+                            <h5 className="center card-title">Add Event</h5>
                             <form onSubmit={this.submitHandler}>
                                 <div className="row">
                                     <div className="input-field col s8 push-s2">
@@ -122,7 +121,7 @@ class EventEdit extends React.Component {
                                 <br />
                                 <div className="row">
                                     <div className="file-field input-field col s7 push-s2">
-                                        <div className="btn">
+                                        <button className="btn waves-effect">
                                             <span>Poster</span>
                                             <input
                                                 type="file"
@@ -130,7 +129,7 @@ class EventEdit extends React.Component {
                                                 accept="image/*"
                                                 id="img"
                                             />
-                                        </div>
+                                        </button>
                                         <div className="file-path-wrapper">
                                             <input
                                                 className="file-path validate"
@@ -146,7 +145,7 @@ class EventEdit extends React.Component {
                                         type="submit"
                                         name="action"
                                     >
-                                        Save Changes
+                                        Create event
                                         <i className="material-icons right">
                                             create
                                         </i>
@@ -160,4 +159,4 @@ class EventEdit extends React.Component {
         );
     }
 }
-export default EventEdit;
+export default EventAdd;

@@ -1,0 +1,12 @@
+.eventDetails .card{
+    padding: 0 !important;
+}
+.eventDetails .card-content{
+    padding-bottom: 0px !important;
+}
+.eventDetails .card-action{
+    border:  none !important;
+}
+.eventDetails .grey-text p{
+    margin: 10px 0px;
+}
