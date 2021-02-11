@@ -13,3 +13,10 @@ def event_poster_upload_path(instance, filename):
 
 def default_event_poster_path():
     return 'event_pictures/generic.png'
+
+def upload_to_cloudinary(file):
+    cloudinary.config(api_key="264523198191786",
+                    api_secret="xfxjJDVmW-W0qHseO-0GqHV5yvE",
+                    cloud_name="smarkt")
+    r = up.upload(file)
+    return r['url'].replace('http:','https:')

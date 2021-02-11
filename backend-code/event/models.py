@@ -24,10 +24,13 @@ class Event(models.Model):
         to=User,
         related_name='editable_by'
     )
-    poster = models.ImageField(
-        default=default_event_poster_path,
-        upload_to=event_poster_upload_path,
-        blank=True
+    # poster = models.ImageField(
+    #     default=default_event_poster_path,
+    #     upload_to=event_poster_upload_path,
+    #     blank=True
+    # )
+    poster = models.TextField(
+        default=""
     )
     sigs = models.ManyToManyField(
         to=SIG,

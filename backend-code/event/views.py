@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from website.permissions import IsCoreMember
+from website.helperFunctions import upload_to_cloudinary
 from account.models import User,SIG
 from event.models import Event
 from event.serializers import EventSerializer
@@ -11,6 +12,9 @@ from website.decorators import check_core_member, check_member_year, check_edit_
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
+import cloudinary.uploader as up
+import cloudinary
+
 
 @api_view(['GET'])
 def indexView(request):
@@ -37,22 +41,20 @@ def indexView(request):
 @permission_classes([IsAuthenticated,IsCoreMember])
 def addView(request):
     data = request.POST
-    print(data)
-    # event = Event(
-    #     name=data['name'],
-    #     date_time=data['date_time'],
-    #     no_of_participants=data['no_of_participants'],
-    #     poster=request.FILES['poster'],
-    #     form_link=data['form_link'],
-    #     publicity_message=data['publicity_message'],
-    #     venue=data['venue'],
-    # )
-    # event.save()
-    # event.contacts.set(data['contacts'])
-    # event.editable_by.set(data['editable_by'])
-    # event.sigs.set(data['sigs'])
-    # event.save()
-
+    event = Event(
+        name=data['name'],
+        date_time=data['date_time'],
+        no_of_participants=data['no_of_participants'],
+        poster=upload_to_cloudinary(request.FILES['poster']),
+        form_link=data['form_link'],
+        publicity_message=data['publicity_message'],
+        venue=data['venue'],
+    )
+    event.save()
+    event.contacts.set(data['contacts'])
+    event.editable_by.set(data['editable_by'])
+    event.sigs.set(data['sigs'])
+    event.save()
     return Response({'msg':'Event added successfully'})
 
 
