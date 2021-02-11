@@ -30,7 +30,7 @@ class HomeComponent extends React.Component {
     render() {
         if (this.state.homeData.length !== 0) {
             return (
-                <div>
+                <>
                     <HomeCarousel photosList={this.state.homeData.carousel} />
                     <SigCards cardList={this.state.homeData.sigs} />
                     <TheNumbers stats={this.state.homeData.stats} />
@@ -38,10 +38,10 @@ class HomeComponent extends React.Component {
                         core={this.state.homeData.core}
                         aux_core={this.state.homeData.aux_core}
                     />
-                </div>
+                </>
             );
         } else {
-            return <div></div>;
+            return <></>;
         }
     }
 }

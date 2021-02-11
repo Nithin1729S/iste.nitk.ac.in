@@ -1,6 +1,6 @@
 import React from "react";
 
-import CoreImageDisplay from "../RenderingComponents/CoreImageDisplay";
+import CoreImageDisplay from "./CoreImageDisplay";
 
 class CoreImage extends React.Component {
     render() {

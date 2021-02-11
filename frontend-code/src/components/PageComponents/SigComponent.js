@@ -3,8 +3,11 @@ import axios from "axios";
 
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
-import "../../css/sigComponent.css";
+
+
 import ProjectCard from "../RenderingComponents/SigProjectCard";
+import TitleWithLine from '../RenderingComponents/TitleWithLine';
+import "../../css/sigComponent.css";
 
 class SigComponent extends React.Component {
     constructor(props) {
@@ -58,9 +61,7 @@ class SigComponent extends React.Component {
                 <div className="sigComponent">
                     <div className="row">
                         <div className="col l12 s12">
-                            <h3>
-                                <span>{this.state.name}</span>
-                            </h3>
+                            <TitleWithLine title={this.state.name}/>
                         </div>
 
                         <div className="col l12 s12">

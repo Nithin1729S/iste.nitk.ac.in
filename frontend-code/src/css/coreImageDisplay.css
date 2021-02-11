@@ -1,95 +1,63 @@
 @media only screen and (min-width: 601px) and (max-width: 1260px) {
-  .coreImageDisplay.container {
-    width: 80%;
-    border-radius: 0;
-  }
+    .coreImageDisplay.container {
+        width: 80%;
+        border-radius: 0;
+    }
 }
 
 @media only screen and (min-width: 1261px) {
-  .coreImageDisplay.container {
-    width: 80%;
-    border-radius: 0;
-  }
-}
-
-.coreImageDisplay h3 {
-  color: var(--primary);
-  text-align: center;
-}
-.coreImageDisplay h3 span {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-.coreImageDisplay h3 span:after,
-.coreImageDisplay h3 span:before {
-  content: "";
-  height: 0.1rem;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  transition: 3s;
-}
-.coreImageDisplay h3 span:before {
-  background: var(--coreImageh3);
-}
-
-.coreImageDisplay h3 span:after {
-  background: var(--primary);
-
-  left: 100%;
-}
-.coreImageDisplay h3 span.animateLine:after {
-  left: -75%;
+    .coreImageDisplay.container {
+        width: 80%;
+        border-radius: 0;
+    }
 }
 
 .coreImageDisplay .core_img {
-  border-radius: 100%;
-  display: flex;
-  flex: 0 0 150px;
-  height: 150px;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  flex-direction: row;
-  width: 150px;
-  margin: 2%;
+    border-radius: 100%;
+    display: flex;
+    flex: 0 0 150px;
+    height: 150px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    flex-direction: row;
+    width: 150px;
+    margin: 2%;
 }
 
 .coreImageDisplay .core_img img {
-  height: 100%;
+    height: 100%;
 }
 
 .coreImageDisplay .img__overlay {
-  align-items: center;
-  flex-direction: row;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: opacity 0.25s;
-  z-index: 1;
+    align-items: center;
+    flex-direction: row;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: opacity 0.25s;
+    z-index: 1;
 }
 
 .coreImageDisplay .img__overlay:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .coreImageDisplay .img__overlay {
-  background-color: var(--ImageOverlayBackground);
-  color: var(--ImageOverlayText);
-  font-size: 15px;
+    background-color: var(--ImageOverlayBackground);
+    color: var(--ImageOverlayText);
+    font-size: 15px;
 }
 
 .coreImageDisplay .flexrow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }

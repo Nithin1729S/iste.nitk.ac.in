@@ -1,14 +1,13 @@
 import React from "react";
 
+import TitleWithLine from '../RenderingComponents/TitleWithLine';
 import "../../css/coreImageDisplay.css";
 
 const CoreImageDisplay = (props) => {
     return (
         <div className="coreImageDisplay container">
             <div className="center row">
-                <h3>
-                    <span className="animateLine">{props.title}</span>
-                </h3>
+                <TitleWithLine title={props.title}/>
                 <div className="flexrow">
                     {props.data.map((member) => {
                         return (

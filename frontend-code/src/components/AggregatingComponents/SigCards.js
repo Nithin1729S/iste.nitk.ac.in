@@ -1,6 +1,8 @@
 import React from "react";
 
 import Card from "../RenderingComponents/Cards";
+import TitleWithLine from "../RenderingComponents/TitleWithLine";
+
 import "../../css/sigCards.css";
 
 const SigCards = (props) => {
@@ -9,7 +11,7 @@ const SigCards = (props) => {
             <Card
                 key={item.name}
                 name={item.name}
-                avatar={"http://127.0.0.1:8000" + item.avatar}
+                avatar={`http://127.0.0.1:8000${item.avatar}`}
                 summary={item.summary}
             />
         );
@@ -17,11 +19,7 @@ const SigCards = (props) => {
 
     return (
         <div className="container sigCard">
-            <h3 className="center-align">
-                <span className="animatedLine viewed">
-                    Special Interest Groups (SIGs)
-                </span>
-            </h3>
+            <TitleWithLine title="Special Interest Groups SIG(s)"/>
             <div className="row">{renderedList}</div>
         </div>
     );

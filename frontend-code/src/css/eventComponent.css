@@ -1,0 +1,9 @@
+.event-component .card.large .card-image {
+    max-height: 50% !important;
+}
+.event-component .card {
+    height: fit-content !important;
+}
+.event-component .card-action{
+    position: relative !important;
+}

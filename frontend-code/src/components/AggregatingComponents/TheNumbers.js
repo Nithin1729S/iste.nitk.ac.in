@@ -1,5 +1,7 @@
 import React from "react";
+
 import NumList from "../RenderingComponents/NumList";
+import TitleWithLine from '../RenderingComponents/TitleWithLine';
 
 const TheNumbers = (props) => {
     const renderedList = (
@@ -12,9 +14,7 @@ const TheNumbers = (props) => {
 
     return (
         <div className="container">
-            <h3 className="center-align">
-                <span className="animatedLine viewed">In Numbers</span>
-            </h3>
+            <TitleWithLine title="The Numbers"/>
             <div className="row">{renderedList}</div>
         </div>
     );
