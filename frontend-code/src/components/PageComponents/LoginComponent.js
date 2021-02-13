@@ -125,7 +125,6 @@ class LoginComponent extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-
                                     <button
                                         className="btn waves-effect waves-light"
                                         type="submit"

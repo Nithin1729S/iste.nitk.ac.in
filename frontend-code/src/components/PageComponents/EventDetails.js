@@ -39,7 +39,7 @@ class EventDetails extends React.Component {
                         <div className="card hoverable z-depth-3 col s12 push-s1">
                             <div className="card-image responsive-img">
                                 <img
-                                    src={`http://127.0.0.1:8000${this.state.event.poster}`}
+                                    src={`http://127.0.0.1:8000/media/${this.state.event.poster}`}
                                 />
                                 <a
                                     id="edit"

@@ -4,7 +4,7 @@ import "../../css/titleWithLine.css";
 const TitleWithLine = (props) => {
     return (
         <h3 className="title">
-            <span class="animateLine">{props.title}</span>
+            <span className="animateLine">{props.title}</span>
         </h3>
     );
 };
