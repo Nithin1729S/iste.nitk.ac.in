@@ -30,7 +30,7 @@ const DataItem = (props) => {
 };
 
 const MemberList = (props) => {
-    const name = props.memberInfo.first_name + " " + props.last_name;
+    const name = props.memberInfo.first_name + " " + props.memberInfo.last_name;
     return (
         <div className="col l4 m6 s12 center">
             <h6 key={props.memberInfo.id}>{name}</h6>
@@ -53,7 +53,6 @@ class TeamComponent extends React.Component {
             this.setState({
                 memberData: res.data,
             });
-            console.log(this.state.memberData);
         });
     }
 
@@ -76,7 +75,7 @@ class TeamComponent extends React.Component {
                     <div className="row center">
                         <DataHeader header="Executive Members" />
                         {this.state.memberData.members.map((memberInfo) => {
-                            <MemberList memberInfo={memberInfo} />;
+                            return <MemberList memberInfo={memberInfo} />;
                         })}
                     </div>
                 </div>

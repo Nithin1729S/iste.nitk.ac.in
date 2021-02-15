@@ -22,7 +22,6 @@ class LoginComponent extends React.Component {
                 .post(`http://127.0.0.1:8000/account/get_auth_token/`, user)
                 .then((res) => {
                     const cookie = new Cookies();
-                    console.log(res.data);
                     cookie.set("AuthToken", res.data.token, { path: "/" });
                     cookie.set("firstName", res.data.first_name, { path: "/" });
                     history.push("/");
@@ -62,11 +61,6 @@ class LoginComponent extends React.Component {
                                 </span>
                                 <form onSubmit={this.handleSubmit}>
                                     <p>{this.state.errorMessage}</p>
-                                    <input
-                                        type="hidden"
-                                        name="csrfmiddlewaretoken"
-                                        value="8kfL0ZLEjHpvJ6rg8esyUvgmytBq43mmodsOLJxPON1tf9mjZslrzsmTBotkJseb"
-                                    />
                                     <div className="row">
                                         <div className="col s12">
                                             <div className="row">

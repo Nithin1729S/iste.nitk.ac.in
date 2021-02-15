@@ -1,12 +1,11 @@
 import React from "react";
 import axios from "axios";
-
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
-
+import { withRouter } from "react-router-dom";
 
 import ProjectCard from "../RenderingComponents/SigProjectCard";
-import TitleWithLine from '../RenderingComponents/TitleWithLine';
+import TitleWithLine from "../RenderingComponents/TitleWithLine";
 import "../../css/sigComponent.css";
 
 class SigComponent extends React.Component {
@@ -47,10 +46,11 @@ class SigComponent extends React.Component {
         this.fetchSig();
     }
     componentDidUpdate() {
+        const { history } = this.props;
         if (this.props.match.params.name) {
             if (this.props.match.params.name !== this.state.name) {
                 this.setState({ name: this.props.match.params.name });
-                window.location.reload();
+                history.go(0);
             }
         }
     }
@@ -61,7 +61,7 @@ class SigComponent extends React.Component {
                 <div className="sigComponent">
                     <div className="row">
                         <div className="col l12 s12">
-                            <TitleWithLine title={this.state.name}/>
+                            <TitleWithLine title={this.state.name} />
                         </div>
 
                         <div className="col l12 s12">
@@ -134,4 +134,4 @@ class SigComponent extends React.Component {
         } else return null;
     }
 }
-export default SigComponent;
+export default withRouter(SigComponent);
