@@ -1,25 +1,29 @@
 import React from "react";
 import Axios from "axios";
 
+import EventInput from "../RenderingComponents/EventInput";
+import styles from "../../css/eventAdd.module.css";
 class EventAdd extends React.Component {
     state = {
-        name: " ",
-        no_of_participants: " ",
-        date_time: " ",
-        contacts: " ",
-        editable_by: " ",
-        sigs: " ",
-        form_link: " ",
-        venue: " ",
-        publicity_message: " ",
-        poster: " ",
+        name: "",
+        no_of_participants: "",
+        date_time: "",
+        contacts: "",
+        editable_by: "",
+        sigs: "",
+        form_link: "",
+        venue: "",
+        publicity_message: "",
+        poster: "",
     };
 
     submitHandler = (e) => {
         e.preventDefault();
-        Axios.post("http://localhost:8000/event", this.state).catch((error) => {
-            console.log(error);
-        });
+        Axios.post("http://localhost:8000/event/", this.state).catch(
+            (error) => {
+                console.log(error);
+            }
+        );
     };
 
     render() {
@@ -33,47 +37,56 @@ class EventAdd extends React.Component {
             form_link,
             venue,
             publicity_message,
-            poster,
         } = this.state;
         return (
-            <div className="row-center">
+            <div className={`row-center ${styles.main}`}>
                 <div className="row">
                     <div className="card col s8 push-s2">
                         <div className="card-content black-text ">
                             <h5 className="center card-title">Add Event</h5>
                             <form onSubmit={this.submitHandler}>
                                 <div className="row">
-                                    <div className="input-field col s8 push-s2">
-                                        <i className="form-icon material-icons prefix">
-                                            event
-                                        </i>
-                                        {name}
-                                        <label>Event name</label>
-                                    </div>
-                                    <div className="input-field col s4">
-                                        <i className="form-icon material-icons prefix">
-                                            group
-                                        </i>
-                                        {no_of_participants}
-                                        <label>No. of Participants</label>
-                                    </div>
+                                    <EventInput
+                                        iconName="event name"
+                                        labelName="Event name"
+                                        value={name}
+                                        onChange={(e) => {
+                                            this.setState({
+                                                name: e.target.value,
+                                            });
+                                        }}
+                                        type="text"
+                                        placeholder="Enter the name of the event"
+                                    />
+                                    <EventInput
+                                        iconName="group"
+                                        labelName="Number of Participants"
+                                        value={no_of_participants}
+                                        onChange={(e) => {
+                                            this.setState({
+                                                no_of_participants:
+                                                    e.target.value,
+                                            });
+                                        }}
+                                        type="number"
+                                        placeholder="participants per team in the event"
+                                        min="1"
+                                        max="4"
+                                    />
                                 </div>
                                 <div className="row">
-                                    <div className="input-field col s8 push-s2">
-                                        <i className="form-icon material-icons prefix">
-                                            date_range
-                                        </i>
-                                        {date_time}
-                                        <label>Date and Time</label>
-                                    </div>
-
-                                    <div className="input-field col s4">
-                                        <i className="form-icon material-icons prefix">
-                                            person
-                                        </i>
-                                        {contacts}
-                                        <label>Contact</label>
-                                    </div>
+                                    <EventInput
+                                        iconName="date_range"
+                                        labelName="Date and Time"
+                                        value={date_time}
+                                        onChange={(e) => {
+                                            this.setState({
+                                                date_time: e.target.value,
+                                            });
+                                        }}
+                                        type="text"
+                                        placeholder="Enter date in format YYYY/MM/DD hh:mm:ss am"
+                                    />
                                 </div>
                                 <div className="row">
                                     <div className="input-field col s8 push-s2">
@@ -99,7 +112,6 @@ class EventAdd extends React.Component {
                                         {form_link}
                                         <label>Registration link</label>
                                     </div>
-
                                     <div className="input-field col s4">
                                         <i className="form-icon material-icons prefix">
                                             location_on
@@ -146,9 +158,6 @@ class EventAdd extends React.Component {
                                         name="action"
                                     >
                                         Create event
-                                        <i className="material-icons right">
-                                            create
-                                        </i>
                                     </button>
                                 </div>
                             </form>

@@ -1,7 +1,7 @@
 import React from "react";
 
-import NumList from "../RenderingComponents/NumList";
-import TitleWithLine from '../RenderingComponents/TitleWithLine';
+import NumList from "../AggregatingComponents/NumList";
+import TitleWithLine from "../RenderingComponents/TitleWithLine";
 
 const TheNumbers = (props) => {
     const renderedList = (
@@ -14,7 +14,7 @@ const TheNumbers = (props) => {
 
     return (
         <div className="container">
-            <TitleWithLine title="The Numbers"/>
+            <TitleWithLine title="The Numbers" />
             <div className="row">{renderedList}</div>
         </div>
     );

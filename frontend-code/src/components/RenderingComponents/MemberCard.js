@@ -4,7 +4,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 class MemberCard extends React.Component {
     render() {
-        const imageCicle = (
+        const imageCircle = (
             <div className="col l4 s12 proj-image center">
                 <img
                     src={this.props.imgurl}
@@ -40,7 +40,7 @@ class MemberCard extends React.Component {
         if (this.props.isImageLeft)
             var renderedData = (
                 <>
-                    {imageCicle}
+                    {imageCircle}
                     {Content}
                 </>
             );
@@ -48,7 +48,7 @@ class MemberCard extends React.Component {
             renderedData = (
                 <>
                     {Content}
-                    {imageCicle}
+                    {imageCircle}
                 </>
             );
         return (

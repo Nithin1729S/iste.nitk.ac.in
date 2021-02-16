@@ -4,6 +4,26 @@ import { Link } from "react-router-dom";
 import "../../css/footer.css";
 
 class Footer extends React.Component {
+    footerIcons = [
+        {
+            iconName: "fa-facebook-square",
+            iconUrl: "https://www.facebook.com/istenitk/",
+        },
+        {
+            iconName: "fa-instagram",
+            iconUrl: "https://www.instagram.com/istenitk/",
+        },
+
+        {
+            iconName: "fa-youtube-play",
+            iconUrl: "http://www.youtube.com/c/istenitk",
+        },
+        {
+            iconName: "fa-linkedin",
+            iconUrl:
+                "https://www.linkedin.com/company/indian-society-for-technical-education-nitk-chapter/?originalSubdomain=in",
+        },
+    ];
     render() {
         return (
             <div className="footer">
@@ -54,40 +74,22 @@ class Footer extends React.Component {
                                     </ul>
                                 </div>
                                 <div className="row">
-                                    <a
-                                        href="https://www.facebook.com/istenitk/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <i className="center fa fa-facebook-square fa-2x white-text"></i>
-                                    </a>
-
-                                    <a
-                                        href="https://www.instagram.com/istenitk/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="anchor"
-                                    >
-                                        <i className="center fa fa-instagram fa-2x white-text"></i>
-                                    </a>
-
-                                    <a
-                                        href="http://www.youtube.com/c/istenitk"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="anchor"
-                                    >
-                                        <i className="center fa fa-youtube-play fa-2x white-text"></i>
-                                    </a>
-
-                                    <a
-                                        href="https://www.linkedin.com/company/indian-society-for-technical-education-nitk-chapter/?originalSubdomain=in"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="anchor"
-                                    >
-                                        <i className="center fa fa-linkedin fa-2x white-text"></i>
-                                    </a>
+                                    {this.footerIcons.map(
+                                        ({ iconName, iconUrl }) => {
+                                            return (
+                                                <a
+                                                    href={iconUrl}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="anchor"
+                                                >
+                                                    <i
+                                                        className={`center fa ${iconName} fa-2x white-text`}
+                                                    />
+                                                </a>
+                                            );
+                                        }
+                                    )}
                                 </div>
                             </div>
                         </div>

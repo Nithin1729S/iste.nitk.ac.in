@@ -18,11 +18,9 @@ class SigComponent extends React.Component {
         this.fetchSig = this.fetchSig.bind(this);
         this.printYear = this.printYear.bind(this);
     }
-
     printYear(year) {
         return String(year) + "-" + String(year + 1);
     }
-
     async fetchSig() {
         await axios
             .get(`http://127.0.0.1:8000/sig/${this.state.name}/`)
@@ -31,7 +29,6 @@ class SigComponent extends React.Component {
                     sigData: res.data,
                 });
             });
-
         await axios
             .get(`http://127.0.0.1:8000/project/current/${this.state.name}/`)
             .then((res) => {
@@ -40,7 +37,6 @@ class SigComponent extends React.Component {
                 });
             });
     }
-
     componentDidMount() {
         M.AutoInit();
         this.fetchSig();
@@ -54,7 +50,6 @@ class SigComponent extends React.Component {
             }
         }
     }
-
     render() {
         if (this.state.projectData != null) {
             return (
@@ -63,7 +58,6 @@ class SigComponent extends React.Component {
                         <div className="col l12 s12">
                             <TitleWithLine title={this.state.name} />
                         </div>
-
                         <div className="col l12 s12">
                             <img
                                 src={
@@ -73,14 +67,12 @@ class SigComponent extends React.Component {
                                 className="responsive-img col s8 l4 center offset-l4 offset-s2"
                             />
                         </div>
-
                         <div className="row">
                             <div className="col l8 offset-l2 s10 offset-s1 description flow-text">
                                 <br />
                                 <span>{this.state.sigData.description}</span>
                             </div>
                         </div>
-
                         <div className="col l12 s12 center">
                             <h4>
                                 <span className="videotitle">
@@ -100,7 +92,6 @@ class SigComponent extends React.Component {
                             </div>
                         </div>
                     </div>
-
                     <div className="row">
                         <div className="col l10 offset-l1 s10 offset-s1">
                             <h4 className="center">
@@ -113,7 +104,6 @@ class SigComponent extends React.Component {
                             </h4>
                         </div>
                     </div>
-
                     {this.state.projectData.map((project, index) => {
                         return (
                             <div className="row proj-item">

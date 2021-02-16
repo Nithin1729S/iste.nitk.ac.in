@@ -120,7 +120,6 @@ class Header extends React.Component {
                     </li>
                 </ul>
             );
-
             this.loginNavHeader = (
                 <li>
                     <Link

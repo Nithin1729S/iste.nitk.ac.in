@@ -5,7 +5,6 @@ import "../../css/carousel.css";
 
 class HomeCarousel extends React.Component {
     state = {};
-
     componentDidMount() {
         let elems = document.querySelectorAll(".carousel");
         M.Carousel.init(elems, {
@@ -22,43 +21,30 @@ class HomeCarousel extends React.Component {
         }, 3500);
     }
     render() {
+        const carouselContent = this.props.photosList.map((item, index) => {
+            return (
+                <a key={index} className="carousel-item" href="#">
+                    <img
+                        className="carousel_images"
+                        alt={item.name}
+                        src={"http://127.0.0.1:8000/media/".concat(item.url)}
+                    ></img>
+                </a>
+            );
+        });
         return (
             <div>
                 <div
                     className="carousel carousel-slider slides"
                     id="desktop-carousel"
                 >
-                    {this.props.photosList.map((item, index) => {
-                        return (
-                            <a key={index} className="carousel-item" href="#">
-                                <img
-                                    className="carousel_images"
-                                    alt={item.name}
-                                    src={"http://127.0.0.1:8000/media/".concat(
-                                        item.url
-                                    )}
-                                ></img>
-                            </a>
-                        );
-                    })}
+                    {carouselContent}
                 </div>
                 <div
                     className="carousel carousel-slider slides"
                     id="mobile-carousel"
                 >
-                    {this.props.photosList.map((item, index) => {
-                        return (
-                            <a key={index} className="carousel-item" href="#">
-                                <img
-                                    className="carousel_images"
-                                    alt={item.name}
-                                    src={"http://127.0.0.1:8000/media/".concat(
-                                        item.url
-                                    )}
-                                ></img>
-                            </a>
-                        );
-                    })}
+                    {carouselContent}
                 </div>
             </div>
         );
