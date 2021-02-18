@@ -1,7 +1,7 @@
 import React from "react";
-import { Router, Route } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 
-import history from "../history";
+import ScrollToTop from "./ScrollToTop";
 import Header from "./RenderingComponents/Header";
 import Footer from "./RenderingComponents/Footer";
 import HomeComponent from "./PageComponents/HomeComponent";
@@ -11,14 +11,15 @@ import TeamComponent from "./PageComponents/TeamComponent";
 import ProjectComponent from "./PageComponents/ProjectComponent";
 import LoginComponent from "./PageComponents/LoginComponent";
 import EventDetails from "./PageComponents/EventDetails";
-import EventAdd from './PageComponents/EventAdd';
+import EventAdd from "./PageComponents/EventAdd";
 
 import "../css/constants.css";
 
 class App extends React.Component {
     render() {
         return (
-            <Router history={history}>
+            <HashRouter>
+                <ScrollToTop />
                 <Header />
                 <div className="app-main">
                     <Route path="/" exact component={HomeComponent} />
@@ -39,7 +40,7 @@ class App extends React.Component {
                     <Route path="/event/add" exact component={EventAdd} />
                 </div>
                 <Footer />
-            </Router>
+            </HashRouter>
         );
     }
 }

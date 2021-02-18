@@ -78,6 +78,7 @@ class Footer extends React.Component {
                                         ({ iconName, iconUrl }) => {
                                             return (
                                                 <a
+                                                    key={iconName}
                                                     href={iconUrl}
                                                     target="_blank"
                                                     rel="noreferrer"

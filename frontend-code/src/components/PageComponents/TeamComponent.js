@@ -17,7 +17,7 @@ const DataItem = (props) => {
         <div className="row proj-item">
             <MemberCard
                 key={props.data.id}
-                isImageLeft={props.index % 2 == 0}
+                isImageLeft={props.index % 2 === 0}
                 name={`${props.data.user.first_name} ${props.data.user.last_name}`}
                 role={props.data.role}
                 content={props.data.description}

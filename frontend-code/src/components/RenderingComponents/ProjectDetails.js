@@ -7,7 +7,6 @@ import "../../css/projectDetails.css";
 class ProjectDetails extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             data: [],
         };
@@ -41,12 +40,10 @@ class ProjectDetails extends React.Component {
                                         {this.state.data.year}
                                     </h5>
                                 </div>
-
                                 <div className="row mem">
                                     <i className="material-icons">person</i>
                                     <span className="member">Members</span>
                                 </div>
-
                                 <div className="center row">
                                     <div className="flexrow">
                                         {this.state.data.editable_by.map(
@@ -69,12 +66,10 @@ class ProjectDetails extends React.Component {
                                     </div>
                                 </div>
                             </div>
-
                             <div className="row mem">
                                 <i className="material-icons">description</i>
                                 <span className="member">Description</span>
                             </div>
-
                             <div className="row ckeditor_content">
                                 <p>{parse(this.state.data.description)}</p>
                             </div>
