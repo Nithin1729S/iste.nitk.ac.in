@@ -1,8 +1,8 @@
 import React from "react";
-import { baseRequest } from "../../constants";
 
 import EventInput from "../RenderingComponents/EventInput";
 import styles from "../../css/eventAdd.module.css";
+import { baseRequest } from "../../constants";
 class EventAdd extends React.Component {
     state = {
         name: "",

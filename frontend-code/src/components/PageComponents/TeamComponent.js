@@ -1,7 +1,7 @@
 import React from "react";
 
-import { baseRequest } from "../../constants";
 import MemberCard from "../RenderingComponents/MemberCard";
+import { baseRequest } from "../../constants";
 
 const DataHeader = (props) => {
     return (

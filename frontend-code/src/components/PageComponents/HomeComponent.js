@@ -1,10 +1,10 @@
 import React from "react";
-import {baseRequest} from "../../constants";
 
 import CoreImage from "../AggregatingComponents/CoreImage";
 import HomeCarousel from "../RenderingComponents/HomeCarousel";
 import SigCards from "../AggregatingComponents/SigCards";
 import TheNumbers from "../AggregatingComponents/TheNumbers";
+import {baseRequest} from "../../constants";
 
 class HomeComponent extends React.Component {
     constructor(props) {

@@ -1,9 +1,9 @@
 import React from "react";
-import { baseRequest, baseUrl } from "../../constants";
 import { Link } from "react-router-dom";
 
 import TitleWithLine from "../RenderingComponents/TitleWithLine";
 import "../../css/eventComponent.css";
+import { baseRequest, baseUrl } from "../../constants";
 class EventComponent extends React.Component {
     state = {
         events: [],

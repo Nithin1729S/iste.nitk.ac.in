@@ -7,6 +7,7 @@ import { baseUrl } from "../../constants";
 class HomeCarousel extends React.Component {
     state = {};
     componentDidMount() {
+        if(!this.props.photosList||!this.props.photosList.length)return;
         let elems = document.querySelectorAll(".carousel");
         M.Carousel.init(elems, {
             fullWidth: true,
@@ -22,19 +23,19 @@ class HomeCarousel extends React.Component {
         }, 3500);
     }
     render() {
-        const carouselContent = this.props.photosList.map((item, index) => {
+        const carouselContent = this.props.photosList.map(item => {
             return (
-                <a key={index} className="carousel-item" href="#">
+                <a key={item.name} className="carousel-item" href="/">
                     <img
                         className="carousel_images"
                         alt={item.name}
-                        src={`${baseUrl}/media/`.concat(item.url)}
+                        src={`${baseUrl}/media/${item.url}`}
                     ></img>
                 </a>
             );
         });
         return (
-            <div>
+            <>
                 <div
                     className="carousel carousel-slider slides"
                     id="desktop-carousel"
@@ -47,7 +48,7 @@ class HomeCarousel extends React.Component {
                 >
                     {carouselContent}
                 </div>
-            </div>
+            </>
         );
     }
 }

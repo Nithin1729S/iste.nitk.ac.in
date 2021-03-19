@@ -2,13 +2,15 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
+import { baseUrl } from "../../constants";
+
 class MemberCard extends React.Component {
     render() {
         const imageCircle = (
             <div className="col l4 s12 proj-image center">
                 <img
                     alt="member card"
-                    src={this.props.imgurl}
+                    src={`${baseUrl}${this.props.imgurl}`}
                     className="responsive-img circle"
                     style={({ width: "300px" }, { height: "300px" })}
                 />
