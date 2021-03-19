@@ -2,6 +2,7 @@ import React from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
 
 import "../../css/carousel.css";
+import { baseUrl } from "../../constants";
 
 class HomeCarousel extends React.Component {
     state = {};
@@ -27,7 +28,7 @@ class HomeCarousel extends React.Component {
                     <img
                         className="carousel_images"
                         alt={item.name}
-                        src={"http://127.0.0.1:8000/media/".concat(item.url)}
+                        src={`${baseUrl}/media/`.concat(item.url)}
                     ></img>
                 </a>
             );

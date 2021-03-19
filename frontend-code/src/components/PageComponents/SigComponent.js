@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
 import { withRouter } from "react-router-dom";
@@ -7,6 +6,7 @@ import { withRouter } from "react-router-dom";
 import ProjectCard from "../RenderingComponents/SigProjectCard";
 import TitleWithLine from "../RenderingComponents/TitleWithLine";
 import "../../css/sigComponent.css";
+import { baseRequest, baseUrl } from "../../constants";
 
 class SigComponent extends React.Component {
     constructor(props) {
@@ -22,15 +22,13 @@ class SigComponent extends React.Component {
         return String(year) + "-" + String(year + 1);
     }
     async fetchSig() {
-        await axios
-            .get(`http://127.0.0.1:8000/sig/${this.state.name}/`)
-            .then((res) => {
-                this.setState({
-                    sigData: res.data,
-                });
+        await baseRequest.get(`/sig/${this.state.name}/`).then((res) => {
+            this.setState({
+                sigData: res.data,
             });
-        await axios
-            .get(`http://127.0.0.1:8000/project/current/${this.state.name}/`)
+        });
+        await baseRequest
+            .get(`/project/current/${this.state.name}/`)
             .then((res) => {
                 this.setState({
                     projectData: res.data,
@@ -60,11 +58,9 @@ class SigComponent extends React.Component {
                         </div>
                         <div className="col l12 s12">
                             <img
-                                src={
-                                    "http://127.0.0.1:8000" +
-                                    this.state.sigData.avatar
-                                }
+                                src={`${baseUrl}${this.state.sigData.avatar}`}
                                 className="responsive-img col s8 l4 center offset-l4 offset-s2"
+                                alt="sig"
                             />
                         </div>
                         <div className="row">
@@ -88,6 +84,8 @@ class SigComponent extends React.Component {
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
+                                    alt="sigVideo"
+                                    title="Sig Video"
                                 ></iframe>
                             </div>
                         </div>

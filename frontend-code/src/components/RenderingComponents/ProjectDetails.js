@@ -1,8 +1,8 @@
 import React from "react";
-import axios from "axios";
 import parse from "html-react-parser";
 
 import "../../css/projectDetails.css";
+import { baseRequest } from "../../constants";
 
 class ProjectDetails extends React.Component {
     constructor(props) {
@@ -14,8 +14,8 @@ class ProjectDetails extends React.Component {
     }
     async fetchHome() {
         console.log("Fetching. . .");
-        const response = await axios.get(
-            `http://127.0.0.1:8000/project/${this.props.id}/`
+        const response = await baseRequest.get(
+            `/project/${this.props.id}/`
         );
         this.setState({ data: response.data });
         console.log(this.state.data);

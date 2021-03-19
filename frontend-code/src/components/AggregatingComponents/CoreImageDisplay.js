@@ -1,13 +1,14 @@
 import React from "react";
 
-import TitleWithLine from '../RenderingComponents/TitleWithLine';
+import TitleWithLine from "../RenderingComponents/TitleWithLine";
 import "../../css/coreImageDisplay.css";
+import { baseUrl } from "../../constants";
 
 const CoreImageDisplay = (props) => {
     return (
         <div className="coreImageDisplay container">
             <div className="center row">
-                <TitleWithLine title={props.title}/>
+                <TitleWithLine title={props.title} />
                 <div className="flexrow">
                     {props.data.map((member) => {
                         return (
@@ -19,7 +20,7 @@ const CoreImageDisplay = (props) => {
                                     {member.role}
                                 </div>
                                 <img
-                                    src={`http://127.0.0.1:8000${member.user.avatar}`}
+                                    src={`${baseUrl}${member.user.avatar}`}
                                     alt="person"
                                 />
                             </div>

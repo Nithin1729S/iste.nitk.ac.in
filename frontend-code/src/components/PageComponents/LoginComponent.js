@@ -1,9 +1,9 @@
 import React from "react";
-import axios from "axios";
 import Cookies from "universal-cookie";
 import { withRouter } from "react-router-dom";
 
 import styles from "../../css/login.module.css";
+import { baseRequest } from "../../constants";
 class LoginComponent extends React.Component {
     state = { username: "", password: "", errorMessage: "" };
     handleSubmit = (e) => {
@@ -18,8 +18,8 @@ class LoginComponent extends React.Component {
                 password: this.state.password,
             };
             const { history } = this.props;
-            axios
-                .post(`http://127.0.0.1:8000/account/get_auth_token/`, user)
+            baseRequest
+                .post(`/account/get_auth_token/`, user)
                 .then((res) => {
                     const cookie = new Cookies();
                     cookie.set("AuthToken", res.data.token, { path: "/" });

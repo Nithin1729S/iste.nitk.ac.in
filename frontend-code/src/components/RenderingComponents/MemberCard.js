@@ -7,6 +7,7 @@ class MemberCard extends React.Component {
         const imageCircle = (
             <div className="col l4 s12 proj-image center">
                 <img
+                    alt="member card"
                     src={this.props.imgurl}
                     className="responsive-img circle"
                     style={({ width: "300px" }, { height: "300px" })}
@@ -25,6 +26,7 @@ class MemberCard extends React.Component {
                         href={[this.props.linkedin]}
                         className="primary-link btn-large btn-floating waves-effect waves-light"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <FontAwesomeIcon icon={faLinkedin} size="2x" />
                     </a>

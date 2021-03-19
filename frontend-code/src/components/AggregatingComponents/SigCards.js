@@ -4,14 +4,15 @@ import Card from "../RenderingComponents/Cards";
 import TitleWithLine from "../RenderingComponents/TitleWithLine";
 
 import "../../css/sigCards.css";
+import { baseUrl } from "../../constants";
 
 const SigCards = (props) => {
-    const renderedList = props.cardList.map(function (item) {
+    const renderedList = props.cardList.map( (item)=> {
         return (
             <Card
                 key={item.name}
                 name={item.name}
-                avatar={`http://127.0.0.1:8000${item.avatar}`}
+                avatar={`${baseUrl}${item.avatar}`}
                 summary={item.summary}
             />
         );

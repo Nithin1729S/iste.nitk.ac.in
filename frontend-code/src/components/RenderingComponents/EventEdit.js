@@ -34,7 +34,7 @@ class EventEdit extends React.Component {
             form_link,
             venue,
             publicity_message,
-            poster,
+            poster
         } = this.state.event[0];
         return (
             <div className="row-center">
@@ -124,6 +124,7 @@ class EventEdit extends React.Component {
                                     <div className="file-field input-field col s7 push-s2">
                                         <div className="btn">
                                             <span>Poster</span>
+                                            {poster}
                                             <input
                                                 type="file"
                                                 name="poster"

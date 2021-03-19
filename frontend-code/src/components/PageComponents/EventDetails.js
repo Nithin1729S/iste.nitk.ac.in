@@ -1,9 +1,9 @@
 import React from "react";
-import axios from "axios";
 import parse from "html-react-parser";
 
 import TitleWithLine from "../RenderingComponents/TitleWithLine";
 import "../../css/eventDetails.css";
+import {baseRequest, baseUrl} from '../../constants';
 class EventDetails extends React.Component {
     //TODO replace contact id with telephone number in link
     state = {
@@ -17,8 +17,8 @@ class EventDetails extends React.Component {
             console.log(this.props.match.params);
             value = this.props.match.params.name;
         }
-        axios
-            .get(`http://localhost:8000/event/${value}/`)
+        baseRequest
+            .get(`/event/${value}/`)
             .then((result) => {
                 console.log(result.data);
                 this.setState({
@@ -39,7 +39,8 @@ class EventDetails extends React.Component {
                         <div className="card hoverable z-depth-3 col s12 push-s1">
                             <div className="card-image responsive-img">
                                 <img
-                                    src={`http://127.0.0.1:8000/media/${this.state.event.poster}`}
+                                    src={`${baseUrl}/media/${this.state.event.poster}`}
+                                    alt='event poster'
                                 />
                                 <a
                                     id="edit"

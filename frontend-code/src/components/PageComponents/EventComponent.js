@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import { baseRequest, baseUrl } from "../../constants";
 import { Link } from "react-router-dom";
 
 import TitleWithLine from "../RenderingComponents/TitleWithLine";
@@ -10,7 +10,7 @@ class EventComponent extends React.Component {
     };
 
     componentDidMount() {
-        axios.get("http://localhost:8000/event/").then((result) => {
+        baseRequest.get("/event/").then((result) => {
             this.setState({
                 events: result.data,
             });
@@ -37,7 +37,7 @@ class EventComponent extends React.Component {
             <div key={event.name} className="col s4">
                 <div className="card hoverable large z-depth-3">
                     <div className="card-image">
-                        <img src={`http://127.0.0.1:8000/media/${event.poster}`} />
+                        <img src={`${baseUrl}/media/${event.poster}`} alt='event poster' />
                     </div>
                     <div className="card-content">
                         <h5 className="center card-title">{event.name}</h5>

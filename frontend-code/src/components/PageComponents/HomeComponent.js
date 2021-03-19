@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import {baseRequest} from "../../constants";
 
 import CoreImage from "../AggregatingComponents/CoreImage";
 import HomeCarousel from "../RenderingComponents/HomeCarousel";
@@ -16,7 +16,7 @@ class HomeComponent extends React.Component {
     }
     async fetchHome() {
         console.log("Fetching. . .");
-        await axios.get("http://127.0.0.1:8000/home/").then((res) => {
+        await baseRequest.get("/home/").then((res) => {
             this.setState({
                 homeData: res.data,
             });

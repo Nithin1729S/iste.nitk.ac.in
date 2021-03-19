@@ -1,6 +1,6 @@
 import React from "react";
-import axios from "axios";
 
+import { baseRequest } from "../../constants";
 import MemberCard from "../RenderingComponents/MemberCard";
 
 const DataHeader = (props) => {
@@ -49,7 +49,7 @@ class TeamComponent extends React.Component {
 
     componentDidMount() {
         console.log("Fetching. . .");
-        axios.get("http://127.0.0.1:8000/team/").then((res) => {
+        baseRequest.get("/team/").then((res) => {
             this.setState({
                 memberData: res.data,
             });

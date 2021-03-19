@@ -1,5 +1,5 @@
 import React from "react";
-import Axios from "axios";
+import { baseRequest } from "../../constants";
 
 import EventInput from "../RenderingComponents/EventInput";
 import styles from "../../css/eventAdd.module.css";
@@ -19,11 +19,11 @@ class EventAdd extends React.Component {
 
     submitHandler = (e) => {
         e.preventDefault();
-        Axios.post("http://localhost:8000/event/", this.state).catch(
-            (error) => {
+        baseRequest
+            .post("/event/", this.state)
+            .catch((error) => {
                 console.log(error);
-            }
-        );
+            });
     };
 
     render() {
