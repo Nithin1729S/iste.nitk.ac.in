@@ -2,7 +2,7 @@ import React from "react";
 import parse from "html-react-parser";
 
 import "../../css/projectDetails.css";
-import { baseRequest } from "../../constants";
+import { baseRequest, baseUrl } from "../../constants";
 
 class ProjectDetails extends React.Component {
     constructor(props) {
@@ -57,7 +57,7 @@ class ProjectDetails extends React.Component {
                                                         {person.last_name}
                                                     </div>
                                                     <img
-                                                        src={person.avatar}
+                                                        src={`${baseUrl}${person.avatar}`}
                                                         alt=""
                                                     />
                                                 </div>
