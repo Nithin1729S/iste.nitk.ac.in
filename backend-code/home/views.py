@@ -59,7 +59,7 @@ def deployView(request):
 def indexView(request):
     #Carousel images
     carousel_obj = Carousel.objects.all()
-    carousel_data = CarouselSerializer(carousel_obj,many=True,fields=['name','url']).data
+    carousel_data = CarouselSerializer(carousel_obj,many=True,fields=['name','url','type','id']).data
 
     #summary of sigs
     sig_obj = SIG.objects.all()
