@@ -1,0 +1,75 @@
+.main {
+  width: 80%;
+  align-self: center;
+  padding-left: 10%;
+}
+
+.card {
+  padding: 2.5%;
+  box-shadow: 5px 5px 10px 5px gray;
+}
+
+.heading {
+  text-align: center;
+  color: var(--primary);
+  font-weight: lighter !important;
+  font-size: 300%;
+  padding-bottom: 1%;
+}
+
+.headingSub {
+  text-align: center;
+  opacity: 0.9;
+  font-weight: lighter !important;
+  font-size: 150%;
+}
+
+.subheading {
+  padding-top: 2%;
+  font-weight: 1000;
+  font-size: 150%;
+  text-align: left;
+  border-bottom: 1px black solid;
+  margin-bottom: 1%;
+}
+
+.subheadingtext {
+  padding-bottom: 1%;
+}
+
+.imgDiv {
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+.imgSize {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+
+@media only screen and (min-width: 1261px) {
+  .imgSize {
+    max-height: 75vh;
+    max-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .imgSize {
+    max-height: 60%;
+    max-width: 95%;
+  }
+}
+
+.description {
+  font-size: 100%;
+  font-weight: 600;
+}
+
+.meet {
+    color:blue;
+    font-size: 100%;
+    font-weight: 600;
+    text-decoration: underline;
+}

@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 5% auto;
+    width: 86%;
+    box-shadow: 5px 5px 10px 5px gray;
+}
+.imageContent {
+    height: 85%;
+    width: 30%;
+    margin: auto var(--smallMarginSize);
+}
+.content {
+    height: 100%;
+    width: 60%;
+    margin: 2% var(--smallMarginSize);
+}
+.header {
+    text-align: center;
+}
+.image {
+    padding: 20%;
+    aspect-ratio: 1;
+    width: 100%;
+}
+.buttonContent{
+    text-align: center;
+    margin-bottom: -10%;
+}

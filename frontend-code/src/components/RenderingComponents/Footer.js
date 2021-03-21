@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import "../../css/footer.css";
 
@@ -25,6 +25,7 @@ class Footer extends React.Component {
         },
     ];
     render() {
+        if (this.props.location.pathname.search("expo")) return null;
         return (
             <div className="footer">
                 <footer className="page-footer ">
@@ -107,4 +108,4 @@ class Footer extends React.Component {
         );
     }
 }
-export default Footer;
+export default withRouter(Footer);

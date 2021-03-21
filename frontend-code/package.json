@@ -14,6 +14,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
     "axios": "^0.21.1",
+    "disable-scroll": "^0.6.0",
     "faker": "^5.1.0",
     "html-react-parser": "^1.2.4",
     "materialize-css": "^1.0.0",
@@ -23,6 +24,7 @@
     "react-materialize": "^3.9.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-scroll": "^1.8.2",
     "react-visibility-sensor": "^5.1.1",
     "universal-cookie": "^4.0.4",
     "web-vitals": "^0.2.4"

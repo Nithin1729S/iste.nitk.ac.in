@@ -12,6 +12,8 @@ import ProjectComponent from "./PageComponents/ProjectComponent";
 import LoginComponent from "./PageComponents/LoginComponent";
 import EventDetails from "./PageComponents/EventDetails";
 import EventAdd from "./PageComponents/EventAdd";
+import ExpoHomeComponent from "../expo/Components/ExpoHomeComponent";
+import DescPage from "../expo/Components/DescPage";
 
 import "../css/constants.css";
 
@@ -22,6 +24,8 @@ class App extends React.Component {
                 <ScrollToTop />
                 <Header />
                 <div className="app-main">
+                    <Route path="/expo" exact component={ExpoHomeComponent} />
+                    <Route path="/expo/:id" exact component={DescPage} />
                     <Route path="/" exact component={HomeComponent} />
                     <Route path="/event" exact component={EventComponent} />
                     <Route path="/sig/:name" exact component={SigComponent} />
