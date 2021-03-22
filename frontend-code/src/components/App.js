@@ -58,7 +58,7 @@ class App extends React.Component {
                     />
                     <Route path="/event/add" exact component={EventAdd} />
                 </div>
-                <Footer />
+                <Footer shouldRender={this.state.headerShouldRender}/>
             </HashRouter>
         );
     }
