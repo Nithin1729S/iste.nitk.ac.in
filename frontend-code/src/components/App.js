@@ -18,13 +18,28 @@ import DescPage from "../expo/Components/DescPage";
 import "../css/constants.css";
 
 class App extends React.Component {
+    state = { headerShouldRender: true };
+    changeHeaderFooterStatus = (val) => {
+        this.setState({ headerShouldRender: val });
+    };
     render() {
         return (
             <HashRouter>
                 <ScrollToTop />
-                <Header />
+                <Header shouldRender={this.state.headerShouldRender} />
+                <Route
+                    path="/expo"
+                    exact
+                    render={(props) => (
+                        <ExpoHomeComponent
+                            {...props}
+                            setHeaderFooterStatus={(val) =>
+                                this.changeHeaderFooterStatus(val)
+                            }
+                        />
+                    )}
+                />
                 <div className="app-main">
-                    <Route path="/expo" exact component={ExpoHomeComponent} />
                     <Route path="/expo/:id" exact component={DescPage} />
                     <Route path="/" exact component={HomeComponent} />
                     <Route path="/event" exact component={EventComponent} />

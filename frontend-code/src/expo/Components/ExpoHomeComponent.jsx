@@ -9,9 +9,6 @@ import styles from "../css/app.module.css";
 import { constant, sigNames } from "../Assets/constants";
 class ExpoHomeComponent extends React.Component {
     componentDidMount() {
-        window.onbeforeunload = function () {
-            window.scrollTo(0, window.innerHeight / 14);
-        };
         disableScroll.on(
             {},
             {
@@ -22,6 +19,7 @@ class ExpoHomeComponent extends React.Component {
                 keyboardKeys: [32, 33, 34, 35, 36, 37, 38, 39, 40],
             }
         );
+        this.props.setHeaderFooterStatus(false);
     }
     state = { sig: "catalyst", projectId: 1 };
 
@@ -66,6 +64,7 @@ class ExpoHomeComponent extends React.Component {
 
     componentWillUnmount() {
         disableScroll.off();
+        this.props.setHeaderFooterStatus(true);
     }
 }
 export default ExpoHomeComponent;

@@ -9,8 +9,6 @@
     --smallMarginSize: 1%;
     --primary: #1a237e;
     font-family: GothamPro;
-    scrollbar-width: none;
-    overflow: hidden;
 }
 .main h1{
     font-size: 4vh;

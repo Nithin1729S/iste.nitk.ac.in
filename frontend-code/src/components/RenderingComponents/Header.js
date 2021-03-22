@@ -1,6 +1,6 @@
 import React from "react";
 import M from "materialize-css";
-import { Link,withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Cookies from "universal-cookie";
 
 import logopath from "../logo.png";
@@ -87,8 +87,7 @@ class Header extends React.Component {
         </li>
     );
     render() {
-        if (this.props.location.pathname.search("expo")) return null;
-
+        if(!this.props.shouldRender) return null;
         const cookie = new Cookies();
         if (cookie.get("firstName") !== undefined) {
             if (this.state.loggedInName !== cookie.get("firstName")) {
@@ -322,4 +321,4 @@ class Header extends React.Component {
         );
     }
 }
-export default withRouter(Header);
+export default Header;
