@@ -461,13 +461,45 @@ export const constant = {
 	],
 };
 export const sigNames = [
-	{ name: 'catalyst', id: 1 },
-	{ name: 'charge', id: 2 },
-	{ name: 'chronicle', id: 3 },
-	{ name: 'clutch', id: 4 },
-	{ name: 'concrete', id: 5 },
-	{ name: 'create', id: 6 },
-	{ name: 'credit', id: 7 },
-	{ name: 'crypt', id: 8 },
+	{
+		name: 'catalyst',
+		id: 1,
+		logo: 'https://iste.nitk.ac.in/api/media/sig_pictures/8_catalyst.jpg',
+	},
+	{
+		name: 'charge',
+		id: 2,
+		logo: 'https://iste.nitk.ac.in/api/media/sig_pictures/2_charge.jpg',
+	},
+	{
+		name: 'chronicle',
+		id: 3,
+		logo: 'https://iste.nitk.ac.in/api/media/sig_pictures/4_chronle.jpg',
+	},
+	{
+		name: 'clutch',
+		id: 4,
+		logo: 'https://iste.nitk.ac.in/api/media/sig_pictures/5_cluych.jpg',
+	},
+	{
+		name: 'concrete',
+		id: 5,
+		logo: 'https://iste.nitk.ac.in/api/media/sig_pictures/6_concreye.jpg',
+	},
+	{
+		name: 'create',
+		id: 6,
+		logo: 'https://iste.nitk.ac.in/api/media/sig_pictures/7_create.jpg',
+	},
+	{
+		name: 'credit',
+		id: 7,
+		logo: 'https://iste.nitk.ac.in/api/media/sig_pictures/3_crediy.jpg',
+	},
+	{
+		name: 'crypt',
+		id: 8,
+		logo: 'https://iste.nitk.ac.in/api/media/sig_pictures/1_crypt.jpg',
+	},
 ];
 export const offsetCoefficient = -3 / 8;
