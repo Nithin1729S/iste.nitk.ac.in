@@ -38,7 +38,7 @@
 }
 
 .imgDiv {
-	padding-top: 1%;
+	padding-top: 2%;
 	padding-bottom: 2%;
 }
 .imgSize {
@@ -47,21 +47,26 @@
 	margin-right: auto;
 	object-fit: contain;
 	margin-top: 2%;
+	border: 1px black solid;
 }
 
 @media only screen and (min-width: 1261px) {
 	.imgSize {
 		max-height: 75vh;
+		min-height: 50vh;
 		height: auto;
-		max-width: 75%;
-		min-width: 40%;
+		max-width: 75vw;
+		min-width: 40vw;
 	}
 }
 
 @media only screen and (max-width: 1260px) {
 	.imgSize {
-		max-height: 60%;
-		max-width: 95%;
+		max-height: 60vh;
+		max-width: 95vw;
+		height: auto;
+		min-height: 30vh;
+		min-width: 60vw;
 	}
 }
 

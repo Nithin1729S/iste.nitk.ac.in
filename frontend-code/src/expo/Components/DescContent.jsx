@@ -20,7 +20,7 @@ const DescContent = ({ sn, id }) => {
 
 	// For heading components
 	var content = Object.keys(curProj.description);
-	var comp = content.map((item) => {
+	var comp = content.map((item, index) => {
 		var inter = curProj.description[item];
 		var title;
 		if (item === 'aim') title = 'Aim';
@@ -29,7 +29,7 @@ const DescContent = ({ sn, id }) => {
 		else title = 'Conclusion and Future work';
 		return (
 			<>
-				<div className={styles.subheading}>
+				<div id={index} className={styles.subheading}>
 					<div className={styles.subheadingtext}>{title}</div>
 				</div>
 				<div className={styles.description}>{inter}</div>
@@ -37,6 +37,29 @@ const DescContent = ({ sn, id }) => {
 		);
 	});
 
+	//For images
+	var imgs = curProj.imgUrl;
+	var images;
+	if (imgs.length === 0) images = <></>;
+	else {
+		images = imgs.map((item, index) => {
+			return (
+				<>
+					<iframe className={styles.imgSize} src={item} id={index}></iframe>
+				</>
+			);
+		});
+		images = (
+			<>
+				<div className={styles.subheading}>
+					<div className={styles.subheadingtext}>Images</div>
+				</div>
+				<div className={styles.imgDiv}>{images}</div>
+			</>
+		);
+	}
+
+	//Return function
 	return (
 		<div className={styles.main}>
 			<div className={styles.card}>
@@ -66,23 +89,7 @@ const DescContent = ({ sn, id }) => {
 					this project!{' '}
 				</div>
 
-				<div className={styles.subheading}>
-					<div className={styles.subheadingtext}>Images</div>
-				</div>
-				<div className={styles.imgDiv}>
-					<iframe
-						className={styles.imgSize}
-						src="https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview"
-					></iframe>
-					<iframe
-						className={styles.imgSize}
-						src="https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview"
-					></iframe>
-					<iframe
-						className={styles.imgSize}
-						src="https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview"
-					></iframe>
-				</div>
+				{images}
 			</div>
 		</div>
 	);
