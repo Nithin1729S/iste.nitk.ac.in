@@ -16,14 +16,14 @@ class Card extends React.Component {
         return (
             <div className="col s12 s12 l3 sigcard" onClick={this.OnCLick}>
                 <div className="card z-depth-4" style={{ overflow: "hidden" }}>
-                    <div className="card-image waves-effect waves-block waves-light">
+                    <div className="card-image waves-block waves-light">
                         <img
                             className="activator"
                             src={this.props.avatar}
                             alt={this.props.avatar}
                         />
                     </div>
-                    <div className="card-content activator indigo darken-3 waves-effect waves-block waves-light">
+                    <div className="card-content activator indigo darken-3 waves-block waves-light">
                         <span className="card-title activator white-text text-darken-4">
                             {this.props.name}
                             <i className="material-icons right">more_vert</i>
@@ -44,7 +44,7 @@ class Card extends React.Component {
                             <p className="white-text">{this.props.summary}</p>
                             <center>
                                 <Link
-                                    className="waves-effect waves-ligth btn-small"
+                                    className="waves-light btn-small"
                                     to={`/sig/${this.props.name}`}
                                 >
                                     View More

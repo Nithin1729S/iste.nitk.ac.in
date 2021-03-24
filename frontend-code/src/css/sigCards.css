@@ -20,3 +20,6 @@
   padding: 2%;
   color: var(--sigCardText);
 }
+.sigcard .card:hover{
+  cursor: pointer;
+}
