@@ -19,23 +19,26 @@ const DescContent = ({ sn, id }) => {
 	}
 
 	// For heading components
-	var content = Object.keys(curProj.description);
-	var comp = content.map((item, index) => {
-		var inter = curProj.description[item];
-		var title;
-		if (item === 'aim') title = 'Aim';
-		else if (item === 'meth') title = 'Methodology';
-		else if (item === 'res') title = 'Results';
-		else title = 'Conclusion and Future work';
-		return (
-			<>
-				<div id={index} className={styles.subheading}>
-					<div className={styles.subheadingtext}>{title}</div>
-				</div>
-				<div className={styles.description}>{inter}</div>
-			</>
-		);
-	});
+	var comp = <></>;
+	if (typeof curProj.description === 'object') {
+		var content = Object.keys(curProj.description);
+		comp = content.map((item, index) => {
+			var inter = curProj.description[item];
+			var title;
+			if (item === 'aim') title = 'Aim';
+			else if (item === 'meth') title = 'Methodology';
+			else if (item === 'res') title = 'Results';
+			else title = 'Conclusion and Future work';
+			return (
+				<>
+					<div key={index} className={styles.subheading}>
+						<div className={styles.subheadingtext}>{title}</div>
+					</div>
+					<div className={styles.description}>{inter}</div>
+				</>
+			);
+		});
+	}
 
 	//For images
 	var imgs = curProj.imgUrl;
@@ -45,7 +48,12 @@ const DescContent = ({ sn, id }) => {
 		images = imgs.map((item, index) => {
 			return (
 				<>
-					<iframe className={styles.imgSize} src={item} id={index}></iframe>
+					<iframe
+						className={styles.imgSize}
+						src={item}
+						key={index}
+						title={index}
+					></iframe>
 				</>
 			);
 		});
