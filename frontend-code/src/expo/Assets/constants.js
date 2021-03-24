@@ -25,15 +25,8 @@ export const constant = {
 			oneline:
 				'The aim of this project was to model and simulate for Biodiesel Production embedded with Model Predictive Control(MPC) operating in a Plug Flow Reactor(PFR) using MATLAB-Simulink.',
 			imgUrl: [
-				'https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/view?usp=sharing',
-				'https://drive.google.com/file/d/1iixnaapJ1Qm5n8xK77sygK_rAI6ifSxW/view?usp=sharing',
-				'https://drive.google.com/file/d/1YMqmhbtezm0TVirV4EIQnIeRW_NXfH52/view?usp=sharing',
-				'https://drive.google.com/file/d/12yAx8jLCuW47iotrSCueujaixAtfYJvs/view?usp=sharing',
-				'https://drive.google.com/file/d/1Eef3s9OksThOX-sPtZv1-K64Wj6AZfXE/view?usp=sharing',
-				'https://drive.google.com/file/d/11asPiZf1nYQQZ97YfsRJ3XObTpqByk8j/view?usp=sharing',
-				'https://drive.google.com/file/d/1WvkMe3uZbjLrTnC9IkoEPOybA21Zbp4w/view?usp=sharing',
-				'https://drive.google.com/file/d/1zkYaRpX_keU7ORWrKbrwl0uRFFVUp8d9/view?usp=sharing',
-				'https://drive.google.com/file/d/1bLmzz-8kU6v2r5vpn776LzYIydoH1a0A/view?usp=sharing',
+				'https://drive.google.com/file/d/1Eef3s9OksThOX-sPtZv1-K64Wj6AZfXE/preview',
+				'https://drive.google.com/file/d/1Eef3s9OksThOX-sPtZv1-K64Wj6AZfXE/preview',
 			],
 			members: [
 				'Abhijeet Singh',
