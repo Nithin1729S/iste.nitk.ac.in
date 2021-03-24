@@ -1,10 +1,10 @@
 import React from "react";
 
 import "../../css/titleWithLine.css";
-const TitleWithLine = (props) => {
+const TitleWithLine = ({title}) => {
     return (
         <h3 className="title">
-            <span className="animateLine">{props.title}</span>
+            <span className="animateLine">{title}</span>
         </h3>
     );
 };

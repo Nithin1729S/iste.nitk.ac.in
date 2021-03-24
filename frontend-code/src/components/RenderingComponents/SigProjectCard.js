@@ -9,7 +9,7 @@ class ProjectCard extends React.Component {
         if (this.props.isImageLeft) {
             directionImg = "left";
         }
-        const imageCicle = (
+        const imageCircle = (
             <div className="col l4 hide-on-med-and-down ">
                 <img
                     src={this.props.imgurl}
@@ -53,7 +53,7 @@ class ProjectCard extends React.Component {
         if (this.props.isImageLeft)
             var renderedData = (
                 <>
-                    {imageCicle}
+                    {imageCircle}
                     {imageCircleSmall}
                     {Content}
                 </>
@@ -63,7 +63,7 @@ class ProjectCard extends React.Component {
                 <>
                     {imageCircleSmall}
                     {Content}
-                    {imageCicle}
+                    {imageCircle}
                 </>
             );
         return (
