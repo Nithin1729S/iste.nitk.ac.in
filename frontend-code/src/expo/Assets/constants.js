@@ -589,6 +589,7 @@ export const constant = {
 				  The designed hardware accelerator is implemented in Verilog HDL. The simulation results of the verilog model are verified. 
 				  Synthesis of the verilog model shows decent utilisation of resources. Post synthesis and post implementation functional simulation is done and verified.
 				  Github repo:- <a href="https://github.com/putlurusurya/CNNOnFPGA" target="_blank">https://github.com/putlurusurya/CNNOnFPGA</a>
+				  <br />
 				  Future scope of this project:-
 				  <ol>
 				  <li>Improve the architecture with software optimisations in consideration</li>
@@ -742,34 +743,274 @@ export const constant = {
 			meetLink: "This is the meet link",
 		  },		{
 			id: 3,
-			name: 'Charge Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
+			name: 'Speech to Text Converter',
+			oneline: 'This project on Speech Recognition converts speech (limited) to text with a fairly decent accuracy of about 93% with a processing speed of only 1.5 seconds approximately for an audio clip 2 seconds long on a trained model.',
+			logo: 'https://d1sr9z1pdl3mb7.cloudfront.net/wp-content/uploads/2018/01/09162857/voice-biometrics-large2.jpg',
+			imgUrl: ['https://drive.google.com/file/d/1bPnu9ec-Q1WzDyGeW81eM4lFqKiGjUfk/preview',
+					'https://drive.google.com/file/d/1ULC46VWpLCFEy4FtilZDyTIYmRR3DZsu/preview'],
+			members: ["Anshuman Sinha",
+					"Anshuman Sinha",
+					"Kaveen S",
+					"Ria Mishra",
+					"Roopam Dhaneria",
+					"Vishal Prakash"],
+			description: {
+				aim: (
+					<div>
+						Speech Recognition technology has become an increasingly popular concept in recent years.
+						From organizations to individuals, the technology is widely used for various utilities it caters
+						to. We can already see its applications in Google Assistant, Siri, Alexa, et cetera which have a
+						very high accuracy rate of 95-97%. <br />
+						This project on Speech Recognition converts speech (limited) to text with a fairly decent
+						accuracy of about 93% with a processing speed of only 1.5 seconds approximately for an
+						audio clip 2 seconds long on a trained model.
+					</div>
+				),
+				meth: (
+					<div>
+						Primitive algorithms of speech processing like Hidden Markov Models and Mel-frequency
+						cepstral coefficients (MFCCs) were explored theoretically and computationally. A dataset of
+						30 English words, amassing 2.21 GB of 64,728 sound recordings in total was chosen. MFCC
+						matrices of each recording were generated and stored to ease the computational process
+						involved in the 2nd part. <br />
+						1D Convolutional Neural Network was deployed on the previously processed MFCCs to
+						generate and train the model on the training dataset. Remarkable results rendering
+						accuracies as high as 93% were recorded against the pre-trained model of accuracy 89.24%
+						on the same dataset. <br />
+
+						<iframe src="https://drive.google.com/file/d/1NaYBbmmz6IPs-8Hjn2qqKTt2zyUuxaXO/preview" width="640" height="480"></iframe>
+						<br />
+						An inbuilt set of functions was used to accept the input audio file and split it into different
+						files according to the word occurrences in the audio segment, that uses the duration of
+						pause in between words and the sound of noise in decibels to be treated as zero, as the 2
+						hyperparameters. <br />
+					</div>
+				),
+				res: (
+					<div>
+						This project on Speech Recognition converts speech (limited) to text with a fairly decent
+						accuracy of about 93% with a processing speed of only 1.5 seconds approximately for an
+						audio clip 2 seconds long on a trained model. <br />
+
+						<iframe src="https://drive.google.com/file/d/1ULC46VWpLCFEy4FtilZDyTIYmRR3DZsu/preview" width="640" height="480"></iframe> 
+						<br />
+
+					</div>
+				),
+				con: (
+					<div>
+						The Result is also the Conclusion.
+					</div>
+				)
+			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 4,
-			name: 'Charge Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
+			name: 'Wireless Solar charger',
+			oneline: 'To build a 10W portable, wireless solar lithium-ion battery charger. To harness maximum solar energy output, achieve MPPT(Max Power Point Tracking) and charge 8.4V lithium ion cells.',
+			logo: 'https://w0.pngwave.com/png/414/632/solar-panels-solar-power-voltaic-system-solar-energy-voltaics-solar-inverter-png-clip-art-thumbnail.png',
+			imgUrl: ["https://drive.google.com/file/d/1Ktt7061k5CtmltDpJkWEu9pXEPpT785V/preview",
+					"https://drive.google.com/file/d/1kbAaInOYkjIlmnZRbArNxZnYoAexDxFt/preview",
+					"https://drive.google.com/file/d/1vDUZ3cCXG8aTbqZwjpEpzi3fw6t1OquT/preview",
+					"https://drive.google.com/file/d/1kweJQLZeS9kHct7mFl8me0ABJlG0FlOk/preview",
+					"https://drive.google.com/file/d/1TgT_hsuqerjQWJnRmnwasET-lA6pYpvd/preview",
+					"https://drive.google.com/file/d/1ojs_-6t9h1ITFE4IkEd8ZNJZV8qWbs5p/preview",
+					"https://drive.google.com/file/d/1W7ai43hMkHnzHiqNFjdJSbFKDpEeCAG4/preview",
+					"https://drive.google.com/file/d/1nUIQPSwmJTC-pQR_eihdd1r9pvG2YKbh/preview",
+					"https://drive.google.com/file/d/1Pl2Lj1mfnXlfHFuQK8CG2guwEHD9Z-Pa/preview",
+					"https://drive.google.com/file/d/1sPf5RjFcSPWK5TYFgX1edA-RxBj5pIQ8/preview",
+					"https://drive.google.com/file/d/1SE8dyfrmwOy3pYRh75iCZ8ToSuSbC35f/preview"],
+			members: ["Prabhansh Pandey",
+					"Majji Soma Varun",
+					"Nihal",
+					"Fouzan tinwala",
+					"Amogh Manikkuwar", 
+					"Nisarg", 
+					"Keesara Vennela",
+					"Fidha Palamthalakkal"],
+			description: {
+				aim: (
+					<div>
+						To build a 10W portable, wireless solar lithium-ion battery charger. To harness maximum solar energy output, 
+						achieve MPPT(Max Power Point Tracking) and charge 8.4V lithium ion cells. 
+					</div>
+				),
+				meth: (
+					<div>
+						The project was divided into various blocks -
+						<ol>
+							<li>Solar Panel</li>
+							<li>MPPT tracker and Controller Block</li>
+							<li>Transmitter block and Inverter</li>
+							<li>Reciever block and Rectifier</li>
+							<li>CCCV (Constant Current Constant Voltage) Battery Charger Block</li>
+						</ol>
+
+						<em>The Main Aim of this project was to build a 10 Watt Portable, Solar, Wireless Lithium Ion Charger.</em> <br />
+						To achieve this, we took the following steps:-
+						<ol>
+							<li>Achieve Maximum Power Point Tracking</li>
+							<li>Implement Wireless Transmitter and Receiver</li>
+							<li>Implement CCCV (Constant Current - Constant Voltage) Battery Charging</li>
+						</ol> <br />
+						The project was divided into various blocks - solar panel, mpp tracker and controller block, 
+						transmitter block, reciever block and finally the CCCV (Constant Current Constant Voltage) battery charger block.
+						A 10W Solar panel of short circuit current of 0.6A and open circuit voltage of 22V was chosen. The mppt tracker was 
+						using a buck converter. The microcontroller - ATMEGA328P was used to provide control signals to the MPP tracker and 
+						own signals for the transmitter. <br />
+						The DC was converted to AC using an inverter and tansmission of power was achieved using a series RLC circuit. 
+						The receiver block consisted of a coil for receiving power and a rectifier in the next stage. The battery controller 
+						circuit ensures a constant charging current of 1A till the li-ion battery voltage reaches 8.4V and thereafter the 
+						battery is charged while maintaining a constant voltage of 8.4V across it. <br />
+						Solar Panel : We are using a 10 Watt solar panel with mppt current of 0.7amp and 20 voltage.
+					</div>
+				),
+				res: (
+					<div>
+						We performed a full Wireless solar charger model simulation in Simulink.
+						<iframe src="https://drive.google.com/file/d/1TgT_hsuqerjQWJnRmnwasET-lA6pYpvd/preview" width="640" height="480"></iframe>
+						<br />
+						Here Yellow colour line represents the input power which slowly get saturated to 10 watt and blue colour line 
+						represents output power which saturates to 8.5 watt.
+						<iframe src="https://drive.google.com/file/d/1ojs_-6t9h1ITFE4IkEd8ZNJZV8qWbs5p/preview" width="640" height="480"></iframe>
+						<br />
+						In the below figure yellow plot represents the output voltage received at receiver side which is oscillating at a 
+						frequency of 20kHz due to inverter in transmitter side.Blue line represents the output voltage of batter which is 8.4 Volt.
+						<iframe src="https://drive.google.com/file/d/1W7ai43hMkHnzHiqNFjdJSbFKDpEeCAG4/preview" width="640" height="480"></iframe>
+						<br />
+					</div>
+				),
+
+				con: (
+					<div>The Result is also the Conclusion.</div>
+				)
+			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 5,
-			name: 'Charge Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
+			name: 'Hardware Assisted SSL',
+			logo: 'https://res.cloudinary.com/dogygnvzl/image/upload/v1597416892/WhatsApp_Image_2020-08-12_at_8.10.31_PM_fidcuq.jpg',
+			oneline: "Build a novel architecture for AES-128 cryptographic algorithm and implement on FPGA from scratch for improved speed performance.",
+			imgUrl: ['https://drive.google.com/file/d/1bzG7xY9jAvip2WlCCxkaGiFtN61fncTE/preview',
+					'https://drive.google.com/file/d/1NgX_R7gkVxzcJOWWmaFF788Dr5y8rwxo/preview',
+					'https://drive.google.com/file/d/1UH_pU2WjG4QvBL5inkhn9cdJPEhbJ_uZ/preview',
+					'https://drive.google.com/file/d/1iC7yKouuXrfk-RAln_ThpuK6NcfNlr7H/preview',
+					'https://drive.google.com/file/d/1M2gdEHiixJ6k4NIHcjOzCdTM3UBr4asB/preview',
+					'https://drive.google.com/file/d/1rhYZZBZxH4Gx1AT4y_SL3dwc-4JqmYbp/preview',
+					'https://drive.google.com/file/d/1UAWxKadNVsZeLiVGzPYWSf2arCmAt4GV/preview',
+					'https://drive.google.com/file/d/1hgoESKZmBr-bCajcUc5D9HbCpuhkz_4b/preview',
+					'https://drive.google.com/file/d/1V8GbpPBBVENnTGnCXafkbKTbSGFFUkhQ/preview'],
+			members: ["Aaron Sequeira",
+					"Aditya Manjunath",
+					"P. Priyankaa",
+					"Divesh Sakhuja",
+					"Ayush Agarwal",
+					"Shridevi Kumar"],
+			description: {
+				aim: (
+					<div>
+						Build a novel architecture for AES-128 cryptographic algorithm and implement on FPGA from scratch for improved speed performance.
+					</div>
+				),
+				meth: (
+					<div>
+						Github: <a href="https://github.com/PriyankaPeri/AES_FPGA-">https://github.com/PriyankaPeri/AES_FPGA-</a> <br />
+						AES-128 is a symmetric key encryption algorithm that acts on 128 bits of data. The message is encrypted in 10 rounds.
+						AES implemented on a FPGA dedicates special resources hence speeding up the process. <br />
+						The implementation of AES is done using pipelining to increase throughput. All blocks with the exception of 
+						SubBytes consist of only combinational logic as opposed to a look up table, reducing the delay. The architecture 
+						is as shown above. It includes blocks that execute the various stages which are substitution box, shift rows, mix 
+						columns and add round key. The keys for the next round are processed alongside the blocks while the messages are 
+						being encrypted, and hence there is no need to have a reserved resource to perform key expansion process. <br />
+						The data is read 128 bits at a time from the memory. Data that precedes a null (or data with only zeroes) is interpreted
+						as the key and the data that follows the key are interpreted as the message until the next null is encountered. <br />
+						The project is coded in Verilog, a widely used Hardware Description Language. The link on the top contains the 
+						repository to the source code along with a README giving a short description of each of the sub-blocks.
+					</div>
+				),
+				res: (
+					<div>
+						The simulation results for the various sub-block is given. The original and encrypted messages 
+						are shown in the console log. Architecture of the complete design is also given.
+					</div>
+				),
+				con: (
+					<div>
+						We successfully managed to implement the function of AES-128 on Verilog and the simulations were verified 
+						and design was synthesised. The results can be easily extended to AES-192 and AES- 256. Due to the Covid-19 
+						pandemic and lack of access to hardware components, the block wasn’t implemented on a FPGA board. Future scope 
+						for the project includes implementing on VLSI, and integrating it with the other encryption methods for a 
+						unified SSL/TLS on chip. 
+					</div>
+				)
+			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 6,
-			name: 'Charge Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
+			name: 'Medical Image Segmentation',
+			logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/MI_with_contraction_bands_very_high_mag.jpg',
+			oneline: 'To segment nuclei from histopathology images for effective diagnosis and treatment of cancer.',
+			imgUrl: ['https://drive.google.com/file/d/1bUuCLucFijQZ-E2oLmWIxD9bHmdKr-eq/preview',
+					'https://drive.google.com/file/d/1LdtLceU7ZvafR2neamQImmA3sOsScT2b/preview',
+					'https://drive.google.com/file/d/1nTBQTyWclm88-63e1IkdgNJ8K_NZFxDI/preview',
+					'https://drive.google.com/file/d/1YUzuflHQttK6fMqFk_9wv6C_EfR04G97/preview',
+					'https://drive.google.com/file/d/1p-bfoufwdkFnmf-EH0KWGARXAbhdGFde/preview'],
+			members: ["Rohith Yatgiri",
+					"Aditya Manjunath",
+					"Shrutha D",
+					"Sai Rohit P"],
+			description: {
+				aim: (
+					<div>
+						To segment nuclei from histopathology images for effective diagnosis and treatment of cancer.
+					</div>
+				),
+				meth: (
+					<div>
+						<ol>
+							<li>Preprocessing stage includes data augmentation to avoid over fitting.</li>
+							<li>Building standard mobile architectures as reference models.</li>
+							<li>These include UNET,Segnet,DANet.</li>
+							<li>Training and testing on above mentioned architectures.</li>
+							<li>Build other segmentation algorithm like deeplabv3, encoder-decoder etc</li>
+							<li>Compare the results obtained from above algorithm with above architectures. </li>
+							<li>Post Processing stage used to separate the boundaries of adjacent cells.</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						The following results have been obtained from various architectures. <br />
+						The table shown below is a comparison between the train and test accuracies of different models. <br />
+						<iframe src="https://drive.google.com/file/d/1p-bfoufwdkFnmf-EH0KWGARXAbhdGFde/preview" width="640" height="480"></iframe>
+						<br />
+						It can be seen that UNET yielded the highest results in both test and train sets.
+						Following is a set of images which include Original Images(from the dataset), Ground Truth
+						(Expected outcome which is also available in the dataset) and outputs from different
+						architectures.
+						<iframe src="https://drive.google.com/file/d/1YUzuflHQttK6fMqFk_9wv6C_EfR04G97/preview" width="640" height="480"></iframe>
+					</div>
+				),
+				con: (
+					<div>
+						This work addresses some of the typical segmentation algorithms for medical images.
+						Segmentation plays a vital role in telemedicine applications for the analysis of the region of
+						interest. The algorithms are grouped into three generations, and the rank is assigned based on
+						the comparative analysis of their features. The algorithms are tested on real-time data sets, and
+						this work will be a guidance for the researchers in medical image segmentation. The hybrid
+						segmentation algorithms are gaining much importance, as they produce superior results by
+						overwhelming the limitations of conventional algorithms. A segmentation technique will not
+						yield efficient result for all medical imaging modalities; based on the image modality and region
+						of interest, appropriate algorithm has to be chosen. The outcome of this work will be an aid for
+						the identification of diseases like cyst and tumor in medical images. Our future work will be a
+						detailed analysis of hybrid segmentation models for the delineation of anatomical organs and
+						anomalies.
+					</div>
+				)
+			},
 			meetLink: 'This is the meet link',
 		},
 	],
