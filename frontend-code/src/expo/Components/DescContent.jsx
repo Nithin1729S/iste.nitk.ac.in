@@ -1,13 +1,14 @@
 import React from 'react';
-import { constant, sigNames } from '../Assets/constants';
+import { constant } from '../Assets/constants';
 import styles from '../css/descPage.module.css';
 
 const DescContent = ({ sn, id }) => {
 	let arr = constant[sn],
 		index = 0,
 		curProj = {};
-	let imgAddr =
-		'https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview';
+	//Dummy address
+	// let imgAddr =
+	// 	'https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview';
 	for (index = 0; index < arr.length; index++) {
 		if (arr[index].id === id) {
 			curProj = arr[index];
@@ -19,9 +20,9 @@ const DescContent = ({ sn, id }) => {
 	}
 
 	// For heading components
-	var comp = <></>;
-	if (typeof curProj.description === 'object') {
-		var content = Object.keys(curProj.description);
+	var comp = <div>No Content</div>;
+	if (typeof curProj.description['aim'] === 'object') {
+		var content = ['aim', 'meth', 'res', 'con'];
 		comp = content.map((item, index) => {
 			var inter = curProj.description[item];
 			var title;
