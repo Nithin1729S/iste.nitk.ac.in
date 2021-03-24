@@ -46,12 +46,15 @@
 	margin-left: auto;
 	margin-right: auto;
 	object-fit: contain;
+	margin-top: 2%;
 }
 
 @media only screen and (min-width: 1261px) {
 	.imgSize {
 		max-height: 75vh;
+		height: auto;
 		max-width: 75%;
+		min-width: 40%;
 	}
 }
 

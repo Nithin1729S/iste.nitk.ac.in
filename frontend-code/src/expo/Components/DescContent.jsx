@@ -7,7 +7,7 @@ const DescContent = ({ sn, id }) => {
 		index = 0,
 		curProj = {};
 	let imgAddr =
-		'https://c8.alamy.com/comp/G1Y8X1/fractal-with-large-colorful-curved-tiles-on-black-background-like-G1Y8X1.jpg';
+		'https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview';
 	for (index = 0; index < arr.length; index++) {
 		if (arr[index].id === id) {
 			curProj = arr[index];
@@ -17,6 +17,25 @@ const DescContent = ({ sn, id }) => {
 			curProj = arr[0];
 		}
 	}
+
+	// For heading components
+	var content = Object.keys(curProj.description);
+	var comp = content.map((item) => {
+		var inter = curProj.description[item];
+		var title;
+		if (item === 'aim') title = 'Aim';
+		else if (item === 'meth') title = 'Methodology';
+		else if (item === 'res') title = 'Results';
+		else title = 'Conclusion and Future work';
+		return (
+			<>
+				<div className={styles.subheading}>
+					<div className={styles.subheadingtext}>{title}</div>
+				</div>
+				<div className={styles.description}>{inter}</div>
+			</>
+		);
+	});
 
 	return (
 		<div className={styles.main}>
@@ -33,39 +52,7 @@ const DescContent = ({ sn, id }) => {
 					<img src={imgAddr} alt="Punisher" className={styles.imgSize}></img>
 				</div> */}
 
-				<div className={styles.subheading}>
-					<div className={styles.subheadingtext}>Aim</div>
-				</div>
-				<div className={styles.description}>
-					{typeof curProj.description === 'undefined'
-						? ''
-						: curProj.description['aim']}
-				</div>
-
-				<div className={styles.subheading}>
-					<div className={styles.subheadingtext}>Methodology</div>
-				</div>
-				<div className={styles.description}>
-					{typeof curProj.description === 'undefined'
-						? ''
-						: curProj.description['meth']}
-				</div>
-
-				<div className={styles.subheading}>
-					<div className={styles.subheadingtext}>Results</div>
-				</div>
-				<div className={styles.description}>
-					{typeof curProj.description ? '' : curProj.description['res']}
-				</div>
-
-				<div className={styles.subheading}>
-					<div className={styles.subheadingtext}>
-						Conclusion and Future Scope
-					</div>
-				</div>
-				<div className={styles.description}>
-					{typeof curProj.description ? '' : curProj.description['con']}
-				</div>
+				{comp}
 
 				<div className={styles.subheading}>
 					<div className={styles.subheadingtext}>Meet link</div>
@@ -77,6 +64,24 @@ const DescContent = ({ sn, id }) => {
 					</a>{' '}
 					to join a Google meet and interact live with the people who worked on
 					this project!{' '}
+				</div>
+
+				<div className={styles.subheading}>
+					<div className={styles.subheadingtext}>Images</div>
+				</div>
+				<div className={styles.imgDiv}>
+					<iframe
+						className={styles.imgSize}
+						src="https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview"
+					></iframe>
+					<iframe
+						className={styles.imgSize}
+						src="https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview"
+					></iframe>
+					<iframe
+						className={styles.imgSize}
+						src="https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview"
+					></iframe>
 				</div>
 			</div>
 		</div>
