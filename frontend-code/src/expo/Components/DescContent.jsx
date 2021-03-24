@@ -1,6 +1,7 @@
 import React from 'react';
 import { constant } from '../Assets/constants';
 import styles from '../css/descPage.module.css';
+import { Link } from 'react-router-dom';
 
 const DescContent = ({ sn, id }) => {
 	let arr = constant[sn],
@@ -61,7 +62,9 @@ const DescContent = ({ sn, id }) => {
 		images = (
 			<>
 				<div className={styles.subheading}>
-					<div className={styles.subheadingtext}>Images</div>
+					<div className={styles.subheadingtext}>
+						Images, Screenshots and Videos
+					</div>
 				</div>
 				<div className={styles.imgDiv}>{images}</div>
 			</>
@@ -72,6 +75,9 @@ const DescContent = ({ sn, id }) => {
 	return (
 		<div className={styles.main}>
 			<div className={styles.card}>
+				<Link to={`/expo/`} className="waves-light btn-small btnColor">
+					Go Back
+				</Link>
 				<div className={styles.heading}>{curProj.name}</div>
 				<div className={styles.headingSub}>
 					{sn.charAt(0).toUpperCase() + sn.slice(1)} | 2020
