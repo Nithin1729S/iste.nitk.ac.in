@@ -2,6 +2,7 @@ export const constant = {
 	//Format for a project
 	// {
 	//     id: 2,
+	//		 oneline:'', // Oneline to display in the expo site
 	//     logo: '', // Find the project logo in the current up site and copy paste logo from there (Go to SIGS -> project and find the logo)
 	//     name: '',
 	//     imgUrl: ['', '', '', '', ''], //Alls the images
@@ -21,6 +22,8 @@ export const constant = {
 				'https://images-na.ssl-images-amazon.com/images/I/51D-9qGCi1L._SL1000_.jpg',
 			name:
 				'Simulation Model for Biodiesel Production Embedded with MPC using PFR',
+			oneline:
+				'The aim of this project was to model and simulate for Biodiesel Production embedded with Model Predictive Control(MPC) operating in a Plug Flow Reactor(PFR) using MATLAB-Simulink.',
 			imgUrl: [
 				'https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/view?usp=sharing',
 				'https://drive.google.com/file/d/1iixnaapJ1Qm5n8xK77sygK_rAI6ifSxW/view?usp=sharing',
