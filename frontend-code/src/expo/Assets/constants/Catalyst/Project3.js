@@ -1,7 +1,7 @@
 export default {
     id: 3,
     name: "Photocatalytic Degradation of Aniline",
-    tags:[],
+    tags:["simulation","Photocatalysis","PFR","waste-water treatment",],
     oneline:
         "The objective of the project is to model a reactor for the degradation of organic pollutants, particularly methane using photocatalytic reactions on DWSIM, a chemical process simulator. Thus, obtaining suitable graphs with appropriate parameters for determining apt relations between the control variables.",
     logo: "https://iste.nitk.ac.in/api/media/sig_pictures/None_catalyst.png",

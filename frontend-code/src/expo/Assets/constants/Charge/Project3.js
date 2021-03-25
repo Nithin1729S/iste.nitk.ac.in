@@ -1,6 +1,7 @@
 export default {
     id: 3,
     name: "Speech to Text Converter",
+    tags:["MEL Coefficients","Linear predictive coding","FFT","DFT","HMM","Neural Networks",],
     oneline:
         "This project on Speech Recognition converts speech (limited) to text with a fairly decent accuracy of about 93% with a processing speed of only 1.5 seconds approximately for an audio clip 2 seconds long on a trained model.",
     logo:
@@ -10,7 +11,6 @@ export default {
         "https://drive.google.com/file/d/1ULC46VWpLCFEy4FtilZDyTIYmRR3DZsu/preview",
     ],
     members: [
-        "Anshuman Sinha",
         "Anshuman Sinha",
         "Kaveen S",
         "Ria Mishra",

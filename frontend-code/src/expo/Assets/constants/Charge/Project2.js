@@ -1,5 +1,6 @@
 export default {
     id: 2,
+    tags: ["eyetracking", "rpi", "image processing"],
     name: "Eye Tracking Wheelchair",
     oneline:
         "To design an eye-tracking software that acquires a video stream of eye movements using a camera and then, based on the eye movement, analyse the user's intent. It is aimed to design and simulate the wheelchair model on ROS and Gazebo.",

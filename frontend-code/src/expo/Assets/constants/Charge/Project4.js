@@ -1,6 +1,13 @@
 export default {
     id: 4,
     name: "Wireless Solar charger",
+    tags: [
+        "power electronics",
+        " mppt",
+        " greenenergy",
+        "Lithium ion cell",
+        "Charge controller",
+    ],
     oneline:
         "To build a 10W portable, wireless solar lithium-ion battery charger. To harness maximum solar energy output, achieve MPPT(Max Power Point Tracking) and charge 8.4V lithium ion cells.",
     logo:

@@ -1,5 +1,6 @@
 export default {
     id: 5,
+    tags: ["SSL", "cryptography", "aes", "fpga"],
     name: "Hardware Assisted SSL",
     logo:
         "https://res.cloudinary.com/dogygnvzl/image/upload/v1597416892/WhatsApp_Image_2020-08-12_at_8.10.31_PM_fidcuq.jpg",
