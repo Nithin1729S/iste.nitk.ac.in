@@ -27,19 +27,19 @@ class App extends React.Component {
             <HashRouter>
                 <ScrollToTop />
                 <Header shouldRender={this.state.headerShouldRender} />
-                <Route
-                    path="/expo"
-                    exact
-                    render={(props) => (
-                        <ExpoHomeComponent
-                            {...props}
-                            setHeaderFooterStatus={(val) =>
-                                this.changeHeaderFooterStatus(val)
-                            }
-                        />
-                    )}
-                />
                 <div className="app-main">
+                    <Route
+                        path="/expo"
+                        exact
+                        render={(props) => (
+                            <ExpoHomeComponent
+                                {...props}
+                                setHeaderFooterStatus={(val) =>
+                                    this.changeHeaderFooterStatus(val)
+                                }
+                            />
+                        )}
+                    />
                     <Route path="/expo/:name" exact component={DescPage} />
                     <Route path="/" exact component={HomeComponent} />
                     <Route path="/event" exact component={EventComponent} />
