@@ -1,5 +1,6 @@
 export default {
     id: 6,
+    tags: ["Deep Learning", "Image Processing"],
     oneline:
         "This project aims to achieve colorization of black and white images using Generative Adversarial Networks(GAN) and improve performance by experimenting with different models of the same.",
     logo:

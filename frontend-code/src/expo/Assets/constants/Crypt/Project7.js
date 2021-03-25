@@ -1,5 +1,6 @@
 export default {
     id: 7,
+    tags: ["Deep Learning", " Recurrent Neural Networks"],
     oneline:
         "This project aims to generate hand-drawn sketches of various animals and objects by using deep learning architectures like Generative Recurrent Neural Networks and Auto-encoders. Our goal is to train machines to draw and generalize simple drawings from a simple sequence of motor actions, in a manner similar to humans.",
     logo:

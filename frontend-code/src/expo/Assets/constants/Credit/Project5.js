@@ -1,5 +1,16 @@
 export default {
     id: 5,
+    tags: [
+        "textileindustry",
+        " export",
+        " tradepolicy",
+        " indiangovernment",
+        " economy",
+        " COVID19",
+        " inferentialanalytics",
+        " analytics",
+        " policymaking",
+    ],
     oneline:
         "Analyse the effectiveness of the 6 major Export schemes Implemented by the Ministry of Textiles.Recommend policy changes to the schemes in place.",
     logo:

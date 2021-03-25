@@ -1,5 +1,6 @@
 export default {
     id: 7,
+    tags: ["gigeconomy", " freelance", " future", " companies"],
     oneline:
         "This project would aim at taking in consideration the sentiments of workers and analysing their functioning in a gig economy.",
     logo:

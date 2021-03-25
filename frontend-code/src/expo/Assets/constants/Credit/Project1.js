@@ -1,5 +1,6 @@
 export default {
     id: 1,
+    tags: ["Anti-Money Laundering", " Economy", " Demonetization", " Covid-19"],
     oneline:
         "To analyze the illegal process of money laundering in India and its impacts on the economy",
     logo:

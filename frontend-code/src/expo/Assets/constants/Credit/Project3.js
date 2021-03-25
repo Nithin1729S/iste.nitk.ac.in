@@ -1,5 +1,15 @@
 export default {
     id: 3,
+    tags: [
+        "Space Commercialization",
+        " Low-Earth Orbit",
+        " Space Economy",
+        " Cis-Lunar Economy",
+        " Cis-Lunar Space",
+        " Satellite Imaging",
+        " Mega-Constellations",
+        " Microgravity Environment",
+    ],
     oneline:
         "To explore, analyze and lay out a starting path for expansion of space based industries.",
     logo:

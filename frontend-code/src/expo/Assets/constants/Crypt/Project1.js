@@ -1,5 +1,6 @@
 export default {
     id: 1,
+    tags:["Networking"," NDN"," Reddit"," Webdev",],
     oneline:
         "The primary goal of this project was to design a proof of concept of a social media aggregation website, such as reddit, using the new internet architecture known as Named Data Networking(NDN). The project focuses on using the resources provided by the open source NDN framework to build APIs that allow us to mimic the functioning of social media aggregation sites.",
     logo: "https://avatars0.githubusercontent.com/u/3679349?s=280&v=4",

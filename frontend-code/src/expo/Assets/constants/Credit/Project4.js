@@ -1,5 +1,13 @@
 export default {
     id: 4,
+    tags: [
+        "marketing",
+        "strategies",
+        "consumer behaviour",
+        "beverages",
+        "soft drinks",
+        "energy drinks",
+    ],
     oneline:
         "Analyse consumer behaviour towards the market leaders in the beverage industry.",
     logo:

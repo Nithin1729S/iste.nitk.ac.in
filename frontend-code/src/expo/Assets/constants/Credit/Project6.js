@@ -1,5 +1,12 @@
 export default {
     id: 6,
+    tags: [
+        "candlestickpatterns",
+        " Nifty",
+        " technicalanalysis",
+        " trading",
+        " stockmarket",
+    ],
     oneline:
         "The study on the formation of candlestick patterns was done to find out the different candlestick patterns and identify their accuracy.",
     logo:

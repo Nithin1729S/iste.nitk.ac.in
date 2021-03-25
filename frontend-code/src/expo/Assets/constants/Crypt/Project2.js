@@ -1,5 +1,6 @@
 export default {
     id: 2,
+    tags: ["Containers", " Kubernetes", " Jenkins", " DevOps tools", " CI/CD"],
     oneline:
         "The aim of this project is to automate the software development process. This process includes building the code, running tests on it and safely deploying the successful version of the code. CI stands for Continuous Integration. Continuous Integration continuously builds new versions of the code if there are no errors. CD expands to Continuous Deployment. Continuous Deployment deploys a finished code to the environment. ",
     logo: "https://miro.medium.com/max/2800/0*TH1nBsXNDB5Njynk.PNG",
