@@ -1,24 +1,29 @@
 import React from 'react';
-import { constant } from '../Assets/constants';
+import { constant, gmeets } from '../Assets/constants';
 import styles from '../css/descPage.module.css';
 import { Link } from 'react-router-dom';
 
 const DescContent = ({ sn, id }) => {
 	let arr = constant[sn],
+		garr = gmeets[sn],
 		index = 0,
-		curProj = {};
+		curProj = {},
+		curmeet = {};
 	//Dummy address
 	// let imgAddr =
 	// 	'https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview';
 	for (index = 0; index < arr.length; index++) {
 		if (arr[index].id === id) {
 			curProj = arr[index];
+			curmeet = garr[index].meetLink;
 			break;
 		}
 		if (id > arr.length) {
 			curProj = arr[0];
+			curmeet = garr[0].meetLink;
 		}
 	}
+	console.log(curmeet);
 
 	// For heading components
 	var comp = <div>No Content</div>;
@@ -95,7 +100,7 @@ const DescContent = ({ sn, id }) => {
 				</div>
 				<div className={styles.description}>
 					Visit{' '}
-					<a className={styles.meet} href={curProj.meetLink}>
+					<a className={styles.meet} href={curmeet}>
 						this link
 					</a>{' '}
 					to join a Google meet and interact live with the people who worked on
