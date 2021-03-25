@@ -1,6 +1,14 @@
 export default {
     id: 3,
     name: "Energy efficient glider for delivery",
+    tags: [
+        "glider",
+        " autonomous",
+        " energy efficient",
+        " aerodynamic",
+        " Designing",
+        " analysis",
+    ],
     logo:
         "https://www.fai.org/sites/default/files/styles/article_detail_xxlarge/public/mini-lak-4.jpg?itok=_1im8SxT",
     oneline:

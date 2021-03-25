@@ -1,6 +1,13 @@
 export default {
     id: 2,
     name: "Exhaust tuning of IC Enginez",
+    tags: [
+        "KTM390",
+        " IC Engine",
+        " Exhaust tuning",
+        " Ricardo wave",
+        " Scavenging",
+    ],
     logo:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQGLUhB27gINVnO-8Kp78q8M3FVt9QeJb3uQ&usqp=CAU",
     oneline:

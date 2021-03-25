@@ -1,6 +1,15 @@
 export default {
     id: 1,
     name: "Simulation of exhaust back pressure for engine braking",
+    tags: [
+        "Exhaust brake",
+        " engine brake",
+        " exhaust",
+        " brake",
+        " engine",
+        " bike",
+        " motorcycle",
+    ],
     logo:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ1eYTAk6JZKfgMIfWyQA9NcK5Hju0A-mGVGg&usqp=CAU",
     oneline:

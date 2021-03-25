@@ -1,6 +1,7 @@
 export default {
     id: 3,
     name: "Short Film",
+    tags: ["Scripting", " Shooting", " Video Effects"],
     logo:
         "https://www.legalzoom.com/sites/legalzoom.com/files/uploaded/articles/film.jpg",
     oneline:

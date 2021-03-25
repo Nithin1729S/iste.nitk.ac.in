@@ -1,6 +1,14 @@
 export default {
     id: 6,
     name: "Medical Image Segmentation",
+    tags: [
+        "Deep learning",
+        "Nuclei segmentation",
+        "CNN",
+        "Image processing",
+        "Image segmentation",
+    ],
+
     logo:
         "https://upload.wikimedia.org/wikipedia/commons/6/6b/MI_with_contraction_bands_very_high_mag.jpg",
     oneline:

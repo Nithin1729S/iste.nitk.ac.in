@@ -1,6 +1,7 @@
 export default {
     id: 1,
     name: "The Way you Make me Feel : Background Score Analysis",
+    tags:["Music analysis"],
     oneline:
         "To understand the purpose of background scores, to see how people react to different background scores and to understand the relation between different film genre and the various parameters like range, pace, pitch etc.",
     logo: "https://pocket-syndicated-images.s3.amazonaws.com/5d23458634dde.jpg",

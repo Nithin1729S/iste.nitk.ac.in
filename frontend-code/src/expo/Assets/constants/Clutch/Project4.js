@@ -1,6 +1,7 @@
 export default {
     id: 4,
     name: "Alloy Recommender System",
+    tags: ["ML", "Material Science"],
     logo:
         "https://s3.amazonaws.com/prod-www-blackline-com/blog/wp-content/uploads/2019/01/29163118/A-Conversation-With-BlackLines-Machine-Learning-Experts-720x405.jpg",
     oneline:
