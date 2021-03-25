@@ -1382,25 +1382,394 @@ export const constant = {
 		{
 			id: 2,
 			name: 'Exhaust tuning of IC Enginez',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
+			logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQGLUhB27gINVnO-8Kp78q8M3FVt9QeJb3uQ&usqp=CAU',
+			oneline: 'The Aim of this project is to tune a KTM 390 engine’s performance to achieve peak torque at a low rpm by optimising the runner length.',
+			imgUrl: ['https://drive.google.com/file/d/1Y418WOw0xp6Vc6T8INKNdm583IZWyRWy/preview',
+					'https://drive.google.com/file/d/1GDjcp-uygUpAagvSjuv-hCrDjW8BFtG6/preview',
+					'https://drive.google.com/file/d/13IlcEbprdPhUr52mQLs43SjoCpZ2k6Jf/preview',
+					'https://drive.google.com/file/d/1DUwWrmcFBSGfsKMa9cnYQG6NIcaaELVx/preview',
+					'https://drive.google.com/file/d/1piBjjf7V8a-a3Nrgiy4C53GFYCaRd-ZY/preview'],
+			members: ['Raahul Ravichander',
+					'R Aswin',
+					'BH S R Karthik Varma'],
+			description: {
+				aim: (
+					<div>
+						The Aim of this project is to tune a KTM 390 engine’s performance to achieve peak torque at a low rpm by optimising the runner length.
+					</div>
+				),
+				meth: (
+					<div>
+						WAVE is used throughout the engine design process because it is the ideal tool for things such as improving volumetric efficiency,
+						designing complex boosting systems, improving transient response or extracting the maximum performance from a race engine. <br />
+						Computer simulation has been used extensively in the development of intake and exhaust systems worldwide. The use of computer 
+						simulation does not allow the designers to overlook the mathematical models, which have defined engine characteristics based on 
+						the operating parameters. Two of the very important phenomena which describe the wave theory in the manifolds with mathematical 
+						models are: Helmholtz Resonance and Reflective Wave Theory. <br /> <br />
+
+						<em>Helmholtz Resonator Theory:</em> <br />
+						Helmholtz theory basically works on the theory of harmony. As air (or any gas) tries to ram into the resonator through its neck,
+						the pressure inside the cavity increases and the air bounces out, but while bouncing out quickly due to inertia, it creates a 
+						partial vacuum near the neck of the resonator and the air is again sucked in. <br /> <br/>
+
+						<em>Reflected Wave Theory:</em> <br />
+						The pressure wave moves down the pipe at the sum of the local sonic velocity plus the particle velocity of the gas flow. 
+						Whenever the pressure wave encounters a change in the cross-sectional area of the pipe, a reflected pressure wave is generated, 
+						which travels in the opposite direction. If the change in area is increasing (a step, collector, or opening to the atmosphere), 
+						the sense of the reflected pressure wave is inverted. The time taken by the wave moving at acoustic speeds to travel down the 
+						length of exhaust manifold and be reflected back to the exhaust valve is determined by the speed of the engine, which in-turn 
+						is defined for gaining the maximum performance by the Reflective Wave theory. <br /> <br/>
+
+						<em>Engine Specifications:</em> <br />
+						In this project, KTM 390 which is a single cylinder spark ignition four valve, four stroke engine was modelled in Ricardo 
+						WAVE software and the model is shown in the figure below 
+						<figure>
+						<iframe src="https://drive.google.com/file/d/1nRaphs4q-RpbQevu9QKVi1nmYbERs2gT/preview" width="640" height="480"></iframe>
+						<figcaption style={{ 'text-align': 'center'}}>Engine specifications</figcaption>
+						</figure>
+					</div>
+				),
+				res: (
+					<ol>
+						<li>Continuously Varying Exhaust Pipe Length: <br/>
+						After modelling the KTM 390 engine the exhaust runner is varied from 200mm to 1000mm with a step of 50mm and RPM 
+						of the engine is varied from 2000 to 9000 with a step of 500 RPM.
+						</li>
+						<li>Brake Torque: <br />
+						<iframe src="https://drive.google.com/file/d/13IlcEbprdPhUr52mQLs43SjoCpZ2k6Jf/preview" width="640" height="480"></iframe>
+						</li>
+						<li>Brake Power: <br/>
+						<iframe src="https://drive.google.com/file/d/1DUwWrmcFBSGfsKMa9cnYQG6NIcaaELVx/preview" width="640" height="480"></iframe>
+						</li>
+						<li>Volumetric Efficiency: <br />
+						<iframe src="https://drive.google.com/file/d/1piBjjf7V8a-a3Nrgiy4C53GFYCaRd-ZY/preview" width="640" height="480"></iframe>
+						</li>
+					</ol>
+				),
+				con: (
+					<div>
+						The pressure wave which travels back and forth inside the exhaust manifold, and if tuned correctly, it will return 
+						just before the valve closing event as a rarefaction wave and produce negative pressure at the valve opening, which 
+						results in a scavenging effect and pushes the residual exhaust gases out more. The progressive pressure wave tuning 
+						of the exhaust system has a significant effect on the engine’s power and torque characteristics. In this project the 
+						length of the exhaust runner of a KTM 390 Engine varied to tune the pressure wave. <br />
+						<b><em>It was found that the max volumetric efficiency and Brake torque are obtained around 550mm.</em></b> So making the exhaust runner length to 550mm 
+						can help us achieve peak torque and peak volumetric efficiency. <br />
+						Thus, tuning the exhaust runner length and diameter have a significant effect on the torque and power produced by the engine. 
+						In this project only tuning of exhaust runner by changing the length is made, but this can be extended by changing 
+						the area of the runner and also the same principle can be applied to the inlet runner. <br />
+					</div>
+				)
+			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 3,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
+			name: 'Energy efficient glider for delivery',
+			logo: 'https://www.fai.org/sites/default/files/styles/article_detail_xxlarge/public/mini-lak-4.jpg?itok=_1im8SxT',
+			oneline: 'The aim of this project is to design an aerodynamic glider and analyse its aerodynamic aspects.',
+			imgUrl: ['https://drive.google.com/file/d/12O7JhDF61kPVLTuVMHLubFf9elywOg3U/preview',
+					'https://drive.google.com/file/d/1vDwVf8FflYbVgQC8Px_YwskrMPwcrrSP/preview',
+					'https://drive.google.com/file/d/1eln5zKSaXWWhpYq_kUDzzCUmj9eVUdE6/preview',
+					'https://drive.google.com/file/d/1c9DayC8jAELeKLQ0IzuBroaw5df50Udh/preview',
+					'https://drive.google.com/file/d/1Jd4tgCZz0HwYHVyT9EDpoSSrHw8gKa0b/preview',
+					'https://drive.google.com/file/d/1nja8RYJ1n2O1ierAYSFZ_3gh6uVGwpBj/preview',
+					'https://drive.google.com/file/d/1kOjvue9JwlNd8LjE_GeVBo_n6dMo12Qv/preview',
+					'https://drive.google.com/file/d/1RoG_6iVUY0jeJtZ6XqK0vG1kj7zITMyR/preview',
+					'https://drive.google.com/file/d/1NJv8ORBc8iM0IlKvkG1kym7Qx8lN5aPB/preview',
+					'https://drive.google.com/file/d/1icDm6o5VEwQMIgPQC59PuTVHXoes_hn9/preview',
+					'https://drive.google.com/file/d/1Npsg-eiVOe2HOKlIQ2MQzcCfiCeYppqz/preview'],
+			members: ['Nikhil Varghese',
+					'Bikram Sarkar',
+					'BH SR Karthik Varma',
+					'Abhishek Choudary',
+					'Hassan Kausar',
+					'Ananta Shanbhag',
+					'Cyriac Talus',
+					'Devika Harikrishnan',
+					'Raghav Ganesh',
+					'Shivraj Lingaraj Dharwad'],
+			description: {
+				aim: (
+					<div>
+						The aim of this project is to design an aerodynamic glider and analyse its aerodynamic aspects.
+					</div>
+				),
+				meth: (
+					<div>
+						<ol>
+							<li>
+							Selection of Airfoils <br />
+							Generally the gliders fly in the Reynolds no range of 100,000 to 500,000. A set of high performance low Reynolds 
+							airfoils were analysed using XFLR to find the airfoils for our glider plane. Among them SG6043 and NACA 0016 are 
+							selected for wing and stabilizers respectively. <br />
+							The comparison and results can be found in the following link : <a href="https://docs.google.com/spreadsheets/d/1KfQGzFHSGMFy9OxDq0pG3A9auGWP8gV9XLGePMB-B-w/edit#gid=0">Airfoil Data</a>
+							</li>
+							<li>
+							Finding the 3d parameters of the glider <br />
+							<ol>
+								<li>
+								Selection of type of wing: <br />
+								To make the contructable design of the glider the span of the wing has been chosen to be 1.2m and the root chord is chosen as 120mm. <br/>
+								The following types of wings are analysed :
+								<ol>
+									<li>Rectangle wing</li>
+									<li>Taper at front wing</li>
+									<li>Taper at back wing </li>
+									<li>Swept back wing</li>
+								</ol>
+								Among these wings Taper at front has been chosen as it has more coefficient of lift and drag
+								<iframe src="https://drive.google.com/file/d/12O7JhDF61kPVLTuVMHLubFf9elywOg3U/preview" width="640" height="480"></iframe>
+								<figcaption style={{'text-align':'center'}}>Comparison of different types of wings</figcaption>
+								Similar type of analysis has been done to select Taper Ratio. It is observed that the coefficient of lift and drag increases with decrease in TR(but the 
+								increase is not that significant) when dimensionalized, the wing with higher TR will be having higher lift and drag force. So an Taper ratio of 0.75 have been chosen.
+								<iframe src="https://drive.google.com/file/d/1vDwVf8FflYbVgQC8Px_YwskrMPwcrrSP/preview" width="640" height="480"></iframe>
+								<figcaption style={{'text-align':'center'}}>Comparison of wing with different Taper ratios</figcaption>
+								</li>
+								<li>
+									To find the dimensions of glider
+									<iframe src="https://drive.google.com/file/d/1eln5zKSaXWWhpYq_kUDzzCUmj9eVUdE6/preview" width="640" height="480"></iframe>
+									<figcaption style={{'text-align':'center'}}>Parameters of the glider</figcaption>
+									To find the above parameters analysis have been done with different values of x,y,z
+									<figure>
+									<iframe src="https://drive.google.com/file/d/1c9DayC8jAELeKLQ0IzuBroaw5df50Udh/preview" width="185" height="200"></iframe>
+									<iframe src="https://drive.google.com/file/d/1Jd4tgCZz0HwYHVyT9EDpoSSrHw8gKa0b/preview" width="185" height="200"></iframe>
+									<iframe src="https://drive.google.com/file/d/1nja8RYJ1n2O1ierAYSFZ_3gh6uVGwpBj/preview" width="185" height="200"></iframe>
+									<figcaption style={{'text-align':'center'}}>Variation of x,y,z</figcaption>
+									</figure>
+									By comparing with the results the parameters which were chosen are <br />
+									x= 192mm<br />
+									y= 900mm<br />
+									z= 10mm
+								</li>
+							</ol>
+							<li>
+								Fuselage Design <br/>
+								To design a fuselage, first we have designed a 2d shape of the fuselage. To design 2d shape we have started with a 900mm x 90mm
+								rectangle and changed the leading edge and found that the elliptical leading edge has least drag.
+								<table style={{width:'100%',border:'1'}}>
+								<tr>
+								<th>Shape</th>
+								<th>Drag</th>
+								</tr>
+								<tr>
+								<td>Perpendicular leading edge</td>
+								<td>6.0163421</td>
+								</tr>
+								<tr>
+								<td>Circular leading edge</td>
+								<td>2.4027675</td>
+								</tr>
+								<tr>
+								<td>double angled leading edge</td>
+								<td>2.2755217</td>
+								</tr>
+								<tr>
+								<td>angled leading edge</td>
+								<td>3.864284</td>
+								</tr>
+								<tr>
+								<td>semi circular leading edge</td>
+								<td>3.7124726</td>
+								</tr>
+								<tr>
+								<td>semi elliptical leading edge</td>
+								<td>3.4823547</td>
+								</tr>
+								<tr>
+								<td>elliptical leading edge</td>
+								<td>2.2602286</td>
+								</tr>
+								</table>
+								<br />
+								Using an elliptic leading edge a fuselage shape is generated in the solidworks, then it 
+								is divided into sections and by changing the dimensions at these sections different shapes 
+								have been generated and these shapes were analysed using ansys.
+								<figure>
+									<iframe src='https://drive.google.com/file/d/1kOjvue9JwlNd8LjE_GeVBo_n6dMo12Qv/preview' width="290" height="200"></iframe>
+									<iframe src='https://drive.google.com/file/d/1RoG_6iVUY0jeJtZ6XqK0vG1kj7zITMyR/preview' width="290" height="200"></iframe>
+									<iframe src='https://drive.google.com/file/d/1NJv8ORBc8iM0IlKvkG1kym7Qx8lN5aPB/preview' width="290" height="200"></iframe>
+									<iframe src='https://drive.google.com/file/d/1icDm6o5VEwQMIgPQC59PuTVHXoes_hn9/preview' width="290" height="200"></iframe>
+									<figcaption style={{'text-align':'center'}}>Shape 1,2,3,4</figcaption>
+								</figure>
+								<table style={{width:'100%',border:'1'}}>
+								<tr>
+								<th>Shape</th>
+								<th>Drag</th>
+								</tr>
+								<tr>
+								<td>1</td>
+								<td>1.2134583</td>
+								</tr>
+								<tr>
+								<td>2</td>
+								<td>1.2304162</td>
+								</tr>
+								<tr>
+								<td>3</td>
+								<td>1.1836572</td>
+								</tr>
+								<tr>
+								<td>4</td>
+								<td>1.2528237</td>
+								</tr>
+								</table>
+								After selecting a 2d shape, 3d shapes have been generated with different ellipses and analysed using ansys 
+								and it was found that the higher the ratio of horizontal radius to vertical ratio higher is the drag so the ratio of 1.1 is selected.
+							</li>
+							</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						<ol>
+							<li>Glider Assembly <br />
+							The assembly of the glider is made in Solidworks.
+							<iframe src="https://drive.google.com/file/d/1w2wTP2V2ayid5YtlcGOXJIw2lLNKtTPg/preview" width="640" height="480"></iframe>
+							</li>
+							<li>Stability Analysis <br />
+							For the plane to be stable the prerequisites are
+							<ol>
+								<li>The slope of Cm vs AoA should be negative</li>
+								<li>It should have a positive coefficient of lift at zero Cm</li>
+								<li>Should have a positive AoA at zero Cm.</li>
+							</ol>
+							To make the fly stable, the components have been distributed in such a way that the COG lies at (243.8, 0, 2.780). 
+							<iframe src="https://drive.google.com/file/d/1Npsg-eiVOe2HOKlIQ2MQzcCfiCeYppqz/preview" width="640" height="480"></iframe>
+							It can be observed that the curve cuts the x-axis at around 2degree AoA, which means that the plane flies stability at around 2degree 
+							AoA which implies that the plane will have positive lift at stable flight. <br />
+							Similarly stability analysis has been and the results are been recorded in the video
+							In stability analysis there will a disturbance given to the plane will check in how much time it will reach stability. <br />
+							<iframe src="https://drive.google.com/file/d/13Ws-07K6IWYVAUmEAe3s1BwakuCK8MM-/preview" width="640" height="480"></iframe>
+							</li>
+						</ol>
+					</div>
+				),
+				con: (
+					<div>
+						In this project we have made a simulink model of a plane which can be controlled using joystick and can be simulated in flight gear and simulink 3D.
+						<iframe src="https://drive.google.com/file/d/15FbySynfCj0IJD1c3q4vWXaf8Vt8y3fh/preview" width="715" height="480"></iframe>
+						<figcaption style={{'text-align':'center'}}>Simulink model of plane</figcaption>
+						But the problem with this model is that it uses parameters of the RCAM model, and to make it work for our model the equations of 
+						forces and moments should be changed but it is not possible with simulations and require wind tunnel testing of a physical model.
+
+					</div>
+				)
+			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 4,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
+			name: 'Prediction of alloy properties based on properties of constituent metals',
+			logo: 'https://s3.amazonaws.com/prod-www-blackline-com/blog/wp-content/uploads/2019/01/29163118/A-Conversation-With-BlackLines-Machine-Learning-Experts-720x405.jpg',
+			oneline: 'Build an alloy recommender system that gives theoretical composition of a hypothetical alloy with required mechanical property',
+			imgUrl: ['https://drive.google.com/file/d/12tsstjYKeqfrwU5BaLCwRBmmRHln_swf/preview',
+					'https://drive.google.com/file/d/1_QCo-3faIQWdhqF0YcgjX_qA_GwwadXS/preview',
+					'https://drive.google.com/file/d/1Ek9GOAJMP2VKnjyEqc79Q9tdOV2CBeT4/preview',
+					'https://drive.google.com/file/d/1GjuvLhBriTQxIfmm6yaqyaHv9kc-fV8o/preview',
+					'https://drive.google.com/file/d/1Iqczub3OZl4WVBZLsPJnQT6Wwjiuf8TX/preview',
+					'https://drive.google.com/file/d/1XMM3SfOqFKdYZ-80Ya3Sqt_84JIxMSes/preview',
+					'https://drive.google.com/file/d/1r1p6LnlsxIzQuDEUn6WzQFQD0_x5J5xX/preview',
+					'https://drive.google.com/file/d/1FqHc0FK8kDCXPWkQuA_XvTlJechB5KHV/preview',
+					'https://drive.google.com/file/d/1y3nr6dfS6u-xx9Iy14PkTZ_8_XjcZuZP/preview'],
+			members: ["Mrutyunjay",
+					"Rakesh",
+					"Shreyas",
+					"Prakruti",
+					"Pavan C",
+					"Ayush",
+					"Sakshi"],
+			description: {
+				aim: (
+					<div>
+						Build an alloy recommender system that gives theoretical composition of a hypothetical alloy with required mechanical property.
+					</div>
+				),
+				meth: (
+					<div>
+						<iframe src="https://drive.google.com/file/d/1GjuvLhBriTQxIfmm6yaqyaHv9kc-fV8o/preview" width="640" height="480"></iframe>
+						<ol>
+							<li>Web Scraping the alloy properties from the web:
+								<ol>
+									<li>Used python’s requests and Beautiful Soup libraries  to scrape and parse  the HTML code from various online sources.</li>
+									<li>Then built a python script for preprocessing collected raw data using Pandas library.</li>
+								</ol>
+							</li>
+							<li>
+								Building an Artificial Neural Network Model: <br />
+								Keras and Scikit-learn python libraries were used for building a multi- layer perceptron Neural Network model.
+								<ol>
+									<li>Loading Dataset:
+										<ol>
+										<li>Using Pandas we loaded the dataset into the memory.</li>
+										<li>Split the columns of the dataset into input and output variables.</li>
+										<li>Used train_test_split from scikit_learn package to split the dataset into a training and testing set.</li>
+										<li>Normalize them using minmax_scale function</li>
+										</ol>
+									</li>
+									<li>Define and compile Keras NN model: <br />
+										<ol>
+										<li>Created a MLP using Sequential API from Keras</li>
+										<li>Layers used:Input to define the input layer and Dense module for hidden and the output layer.</li>
+										<li>Activations: Relu for hidden layers and linear for output layer</li>
+										<li>Loss:Mean Squared Error(mse)</li>
+										</ol>
+									</li>
+									<li>Training and Performance Evaluation: <br />
+										<ol>
+											<li>Trained model on our training data by calling the fit() function.</li>
+											<li>Using predict() function we predict the values of mechanical properties for the testing set. Evaluate the model based on mean squared error and R2 score.</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li>
+								Improve model’s accuracy:
+								<ol>
+									<li>Hyper parameter tuning : Using GridSearchCV function from sklearn,we optimised the number of neurons in the hidden layers ,thus getting the best architecture.</li>
+									<li>Employed 5-Fold Cross Validation for increasing reliability of tuned parameters</li>
+									<li>Introduced Dropout layer to overcome overfitting.</li>
+								</ol>
+							</li>
+							<li>Genetic Algorithm
+							<iframe src="https://drive.google.com/file/d/1Iqczub3OZl4WVBZLsPJnQT6Wwjiuf8TX/preview" width="640" height="480"></iframe>
+							<ol>
+								<li>Takes as Input a desired Mechanical Property and tries to find the theoretical composition by playing a “guessing game” with trained Neural Network</li>
+								<li>Each solution/guess has associated “fitness” associated that helps pick out good guesses from bad ones</li>
+								<li>Eventually GA is able to converge to desired mechanical property.</li>
+								<li>Library used:PyGAD</li>
+							</ol>
+							</li>
+							<li>
+							GUI
+							<ol>
+								<li>After building the genetic algorithm model we have created a Graphical User Interface (GUI) to interact with the model.</li>
+								<li>Libraries used:tkinter,PIL</li>
+							</ol>
+							</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						Prediction plots for Shear Modulus, Density and Specific Heat Capacity for Iron alloys
+						<iframe src="https://drive.google.com/file/d/1r1p6LnlsxIzQuDEUn6WzQFQD0_x5J5xX/preview" width="235" height="200"></iframe>
+						<iframe src="https://drive.google.com/file/d/1_QCo-3faIQWdhqF0YcgjX_qA_GwwadXS/preview" width="235" height="200"></iframe>
+						<iframe src="https://drive.google.com/file/d/1XMM3SfOqFKdYZ-80Ya3Sqt_84JIxMSes/preview" width="235" height="200"></iframe>
+						Prediction plot for Tensile Strength(TS),Yield Strength(YS) and Elongation Limit(EL) for Steels
+						<iframe src='https://drive.google.com/file/d/1FqHc0FK8kDCXPWkQuA_XvTlJechB5KHV/preview' width="235" height="200"></iframe>
+						<iframe src='https://drive.google.com/file/d/1y3nr6dfS6u-xx9Iy14PkTZ_8_XjcZuZP/preview' width="235" height="200"></iframe>
+						<iframe src='https://drive.google.com/file/d/1Ek9GOAJMP2VKnjyEqc79Q9tdOV2CBeT4/preview' width="235" height="200"></iframe>
+						Since the graphs of predicted property v/s actual property closely resemble the y=x line;we conclude that our Neural Network 
+						is able to map the inputs to mechanical properties to an acceptable accuracy <br />
+						Our genetic algorithm is able to estimate alloy composition given target property to an acceptable tolerance. 
+					</div>
+				),
+				con: (
+					<div>The Result is also the Conclusion.</div>
+				)
+			},
 			meetLink: 'This is the meet link',
 		},
 	],
