@@ -35,13 +35,13 @@ export const meets = {
 		{ id: 2, meetLink: 'http://localhost:3000/#/expo/' }, //Short Film
 	],
 	credit: [
-		{ id: 1, meetLink: 'http://localhost:3000/#/expo/' }, //
-		{ id: 2, meetLink: 'http://localhost:3000/#/expo/' }, //
-		{ id: 3, meetLink: 'http://localhost:3000/#/expo/' }, //
-		{ id: 4, meetLink: 'http://localhost:3000/#/expo/' }, //
-		{ id: 5, meetLink: 'http://localhost:3000/#/expo/' }, //
-		{ id: 6, meetLink: 'http://localhost:3000/#/expo/' }, //
-		{ id: 7, meetLink: 'http://localhost:3000/#/expo/' }, //
+		{ id: 1, meetLink: 'http://localhost:3000/#/expo/' }, //Analysis of Money Laundering in India
+		{ id: 2, meetLink: 'http://localhost:3000/#/expo/' }, //Importance of Financial Education and techniques for its effective implementation
+		{ id: 3, meetLink: 'http://localhost:3000/#/expo/' }, //Economics of Space Commercialization
+		{ id: 4, meetLink: 'http://localhost:3000/#/expo/' }, //Effective marketing strategies and study of consumer behaviour in the beverage industry
+		{ id: 5, meetLink: 'http://localhost:3000/#/expo/' }, //Analysis of 5 Major Schemes in the Indian Apparels and Textile Industry
+		{ id: 6, meetLink: 'http://localhost:3000/#/expo/' }, //Analysis on the Effectiveness of Candlestick Patterns
+		{ id: 7, meetLink: 'http://localhost:3000/#/expo/' }, //Sentiments of Workers in the Gig Economy
 	],
 	crypt: [
 		{ id: 1, meetLink: 'http://localhost:3000/#/expo/' }, //NDN Reddit

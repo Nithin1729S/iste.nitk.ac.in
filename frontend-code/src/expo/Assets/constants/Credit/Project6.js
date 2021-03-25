@@ -4,7 +4,7 @@ export default {
         "The study on the formation of candlestick patterns was done to find out the different candlestick patterns and identify their accuracy.",
     logo:
         "https://thumbs.dreamstime.com/t/forex-candlestick-chart-over-dark-background-58933797.jpg",
-    name: " Analysis on the Effectiveness of Candlestick Patterns",
+    name: "Analysis on the Effectiveness of Candlestick Patterns",
     imgUrl: [
         "https://drive.google.com/file/d/1bAXQzqCeUVtVmT7Pf83mohs5lYNeCB0s/preview",
         "https://drive.google.com/file/d/1gDoS3G6nBNjtpNsUL03Ma-hUxFLh27M0/preview",
