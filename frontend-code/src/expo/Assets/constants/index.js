@@ -6,7 +6,7 @@ import concrete from "./Concrete/aggregate";
 import create from "./Create/aggregate";
 import credit from "./Credit/aggregate";
 import crypt from "./Crypt/aggregate";
-import { meets } from "./meets.js";
+import { meets } from "../meets";
 export const gmeets = meets;
 
 export const constant = {
