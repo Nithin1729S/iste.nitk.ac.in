@@ -81,3 +81,7 @@
 	font-weight: 600;
 	text-decoration: underline;
 }
+
+.membersList {
+	list-style-type: disc;
+}

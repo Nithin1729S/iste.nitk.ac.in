@@ -2399,8 +2399,7 @@ export const constant = {
 		},
 		{
 			id: 4,
-			name:
-				'Prediction of alloy properties based on properties of constituent metals',
+			name: 'Alloy Recommender System',
 			logo:
 				'https://s3.amazonaws.com/prod-www-blackline-com/blog/wp-content/uploads/2019/01/29163118/A-Conversation-With-BlackLines-Machine-Learning-Experts-720x405.jpg',
 			oneline:

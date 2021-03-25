@@ -102,6 +102,17 @@ const DescContent = ({ sn, id }) => {
 					this project!{' '}
 				</div>
 
+				<div className={styles.subheading}>
+					<div className={styles.subheadingtext}>Members</div>
+				</div>
+				<div className={styles.description}>
+					<ol className={styles.membersList}>
+						{curProj.members.map((item, index) => {
+							return <li key={index}>{item}</li>;
+						})}
+					</ol>
+				</div>
+
 				{comp}
 
 				{images}
