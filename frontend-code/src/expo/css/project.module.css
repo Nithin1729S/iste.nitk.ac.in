@@ -24,6 +24,7 @@
 	padding: 20%;
 	aspect-ratio: 1;
 	width: 100%;
+	object-fit: cover;
 }
 .buttonContent {
 	text-align: center;

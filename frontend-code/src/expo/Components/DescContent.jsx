@@ -23,7 +23,7 @@ const DescContent = ({ sn, id }) => {
 	// For heading components
 	var comp = <div>No Content</div>;
 	if (typeof curProj.description['aim'] === 'object') {
-		var content = ['aim', 'meth', 'res', 'con'];
+		var content = ['aim', 'res', 'meth', 'con'];
 		comp = content.map((item, index) => {
 			var inter = curProj.description[item];
 			var title;
@@ -90,8 +90,6 @@ const DescContent = ({ sn, id }) => {
 					<img src={imgAddr} alt="Punisher" className={styles.imgSize}></img>
 				</div> */}
 
-				{comp}
-
 				<div className={styles.subheading}>
 					<div className={styles.subheadingtext}>Meet link</div>
 				</div>
@@ -103,6 +101,8 @@ const DescContent = ({ sn, id }) => {
 					to join a Google meet and interact live with the people who worked on
 					this project!{' '}
 				</div>
+
+				{comp}
 
 				{images}
 			</div>
