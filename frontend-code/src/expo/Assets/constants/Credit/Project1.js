@@ -4,7 +4,7 @@ export default {
         "To analyze the illegal process of money laundering in India and its impacts on the economy",
     logo:
         "https://www.clipartmax.com/png/middle/56-562832_money-laundering-icon-png.png",
-    name: "ANALYSIS OF MONEY LAUNDERING IN INDIA",
+    name: "Analysis of Money Laundering in India",
     imgUrl: [
         "https://drive.google.com/file/d/1s7nXWEAZpu1g_f0Nk3F0MDJkA17cVJtv/preview",
         "https://drive.google.com/file/d/1kocvMABB5yj8yHptOiPISAvxB_cu0sNb/preview",
