@@ -2929,31 +2929,325 @@ export const constant = {
 		},
 		{
 			id: 3,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'To detect pothole in an image using trained weights and give output of the number of potholes.',
+			logo:
+				'https://www.autopilotreview.com/wp-content/uploads/2020/02/tesla-autopilot-pothole-detection-image-696x417.jpg',
+			name: 'Pothole Detector',
+			imgUrl: [
+				'https://drive.google.com/file/d/12d6ywemaTY74wZ9VuEEJD6Wn4NUuE5W4/preview',
+				'https://drive.google.com/file/d/1x81B8JTCe_MLqWy-zScG4gnkD5BbR44e/preview',
+				'https://drive.google.com/file/d/1nNbJ13T7S4LV-rvCbxtuOdqUNTSQR6NP/preview',
+				'https://drive.google.com/file/d/1yY5lnUYvX7GdBGibyWjUAn62_-T5VUys/preview',
+				'https://drive.google.com/file/d/1p2G3xQ_f_5FpsQlEj2jXckuNucTeby-J/preview',
+			],
+			members: [
+				'Avikal Sagar',
+				'Saathvika B. Mahesh',
+				'Suraj',
+				'Prathap Y',
+				'Nikhil',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						To detect pothole in an image using trained weights and give output
+						of the number of potholes.
+					</div>
+				),
+				meth: (
+					<div>
+						We have used CNN to solve this problem statement. We have
+						implemented following CNNs in this project- <br />
+						Squeeze Net, Mobile Nets, Inception-v3, VGG 16 and ResNet50. <br />
+						<br />
+						Bounding box and Intersection over union are some common image
+						detection which we have used in this project.
+						<br />
+						<br />
+						ALGORITHM <br />
+						Part(A)
+						<br /> (i)Connect to backend.py <br /> Steps : <br /> 1. Import the
+						necessary libraries <br /> 2. Provide Yolo backend path
+						<br /> 3. Base Feature Extractor <br /> 4. Full Yolo Feature <br />{' '}
+						(a) Implement the organisation layer(22 layers using Convo2D, and
+						Leaky Relu for function) <br /> 5. Tiny Yolo Feature (a) Implement
+						the neural network layers(8 layers using Convo2D, and Leaky Relu
+						again) <br /> 6. Implement mobile net feature <br /> 7. Implement
+						squeeze net feature <br /> 8. Implement inception 3 feature <br />{' '}
+						9. Implement VG16 feature <br /> 10.Implement resnet 15 feature
+						<br />
+						(ii)Connect to utils.py <br /> Steps : <br /> 1. Import the
+						necessary libraries <br /> 2. Define and implement the classes bound
+						box, weight reader <br /> 3. Decode output by the network <br /> 4.
+						Suppress non maximal boxes
+						<br /> 5. Remove boxes that are less likely than object threshold
+						<br /> 6. Compute overlap, ap etc <br /> (iii) Connect to
+						frontend.py <br /> Steps : <br /> 1. Import necessary libraries{' '}
+						<br /> 2. Implement the yolo features - make the extractor layers -
+						make the object detection layer - initialise the weights of layers -
+						print summary of the whole model <br /> 3. Define custom loss -
+						Adjust prediction - Adjust ground truth - Determine the masks - Warm
+						up training - Finalize the losses
+						<br /> 4. Make train and validation generators <br /> 5. Compile the
+						model <br /> 6. Make a few callbacks <br /> 7. Start the training
+						process <br /> 8. Compute mAP on validation set
+						<br /> 9. Gather all detections and annotations
+						<br /> 10. Make the boxes and labels
+						<br /> 11. Sort the boxes and labels according to the scores <br />{' '}
+						12. Copy detections to all detections <br /> 13. Repeat step 8 on
+						all detections(not validation)
+						<br /> 14. Sort by score, compute false/true positives <br /> 15.
+						Compute recall and precision <br /> 16. Compute average precision
+						<br />
+						Part(B):
+						<br /> (i) Frozen graph(freeze tensorflow model) <br /> (ii) Convert
+						frozen graphs to tensor rt graph <br /> (iii) Load tensor rt fp16
+						graph <br /> (iv) Make predictions of fp16 graph <br /> ----MODEL
+						READY FOR EXECUTION----
+					</div>
+				),
+				res: (
+					<div>
+						Depending on the number of potholes present in the image the output
+						is given. Please refer the Images, Screenshots ad Videos section to
+						see more.{' '}
+					</div>
+				),
+				con: (
+					<div>
+						1)App can be developed to detect pothole which will help people who
+						has problems in vision or old aged people
+						<br /> 2)Can be used in automated cars for better approximation to
+						avoid potholes <br />
+						3)Can help in categorizing roads if maintenance is required
+					</div>
+				),
 			},
 			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 4,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'In this project, we aim at analysing a structure in a seismic zone and design an earthquake resistant structure. Designing the building using StaadPro and performing a seismic analysis is the primary objective of this project.',
+			logo:
+				'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuMLRo-seHPGygbqRRnPCId-ao08TU6OvK4g&amp;usqp=CAU',
+			name: 'Design and seismic analysis of a building',
+			imgUrl: [
+				'https://drive.google.com/file/d/1Rc8nfBp1BMktcD5dxBNbEVUZsL3iMFZR/preview',
+				'https://drive.google.com/file/d/1GUkKxmiIgZgAUXAGT-HYrZagiavIbIaf/preview',
+				'https://drive.google.com/file/d/1yWUc7F2w_e2IA0kjsd0MESchFxwEYiQU/preview',
+			],
+			members: [
+				'Rashmi Raj',
+				'Kunal Motwani ',
+				'Sai Shruti Prakhya',
+				'Krishna Prasad Kuddannaya',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						In this project, we aim at analysing a structure in a seismic zone
+						and design an earthquake resistant structure. Designing the building
+						using StaadPro and performing a seismic analysis is the primary
+						objective of this project. Studying various retrofitting measures
+						and finding the suitable technique for the zone is done by
+						considering various factors. Finally, a bridge design on Staad-Pro
+						was also performed.{' '}
+					</div>
+				),
+				meth: (
+					<div>
+						<ol>
+							<li>
+								Designed a G+6 residential building. This included dimensioning,
+								assigning cross sections to members and providing support. It
+								was done on a software, STAADPro
+							</li>
+							<li>
+								Manual Calculation of loads: Referred to the existing Indian
+								Standard(IS) on Criteria of Earthquake Resistant Design of
+								Structures- IS1893(Part 1)-2016, Code of Practice for Design
+								Loads- IS 875(Part 2)-1983 to calculate the dead load, live load
+								and seismic load.
+							</li>
+							<li>
+								Manually calculating the design base shear(Vb) and time period.
+								This was also done by referring to the above mentioned IS Code.
+								Design base shear is an estimate of the maximum expected lateral
+								force on the building due to seismic activity and is calculated
+								using the earthquake zone and soil type, among other parameters.
+							</li>
+							<li>
+								STAADPro Analysis: The seismic parameters were defined under
+								‘load page-definitons’ for the building designed in 1. Load case
+								details i.e x and z direction for lateral displacement of the
+								building were also specific under ‘load page-load case details’.
+								The analysis was then performed and the results gave us the
+								design base shear, time period and seismic load value.
+							</li>
+							<li>Manual and STAAD Calculations were compared.</li>
+							<li>
+								A theoretical study of various retrofitting measures were done
+								and a suitable option was proposed for India.
+							</li>
+							<li>
+								A bridge was designed on STAADPro. The aim was to perform
+								seismic load analysis on the bridge as well but due to lack of
+								resources on the same, it was not possible.
+							</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						The below images show the G+6 storey building that was designed on
+						STAAD-Pro. The building is represented in 3 views; namely, top view,
+						front view and isometric view respectively.
+						<br />
+						<br />
+						Material Used- Reinforced Cement Concrete <br />
+						<br />
+						Structural Members:
+						<br />
+						<ol>
+							<li>
+								Columns: <br />
+								Length- 2.75m <br />
+								Type 1- 24/floor - 0.6mx0.6m <br />
+								Type 2- 12/floor- 0.55mx0.55m
+							</li>
+							<li>
+								Beams: <br />
+								Cross Section- 0.35mx0.4m <br />
+								Type 1- 30/floor- 4m length <br />
+								Type 2- 30/floor - 5m length
+							</li>
+							<li>
+								Slabs: <br /> Thickness- 0.165m
+							</li>
+							<li>
+								Walls: <br /> Thickness- 0.23m
+							</li>
+						</ol>
+						Top View of the building
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1BjW2E6x4n6p79mVnJYD1MxRPNKEHyWK1/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Front view of building
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1wCkrjE4bWVTqVkT7c3iCX5ESoywh9V-V/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Isometric view of building
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1lro1NCvoTwB5av9lKOFG4UDP3Sz0_mWp/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Dead Load= 3007.5kN/floor <br />
+						Live Load= 375kN/floor
+						<br />
+						<br />
+						Manual calculations of loads: <br />
+						Seismic Load= 49524.588kN <br />
+						Design Acceleration Coefficient(Sa/g) = 2.0268 <br />
+						Time Period= 0.67173sec <br />
+						Design Base Shear= 1745.389kN
+						<br />
+						<br />
+						STAAD-Pro calculations of loads: <br />
+						Seismic Load= 50827.07 <br />
+						Design Acceleration Coefficient(Sa/g) = 2.027 <br />
+						Time Period= 1.26sec
+						<br /> Design Base Shear= 1648.26kN
+						<br />
+						<br />
+						It is observed that all values approximately match except that of
+						the time period. There is a slight variation in the values for
+						seismic load and design base shear due to the fact that manual
+						calculations were done as per IS1893-Part 1(2016) while STAAD-Pro
+						calculations were done as per IS 1893-Part1(2002).
+						<br /> <br />
+						Retrofitting:
+						<br />A comprehensive study was performed of different retrofitting
+						methods used on existing structures. The most suitable method that
+						can be used for the building designed in zone III region of India
+						are:
+						<ol>
+							<li>
+								FRP Wrapping: It is the latest technique used for seismic
+								retrofitting. This technique is cost-effective and can be
+								implemented for RC and masonry structures. These are stronger
+								than steel and weigh less than steel. Another advantage of this
+								is the fact that it has high corrosion resistant properties.
+							</li>
+							<li>
+								Adding Steel Braces: These are added to an existing structure.
+								They do not add more load to the existing structure and at the
+								same time, they have the ability to withstand the load. This
+								modification will also make more space for natural light in a
+								structure.
+							</li>
+						</ol>
+						Bridge Design:
+						<br />
+						Dimension of Bridge: 80mx20m
+						<br /> Material Used- Reinforced Cement Concrete <br />
+						Cross Sections of Structural Members: <br />
+						(a)Column- 1.2m diameter <br />
+						(b)Beam- 0.6m x 0.6m
+						<br /> Slab Thickness- 0.3m <br />
+						Appropriate vehicle load was applied for load analysis <br />
+						The below image represents the bridge designed on STAAD-Pro
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1d_hrPztWCnUo4Z2ndqNHuKJ-rihBl0fk/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Variation of bending moment in the bridge
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1J8Ia4UwdyYmHEUNEw9PFPYnFKZAr2TQC/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Variation of shear force across Y direction in the bridge <br />
+						<iframe
+							src="https://drive.google.com/file/d/12VhMWWQFgxAFIzkDdtiJQDz35g3XVaoC/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+					</div>
+				),
+				con: (
+					<div>
+						Communication and administration in any country relies on its road
+						network. Bridge is one such structure which has extreme capability
+						in connecting two parts on either side. Studying the impact of
+						seismic waves on these structure is an extended scope and using
+						appropriate retrofitting measure to these gigantic structures.
+					</div>
+				),
 			},
 			//meetLink: 'This is the meet link',
 		},
