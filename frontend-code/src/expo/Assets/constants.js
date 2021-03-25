@@ -3,16 +3,16 @@ export const constant = {
 	//Format for a project
 	// {
 	//     id: 2,
-	//		 oneline:'', // Oneline to display in the expo site
-	//     logo: '', // Find the project logo in the current up site and copy paste logo from there (Go to SIGS -> project and find the logo)
+	//		 oneline:'',
+	//     logo: '',
 	//     name: '',
-	//     imgUrl: ['', '', '', '', ''], //Alls the images
-	//     members: ['', '', '', '', ''], // Members
+	//     imgUrl: ['', '', '', '', ''],
+	//     members: ['', '', '', '', ''],
 	//     description: {
-	//         aim: (<div></div>), // Aim
-	//         meth: (<div></div>), // Methodology
-	//         res: (<div></div>), // Results
-	//         con: (<div></div>), // Conclusion and Future Scope
+	//         aim: (<div></div>),
+	//         meth: (<div></div>),
+	//         res: (<div></div>),
+	//         con: (<div></div>),
 	//     },
 	//     meetLink: 'This is the meet link',
 	// },
@@ -89,18 +89,13 @@ export const constant = {
 						=0.239, k6 =0.007
 						<br />
 						<br />
-						Component Balanaces <br />
+						Component Balances <br />
 						<br />
-						dxTG/dL=FτA/Vv(-k1 . xTG . xMeOH + k2 . xDG . xME) <br />
-						dxDG/dL=FτA/Vv(k1 . xTG . xMeOH – k2 . xDG . xME -k3 . xDG . xMeOH
-						+k4 . xMG . xME ) <br />
-						dxMG/dL=FτA/Vv(k3 . xDG . xMeOH -k4 . xMG . xME -k5 . xMG . xMeOH
-						+k6 . xGl . xME ) <br />
-						dxME/dL=FτA/Vv(k1 . xTG . xMeOH – k2 . xDG . xME +k3 . xDG . xMeOH
-						-k4 . xMG . xME +k5 . xMG . xMeOH -k6 . xGl . xME) <br />
-						dxGL/dL=FτA/Vv(k5 . xMG . xMeOH -k6 . xGl . xME) <br />
-						dxMeOH/dL=FτA/Vv(-k1 . xTG . xMeOH +k2 . xDG . xME -k3 . xDG . xMeOH
-						+k4 . xMG . xME -k5 . xMG . xMeOH +k6 . xGl . xME)
+						<iframe
+							src="https://drive.google.com/file/d/1rOZ867XD3nWmo6qL1Gc51flVYKnX69J4/preview"
+							width="640"
+							height="280"
+						></iframe>
 						<br />
 						<br />
 						Implementation of the Controller <br />
@@ -130,7 +125,7 @@ export const constant = {
 							</div>
 							<iframe
 								style={{ border: '1px black solid' }}
-								src="https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview"
+								src="https://drive.google.com/file/d/1ZvzEfamyz5W8j4535VdYprXoW5FwGLCG/preview"
 								width="400"
 								height="300"
 							></iframe>
@@ -143,7 +138,7 @@ export const constant = {
 							</div>
 							<iframe
 								style={{ border: '1px black solid' }}
-								src="https://drive.google.com/file/d/1iixnaapJ1Qm5n8xK77sygK_rAI6ifSxW/preview"
+								src="https://drive.google.com/file/d/1gOvHwUuOLX-1jYF18ZcL8Y4PXsDvhJ66/preview"
 								width="400"
 								height="300"
 							></iframe>
@@ -154,7 +149,7 @@ export const constant = {
 							<div style={{ marginLeft: '12%' }}>Table 3: Error Tabulation</div>
 							<iframe
 								style={{ border: '1px black solid' }}
-								src="https://drive.google.com/file/d/1YMqmhbtezm0TVirV4EIQnIeRW_NXfH52/preview"
+								src="https://drive.google.com/file/d/1XDxl0XRBq2cWAKbtO4UL-XUUzTOPfLv_/preview"
 								width="400"
 								height="300"
 							></iframe>
@@ -2652,10 +2647,52 @@ export const constant = {
 	create: [
 		{
 			id: 1,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
+			oneline:
+				'Creating original cinematographic compositions of the Milky Way Galaxy as seen at different places throughout the year using Long Exposure Photography technique.',
+			logo:
+				'https://res.cloudinary.com/dogygnvzl/image/upload/v1595787585/WhatsApp_Image_2020-07-26_at_11.48.43_PM_o2d5sd.jpg',
+			name: 'Long Exposure Photography',
+			imgUrl: [],
+			members: [
+				'Nikhil Nair',
+				'Mihir BL',
+				'Ananta Shanbhag',
+				'Amogh Manikkuwar',
+			],
+			description: {
+				aim: (
+					<div>
+						Creating original cinematographic compositions of the Milky Way
+						Galaxy as seen at different places throughout the year using Long
+						Exposure Photography technique.
+					</div>
+				),
+				meth: (
+					<div>
+						● Capture a set of images say 15-20 shots for one composition at one
+						place
+						<br /> ● Stack all the images and do stacking through median mode in
+						Photoshop
+						<br /> ● Edit the final stacked image to make the image look in the
+						best way possible
+						<br /> ● Do some intense color grading to give it a cinematographic
+						feel.
+					</div>
+				),
+				res: <div>Please check the Images, Screenshots and Videos section</div>,
+				con: (
+					<div>
+						We used a DSLR, a beginner's camera that had a resolution of 20-24
+						MP. The lens we used was the 18-55 mm short range lens. Although, it
+						does the job very well we could've taken better shots of we had a
+						higher aperture ( less than the f/3.5 we were able to use )<br />
+						We could've also taken more clear shots if we could've travelled to
+						a place with lower light pollution. This would've enabled us to use
+						a slightly higher ISO and shutter speed to capture the details in
+						high clarity.
+					</div>
+				),
+			},
 			meetLink: 'This is the meet link',
 		},
 		{
