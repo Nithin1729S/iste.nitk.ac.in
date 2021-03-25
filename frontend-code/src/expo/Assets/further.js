@@ -14,7 +14,7 @@ export const fur = {
 	],
 	chronicle: [
 		{ id: 1, fur: 'http://localhost:3000/#/expo/' }, //The Way you Make me Feel : Background Score Analysis
-		{ id: 2, fur: 'http://localhost:3000/#/expo/' }, //Podcast
+		{ id: 2, fur: '' }, //Podcast
 		{ id: 3, fur: 'http://localhost:3000/#/expo/' }, //Short Film
 	],
 	clutch: [
