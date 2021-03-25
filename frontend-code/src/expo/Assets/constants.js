@@ -1,4 +1,6 @@
 import Voice from './Voice.png';
+import { meets } from './meets.js';
+export const gmeets = meets;
 export const constant = {
 	//Format for a project
 	// {
@@ -14,7 +16,7 @@ export const constant = {
 	//         res: (<div></div>),
 	//         con: (<div></div>),
 	//     },
-	//     meetLink: 'This is the meet link',
+	//
 	// },
 	catalyst: [
 		{
@@ -228,7 +230,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'https://www.google.com/',
+			//meetLink: 'https://www.google.com/',
 		},
 		{
 			id: 2,
@@ -536,7 +538,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 3,
@@ -710,7 +712,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 	],
 	charge: [
@@ -860,7 +862,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 2,
@@ -1087,7 +1089,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 3,
@@ -1164,7 +1166,7 @@ export const constant = {
 				),
 				con: <div>The Result is also the Conclusion.</div>,
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 4,
@@ -1284,7 +1286,7 @@ export const constant = {
 
 				con: <div>The Result is also the Conclusion.</div>,
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 5,
@@ -1368,7 +1370,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 6,
@@ -1469,7 +1471,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 	],
 	chronicle: [
@@ -1565,7 +1567,7 @@ export const constant = {
 				),
 				con: <div>The Result is also the Conclusion.</div>,
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 2,
@@ -1575,7 +1577,7 @@ export const constant = {
 			imgUrl: '',
 			members: [],
 			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 3,
@@ -1681,7 +1683,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 	],
 	clutch: [
@@ -1952,7 +1954,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 2,
@@ -2086,7 +2088,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 3,
@@ -2391,7 +2393,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 4,
@@ -2599,49 +2601,781 @@ export const constant = {
 				),
 				con: <div>The Result is also the Conclusion.</div>,
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 	],
 	concrete: [
 		{
 			id: 1,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline:
+				'Design and Analysis of a Green Commercial Complex equipped with a Food Court in an Eco-Friendly and Sustainable manner within the NITK Campus in Revit using Building Information Modelling (BIM).',
+			logo:
+				'https://www.elevatorimagazine.com/wp-content/uploads/2018/01/corsi-di-autocad-disegni-dwg-a-trieste.jpg',
+			name: 'Design of a Green Commercial Complex in NITK using BIM',
+			imgUrl: [
+				'https://drive.google.com/file/d/1vX-hKt3NfdqysLZVyYkfTxJ_7Ojz452T/preview',
+				'https://drive.google.com/file/d/14b4y2JctYZ4tLqcjah4-yECto_AlZKaf/preview',
+				'https://drive.google.com/file/d/1nZxkWxQWoGoOfplfDJBpuds9-GfQMd4c/preview',
+				'https://drive.google.com/file/d/1mgsRb9ADoNL9toEhWa6CIZqER8S_-6kT/preview',
+				'https://drive.google.com/file/d/1aHAb-qesLqMQnN2_eyVuJET8Qc6TFSgE/preview',
+				'https://drive.google.com/file/d/1zvLvbRK-jPdogkfpLTYXrQ9IAGioH_bK/preview',
+				'https://drive.google.com/file/d/123nCz-GmF2h7KFHnNr2GwuJaodUab54w/preview',
+				'https://drive.google.com/file/d/1nCsUZIHvjC1jTJKfKO55VGjx_AAjNG6J/preview',
+				'https://drive.google.com/file/d/1uxs7zllxuyVBFTSNf9zeXpJa7_vUbbs3/preview',
+				'https://drive.google.com/file/d/1A-ebcQRYmsMV01mBt-eweyxv8HKN7JVD/preview',
+			],
+			members: [
+				'Niveditha',
+				'Vineet Pujari',
+				'Drishti Rawat',
+				'Suraj Kumar L',
+				'Imtiaz Abdul Gafur',
+				'Keval Vaghamshi',
+				'Ranjeet Sonawane',
+			],
+			description: {
+				aim: (
+					<div>
+						Design and Analysis of a Green Commercial Complex equipped with a
+						Food Court in an Eco-Friendly and Sustainable manner within the NITK
+						Campus in Revit using Building Information Modelling (BIM).
+					</div>
+				),
+				meth: (
+					<div>
+						<ol style={{ listStyleType: 'disc' }}>
+							<li>
+								Getting familiar with BIM Concepts and Green Building
+								Requirements
+							</li>
+							<li>Learning Revit Software</li>
+							<li>
+								Learn From Case Studies
+								<br />
+								<ol style={{ listStyleType: 'circle' }}>
+									<li>
+										Sustainable Buildings: Sustainable Behaviour? - John Lester
+										Clark
+									</li>
+									<li>Suzlon One Earth , Pune - Kavita D Jain</li>
+									<li>
+										The Smart Use Of Glass In Sustainable Buildings - Glass for
+										Europe
+									</li>
+									<li>
+										GreenBuilding Information Modelling - Phillip G. Bernstein
+									</li>
+									<li>
+										{' '}
+										(BIM) and Energy Analysis Tools With Green Building
+										Certification System To Conceptually Design Sustainable
+										Building - Farzad Jalaei and Ahmad Jrade
+									</li>
+									<li>
+										Griha Manual - Ministry of New and Renewable Energy,
+										Government of India
+									</li>
+									<li>
+										Sustainable Design and Building Information Modelling -
+										Boris Ceranic, Derek Latham, Angela Dean
+									</li>
+								</ol>
+							</li>
+							<li>Choosing Location</li>
+							<li>Modelling the Green Commercial Complex</li>
+							<li>
+								Find and Use Eco-friendly and Sustainable Materials
+								<br />
+								<ol style={{ listStyleType: 'circle', fontWeight: 'lighter' }}>
+									<li>Steel (crs/epoxy coated)</li>
+									<li>Lightweight Concrete Blocks ( First Floor )</li>
+									<li>Cement Sheets ( Roof; Low Cost )</li>
+									<li>Glazed/Double wall Glass ( insulation )</li>
+									<li>Kota Stone ( Corridors; local )</li>
+									<li>Tin Dioxide Coated Windows ( Low e windows)</li>
+									<li>Bamboo</li>
+									<li>Wooled Bricks</li>
+									<li>Reclaimed Wood ( From Ships )</li>
+									<li>Simple Tiles ( Flooring )</li>
+								</ol>
+							</li>
+							<li>
+								Implement Green Designs
+								<ol style={{ listStyleType: 'circle', fontWeight: 'lighter' }}>
+									<li>Green Roof</li>
+									<li>Solar Panels</li>
+									<li>Door Frames (recycled materials)</li>
+									<li>Flyash for RCC</li>
+									<li>Self Induced Passage Cooling</li>
+									<li>Access for all</li>
+									<li>Thermal Storage Cooling System</li>
+									<li>Double Glazed Windows</li>
+									<li>Light Colored Materials</li>
+									<li>Louvers</li>
+									<li>Bamboo Shadings</li>
+									<li>Waste to Energy Strategies on Site</li>
+								</ol>
+							</li>
+							<li>Complete Revit Design</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						Location
+						<br />
+						<ol style={{ listStyleType: 'disc' }}>
+							<li>South Facing</li>
+							<li>Road Side</li>
+							<li>Daylight Exposure</li>
+							<li>Convenience</li>
+							<li>Perimeter of ~ 131 m</li>
+							<li>Area of ~ 1069 m2</li>
+						</ol>
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1oZxAci8p2gvN1gEUHQucVlFTlHzggpPk/preview"
+							width="640"
+							height="300"
+						></iframe>
+						<br />
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1bsbvWeLjtrdGZj5IKnFBpeHW9TR4POmK/preview"
+							width="640"
+							height="300"
+						></iframe>
+						<br />
+						<br />
+						First Floor plan <br />
+						<iframe
+							src="https://drive.google.com/file/d/1nCsUZIHvjC1jTJKfKO55VGjx_AAjNG6J/preview"
+							width="500"
+							height="480"
+						></iframe>
+						<br />
+						<br />
+						Groud Floor plan <br />
+						<iframe
+							src="https://drive.google.com/file/d/1mgsRb9ADoNL9toEhWa6CIZqER8S_-6kT/preview"
+							width="500"
+							height="480"
+						></iframe>
+						<br />
+						<br />
+						Top and Frontal View <br />
+						<iframe
+							src="https://drive.google.com/file/d/1A-ebcQRYmsMV01mBt-eweyxv8HKN7JVD/preview"
+							width="500"
+							height="480"
+						></iframe>
+						<br />
+						<br />
+						Top View <br />
+						<iframe
+							src="https://drive.google.com/file/d/123nCz-GmF2h7KFHnNr2GwuJaodUab54w/preview"
+							width="500"
+							height="480"
+						></iframe>
+						<br />
+						<br />
+						Final Design <br />
+						<iframe
+							src="https://drive.google.com/file/d/1aHAb-qesLqMQnN2_eyVuJET8Qc6TFSgE/preview"
+							width="640"
+							height="480"
+						></iframe>{' '}
+						<br />
+					</div>
+				),
+				con: (
+					<div>
+						<ol style={{ listStyleType: 'disc' }}>
+							<li>
+								The aim of this project was to understand, plan and design a
+								Commercial Green Building in NITK that has been achieved by
+								studying different green technologies for buildings and by
+								planning and designing layout , development of plan ,elevations,
+								sections etc.
+							</li>
+							<li>
+								Various Green technologies and materials proposed with their
+								feasibility study and cost comparison is being rigorously
+								conducted on this project.
+							</li>
+							<li>
+								The structure of the building is designed using REVIT software
+								and finally a self assessment is also done by considering IS
+								Codes for Buildings.
+							</li>
+							<li>
+								The green technology advances that occur in the next 5-10 years
+								will steer the future course of green building. The focus must
+								be on making real changes in how we design and construct
+								buildings for the future .
+							</li>
+							<li>
+								Advances such as air cleansing materials will make our indoor
+								and outdoor environments healthier.
+							</li>
+							<li>
+								Microgrids,net zero buildings and Solar roofs will help reduce
+								our dependence on coal and other greenhouse gas emitting energy
+								sources.
+							</li>
+							<li>
+								Hence Green Buildings is very likely to play a lead role in
+								environmental protection efforts in future.
+							</li>
+						</ol>
+					</div>
+				),
+			},
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 2,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline:
+				'To obtain an efficient bridge girder design with optimised materials by analysing shear force and bending moment of different self designed bridge girders using STAAD PRO.',
+			logo:
+				'https://erkrishneelram.files.wordpress.com/2015/01/il-appr-span-21-23-003.jpg',
+			name: 'Design of Bridge Girders-Using Euro and AASHTO codes',
+			imgUrl: [],
+			members: ['Rashmi Raj', 'Shreehari M', 'Saurabh Tiwari', 'Prathap Y'],
+			description: {
+				aim: (
+					<div>
+						To obtain an efficient bridge girder design with optimised materials
+						by analysing shear force and bending moment of different self
+						designed bridge girders using STAAD PRO.
+					</div>
+				),
+				meth: (
+					<div>
+						● Description of Bridge SuperStructure
+						<br />
+						The bridge structure considered in this case study has a length of
+						25 m simply supported over the piers or abutments of the bridge
+						substructure. The thickness of the deck slab is 250 mm in all
+						respects. Sizes of longitudinal girders and cross girders are
+						considered as 2000x500 mm and 1500x250 mm respectively.
+						<br />
+						<br />● Design Analysis
+						<br />
+						The design of bridge girders has been performed for dead and live
+						loads. Dead load of the slab is assumed as 7.5 KN/m² where as dead
+						load of members are considered in STAAD Pro. For live loads IRC
+						codes, Euro codes and AASHTO Specifications have been preferred and
+						models has been created in STAAD Pro.
+						<br />
+						<br />● Result Analysis
+						<br />
+						I. Live Load- Bending moments, shear forces and deflections due to
+						live load of vehicle loading of all codes i.e. IRC Codes, Euro codes
+						and AASHTO Specifications are calculated and presented graphically.
+						<br />
+						Ii. Area of Steel- Design of bridge girders is conducted in STAAD
+						Pro using different vehicle loadings of IRC Codes, AASHTO
+						Specifications and Euro Codes. Maximum value of steel area required
+						is considered in longitudinal girder as well as cross girder.
+					</div>
+				),
+				res: (
+					<div>
+						From the design analysis it can be concluded that the I section
+						steel Girder is most efficient as it has high flexural strength. The
+						girder was designed for expressway bridges and corresponding loads
+						were considered and the I-section girder is designed using AASHTO
+						and euro codes. After designing the section we tried to implement
+						the girder on a warren type steel bridge and a normal highway
+						bridge. <br />
+						<br />
+						The graphs and stimulation videos are in the below drive link.
+						<br />
+						<a
+							style={{ color: 'blue', textDecoration: 'underline' }}
+							href="https://drive.google.com/drive/folders/1SreIJNW9Zvp1V4z8Ll7yGXdCAX_UBcrh?usp=sharing"
+						>
+							https://drive.google.com/drive/folders/1SreIJNW9Zvp1V4z8Ll7yGXdCAX_UBcrh?usp=sharing
+						</a>
+						<br />
+						<a
+							style={{ color: 'blue', textDecoration: 'underline' }}
+							href="https://drive.google.com/drive/folders/1tW0i2VsDkjwIX_Cth4FgzLevUPqUt2Nj?usp=sharing"
+						>
+							https://drive.google.com/drive/folders/1tW0i2VsDkjwIX_Cth4FgzLevUPqUt2Nj?usp=sharing
+						</a>
+					</div>
+				),
+				con: (
+					<div>
+						In the I-section the material is present where it should be and in
+						the right quantities. This makes the beam more economical and
+						lighter and in turn again making it even more economical.A beam
+						primarily resists bending, shear and torsion. The height of the
+						section is a determinant of stress due to bending in the order of
+						the square of itself. The farther the flanges are from each other,
+						the better it is. <br />
+						Shear is resisted by the web and you just put in enough thickness of
+						web that the shear is taken care of. Regardless, the consideration
+						from point of view of bending is the most important one. <br />
+						<br />
+						Looking at the future scope, this design can be used for 20m span
+						girders in bridges but it will not be much economical as steel is
+						costlier than concrete. But the same section can be used with
+						concrete girders with sufficient prestressing.
+					</div>
+				),
+			},
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 3,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline:
+				'To detect pothole in an image using trained weights and give output of the number of potholes.',
+			logo:
+				'https://www.autopilotreview.com/wp-content/uploads/2020/02/tesla-autopilot-pothole-detection-image-696x417.jpg',
+			name: 'Pothole Detector',
+			imgUrl: [
+				'https://drive.google.com/file/d/12d6ywemaTY74wZ9VuEEJD6Wn4NUuE5W4/preview',
+				'https://drive.google.com/file/d/1x81B8JTCe_MLqWy-zScG4gnkD5BbR44e/preview',
+				'https://drive.google.com/file/d/1nNbJ13T7S4LV-rvCbxtuOdqUNTSQR6NP/preview',
+				'https://drive.google.com/file/d/1yY5lnUYvX7GdBGibyWjUAn62_-T5VUys/preview',
+				'https://drive.google.com/file/d/1p2G3xQ_f_5FpsQlEj2jXckuNucTeby-J/preview',
+			],
+			members: [
+				'Avikal Sagar',
+				'Saathvika B. Mahesh',
+				'Suraj',
+				'Prathap Y',
+				'Nikhil',
+			],
+			description: {
+				aim: (
+					<div>
+						To detect pothole in an image using trained weights and give output
+						of the number of potholes.
+					</div>
+				),
+				meth: (
+					<div>
+						We have used CNN to solve this problem statement. We have
+						implemented following CNNs in this project- <br />
+						Squeeze Net, Mobile Nets, Inception-v3, VGG 16 and ResNet50. <br />
+						<br />
+						Bounding box and Intersection over union are some common image
+						detection which we have used in this project.
+						<br />
+						<br />
+						ALGORITHM <br />
+						Part(A)
+						<br /> (i)Connect to backend.py <br /> Steps : <br /> 1. Import the
+						necessary libraries <br /> 2. Provide Yolo backend path
+						<br /> 3. Base Feature Extractor <br /> 4. Full Yolo Feature <br />{' '}
+						(a) Implement the organisation layer(22 layers using Convo2D, and
+						Leaky Relu for function) <br /> 5. Tiny Yolo Feature (a) Implement
+						the neural network layers(8 layers using Convo2D, and Leaky Relu
+						again) <br /> 6. Implement mobile net feature <br /> 7. Implement
+						squeeze net feature <br /> 8. Implement inception 3 feature <br />{' '}
+						9. Implement VG16 feature <br /> 10.Implement resnet 15 feature
+						<br />
+						(ii)Connect to utils.py <br /> Steps : <br /> 1. Import the
+						necessary libraries <br /> 2. Define and implement the classes bound
+						box, weight reader <br /> 3. Decode output by the network <br /> 4.
+						Suppress non maximal boxes
+						<br /> 5. Remove boxes that are less likely than object threshold
+						<br /> 6. Compute overlap, ap etc <br /> (iii) Connect to
+						frontend.py <br /> Steps : <br /> 1. Import necessary libraries{' '}
+						<br /> 2. Implement the yolo features - make the extractor layers -
+						make the object detection layer - initialise the weights of layers -
+						print summary of the whole model <br /> 3. Define custom loss -
+						Adjust prediction - Adjust ground truth - Determine the masks - Warm
+						up training - Finalize the losses
+						<br /> 4. Make train and validation generators <br /> 5. Compile the
+						model <br /> 6. Make a few callbacks <br /> 7. Start the training
+						process <br /> 8. Compute mAP on validation set
+						<br /> 9. Gather all detections and annotations
+						<br /> 10. Make the boxes and labels
+						<br /> 11. Sort the boxes and labels according to the scores <br />{' '}
+						12. Copy detections to all detections <br /> 13. Repeat step 8 on
+						all detections(not validation)
+						<br /> 14. Sort by score, compute false/true positives <br /> 15.
+						Compute recall and precision <br /> 16. Compute average precision
+						<br />
+						Part(B):
+						<br /> (i) Frozen graph(freeze tensorflow model) <br /> (ii) Convert
+						frozen graphs to tensor rt graph <br /> (iii) Load tensor rt fp16
+						graph <br /> (iv) Make predictions of fp16 graph <br /> ----MODEL
+						READY FOR EXECUTION----
+					</div>
+				),
+				res: (
+					<div>
+						Depending on the number of potholes present in the image the output
+						is given. Please refer the Images, Screenshots ad Videos section to
+						see more.{' '}
+					</div>
+				),
+				con: (
+					<div>
+						1)App can be developed to detect pothole which will help people who
+						has problems in vision or old aged people
+						<br /> 2)Can be used in automated cars for better approximation to
+						avoid potholes <br />
+						3)Can help in categorizing roads if maintenance is required
+					</div>
+				),
+			},
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 4,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline:
+				'In this project, we aim at analysing a structure in a seismic zone and design an earthquake resistant structure. Designing the building using StaadPro and performing a seismic analysis is the primary objective of this project.',
+			logo:
+				'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuMLRo-seHPGygbqRRnPCId-ao08TU6OvK4g&amp;usqp=CAU',
+			name: 'Design and seismic analysis of a building',
+			imgUrl: [
+				'https://drive.google.com/file/d/1Rc8nfBp1BMktcD5dxBNbEVUZsL3iMFZR/preview',
+				'https://drive.google.com/file/d/1GUkKxmiIgZgAUXAGT-HYrZagiavIbIaf/preview',
+				'https://drive.google.com/file/d/1yWUc7F2w_e2IA0kjsd0MESchFxwEYiQU/preview',
+			],
+			members: [
+				'Rashmi Raj',
+				'Kunal Motwani ',
+				'Sai Shruti Prakhya',
+				'Krishna Prasad Kuddannaya',
+			],
+			description: {
+				aim: (
+					<div>
+						In this project, we aim at analysing a structure in a seismic zone
+						and design an earthquake resistant structure. Designing the building
+						using StaadPro and performing a seismic analysis is the primary
+						objective of this project. Studying various retrofitting measures
+						and finding the suitable technique for the zone is done by
+						considering various factors. Finally, a bridge design on Staad-Pro
+						was also performed.{' '}
+					</div>
+				),
+				meth: (
+					<div>
+						<ol>
+							<li>
+								Designed a G+6 residential building. This included dimensioning,
+								assigning cross sections to members and providing support. It
+								was done on a software, STAADPro
+							</li>
+							<li>
+								Manual Calculation of loads: Referred to the existing Indian
+								Standard(IS) on Criteria of Earthquake Resistant Design of
+								Structures- IS1893(Part 1)-2016, Code of Practice for Design
+								Loads- IS 875(Part 2)-1983 to calculate the dead load, live load
+								and seismic load.
+							</li>
+							<li>
+								Manually calculating the design base shear(Vb) and time period.
+								This was also done by referring to the above mentioned IS Code.
+								Design base shear is an estimate of the maximum expected lateral
+								force on the building due to seismic activity and is calculated
+								using the earthquake zone and soil type, among other parameters.
+							</li>
+							<li>
+								STAADPro Analysis: The seismic parameters were defined under
+								‘load page-definitons’ for the building designed in 1. Load case
+								details i.e x and z direction for lateral displacement of the
+								building were also specific under ‘load page-load case details’.
+								The analysis was then performed and the results gave us the
+								design base shear, time period and seismic load value.
+							</li>
+							<li>Manual and STAAD Calculations were compared.</li>
+							<li>
+								A theoretical study of various retrofitting measures were done
+								and a suitable option was proposed for India.
+							</li>
+							<li>
+								A bridge was designed on STAADPro. The aim was to perform
+								seismic load analysis on the bridge as well but due to lack of
+								resources on the same, it was not possible.
+							</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						The below images show the G+6 storey building that was designed on
+						STAAD-Pro. The building is represented in 3 views; namely, top view,
+						front view and isometric view respectively.
+						<br />
+						<br />
+						Material Used- Reinforced Cement Concrete <br />
+						<br />
+						Structural Members:
+						<br />
+						<ol>
+							<li>
+								Columns: <br />
+								Length- 2.75m <br />
+								Type 1- 24/floor - 0.6mx0.6m <br />
+								Type 2- 12/floor- 0.55mx0.55m
+							</li>
+							<li>
+								Beams: <br />
+								Cross Section- 0.35mx0.4m <br />
+								Type 1- 30/floor- 4m length <br />
+								Type 2- 30/floor - 5m length
+							</li>
+							<li>
+								Slabs: <br /> Thickness- 0.165m
+							</li>
+							<li>
+								Walls: <br /> Thickness- 0.23m
+							</li>
+						</ol>
+						Top View of the building
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1BjW2E6x4n6p79mVnJYD1MxRPNKEHyWK1/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Front view of building
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1wCkrjE4bWVTqVkT7c3iCX5ESoywh9V-V/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Isometric view of building
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1lro1NCvoTwB5av9lKOFG4UDP3Sz0_mWp/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Dead Load= 3007.5kN/floor <br />
+						Live Load= 375kN/floor
+						<br />
+						<br />
+						Manual calculations of loads: <br />
+						Seismic Load= 49524.588kN <br />
+						Design Acceleration Coefficient(Sa/g) = 2.0268 <br />
+						Time Period= 0.67173sec <br />
+						Design Base Shear= 1745.389kN
+						<br />
+						<br />
+						STAAD-Pro calculations of loads: <br />
+						Seismic Load= 50827.07 <br />
+						Design Acceleration Coefficient(Sa/g) = 2.027 <br />
+						Time Period= 1.26sec
+						<br /> Design Base Shear= 1648.26kN
+						<br />
+						<br />
+						It is observed that all values approximately match except that of
+						the time period. There is a slight variation in the values for
+						seismic load and design base shear due to the fact that manual
+						calculations were done as per IS1893-Part 1(2016) while STAAD-Pro
+						calculations were done as per IS 1893-Part1(2002).
+						<br /> <br />
+						Retrofitting:
+						<br />A comprehensive study was performed of different retrofitting
+						methods used on existing structures. The most suitable method that
+						can be used for the building designed in zone III region of India
+						are:
+						<ol>
+							<li>
+								FRP Wrapping: It is the latest technique used for seismic
+								retrofitting. This technique is cost-effective and can be
+								implemented for RC and masonry structures. These are stronger
+								than steel and weigh less than steel. Another advantage of this
+								is the fact that it has high corrosion resistant properties.
+							</li>
+							<li>
+								Adding Steel Braces: These are added to an existing structure.
+								They do not add more load to the existing structure and at the
+								same time, they have the ability to withstand the load. This
+								modification will also make more space for natural light in a
+								structure.
+							</li>
+						</ol>
+						Bridge Design:
+						<br />
+						Dimension of Bridge: 80mx20m
+						<br /> Material Used- Reinforced Cement Concrete <br />
+						Cross Sections of Structural Members: <br />
+						(a)Column- 1.2m diameter <br />
+						(b)Beam- 0.6m x 0.6m
+						<br /> Slab Thickness- 0.3m <br />
+						Appropriate vehicle load was applied for load analysis <br />
+						The below image represents the bridge designed on STAAD-Pro
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1d_hrPztWCnUo4Z2ndqNHuKJ-rihBl0fk/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Variation of bending moment in the bridge
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1J8Ia4UwdyYmHEUNEw9PFPYnFKZAr2TQC/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+						Variation of shear force across Y direction in the bridge <br />
+						<iframe
+							src="https://drive.google.com/file/d/12VhMWWQFgxAFIzkDdtiJQDz35g3XVaoC/preview"
+							width="640"
+							height="400"
+						></iframe>
+						<br />
+						<br />
+					</div>
+				),
+				con: (
+					<div>
+						Communication and administration in any country relies on its road
+						network. Bridge is one such structure which has extreme capability
+						in connecting two parts on either side. Studying the impact of
+						seismic waves on these structure is an extended scope and using
+						appropriate retrofitting measure to these gigantic structures.
+					</div>
+				),
+			},
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 5,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline:
+				'   To design G+15 storey buildings subjected to wind loads in NITK with different shear wall configurations using Staad Pro V8i software. To determine relative stability and economy of buildings with different shear wall configurations and a building without shear wall against the wind by analysing maximum resultant nodal displacements',
+			logo:
+				'https://qph.fs.quoracdn.net/main-qimg-181761ae351b29f3801ab7fa278f457d.webp',
+			name: 'Wind Load Analysis of Building with Different Shear Wall Designs',
+			imgUrl: [],
+			members: [
+				'Swarnangshu',
+				'Shreyank R',
+				'Shashank',
+				'Imtiaz Abdul Gafur',
+				'Vaibhav Prathap',
+			],
+			description: {
+				aim: (
+					<div>
+						<ol style={{ listStyleType: 'disc' }}>
+							<li>
+								To design G+15 storey buildings subjected to wind loads in NITK
+								with different shear wall configurations using Staad Pro V8i
+								software.
+							</li>
+							<li>
+								To determine relative stability and economy of buildings with
+								different shear wall configurations and a building without shear
+								wall against the wind by analysing maximum resultant nodal
+								displacements
+							</li>
+						</ol>
+					</div>
+				),
+				meth: (
+					<div>
+						Dead loads, live loads and wind loads are calculated as per IS 875
+						part 1, IS 875 part 2 and IS 875 part 3 respectively and applied on
+						building without shear walls and buildings with different shear
+						walls configurations using Staad Pro software. The analysis is made
+						on the post processing mode which includes maximum resultant nodal
+						displacements for each and every building designs. <br />
+						The building configurations are mentioned below:
+						<br />
+					</div>
+				),
+				res: (
+					<div>
+						Maximum Nodal Displacement Nodes <br />
+						will have nodal displacements or degrees of freedom which may
+						include translations, rotations, and for special applications,
+						higher order derivatives of displacements. When the nodes displace,
+						they will drag the elements along in a certain manner dictated by
+						the element formulation. Therefore it is critical to find the
+						maximum resultant nodal displacement for any structure to get an
+						idea about the structure’s stability.
+						<br />
+						<br /> Increase in Stability with respect to the Building without
+						Shear Wall (Design 0)
+						<br />
+						Increase in stability of the building designs with respect to the
+						building that doesn’t have a shear wall have been calculated and
+						plotted. <br />
+						<br />
+						Increase in Stability with respect to the Parent Shear Wall Design{' '}
+						<br />
+						Parent shear wall designs: These include Design 1.0 and Design 2.0.
+						All the other shear wall designs are a combination of these parent
+						shear wall designs. Increase in stability of the shear wall designs
+						with respect to the parent shear wall designs (Design 1.0 and Design
+						2.0) have been calculated and plotted.
+						<br />
+						<br />
+					</div>
+				),
+				con: (
+					<div>
+						<ol style={{ listStyleType: 'disc' }}>
+							<li>
+								Stability of parent corner shear wall design (Design 2.0) is
+								higher compared to parent center of edges shear wall design
+								(Design 1.0). This is due to higher moment of inertia for
+								configuration containing walls at corners
+							</li>
+							<li>
+								Increase in stability of ‘shear walls at corner designs (Design
+								2)’ are greater compared to increase in stability of their
+								respective ‘shear walls at centre of edges designs (Design 2)’.
+							</li>
+							<li>
+								The higher the moment of inertia, the greater the stability of a
+								building design. Despite Design 1.3 and Design 2.3 having higher
+								moments of inertia, they have lesser stability compared to
+								Design 1.1, Design 1.2, Design 2.1 and Design 2.2. This can be
+								attributed to the fact that these designs act as a single unit
+								which gives them the extra stability.
+							</li>
+							<li>
+								First preference is always given to Design 0 as it is the most
+								cost effective design since the cost of concrete and steel is
+								reduced (as shear walls require excessive volumes of concrete
+								and reinforced steel). If Design 0 does not fall in the
+								permissible limit for safe design (highly likely for Design 0 to
+								fail under the given conditions), parent shear walls can be our
+								next option. Among the two parent shear wall designs, preference
+								should be given to Design 2.0 as it has higher stability
+								compared to Design 1.0. If this design fails as well, Design 2.2
+								is the best option as it can be up to 61.75% more stable than
+								the building without shear wall and 32.84% more stable than its
+								parent shear wall. Design 2.2 is rejected due to architectural
+								reasons, Design 1.2 the last option to go to. All the other
+								shear wall designs have very slight increase in stability and
+								therefore can be ignored.
+							</li>
+							<li>
+								The most stable shear wall is Design 2.2. It can resist extreme
+								wind speeds and withstand earthquakes better than all the other
+								designs.
+							</li>
+						</ol>
+					</div>
+				),
+			},
+			//meetLink: 'This is the meet link',
 		},
 	],
 	create: [
@@ -2679,7 +3413,24 @@ export const constant = {
 						feel.
 					</div>
 				),
-				res: <div>Please check the Images, Screenshots and Videos section</div>,
+				res: (
+					<div>
+						Refer the folowing links to see our final results! <br />
+						<a
+							style={{ color: 'blue', textDecoration: 'underline' }}
+							href="https://drive.google.com/drive/folders/192wnN4f7IFWTs_8YG8aXC5muqmJKpf9G?usp=sharing"
+						>
+							https://drive.google.com/drive/folders/192wnN4f7IFWTs_8YG8aXC5muqmJKpf9G?usp=sharing
+						</a>
+						<br />
+						<a
+							style={{ color: 'blue', textDecoration: 'underline' }}
+							href="https://drive.google.com/drive/folders/1qU4TTVvxumrP3wg9RAKpvY7kJd6KjqJT?usp=sharing"
+						>
+							https://drive.google.com/drive/folders/1qU4TTVvxumrP3wg9RAKpvY7kJd6KjqJT?usp=sharing
+						</a>
+					</div>
+				),
 				con: (
 					<div>
 						We used a DSLR, a beginner's camera that had a resolution of 20-24
@@ -2693,7 +3444,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 2,
@@ -2799,65 +3550,107 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 	],
 	credit: [
 		{
 			id: 1,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline: '',
+			logo: '',
+			name: '',
+			imgUrl: ['', '', '', '', ''],
+			members: ['', '', '', '', ''],
+			description: {
+				aim: <div></div>,
+				meth: <div></div>,
+				res: <div></div>,
+				con: <div></div>,
+			},
 		},
 		{
 			id: 2,
-			name: 'Project Name ',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline: '',
+			logo: '',
+			name: '',
+			imgUrl: ['', '', '', '', ''],
+			members: ['', '', '', '', ''],
+			description: {
+				aim: <div></div>,
+				meth: <div></div>,
+				res: <div></div>,
+				con: <div></div>,
+			},
 		},
 		{
 			id: 3,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline: '',
+			logo: '',
+			name: '',
+			imgUrl: ['', '', '', '', ''],
+			members: ['', '', '', '', ''],
+			description: {
+				aim: <div></div>,
+				meth: <div></div>,
+				res: <div></div>,
+				con: <div></div>,
+			},
 		},
 		{
 			id: 4,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline: '',
+			logo: '',
+			name: '',
+			imgUrl: ['', '', '', '', ''],
+			members: ['', '', '', '', ''],
+			description: {
+				aim: <div></div>,
+				meth: <div></div>,
+				res: <div></div>,
+				con: <div></div>,
+			},
 		},
 		{
 			id: 5,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline: '',
+			logo: '',
+			name: '',
+			imgUrl: ['', '', '', '', ''],
+			members: ['', '', '', '', ''],
+			description: {
+				aim: <div></div>,
+				meth: <div></div>,
+				res: <div></div>,
+				con: <div></div>,
+			},
 		},
 		{
 			id: 6,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline: '',
+			logo: '',
+			name: '',
+			imgUrl: ['', '', '', '', ''],
+			members: ['', '', '', '', ''],
+			description: {
+				aim: <div></div>,
+				meth: <div></div>,
+				res: <div></div>,
+				con: <div></div>,
+			},
 		},
 		{
 			id: 7,
-			name: 'Project Name',
-			imgUrl: '',
-			members: [],
-			description: <div>this is the description</div>,
-			meetLink: 'This is the meet link',
+			oneline: '',
+			logo: '',
+			name: '',
+			imgUrl: ['', '', '', '', ''],
+			members: ['', '', '', '', ''],
+			description: {
+				aim: <div></div>,
+				meth: <div></div>,
+				res: <div></div>,
+				con: <div></div>,
+			},
 		},
 	],
 	crypt: [
@@ -3135,7 +3928,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 2,
@@ -3327,7 +4120,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 3,
@@ -3418,7 +4211,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 4,
@@ -3489,7 +4282,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 5,
@@ -3600,7 +4393,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 6,
@@ -3690,7 +4483,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 		{
 			id: 7,
@@ -3822,7 +4615,7 @@ export const constant = {
 					</div>
 				),
 			},
-			meetLink: 'This is the meet link',
+			//meetLink: 'This is the meet link',
 		},
 	],
 };
