@@ -1,5 +1,6 @@
 export default {
     id: 3,
+    tags: ["ML", " Image Processing"],
     oneline:
         "To detect pothole in an image using trained weights and give output of the number of potholes.",
     logo:

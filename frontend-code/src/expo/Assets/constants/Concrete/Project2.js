@@ -1,5 +1,6 @@
 export default {
     id: 2,
+    tags: ["STAAD Pro"],
     oneline:
         "To obtain an efficient bridge girder design with optimised materials by analysing shear force and bending moment of different self designed bridge girders using STAAD PRO.",
     logo:

@@ -1,5 +1,19 @@
 export default {
     id: 4,
+    tags: [
+        "Earthquakes",
+        "Seismicity",
+        "Vibration",
+        "Zone 3",
+        "RCC",
+        "Structural Engineering",
+        "Design",
+        "Commercial Buildings",
+        "Resistance",
+        "Retrofitting",
+        "Base Isolation",
+        "India",
+    ],
     oneline:
         "In this project, we aim at analysing a structure in a seismic zone and design an earthquake resistant structure. Designing the building using StaadPro and performing a seismic analysis is the primary objective of this project.",
     logo:

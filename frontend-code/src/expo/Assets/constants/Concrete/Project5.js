@@ -1,5 +1,6 @@
 export default {
     id: 5,
+    tags: ["STAAD Pro", " shear wall", " wind load"],
     oneline:
         "   To design G+15 storey buildings subjected to wind loads in NITK with different shear wall configurations using Staad Pro V8i software. To determine relative stability and economy of buildings with different shear wall configurations and a building without shear wall against the wind by analysing maximum resultant nodal displacements",
     logo:

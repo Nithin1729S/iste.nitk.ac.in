@@ -1,5 +1,6 @@
 export default {
     id: 1,
+    tags: ["BIM", " Revit", " Green Building"],
     oneline:
         "Design and Analysis of a Green Commercial Complex equipped with a Food Court in an Eco-Friendly and Sustainable manner within the NITK Campus in Revit using Building Information Modelling (BIM).",
     logo:

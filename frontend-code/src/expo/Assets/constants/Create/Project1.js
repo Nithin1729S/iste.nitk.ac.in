@@ -1,5 +1,12 @@
 export default {
     id: 1,
+    tags: [
+        "Astrophotography ",
+        " Milky Way ",
+        " Photoshop ",
+        " Long Exposure ",
+        " Stars",
+    ],
     oneline:
         "Creating original cinematographic compositions of the Milky Way Galaxy as seen at different places throughout the year using Long Exposure Photography technique.",
     logo:
