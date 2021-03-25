@@ -3556,100 +3556,1649 @@ export const constant = {
 	credit: [
 		{
 			id: 1,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'To analyze the illegal process of money laundering in India and its impacts on the economy',
+			logo:
+				'https://www.clipartmax.com/png/middle/56-562832_money-laundering-icon-png.png',
+			name: 'ANALYSIS OF MONEY LAUNDERING IN INDIA',
+			imgUrl: [
+				'https://drive.google.com/file/d/1s7nXWEAZpu1g_f0Nk3F0MDJkA17cVJtv/preview',
+				'https://drive.google.com/file/d/1kocvMABB5yj8yHptOiPISAvxB_cu0sNb/preview',
+				'https://drive.google.com/file/d/1vaS1pO4epkNAsrC20BHoKBQOW9J_x8IT/preview',
+				'https://drive.google.com/file/d/1PUqi9R3sZxzcXLIAjwbLfcjk4Ttvpc2S/preview',
+				'https://drive.google.com/file/d/1XAGfKG_m5jb8-tUabYPKuet2qVX-xpsS/preview',
+				'https://drive.google.com/file/d/11W_Jp2fhQ5OLos3e_FB8AwmMOqzDDOX3/preview',
+			],
+			members: [
+				'Shreya Raghavendra',
+				'Kunal Motwani',
+				' Avikal Sagar',
+				'Rahul Harikumar',
+				' Aadil Khalifa,',
+				'Rohan Suratkal',
+				'Kumar Vitthal,',
+				'Sahana Praveen Bhandari',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						To analyze the illegal process of money laundering in India and its
+						impacts on the economy. We also looked into the adverse effects of
+						demonetization and COVID-19 had on it.
+					</div>
+				),
+				meth: (
+					<div>
+						<ol>
+							<li>
+								This project was begun by understanding the basics of money
+								laundering. We first looked into the steps and the strategies
+								commonly used for laundering
+							</li>
+							<li>
+								Understand the impact of this activity on the private sector,
+								government sector and also the economy as a whole. Impact on the
+								society was also discussed
+							</li>
+							<li>
+								Understand the impact of demonetization. Analyse if the decision
+								was beneficial or not for the country. Also discuss other
+								impacts.
+							</li>
+							<li>
+								Look into why money laundering has increased since the pandemic
+								struckand how advantage of the pandemic is being taken. Also
+								discuss various measures taken by the government to combat
+								illicit financing.
+							</li>
+							<li>
+								Closely study the Anti-Money laundering acts (AML) and its
+								impact.
+							</li>
+							<li>
+								Have a thorough review of the Punjab National Bank (PNB) scam in
+								2018. This review looked into the monetary extent of the scam
+								and other losses as well.
+							</li>
+							<li>
+								{' '}
+								A time series forecasting was performed on the stocks of PNB
+								using regression models; thus proving that the laundering caused
+								a major decline in the stocks of PNB.
+							</li>
+							<li>
+								Have a thorough review of the Commonwealth games (CWG) scam in
+								2010. This review consisted of segments such as revenue
+								generation, Financial Planning and Execution, Irregularities in
+								venue construction etc.
+							</li>
+							<li>
+								An analysis of the revenue of various commonwealth games was
+								also performed where the revenues of different commonwealth
+								games for the past 25 years are compared. Using revenue values
+								adjusted to inflation, we show that the cost of the CommonWealth
+								games in 2010 was indeed much higher; i.e. a scam had occurred.
+							</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						<ul>
+							<li>
+								PNB Case study
+								<ol type="a">
+									<li>
+										<u>PNB High Analysis</u>
+										<br />
+										(Daily High values in INR vs Dates)
+										<br />
+										<iframe
+											src="https://drive.google.com/file/d/1QCsApLUMV8Yj9_OaYpL85gRstmadyXMY/preview"
+											width="640"
+											height="480"
+										></iframe>
+									</li>
+									<li>
+										<u>PNB LOW ANALYSIS:</u>
+										<br />
+										(Daily Low values in INR vs Dates)(
+										<br />
+										<iframe
+											src="https://drive.google.com/file/d/1fEmzcCNUahy2DsllUaAWaYDsl90Rw7MV/preview"
+											width="640"
+											height="480"
+										></iframe>
+									</li>
+									<li>
+										<u>PNB OPEN ANALYSIS:</u>
+										<br />
+										(Daily Open Values in INR vs Dates)
+										<br />
+										<iframe
+											src="https://drive.google.com/file/d/1QCsApLUMV8Yj9_OaYpL85gRstmadyXMY/preview"
+											width="640"
+											height="480"
+										></iframe>
+									</li>
+									<li>
+										<u>PNB ADJUSTED CLOSE ANALYSIS:</u>
+										<br />
+										(Daily Adj Close values in INR vs Dates)
+										<br />
+										<iframe
+											src="https://drive.google.com/file/d/1QhGw6e7hglQKqL7OMaRJ-YoWHQTPXUyK/preview"
+											width="640"
+											height="480"
+										></iframe>
+									</li>
+								</ol>
+								<ul>
+									<br />
+									<li>
+										In models (a), (b) and (c), the actual high, low and the
+										opening values of the stock respectively are close to the
+										predicted values of the same in the time period of Dec’17 -
+										Feb’18. This indicates that the regression models formed on
+										the basis of the dataset containing dates from Jan’10 -
+										Nov’17 is accurate enough to predict the values of the same
+										for the first two months of 2018. In other words, there are
+										no evident deviations from normalcy.
+									</li>
+									<li>
+										As we move further into 2018, starting from mid-Feb, we
+										observe that the deviation of the predicted values’
+										regression lines in the first three graphs(represented in
+										either red or orange) and the actual values’ regression
+										lines(represented in either green or black) increases
+										drastically
+										<br />
+										<br />
+										<ul>
+											<li>
+												&emsp;&emsp;- In graph (a), the predicted high value
+												towards the end of 2020 is nearly 85 INR, but the actual
+												high value is close to 25 INR (error of nearly
+												&emsp;&emsp;&emsp;240%).
+											</li>
+											<li>
+												&emsp;&emsp;- In graph (b), the predicted low value
+												towards the end of 2020 is nearly 100 INR, but the
+												actual low value is close to 30 INR (error of nearly
+												&emsp;&emsp;&emsp;234%).
+											</li>
+											<li>
+												&emsp;&emsp;-In graph (c), the predicted open value
+												towards the end of 2020 is nearly 90 INR, but the actual
+												open value is close to 30 INR (error of nearly
+												&emsp;&emsp;&emsp;200%).
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								CWG Case study:
+								<br />
+								<iframe
+									src="https://drive.google.com/file/d/19lgkIa26D6goFZk5-6AAz9DO4NixV6QJ/preview"
+									width="640"
+									height="480"
+								></iframe>
+							</li>
+						</ul>
+						<p>
+							By the end of the games, the cost had exceeded the budget by 16
+							times making it the most expensive commonwealth games. India,
+							being an economically developing country where a third of the
+							population lives below the poverty line, spending billions of
+							dollars on a 12-day sports event seems astonishing. This points to
+							mismanagement and corruption by the officials in-charge. There
+							were major delays in the preparation and many big construction
+							projects exceeded the budget. There was found to be corruption in
+							the awarding of projects to different companies as well, where the
+							lowest bidder was not always awarded the project. The games left
+							many concerned and confused whether the games had ended being a
+							matter of national pride or a matter of national shame.
+						</p>
+						<br /> <br />
+					</div>
+				),
+				con: (
+					<div>
+						<u>
+							<b>Future Scope of the project:</b>
+						</u>
+						<br />
+						<ul>
+							<li>● Analysis of money laundering in the covid-recovery era</li>
+							<li>
+								● Implementation of Artificial Intelligence in Anti-Money
+								Laundering (AML) softwares
+							</li>
+							<li>
+								● Comparison of the money laundering processes in the
+								neighbouring countries
+							</li>
+						</ul>
+					</div>
+				),
 			},
 		},
 		{
 			id: 2,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'To understand the impact that personal finance measures make on the financial success of an individual',
+			logo:
+				'https://sun9-6.userapi.com/c621705/v621705743/867e2/EWdVd0pelUQ.jpg',
+			name:
+				'Importance of Financial Education and techniques for its effective implementation',
+			members: [
+				'Aman Kureel',
+				'Neil Poonatar',
+				'Adithya LHS',
+				'Rahul Harikumar',
+				'Rithvika B',
+			],
+			imgUrl: [
+				'https://drive.google.com/file/d/1bq3NGBrmpSbZPAiE88rNafhNghyfCG3b/preview',
+				'https://drive.google.com/file/d/1g085Ih0r4MzhXoidldf3uN2G3fsJW_ix/preview',
+				'https://drive.google.com/file/d/1sa-03xwHTHhI2nfMxQ3CCWqmJ5ahap6d/preview',
+				'https://drive.google.com/file/d/1MQsYcqmb2x3f-IWSd8AfTlWD8tfI9KHU/preview',
+				'https://drive.google.com/file/d/1WT86MqAkjvElHBOt3w5wLnbuY1-HTK-X/preview',
+				'https://drive.google.com/file/d/1wOj-NGDqGYY6l8brYlYHH2X4Apbn_q4x/preview',
+				'https://drive.google.com/file/d/15oXhf6Pp-b03Uzt3GBgivCcmN44FFgZc/preview',
+				'https://drive.google.com/file/d/1WcjN_jkCDoW0BLiZKrYIk-WineBi4-fm/preview',
+				'https://drive.google.com/file/d/19YnDAJ1SA4-VW9FOrDnUFcu18mUcmUCj/preview',
+				'https://drive.google.com/file/d/1Xd50kpld6ja0O0R4XFvOvLw12SSfLAXN/preview',
+				'https://drive.google.com/file/d/16DKm4hSUxRvLQhs4SquEr6MygKbhKz50/preview',
+				'https://drive.google.com/file/d/1T6fNWtDQ2wmNj9dE6IR-Vm2fRMxaqu6H/preview',
+				'https://drive.google.com/file/d/1R-6DGorZvgAWBwwzNqouInaZSoDm_iDD/preview',
+				'https://drive.google.com/file/d/1rE8ztIkXT7Yb7U-9FArpnd5tOefM_CD3/preview',
+				'https://drive.google.com/file/d/18_7H0WxbeHZdHd-CSCFnc6_P4zGT-LfY/preview',
+				'https://drive.google.com/file/d/1Z4f0AghhNwiRWMjRc7IXt7vMy1e3CPXF/preview',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						<p>
+							To understand the impact that personal finance measures make on
+							the financial success of an individual{' '}
+						</p>
+						<p>
+							To be able to quickly, yet efficiently test the financial literacy
+							of an individual, in order to provide direction and realization
+							with regards to strengths and weaknesses.
+						</p>
+					</div>
+				),
+				meth: (
+					<div>
+						<p>
+							While research and literature exists for developed economies with
+							respect to personal finance education, the data and resources for
+							the Indian outlook are limited.
+							<br />
+							<br />
+							By designing surveys, we have attempted to capture accurate data
+							that reflects the Indian consensus across varied demographics. 2
+							surveys created, for each of the project objectives. A combined
+							150 responses were recorded. The survey aiming to provide data on
+							the impact of financial education was targeted for adults who are
+							well established in their careers. The 3 sections included were:
+							Candidate Information, Financial Status, Exposure to Financial
+							Education.
+							<br />
+							<br />
+							The survey to gauge financial literacy was aimed for the
+							college-student demographic. We picked questions and gauged their
+							difficulty level and assigned marks. The questions with lower
+							marks are basic and in the realms of general financial literacy
+							and the ones with higher marks require a deeper knowledge of
+							finance to answer.
+							<br />
+							<br />
+							MS Excel was used to analyze the collected data. Pivot tables were
+							used extensively.
+							<br />
+							<br />
+							On further analysis, insights into the education system and
+							psychology of citizens when it comes to money-matters are
+							revealed. Prior to concluding, a brief overview of measures
+							implemented in other countries is discussed with the purpose of
+							understanding policies and executions that can be imitated and
+							improved upon, providing adaptation to the Indian ecosystem.
+							Existing literature, conference reports and online resources were
+							used to briefly analyse financial education implementations in:
+							Brazil, Indonesia, China, Philippines.
+						</p>
+					</div>
+				),
+				res: (
+					<div>
+						<b>Main results:</b>
+						<br />
+						<p>
+							Positive correlation between the Financial Status of an individual
+							and Financial education and experience the individual had
+							received. Stronger correlation coefficient for education over
+							experience.
+						</p>
+						<p>
+							Low level of financial literacy amongst 18-25 aged demographic.
+						</p>
+						<br />
+						<b>
+							<u>Secondary findings:</u>
+						</b>
+						<p>
+							Higher levels of income for individuals with a bachelor's degree
+							over those with further postgraduate education.{' '}
+						</p>
+						<p>A 9% income gap found between males and females</p>
+						<p>
+							Steady increase in income over years, peaking at the 46-55
+							bracket.
+						</p>
+						<p>
+							Discrepancy between Calculated FS-Score and Self-rated FS: Maximum
+							gap for 18-25 age group Percentage saved and percentage invested,
+							varying across age groups. Large amounts invested for high income
+							individuals{' '}
+						</p>
+						<p>
+							Non-existence of personal finance course in formal education for
+							large majority
+						</p>
+					</div>
+				),
+				con: (
+					<div>
+						<b>Future Scope</b>
+						<br />
+						<p>
+							Focus into how the pandemic changed investor mindset and increase
+							in financial awareness and management in young adults
+							<br />
+							The shift from wealth creation in current policies to include
+							wealth management
+							<br />
+							Implementation of educational reform to improve financial literacy
+							that’s needed in the country
+							<br />
+							Ultra HNI’s investment strategy and its social impact
+						</p>
+
+						<b>Conclusion</b>
+						<p>
+							Average indian household expenditure: income ratio leaves barely
+							any room for investment to find financial freedom <br />
+							It’s necessary to implement educational reform, focusing not just
+							on investments but more on taxation, it’s benefits and more
+							macro-economic aspects (will be highlighted further in later
+							report) <br />
+							We’ve also confirmed a direct correlation between financial status
+							in late 30’s - 40’s and financial literacy as a young adult.{' '}
+							<br />
+							Financial literacy is a concept for the top 20% of the taxpayers
+							in India per approximates but the pandemic has clearly skewed the
+							stat. (As of now, India has 46M demat accounts)
+						</p>
+					</div>
+				),
 			},
 		},
 		{
 			id: 3,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'To explore, analyze and lay out a starting path for expansion of space based industries.',
+			logo:
+				'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-680804387-1562856431.jpg',
+			name: 'Economics of Space Commercialization',
+			imgUrl: [
+				'https://drive.google.com/file/d/1JlWjreqcSNXHjEn6gpnVTZQ0eVwn0BGT/preview',
+				'https://drive.google.com/file/d/1ZQf77QVAM_eg618U2HOzyNlara1vFqfx/preview',
+				'https://drive.google.com/file/d/1qUlf8_k5T8z3mtQVBd2rwFdobpgCkPY8/preview',
+			],
+			members: [
+				'Aman Kureel',
+				'Aditya Satpute',
+				'Aditya Shrikhande',
+				'Shridevi Kumar',
+				'Chandana R V',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						To explore, analyze and lay out a starting path for expansion of
+						space based industries.
+					</div>
+				),
+				meth: (
+					<div>
+						<ul>
+							<li>
+								Explore novel concepts that have never/rarely been applied on a
+								commercial scale
+							</li>
+							<li>
+								Develop those concepts into something that can be commercially
+								viable
+							</li>
+							<li>
+								Identify the customer base and make an attempt to size up the
+								existing market
+							</li>
+							<li>
+								Based on technical information about the concepts and market
+								data, attempt to make a preliminary business model for the
+								deployment of these concepts whilst taking into account the
+								market conditions
+							</li>
+							<li>
+								The concepts should be able to tackle existing problems whilst
+								being commercially viable
+							</li>
+						</ul>
+					</div>
+				),
+				res: (
+					<div>
+						<p>
+							The study found that there are a few concepts that have commercial
+							potential. Application of satellite imagery in agriculture is
+							already gaining traction in developed countries and it has
+							potential in India as well. The study highlights the pathway
+							through which satellite imagery can be procured by farmers in
+							India, which will help in better farm monitoring and increase in
+							crop yields. The study also identified the looming threat of the
+							space junk problem and how, through changes in regulation and
+							better enforcement, there are opportunities for companies to
+							undertake profitable ventures whilst tackling the space junk
+							problem head on, thereby making a business case for undertaking
+							mitigation measures and making a safer environment for all
+							infrastructure and human spaceflight operations in orbit.
+						</p>
+					</div>
+				),
+				con: (
+					<div>
+						<p>
+							The study enabled the team to come to the conclusion that there is
+							a wide range of applications of space based technology and that
+							space offers a completely new dimension for development and
+							commercialization of new technologies. During research, the team
+							came across a myriad of potential new avenues for expansion of
+							industry into space and it is safe to say that space has the
+							potential to be the next business frontier. Some in the industry
+							liken space industrialization to the Internet. Initially, the
+							Internet was only seen as an information portal but today it is
+							the foundation of the livelihoods of hundreds of millions of
+							people. There is a huge scope for expansion of industry into
+							space, particularly for software development, manufacturing and
+							tourism and all it needs is a little kickstart which can be
+							enabled by better regulations and proactive government policies.
+						</p>
+					</div>
+				),
 			},
 		},
 		{
 			id: 4,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'Analyse consumer behaviour towards the market leaders in the beverage industry.',
+			logo:
+				'https://st2.depositphotos.com/1036149/6140/i/950/depositphotos_61407707-stock-photo-soda-bottle-with-dollar-sign.jpg',
+			name:
+				'EFFECTIVE MARKETING STRATEGIES AND STUDY OF CONSUMER BEHAVIOR IN THE BEVERAGE INDUSTRY',
+			imgUrl: [
+				'https://drive.google.com/file/d/136Vm9SR1jpH-ZGYcdmsRqsxZqSvxAMgZ/preview',
+				'https://drive.google.com/file/d/141r5I6N2SAmg6u7nqOaCScyuY2oXwPdy/preview',
+				'https://drive.google.com/file/d/1bj1IQqpOH9_FlJCQhCaHlwW9vE7eGL49/preview',
+				'https://drive.google.com/file/d/160SqelESsBkzvl5cTOEDEehQAVOfjGkt/preview',
+				'https://drive.google.com/file/d/1iDsXw9JjImgqWgzgVmMT4VBCeiXO8dUQ/preview',
+				'https://drive.google.com/file/d/1y3QXDfKgd3ETCy_02DqUP-tyocw_a5Xj/preview',
+			],
+			members: [
+				'Aman Kureel',
+				'Navneeth Anil Kumar',
+				'Prasanna Venkatesan R',
+				'Rahul Rajesh',
+				'Gayathri Nisha',
+				'Vishal Prakash',
+				'Ankit Stephen Thomas',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						<ol>
+							<li>
+								Analyse consumer behaviour towards the market leaders in the
+								beverage industry.
+							</li>
+							<li>
+								Examine the marketing strategies that the companies have
+								employed.
+							</li>
+							<li>
+								Formulate a qualitative and quantitative study data for these
+								beverages using various methods
+							</li>
+						</ol>
+					</div>
+				),
+				meth: (
+					<div>
+						<ol>
+							<li>
+								A qualitative analysis was accomplished by conducting the
+								following analysis:-
+								<ul>
+									<li>● SWOT</li>
+									<li>● PESTLE</li>
+									<li>● PORTER’S 5 FORCES</li>
+								</ul>
+							</li>
+							<li>
+								A quantitative analysis was coordinated by launching a survey,
+								predominantly to evaluate, the consumer behaviour and brand
+								image of the 4 chosen brands
+							</li>
+							<li>
+								The obtained results were then quantitatively segregated,
+								categorically analyzed and utilized to visualize diverse array
+								forms of graphs on Tableau- A Data Visualization Tool.
+							</li>
+							<li>
+								An STP analysis was conducted to recognize how each of the 4
+								brands:-
+								<ul>
+									<li>Segments their customers</li>
+									<li>
+										Targets each segmented group according to their preferences
+										and habits.
+									</li>
+									<li>
+										Makes positioning adjustments in their branding and
+										marketing strategies to accommodate the needs and
+										expectations of their customers
+									</li>
+								</ul>
+							</li>
+							<li>
+								. A digital marketing strategy analysis was organized to
+								comprehend how each of the market leaders effectively implement
+								this inexpensive and robust platform.
+							</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1Y_kotkyq7AttkRMIsWdspjQkq-fYhDsV/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1MlgvWY2ch-1F2jHSTjzjIHhVxAefn3dG/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1pMZ6cNkBaD_weOyxlFcfpJH81JIzDVdu/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1TZkYFwUTO9oqFSDrIn5h303DQLMiD2YO/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1RTKOm9d0D_CnBGKY1nzwvucZYSePy7Ez/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1bhnP7T4XbYjLRHlKUu2VAPn2ZyzPz3nx/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<b>LINKS TO EACH OF THE ANALYSIS:</b>
+						<br />
+						<ol>
+							<li>
+								<a href="https://docs.google.com/document/d/134SKgV420twOHD2kXPQ5MV6BsZmpQD-ws8BBcw8ZXF8/edit">
+									Report (includes links to qualitative analysis){' '}
+								</a>
+							</li>
+							<li>
+								<a href="https://docs.google.com/forms/d/1RW_bHiLveYXepPuwM5wgAk_YUh8wkipxYxRNZsGahpQ/edit">
+									Survey
+								</a>
+							</li>
+							<li>
+								<a href="https://docs.google.com/document/d/1_IAPs-evHTrjQjBNhZMb4SQK1ju8WqTWIGDX3PC1Xa8/edit?usp=sharing">
+									STP and 5Ps (Coca-cola){' '}
+								</a>
+							</li>
+							<li>
+								<a href="https://docs.google.com/document/d/1hcaTVV_FAUfcyKLzx_5TJuQmriu_Rb_Z88lpwC2SCN0/edit?usp=sharing">
+									STP and 5Ps (Energy drinks){' '}
+								</a>
+							</li>
+							<li>
+								<a href="https://docs.google.com/document/d/1wItu6wreZz6Dxl-EVot6mLUzrSdMhyFukn3yaDodHyE/edit?usp=sharing">
+									STP and 5Ps (Energy drinks){' '}
+								</a>
+							</li>
+							<li>
+								<a href="https://docs.google.com/document/d/1_JQv-ReH3Q8KWyv8aiD-VLqG9so26tFRBHmp-Q3LIqI/edit?usp=sharing">
+									Digital marketing(Soft drinks){' '}
+								</a>
+							</li>
+							<li>
+								<a href="https://docs.google.com/document/d/1qlSJaBQeGd8scA_Jle1I8KJHz1QBE-p9H5Dwsf06yJk/edit?usp=sharing">
+									{' '}
+									Digital marketing(Energy drinks){' '}
+								</a>
+							</li>
+						</ol>
+					</div>
+				),
+				con: (
+					<div>
+						<u>Future Work</u>
+						<br />
+						<ol>
+							<li>Possibility of constructing a research paper.</li>
+							<li>
+								Similar to digital marketing analysis, another marketing method
+								can be adopted.{' '}
+							</li>
+							<li>
+								Product management and development examination on a consumer
+								centric basis
+							</li>
+						</ol>
+					</div>
+				),
 			},
 		},
 		{
 			id: 5,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'Analyse the effectiveness of the 6 major Export schemes Implemented by the Ministry of Textiles.Recommend policy changes to the schemes in place.',
+			logo:
+				'https://images.moneycontrol.com/static-mcnews/2017/05/textile-cotton-arvind-1280-720-770x433.jpg?impolicy=website&width=770&height=431',
+			name:
+				'Analysis of 5 Major Schemes in the Indian Apparels and Textile Industry',
+			imgUrl: [
+				'https://drive.google.com/file/d/1kTo0g-q-orWZrkUGiTjIJDjHBA_RHxhi/preview',
+				'https://drive.google.com/file/d/1a10-q1embuLFkgnl9CrXqfQQeKkUK2Pw/preview',
+				'https://drive.google.com/file/d/1kwacKI0moZz6QExTyX_N9yhs9BHDkt7t/preview',
+				'https://drive.google.com/file/d/1wFRI_v64RLUMIHzMNWrTSqFkZfK-nGuw/preview',
+				'https://drive.google.com/file/d/1fjpYQhA_2bLLFTMgOtiEqaaAnlB7jbJI/preview',
+				'https://drive.google.com/file/d/1iU7rBjRZqE25TpMuG8rEDpS8UL9QmCFx/preview',
+			],
+			members: [
+				'Arpitha Yoga',
+				'Prakruti Vora',
+				'Annette Manoj Elsa',
+				'Pavan C.',
+				'Pavan M.G',
+				'Nitya Kuchimanchi',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						<p>
+							Analyse the effectiveness of the 6 major Export schemes
+							Implemented by the Ministry of Textiles
+						</p>
+						<ol>
+							<li>Technology Upgradation Fund Scheme (TUFS)</li>
+							<li>Merchandise exports from India scheme (MEIS)</li>
+							<li>Integrated Skill Development Scheme (ISDS)</li>
+							<li>Market Access Initiatives (MAI)</li>
+							<li>Scheme for Integrated Textile Parks (SITP)</li>
+						</ol>
+						<p>Recommend policy changes to the schemes in place.</p>
+					</div>
+				),
+				meth: (
+					<div>
+						<ul>
+							<li>
+								Studied the various schemes and government policies implemented
+								by the Ministry of Textiles to boost the exports of the sector
+								and narrowed down on major schemes hailed to have positively
+								affected the growth of exports
+							</li>
+						</ul>
+					</div>
+				),
+				res: (
+					<div>
+						<ol>
+							<u>Technology Upgradation Fund Scheme (TUFS) </u>
+							<br />
+							<ol type="a">
+								<li>
+									From the regression we can see that, with increasing subsidy
+									the number of power looms in the country also increased in a
+									noticeable trend.
+								</li>
+								<li>
+									Power looms demand with subsidy doesn’t seem to follow a
+									specific trend with the amount of subsidy. Therefore, power
+									looms demand depends very less on Subsidy.
+								</li>
+								<li>
+									When it comes to Textile and Apparel Exports, graphis
+									increasing overall.
+								</li>
+								<li>
+									Subsidy given under TUFS scheme had a significant effect on
+									the increasing the number of power looms as well as exports
+									from India.
+								</li>
+							</ol>
+						</ol>
+						<ol>
+							<u>Scheme for Integrated Textile Parks (SITP)</u>
+							<br />
+							<ol type="a">
+								<li>
+									From the graphs plotted, there has been an increase in the
+									overall exports from 2005, and improvement was seen in exports
+									when funds were raised to 400 crores
+								</li>
+								<li>
+									Reduction in required number of promoters and encouraging more
+									involvement of State Governments in the approval and
+									implementation phase of the project.
+								</li>
+							</ol>
+						</ol>
+						<ol>
+							<u>Market Access Initiative Scheme (MAI)</u>
+							<br />
+							<ol type="a">
+								<li>
+									With the graph having an almost steady upward curve in terms
+									of FDI and exports and a p value less than the 0.05
+									significance level depicting a strong positive relation
+									between the two.
+								</li>
+								<li>
+									We can concur from the limited data available, that the scheme
+									has aided in increasing the FDI received and thereby
+									contributed to the increase in textile exports.{' '}
+								</li>
+							</ol>
+						</ol>
+						<ol>
+							<u>Merchandise Exports from India Scheme(MEIS)</u>
+							<br />
+							<ol type="a">
+								<li>
+									From plotting the graphs and conducting the t test with the
+									limited data, it can be observed that the countries such as
+									USA and Japan which were given additional incentivization
+									under the MEIS scheme showed statistically significant
+									differences in imports from India post the implementation of
+									the scheme
+								</li>
+							</ol>
+						</ol>
+						<ol>
+							<u>Integrated Skill Development Scheme (ISDS)</u>
+							<br />
+							<ol type="a">
+								<li>
+									From the limited data available, we can infer that the scheme
+									is proving to be beneficial at the pace it is at.
+								</li>
+							</ol>
+						</ol>
+					</div>
+				),
+				con: (
+					<div>
+						<ol>
+							<u>Technology Upgradation Fund Scheme (TUFS) </u>
+							<br />
+							<ol type="a">
+								<li>The TUFS is a highly effective scheme</li>
+								<li>
+									Some suggestion to improve the scheme include:
+									<ol type="i">
+										<li>
+											Interest subvention should be reintroduced and disbursed
+											particularly on Term loans availed by the textile sector.
+										</li>
+										<li>
+											The Policy must provide a separate scheme or funding for
+											indigenous R{'&'}D and subsequent development of
+											machinery.
+										</li>
+									</ol>
+								</li>
+							</ol>
+						</ol>
+						<ol>
+							<u>Scheme for Integrated Textile Parks (SITP)</u>
+							<br />
+							<ol type="a">
+								<li>
+									The scheme has minimal impact on the exports as of the year
+									2018.
+								</li>
+								<li>
+									Some suggestion to improve the scheme include:
+									<ol type="i">
+										<li>
+											Reduction in the required minimum number of promoters for
+											the consideration of a Project.
+										</li>
+										<li>
+											Modification to encourage the increased involvement of
+											State Governments in the approval and implementation phase
+											of the project.
+										</li>
+										<li>
+											Enforcement of a lower limit in potential size of the
+											park.
+										</li>
+									</ol>
+								</li>
+							</ol>
+						</ol>
+						<ol>
+							<u>Market Access Initiative Scheme (MAI)</u>
+							<br />
+							<ol type="a">
+								<li>The scheme was effective.</li>
+								<ol type="i">
+									<li>
+										Inclusion of support to the foreign buyers from developed
+										markets such as North East Asia, North America, Europe.
+									</li>
+									<li>Inclusion of transportation Cost covering</li>
+									<li>Removal of the 12 month membership criterion.</li>
+									<li>Enhancement of the Export Turnover criteria</li>
+								</ol>
+							</ol>
+						</ol>
+						<ol>
+							<u>Merchandise Exports from India Scheme(MEIS)</u>
+							<br />
+							<ol type="a">
+								<li>
+									Lockdowns and safety requirements that need to be met will
+									prove to be a major hindrance for the implementation of the
+									replacement scheme, Remission of Duties or Taxes on Export
+									Product (RoDTEP), which will require intensive data collection
+									for successful implementation, the time period till will be
+									crucial in directing the export competitiveness of India.
+								</li>
+							</ol>
+						</ol>
+						<ol>
+							<u>Integrated Skill Development Scheme (ISDS)</u>
+							<br />
+							<ol type="a">
+								<li>
+									From the limited data available, we can concur that,
+									Integrated Skill Development Scheme (ISDS) was effective
+								</li>
+								<li>
+									The study can be furthered to propose and implement policy
+									changes within the government and conduct surveys in the
+									industry to study the localised impact.
+								</li>
+							</ol>
+						</ol>
+					</div>
+				),
 			},
 		},
 		{
 			id: 6,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'The study on the formation of candlestick patterns was done to find out the different candlestick patterns and identify their accuracy.',
+			logo:
+				'https://thumbs.dreamstime.com/t/forex-candlestick-chart-over-dark-background-58933797.jpg',
+			name: ' Analysis on the Effectiveness of Candlestick Patterns',
+			imgUrl: [
+				'https://drive.google.com/file/d/1bAXQzqCeUVtVmT7Pf83mohs5lYNeCB0s/preview',
+				'https://drive.google.com/file/d/1gDoS3G6nBNjtpNsUL03Ma-hUxFLh27M0/preview',
+				'https://drive.google.com/file/d/1jy-3KcoQ_6ANzR20SdV9l17oRyzaVxTi/preview',
+				'https://drive.google.com/file/d/17sl6FC0JP2BH-WOIoht0B1hrEmzC43KE/preview',
+				'https://drive.google.com/file/d/1eDBtd5gjM2yKV_qNiboERYRwV__yAzRN/preview',
+				'https://drive.google.com/file/d/17vMB31no3WMkkCckqX6QIsi-eXvFIREz/preview',
+				'https://drive.google.com/file/d/1V9OdG7T2N8b-nu00ksSgk78Q8PwLG-ir/preview',
+				'https://drive.google.com/file/d/1VzcgPgqqQCoEsVqUqn6JgXQMesUYc07g/preview',
+			],
+			members: [
+				'Shreya',
+				'Shreya',
+				'Aditya Reddy',
+				'Shreyank R',
+				'Aakash W',
+				'Manas Akash',
+				'Nikhil Sahu',
+				'Rohaan Sunil',
+				'Cyriac Talus',
+				'Aditya Santhosh',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						The study on the formation of candlestick patterns was done to find
+						out the different candlestick patterns and identify their accuracy.
+						The study was done to spot if these patterns help the investors to
+						check whether the candlestick patterns are dependable for trading
+						decisions. This study was conducted based on the past years of the
+						Nifty index.
+					</div>
+				),
+				meth: (
+					<div>
+						<p>
+							Nine firms were selected from various industries to diversify the
+							portfolio. This was done to get a broader picture of the market
+							and to minimise the fundamental factors. To further cut back on
+							the fundamental factors, a few dates were ignored when the
+							selected companies were either in the news and a few days where
+							the firms’ reports were announced.
+						</p>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/17sl6FC0JP2BH-WOIoht0B1hrEmzC43KE/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<p>
+							Twelve reversal candlestick patterns were selected and coded to
+							obtain results of frequency, and the success and failure of the
+							patterns. These included:
+						</p>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1tVLCxT1d3mfElHS3gQlyiIJioyzV0MuQ/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<p>
+							A few simple technical indicators namely Relative Strength Index
+							(RSI), Simple Moving Average (SMA) and Moving Average Convergence
+							Divergence (MACD) were selected to check the accuracy of these
+							indicators to support our selected candlestick patterns. The
+							accuracy of these indicators to support the patterns were
+							determined based on the following: if RSI is above 70, it is
+							considered to be overbought and if the RSI is below 30, it is
+							considered to be oversold. A candlestick pattern will support RSI
+							at the point of overbought or oversold. SMA supporting a
+							candlestick pattern was checked by observing if SMA was passing
+							through the selected pattern. When the MACD crosses the signal
+							line, a trade signal is issued. The crossovers of MACD and signal
+							line shows overbought or oversold signals.
+						</p>
+						<p>
+							The frequency of candlestick patterns and their accuracy were
+							primarily obtained from our codes. The risk of the candlestick
+							patterns and their rate of return were calculated. The accuracy of
+							the technical indicators in supporting each pattern was calculated
+							as well.
+						</p>
+					</div>
+				),
+				res: (
+					<div>
+						<p>
+							The results were noted and tabulated to have a better
+							understanding of the candlestick patterns and the indicators in
+							supporting these patterns. The inconsistency of the patterns was
+							expected as believed since a few of the patterns occurred over
+							2,500 times while few never occurred in any of the 9 stocks over
+							the time period. Here is the accuracy of the candlestick patterns
+						</p>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1gDoS3G6nBNjtpNsUL03Ma-hUxFLh27M0/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br /> <br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1bAXQzqCeUVtVmT7Pf83mohs5lYNeCB0s/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<p>
+							Here the accuracy comparison between the bullish and the bearish
+							patterns:
+						</p>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1eDBtd5gjM2yKV_qNiboERYRwV__yAzRN/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<p>
+							The accuracy of the indicators (RSI, MACD, SMA) were also noted
+							down when the occurrence of the indicators coincided with the
+							patterns selected. Here is the accuracy of the indicators with the
+							corresponding candlestick patterns.
+						</p>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1jy-3KcoQ_6ANzR20SdV9l17oRyzaVxTi/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<p>
+							The risk and return of the patterns were calculated using a code,
+							here the order was placed to buy when a pattern occurred and on
+							hitting 50 pips, the order was closing with a profit. And the stop
+							loss was placed at 20 pips. The risk and return was calculated for
+							only six patterns as the other three patterns did not occur many
+							times and the risk and return wouldn't be much. The risk was
+							calculated by using standard deviation of the returns of each
+							company and the patterns.
+						</p>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1V9OdG7T2N8b-nu00ksSgk78Q8PwLG-ir/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<p>
+							Here are the returns of the broad market and the stocks outright,
+							in the same time period the candlesticks were looked at for.
+						</p>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/17vMB31no3WMkkCckqX6QIsi-eXvFIREz/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<p>
+							The market returned 133.70% in this time period. It's clear that
+							either owning an index fund, or simply an equally weighted basket
+							of these stocks, is considerably better than using this strategy.
+						</p>
+					</div>
+				),
+				con: (
+					<div>
+						<p>
+							Despite this inefficacy, why is this form of trading so popular?
+						</p>
+						<p>
+							A lot of it has to do with the relative accessibility of the
+							strategy, it requires no complicated financial modelling or
+							knowledge of stochastics.
+						</p>
+						<p>
+							As frequency of occurrence and popularity of a pattern increases,
+							any layman can observe the pattern formation and may trade
+							according to the pattern’s expected or theoretical occurrence.
+							This behavior is what sometimes causes the pattern to go the other
+							way.{' '}
+						</p>
+						<p>
+							Since there is a certain logic behind it, it provides a
+							reasonable, though as shown, often wrong thesis for people to
+							trade on.
+						</p>
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1VzcgPgqqQCoEsVqUqn6JgXQMesUYc07g/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<p>
+							The above Google search trends for the phrase ‘candlestick
+							trading’, showing a marked increase in the recent years. It is
+							this unsophisticated retail crowd that is responsible for a
+							massive renewed popularity of technical analysis.
+						</p>
+						<p>
+							It is evident that the salient candlestick patterns have no
+							predictive power. Therefore, investors should mainly focus on the
+							fundamental factors with the help of a few technical indicators
+							for an idea.{' '}
+						</p>
+					</div>
+				),
 			},
 		},
 		{
 			id: 7,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'This project would aim at taking in consideration the sentiments of workers and analysing their functioning in a gig economy.',
+			logo:
+				'https://www.safetyandhealthmagazine.com/ext/resources/images/2017/11-nov/gig.jpg?1508425591',
+			name: 'Sentiments of Workers in the Gig Economy',
+			imgUrl: [
+				'https://drive.google.com/file/d/1x6TVfOvARzzMeEfDdwmDJGoIXQTUVNVJ/preview',
+				'https://drive.google.com/file/d/11fXlaCLpdZDo-pNQS3loFsFkm_BheTNe/preview',
+				'https://drive.google.com/file/d/15sBHkHe9PPcuMs4XqSDFZAJobBD-w8t1/preview',
+				'https://drive.google.com/file/d/1M_weuNRHM4quvoE0wIXNQkpC_aljfOVC/preview',
+				'https://drive.google.com/file/d/13VfsL361b5vjLIk7TfmKhBarBD13-6Px/preview',
+				'https://drive.google.com/file/d/1GygtnjLsRN3Mbmfh72ivsajdqm2WQ509/preview',
+				'https://drive.google.com/file/d/1SAE2c34MtTbBew2_pP3nFaODKsmawx_m/preview',
+				'https://drive.google.com/file/d/1oxyIYzyKc2Nbs9w0o0wd5w-5HGNcwl-q/preview',
+			],
+			members: [
+				'Aaron George',
+				'Shubhang Bhandarkar',
+				'Luv Nambiar',
+				'Krishna Prasad Kuddanaya',
+				'Mohona Mukherjee',
+				'Ranjeet Sonawane',
+				'Shriroop Roychoudhury',
+				'Susmita Saha',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						<p>
+							With the exponential rise in companies operating in the
+							gig-economy, and with the advent of technology, companies have
+							realised the potential of running their entire core business
+							availing the services of employees on a freelance basis. This
+							project would aim at taking in consideration the sentiments of
+							workers and analysing their functioning in a gig economy. With the
+							job market within the Gig Economy being highly unregulated, the
+							project would also attempt at analysing the regulations already in
+							place, and further regulations that can be implemented.
+						</p>
+					</div>
+				),
+				meth: (
+					<div>
+						<p>
+							To start with, project members dwelled into the topic of
+							Gig-Economy, concentrating primarily on understanding the Gig
+							Economy; factors leading to its rise in demand; concern behind it
+							(governing laws/regulations); how it benefits the company and the
+							consumer.
+						</p>
+						<p>
+							This was followed by the collection of data, looking for companies
+							that operate within the Gig Economy (majority of the workforce
+							primarily employed within the Gig Economy), collecting their
+							market share ratios / market prices, to be used for the extended
+							scope of the project.
+						</p>
+						<p>
+							Following this, members indulged in a qualitative study
+							(comparative case study) of companies, chosen keeping in mind the
+							clientele they serve and their market capitalization. The study
+							was carried out for Uber {'&'} Lyft, and Swiggy {'&'} Zomato.
+						</p>
+						<p>
+							The members then indulged in designing a survey targeted at
+							collecting data from employees of three demographics (those that
+							work/have worked in the gig economy; those that have work
+							experience, but not in the gig economy; students/no work
+							experience). The survey was based on 9 main criteria, divided into
+							perceived advantages (for the workers), perceived disadvantages
+							(for the workers), and variables.
+						</p>
+						<p>
+							Suitable analysis (Chi-Square Testing and Fishers Exact Test) were
+							then performed on the following - 1. Perceived Advantages and
+							Variables; 2. Perceived Diadvantages and Variables; 3. Need for
+							Regulations and Perceived Advantages and Disadvantages.{' '}
+						</p>
+						<p>
+							With the results found, the need for regulations was analysed, and
+							changes were proposed, along with analysing the effect of COVID on
+							the Gig Economy.{' '}
+						</p>
+						<p>
+							The extended scope of the project involved forecasting the market
+							prices of UBER and LYFT using a suitable ARIMA model.
+						</p>
+					</div>
+				),
+				res: (
+					<div>
+						<p>
+							Qualitative Analysis - SWOT Analysis of the companies considered -{' '}
+						</p>
+						<iframe
+							src="https://drive.google.com/file/d/1YjGWX-eT378yg6Fxydh6_9uvHLSRqDAj/preview"
+							width="640"
+							height="480"
+						></iframe>{' '}
+						<br /> <br />
+						<iframe
+							src="https://drive.google.com/file/d/1cHyAwyApALOrbgYrUo2tl11BfSMtigyW/preview"
+							width="640"
+							height="480"
+						></iframe>{' '}
+						<br /> <br />
+						<iframe
+							src="https://drive.google.com/file/d/1Za2M-51xTU4R8_HFT8vQZDSvROSIlQWx/preview"
+							width="640"
+							height="480"
+						></iframe>
+						<br /> <br />
+						<iframe
+							src="https://drive.google.com/file/d/1NY3h0WQ7PZicQlAvPkkooliMho-PYyJP/preview"
+							width="640"
+							height="480"
+						></iframe>{' '}
+						<br />
+						<p>Criteria considered in the survey - </p>
+						<iframe
+							src="https://drive.google.com/file/d/14Cw9Fkp9nqdnmyap5j9pbhVLZUcf4VT5/preview"
+							width="640"
+							height="480"
+						></iframe>
+						<br />
+						<p>
+							For inferential analysis on the survey data collected -
+							<ol>
+								<li>
+									H0 - individuals are motivated to work within the gig economy
+									due to its perceived advantages with pull factors having a
+									greater influence
+								</li>
+								<li>
+									H1 - Workers in the Gig economy typically perceive the
+									disadvantages to outweigh the advantages, thereby push factors
+									being predominant.
+								</li>
+							</ol>
+						</p>
+						<iframe
+							src="https://drive.google.com/file/d/1ydeOLx8xE93xGy9guxqkAVeJzuNWhPFl/preview"
+							width="640"
+							height="480"
+						></iframe>{' '}
+						<br /> <br />
+						<p>
+							<u>Observation </u>: Fisher's exact results show no significant
+							association between either of the variables and the perceived
+							advantages. With this we find H0 unsupported, showing lack of
+							significant association between value for entrepreneurship and the
+							perceived advantages.
+						</p>
+						<p>
+							<u>Result</u> : H0 rejected
+						</p>
+						<iframe
+							src="https://drive.google.com/file/d/1kU3s0tuehMH9uWwjP1C2eWYYeLHaLkun/preview"
+							width="640"
+							height="480"
+						></iframe>{' '}
+						<br />
+						<p>
+							<u>Observation</u> : There is a significant association between
+							variables and the perceived disadvantage of uncertain salary as
+							found from the chi-square exact tests (p &#60;0.05). There is no
+							significant association between variables and the other perceived
+							disadvantages.
+						</p>
+						<iframe
+							src="https://drive.google.com/file/d/1vhyZBcIq8B3pjKv8tExASeY7tZ7tWZ7o/preview"
+							width="640"
+							height="480"
+						></iframe>{' '}
+						<br />
+						<p>
+							Observation : There is no significant association between the lack
+							of legal protection within the gig economy and the perceived
+							advantages and disadvantages (since p&#62;0.05).
+						</p>
+						<p>
+							The lack of association between the need for regulations and the
+							perceived advantages and disadvantages can be attributed to the
+							lack of significant association between the variables and the
+							perceived advantages and disadvantages.{' '}
+						</p>
+						<p>
+							With this in mind, following is our analysis on the shortcomings
+							of the gig economy and the proposed changes -
+						</p>
+						<u>
+							{' '}
+							<b>Shortcomings of the Gig Economy</b>{' '}
+						</u>
+						<p>
+							The unending quest to cut costs and increase profit has led to a
+							number of challenges in the gig economy, primarily for the
+							workers. The most major shortcoming in the gig economy is the lack
+							of any sort of regulation that protects workers. Since these
+							workers are not classified as employees, they miss out on a number
+							of security benefits such as insurance, pension, healthcare, etc.
+							Moreover, there are no rules governing the number of working hours
+							which becomes concerning when looking at delivery riders and cab
+							drivers. There are no laws on pay apart from the general minimum
+							wage laws. Thus, proper defining regulation is extremely important
+							to secure the rights of the increasing workforce in the gig
+							economy.
+						</p>
+						<p>
+							The contracts signed between the company and the contractors gives
+							complete authority for the company to suspend the contractor based
+							on various clauses decided by the company. There are some clauses
+							that give the power to the company to dismiss the contract if the
+							contractor tries to go against the company. The contractors do not
+							get the liberty to raise the issues. For example, the revenue
+							sharing system between Zomato and its delivery personnel is
+							decided by the company and the workers get no say in it
+							whatsoever. This complete lack of negotiating capacity for the
+							individual worker can lead to abuse of power by the organization
+							as was seen in India in recent months when several delivery
+							personnel decided to strike to protest against the new payment
+							structure of Zomato and Swiggy (a food and grocery delivery
+							service app). These companies also suspended inactive accounts
+							during the strike in India and there was no recourse possible. Cab
+							drivers of Uber, Ola and Lyft will have to agree to share in
+							revenue whatever the high authorities of the company decide. This
+							is a great example which indicates that employee do not get the
+							chance to get the basic pay.
+						</p>
+						<p>
+							Collectivization in the gig economy is near-impossible for the
+							workers which makes the lack of negotiating power even worse. With
+							no interaction among workers, except in limited geographical
+							areas, coming together under one umbrella for their own good is
+							very difficult. There has been some progress and it is expected
+							that the rise of the gig economy will give rise to more workers’
+							unions.{' '}
+						</p>
+						<p>
+							Another problem that arises from a lack of regulation is that of
+							non-payment of or lower payment than the agreed upon sum. This
+							problem of wage theft is widespread in the freelance industry and
+							the only recourse available is to go to court which is not
+							feasible most of the time.
+						</p>
+						<p>
+							One of the key recommendations from a new report recently issued
+							by the World Bank, in conjunction with the International Labour
+							Organization (ILO), is that countries need to extend their social
+							and labour protections to people who are working part time or in
+							serial part time or temporary jobs.
+						</p>
+						<p>
+							The key to making this happen could be to use the very same
+							technology that is being used to drive the gig economy. There is
+							huge scope for governments to use technology for enforcing the new
+							regulations. Most transactions on the gig economy are done via the
+							internet and as such they can be tracked. Hence, these companies
+							do need to contribute to insurance and other social contributions.
+						</p>
+						<p>
+							However, the gig economy is not really a new way of working.
+							Rather, many people who are working this way are employees in
+							disguise. As such the employers are not paying the true costs for
+							employing them. The gig economy is a way of externalizing costs.
+							In other words, it allows some sectors of society not to pay the
+							true costs for making profits.
+						</p>
+						<p>
+							Even if the reforms are brought in the gig economy, there are
+							certain disadvantages too.
+						</p>
+						<p>
+							The business model of companies like Uber and Lyft or Swiggy and
+							Zomato is to operate and provide services to the customers at a
+							lowest possible price. That is the biggest margin from which these
+							companies make profit. If these companies are asked to make the
+							certain benefits mandatory, then the rates they charge for the
+							customer will also increase from what it is now.
+						</p>
+						<u>
+							{' '}
+							<b>Recommended Regulations</b>{' '}
+						</u>
+						<p>
+							There is substantial need and scope for implementing reform in the
+							gig-economy. There are several ways through which this can be
+							achieved.
+						</p>
+						<ol>
+							<li>
+								Confirming and enforcing existing labour laws to extend to gig
+								economy workers. Since the current labour laws in many countries
+								have a lot of shortcomings, this extension will likely only be
+								possible after litigation and review of the current laws
+							</li>
+							<li>
+								Creating a qualifying test in order to extend the scope of the
+								term employee to gig economy workers. Thus, the security and
+								benefits that extend to formal and traditional employees will be
+								extended to the workers.
+							</li>
+							<li>
+								{' '}
+								Employers should encourage workers’ access to appropriate
+								training opportunities to enhance their skills, career
+								development, and occupational mobility.
+							</li>
+							<li>
+								Equalizing benefits and dismissal procedures between fixed-term
+								and open-ended contracts might prevent misuse of successive
+								fixed-term contracts.
+							</li>
+							<li>
+								Employers should also inform fixed-term workers about vacancies
+								that become available to ensure that they have the same
+								opportunity to secure permanent positions as other workers.
+							</li>
+						</ol>
+						<u>
+							{' '}
+							<b>Effect of COVID-19 on the Gig Economy</b>{' '}
+						</u>
+						<p>
+							Covid-19 has had both positive as well as negative impacts on the
+							Gig Economy. When the lockdown was implemented all over the world,
+							businesses were forced to shut down and so companies started
+							laying off the workers to reduce the expenses. People started to
+							look out for temporary jobs and a sudden surge was seen in the
+							freelancing workforce all over the world. People who were already
+							working in the Gig economy were also affected depending on the
+							industry and location. It looks like they were benefited upto some
+							extent because companies started hiring people for temporary
+							purposes. With the increase in the number of job seekers in the
+							Gig workspace because of worldwide layoffs and salary reduction,
+							competition was at peak and the price paid for gigs was decreased
+							compared to the pre-covid times.
+						</p>
+						<p>
+							In the pre-covid times gig workers in India used to earn an
+							average of 25000 Rs. per month. Later on when the lockdown was
+							imposed the average income of gig workers slipped down below 15000
+							Rs. per month. According to a survey conducted by Flourish,
+							ride-sharing drivers were affected the most with 90%of them
+							reporting income loss. House cleaners were the next on the list
+							with 72% of them reporting income loss. Uber saw a major drop of
+							53% year on year basis in the number of trips bookings.It also
+							laid off 600 employees in India and a total of 6700 employees
+							globally during the pandemic. Food delivery startup of Uber that
+							is Uber Eats doubled year on year basis as people preferred
+							ordering food rather than going out. Zomato in their Mid COVID-19
+							Performance Report said that the pandemic has positively impacted
+							the health of the business and they were expecting to get the
+							business back on track by the end of third quarter of FY20.
+						</p>
+						<p>
+							In the case of LYFT the revenue of the third quarter was almost
+							half on QoQ basis but rose by 47% compared to the second quarter
+							of FY20. It also laid off 17% of it’s workforce and the net loss
+							of the 3rd quarter was almost the same as that of last year.
+						</p>
+						<u>
+							{' '}
+							<b>Gig Economy – Post Pandemic</b>{' '}
+						</u>
+						<p>
+							<i>How have companies decided to care of their gig workers?</i>
+						</p>
+						<p>
+							Recent policy progresses in response to the Covid-19 crisis have
+							shown a growing number of platforms offering preventive measures,
+							as well as increased support in the case of illness for many gig
+							workers. Most of the platforms that have introduced policies in
+							support of workers have been adamant that these are extraordinary
+							measures developed in response to the Covid-19 crisis and
+							promising that similar policies are introduced in the near future
+							. The downside of the policies is that most of them come with an
+							expiry date and only cover the basics . Only minority of platforms
+							have rolled out more encompassing forms of protection, such as the
+							establishment of sickness funds, the provision of health insurance
+							or the reduction of rental costs, with even fewer introducing
+							forms of protection like the right to unlimited time off without
+							penalty.
+						</p>
+						<p>
+							<i>Its future after the pandemic?</i>
+						</p>
+						<p>
+							Gig workers in the pre-pandemic era were mostly doing it as a part
+							time job for extra income while some used it as a method to
+							provide opportunities when in between employment. However, the
+							pandemic has made it clear that these people aren’t the only group
+							as most gig workers have started to depend on gig work for income.
+							India is among the top 3 in-demand countries for online work
+							behind the US and UK globally. The gig economy is expected to grow
+							further in the post-pandemic era. Gig workers enjoy greater
+							independence and flexibility than the traditional salaried person
+							while it allows companies to assume much of the power of employers
+							with none of the responsibility. Thus, it’s a big advantage for
+							both groups. The pandemic could well prove to be essential in the
+							usage of gig workers for knowledge work, and many companies will
+							benefit from the direct or indirect cost savings that the gig
+							economy will offer.
+						</p>
+					</div>
+				),
+				con: (
+					<div>
+						<p>
+							Following this, the market prices for UBER, LYFT and ABNB were
+							forecasted using apt ARIMA models on R. The market graphs are
+							converted to their logarithmic values to see exponential growth
+							difference across time periods, following which a suitable lag is
+							used and the ACF and PACF plots are found. The plots are then made
+							stationary using the differencing function, with a lag of 1. A apt
+							ARIMA model is then suggested, and the forecast is calculated for
+							h=100.{' '}
+						</p>
+						<br />
+						Following are the results found - <br />
+						<b>
+							<u>UBER</u>
+						</b>
+						<br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1XJ6Vn77WFwmDk1i__LordBV4ZYaoReLq/preview"
+								width="640"
+								height="480"
+							></iframe>
+							<br />
+							<br />
+							<iframe
+								src="https://drive.google.com/file/d/1dZWv7rk-P66vzZ4nqf5i9ahT-Qp72v4g/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<br />
+						<b>
+							<u>AIRBNB</u>
+						</b>
+						<br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1qoihzUPxpweXl04UiE43Zl2oYJzu3m8E/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<br />
+						<b>
+							<u>LYFT</u>
+						</b>
+						<br />
+						<center>
+							<iframe
+								src="https://drive.google.com/file/d/1OJQLKQKodMfnNxjul02uaWuIGTLAYUih/preview"
+								width="640"
+								height="480"
+							></iframe>
+							<br />
+							<br />
+							<iframe
+								src="https://drive.google.com/file/d/1whhFTRC66tv52RLEdI66iHM11MxBML6S/preview"
+								width="640"
+								height="480"
+							></iframe>
+						</center>
+						<br />
+						<br />
+						<p>
+							For LYFT and UBER, forecasts are found with suitable d, p, q
+							values suggested, and are then found with p=1, accounting for the
+							lag of 1 for the differencing function. Since the number of lags
+							for ABNB are few, an unstable model was found for p=1 in its case,
+							which is why a forecasting model with p=0 is found.{' '}
+						</p>
+						<p>
+							As the extended scope, in the coming quarters, sufficient data can
+							be collected for the market share ratios, to give us accurate
+							ARIMA forecasting models for the market share ratios. As ABNB has
+							been recently listed, a stable model cannot be found. In addition,
+							with the forecasted model, the volume of stock can be considered
+							and the market capitalization over the next 3 or 4 quarters can be
+							analysed. This would also give us a good idea of the growth of
+							these companies within the gig economy.{' '}
+						</p>
+					</div>
+				),
 			},
 		},
 	],
