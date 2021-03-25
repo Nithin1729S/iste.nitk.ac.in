@@ -1,14 +1,16 @@
 import React from 'react';
-import { constant, gmeets } from '../Assets/constants';
+import { constant, gmeets, furContent } from '../Assets/constants';
 import styles from '../css/descPage.module.css';
 import { Link } from 'react-router-dom';
 
 const DescContent = ({ sn, id }) => {
 	let arr = constant[sn],
 		garr = gmeets[sn],
+		gFur = furContent[sn],
 		index = 0,
 		curProj = {},
-		curmeet = {};
+		curmeet = {},
+		curFur = {};
 	//Dummy address
 	// let imgAddr =
 	// 	'https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview';
@@ -16,11 +18,13 @@ const DescContent = ({ sn, id }) => {
 		if (arr[index].id === id) {
 			curProj = arr[index];
 			curmeet = garr[index].meetLink;
+			curFur = gFur[index].fur;
 			break;
 		}
 		if (id > arr.length) {
 			curProj = arr[0];
 			curmeet = garr[0].meetLink;
+			curFur = gFur[0].fur;
 		}
 	}
 	console.log(curmeet);
@@ -76,6 +80,25 @@ const DescContent = ({ sn, id }) => {
 		);
 	}
 
+	//For further reading section
+	var furComponent = <></>;
+	if (!(typeof curFur === 'undefined' || curFur === '')) {
+		furComponent = (
+			<>
+				<div className={styles.subheading}>
+					<div className={styles.subheadingtext}>Further Reading</div>
+				</div>
+				<div className={styles.description}>
+					Visit{' '}
+					<a className={styles.meet} href={curFur}>
+						this link
+					</a>{' '}
+					to view a GitHub repo or a full report to get the whole picture!
+				</div>
+			</>
+		);
+	}
+
 	//Return function
 	return (
 		<div className={styles.main}>
@@ -106,6 +129,8 @@ const DescContent = ({ sn, id }) => {
 					to join a Google meet and interact live with the people who worked on
 					this project!{' '}
 				</div>
+
+				{furComponent}
 
 				<div className={styles.subheading}>
 					<div className={styles.subheadingtext}>Members</div>
