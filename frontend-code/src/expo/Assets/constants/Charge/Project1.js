@@ -1,5 +1,6 @@
 export default {
     id: 1,
+    tags:[],
     oneline:
         "This project aims to design and implement a hardware accelerator to accelerate the inference of convolutional neural networks on FPGA.",
     name: "Implemention of CNNs on FPGA",

@@ -1,5 +1,6 @@
 export default {
     id: 2,
+    tags: ["Modelling", "Simulink", "ASP", "ASM", "WWTP"],
     logo:
         "https://www.tpomag.com/uploads/inline/xcockrell_4.jpg.pagespeed.ic.NOVnhtHlC-.webp",
     name: "Modelling Of Waste Water Treatment Using ASM",
