@@ -36,6 +36,7 @@
 	width: 100%;
 	aspect-ratio: 1;
 	border-radius: 50%;
+	object-fit: cover;
 }
 .buttonHeader {
 	margin-top: 10%;

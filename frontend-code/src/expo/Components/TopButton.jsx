@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import styles from '../css/topNav.module.css';
-import logo from '../Assets/crypt.jpg';
+//import logo from '../Assets/crypt.jpg';
 import { offsetCoefficient } from '../Assets/constants';
 const TopButton = ({ isActive, handleClick, name, logoSIG }) => {
 	const projectClick = () => {
