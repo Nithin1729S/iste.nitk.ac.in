@@ -1,3 +1,4 @@
+import Voice from './Voice.png';
 export const constant = {
 	//Format for a project
 	// {
@@ -3293,76 +3294,496 @@ export const constant = {
 		},
 		{
 			id: 3,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'Assist the visually impaired by capturing images and recognising objects in their surroundings.',
+			logo:
+				'https://www.ravepubs.com/wp-content/uploads/2018/04/Voice_Control-800x418.png',
+			name: 'Voice Navigator',
+			imgUrl: [
+				'https://drive.google.com/file/d/1qiHjEuBHjScyfWN6tbwqY16k6MZiEiNF/preview',
+			],
+			members: [
+				'Ishan Nedumkunnel',
+				'Anshuman Sinha',
+				'Ankush C',
+				'Shankar Suresh',
+				'Neha Pai',
+				'Aadil Khalifa',
+				'Anuja Goyal',
+				'Joshitha Reddy',
+				'Keesara Vennela',
+				'Mansi Singh',
+				'Pranav Surendran',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						<ol style={{ listStyleType: 'disc' }}>
+							<li>
+								Assist the visually impaired by capturing images and recognising
+								objects in their surroundings.
+							</li>
+							<li>
+								Estimate the proximity of each of these objects getting a better
+								understanding of the environment.
+							</li>
+							<li>
+								Give an audio output for the visually impaired user to help the
+								user navigate his/her surroundings.
+							</li>
+						</ol>
+					</div>
+				),
+				meth: (
+					<div>
+						<ol>
+							<li>
+								Implementation of the YOLO - Object detection algorithm used for
+								real-time object detection
+							</li>
+							<li>
+								Next step involves the Depth Map - Used to determine the
+								relative distances of objects from a viewpoint
+							</li>
+							<li>
+								Integration - Getting the final result after integrating results
+								from the YOLO model and depth map
+							</li>
+							<li>
+								App - Used the Flask Framework to present the Voice Navigator
+								Model
+							</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						<img
+							style={{ paddingLeft: '20%' }}
+							src={Voice}
+							width="75%"
+							height="auto"
+						></img>
+						<br />
+						Desired Result - <br />
+						<div style={{ fontWeight: 'lighter' }}>
+							A string containing a list of all objects in front of the user.{' '}
+							<br /> Objects in the string appear in increasing order of their
+							depths from the user. <br />
+						</div>
+					</div>
+				),
+				con: (
+					<div>
+						We achieved the set objectives and were successfully able to present
+						a Voice Navigator website. This project can find further application
+						in the domain with extra added features.
+					</div>
+				),
 			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 4,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'To Generate relevant meme caption given a meme template using Neural Networks based on ‘ Dank Learning’ Paper',
+			logo:
+				'https://d3i71xaburhd42.cloudfront.net/47ec091ba9d916e391c2f4e8ec36edcb59d104d6/2-Figure1-1.png',
+			name: 'Dank Learning',
+			imgUrl: [],
+			members: [
+				'Manan',
+				'Hrithik Bhat',
+				'Gayatri Nisha',
+				'Prateek Kumar',
+				'Akshay Bistagond',
+				'Shivraj Dharwad',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						To Generate relevant meme caption given a meme template using Neural
+						Networks based on ‘ Dank Learning’ Paper
+					</div>
+				),
+				meth: (
+					<div>
+						The project is divided into 4 main steps. <br />
+						Dataset : ImgFlip575k memes dataset
+						<br />
+						<ol style={{ listStyleType: 'disc', fontWeight: 'lighter' }}>
+							<li>
+								Image ( Meme Template ) Processing : Extract Image features
+								using A Convolutional Neural Network ( CNN )
+							</li>
+							<li>
+								Caption Processing : Process the dataset by cleaning captions,
+								standard text processing techniques and converting words to
+								GLoVE word embeddings
+							</li>
+							<li>
+								Model Building and Training : Compile an LSTM model for
+								continuous text generation and train the model on the dataset
+							</li>
+							<li>
+								Text Generation : Generate captions by inputting a meme template
+								and use Temperature- Random Sampling to generate captions
+							</li>
+						</ol>
+					</div>
+				),
+				res: (
+					<div>
+						Model is able to generate coherent and relevant captions in 2 out of
+						10 cases
+					</div>
+				),
+				con: (
+					<div>
+						LSTMs are very powerful at text generation tasks and can be combined
+						with a CNN in an encoder decoder architecture to caption Images.
+						Neural Networks are not completely able to capture the human concept
+						of ‘humor’ properly.
+						<br />
+						<br /> Further work needs to be done in order to improve model
+						performance. More semantic features need to be extracted from text
+						in order to capture ‘humor’. Models with Transformer Architecture
+						can trained for better performance
+					</div>
+				),
 			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 5,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'Understand and document the codebase of SNARE and TANNER.Try to fix the issues present in the application. Optimisation of TANNER',
+			logo:
+				'https://cyberhoot.com/wp-content/uploads/2020/02/Honeypot-Structure.png',
+			name: 'Python web application honey pot',
+			imgUrl: [
+				'https://drive.google.com/file/d/1_31qRIpjcY4QMpz-SWamw_fYg6PWJxB2/preview',
+			],
+			members: [
+				'Aditya Jain',
+				'Aniruddh Sujish',
+				'Bhaskar Kataria',
+				'Mohammed Rushad',
+				'Nihar K G Rai',
+				'Balajinaidu V',
+				'M S Raghav Ganesh',
+				'Rahul Maheshwari',
+				'R Raghavendra',
+				'Reshma Tresa Antony',
+				'Shriroop Roychoudhury',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						● Understand and document the codebase of SNARE and TANNER
+						<br /> ● Try to fix the issues present in the application
+						<br /> ● Optimisation of TANNER
+					</div>
+				),
+				meth: (
+					<div>
+						Honeypots are sacrificial systems that we use to trap intruders.
+						They were invented in the early 90s to study attackers in the real
+						world. Dummy, unsecured systems were secretly placed on the web, and
+						attackers were not stopped from breaking in. Once attackers broke
+						in, however, their activity was monitored closely. That gave us a
+						wealth of information about black hats during the last decade.
+						<br />
+						<br />
+						This is exactly what is achieved using the SNARE (Super Next
+						generation Advanced Reactive honEypot : it is a web application
+						honeypot which has the ability to convert existing web pages into
+						attack surfaces with TANNER) and TANNER (A remote data analysis and
+						classification service, to evaluate HTTP requests and composing the
+						response then served by SNARE).
+						<br />
+						<br />
+						So, we began by setting up the environment for the project, that is
+						downloading the necessary applications in either WSL/Dual booted
+						system, by following a few steps available on the SNARE and TANNER
+						github page. Next step was to learn the codebase to understand the
+						control flow of the application, so that, for example, we could
+						identify the reason for a particular issue. Then we documented all
+						our newly gained knowledge about the code.
+						<br />
+						<br />
+						Then it was all about recreating and identifying issues in the
+						application and coming up with patches to resolve those issues.
+						<br />
+					</div>
+				),
+				res: (
+					<div>
+						We came across 3 issues and understanding the codebase is what
+						allowed us to try and rectify those issues.
+						<br />
+						<ol>
+							<li>
+								Keyboard interrupt in SNARE : While trying to exit SNARE, it
+								wouldn’t happen gracefully. A keyboard interrupt error message
+								would be displayed. But, we observed that when the auto-update
+								parameter was mentioned, with the value being True/False, while
+								starting up SNARE, the issue is solved.
+							</li>
+							<li>
+								Unidentified SQLI attacks : After running quite a lot of test
+								cases, we observed that when SQLI attacks, except for union
+								ones, TannerAPI wouldn’t identify the attack type as SQLI unlike
+								the logs.
+							</li>
+							<li>
+								Inconsistency in sess_uuid : We observed that in the logs, the
+								sess_uuid field was stored with dashes in between, but in
+								TannerAPI and TannerWeb it was stored without dashes. In the
+								URL, sess_uuid can’t have any dashes in between, so we are
+								forced to assume that in the logs, it isn’t so for better
+								readability.
+							</li>
+						</ol>
+					</div>
+				),
+				con: (
+					<div>
+						Honeypots are great for intrusion detection. They can be deployed on
+						unused IP addresses in production networks. Since the honeypot has
+						no legitimate purpose, any traffic to the honeypot is suspicious and
+						signals the presence of an attacker. An intruder who triggers the
+						honeypot can be tracked closely. Unlike traditional detection
+						systems that had to spot attacks from the flood of normal traffic,
+						all traffic honeypots receive are illegitimate.
+						<br />
+						<br />
+						As this is an open source project, we aim to keep working on it; to
+						continue recording and resolving issues that come along the way.
+					</div>
+				),
 			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 6,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'This project aims to achieve colorization of black and white images using Generative Adversarial Networks(GAN) and improve performance by experimenting with different models of the same.',
+			logo:
+				'https://s23527.pcdn.co/wp-content/uploads/2017/05/Screenshot-2017-05-19-17.57.37.png',
+			name: 'B&W Image Colorization Using GANs',
+			imgUrl: [
+				'https://drive.google.com/file/d/1LvJmLUdpxVEaFHBFlfOttO625vjXbBf4/preview',
+				'https://drive.google.com/file/d/1kgX0DjckWj4qvjQSqqaNGM40BsLnMz1D/preview',
+				'https://drive.google.com/file/d/1mszgnxcyM2jdAdngBTLyAArGkQ2DWbLd/preview',
+				'https://drive.google.com/file/d/1CsyX6YTpMaXpzSgofVpaaOkFxyykq8vB/preview',
+			],
+			members: [
+				'Prateek',
+				'Arjun A.',
+				'Mansi',
+				'Rohit ',
+				'Shreyas',
+				'Aditya',
+				'Fidha',
+				'Nitesh',
+				'Pranav',
+				'Rahul Kumar',
+				'Sarthak',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						This project aims to achieve colorization of black and white images
+						using Generative Adversarial Networks(GAN) and improve performance
+						by experimenting with different models of the same.
+					</div>
+				),
+				meth: (
+					<div>
+						A subset of places365 dataset was chosen for training, which was
+						further converted to tfrecords format.
+						<br />
+						<br />
+						We started by implementing a UNET GAN based coloriser derived from
+						this paper, which took us 15 hours to train, and fetched us decent
+						results.
+						<br />
+						<br />
+						We attempted to then enhance these results by implementing an
+						Evolutionary Generative Adversarial Network(EGAN) as shown in this
+						paper, but due to insufficient computing resources the model did not
+						train as effectively as we hoped.
+						<br />
+						<br />
+						We also attempted to mimic the results of DeOldify with our own
+						adaptation of the code,but again was not able to achieve the results
+						we wanted due to insufficient computer resources. Moreover, we
+						adapted the initial UNet implementation to train on TPUs, and
+						achieved better results compared to the initial model with 6 hours
+						of training.
+						<br />
+						<br />
+						All implementation was done in Tensorflow 2.4 on google colab.
+					</div>
+				),
+				res: (
+					<div>
+						The vanilla UNET GAN gave some impressive however mostly
+						inconsistent results. E-GANs and DeOldify models did not give the
+						theoretically impressive results that were expected because of
+						training limitations due to lack of hardware resources.
+						<br />
+						<br />
+						The TPU implementation of the vanilla UNET GAN, despite showing some
+						tendencies of overfitting, gave significantly improved results over
+						the GPU execution of the same.
+					</div>
+				),
+				con: (
+					<div>
+						Theoretical expectations of image colorization using the modified
+						GANs, E-GANs and DeOldify model, which were expected, were not met
+						due to lack of availability of hardware resources for training these
+						models. However, improved results of the UNET GAN colorization were
+						achieved by making use of TPU for training as compared to the
+						results achieved using a GPU. Future scope of the project extends to
+						employing powerful hardware to achieve more accurate colorization by
+						training the bulkier models of E-GAN and DeOldify.{' '}
+					</div>
+				),
 			},
 			meetLink: 'This is the meet link',
 		},
 		{
 			id: 7,
-			oneline: '',
-			logo: '',
-			name: '',
-			imgUrl: ['', '', '', '', ''],
-			members: ['', '', '', '', ''],
+			oneline:
+				'This project aims to generate hand-drawn sketches of various animals and objects by using deep learning architectures like Generative Recurrent Neural Networks and Auto-encoders. Our goal is to train machines to draw and generalize simple drawings from a simple sequence of motor actions, in a manner similar to humans.',
+			logo:
+				'https://4.bp.blogspot.com/-oAPlGiBet6s/WO6VOPRPzkI/AAAAAAAABt4/vXkP4Yy8-0guIDU6AhKfP0VdnAJBx5ssgCLcB/s1600/image11.png',
+			name: 'SketchGen',
+			imgUrl: [
+				'https://drive.google.com/file/d/1KXIVJCuATWYqJAe0L-sPB3sY_aA9sa5v/preview',
+				'https://drive.google.com/file/d/1X1bSLng-JEL7qvcBk_lS8j72bcKQeLun/preview',
+				'https://drive.google.com/file/d/1hW-dB0nsdrycs2tv8e3Innu2OCdNeJYT/preview',
+				'https://drive.google.com/file/d/107E0qNksW3IxuFt2pfz_b-7z58d1ofM3/preview',
+				'https://drive.google.com/file/d/1BxvHiz053ZYGtn_ypJaupRTPwZJ99v5H/preview',
+				'https://drive.google.com/file/d/1R_yRYKxwG4I-neZTg_ZEjptpyoUwuwJE/preview',
+				'https://drive.google.com/file/d/10jPvGXgNfpCCCYOrzGgjKn4FGLYU1TnY/preview',
+				'https://drive.google.com/file/d/1tedJmDsiyhdoCs3hAq4H7UjSHvb1-4VW/preview',
+				'https://drive.google.com/file/d/1FcZGMeL1hcIE_7_Xt2CsoWtIFIhL_925/preview',
+				'https://drive.google.com/file/d/1KKP9mB3IoLcZWOCYBVgXcMojxRfSvRNN/preview',
+				'https://drive.google.com/file/d/1T54ivkyRu1nwt2IFK3gWcnQlfe8BX9pG/preview',
+			],
+			members: [
+				'Amodh Shenoy',
+				'K V Sumanth Reddy',
+				'Amey Shimpi',
+				'Jagdish B C',
+				'Ritvika R B',
+				'Dwija Bagwe',
+				'Pratik Kumar S',
+				'Aakarshee Jain',
+				'Mansi Singh',
+				'Joshitha Reddy D',
+			],
 			description: {
-				aim: <div></div>,
-				meth: <div></div>,
-				res: <div></div>,
-				con: <div></div>,
+				aim: (
+					<div>
+						This project aims to generate hand-drawn sketches of various animals
+						and objects by using deep learning architectures like Generative
+						Recurrent Neural Networks and Auto-encoders. Our goal is to train
+						machines to draw and generalize simple drawings from a simple
+						sequence of motor actions, in a manner similar to humans.
+					</div>
+				),
+				meth: (
+					<div>
+						SketchGen presents a Recurrent Neural Network capable of producing
+						sketches of common objects, with the goal of training a machine to
+						draw and generalize abstract concepts in a manner similar to humans.
+						It uses an encoder-decoder model, in which each pen stroke is sent
+						into the model in consecutive order. The model learns these strokes
+						and produces consecutive strokes. The final image is similar to the
+						one which we input, just like - how we see some drawing and try to
+						redraw it on paper.
+						<br />
+						<br />
+						The dataset is consecutive vectors of 5 characters. A sketch is a
+						list of points, and each point is a vector consisting of 5 elements:
+						(∆x, ∆y, p1, p2, p3). The first two elements are the offset distance
+						in the x and y directions of the pen from the previous point. P1
+						indicates that the pen is currently touching the paper or not. The
+						second pen state, P2, indicates that the pen will be lifted from the
+						paper after the current point and that no line will be drawn next.
+						The final pen state, p3, indicates that the drawing has ended.
+						<br />
+						<br />A vector stroke image (let’s call it S), is first uploaded
+						into an encoder. The encoder reads the input stroke by stroke and
+						creates a latent vector Z for the training set. (Once trained, the
+						encoder will give a feature vector for input that can be used by a
+						decoder to construct the input with the features that matter the
+						most to make the reconstructed input recognizable as the actual
+						input. This vector holds the information, the features, that
+						represents the input.) Under this encoding scheme, the latent vector
+						z is a random vector conditioned on the input sketch. This latent
+						vector Z is not the same for every iteration and keeps producing
+						different latent vectors Z for every training iteration. The weights
+						or the values of the hidden layers are saved via checkpoints. The
+						decoder uses the latent vector Z which was conditioned on the input,
+						to produce a set of consecutive strokes to produce an array of
+						strokes, which is then converted into an image using the SVGwrite
+						library. It is important to emphasize that the reconstructed
+						sketches are not copies of the input sketches, but are instead new
+						sketches with similar characteristics as the inputs. <br />
+						<br />
+						<div style={{ backgroundColor: 'lightblue', color: 'darkblue' }}>
+							Sketch {'->'} Encoder(S) {'->'} Latent Vector Z {'->'} decoder(Z){' '}
+							{'->'} New Sketch
+						</div>
+					</div>
+				),
+				res: (
+					<div>
+						Our results are the decoded images/gifs from the model and a demo
+						video. Please refer the Images, Screenshots and Videos section.{' '}
+						<br />
+						<br />
+						This is a sample output:
+						<br />
+						<iframe
+							src="https://drive.google.com/file/d/1SsAF6_8PQsXYhVHG1ahUy2-UzSvkaVC1/preview"
+							width="600"
+							height="300"
+							style={{ border: '1px black solid', marginLeft: '20%' }}
+						></iframe>
+						<br />
+						<br />
+						As you can see, the model knows that a cat has eyes and hence drew
+						them, even tho we gave a input drawing with no eyes
+					</div>
+				),
+				con: (
+					<div>
+						In this work, we develop a methodology to model sketch drawings
+						using recurrent neural networks. SketchGen is able to generate
+						possible ways to finish an existing, but unfinished sketch drawing.
+						Our model can encode existing sketches into a latent vector, and
+						generate similar-looking sketches. We demonstrate what it means to
+						interpolate between two different sketches by interpolating between
+						its latent space, and also show that we can manipulate attributes of
+						a sketch by augmenting the latent space.
+						<br />
+						<br />
+						SketchGen has many creative applications. The decoder can be useful
+						to provide different images when trained once. And if trained on a
+						higher level sketch, then maybe we can get new and creative outputs.
+						A model trained on higher-quality sketches may find its way into
+						educational applications that can help teach students and artists
+						how to draw. The current idea has good potential and can be
+						developed to a good extent.
+					</div>
+				),
 			},
 			meetLink: 'This is the meet link',
 		},
@@ -3412,4 +3833,4 @@ export const sigNames = [
 			'https://iste.nitk.ac.in/api/media/sig_pictures/None_crypt_PMPCp2W.png',
 	},
 ];
-export const offsetCoefficient = -3 / 8;
+export const offsetCoefficient = -4 / 8;
