@@ -76,7 +76,7 @@ export const fur = {
         { id: 2, fur: "https://github.com/Chinmayi27/ci-cd-pipeline" }, //CI/CD pipeline using K8
         { id: 3, fur: "https://github.com/anshuman03sinha/Voice-Navigator" }, //Voice Navigator
         // { id: 4, fur: 'https://github.com/hrithikbhat019/ISTE-Meme-Captioning-using-NNs' }, //Dank Learning
-        { id: 5, fur: "http://localhost:3000/#/expo/" }, //Python web application honey pot
+        { id: 5, fur: "https://github.com/bhaskar792/ISTE-Crypt-Honeypot" }, //Python web application honey pot
         { id: 6, fur: "https://github.com/mansivsaxena/BW-Image-Colorisation-using-GANs" }, //B&W Image Colorization Using GANs
         { id: 7, fur: "https://github.com/Jagadish2000/Sketch_gen" }, //SketchGen
     ],

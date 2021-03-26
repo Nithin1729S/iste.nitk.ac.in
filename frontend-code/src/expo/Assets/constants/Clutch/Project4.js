@@ -222,7 +222,6 @@ export default {
                 given target property to an acceptable tolerance.
             </div>
         ),
-        con: <div>The Result is also the Conclusion.</div>,
     },
     //meetLink: 'This is the meet link',
 };

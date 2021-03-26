@@ -94,8 +94,7 @@ export default {
                     </li>
                 </ol>
             </div>
-        ),
-        con: <div>The Result is also the Conclusion.</div>,
+        )
     },
     //meetLink: 'This is the meet link',
 };
