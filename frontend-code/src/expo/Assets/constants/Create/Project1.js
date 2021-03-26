@@ -39,6 +39,8 @@ export default {
                 Refer the folowing links to see our final results! <br />
                 <a
                     style={{ color: "blue", textDecoration: "underline" }}
+                    target="_blank"
+                    rel="noreferrer"
                     href="https://drive.google.com/drive/folders/192wnN4f7IFWTs_8YG8aXC5muqmJKpf9G?usp=sharing"
                 >
                     https://drive.google.com/drive/folders/192wnN4f7IFWTs_8YG8aXC5muqmJKpf9G?usp=sharing
@@ -46,6 +48,8 @@ export default {
                 <br />
                 <a
                     style={{ color: "blue", textDecoration: "underline" }}
+                    target="_blank"
+                    rel="noreferrer"
                     href="https://drive.google.com/drive/folders/1qU4TTVvxumrP3wg9RAKpvY7kJd6KjqJT?usp=sharing"
                 >
                     https://drive.google.com/drive/folders/1qU4TTVvxumrP3wg9RAKpvY7kJd6KjqJT?usp=sharing

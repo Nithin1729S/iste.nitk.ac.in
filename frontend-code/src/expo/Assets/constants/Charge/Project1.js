@@ -53,14 +53,16 @@ export default {
                 signals to all the control modules and the datapath modules
                 based on the current instruction and previous instructions
                 executed. <br />
-                Datapath Diagram :-<br/>
+                Datapath Diagram :-
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/12q1rlRxJcDNjtbQWVCLsd0EyGDhbaOw3/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
                 <br />
-                Control path :-<br/>
+                Control path :-
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/1JLSypedzzRMLKSLiKPhvZ_s_g5oql0w7/preview"
                     width="640"
@@ -114,7 +116,8 @@ export default {
                     height="480"
                 ></iframe>
                 <br />
-                Sample extracted and quantised weights and biases:-<br/>
+                Sample extracted and quantised weights and biases:-
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/150XAozifeE-vOHN_JnyWe1pyQ7TT8jvb/preview"
                     width="640"
@@ -132,6 +135,7 @@ export default {
                 <a
                     href="https://github.com/putlurusurya/CNNOnFPGA"
                     target="_blank"
+                    rel="noreferrer"
                 >
                     https://github.com/putlurusurya/CNNOnFPGA
                 </a>

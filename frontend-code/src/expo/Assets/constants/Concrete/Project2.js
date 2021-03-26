@@ -62,6 +62,8 @@ export default {
                 <br />
                 <a
                     style={{ color: "blue", textDecoration: "underline" }}
+                    target="_blank"
+                    rel="noreferrer"
                     href="https://drive.google.com/drive/folders/1SreIJNW9Zvp1V4z8Ll7yGXdCAX_UBcrh?usp=sharing"
                 >
                     https://drive.google.com/drive/folders/1SreIJNW9Zvp1V4z8Ll7yGXdCAX_UBcrh?usp=sharing
@@ -69,6 +71,8 @@ export default {
                 <br />
                 <a
                     style={{ color: "blue", textDecoration: "underline" }}
+                    target="_blank"
+                    rel="noreferrer"
                     href="https://drive.google.com/drive/folders/1tW0i2VsDkjwIX_Cth4FgzLevUPqUt2Nj?usp=sharing"
                 >
                     https://drive.google.com/drive/folders/1tW0i2VsDkjwIX_Cth4FgzLevUPqUt2Nj?usp=sharing

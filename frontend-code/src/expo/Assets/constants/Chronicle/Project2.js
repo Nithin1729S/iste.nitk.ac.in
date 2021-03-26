@@ -91,6 +91,8 @@ export default {
                 <br />
                 <a
                     style={{ color: "blue" }}
+                    target="_blank"
+                    rel="noreferrer"
                     href="https://open.spotify.com/show/4f4gPnICvdobOgfApEJTA1"
                 >
                     Spotify -
@@ -99,6 +101,8 @@ export default {
                 <br />
                 <a
                     style={{ color: "blue" }}
+                    target="_blank"
+                    rel="noreferrer"
                     href="https://www.youtube.com/watch?v=g0qPeHX8iaw"
                 >
                     YouTube - https://www.youtube.com/watch?v=g0qPeHX8iaw
