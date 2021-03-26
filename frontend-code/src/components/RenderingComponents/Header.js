@@ -86,8 +86,15 @@ class Header extends React.Component {
             </a>
         </li>
     );
+    expoNavHeader = (
+        <li>
+            <Link to="/expo" className="white-text">
+                Expo
+            </Link>
+        </li>
+    );
     render() {
-        if(!this.props.shouldRender) return null;
+        if (!this.props.shouldRender) return null;
         const cookie = new Cookies();
         if (cookie.get("firstName") !== undefined) {
             if (this.state.loggedInName !== cookie.get("firstName")) {
@@ -270,6 +277,7 @@ class Header extends React.Component {
                     </li>
                     {this.teamNavHeader}
                     {this.blogNavHeader}
+                    {this.expoNavHeader}
                 </ul>
 
                 <div className="navbar-fixed">
@@ -313,6 +321,7 @@ class Header extends React.Component {
                                 </ul>
                                 {this.teamNavHeader}
                                 {this.blogNavHeader}
+                                {this.expoNavHeader}
                             </ul>
                         </div>
                     </nav>
