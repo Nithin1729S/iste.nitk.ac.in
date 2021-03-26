@@ -15,6 +15,7 @@ export default {
 	oneline:
 		'The aim of this project is to design an aerodynamic glider and analyse its aerodynamic aspects.',
 	imgUrl: [
+		'https://drive.google.com/file/d/1iAYrXykgdbTJArlPva-EPT4hzDcSvOfJ/preview',
 		'https://drive.google.com/file/d/12O7JhDF61kPVLTuVMHLubFf9elywOg3U/preview',
 		'https://drive.google.com/file/d/1vDwVf8FflYbVgQC8Px_YwskrMPwcrrSP/preview',
 		'https://drive.google.com/file/d/1eln5zKSaXWWhpYq_kUDzzCUmj9eVUdE6/preview',
@@ -77,7 +78,8 @@ export default {
 									<li>Swept back wing</li>
 								</ol>
 								Among these wings Taper at front has been chosen as it has more
-								coefficient of lift and drag<br/>
+								coefficient of lift and drag
+								<br />
 								<iframe
 									src="https://drive.google.com/file/d/12O7JhDF61kPVLTuVMHLubFf9elywOg3U/preview"
 									width="640"
@@ -252,7 +254,8 @@ export default {
 			<div>
 				<ol>
 					<li>
-						Glider Assembly The assembly of the glider is made in Solidworks.<br/>
+						Glider Assembly The assembly of the glider is made in Solidworks.
+						<br />
 						<iframe
 							src="https://drive.google.com/file/d/1w2wTP2V2ayid5YtlcGOXJIw2lLNKtTPg/preview"
 							width="640"
