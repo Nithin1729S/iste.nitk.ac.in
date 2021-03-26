@@ -25,8 +25,8 @@ export default {
         "Dwija",
         "Sam",
         "Bhajan",
-        "Anushrutha",
-        "Roopam",
+        "Sahana",
+        "Mihir",
     ],
     description: {
         aim: (

@@ -7,7 +7,6 @@ import SideNav from "./SideNav";
 import styles from "../css/app.module.css";
 import logo from "../Assets/istenitk.png";
 import { constant, sigNames } from "../Assets/constants";
-import { Link } from "react-router-dom";
 class ExpoHomeComponent extends React.Component {
     componentDidMount() {
         this.props.setHeaderFooterStatus(false);
@@ -38,8 +37,8 @@ class ExpoHomeComponent extends React.Component {
                 </div>
                 <div className={styles.content}>
                     <div className={styles.topNav}>
-                        <Link
-                            to="../"
+                        <a
+                            href="/"
                             style={{
                                 backgroundColor: "white",
                             }}
@@ -49,8 +48,9 @@ class ExpoHomeComponent extends React.Component {
                                 width="60"
                                 height="50"
                                 style={{ float: "right", marginRight: "5%" }}
-                            ></img>
-                        </Link>
+                                alt="ISTE Logo"
+                            />
+                        </a>
                         <TopNav
                             sig={sig}
                             handleClick={(sig) => this.handleSigChange(sig)}

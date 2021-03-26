@@ -9,7 +9,8 @@ export default {
     imgUrl: "",
     members: [
         "Amodh Shenoy",
-        "Ashwin R",
+        "Aswin",
+        "Varun",
         "Nikhil Nair",
         "Amith Vijayan",
         "Shubhang Bhandarkar",
