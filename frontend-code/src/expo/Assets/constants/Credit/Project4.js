@@ -1,16 +1,3 @@
-// 1. https://docs.google.com/document/d/134SKgV420twOHD2kXPQ5MV6BsZmpQD-ws8BBcw8ZXF8/preview (Report- Including Qualitative Analysis)
-
-// 2. https://drive.google.com/file/d/1Oee7YN9Jyh18bTIaJWl7pBz6M6eDVFHN/preview (Survey - PDF)
-
-// 3. https://docs.google.com/document/d/1_IAPs-evHTrjQjBNhZMb4SQK1ju8WqTWIGDX3PC1Xa8/preview (STP and 5P’s Analysis of Coca-Cola)
-
-// 4. https://docs.google.com/document/d/1hcaTVV_FAUfcyKLzx_5TJuQmriu_Rb_Z88lpwC2SCN0/preview (STP and 5P’s Analysis of Thums Up)
-
-// 5. https://docs.google.com/document/d/1_JQv-ReH3Q8KWyv8aiD-VLqG9so26tFRBHmp-Q3LIqI/preview (STP and 5P’s Analysis of Energy Drinks)
-
-// 6. https://docs.google.com/document/d/1_JQv-ReH3Q8KWyv8aiD-VLqG9so26tFRBHmp-Q3LIqI/preview (Digital Marketing Analysis of Coca-Cola)
-
-// 7. https://docs.google.com/document/d/1qlSJaBQeGd8scA_Jle1I8KJHz1QBE-p9H5Dwsf06yJk/preview (Digital Marketing Analysis of Energy Drinks)
 export default {
     id: 4,
     tags: [
@@ -112,54 +99,6 @@ export default {
         ),
         res: (
             <div>
-                <center>
-                    <iframe
-                        src="https://docs.google.com/document/d/134SKgV420twOHD2kXPQ5MV6BsZmpQD-ws8BBcw8ZXF8/edit?usp=sharing"
-                        width="640"
-                        height="480"
-                    ></iframe>
-                </center>
-                <br />
-                <center>
-                    <iframe
-                        src="https://drive.google.com/file/d/1MlgvWY2ch-1F2jHSTjzjIHhVxAefn3dG/preview"
-                        width="640"
-                        height="480"
-                    ></iframe>
-                </center>
-                <br />
-                <center>
-                    <iframe
-                        src="https://drive.google.com/file/d/1pMZ6cNkBaD_weOyxlFcfpJH81JIzDVdu/preview"
-                        width="640"
-                        height="480"
-                    ></iframe>
-                </center>
-                <br />
-                <center>
-                    <iframe
-                        src="https://drive.google.com/file/d/1TZkYFwUTO9oqFSDrIn5h303DQLMiD2YO/preview"
-                        width="640"
-                        height="480"
-                    ></iframe>
-                </center>
-                <br />
-                <center>
-                    <iframe
-                        src="https://drive.google.com/file/d/1RTKOm9d0D_CnBGKY1nzwvucZYSePy7Ez/preview"
-                        width="640"
-                        height="480"
-                    ></iframe>
-                </center>
-                <br />
-                <center>
-                    <iframe
-                        src="https://drive.google.com/file/d/1bhnP7T4XbYjLRHlKUu2VAPn2ZyzPz3nx/preview"
-                        width="640"
-                        height="480"
-                    ></iframe>
-                </center>
-                <br />
                 <b>LINKS TO EACH OF THE ANALYSIS:</b>
                 <br />
                 <ol>
@@ -196,7 +135,7 @@ export default {
                             rel="noreferrer"
                             href="https://docs.google.com/document/d/1hcaTVV_FAUfcyKLzx_5TJuQmriu_Rb_Z88lpwC2SCN0/edit?usp=sharing"
                         >
-                            STP and 5Ps (Energy drinks){" "}
+                            STP and 5Ps (Thums up){" "}
                         </a>
                     </li>
                     <li>
