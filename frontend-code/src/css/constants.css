@@ -1,5 +1,6 @@
 :root {
   --primary: #1a237e;
+  --primaryDarker:#10154d;
   --secondary: #ffffff;
   --navBarPrimary: rgba(0, 0, 0, 0.5);
   --navBarPri: rgba(0, 0, 0, 0.85);
