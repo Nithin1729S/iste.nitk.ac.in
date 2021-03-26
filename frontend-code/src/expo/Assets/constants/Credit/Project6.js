@@ -69,11 +69,32 @@ export default {
                     of the patterns. These included:
                 </p>
                 <center>
-                    <iframe
-                        src="https://drive.google.com/file/d/1tVLCxT1d3mfElHS3gQlyiIJioyzV0MuQ/preview"
-                        width="640"
-                        height="480"
-                    ></iframe>
+                    <div style={{ width: "50%", float: "left" }}>
+                        <ul style={{ listStyleType: "none" }}>
+                            <li style={{ fontSize: "1.1rem" }}>
+                                Bearish Reversal
+                            </li>
+                            <li>Evening Star</li>
+                            <li>Bearish Engulfing</li>
+                            <li>Bearish Harami</li>
+                            <li>Shooting Star</li>
+                            <li>Dark Cloud Cover</li>
+                            <li>Three black crows</li>
+                        </ul>
+                    </div>
+                    <div style={{ width: "50%", float: "right" }}>
+                        <ul style={{ listStyleType: "none" }}>
+                            <li style={{ fontSize: "1.1rem" }}>
+                                Bullish Reversal
+                            </li>
+                            <li>Bullish Harami</li>
+                            <li>Morning Star</li>
+                            <li>Bullish Engulfing</li>
+                            <li>Hammer</li>
+                            <li>Piercing Pattern</li>
+                            <li>Three white soldiers</li>
+                        </ul>
+                    </div>
                 </center>
                 <p>
                     A few simple technical indicators namely Relative Strength

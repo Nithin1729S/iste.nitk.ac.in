@@ -49,7 +49,7 @@ export const fur = {
         { id: 1, fur: "https://drive.google.com/file/d/1oyqopD9o2AKGEkcGflwZ3_CfcE6mfEkO/view?usp=sharing" }, //Simulation of exhaust back pressure for engine braking
         { id: 2, fur: "https://drive.google.com/file/d/1VS8h_s3UlXyo4-TzM1btLs-Bl-Ddacta/view?usp=sharing" }, //Exhaust tuning of IC Enginez
         { id: 3, fur: "https://drive.google.com/file/d/1vT5wJzp6mtssKghKVa_FTNxnZUpKdecY/view?usp=sharing" }, //Energy efficient glider for delivery
-        { id: 4, fur: "https://drive.google.com/file/d/10M64uHFBU8pZuZyDv_L1vh12dDUQsKws/view?usp=sharing" }, //Alloy Recommender System
+        { id: 4, fur: "https://github.com/DarthRoco/AlloyML" }, //Alloy Recommender System
     ],
     concrete: [
         { id: 1, fur: "https://drive.google.com/file/d/1cMiEuBDLXdhCWahKse5xNdnz-U6zXFG-/view?usp=sharing" }, //Design of a Green Commercial Complex in NITK using BIM
