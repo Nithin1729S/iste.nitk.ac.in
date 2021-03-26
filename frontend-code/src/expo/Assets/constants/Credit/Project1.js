@@ -1,3 +1,66 @@
+const mapper = () => {
+    const dataArr = [
+        {
+            id: 1,
+            year: 1994,
+            costBefore: "162 million",
+            costAdjusted: "286 million",
+        },
+        {
+            id: 2,
+            year: 1998,
+            costBefore: "940 million ",
+            costAdjusted: "1.5 billion",
+        },
+        {
+            id: 3,
+            year: 2002,
+            costBefore: "406 million",
+            costAdjusted: "592 million",
+        },
+        {
+            id: 4,
+            year: 2006,
+            costBefore: "840 million",
+            costAdjusted: "1.1 billion",
+        },
+        {
+            id: 5,
+            year: 2010,
+            costBefore: "6.7 million",
+            costAdjusted: "7.5 million",
+        },
+        {
+            id: 6,
+            year: 2014,
+            costBefore: "795 million",
+            costAdjusted: "849 million",
+        },
+        {
+            id: 7,
+            year: 2018,
+            costBefore: "1.33 million",
+            costAdjusted: "1.38 million",
+        },
+        {
+            id: 8,
+            year: 2022,
+            costBefore: "1.06 million",
+            costAdjusted: "1.06 million",
+        },
+    ];
+    return dataArr.map(({ id, year, costBefore, costAdjusted }) => {
+        return (
+            <tr>
+                <td>{id}</td>
+                <td>{year}</td>
+                <td>{costBefore}</td>
+                <td>{costAdjusted}</td>
+            </tr>
+        );
+    });
+};
+
 export default {
     id: 1,
     tags: ["Anti-Money Laundering", " Economy", " Demonetization", " Covid-19"],
@@ -192,11 +255,15 @@ export default {
                     <li>
                         CWG Case study:
                         <br />
-                        <iframe
-                            src="https://drive.google.com/file/d/19lgkIa26D6goFZk5-6AAz9DO4NixV6QJ/preview"
-                            width="640"
-                            height="480"
-                        ></iframe>
+                        <table>
+                            <tr>
+                                <th>Sl. no</th>
+                                <th>Year</th>
+                                <th>Cost before inflation(in USD)</th>
+                                <th>Cost adjusted inflation(in USD)</th>
+                            </tr>
+                            {mapper()}
+                        </table>
                     </li>
                 </ul>
                 <p>
