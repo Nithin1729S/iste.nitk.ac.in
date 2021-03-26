@@ -27,6 +27,7 @@ export default {
         "Bhajan",
         "Sahana",
         "Mihir",
+        "Aditya Santosh",
     ],
     description: {
         aim: (
