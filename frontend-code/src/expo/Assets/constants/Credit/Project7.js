@@ -148,7 +148,7 @@ export default {
                     </ol>
                 </p>
                 <iframe
-                    src="https://drive.google.com/file/d/13VfsL361b5vjLIk7TfmKhBarBD13-6Px/preview"
+                    src="https://drive.google.com/file/d/1M_weuNRHM4quvoE0wIXNQkpC_aljfOVC/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
@@ -164,7 +164,7 @@ export default {
                     <u>Result</u> : H0 rejected
                 </p>
                 <iframe
-                    src="https://drive.google.com/file/d/1GygtnjLsRN3Mbmfh72ivsajdqm2WQ509/preview"
+                    src="https://drive.google.com/file/d/13VfsL361b5vjLIk7TfmKhBarBD13-6Px/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
@@ -177,7 +177,7 @@ export default {
                     variables and the other perceived disadvantages.
                 </p>
                 <iframe
-                    src="https://drive.google.com/file/d/1SAE2c34MtTbBew2_pP3nFaODKsmawx_m/preview"
+                    src="https://drive.google.com/file/d/1GygtnjLsRN3Mbmfh72ivsajdqm2WQ509/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
