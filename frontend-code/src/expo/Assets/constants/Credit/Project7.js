@@ -100,36 +100,38 @@ export default {
                     considered -{" "}
                 </p>
                 <iframe
-                    src="https://drive.google.com/file/d/1YjGWX-eT378yg6Fxydh6_9uvHLSRqDAj/preview"
+                    src="https://drive.google.com/file/d/1ufXiiHC7yKb5w-XROUTt502Q5iOsOvSu/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
                 <br /> <br />
                 <iframe
-                    src="https://drive.google.com/file/d/1cHyAwyApALOrbgYrUo2tl11BfSMtigyW/preview"
+                    src="https://drive.google.com/file/d/1SqVFLJc9SG3qpAb5WflF_Y28Yaql8Vud/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
                 <br /> <br />
                 <iframe
-                    src="https://drive.google.com/file/d/1Za2M-51xTU4R8_HFT8vQZDSvROSIlQWx/preview"
+                    src="https://drive.google.com/file/d/1De0l5stgNykU1aNHHjleqm5cux3H9llI/preview"
                     width="640"
                     height="480"
                 ></iframe>
                 <br /> <br />
                 <iframe
-                    src="https://drive.google.com/file/d/1NY3h0WQ7PZicQlAvPkkooliMho-PYyJP/preview"
+                    src="https://drive.google.com/file/d/19UtOGXgAoqp5oeHSLBNoSKwRlVoLfmhM/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
                 <br />
                 <p>Criteria considered in the survey - </p>
-                <iframe
-                    src="https://drive.google.com/file/d/14Cw9Fkp9nqdnmyap5j9pbhVLZUcf4VT5/preview"
-                    width="640"
-                    height="480"
-                ></iframe>
-                <br />
+                <p>
+                    Perceived Advantages - Control Over Own work, Pursuing
+                    Entrepreneurial Activities Alongside, Flexibility in Work
+                    Perceived Disadvantages - Uncertain Salary, Lack of Sick
+                    Pay/Allowance, Lack of Legal Protection Variables - Pension,
+                    Need for Regulation, Pay disparity between Conventional and
+                    Gig Economy
+                </p>
                 <p>
                     For inferential analysis on the survey data collected -
                     <ol>
@@ -146,7 +148,7 @@ export default {
                     </ol>
                 </p>
                 <iframe
-                    src="https://drive.google.com/file/d/1ydeOLx8xE93xGy9guxqkAVeJzuNWhPFl/preview"
+                    src="https://drive.google.com/file/d/13VfsL361b5vjLIk7TfmKhBarBD13-6Px/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
@@ -162,7 +164,7 @@ export default {
                     <u>Result</u> : H0 rejected
                 </p>
                 <iframe
-                    src="https://drive.google.com/file/d/1kU3s0tuehMH9uWwjP1C2eWYYeLHaLkun/preview"
+                    src="https://drive.google.com/file/d/1GygtnjLsRN3Mbmfh72ivsajdqm2WQ509/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
@@ -175,7 +177,7 @@ export default {
                     variables and the other perceived disadvantages.
                 </p>
                 <iframe
-                    src="https://drive.google.com/file/d/1vhyZBcIq8B3pjKv8tExASeY7tZ7tWZ7o/preview"
+                    src="https://drive.google.com/file/d/1SAE2c34MtTbBew2_pP3nFaODKsmawx_m/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
@@ -447,14 +449,14 @@ export default {
                 <br />
                 <center>
                     <iframe
-                        src="https://drive.google.com/file/d/1XJ6Vn77WFwmDk1i__LordBV4ZYaoReLq/preview"
+                        src="https://drive.google.com/file/d/1SAE2c34MtTbBew2_pP3nFaODKsmawx_m/preview"
                         width="640"
                         height="480"
                     ></iframe>
                     <br />
                     <br />
                     <iframe
-                        src="https://drive.google.com/file/d/1dZWv7rk-P66vzZ4nqf5i9ahT-Qp72v4g/preview"
+                        src="https://drive.google.com/file/d/1oxyIYzyKc2Nbs9w0o0wd5w-5HGNcwl-q/preview"
                         width="640"
                         height="480"
                     ></iframe>
@@ -467,7 +469,7 @@ export default {
                 <br />
                 <center>
                     <iframe
-                        src="https://drive.google.com/file/d/1qoihzUPxpweXl04UiE43Zl2oYJzu3m8E/preview"
+                        src="https://drive.google.com/file/d/1x6TVfOvARzzMeEfDdwmDJGoIXQTUVNVJ/preview"
                         width="640"
                         height="480"
                     ></iframe>
@@ -480,14 +482,14 @@ export default {
                 <br />
                 <center>
                     <iframe
-                        src="https://drive.google.com/file/d/1OJQLKQKodMfnNxjul02uaWuIGTLAYUih/preview"
+                        src="https://drive.google.com/file/d/11fXlaCLpdZDo-pNQS3loFsFkm_BheTNe/preview"
                         width="640"
                         height="480"
                     ></iframe>
                     <br />
                     <br />
                     <iframe
-                        src="https://drive.google.com/file/d/1whhFTRC66tv52RLEdI66iHM11MxBML6S/preview"
+                        src="https://drive.google.com/file/d/15sBHkHe9PPcuMs4XqSDFZAJobBD-w8t1/preview"
                         width="640"
                         height="480"
                     ></iframe>
