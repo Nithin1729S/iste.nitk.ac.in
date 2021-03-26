@@ -48,7 +48,7 @@ export default {
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption>
                         KTM SX-F with Exhaust Brake
                     </figcaption>
                 </figure>
@@ -58,7 +58,7 @@ export default {
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption>
                         KTM 390 with Exhaust Brake
                     </figcaption>
                 </figure>
@@ -136,7 +136,7 @@ export default {
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption >
                         BHP Values for Duct 9 Lengths 100 - 300mm for 12000 RPM
                     </figcaption>
                 </figure>
@@ -146,7 +146,7 @@ export default {
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption >
                         BHP Values for Duct 9 Lengths 100 - 125mm for 12000 RPM
                     </figcaption>
                 </figure>
@@ -171,7 +171,7 @@ export default {
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption>
                         BHP Values for Duct 8 Lengths 30 - 70mm for 12000 RPM
                     </figcaption>
                 </figure>
@@ -190,7 +190,7 @@ export default {
                 braking:
                 <ol>
                     <li>
-                        Brake Power vs RPM
+                        Brake Power vs RPM<br/>
                         <iframe
                             src="https://drive.google.com/file/d/1hnQIUF9OGnNFlOu6h8hOu9xcfbt3vI5W/preview"
                             width="640"
@@ -211,7 +211,7 @@ export default {
                         Same percentage reduction observed
                     </li>
                     <li>
-                        Friction Heat Energy loss
+                        Friction Heat Energy loss<br/>
                         <iframe
                             src="https://drive.google.com/file/d/1FXx-j3_qMKJcVvU0P6F8c9n8z0QD1QUH/preview"
                             width="640"
@@ -219,7 +219,7 @@ export default {
                         ></iframe>
                     </li>
                     <li>
-                        Cylinder Temperatures
+                        Cylinder Temperatures<br/>
                         <iframe
                             src="https://drive.google.com/file/d/1_easbA54CJBwbpg5nY-OcRaGHYRRkRWd/preview"
                             width="640"
@@ -227,7 +227,7 @@ export default {
                         ></iframe>
                     </li>
                     <li>
-                        Pressure vs Crank Angle
+                        Pressure vs Crank Angle<br/>
                         <iframe
                             src="https://drive.google.com/file/d/1se2YyRCMCz45kqQdXy7cTC_vXIh_FzCU/preview"
                             width="640"

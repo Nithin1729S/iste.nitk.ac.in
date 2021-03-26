@@ -74,7 +74,7 @@ export default {
                 test and train sets. Following is a set of images which include
                 Original Images(from the dataset), Ground Truth (Expected
                 outcome which is also available in the dataset) and outputs from
-                different architectures.
+                different architectures.<br/>
                 <iframe
                     src="https://drive.google.com/file/d/1YUzuflHQttK6fMqFk_9wv6C_EfR04G97/preview"
                     width="640"

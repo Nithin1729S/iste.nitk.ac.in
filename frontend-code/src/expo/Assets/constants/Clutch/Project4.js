@@ -181,7 +181,7 @@ export default {
         res: (
             <div>
                 Prediction plots for Shear Modulus, Density and Specific Heat
-                Capacity for Iron alloys
+                Capacity for Iron alloys<br/>
                 <iframe
                     src="https://drive.google.com/file/d/1r1p6LnlsxIzQuDEUn6WzQFQD0_x5J5xX/preview"
                     width="235"
@@ -198,7 +198,7 @@ export default {
                     height="200"
                 ></iframe>
                 Prediction plot for Tensile Strength(TS),Yield Strength(YS) and
-                Elongation Limit(EL) for Steels
+                Elongation Limit(EL) for Steels<br/>
                 <iframe
                     src="https://drive.google.com/file/d/1FqHc0FK8kDCXPWkQuA_XvTlJechB5KHV/preview"
                     width="235"

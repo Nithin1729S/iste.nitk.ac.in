@@ -95,7 +95,7 @@ export default {
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption>
                         System Process Diagram
                     </figcaption>
                 </figure>
@@ -105,7 +105,7 @@ export default {
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption>
                         Algorithm Flowchart
                     </figcaption>
                 </figure>
@@ -185,7 +185,7 @@ export default {
                         them (6 required for our model).
                     </li>
                     <li>
-                        The architecture used for the same is:
+                        The architecture used for the same is:<br/>
                         <iframe
                             src="https://drive.google.com/file/d/1Kq6IS51eEoesxL1wYoqeEQARfh5gFGrk/preview"
                             width="640"
@@ -228,12 +228,12 @@ export default {
                     </li>
                     <li>
                         For the CNN model, K Fold Cross Validation gave a
-                        training Loss of 0.0979 and Validation Loss of 0.0107.
+                        training Loss of 0.0959 and Validation Loss of 0.0111.
                     </li>
                 </ol>
             </div>
         ),
-        conc: (
+        con: (
             <div>
                 Improving the accuracy of the convolutional neural network used
                 and hardware implementation of the model using microcontrollers.

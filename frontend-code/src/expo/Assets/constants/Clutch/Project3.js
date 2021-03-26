@@ -77,7 +77,7 @@ export default {
 									<li>Swept back wing</li>
 								</ol>
 								Among these wings Taper at front has been chosen as it has more
-								coefficient of lift and drag
+								coefficient of lift and drag<br/>
 								<iframe
 									src="https://drive.google.com/file/d/12O7JhDF61kPVLTuVMHLubFf9elywOg3U/preview"
 									width="640"
@@ -252,7 +252,7 @@ export default {
 			<div>
 				<ol>
 					<li>
-						Glider Assembly The assembly of the glider is made in Solidworks.
+						Glider Assembly The assembly of the glider is made in Solidworks.<br/>
 						<iframe
 							src="https://drive.google.com/file/d/1w2wTP2V2ayid5YtlcGOXJIw2lLNKtTPg/preview"
 							width="640"

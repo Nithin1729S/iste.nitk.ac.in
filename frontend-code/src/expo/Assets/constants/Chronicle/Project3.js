@@ -106,6 +106,11 @@ export default {
                 ></iframe>
             </div>
         ),
+        con:(
+            <div>
+                The result is also the conclusion.
+            </div>
+        )
     },
     //meetLink: 'This is the meet link',
 };

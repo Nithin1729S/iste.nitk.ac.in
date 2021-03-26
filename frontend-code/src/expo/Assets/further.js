@@ -47,7 +47,7 @@ export const fur = {
 		{ id: 1, fur: 'http://localhost:3000/#/expo/' }, //NDN Reddit
 		{ id: 2, fur: 'http://localhost:3000/#/expo/' }, //CI/CD pipeline using K8
 		{ id: 3, fur: 'http://localhost:3000/#/expo/' }, //Voice Navigator
-		{ id: 4, fur: 'http://localhost:3000/#/expo/' }, //Dank Learning
+		// { id: 4, fur: 'http://localhost:3000/#/expo/' }, //Dank Learning
 		{ id: 5, fur: 'http://localhost:3000/#/expo/' }, //Python web application honey pot
 		{ id: 6, fur: 'http://localhost:3000/#/expo/' }, //B&W Image Colorization Using GANs
 		{ id: 7, fur: 'http://localhost:3000/#/expo/' }, //SketchGen

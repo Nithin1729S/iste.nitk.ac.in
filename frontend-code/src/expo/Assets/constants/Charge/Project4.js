@@ -95,6 +95,7 @@ export default {
             <div>
                 We performed a full Wireless solar charger model simulation in
                 Simulink.
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/1TgT_hsuqerjQWJnRmnwasET-lA6pYpvd/preview"
                     width="640"
@@ -114,6 +115,7 @@ export default {
                 received at receiver side which is oscillating at a frequency of
                 20kHz due to inverter in transmitter side.Blue line represents
                 the output voltage of batter which is 8.4 Volt.
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/1W7ai43hMkHnzHiqNFjdJSbFKDpEeCAG4/preview"
                     width="640"

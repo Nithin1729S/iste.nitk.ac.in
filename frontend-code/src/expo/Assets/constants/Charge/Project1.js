@@ -53,14 +53,14 @@ export default {
                 signals to all the control modules and the datapath modules
                 based on the current instruction and previous instructions
                 executed. <br />
-                Datapath Diagram :-
+                Datapath Diagram :-<br/>
                 <iframe
                     src="https://drive.google.com/file/d/12q1rlRxJcDNjtbQWVCLsd0EyGDhbaOw3/preview"
                     width="640"
                     height="480"
                 ></iframe>{" "}
                 <br />
-                Control path :-
+                Control path :-<br/>
                 <iframe
                     src="https://drive.google.com/file/d/1JLSypedzzRMLKSLiKPhvZ_s_g5oql0w7/preview"
                     width="640"
@@ -90,11 +90,13 @@ export default {
         res: (
             <div>
                 <em>Synthesis results</em>
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/1WGlhyB4a-rssMQmE1SPDDvDeXv1N0Ft-/preview"
                     width="640"
                     height="480"
                 ></iframe>
+                <br />
                 Simulation results:- <br />
                 Instructions Executed:- <br />
                 Weight_fill 0 3 9 <br />
@@ -112,7 +114,7 @@ export default {
                     height="480"
                 ></iframe>
                 <br />
-                Sample extracted and quantised weights and biases:-
+                Sample extracted and quantised weights and biases:-<br/>
                 <iframe
                     src="https://drive.google.com/file/d/150XAozifeE-vOHN_JnyWe1pyQ7TT8jvb/preview"
                     width="640"

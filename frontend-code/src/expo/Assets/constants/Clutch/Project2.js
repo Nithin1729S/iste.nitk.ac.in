@@ -73,7 +73,7 @@ export default {
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption>
                         Engine specifications
                     </figcaption>
                 </figure>
