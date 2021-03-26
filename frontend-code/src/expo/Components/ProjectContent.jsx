@@ -9,9 +9,11 @@ const ProjectContent = ({ projectData, sig }) => {
     if (typeof desc === "undefined") {
         desc = "Description.";
     }
-    const renderingTags = projectData.tags.slice(0,6).map((item) => (
-        <div key={item}>{item}</div>
-    ));
+    let renderingTags = null;
+    if (projectData.tags)
+        renderingTags = projectData.tags
+            .slice(0, 6)
+            .map((item) => <div key={item}>{item}</div>);
     return (
         <div className={styles.main} id={projectData.id}>
             <div className={styles.imageContent}>

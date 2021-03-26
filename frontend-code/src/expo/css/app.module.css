@@ -46,6 +46,7 @@
 	top: 0;
 	align-self: flex-start;
 	width: 100%;
+	background: white;
 }
 .projectContent {
 	width: 100%;
