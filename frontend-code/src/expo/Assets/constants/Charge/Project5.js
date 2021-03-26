@@ -1,15 +1,13 @@
+import logo from "./HASSL.png";
 export default {
     id: 5,
     tags: ["SSL", "cryptography", "aes", "fpga"],
     name: "Hardware Assisted SSL",
-    logo:
-        "https://res.cloudinary.com/dogygnvzl/image/upload/v1597416892/WhatsApp_Image_2020-08-12_at_8.10.31_PM_fidcuq.jpg",
+    logo: logo,
     oneline:
         "Build a novel architecture for AES-128 cryptographic algorithm and implement on FPGA from scratch for improved speed performance.",
     imgUrl: [
         "https://drive.google.com/file/d/1bzG7xY9jAvip2WlCCxkaGiFtN61fncTE/preview",
-        "https://drive.google.com/file/d/1NgX_R7gkVxzcJOWWmaFF788Dr5y8rwxo/preview",
-        "https://drive.google.com/file/d/1UH_pU2WjG4QvBL5inkhn9cdJPEhbJ_uZ/preview",
         "https://drive.google.com/file/d/1iC7yKouuXrfk-RAln_ThpuK6NcfNlr7H/preview",
         "https://drive.google.com/file/d/1M2gdEHiixJ6k4NIHcjOzCdTM3UBr4asB/preview",
         "https://drive.google.com/file/d/1rhYZZBZxH4Gx1AT4y_SL3dwc-4JqmYbp/preview",
@@ -68,6 +66,18 @@ export default {
                 The simulation results for the various sub-block is given. The
                 original and encrypted messages are shown in the console log.
                 Architecture of the complete design is also given.
+                <>
+                    <iframe
+                        class="descPage_imgSize__3WMSz"
+                        src="https://drive.google.com/file/d/1NgX_R7gkVxzcJOWWmaFF788Dr5y8rwxo/preview"
+                        title="1"
+                    />
+                    <iframe
+                        class="descPage_imgSize__3WMSz"
+                        src="https://drive.google.com/file/d/1UH_pU2WjG4QvBL5inkhn9cdJPEhbJ_uZ/preview"
+                        title="1"
+                    />
+                </>
             </div>
         ),
         con: (
