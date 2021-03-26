@@ -71,18 +71,22 @@ export default {
                 The simulation results for the various sub-block is given. The
                 original and encrypted messages are shown in the console log.
                 Architecture of the complete design is also given.
-                <>
-                    <iframe
-                        class="descPage_imgSize__3WMSz"
-                        src="https://drive.google.com/file/d/1NgX_R7gkVxzcJOWWmaFF788Dr5y8rwxo/preview"
-                        title="1"
-                    />
-                    <iframe
-                        class="descPage_imgSize__3WMSz"
-                        src="https://drive.google.com/file/d/1UH_pU2WjG4QvBL5inkhn9cdJPEhbJ_uZ/preview"
-                        title="1"
-                    />
-                </>
+                <br />
+                <iframe
+                    class="descPage_imgSize__3WMSz"
+                    src="https://drive.google.com/file/d/1NgX_R7gkVxzcJOWWmaFF788Dr5y8rwxo/preview"
+                    title="1"
+                />
+                <br />
+                <div style={{ textAlign: "center" }}>Architecture Diagram</div>
+                <iframe
+                    class="descPage_imgSize__3WMSz"
+                    src="https://drive.google.com/file/d/1UH_pU2WjG4QvBL5inkhn9cdJPEhbJ_uZ/preview"
+                    title="1"
+                />
+                <br />
+                <div style={{ textAlign: "center" }}>Input and Encrypted Message</div>
+                <br />
             </div>
         ),
         con: (
