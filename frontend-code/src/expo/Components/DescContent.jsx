@@ -118,7 +118,7 @@ const DescContent = ({ sn, id }) => {
 					<img src={imgAddr} alt="Punisher" className={styles.imgSize}></img>
 				</div> */}
 
-				<div className={styles.subheading}>
+				{/* <div className={styles.subheading}>
 					<div className={styles.subheadingtext}>Meet link</div>
 				</div>
 				<div className={styles.description}>
@@ -128,10 +128,7 @@ const DescContent = ({ sn, id }) => {
 					</a>{' '}
 					to join a Google meet and interact live with the people who worked on
 					this project!{' '}
-				</div>
-
-				{furComponent}
-
+				</div> */}
 				<div className={styles.subheading}>
 					<div className={styles.subheadingtext}>Members</div>
 				</div>
@@ -142,9 +139,8 @@ const DescContent = ({ sn, id }) => {
 						})}
 					</ol>
 				</div>
-
 				{comp}
-
+				{furComponent}
 				{images}
 			</div>
 		</div>

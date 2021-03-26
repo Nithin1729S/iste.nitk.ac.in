@@ -9,13 +9,10 @@ export default {
     imgUrl: [
         "https://drive.google.com/file/d/1jgdQan0UQV9QBw3A2wtkizotPFuAN6SX/preview",
         "https://drive.google.com/file/d/1k3sc13lEOX82ABI3leaEX0hkz6w9BN-v/preview",
-        "https://drive.google.com/file/d/19qapAft4gS8M9Z2J3IcToTANdf_tdbxY/preview",
-        "https://drive.google.com/file/d/1iyXMrELdGTal9f0_L9dWiSqyseLyiWdU/preview",
-        "https://drive.google.com/file/d/1wgKJrkucaHeQqAcPyRBjOFA6DKgnsBZG/preview",
-        "https://drive.google.com/file/d/18TMIzSKL1RKQcAZXfmvDPOdOle0li_wa/preview",
         "https://drive.google.com/file/d/1Y5Rx0F8aZl0bZ-zZ-W2AKfoApAlefUPf/preview",
         "https://drive.google.com/file/d/1GSsEtd76N4qLZCiyhxPMs3KkGR9cNW2Z/preview",
     ],
+
     members: [
         "Devendra Gayari",
         "Amogha V Somayaji",
@@ -194,32 +191,60 @@ export default {
             <div>
                 <figure>
                     <iframe
+                        src="https://drive.google.com/file/d/1wgKJrkucaHeQqAcPyRBjOFA6DKgnsBZG/preview"
+                        width="640"
+                        height="480"
+                    ></iframe>
+                    <figcaption>
+                        Graph: Variation Of Oxygen Concentration in Regulatory
+                        mode. Inference: Dissolved oxygen concentration is
+                        stable and overshoot is minimal.
+                    </figcaption>
+                </figure>{" "}
+                <figure>
+                    <iframe
+                        src="https://drive.google.com/file/d/18TMIzSKL1RKQcAZXfmvDPOdOle0li_wa/preview"
+                        width="640"
+                        height="480"
+                    ></iframe>
+                    <figcaption>
+                        Graph: Variation Of Oxygen Concentration in Servo mode.
+                        Inference: Dissolved oxygen concentration is stable and
+                        overshoot is minimal.
+                    </figcaption>
+                </figure>{" "}
+                <figure>
+                    <iframe
                         src="https://drive.google.com/file/d/19qapAft4gS8M9Z2J3IcToTANdf_tdbxY/preview"
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption>
                         The ASM process developed on Simulink
                     </figcaption>
                 </figure>{" "}
-                <br />
-                <br />
                 <figure>
                     <iframe
                         src="https://drive.google.com/file/d/1_rXr0z-z_1LQ8_PR2QSO-oqmZxzYUvDO/preview"
                         width="640"
                         height="480"
                     ></iframe>
-                    <figcaption style={{ "text-align": "center" }}>
+                    <figcaption>
                         {" "}
                         The Steady State Values on executing the ASM process
                     </figcaption>
                 </figure>{" "}
                 <br />
-                The open loop transfer function adopted to be implemented for
-                the functioning of the controller is:- G(s) = 55.34s3 + 9071s2 +
-                4.956e05s + 9.022e06 / s4 + 478.4s3 + 6.056 e04 s2 + 2.985e06
-                s+5.142e07
+                <p>
+                    The open loop transfer function adopted to be implemented
+                    for the functioning of the controller is:- <br />
+                    G(s) = &emsp; 55.34s3 + 9071s2 + 4.956e05s + 9.022e06 <br />
+                    &emsp;&emsp;&emsp;___________________________________________
+                    <br />
+                    &emsp;&emsp;s4 + 478.4s3 + 6.056 e04 s2 + 2.985e06
+                    s+5.142e07
+                </p>
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/1iyXMrELdGTal9f0_L9dWiSqyseLyiWdU/preview"
                     width="640"
@@ -234,7 +259,7 @@ export default {
                 G(s) = 0.17546e − 0.012s / 3.1447s+1 <br />
                 On tuning the P and PI controllers by Zeigler Nichols method,
                 the following parameters were obtained:-
-                <table style={{ width: "100%", border: "1" }}>
+                <table>
                     <tr>
                         <th>Parameters</th>
                         <th>P</th>
@@ -254,7 +279,7 @@ export default {
                 <br />
                 The parameters corresponding to the inbuilt PID controller by
                 various tuning methods are as follows:- <br />
-                <table style={{ width: "100%", border: "1" }}>
+                <table>
                     <tr>
                         <th>Method of Tuning</th>
                         <th>P</th>

@@ -33,10 +33,15 @@ export default {
         ),
         meth: (
             <div>
-                Github:{" "}
-                <a href="https://github.com/PriyankaPeri/AES_FPGA-">
-                    https://github.com/PriyankaPeri/AES_FPGA-
-                </a>{" "}
+                Click here to view on{` `}
+                <a
+                    href="https://github.com/PriyankaPeri/AES_FPGA"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Github
+                </a>
+                <br />
                 <br />
                 AES-128 is a symmetric key encryption algorithm that acts on 128
                 bits of data. The message is encrypted in 10 rounds. AES

@@ -85,3 +85,13 @@
 .membersList {
 	list-style-type: disc;
 }
+.description table{
+	border: 1px solid black;
+	width: 100%;
+}
+.description th{
+	border: 2px 0px solid black ;
+}
+.description tr{
+	border-bottom: 1px solid black ;
+}
