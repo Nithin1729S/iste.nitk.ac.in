@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '../css/topNav.module.css';
 
 import TopButton from './TopButton';
-const ProjectNav = ({ projectId, handleClick, sig, data }) => {
+const ProjectNav = ({ handleClick, sig, data }) => {
 	return (
 		<div className={styles.main}>
 			<h1 className={styles.header}>{sig}</h1>
