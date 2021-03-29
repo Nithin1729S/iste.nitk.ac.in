@@ -15,6 +15,7 @@ import EventAdd from "./PageComponents/EventAdd";
 import ExpoHomeComponent from "../expo/Components/ExpoHomeComponent";
 import DescPage from "../expo/Components/DescPage";
 import LeaderboardComponent from "./PageComponents/LeaderboardComponent";
+import CTFComponent from "./PageComponents/CTFComponent";
 
 import "../css/constants.css";
 
@@ -30,9 +31,12 @@ class App extends React.Component {
                 <Header shouldRender={this.state.headerShouldRender} />
                 <div className="app-main">
                     {/* //TODO: 1.route for transcend website
-                        //TODO: 2.route for the transcend charge website will be login+questions
-                        //TODO: 3.route for transcend charge leaderboard
-                    */}
+                     */}
+                    <Route
+                        path="/transcend/charge"
+                        exact
+                        component={CTFComponent}
+                    />
                     <Route
                         path="/expo"
                         exact
@@ -45,11 +49,11 @@ class App extends React.Component {
                             />
                         )}
                     />
-                    {/* <Route
+                    <Route
                         path="/leaderboard"
                         exact
                         component={LeaderboardComponent}
-                    /> */}
+                    />
                     <Route path="/expo/:name" exact component={DescPage} />
                     <Route path="/" exact component={HomeComponent} />
                     <Route path="/event" exact component={EventComponent} />
