@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../css/QuestionItem.module.css";
 
 class QuestionItem extends React.Component {
-  anyname=()=>{console.log("anystring")};
+  modalHandler=()=>{console.log("anystring")};
   render() {
     const {
       questionId,
@@ -15,7 +15,7 @@ class QuestionItem extends React.Component {
       hint2Url,
     } = this.props.item;
     return (
-      <div onClick={this.anyname} className={`${styles.box} ${status?styles.attempted:null}`}>
+      <div onClick={this.modalHandler} className={`${styles.box} ${status?styles.attempted:null}`}>
         <h3>{Title}</h3>
         <h5>{points}</h5>
       </div>

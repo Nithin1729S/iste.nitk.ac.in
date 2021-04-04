@@ -25,7 +25,7 @@ class CTFLoginComponent extends React.Component {
                     const cookie = new Cookies();
                     cookie.set("AuthToken", res.data.token, { path: "/" });
                     cookie.set("teamName", res.data.team_name, { path: "/" });
-                    history.push("/");
+                    history.push("/transcend/charge");
                     history.go(0);
                 })
                 .catch(() => {
