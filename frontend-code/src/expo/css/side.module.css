@@ -30,11 +30,11 @@
 	transform: scale(1.1);
 }
 .active h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.active h2,
+.active h3,
+.active h4,
+.active h5,
+.active h6 {
 	margin-left: 5%;
 	align-self: flex-end;
 	font-size: 150%;
