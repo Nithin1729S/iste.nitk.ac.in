@@ -10,7 +10,7 @@ class QuestionList extends React.Component {
         {
             questionId: 1,
             status: true,
-            Title: "Charge rocks",
+            Title: "Charge A",
             description: "",
             points: "30",
             url: "",
@@ -20,7 +20,7 @@ class QuestionList extends React.Component {
         {
             questionId: 2,
             status: true,
-            Title: "Charge is amazing",
+            Title: "Charge B",
             description: "",
             points: "70",
             url: "",
@@ -30,7 +30,7 @@ class QuestionList extends React.Component {
         {
             questionId: 3,
             status: false,
-            Title: "Charge the best",
+            Title: "Charge C",
             description: "",
             points: "100",
             url: "",
