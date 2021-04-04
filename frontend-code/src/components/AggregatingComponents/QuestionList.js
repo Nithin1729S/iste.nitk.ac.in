@@ -9,6 +9,7 @@ class QuestionList extends React.Component {
     data = [
         {
             questionId: 1,
+            status: "",
             Title: "",
             description: "",
             points: "",
@@ -18,6 +19,7 @@ class QuestionList extends React.Component {
         },
         {
             questionId: 2,
+            status: "",
             Title: "",
             description: "",
             points: "",
@@ -27,6 +29,7 @@ class QuestionList extends React.Component {
         },
         {
             questionId: 3,
+            status: "",
             Title: "",
             description: "",
             points: "",
