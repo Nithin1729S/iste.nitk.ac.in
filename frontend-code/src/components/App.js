@@ -17,6 +17,7 @@ import ExpoHomeComponent from "../expo/Components/ExpoHomeComponent";
 import DescPage from "../expo/Components/DescPage";
 import LeaderboardComponent from "./PageComponents/LeaderboardComponent";
 import CTFComponent from "./PageComponents/CTFComponent";
+import SGPComponent from "./PageComponents/SGPComponent";
 
 import "../css/constants.css";
 
@@ -35,6 +36,7 @@ class App extends React.Component {
                 <div className="app-main">
                     {/* //TODO: 1.route for transcend website
                      */}
+                    <Route path="/SGP" exact component={SGPComponent} />
                     <Route
                         path="/transcend/charge"
                         exact

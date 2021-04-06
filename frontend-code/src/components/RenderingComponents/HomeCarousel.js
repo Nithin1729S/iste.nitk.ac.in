@@ -45,7 +45,7 @@ class HomeCarousel extends React.Component {
                             to="/expo"
                             class="btn white-text dark"
                         >
-                            See our projects!
+                            View our Projects for 2020-2021 !
                         </Link>
                     </div>
                     {carouselContent}
