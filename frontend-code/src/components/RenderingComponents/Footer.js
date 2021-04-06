@@ -25,28 +25,33 @@ class Footer extends React.Component {
         },
     ];
     render() {
-        if (!this.props.shouldRender) return null;
         return (
             <div className="footer">
                 <footer className="page-footer ">
                     <div className="container">
                         <div className="row">
                             <div className="col l6 s12">
-                                <h5 className="text">About Us</h5>
-                                <p className="text text-lighten-4">
-                                    ISTE NITK strives to supplement the campus’
-                                    academic environment by conducting a host of
-                                    different technical events, workshops, and
-                                    annual projects, aimed at making learning
-                                    fun, insightful and impactful. With a host
-                                    of various Special Interest Groups, or SIGs,
-                                    our community specializes in domains ranging
-                                    from various branches of engineering, to
-                                    business, literature and media, ISTE NITK
-                                    constantly strives to develop its’ members
-                                    technical capabilities, and nurture a sense
-                                    of creativity
-                                </p>
+                                <div className="row center">
+                                    <h5 className="text">Reach us at:</h5>
+                                    <div className="row"></div>
+                                    {this.footerIcons.map(
+                                        ({ iconName, iconUrl }) => {
+                                            return (
+                                                <a
+                                                    key={iconName}
+                                                    href={iconUrl}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="anchor"
+                                                >
+                                                    <i
+                                                        className={`center fa ${iconName} fa-2x white-text`}
+                                                    />
+                                                </a>
+                                            );
+                                        }
+                                    )}
+                                </div>
                             </div>
                             <div className="col l4 offset-l2 s12">
                                 <div className="row">
@@ -73,25 +78,6 @@ class Footer extends React.Component {
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
-                                <div className="row">
-                                    {this.footerIcons.map(
-                                        ({ iconName, iconUrl }) => {
-                                            return (
-                                                <a
-                                                    key={iconName}
-                                                    href={iconUrl}
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                    className="anchor"
-                                                >
-                                                    <i
-                                                        className={`center fa ${iconName} fa-2x white-text`}
-                                                    />
-                                                </a>
-                                            );
-                                        }
-                                    )}
                                 </div>
                             </div>
                         </div>

@@ -94,7 +94,6 @@ class Header extends React.Component {
         </li>
     );
     render() {
-        if (!this.props.shouldRender) return null;
         const cookie = new Cookies();
         if (cookie.get("firstName") !== undefined) {
             if (this.state.loggedInName !== cookie.get("firstName")) {

@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, HashRouter } from "react-router-dom";
 
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./UtilityComponents/ScrollToTop";
+import Wrapper from "./UtilityComponents/Wrapper";
 import Header from "./RenderingComponents/Header";
 import Footer from "./RenderingComponents/Footer";
 import HomeComponent from "./PageComponents/HomeComponent";
@@ -28,7 +29,9 @@ class App extends React.Component {
         return (
             <HashRouter>
                 <ScrollToTop />
-                <Header shouldRender={this.state.headerShouldRender} />
+                <Wrapper shouldRender={this.state.headerShouldRender}>
+                    <Header />
+                </Wrapper>
                 <div className="app-main">
                     {/* //TODO: 1.route for transcend website
                      */}
@@ -72,7 +75,9 @@ class App extends React.Component {
                     />
                     <Route path="/event/add" exact component={EventAdd} />
                 </div>
-                <Footer shouldRender={this.state.headerShouldRender} />
+                <Wrapper shouldRender={this.state.headerShouldRender}>
+                    <Footer />
+                </Wrapper>
             </HashRouter>
         );
     }
