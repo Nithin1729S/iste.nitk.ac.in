@@ -9,6 +9,61 @@ from django.contrib import messages
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+def mapNewId(projects):
+    l = []
+    current_ids = {
+        18:'catalyst1',
+        20:'catalyst2',
+        103:'catalyst3',
+        
+        4:'charge1',
+        31:'charge2',
+        25:'charge3',
+        26:'charge4',
+        102:'charge5',
+        28:'charge6',
+        
+        37:'chronicle1',
+        84:'chronicle2',
+        35:'chronicle3',
+        
+        34:'clutch1',
+        29:'clutch2',
+        22:'clutch3',
+        2:'clutch4',
+        
+        100:'concrete2',
+        15:'concrete1',
+        5:'concrete4',
+        32:'concrete3',
+        8:'concrete5',
+        
+        17:'create1',
+        35:'create2',
+        
+        21:'credit5',
+        11:'credit6',
+        3:'credit3',
+        16:'credit4',
+        9:'credit2',
+        7:'credit1',
+        27:'credit7',
+        
+        19:'crypt2',
+        14:'crypt5',
+        99:'crypt1',
+        13:'crypt4',
+        30:'crypt3',
+        24:'crypt6'
+        
+    }
+    for project in projects:
+        if project['id'] in current_ids:
+            d = project
+            d['id'] = current_ids[project['id']]
+            l.append(d)
+    return l
+    
 @api_view(['GET'])
 def indexViewAll(request, sig_name):
     projects = {}
@@ -39,6 +94,10 @@ def indexViewCurrent(request, sig_name):
         year=this_year
     ).order_by('name')
     projects_data = ProjectSerializer(projects_obj,many=True).data
+
+    #mapping for custom id, to be removed later
+    projects_data = mapNewId(projects_data)
+    
     return Response(projects_data)
 
 # @login_required
