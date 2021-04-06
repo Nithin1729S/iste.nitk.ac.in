@@ -1,0 +1,69 @@
+.leaderboard {
+    --Primary: rgb(228, 243, 255);
+    --Secondary: rgb(16, 21, 95);
+}
+.input {
+    margin: 10px 10px !important;
+    max-width: 100px;
+    color: var(--Secondary);
+}
+
+.choice {
+    display: inline;
+}
+
+.header {
+    font-family: "abcd";
+    font-weight: 100;
+    color: var(--Secondary);
+}
+
+.button {
+    background-color: var(--Primary);
+    color: var(--Secondary);
+    border: 2px solid var(--Secondary);
+    padding: 10px 5px;
+    margin: 0px 5px;
+    border-radius: 17px;
+    font-family: "abcd";
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.label {
+    color: var(--Secondary);
+}
+
+.button.active {
+    background-color: var(--Secondary);
+    color: var(--Primary);
+}
+
+.filter label {
+    font-size: large;
+    color: var(--Secondary);
+}
+
+.table {
+    text-transform: capitalize;
+    font-size: medium;
+}
+
+.table > thead th {
+    color: var(--Primary);
+    background-color: var(--Secondary);
+    text-transform: capitalize;
+    border-radius: 0px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.table > tbody tr {
+    border-color: var(--Secondary);
+    border-width: 2px;
+}
+.table{
+    margin-bottom: 5%;
+}

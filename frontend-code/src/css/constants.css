@@ -1,5 +1,6 @@
 :root {
   --primary: #1a237e;
+  --primaryDarker:#10154d;
   --secondary: #ffffff;
   --navBarPrimary: rgba(0, 0, 0, 0.5);
   --navBarPri: rgba(0, 0, 0, 0.85);
@@ -13,12 +14,12 @@
   --sigCardReveal:rgba(0,0,0,0.7);
   --sigCardBorder:white;
   --sigCardText:white;
+  --QuestionItemBackground: rgba(12, 27, 236, 0.479);
 }
 
 * {
   font-family: GothamPro;
 }
-
 main {
   flex: 1 0 auto;
 }

@@ -1,0 +1,15 @@
+.box {
+    background: rgba(100, 0, 100, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.box:hover {
+    cursor: pointer;
+    background: rgba(100, 0, 100, 0.7);
+}
+.attempted {
+    border: black 1px solid;
+    background: rgba(50, 0, 100, 0.6);
+}

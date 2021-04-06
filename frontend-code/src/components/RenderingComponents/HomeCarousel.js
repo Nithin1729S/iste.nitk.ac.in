@@ -3,11 +3,11 @@ import M from "materialize-css/dist/js/materialize.min.js";
 
 import "../../css/carousel.css";
 import { baseUrl } from "../../constants";
-
+import { Link } from "react-router-dom";
 class HomeCarousel extends React.Component {
     state = {};
     componentDidMount() {
-        if(!this.props.photosList||!this.props.photosList.length)return;
+        if (!this.props.photosList || !this.props.photosList.length) return;
         let elems = document.querySelectorAll(".carousel");
         M.Carousel.init(elems, {
             fullWidth: true,
@@ -23,7 +23,7 @@ class HomeCarousel extends React.Component {
         }, 3500);
     }
     render() {
-        const carouselContent = this.props.photosList.map(item => {
+        const carouselContent = this.props.photosList.map((item) => {
             return (
                 <a key={item.name} className="carousel-item" href="/">
                     <img
@@ -40,12 +40,28 @@ class HomeCarousel extends React.Component {
                     className="carousel carousel-slider slides"
                     id="desktop-carousel"
                 >
+                    <div class="carousel-fixed-item center">
+                        <Link
+                            to="/expo"
+                            class="btn white-text dark"
+                        >
+                            View our Projects for 2020-2021 !
+                        </Link>
+                    </div>
                     {carouselContent}
                 </div>
                 <div
                     className="carousel carousel-slider slides"
                     id="mobile-carousel"
                 >
+                    <div class="carousel-fixed-item center">
+                        <Link
+                            to="/expo"
+                            class="btn white-text dark"
+                        >
+                            See our projects!
+                        </Link>
+                    </div>
                     {carouselContent}
                 </div>
             </>
