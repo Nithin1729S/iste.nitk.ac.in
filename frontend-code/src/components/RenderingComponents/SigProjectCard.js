@@ -40,7 +40,7 @@ class ProjectCard extends React.Component {
                     <div className="row center">
                         <div className="detButton">
                             <Link
-                                to={`/project/${this.props.projID}`}
+                                to={`/expo/${this.props.projID}`}
                                 className="waves-light btn-small btnColor"
                             >
                                 View Details

@@ -8,7 +8,7 @@ class CoreImage extends React.Component {
             <div>
                 <CoreImageDisplay title="The Core" data={this.props.core} />
                 <CoreImageDisplay
-                    title="Auxillary Core"
+                    title="Auxiliary Core"
                     data={this.props.aux_core}
                 />
             </div>
