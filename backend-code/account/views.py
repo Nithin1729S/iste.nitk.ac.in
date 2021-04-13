@@ -52,6 +52,13 @@ def logoutView(request):
     return redirect('home:index')
 
 
+#REST API endpoint for log out
+@api_view(['POST'])
+def logoutView_REST(request):
+    logout(request)
+    return Response({'isLogin': False,'msg': 'Successfully Logged out'})
+
+
 @login_required
 def editView(request):
     context = {}
