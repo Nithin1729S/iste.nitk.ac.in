@@ -27,7 +27,7 @@ class SMPComponent extends React.Component {
                 </p>
                 <a
                     href="https://forms.gle/FEHT79UVNvMzp9JMA"
-                    className="waves-effect waves-light btn"
+                    className="waves-light btn"
                     target="_blank"
                     rel="noreferrer"
                     style={{
