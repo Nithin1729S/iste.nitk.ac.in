@@ -5,7 +5,15 @@ import "../../css/sigProjectCard.css";
 
 class SigProjectCard extends React.Component {
     render() {
-        const {imgUrl, projID, name, description,isImageLeft, isLinkExternal}=this.props;
+        const {
+            imgUrl,
+            projID,
+            name,
+            description,
+            isImageLeft,
+            isLinkExternal,
+            tools,
+        } = this.props;
         const imageCircle = (
             <div className="col l4 hide-on-med-and-down ">
                 <img
@@ -26,6 +34,11 @@ class SigProjectCard extends React.Component {
                 />
             </div>
         );
+        const toolsUsed = tools ? (
+            <pre className="toolsList">
+                Tools Used: {tools.map((item) => `\n${item}`)}
+            </pre>
+        ) : null;
         let Hyperlink = (
             <Link
                 to={`/expo/${projID}`}
@@ -54,6 +67,7 @@ class SigProjectCard extends React.Component {
                         <span>{description}</span>
                     </h6>
                     <div className="row center">
+                        {toolsUsed}
                         <div className="detButton">{Hyperlink}</div>
                     </div>
                 </div>

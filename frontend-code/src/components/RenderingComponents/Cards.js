@@ -38,7 +38,7 @@ class Card extends React.Component {
                                 </i>
                             </span>
                             <hr />
-                            <p className="white-text">{summary}</p>
+                            <pre className="white-text">{summary}</pre>
                             <center>
                                 <Link
                                     className="waves-light btn-small"

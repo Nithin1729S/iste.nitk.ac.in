@@ -8,7 +8,11 @@ import { baseUrl } from "../../constants";
 const SigCards = (props) => {
     const renderedList = props.cardList.map(({ name, avatar, summary }) => {
         const isSig = !Array.isArray(summary);
-        const summaryText = isSig ? summary : summary.map((item) => `${item} `);
+        let summaryText = isSig
+            ? summary
+            : summary.reduce((allSmps, item) => `${item}\n${allSmps}`, "");
+
+        console.log(summaryText);
         const linkOuter = isSig ? "/sig/" : "/smp/";
         return (
             <Card
