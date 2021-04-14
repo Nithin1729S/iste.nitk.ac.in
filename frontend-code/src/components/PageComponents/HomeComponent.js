@@ -49,7 +49,13 @@ class HomeComponent extends React.Component {
                             creativity
                         </p>
                     </div>
-                    <SigCards cardList={this.state.homeData.sigs} />
+                    <div className="container sigCard">
+                        <TitleWithLine title="Special Interest Groups SIG(s)" />
+                        <SigCards
+                            cardList={this.state.homeData.sigs}
+                            linkOuter="/sig/"
+                        />
+                    </div>
                     <TheNumbers stats={this.state.homeData.stats} />
                     <CoreImage
                         core={this.state.homeData.core}

@@ -3,7 +3,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
 import { withRouter } from "react-router-dom";
 
-import ProjectCard from "../RenderingComponents/SigProjectCard";
+import SigProjectCard from "../RenderingComponents/SigProjectCard";
 import TitleWithLine from "../RenderingComponents/TitleWithLine";
 import "../../css/sigComponent.css";
 import { baseRequest, baseUrl } from "../../constants";
@@ -40,10 +40,10 @@ class SigComponent extends React.Component {
         this.fetchSig();
     }
     componentDidUpdate() {
-        const { history } = this.props;
-        if (this.props.match.params.name) {
-            if (this.props.match.params.name !== this.state.name) {
-                this.setState({ name: this.props.match.params.name });
+        const { history, match } = this.props;
+        if (match.params.name) {
+            if (match.params.name !== this.state.name) {
+                this.setState({ name: match.params.name });
                 history.go(0);
             }
         }
@@ -103,15 +103,16 @@ class SigComponent extends React.Component {
                         </div>
                     </div>
                     {this.state.projectData.map((project, index) => {
+                        const {id, name, summary, img_url}=project;
                         return (
                             <div className="row proj-item">
-                                <ProjectCard
-                                    key={index}
+                                <SigProjectCard
+                                    key={id}
                                     isImageLeft={index % 2 === 0}
-                                    projID={project.id}
-                                    name={project.name}
-                                    description={project.summary}
-                                    imgurl={project.img_url}
+                                    projID={id}
+                                    name={name}
+                                    description={summary}
+                                    imgUrl={img_url}
                                 />
                             </div>
                         );

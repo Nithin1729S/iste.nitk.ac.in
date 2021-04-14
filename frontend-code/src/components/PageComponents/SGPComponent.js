@@ -1,32 +1,32 @@
 import React from "react";
 
-import SGPList from "../AggregatingComponents/SGPList";
+import SigCards from "../AggregatingComponents/SigCards";
 import TitleWithLine from "../RenderingComponents/TitleWithLine";
+import { baseRequest, baseUrl } from "../../constants";
 
-const data = {
-    title: "ISTE SGPs",
-    sigs: [{ title: "catalyst", data: [{}] }],
-};
-
-class SGPComponent extends React.Component {
-    state = { data: { data } };
+class SMPComponent extends React.Component {
+    state = { data: {} };
     componentDidMount() {
-        //TODO: add api request
+        baseRequest
+            .get("/smp/")
+            .then((res) => this.setState({ data: res.data }));
     }
     render() {
-        const { title, sigs } = data;
-        const sigsList = sigs.map(({ title, data }) => (
-            <>
-                <h3>{title}</h3>
-                <SGPList data={data} />
-            </>
-        ));
+        if (!this.state.data.sigs) return null;
         return (
-            <div className="center">
-                <TitleWithLine title={title} />
-                {sigsList}
+            <div className="container center">
+                <img
+                    src={`${baseUrl}${this.state.data.banner_url}`}
+                    alt="smps"
+                />
+                <TitleWithLine title="ISTE SMPs" />
+                <TitleWithLine title="Why SMPs" />
+                <p className="text text-lighten-4">
+                    {this.state.data.why_smps_text}
+                </p>
+                <SigCards cardList={this.state.data.sigs} linkOuter={"/smp/"} />
             </div>
         );
     }
 }
-export default SGPComponent;
+export default SMPComponent;

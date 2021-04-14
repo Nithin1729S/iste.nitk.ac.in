@@ -87,11 +87,18 @@ class Header extends React.Component {
         </li>
     );
     expoNavHeader = (
-        <li>
-            <Link to="/expo" className="white-text">
-                Expo
-            </Link>
-        </li>
+        <>
+            <li>
+                <Link to="/expo" className="white-text">
+                    Expo
+                </Link>
+            </li>
+            <li>
+                <Link to="/smp" className="white-text">
+                    SMPs
+                </Link>
+            </li>
+        </>
     );
     render() {
         const cookie = new Cookies();

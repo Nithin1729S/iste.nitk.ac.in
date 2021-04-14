@@ -41,11 +41,8 @@ class HomeCarousel extends React.Component {
                     id="desktop-carousel"
                 >
                     <div class="carousel-fixed-item center">
-                        <Link
-                            to="/expo"
-                            class="btn white-text dark"
-                        >
-                            View our Projects for 2020-2021 !
+                        <Link to="/smp" class="btn white-text dark">
+                            View our SMPs !
                         </Link>
                     </div>
                     {carouselContent}
@@ -55,10 +52,7 @@ class HomeCarousel extends React.Component {
                     id="mobile-carousel"
                 >
                     <div class="carousel-fixed-item center">
-                        <Link
-                            to="/expo"
-                            class="btn white-text dark"
-                        >
+                        <Link to="/expo" class="btn white-text dark">
                             See our projects!
                         </Link>
                     </div>
