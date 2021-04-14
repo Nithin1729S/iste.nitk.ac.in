@@ -34,9 +34,11 @@ class SigProjectCard extends React.Component {
                 />
             </div>
         );
-        const toolsUsed = (
-            <pre className="toolsList">Tools Used: {tools.map((item) => `\n${item}`)}</pre>
-        );
+        const toolsUsed = tools ? (
+            <pre className="toolsList">
+                Tools Used: {tools.map((item) => `\n${item}`)}
+            </pre>
+        ) : null;
         let Hyperlink = (
             <Link
                 to={`/expo/${projID}`}
