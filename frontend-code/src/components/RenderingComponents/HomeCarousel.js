@@ -23,7 +23,10 @@ class HomeCarousel extends React.Component {
         }, 3500);
     }
     render() {
-        const carouselContent = this.props.photosList.map((item) => {
+        let carouselSortedList = this.props.photosList.sort(
+            (a, b) => b.id - a.id
+        );
+        let carouselContent = carouselSortedList.map((item) => {
             return (
                 <a key={item.name} className="carousel-item" href="/">
                     <img
