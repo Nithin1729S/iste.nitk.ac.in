@@ -26,6 +26,8 @@
 }
 .cardImage {
     background-color: var(--primary);
+    margin: 20px;
+    aspect-ratio: 1/1 ;
 }
 .descCard {
     padding-left: 5%;
