@@ -15,7 +15,7 @@ class SGPSigComponent extends React.Component {
     render() {
         if (!this.state.data) return null;
         const smpsList = this.state.data.map((item) => {
-            const { id, name, summary, img_url, file_url, software } = item;
+            const { id, name, summary, img_url, file_url, softwares } = item;
             return (
                 <div className="row project-item">
                     <SigProjectCard
@@ -26,6 +26,7 @@ class SGPSigComponent extends React.Component {
                         description={summary}
                         imgUrl={img_url}
                         isLinkExternal={true}
+                        tools={softwares}
                     />
                 </div>
             );
