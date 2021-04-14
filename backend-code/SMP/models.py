@@ -25,6 +25,10 @@ class SMP(models.Model):
         blank=False,
         editable=True
     )
-
+    softwares = models.TextField(
+        default="",
+        blank=True,
+        editable=True
+    )
     def __str__(self):
         return self.name 

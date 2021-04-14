@@ -12,16 +12,14 @@ from rest_framework.response import Response
 @api_view(['GET'])
 def indexView(request):
     # add banner URL here
-    banner_url = "#"
+    banner_url = "backend-code/media/SMP_banner.jpeg"
 
     # add why SMPs text here
-    why_smps_text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. \
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown \
-            printer took a galley of type and scrambled it to make a type specimen book. It has survived \
-                not only five centuries, but also the leap into electronic typesetting, remaining essentially \
-                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing \
-                        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus \
-                            PageMaker including versions of Lorem Ipsum."
+    why_smps_text = "A shortcut to making your summer a more productive one, with specifically\
+        designed courses and projects available, get the chance to explore a new avenue, add on \
+        a skillset or work on an exciting project to gain mastery over both the theoretical\
+        and practical aspects of a subject. Make your resume stand out with the certificates \
+        and skills that you will earn by being a part of the SMPs!"
 
     smps = {}
     sigs = ['Catalyst', 'Charge', 'Chronicle', 'Clutch',
@@ -31,8 +29,10 @@ def indexView(request):
             sigs__name=sig
         ).order_by('name')
         smps_data = SMPSerializer(smps_obj, many=True, fields=[
-            'name', 'id', 'summary', 'file_url', 'img_url']).data
+            'name', 'id', 'summary', 'file_url', 'img_url','softwares']).data
         smps[sig] = smps_data
+        for i in range(len(smps[sig])):
+            smps[sig][i]['softwares'] = smps[sig][i]['softwares'].strip().split(',')
     return Response({
         'banner_url': banner_url,
         'why_smps_text': why_smps_text,
