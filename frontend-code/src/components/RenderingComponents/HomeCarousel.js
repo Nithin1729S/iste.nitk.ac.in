@@ -52,8 +52,8 @@ class HomeCarousel extends React.Component {
                     id="mobile-carousel"
                 >
                     <div class="carousel-fixed-item center">
-                        <Link to="/expo" class="btn white-text dark">
-                            See our projects!
+                        <Link to="/smp" class="btn white-text dark">
+                            View our SMPs !
                         </Link>
                     </div>
                     {carouselContent}
