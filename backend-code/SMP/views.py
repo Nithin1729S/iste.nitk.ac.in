@@ -51,5 +51,7 @@ def detailsView(request, sig_name):
     ).order_by('name')
 
     smps_data = SMPSerializer(smps, many=True, fields=[
-                              'name', 'id', 'summary', 'file_url', 'img_url']).data
+                              'name', 'id', 'summary', 'file_url', 'img_url','softwares']).data
+    for i in range(len(smps_data)):
+        smps_data[i]['softwares'] = smps_data[i]['softwares'].strip().split(',')
     return Response(smps_data)
