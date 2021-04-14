@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from account.models import SIG
+from account.serializers import SIGSerializer
 from SMP.models import SMP
 from SMP.serializers import SMPSerializer
 
@@ -21,22 +22,26 @@ def indexView(request):
         and practical aspects of a subject. Make your resume stand out with the certificates \
         and skills that you will earn by being a part of the SMPs!"
 
-    smps = {}
-    sigs = ['Catalyst', 'Charge', 'Chronicle', 'Clutch',
-            'Concrete', 'Create', 'Credit', 'Crypt']
-    for sig in sigs:
+    sigs = []
+    for sig in SIG.objects.all().order_by('name'):
+        sig_data = SIGSerializer(sig, fields=['name','avatar']).data
+        print(sig_data)
+
         smps_obj = SMP.objects.filter(
-            sigs__name=sig
+            sigs__name=sig.name
         ).order_by('name')
-        smps_data = SMPSerializer(smps_obj, many=True, fields=[
-            'name', 'id', 'summary', 'file_url', 'img_url','softwares']).data
-        smps[sig] = smps_data
-        for i in range(len(smps[sig])):
-            smps[sig][i]['softwares'] = smps[sig][i]['softwares'].strip().split(',')
+        l=[]
+        for smp in smps_obj:
+            l.append(smp.name)
+        sigs.append({
+            'name': sig_data['name'],
+            'avatar': sig_data['avatar'][1:],
+            'summary': l
+        })
     return Response({
         'banner_url': banner_url,
         'why_smps_text': why_smps_text,
-        'smps': smps
+        'sigs': sigs
     })
 
 
@@ -51,7 +56,7 @@ def detailsView(request, sig_name):
     ).order_by('name')
 
     smps_data = SMPSerializer(smps, many=True, fields=[
-                              'name', 'id', 'summary', 'file_url', 'img_url','softwares']).data
+                              'name', 'id', 'summary', 'file_url', 'img_url', 'softwares']).data
     for i in range(len(smps_data)):
         smps_data[i]['softwares'] = smps_data[i]['softwares'].strip().split(',')
     return Response(smps_data)

@@ -1,13 +1,14 @@
 import xlsxwriter
 import xlrd
 from django.core.files.images import ImageFile
-from account.models import SIG
-from SMP.models import SMP
 import importlib
 import os
 import django
+
 os.environ['DJANGO_SETTINGS_MODULE'] = 'website.settings'
 django.setup()
+from account.models import SIG
+from SMP.models import SMP
 
 
 def excel_read(file, sheet_name='Sheet1'):
@@ -32,24 +33,25 @@ def excel_write(dataset, file, worksheet_name="Usernames"):
     workbook.close()
 
 
-l = excel_read('SMP.xlsx', 'Sheet1')[1:]
+l = excel_read('SMP Database.xlsx', 'Sheet1')[1:]
 for row in l:
     name = row[0].strip()
     sigs = row[1].strip().split(',')
     l = []
-    for sigin sigs:
+    for sig in sigs:
         l.append(SIG.objects.get(name=sig))
     sigs = l
     summary = row[2].strip()
     file_url = row[3].strip()
-    img_url = row[4].strip()
+    img_url = "https://docs.google.com/spreadsheets/d/1NRIB5Rca8aI2NTQA3HSB0ZOswtUIXYHmYqso_-JFBzo/edit#gid=0"
     softwares = row[5].strip()
     obj = SMP.objects.create(
             name=name,
-            sigs=sigs,
             summary=summary,
             file_url=file_url,
             img_url=img_url,
             softwares=softwares
         )
+    obj.sigs.set(sigs)
     obj.save()
+    print(name)
