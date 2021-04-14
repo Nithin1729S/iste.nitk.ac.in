@@ -43,7 +43,7 @@ for row in l:
     sigs = l
     summary = row[2].strip()
     file_url = row[3].strip()
-    img_url = "https://docs.google.com/spreadsheets/d/1NRIB5Rca8aI2NTQA3HSB0ZOswtUIXYHmYqso_-JFBzo/edit#gid=0"
+    img_url = "https://iste.nitk.ac.in/api/"+row[4].strip()
     softwares = row[5].strip()
     obj = SMP.objects.create(
             name=name,

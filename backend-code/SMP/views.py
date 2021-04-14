@@ -13,7 +13,7 @@ from rest_framework.response import Response
 @api_view(['GET'])
 def indexView(request):
     # add banner URL here
-    banner_url = "backend-code/media/SMP_banner.jpeg"
+    banner_url = "media/SMP_banner.jpeg"
 
     # add why SMPs text here
     why_smps_text = "A shortcut to making your summer a more productive one, with specifically\
