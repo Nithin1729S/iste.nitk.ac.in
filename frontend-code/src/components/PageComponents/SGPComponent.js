@@ -18,6 +18,7 @@ class SMPComponent extends React.Component {
                 <img
                     src={`${baseUrl}${this.state.data.banner_url}`}
                     alt="smps"
+                    style={{ width: "100%" }}
                 />
                 <TitleWithLine title="Why take SMPs?" />
 
