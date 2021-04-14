@@ -35,7 +35,7 @@ def indexView(request):
             l.append(smp.name)
         sigs.append({
             'name': sig_data['name'],
-            'avatar': 'backend'+sig_data['avatar'],
+            'avatar': sig_data['avatar'][1:],
             'summary': l
         })
     return Response({
