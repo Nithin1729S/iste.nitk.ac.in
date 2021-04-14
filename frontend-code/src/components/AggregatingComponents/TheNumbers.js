@@ -8,7 +8,7 @@ const TheNumbers = (props) => {
         <NumList
             years_in_operation={props.stats.years_in_operation}
             member_count={props.stats.member_count}
-            project={props.stats.project}
+i            project={props.stats.project}
         />
     );
 

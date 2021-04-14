@@ -36,7 +36,7 @@ class App extends React.Component {
                 <div className="app-main">
                     {/* //TODO: 1.route for transcend website
                      */}
-                    <Route path="/SGP" exact component={SGPComponent} />
+                    <Route path="/smp" exact component={SGPComponent} />
                     <Route
                         path="/transcend/charge"
                         exact

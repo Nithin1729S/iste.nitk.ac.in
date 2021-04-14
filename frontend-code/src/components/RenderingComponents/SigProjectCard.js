@@ -3,20 +3,16 @@ import { Link } from "react-router-dom";
 
 import "../../css/sigProjectCard.css";
 
-class ProjectCard extends React.Component {
+class SigProjectCard extends React.Component {
     render() {
-        let directionImg = "right";
-        if (this.props.isImageLeft) {
-            directionImg = "left";
-        }
+        const {imgUrl, projID, name, description,isImageLeft, isLinkExternal}=this.props;
         const imageCircle = (
             <div className="col l4 hide-on-med-and-down ">
                 <img
-                    src={this.props.imgurl}
-                    className={
-                        "responsive-img cardImage valign-wrapper " +
-                        directionImg
-                    }
+                    src={imgUrl}
+                    className={`responsive-img cardImage valign-wrapper ${
+                        isImageLeft ? "left" : "right"
+                    }`}
                     alt=""
                 />
             </div>
@@ -24,33 +20,46 @@ class ProjectCard extends React.Component {
         const imageCircleSmall = (
             <div className="col hide-on-large-only s12 proj-image">
                 <img
-                    src={this.props.imgurl}
+                    src={imgUrl}
                     className="responsive-img cardImage center"
                     alt=""
                 />
             </div>
         );
+        let Hyperlink = (
+            <Link
+                to={`/expo/${projID}`}
+                className="waves-light btn-small btnColor"
+            >
+                View Details
+            </Link>
+        );
+        if (isLinkExternal) {
+            Hyperlink = (
+                <a
+                    href={projID}
+                    className="waves-light btn-small btnColor"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    View Details
+                </a>
+            );
+        }
         const Content = (
             <div className="col l8 s12">
                 <div className="row">
-                    <h4 className="center">{this.props.name}</h4>
+                    <h4 className="center">{name}</h4>
                     <h6 className="descCard">
-                        <span>{this.props.description}</span>
+                        <span>{description}</span>
                     </h6>
                     <div className="row center">
-                        <div className="detButton">
-                            <Link
-                                to={`/expo/${this.props.projID}`}
-                                className="waves-light btn-small btnColor"
-                            >
-                                View Details
-                            </Link>
-                        </div>
+                        <div className="detButton">{Hyperlink}</div>
                     </div>
                 </div>
             </div>
         );
-        if (this.props.isImageLeft)
+        if (isImageLeft)
             var renderedData = (
                 <>
                     {imageCircle}
@@ -74,4 +83,4 @@ class ProjectCard extends React.Component {
     }
 }
 
-export default ProjectCard;
+export default SigProjectCard;
