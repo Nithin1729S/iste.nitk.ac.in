@@ -34,6 +34,18 @@ class SGPSigComponent extends React.Component {
         return (
             <div className="center">
                 <TitleWithLine title={this.props.match.params.name} />
+                <a
+                    href="https://forms.gle/FEHT79UVNvMzp9JMA"
+                    className="waves-light btn"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                        marginBottom: "20px",
+                        background: "var(--primary)",
+                    }}
+                >
+                    Click here to register!!!
+                </a>
                 {smpsList}
             </div>
         );
