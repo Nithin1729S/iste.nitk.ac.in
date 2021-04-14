@@ -65,7 +65,7 @@ class TeamComponent extends React.Component {
                         {this.state.memberData.core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
                         })}
-                        <DataHeader header="Auxillary Core Members" />
+                        <DataHeader header="Auxiliary Core Members" />
                         {this.state.memberData.aux_core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
                         })}

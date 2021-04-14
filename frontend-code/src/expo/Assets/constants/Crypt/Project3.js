@@ -1,6 +1,6 @@
 import Voice from "./Voice.png";
 export default {
-    id: 3,
+    id: 6,
     tags: ["image processing", "YOLO", "OpenCV", "Web Dev", "Depth Extraction"],
     oneline:
         "Assist the visually impaired by capturing images and recognising objects in their surroundings.",
