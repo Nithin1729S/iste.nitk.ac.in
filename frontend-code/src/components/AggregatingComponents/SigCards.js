@@ -7,12 +7,16 @@ import { baseUrl } from "../../constants";
 
 const SigCards = (props) => {
     const renderedList = props.cardList.map(({ name, avatar, summary }) => {
+        const isSig = !Array.isArray(summary);
+        const summaryText = isSig ? summary : summary.map((item) => `${item} `);
+        const linkOuter = isSig ? "/sig/" : "/smp/";
         return (
             <Card
                 key={name}
                 name={name}
                 avatar={`${baseUrl}${avatar}`}
-                summary={summary.map((item) => `${item} `)}
+                summary={summaryText}
+                buttonLink={`${linkOuter}${name}`}
             />
         );
     });

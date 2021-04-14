@@ -11,28 +11,25 @@ class Card extends React.Component {
     onClickClose = () => {
         this.setState({ show: false });
     };
-    
+
     render() {
+        const { avatar, name, summary, buttonLink } = this.props;
         return (
             <div className="col s12 s12 l3 sigcard" onClick={this.OnCLick}>
                 <div className="card z-depth-4" style={{ overflow: "hidden" }}>
                     <div className="card-image waves-block waves-light">
-                        <img
-                            className="activator"
-                            src={this.props.avatar}
-                            alt={this.props.avatar}
-                        />
+                        <img className="activator" src={avatar} alt={avatar} />
                     </div>
                     <div className="card-content activator indigo darken-3 waves-block waves-light">
                         <span className="card-title activator white-text text-darken-4">
-                            {this.props.name}
+                            {name}
                             <i className="material-icons right">more_vert</i>
                         </span>
                     </div>
                     {this.state.show ? (
                         <div className="card-reveal">
                             <span className="card-title white-text">
-                                {this.props.name}
+                                {name}
                                 <i
                                     className="material-icons right"
                                     onClick={this.onClickClose}
@@ -41,11 +38,11 @@ class Card extends React.Component {
                                 </i>
                             </span>
                             <hr />
-                            <p className="white-text">{this.props.summary}</p>
+                            <p className="white-text">{summary}</p>
                             <center>
                                 <Link
                                     className="waves-light btn-small"
-                                    to={`/sig/${this.props.name}`}
+                                    to={buttonLink}
                                 >
                                     View More
                                 </Link>

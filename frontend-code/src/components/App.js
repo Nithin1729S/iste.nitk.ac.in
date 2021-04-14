@@ -18,6 +18,7 @@ import DescPage from "../expo/Components/DescPage";
 import LeaderboardComponent from "./PageComponents/LeaderboardComponent";
 import CTFComponent from "./PageComponents/CTFComponent";
 import SGPComponent from "./PageComponents/SGPComponent";
+import SGPSigComponent from "./PageComponents/SGPSigComponent";
 
 import "../css/constants.css";
 
@@ -37,6 +38,11 @@ class App extends React.Component {
                     {/* //TODO: 1.route for transcend website
                      */}
                     <Route path="/smp" exact component={SGPComponent} />
+                    <Route
+                        path="/smp/:name"
+                        exact
+                        component={SGPSigComponent}
+                    />
                     <Route
                         path="/transcend/charge"
                         exact

@@ -15,7 +15,6 @@
     .cardImage {
         padding-left: 5%;
         width: 95%;
-        height: auto;
         padding-top: 10%;
         padding-bottom: 5%;
     }
@@ -25,7 +24,9 @@
         margin-left: 5%;
     }
 }
-
+.cardImage {
+    background-color: var(--primary);
+}
 .descCard {
     padding-left: 5%;
     font-weight: lighter;

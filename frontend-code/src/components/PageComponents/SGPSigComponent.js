@@ -1,30 +1,38 @@
 import React from "react";
 
-import SGPList from "../AggregatingComponents/SGPList";
-import {baseRequest} from "../../constants";
+import SigProjectCard from "../RenderingComponents/SigProjectCard";
+import { baseRequest } from "../../constants";
+import TitleWithLine from "../RenderingComponents/TitleWithLine";
 
 class SGPSigComponent extends React.Component {
-    state = { data: {} };
+    state = { data: [] };
     componentDidMount() {
+        const { match } = this.props;
         baseRequest
-            .get("/smp/")
+            .get(`/smp/${match.params.name}/`)
             .then((res) => this.setState({ data: res.data }));
     }
     render() {
-        if (!this.state.data.smps) return null;
-        const { smps } = this.state.data;
-        const smpsList = Object.keys(smps).map((key) => {
-            const data = smps[key];
-            const title = key;
+        if (!this.state.data) return null;
+        const smpsList = this.state.data.map((item) => {
+            const { id, name, summary, img_url, file_url, software } = item;
             return (
-                <>
-                    <h3>{title}</h3>
-                    <SGPList data={data} />
-                </>
+                <div className="row project-item">
+                    <SigProjectCard
+                        key={id}
+                        isImageLeft={true}
+                        projID={file_url}
+                        name={name}
+                        description={summary}
+                        imgUrl={img_url}
+                        isLinkExternal={true}
+                    />
+                </div>
             );
         });
         return (
             <div className="center">
+                <TitleWithLine title={this.props.match.params.name} />
                 {smpsList}
             </div>
         );
