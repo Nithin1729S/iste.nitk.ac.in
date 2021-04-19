@@ -19,6 +19,7 @@ import LeaderboardComponent from "./PageComponents/LeaderboardComponent";
 import CTFComponent from "./PageComponents/CTFComponent";
 import SGPComponent from "./PageComponents/SGPComponent";
 import SGPSigComponent from "./PageComponents/SGPSigComponent";
+import Transcend from "./Transcend";
 
 import "../css/constants.css";
 
@@ -37,6 +38,7 @@ class App extends React.Component {
                 <div className="app-main">
                     {/* //TODO: 1.route for transcend website
                      */}
+                    <Route path='/transcend' exact component={Transcend}/>
                     <Route path="/smp" exact component={SGPComponent} />
                     <Route
                         path="/smp/:name"

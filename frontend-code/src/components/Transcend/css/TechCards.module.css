@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+}
+.main > * {
+    flex-basis: calc(min(25em, 80vw));
+    height: calc(min(25em, 80vw));
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.card {
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.front {
+    background: var(--primary);
+    color: var(--secondary);
+}
+.back {
+    transform: rotateY(180deg);
+    background: var(--secondary);
+    color: var(--primary);
+}

@@ -1,0 +1,21 @@
+.main {
+    position: relative;
+    width: 100%;
+}
+.title {
+    position: absolute;
+    top: 10%;
+    font-size: 4rem;
+    margin: 2%;
+}
+.desc {
+    position: absolute;
+    top: 25%;
+    margin: 2%;
+    font-size: 1.5rem;
+}
+.backgroundImage {
+    width: 100%;
+    min-height: 200px;
+    max-height: 80vh;
+}
