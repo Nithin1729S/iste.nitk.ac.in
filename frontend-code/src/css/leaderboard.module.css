@@ -1,6 +1,6 @@
 .leaderboard {
-    --Primary: rgb(228, 243, 255);
-    --Secondary: rgb(16, 21, 95);
+    --Primary: #f2fdff;
+    --Secondary: #005795;
 }
 .input {
     margin: 10px 10px !important;

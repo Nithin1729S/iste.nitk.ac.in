@@ -50,7 +50,7 @@ const ModalContent = ({
                         className={`waves-effect waves-light btn-large ${styles.close} col s3 offset-s2`}
                         onClick={onCloseHandler}
                     >
-                        <i className="material-icons right">send</i>CLOSE
+                        <i className="material-icons right">send</i>Send
                     </button>
                 </div>
             </div>

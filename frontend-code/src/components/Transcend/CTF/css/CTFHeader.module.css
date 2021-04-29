@@ -12,8 +12,22 @@
     display: flex;
     gap: 1em;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .main > * {
+    margin: 1em;
+}
+.title,
+.score {
+    color: var(--secondary);
+    font-size: 3.1rem;
+}
+.score {
+    font-weight: 500;
+}
+.button {
+    background: #009FF5 !important;
+}
+.buttons > * {
     margin: 1em;
 }
