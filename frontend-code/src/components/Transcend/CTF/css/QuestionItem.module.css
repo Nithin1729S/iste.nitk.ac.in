@@ -1,9 +1,13 @@
 .box {
-    --primary: #FF00FF;
-    --secondary: #FFFF00;
-    --primaryDarker: #ff0000;
+    --titleColor: #f0f0f0;
+    --titleHoverColor:#000;
+    --titleAttemptedColor:#2d494b;
+    --primary: #0071C3;
+    --secondary: #00B8D9;
+    --primaryDarker: #5EFBD6;
+    --fontColor: #000;
     background: var(--primary);
-    color: var(--secondary);
+    color: var(--fontColor);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,19 +16,19 @@
 .box:hover {
     cursor: pointer;
     background: var(--primaryDarker);
-    color: var(--secondary);
+    color: var(--fontColor);
 }
 .attempted {
     border: black 1px solid;
     background: var(--secondary);
-    color: var(--primary);
+    color: var(--fontColor);
+}
+.attempted .title{
+    color: var(--titleColor);
 }
 .title {
-    color: var(--secondary);
+    color: var(--titleColor);
 }
-.attempted .title {
-    color: var(--primary);
-}
-.attempted:hover .title {
-    color: var(--secondary);
+.box:hover .title {
+    color: var(--titleHoverColor);
 }

@@ -274,10 +274,10 @@ class LeaderboardComponent extends React.Component {
                             >
                                 <thead>
                                     <tr>
-                                        <th>Rank</th>
-                                        <th>Team Name</th>
-                                        <th>Roll Number</th>
-                                        <th>Score</th>
+                                        <th className="center">Rank</th>
+                                        <th className="center">Team Name</th>
+                                        <th className="center">Roll Number</th>
+                                        <th className="center">Score</th>
                                     </tr>
                                 </thead>
                                 <tbody className={styles.tableBody}>
