@@ -14,6 +14,9 @@ from django.contrib import messages
 from django.core.files.storage import default_storage
 from django.contrib.auth import update_session_auth_hash
 
+from .models import *
+from account.models import User
+
 # Create your views here.
 
 class CustomAuthToken(ObtainAuthToken):
@@ -56,10 +59,49 @@ def isLogin(request):
 
 @api_view(['GET'])
 def getQuestions(request):
-    return Response({'questions': 1})
+    # user = request.user 
+
+    user = User.objects.filter(username='Arjun')[0]
+    team = Team.objects.filter(userId=user)[0]
+    teamQ= UserQuestion.objects.filter(userId=team)
+    questions = []
+    for i in Question.objects.all().order_by('id'):
+        cur = i.__dict__
+        del cur['_state']
+        cur['isAns'] = False
+        curQ = teamQ.filter(questionId=i)[0]
+        if curQ.score >= 0:
+            cur['isAns'] = True
+        questions.append(cur)
+        cur['isHint1'] = True
+        cur['isHint2'] = True
+        if cur['hint_1_url'] == None:
+            print('True')
+        if cur['hint_1_url'] == None:
+            cur['isHint1'] = False
+        else:
+            if curQ.hint_1:
+                cur['usedHint1'] = True
+            else:
+                cur['usedHint1'] = False 
+        del cur['hint_1_url']
+        if cur['hint_2_url'] == None:
+            cur['isHint2'] = False
+        else:
+            if curQ.hint_2:
+                cur['usedHint2'] = True
+            else:
+                cur['usedHint2'] = False
+        del cur['hint_2_url']       
+
+    return Response({'questions':questions, 'score':team.score, 'team_name':team.team_name})
 
 @api_view(['GET'])
 def getHints(request):
+    return Response({'hints': 1})
+
+@api_view(['POST'])
+def ansQuestion(request):
     return Response({'hints': 1})
 
 @api_view(['GET'])
