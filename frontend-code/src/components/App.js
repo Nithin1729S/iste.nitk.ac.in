@@ -16,7 +16,7 @@ import EventAdd from "./PageComponents/EventAdd";
 import ExpoHomeComponent from "../expo/Components/ExpoHomeComponent";
 import DescPage from "../expo/Components/DescPage";
 import LeaderboardComponent from "./PageComponents/LeaderboardComponent";
-import CTFComponent from "./PageComponents/CTFComponent";
+import CTFComponent from "./Transcend/CTF/Components";
 import SGPComponent from "./PageComponents/SGPComponent";
 import SGPSigComponent from "./PageComponents/SGPSigComponent";
 import Transcend from "./Transcend";

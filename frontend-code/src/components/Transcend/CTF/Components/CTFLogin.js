@@ -2,8 +2,8 @@ import React from "react";
 import Cookies from "universal-cookie";
 import { withRouter } from "react-router-dom";
 
-import styles from "../../css/CTFLogin.module.css";
-import { baseRequest } from "../../constants";
+import styles from "../css/CTFLogin.module.css";
+import { baseRequest } from "../../../../constants";
 class CTFLoginComponent extends React.Component {
     state = { username: "", password: "", errorMessage: "" };
     handleSubmit = (e) => {

@@ -1,0 +1,30 @@
+.box {
+    --primary: #FF00FF;
+    --secondary: #FFFF00;
+    --primaryDarker: #ff0000;
+    background: var(--primary);
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.box:hover {
+    cursor: pointer;
+    background: var(--primaryDarker);
+    color: var(--secondary);
+}
+.attempted {
+    border: black 1px solid;
+    background: var(--secondary);
+    color: var(--primary);
+}
+.title {
+    color: var(--secondary);
+}
+.attempted .title {
+    color: var(--primary);
+}
+.attempted:hover .title {
+    color: var(--secondary);
+}

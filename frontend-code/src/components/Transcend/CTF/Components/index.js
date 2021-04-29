@@ -1,8 +1,8 @@
 import React from "react";
 import Cookies from "universal-cookie";
 
-import CTFLogin from "../RenderingComponents/CTFLogin";
-import QuestionsList from "../AggregatingComponents/QuestionList";
+import CTFLogin from "./CTFLogin";
+import CTFMain from "./CTFMain";
 class CTFComponent extends React.Component {
     checkLogin = () => {
         const cookie = new Cookies();
@@ -11,7 +11,7 @@ class CTFComponent extends React.Component {
 
     render() {
         if (!this.checkLogin()) return <CTFLogin />;
-        return <QuestionsList />;
+        return <CTFMain />;
     }
 }
 export default CTFComponent;

@@ -53,7 +53,7 @@ h2 {
     width: 100%;
 }
 .app-main {
-    min-height: 60vh;
+    min-height: 66vh;
 }
 @media only screen and (min-width: 1261px) {
     .container {

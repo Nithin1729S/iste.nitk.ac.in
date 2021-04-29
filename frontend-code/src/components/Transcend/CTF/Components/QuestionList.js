@@ -1,9 +1,8 @@
 import React from "react";
 
-import "../RenderingComponents/QuestionItem";
-import QuestionItem from "../RenderingComponents/QuestionItem";
+import QuestionItem from "./QuestionItem";
 
-import styles from "../../css/QuestionList.module.css";
+import styles from "../css/QuestionList.module.css";
 class QuestionList extends React.Component {
     // ** Question table: questionId, Title, description, points, url, hint1Url, hint2Url
     data = [
