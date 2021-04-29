@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from website.serializers import DynamicFieldsModelSerializer
 from account.serializers import UserSerializer
-from ctf.models import Team,Question,UserQuestion
+from .models import Team,Question,UserQuestion
 
 class TeamSerializer(DynamicFieldsModelSerializer):
     userId = UserSerializer()
