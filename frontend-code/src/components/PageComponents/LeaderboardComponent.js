@@ -247,7 +247,7 @@ class LeaderboardComponent extends React.Component {
                     <div className={`${styles.header} center`}>
                         <h1>CTF LEADERBOARD</h1>
                         <Link to="/transcend/charge">
-                            <button className="btn waves-effect">
+                            <button className="btn">
                                 Back to Questions
                             </button>
                         </Link>

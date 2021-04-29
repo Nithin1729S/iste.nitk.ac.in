@@ -1,0 +1,41 @@
+.header {
+    background: var(--sigCardReveal);
+    color: var(--secondary);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+}
+.questionBlock {
+    font-size: 1rem;
+    background: var(--navBarPrimary);
+    color: var(--primary);
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.close {
+    background: var(--primary) !important;
+}
+
+.top {
+    background: var(--sigCardReveal) !important;
+}
+
+.questionLink {
+    display: inline-block;
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+.hintLink {
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.flag {
+    font-size: 3rem !important;
+}
