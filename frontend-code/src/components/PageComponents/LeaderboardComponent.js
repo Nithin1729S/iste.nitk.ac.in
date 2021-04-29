@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import LeaderboardItem from "../RenderingComponents/LeaderboardItem";
 
 import styles from "../../css/leaderboard.module.css";
@@ -245,7 +245,12 @@ class LeaderboardComponent extends React.Component {
             <section>
                 <div className={`${styles.leaderboard} container`}>
                     <div className={`${styles.header} center`}>
-                        <h1>LEADERBOARD</h1>
+                        <h1>CTF LEADERBOARD</h1>
+                        <Link to="/transcend/charge">
+                            <button className="btn">
+                                Back to Questions
+                            </button>
+                        </Link>
                         <div className={`${styles.filter} ${styles.center}`}>
                             {searchParams}
                             <br />
@@ -263,14 +268,14 @@ class LeaderboardComponent extends React.Component {
                                 className={styles.input}
                             />
                         </div>
-                        <div className={`${styles.table}`}>
+                        <div className={styles.table}>
                             <table
                                 className={`${styles.centered} ${styles.responsive} ${styles.table}`}
                             >
                                 <thead>
                                     <tr>
                                         <th>Rank</th>
-                                        <th>Name</th>
+                                        <th>Team Name</th>
                                         <th>Roll Number</th>
                                         <th>Score</th>
                                     </tr>

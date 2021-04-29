@@ -1,4 +1,3 @@
-
 .leaderboard {
     --Primary: rgb(228, 243, 255);
     --Secondary: rgb(16, 21, 95);
@@ -12,8 +11,6 @@
 .choice {
     display: inline;
 }
-
-
 
 .button {
     background-color: var(--Primary);
@@ -42,59 +39,62 @@
     font-weight: 100;
     color: var(--Secondary);
 }
-h1{
-        font-size:8vw;
+h1 {
+    font-size: 8vw;
 }
 .table > tbody tr {
-        border-color: var(--Secondary);
-        border-width: 2px;
+    border-color: var(--Secondary);
+    border-width: 2px;
 }
-.table{
-        margin-bottom: 5%;
+.table {
+    margin-bottom: 5%;
 }
 .table > thead th {
+    color: var(--Primary);
+    background-color: var(--Secondary);
+    text-transform: capitalize;
+    border-radius: 0px;
+    font-weight: bold;
+    font-size: 4.5vw;
+}
+.filter {
+    margin-top: 2vh;
+}
+.filter label {
+    font-size: 4vw;
+    color: var(--Secondary);
+}
+
+.table {
+    text-transform: capitalize;
+    font-size: 4vw;
+}
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    .table > tbody tr {
+        border-color: var(--Secondary);
+        border-width: 2px;
+    }
+    .table {
+        margin-bottom: 5%;
+    }
+    .table > thead th {
         color: var(--Primary);
         background-color: var(--Secondary);
         text-transform: capitalize;
         border-radius: 0px;
         font-weight: bold;
-        font-size: 4.5vw;
-}
-.filter label {
-        font-size: 4vw;
-        color: var(--Secondary);
-}
-    
-.table {
-        text-transform: capitalize;
-        font-size: 4vw;
- }
- @media only screen and (min-width : 768px) {
-        h1{
-            font-size:40px;
-        }
-        .table > tbody tr {
-            border-color: var(--Secondary);
-            border-width: 2px;
-        }
-        .table{
-            margin-bottom: 5%;
-        }
-        .table > thead th {
-            color: var(--Primary);
-            background-color: var(--Secondary);
-            text-transform: capitalize;
-            border-radius: 0px;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        .filter label {
-            font-size: 20px;
-            color: var(--Secondary);
-        }
-        
-        .table {
-            text-transform: capitalize;
-            font-size: 20px;
-        }
+        font-size: 20px;
     }
+    .filter label {
+        font-size: 20px;
+        color: var(--Secondary);
+    }
+
+    .table {
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+}
