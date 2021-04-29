@@ -1,10 +1,14 @@
 import React from "react";
+import Cookie from "universal-cookie";
 import { Link } from "react-router-dom";
 
 import styles from "../css/CTFHeader.module.css";
 
 const logoutHandler = () => {
-    //TODO: delete cookie for team name and token
+    const cookie = new Cookie();
+    cookie.remove("AuthToken");
+    cookie.remove("teamName");
+    window.location.reload();
 };
 
 const CTFHeader = ({ name, score }) => {
