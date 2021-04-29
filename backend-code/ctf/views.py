@@ -94,11 +94,39 @@ def getQuestions(request):
                 cur['usedHint2'] = False
         del cur['hint_2_url']       
 
-    return Response({'questions':questions, 'score':team.score, 'team_name':team.team_name})
+    return Response({'questions':questions, 'score':team.score, 'team_name':team.team_name, 'teamid':team.id})
 
 @api_view(['GET'])
 def getHints(request):
-    return Response({'hints': 1})
+    qid = request.data['questionId']
+    teamid = request.data['teamId']
+    hid = request.data['hintId']
+    team = Team.objects.filter(id=teamid)[0]
+    ques = Question.objects.filter(id=qid)[0]
+    tq = UserQuestion.objects.filter(questionId=ques,userId=team)[0]
+    hintUrl = ''
+    if ques[f'hint_{hid}_url'] == None:
+        return Response({'hintUrl':None, 'checkFail':True})
+    if hid == 1:
+        if not tq.hint_1:
+            tq.hint_1 = True
+            tq.save()
+            hintUrl= ques.hint_1_url
+            tq.score -= ques.points//3
+            tq.save()
+        else:
+            hintUrl= ques.hint_1_url
+    elif hid == 2:
+        if not tq.hint_2:
+            tq.hint_2 = True
+            tq.save()
+            hintUrl = ques.hint_2_url
+            tq.score -= ques.points//3
+            tq.save()
+        else:
+            hintUrl = ques.hint_2_url
+
+    return Response({'hintUrl':hintUrl, f'usedHint{hid}':True, 'checkFail':False})
 
 @api_view(['POST'])
 def ansQuestion(request):
