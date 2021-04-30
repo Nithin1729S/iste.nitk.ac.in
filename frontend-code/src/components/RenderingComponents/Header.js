@@ -89,8 +89,8 @@ class Header extends React.Component {
     expoNavHeader = (
         <>
             <li>
-                <Link to="/expo" className="white-text">
-                    Expo
+                <Link to="/transcend" className="white-text">
+                    Transcend
                 </Link>
             </li>
             <li>

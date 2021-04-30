@@ -1,35 +1,35 @@
 const TimelineData = [
     {
         title: "AutoCAD Workshop",
-        date: "7pm, 4th May",
+        date: "7PM, 4th May",
     },
     {
         title: "MATLAB-Simulink Workshop",
-        date: "7pm, 5th May",
+        date: "7PM, 5th May",
     },
     {
         title: "Premiere Loop",
-        date: "7pm, 6th May",
+        date: "7PM, 6th May",
     },
     {
         title: "Hardware CTF, Workshop",
-        date: "5pm, 7th May",
+        date: "5PM, 7th May",
     },
     {
         title: "Hardware CTF, 24hr Challenge",
-        date: "8pm, 7th May - 8pm, 8th May",
+        date: "8PM, 7th May - 8PM, 8th May",
     },
     {
         title: "Wing It",
-        date: "7pm, 8th May",
+        date: "7PM, 8th May",
     },
     {
         title: "Cryptonite round-1, blacbox",
-        date: "11am, 9th May",
+        date: "11AM, 9th May",
     },
     {
         title: "Cryptonite round-2, hackathon",
-        date: "3pm, 9th May",
+        date: "3PM, 9th May",
     },
 ];
 export default TimelineData;

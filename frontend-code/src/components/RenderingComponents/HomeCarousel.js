@@ -44,8 +44,8 @@ class HomeCarousel extends React.Component {
                     id="desktop-carousel"
                 >
                     <div class="carousel-fixed-item center">
-                        <Link to="/smp" class="btn white-text dark">
-                            View our SMPs !
+                        <Link to="/transcend" class="btn white-text dark">
+                            REGISTER FOR TRANSCEND!
                         </Link>
                     </div>
                     {carouselContent}
@@ -55,8 +55,8 @@ class HomeCarousel extends React.Component {
                     id="mobile-carousel"
                 >
                     <div class="carousel-fixed-item center">
-                        <Link to="/smp" class="btn white-text dark">
-                            View our SMPs !
+                        <Link to="/transcend" class="btn white-text dark">
+                            REGISTER FOR TRANSCEND!
                         </Link>
                     </div>
                     {carouselContent}

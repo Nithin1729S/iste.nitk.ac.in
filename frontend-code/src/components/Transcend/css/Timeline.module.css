@@ -35,3 +35,6 @@
     border-radius: 50%;
     background: var(--primary);
 }
+.date{
+    color: #333;
+}
