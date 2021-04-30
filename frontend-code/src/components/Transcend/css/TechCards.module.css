@@ -19,6 +19,7 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
     perspective: 1000px;
+    box-shadow: 0px 0px 8px #888888;
 }
 .card:hover {
     transform: rotateY(180deg);
@@ -30,13 +31,24 @@
     height: 100%;
 }
 .front {
-    background: var(--primary);
-}
-.front > * {
+    background: var(--secondary);
     color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back > * {
+    color: var(--secondary);
+}
+.back * {
+    margin: 1.5em;
+    word-wrap: break-word;
 }
 .back {
     transform: rotateY(180deg);
-    background: var(--secondary);
-    color: var(--primary);
+    background: var(--primary);
+}
+.front > img {
+    height: 90%;
+    width: 90%;
 }

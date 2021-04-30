@@ -5,6 +5,7 @@
             "c c c b b"
             "d d e e e"
             "d d f f f";
+        grid-template-columns: 18% 18% 18% 18% 18%;
     }
 }
 @media only screen and (max-width: 1260px) {

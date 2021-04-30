@@ -9,7 +9,7 @@ const eventData = [
     {
         title: "Hardware CTF",
         desc:
-            "A 24-hour event where in participants will be solving problems related to microprocessors, signal and image processing, analog and digital electronics to obtain 'flags'.",
+            "A 24-hour CTF event involving a series of challenges related to microprocessors, signal and image processing, analog and digital electronics.",
         img: "",
         formLink: "https://forms.gle/D43gezFgybNyn9tp6",
     },
