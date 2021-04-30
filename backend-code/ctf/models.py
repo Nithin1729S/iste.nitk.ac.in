@@ -1,44 +1,34 @@
 from django.db import models
 from django.contrib.auth.models import User
+from website import settings
 
 # Create your models here.
-# class Team(models.Model):
+class Team(models.Model):
 
-#     userId = models.ForeignKey(User,on_delete=models.CASCADE)
-#     team_name = models.CharField(max_length = 100)
-#     score = models.IntegerField()
-#     rank = models.IntegerField()
+    userId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+    team_name = models.CharField(max_length = 100)
+    score = models.IntegerField(default=0)
 
-#     def __str__(self):
-#         return self.teamName
+    def __str__(self):
+        return self.team_name
 
-# class Question(models.Model):
-#     title = models.CharField(max_length= 200)
+class Question(models.Model):
+    title = models.CharField(max_length= 200)
+    description = models.TextField()
+    points = models.IntegerField(default=100)
+    url = models.URLField()
+    hint_1_url = models.URLField(null=True)
+    hint_2_url = models.URLField(null=True)
 
-#     description = models.TextField()
+    def __str__(self):
+        return self.title
 
-#     points = models.IntegerField()
+class UserQuestion(models.Model):
+    userId = models.ForeignKey(Team,on_delete = models.CASCADE)
+    questionId = models.ForeignKey(Question,on_delete = models.CASCADE)
+    hint_1 = models.BooleanField(default=False)
+    hint_2 = models.BooleanField(default=False)
+    score = models.IntegerField(default=-1)
 
-#     url = models.URLField()
-
-#     hint_1_url = models.URLField()
-
-#     hint_2_url = models.URLField()
-
-#     def __str__(self):
-#         return self.title
-
-# class UserQuestion(models.Model):
-
-#     userId = models.ForeignKey(Team,on_delete = models.CASCADE)
-
-#     questionId = models.ForeignKey(Question,on_delete = models.CASCADE)
-
-#     hint_1 = models.BooleanField(default=False)
-
-#     hint_2 = models.BooleanField(default=False)
-    
-#     score = models.IntegerField()
-
-#     def __str__(self):
-#         return str(questionId) + '' + str(score)
+    def __str__(self):
+        return str(self.userId) + ' ' + str(self.questionId) + ' ' + str(self.score)

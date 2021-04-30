@@ -32,7 +32,7 @@ class CustomAuthToken(ObtainAuthToken):
 
 @api_view(['POST'])
 def loginView(request):
-    username = request.POST['username'].strip()
+    username = request.POST['username'].strip() 
     password = request.POST['password'].strip()
 
     user = authenticate(
