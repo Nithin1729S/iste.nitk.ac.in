@@ -15,7 +15,7 @@ const techData = [
     {
         title: "Aerodynamics",
         desc:
-            "Aerodynamics is the study of the motion of air, particularly when affected by a solid object. This fascinating subject is the foundation of various mechanical sub domains such as aerospace, aircraft design, drone technology and much more, and essential deals with analysing the various parameters associated with objects and shapes in flight.",
+            "Aerodynamics is the study of the motion of air, particularly when affected by a solid object. This subject is the foundation of various mechanical sub domains such as aerospace, aircraft design, drone technology etc. It essentially deals with analysing the parameters associated with objects and shapes in flight.",
         imgUrl: aero,
     },
     {
