@@ -16,7 +16,7 @@ const TimelineData = [
         date: "5pm, 7th May",
     },
     {
-        title: "Hardware CTF, Workshop",
+        title: "Hardware CTF, 24hr Challenge",
         date: "8pm, 7th May - 8pm, 8th May",
     },
     {

@@ -4,8 +4,11 @@ import TitleWithLine from "../../RenderingComponents/TitleWithLine";
 const TimelineNode = ({ title, date }) => {
     return (
         <>
-            <h5>{title}</h5>
-            <h6>{date}</h6>
+            <div className={styles.colorDot} />
+            <div className={styles.node}>
+                <h5 className={styles.title}>{title}</h5>
+                <h6 className={styles.date}>{date}</h6>
+            </div>
         </>
     );
 };
@@ -17,7 +20,7 @@ const Timeline = ({ TimelineData }) => {
     return (
         <div className={` ${styles.main} container`}>
             <TitleWithLine title="Timeline" />
-            {TimelineNodes}
+            <div className={styles.nodeContainer}>{TimelineNodes}</div>
         </div>
     );
 };

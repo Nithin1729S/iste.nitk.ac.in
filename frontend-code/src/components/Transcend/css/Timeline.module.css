@@ -1,3 +1,21 @@
 .main {
     margin: 10%;
 }
+.node {
+    border-left: 4px solid var(--primary);
+    margin: 1em;
+}
+.node > * {
+    margin: 1rem;
+}
+.nodeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.colorDot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary);
+}
