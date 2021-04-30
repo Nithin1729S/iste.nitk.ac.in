@@ -43,7 +43,6 @@
 .back * {
 	margin: 1em;
 	word-wrap: break-word;
-	overflow: auto;
 }
 .back {
 	transform: rotateY(180deg);

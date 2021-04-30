@@ -30,7 +30,7 @@ const eventData = [
     {
         title: "AutoCAD Workshop",
         desc:
-            "Get them familiar with the basics of AutoCad including drawing shapes, performing editing commands, dimensioning, labelling etc. ",
+            "This workshop will familiarize participants with the basics of AutoCAD including drawing shapes, performing editing commands, dimensioning, labelling etc. ",
         img: autocad,
         formLink: "https://forms.gle/shZw5TwxiGc82RTa8",
     },

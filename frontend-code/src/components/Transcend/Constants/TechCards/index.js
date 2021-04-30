@@ -9,13 +9,13 @@ const techData = [
     {
         title: "Matlab-Simulink",
         desc:
-            "Simulink provides a graphical editor, customizable block libraries, and solvers for modeling and simulating dynamic systems. It is integrated with MATLAB®, enabling you to incorporate MATLAB algorithms into models and export simulation results to MATLAB for further analysis.",
+            "Simulink provides a graphical editor, customizable block libraries, and solvers for modeling and simulating dynamic systems. It's integration with MATLAB, enables you to incorporate MATLAB algorithms into models and export simulation results to MATLAB for further analysis.",
         imgUrl: matlab,
     },
     {
         title: "Aerodynamics",
         desc:
-            "Aerodynamics is the study of the motion of air, particularly when affected by a solid object. This subject is the foundation of various mechanical sub domains such as aerospace, aircraft design, drone technology etc. It essentially deals with analysing the parameters associated with objects and shapes in flight.",
+            "Aerodynamics is the foundation of various mechanical sub domains such as aerospace, aircraft design, drone technology etc. It essentially deals with analysing the parameters associated with objects and shapes in flight.",
         imgUrl: aero,
     },
     {
