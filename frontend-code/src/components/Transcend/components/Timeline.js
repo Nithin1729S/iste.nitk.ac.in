@@ -1,5 +1,4 @@
 import styles from "../css/Timeline.module.css";
-import TitleWithLine from "../../RenderingComponents/TitleWithLine";
 
 const TimelineNode = ({ title, date }) => {
     return (
@@ -19,7 +18,6 @@ const Timeline = ({ TimelineData }) => {
     ));
     return (
         <div className={` ${styles.main} center`}>
-            <TitleWithLine title="Timeline" />
             <div className={styles.nodeContainer}>
                 {TimelineNodes}
                 <div className={styles.colorDot} />

@@ -1,7 +1,7 @@
 import TechCardData from "./TechCards";
 import EventCardData from "./EventCards";
 import TimelineData from "./TimelineData";
-import main from "./images/main.jpeg";
+import main from "./images/bg.jpg";
 
 export const techData = TechCardData;
 export const eventData = EventCardData;
