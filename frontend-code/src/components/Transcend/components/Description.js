@@ -1,6 +1,6 @@
 import styles from "../css/Description.module.css";
 
-const Description = ({ title, desc, img }) => {
+const Description = ({ title, desc, img, logo }) => {
     return (
         <div className={styles.main}>
             <h3 className={styles.title}>{title}</h3>

@@ -1,14 +1,14 @@
 @media only screen and (min-width: 1260px) {
     .main {
         grid-template-areas:
-            "a a b"
-            "c c b"
-            "d e e"
-            "d f f";
+            "a a a b b"
+            "c c c b b"
+            "d d e e e"
+            "d d f f f";
     }
 }
 @media only screen and (max-width: 1260px) {
-    main {
+    .main {
         grid-template-areas:
             "a"
             "b"
@@ -19,10 +19,13 @@
     }
 }
 .main {
-    
     display: grid;
     margin: 10%;
     gap: 3em;
+}
+.main > * {
+    min-width: 30%;
+    height: 100%;
 }
 .a {
     grid-area: a;
