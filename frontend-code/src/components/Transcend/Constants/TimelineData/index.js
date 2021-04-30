@@ -1,27 +1,35 @@
 const TimelineData = [
     {
-        title: "MATLAB-Simulink Workshop",
-        date: "",
-    },
-    {
-        title: "Hardware CTF",
-        date: "",
-    },
-    {
-        title: "Lift Off",
-        date: "",
-    },
-    {
         title: "AutoCAD Workshop",
-        date: "",
+        date: "7pm, 4th May",
     },
     {
-        title: "Create event",
-        date: "",
+        title: "MATLAB-Simulink Workshop",
+        date: "7pm, 5th May",
     },
     {
-        title: "Cryptonite",
-        date: "",
+        title: "Premiere Loop",
+        date: "7pm, 6th May",
+    },
+    {
+        title: "Hardware CTF, Workshop",
+        date: "5pm, 7th May",
+    },
+    {
+        title: "Hardware CTF, Workshop",
+        date: "8pm, 7th May - 8pm, 8th May",
+    },
+    {
+        title: "Wing It",
+        date: "7pm, 8th May",
+    },
+    {
+        title: "Cryptonite round-1, blacbox",
+        date: "11am, 9th May",
+    },
+    {
+        title: "Cryptonite round-2, hackathon",
+        date: "3pm, 9th May",
     },
 ];
 export default TimelineData;
