@@ -86,7 +86,7 @@ class Header extends React.Component {
             </a>
         </li>
     );
-    expoNavHeader = (
+    transcendNavHeader = (
         <>
             <li>
                 <Link to="/transcend" className="white-text">
@@ -283,7 +283,7 @@ class Header extends React.Component {
                     </li>
                     {this.teamNavHeader}
                     {this.blogNavHeader}
-                    {this.expoNavHeader}
+                    {this.transcendNavHeader}
                 </ul>
 
                 <div className="navbar-fixed">
@@ -327,7 +327,7 @@ class Header extends React.Component {
                                 </ul>
                                 {this.teamNavHeader}
                                 {this.blogNavHeader}
-                                {this.expoNavHeader}
+                                {this.transcendNavHeader}
                             </ul>
                         </div>
                     </nav>
