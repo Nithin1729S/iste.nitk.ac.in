@@ -21,7 +21,7 @@ const Card = ({ title, desc, img, formLink, posIndex }) => {
 		<div className={card[posIndex]}>
 			<img className={cardImg[posIndex]} src={img} alt={title} />
 			<div className={styles.cardesc}>
-				<h1 class="center">{title}</h1>
+				<h1 className="center">{title}</h1>
 				<p>{desc}</p>
 				<a
 					className={styles.cardbtnlink}

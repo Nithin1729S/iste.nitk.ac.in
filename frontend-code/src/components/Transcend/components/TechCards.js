@@ -5,7 +5,7 @@ const TechCard = ({ title, desc, imgUrl }) => {
         <div className={styles.card}>
             <div className={styles.back}>
                 <h3>{title}</h3>
-                <p>{desc}</p>
+                <p className={styles.desc}>{desc}</p>
             </div>
             <div className={styles.front}>
                 <img src={imgUrl} alt={title} />

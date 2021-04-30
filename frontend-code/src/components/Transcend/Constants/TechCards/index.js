@@ -31,7 +31,7 @@ const techData = [
         imgUrl: autocad,
     },
     {
-        title: "Premiere",
+        title: "Premiere Pro",
         desc:
             "Premiere Pro is the industry-leading video editing software for film, TV and the web. Creative tools, integration with other apps and services and the power of Adobe Sensei help you craft footage into polished films and videos.",
         imgUrl: premiere,

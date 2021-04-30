@@ -35,7 +35,7 @@ const eventData = [
         formLink: "https://forms.gle/shZw5TwxiGc82RTa8",
     },
     {
-        title: "Premiere loop",
+        title: "Premiere Loop",
         desc: "Teaching people how to do reels transitions professionally",
         img: premiere,
         formLink: "https://forms.gle/seMEqWxqcCNKeoAi6",
