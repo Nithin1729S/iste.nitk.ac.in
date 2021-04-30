@@ -41,8 +41,9 @@
     color: var(--secondary);
 }
 .back * {
-    margin: 1.5em;
+    margin: 1em;
     word-wrap: break-word;
+    overflow: auto;
 }
 .back {
     transform: rotateY(180deg);
