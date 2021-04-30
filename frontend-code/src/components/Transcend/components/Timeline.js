@@ -18,7 +18,7 @@ const Timeline = ({ TimelineData }) => {
         <TimelineNode key={item.title} title={item.title} date={item.date} />
     ));
     return (
-        <div className={` ${styles.main} container`}>
+        <div className={` ${styles.main} center`}>
             <TitleWithLine title="Timeline" />
             <div className={styles.nodeContainer}>{TimelineNodes}</div>
         </div>

@@ -1,21 +1,37 @@
+@media only screen and (min-width: 1260px) {
+    .node {
+        border-top: 4px solid var(--primary);
+        width: 8.5%;
+    }
+    .nodeContainer {
+        flex-direction: row;
+    }
+}
+@media only screen and (max-width: 1260px) {
+    .node {
+        border-left: 4px solid var(--primary);
+    }
+    .nodeContainer {
+        flex-direction: column;
+    }
+}
+
 .main {
-    margin: 10%;
+    margin: 10% 5%;
 }
 .node {
-    border-left: 4px solid var(--primary);
     margin: 1em;
 }
 .node > * {
-    margin: 1rem;
+    word-wrap: break-word;
 }
 .nodeContainer {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
 }
 .colorDot {
-    width: 30px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
     background: var(--primary);
 }
