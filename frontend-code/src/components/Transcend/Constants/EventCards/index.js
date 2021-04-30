@@ -1,7 +1,7 @@
 import matlab from "../images/EventCards/Matlab.jpeg";
 import autocad from "../images/EventCards/AutocadW.jpeg";
 import premiere from "../images/EventCards/PremLoop.jpeg";
-import aero from "../images/EventCards/LiftOff.jpeg";
+import aero from "../images/EventCards/Wingit.jpeg";
 import micro from "../images/EventCards/HCTF.jpeg";
 import oops from "../images/EventCards/Cryptonite.jpeg";
 
@@ -21,8 +21,9 @@ const eventData = [
         formLink: "https://forms.gle/D43gezFgybNyn9tp6",
     },
     {
-        title: "Lift Off",
-        desc: "Placeholder content till we get the proper description",
+        title: "WingIt",
+        desc:
+            "WingIt, an interactive tutorial session to introduce you to the arena of aviation, the intricate decisions behind every step you take, and the challenges you encounter while designing an aircraft.",
         img: aero,
         formLink: "https://forms.gle/T2Xdgdv7yhgmoTv5A",
     },
@@ -34,7 +35,7 @@ const eventData = [
         formLink: "https://forms.gle/shZw5TwxiGc82RTa8",
     },
     {
-        title: "Create event",
+        title: "Premiere loop",
         desc: "Teaching people how to do reels transitions professionally",
         img: premiere,
         formLink: "https://forms.gle/seMEqWxqcCNKeoAi6",

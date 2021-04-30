@@ -20,7 +20,10 @@ const Timeline = ({ TimelineData }) => {
     return (
         <div className={` ${styles.main} center`}>
             <TitleWithLine title="Timeline" />
-            <div className={styles.nodeContainer}>{TimelineNodes}</div>
+            <div className={styles.nodeContainer}>
+                {TimelineNodes}
+                <div className={styles.colorDot} />
+            </div>
         </div>
     );
 };
