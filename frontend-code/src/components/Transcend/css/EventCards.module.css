@@ -81,7 +81,8 @@
 	.cardimgtop {
 		grid-area: x;
 		height: auto;
-		max-width: 100%;
+		max-width: min(100%, 500px);
+		justify-self: center;
 		object-fit: cover;
 		align-self: center;
 		padding: 2%;
