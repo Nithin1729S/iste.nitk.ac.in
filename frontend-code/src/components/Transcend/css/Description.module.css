@@ -15,6 +15,7 @@
     font-size: 1.5rem;
 }
 .backgroundImage {
+    margin-top: 5%;
     width: 100%;
     min-height: 200px;
     max-height: 80vh;

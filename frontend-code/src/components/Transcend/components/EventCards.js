@@ -13,26 +13,29 @@ const Card = ({ title, desc, imgUrl, formLink }) => {
     );
 };
 
-const EventCards = () => {
+const EventCards = ({ EventData }) => {
+    const EventCards = EventData.map(({ title, desc, imgUrl, formLink }) => (
+        <Card title={title} imgUrl={imgUrl} desc={desc} formLink={formLink} />
+    ));
     return (
         <div className={styles.main}>
             <div className={styles.a}>
-                <Card />
+                {EventCards[0]}
             </div>
             <div className={styles.c}>
-                <Card />
+                {EventCards[1]}
             </div>
             <div className={styles.b}>
-                <Card />
+                {EventCards[2]}
             </div>
             <div className={styles.d}>
-                <Card />
+                {EventCards[3]}
             </div>
             <div className={styles.e}>
-                <Card />
+                {EventCards[4]}
             </div>
             <div className={styles.f}>
-                <Card />
+                {EventCards[5]}
             </div>
         </div>
     );
