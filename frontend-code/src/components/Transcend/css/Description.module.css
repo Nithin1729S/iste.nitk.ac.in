@@ -1,27 +1,31 @@
 .main {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 .title {
-    position: absolute;
-    top: 10%;
-    font-size: 4rem;
-    margin: 2%;
+	position: absolute;
+	top: 10%;
+	font-size: 4rem;
+	margin: 2%;
 }
 .desc {
-    position: absolute;
-    top: 10%;
-    margin: 2%;
-    font-size: 1.5rem;
+	position: absolute;
+	top: 10%;
+	margin: 2%;
+	font-size: 1.5rem;
 }
 .backgroundImage {
-    margin-bottom: 5%;
-    width: 100%;
-    min-height: 200px;
-    max-height: 80vh;
+	margin-bottom: 5%;
+	width: 100%;
+	min-height: 200px;
+	max-height: 90vh;
+	margin-top: -65px;
+	height: auto;
+	object-fit: cover;
+	object-position: 0px -125px;
 }
 .title,
 .desc {
-    color: var(--secondary);
-    right: 10%;
+	color: var(--secondary);
+	right: 10%;
 }
