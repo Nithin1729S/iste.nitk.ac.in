@@ -5,8 +5,8 @@ const TimelineNode = ({ title, date }) => {
         <>
             <div className={styles.colorDot} />
             <div className={styles.node}>
-                <h6 className={styles.date}>{date}</h6>
                 <h5 className={styles.title}>{title}</h5>
+                <h6 className={styles.date}>{date}</h6>
             </div>
         </>
     );
