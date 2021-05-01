@@ -45,7 +45,7 @@ const eventData = [
         desc:
             "A design only mini-hackathon catered towards first years to provide an experience towards hackathons without the underlying tech needed",
         img: oops,
-        formLink: "https://forms.gle/aZRqn4NLxdyRowvW6",
+        formLink: "https://forms.gle/eo8r6xYYnLtGB6BNA",
     },
 ];
 export default eventData;
