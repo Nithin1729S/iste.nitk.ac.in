@@ -16,7 +16,7 @@ const eventData = [
     {
         title: "Hardware CTF",
         desc:
-            "A 24-hour CTF event involving a series of challenges related to microprocessors, signal and image processing, analog and digital electronics.",
+            "A 24-hour CTF event involving a series of challenges related to microprocessors, signal and image processing, analog and digital electronics. Winning teams take home prizes worth upto 5K!",
         img: micro,
         formLink: "https://forms.gle/D43gezFgybNyn9tp6",
     },
