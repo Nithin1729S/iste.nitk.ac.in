@@ -8,6 +8,7 @@ class Team(models.Model):
     userId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     team_name = models.CharField(max_length = 100)
     score = models.IntegerField(default=0)
+    roll_number = models.CharField(max_length=20)
 
     def __str__(self):
         return self.team_name
@@ -19,6 +20,8 @@ class Question(models.Model):
     url = models.URLField()
     hint_1_url = models.URLField(null=True)
     hint_2_url = models.URLField(null=True)
+    answer = models.CharField(max_length=100)
+    
 
     def __str__(self):
         return self.title
