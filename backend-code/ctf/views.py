@@ -54,16 +54,18 @@ def isLogin(request):
     )
     if user is not None:
         login(request, user)
-        return Response({'isLogin': True, 'msg': 'Login Successful'})
+        objUser = User.objects.filter(username=username)[0]
+        objTeam = Team.objects.filter(userId=objUser[0])
+        teamid = objTeam.id
+        return Response({'isLogin': True, 'msg': 'Login Successful', 'teamId':teamid})
     else:
         return Response({'isLogin': False, 'msg': 'Login Unsuccessful'}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
 @api_view(['GET'])
 def getQuestions(request):
-    # user = request.user 
-
-    user = User.objects.filter(username='Arjun')[0]
-    team = Team.objects.filter(userId=user)[0]
+    # Get team id from frontend
+    teamid = int(request.data['teamId'])
+    team = Team.objects.filter(id='teamId')[0]
     teamQ= UserQuestion.objects.filter(userId=team)
     questions = []
     for i in Question.objects.all().order_by('id'):
