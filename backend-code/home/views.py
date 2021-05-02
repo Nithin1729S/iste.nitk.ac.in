@@ -82,7 +82,8 @@ def indexView(request):
     aux_core = AuxCore.objects.all()
     stats = {
         'years_in_operation':years_in_operation,
-        'member_count':member_count,
+        #to be changed back after CTF
+        'member_count':112,
         'project':project_count,
     }
 
