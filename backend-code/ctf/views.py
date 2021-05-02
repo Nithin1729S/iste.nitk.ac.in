@@ -37,7 +37,7 @@ class CustomAuthToken(ObtainAuthToken):
 
 @api_view(['GET'])
 def questionsView(request):
-    return Response({'message': 'Questions View'})
+    return Response({'message': 'Questions View here'})
 
 @api_view(['POST'])
 def isLogin(request):
@@ -71,14 +71,13 @@ def getQuestions(request):
     for i in Question.objects.all().order_by('id'):
         cur = i.__dict__
         del cur['_state']
+        del cur['answer']
         cur['isAns'] = False
         curQ = teamQ.filter(questionId=i)[0]
         if curQ.score >= 0:
             cur['isAns'] = True
         cur['isHint1'] = True
         cur['isHint2'] = True
-        if cur['hint_1_url'] == None:
-            print('True')
         if cur['hint_1_url'] == None:
             cur['isHint1'] = False
         else:
@@ -121,6 +120,8 @@ def getHints(request):
     hintUrl = ''
     flag = False
     if hid != 1 and hid != 2:
+        flag = True
+    if hid == 1 and ques.hint_1_url == None:
         flag = True
     if hid == 2 and ques.hint_2_url == None:
         flag = True
@@ -173,7 +174,6 @@ def ansQuestion(request):
         team.score += tq.score
         team.save()
         flag = True
-    print(flag, team.score)
 
     # Returning response
     return Response({'questionId':ques.id, 'isCorrect':flag, 'score':team.score})
