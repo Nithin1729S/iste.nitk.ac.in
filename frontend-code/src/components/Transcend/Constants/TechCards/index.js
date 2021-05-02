@@ -2,7 +2,7 @@ import matlab from "../images/TechCards/Matlab.png";
 import autocad from "../images/TechCards/Autocad.png";
 import premiere from "../images/TechCards/Premiere.png";
 import aero from "../images/TechCards/aerodynamics.png";
-import micro from "../images/TechCards/Microprocessor.jpg";
+import micro from "../images/TechCards/Steganography.png";
 import oops from "../images/TechCards/oops.jpg";
 
 const techData = [
@@ -19,9 +19,12 @@ const techData = [
         imgUrl: aero,
     },
     {
-        title: "Logism",
-        desc:
-            "Logisim is an educational tool for designing and simulating digital logic circuits. With its simple toolbar interface and simulation of circuits as you build them, it is simple enough to facilitate learning the most basic concepts related to logic circuits.",
+        title: "Steganography ",
+        desc: `Steganography is the process of hiding information
+            inside another piece of information, image, or audio.
+            In essence, it is concealing information in plain sight
+            and can be accomplised using advanced forms of signal and
+            image processing.`,
         imgUrl: micro,
     },
     {
