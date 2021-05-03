@@ -16,6 +16,7 @@ urlpatterns = [
     path('team/', include('team.urls', namespace='team')),
     path('smp/', include('SMP.urls', namespace='SMP')),
     path('ctf/', include('ctf.urls', namespace='CTF')),
+    path('cryptonite/', include('cryptonite.urls', namespace='cryptonite')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

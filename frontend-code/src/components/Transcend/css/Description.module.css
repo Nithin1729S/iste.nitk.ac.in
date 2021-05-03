@@ -7,9 +7,14 @@
 	width: 100%;
 	min-height: 200px;
 	max-height: 90vh;
-	margin-top: -65px;
 	height: auto;
 	object-fit: cover;
 	object-position: 0px -125px;
 	opacity: 0.9;
+}
+
+@media only screen and (min-width: 1260px) {
+	.backgroundImage {
+		margin-top: -65px;
+	}
 }
