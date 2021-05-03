@@ -12,22 +12,13 @@ class QuestionItem extends React.Component {
         this.setState({ isModalOpen: false });
     };
     render() {
-        const {
-            questionId,
-            status,
-            title,
-            description,
-            points,
-            url,
-            hint1Url,
-            hint2Url,
-        } = this.props.item;
+        const { isAns, title, description, points, url } = this.props.item;
         return (
             <>
                 <div
                     onClick={this.modalOpenHandler}
                     className={`${styles.box} ${
-                        status ? styles.attempted : null
+                        isAns ? styles.attempted : null
                     }`}
                 >
                     <h3 className={styles.title}>{title}</h3>
