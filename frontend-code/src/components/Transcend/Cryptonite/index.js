@@ -30,7 +30,7 @@ class Cryptonite extends React.Component {
         const ObjectToBeStored = {
             arr: [
                 ...arrayToBeEntered,
-                { input: this.state.inputVal, output: this.state.inputVal },
+                { input: this.state.inputVal, output: "this.state.inputVal" },
             ],
         };
         localStorage.setItem(
@@ -41,8 +41,7 @@ class Cryptonite extends React.Component {
             this.numInputKey,
             Number(localStorage.getItem(this.numInputKey)) + 1
         );
-        const test = JSON.parse(localStorage.getItem(this.InputObjectKey)).arr;
-        console.log(`${localStorage.getItem(this.numInputKey)} ${test}`);
+        this.forceUpdate();
     };
     render() {
         return (
@@ -55,9 +54,17 @@ class Cryptonite extends React.Component {
                         name="inputString"
                         value={this.state.inputVal}
                     />
-                    <button className="btn waves-effect" onClick={this.callAPI}>
+                    <button className="btn indigo" onClick={this.callAPI}>
                         Get corresponding output
                     </button>
+                    {JSON.parse(
+                        localStorage.getItem(this.InputObjectKey)
+                    )?.arr?.map((item) => (
+                        <>
+                            {item.input}
+                            {item.output}
+                        </>
+                    ))}
                 </label>
             </div>
         );
