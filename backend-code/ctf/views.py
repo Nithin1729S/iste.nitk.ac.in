@@ -64,8 +64,8 @@ def isLogin(request):
 @api_view(['POST'])
 def getQuestions(request):
     # Get team id from frontend
-    teamid = int(request.data['teamId'])
-    team = Team.objects.filter(id='teamId')[0]
+    teamId = int(request.data['teamId'])
+    team = Team.objects.filter(id=teamId)[0]
     teamQ= UserQuestion.objects.filter(userId=team)
     questions = []
     for i in Question.objects.all().order_by('id'):
