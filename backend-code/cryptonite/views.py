@@ -10,7 +10,7 @@ from django.core.files.storage import default_storage
 from cryptonite.blackbox import *
 # Create your views here.
 
-@api_view(['GET'])
+@api_view(['POST'])
 def blackbox(request):
     # Get id from frontend
     bbid = int(request.data['id'])
