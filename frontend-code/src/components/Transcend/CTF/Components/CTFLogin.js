@@ -13,20 +13,19 @@ class CTFLoginComponent extends React.Component {
         } else if (this.state.password === "") {
             this.setState({ errorMessage: "Empty password is not valid" });
         } else {
-            const user = {
-                username: this.state.username,
-                password: this.state.password,
-            };
+            const user = new FormData();
+            user.append("username", this.state.username);
+            user.append("password", this.state.password);
             const { history } = this.props;
             baseRequest
                 .post(`/ctf/login/`, user)
                 .then((res) => {
                     console.log(res.data);
-                    // const cookie = new Cookies();
-                    // cookie.set("AuthToken", res.data.token, { path: "/" });
-                    // cookie.set("teamName", res.data.team_name, { path: "/" });
-                    // history.push("/transcend/charge");
-                    // history.go(0);
+                    const cookie = new Cookies();
+                    cookie.set("teamId", res.data.teamId, { path: "/" });
+                    cookie.set("teamName", this.state.username, { path: "/" });
+                    history.push("/transcend/charge");
+                    history.go(0);
                 })
                 .catch(() => {
                     this.setState({
