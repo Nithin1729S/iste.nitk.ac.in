@@ -26,7 +26,8 @@
     font-weight: 500;
 }
 .button {
-    background: #009FF5 !important;
+    background: #009ff5 !important;
+    border-radius: 10px;
 }
 .buttons > * {
     margin: 1em;

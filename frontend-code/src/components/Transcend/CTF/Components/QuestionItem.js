@@ -12,7 +12,7 @@ class QuestionItem extends React.Component {
         this.setState({ isModalOpen: false });
     };
     render() {
-        const { isAns, title, description, points, url } = this.props.item;
+        const { isAns, title, description, points, url, id } = this.props.item;
         return (
             <>
                 <div
@@ -32,6 +32,7 @@ class QuestionItem extends React.Component {
                         title={title}
                         desc={description}
                         questionLink={url}
+                        id={id}
                         onCloseHandler={this.modalCloseHandler}
                     />
                 </Modal>
