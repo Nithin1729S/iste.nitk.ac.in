@@ -40,6 +40,7 @@ def loginView(request):
         username=username,
         password=password
     )
+    print(user)
     if user is not None:
         login(request, user)
         return Response({'isLogin': True, 'msg': 'Login Successful'})

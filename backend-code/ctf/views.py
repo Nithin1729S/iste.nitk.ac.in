@@ -55,7 +55,7 @@ def isLogin(request):
     if user is not None:
         login(request, user)
         objUser = User.objects.filter(username=username)[0]
-        objTeam = Team.objects.filter(userId=objUser[0])
+        objTeam = Team.objects.filter(userId=objUser)[0]
         teamid = objTeam.id
         return Response({'isLogin': True, 'msg': 'Login Successful', 'teamId':teamid})
     else:
