@@ -15,7 +15,7 @@ class QuestionItem extends React.Component {
         const {
             questionId,
             status,
-            Title,
+            title,
             description,
             points,
             url,
@@ -30,7 +30,7 @@ class QuestionItem extends React.Component {
                         status ? styles.attempted : null
                     }`}
                 >
-                    <h3 className={styles.title}>{Title}</h3>
+                    <h3 className={styles.title}>{title}</h3>
                     <h5>{points}</h5>
                 </div>
                 <Modal
@@ -38,7 +38,7 @@ class QuestionItem extends React.Component {
                     onCloseHandler={this.modalCloseHandler}
                 >
                     <ModalContent
-                        title={Title}
+                        title={title}
                         desc={description}
                         questionLink={url}
                         onCloseHandler={this.modalCloseHandler}

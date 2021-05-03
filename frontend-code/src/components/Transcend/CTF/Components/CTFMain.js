@@ -7,10 +7,14 @@ import CTFHeader from "./CTFHeader";
 import styles from "../css/CTFMain.module.css";
 import { baseRequest } from "../../../../constants";
 class CTFMain extends React.Component {
+    state = { questions: [] };
     componentDidMount() {
         const cookie = new Cookies();
         const APIBody = { teamId: cookie.get("teamId") };
-        baseRequest.post("/ctf/questions/", APIBody);
+        baseRequest.post("/ctf/questions/", APIBody).then((res) => {
+            this.setState({ questions: res.data.questions });
+            console.log(res.data);
+        });
     }
 
     render() {
@@ -19,7 +23,7 @@ class CTFMain extends React.Component {
                 <div className="container">
                     <CTFHeader />
                 </div>
-                {/* <QuestionList /> */}
+                <QuestionList data={this.state.questions} />
             </div>
         );
     }

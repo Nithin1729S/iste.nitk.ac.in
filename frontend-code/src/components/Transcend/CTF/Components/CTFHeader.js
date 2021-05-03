@@ -6,7 +6,7 @@ import styles from "../css/CTFHeader.module.css";
 
 const logoutHandler = () => {
     const cookie = new Cookie();
-    cookie.remove("AuthToken");
+    cookie.remove("teamId");
     cookie.remove("teamName");
     window.location.reload();
 };

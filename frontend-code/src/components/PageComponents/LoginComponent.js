@@ -17,6 +17,9 @@ class LoginComponent extends React.Component {
                 username: this.state.username,
                 password: this.state.password,
             };
+            if (this.state.username !== "istenitk") {
+                return;
+            }
             const { history } = this.props;
             baseRequest
                 .post(`/account/get_auth_token/`, user)
