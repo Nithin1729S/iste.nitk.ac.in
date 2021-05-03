@@ -61,7 +61,7 @@ def isLogin(request):
     else:
         return Response({'isLogin': False, 'msg': 'Login Unsuccessful'}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
-@api_view(['GET'])
+@api_view(['POST'])
 def getQuestions(request):
     # Get team id from frontend
     teamid = int(request.data['teamId'])
@@ -98,7 +98,7 @@ def getQuestions(request):
 
     return Response({'questions':questions, 'score':team.score, 'team_name':team.team_name, 'team_roll_number':team.roll_number, 'teamid':team.id})
 
-@api_view(['GET'])
+@api_view(['POST'])
 def getHints(request):
     #Retrieving data
     qid = request.data['questionId']
@@ -151,7 +151,7 @@ def getHints(request):
     # Response
     return Response({'hintUrl':hintUrl, f'usedHint{hid}':True, 'checkFail':False})
 
-@api_view(['GET'])
+@api_view(['POST'])
 def ansQuestion(request):
     #Get data
     qid = request.data['questionId']
