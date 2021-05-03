@@ -7,7 +7,6 @@ import { baseRequest } from "../../../../constants";
 class CTFLoginComponent extends React.Component {
     state = { username: "", password: "", errorMessage: "" };
     handleSubmit = (e) => {
-        console.log(e);
         e.preventDefault();
         if (this.state.username === "") {
             this.setState({ errorMessage: "Empty username is not valid" });
@@ -20,8 +19,9 @@ class CTFLoginComponent extends React.Component {
             };
             const { history } = this.props;
             baseRequest
-                .post(`/account/get_auth_token/`, user)
+                .post(`/ctf/login/`, user)
                 .then((res) => {
+                    console.log(res.data);
                     const cookie = new Cookies();
                     cookie.set("AuthToken", res.data.token, { path: "/" });
                     cookie.set("teamName", res.data.team_name, { path: "/" });
