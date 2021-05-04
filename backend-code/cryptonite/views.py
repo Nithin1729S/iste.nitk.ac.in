@@ -21,7 +21,7 @@ def blackbox(request):
         try:
             finalLi.append(int(i))
         except ValueError:
-            return Response({'answer': 'input not viable'})
+            return Response({'answer': 'Input not viable.'})
 
     decision = {1:function1, 2:function2, 3:function3, 4:function4, 5:function5, 6:function6, 7:function7, 8:function8, 9:function9, 10:function10}
     # Dictionary for easy selection of function
