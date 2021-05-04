@@ -31,7 +31,7 @@ class UserQuestion(models.Model):
     questionId = models.ForeignKey(Question,on_delete = models.CASCADE)
     hint_1 = models.BooleanField(default=False)
     hint_2 = models.BooleanField(default=False)
-    score = models.IntegerField(default=-1)
+    score = models.IntegerField(default=0)
 
     def __str__(self):
         return str(self.userId) + ' ' + str(self.questionId) + ' ' + str(self.score)

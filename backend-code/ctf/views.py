@@ -20,6 +20,7 @@ from ctf.serializers import TeamSerializer
 
 # Create your views here.
 
+
 class CustomAuthToken(ObtainAuthToken):
 
     def post(self, request, *args, **kwargs):
@@ -35,9 +36,11 @@ class CustomAuthToken(ObtainAuthToken):
             'email': user.email
         })
 
+
 @api_view(['GET'])
 def questionsView(request):
     return Response({'message': 'Questions View here'})
+
 
 @api_view(['POST'])
 def isLogin(request):
@@ -57,16 +60,17 @@ def isLogin(request):
         objUser = User.objects.filter(username=username)[0]
         objTeam = Team.objects.filter(userId=objUser)[0]
         teamid = objTeam.id
-        return Response({'isLogin': True, 'msg': 'Login Successful', 'teamId':teamid})
+        return Response({'isLogin': True, 'msg': 'Login Successful', 'teamId': teamid})
     else:
         return Response({'isLogin': False, 'msg': 'Login Unsuccessful'}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
 
 @api_view(['POST'])
 def getQuestions(request):
     # Get team id from frontend
     teamId = int(request.data['teamId'])
     team = Team.objects.filter(id=teamId)[0]
-    teamQ= UserQuestion.objects.filter(userId=team)
+    teamQ = UserQuestion.objects.filter(userId=team)
     questions = []
     for i in Question.objects.all().order_by('id'):
         cur = i.__dict__
@@ -74,7 +78,7 @@ def getQuestions(request):
         del cur['answer']
         cur['isAns'] = False
         curQ = teamQ.filter(questionId=i)[0]
-        if curQ.score >= 0:
+        if curQ.score > 0:
             cur['isAns'] = True
         cur['isHint1'] = True
         cur['isHint2'] = True
@@ -84,7 +88,7 @@ def getQuestions(request):
             if curQ.hint_1:
                 cur['usedHint1'] = True
             else:
-                cur['usedHint1'] = False 
+                cur['usedHint1'] = False
         del cur['hint_1_url']
         if cur['hint_2_url'] == None:
             cur['isHint2'] = False
@@ -93,30 +97,25 @@ def getQuestions(request):
                 cur['usedHint2'] = True
             else:
                 cur['usedHint2'] = False
-        del cur['hint_2_url']     
-        questions.append(cur)  
+        del cur['hint_2_url']
+        questions.append(cur)
 
-    return Response({'questions':questions, 'score':team.score, 'team_name':team.team_name, 'team_roll_number':team.roll_number, 'teamid':team.id})
+    return Response({'questions': questions, 'score': team.score, 'team_name': team.team_name, 'team_roll_number': team.roll_number, 'teamid': team.id})
+
 
 @api_view(['POST'])
 def getHints(request):
-    #Retrieving data
-    qid = request.data['questionId']
-    teamid = request.data['teamId']
-    hid = request.data['hintId']
-    if type(qid) == str:
-        qid = int(qid)
-    if type(teamid) == str:
-        teamid = int(teamid)
-    if type(hid) == str:
-        hid = int(qid)
+    # Retrieving data
+    qid = int(request.data['questionId'])
+    teamid = int(request.data['teamId'])
+    hid = int(request.data['hintId'])
 
     # Finding corresponding objects
     team = Team.objects.filter(id=teamid)[0]
     ques = Question.objects.filter(id=qid)[0]
-    tq = UserQuestion.objects.filter(questionId=ques,userId=team)[0]
+    tq = UserQuestion.objects.filter(questionId=ques, userId=team)[0]
 
-    # Few fail cases, not exhaustive 
+    # Few fail cases, not exhaustive
     hintUrl = ''
     flag = False
     if hid != 1 and hid != 2:
@@ -126,57 +125,51 @@ def getHints(request):
     if hid == 2 and ques.hint_2_url == None:
         flag = True
     if flag:
-        return Response({'hintUrl':'', 'checkFail':True})
+        return Response({'hintUrl': '', 'checkFail': True})
 
     # For hid 1 and hid 2
     if hid == 1:
         if not tq.hint_1:
             tq.hint_1 = True
-            tq.save()
-            hintUrl= ques.hint_1_url
             tq.score -= ques.points//3
             tq.save()
-        else:
-            hintUrl= ques.hint_1_url
+        hintUrl = ques.hint_1_url
     elif hid == 2:
         if not tq.hint_2:
             tq.hint_2 = True
-            tq.save()
-            hintUrl = ques.hint_2_url
             tq.score -= ques.points//3
             tq.save()
-        else:
-            hintUrl = ques.hint_2_url
-
+        hintUrl = ques.hint_2_url
     # Response
-    return Response({'hintUrl':hintUrl, f'usedHint{hid}':True, 'checkFail':False})
+    return Response({'hintUrl': hintUrl, f'usedHint{hid}': True, 'checkFail': False})
+
 
 @api_view(['POST'])
 def ansQuestion(request):
-    #Get data
-    qid = request.data['questionId']
-    teamid = request.data['teamId']
+    # Get data
+    qid = int(request.data['questionId'])
+    teamid = int(request.data['teamId'])
     ans = request.data['answer']
-    if type(qid) == str:
-        qid = int(qid)
-    if type(teamid) == str:
-        teamid = int(teamid)
 
     # Finding corresponding objects
     team = Team.objects.filter(id=teamid)[0]
     ques = Question.objects.filter(id=qid)[0]
-    tq = UserQuestion.objects.filter(questionId=ques,userId=team)[0]
+    tq = UserQuestion.objects.filter(questionId=ques, userId=team)[0]
     corAns = ques.answer
 
     # Checking if correct
     flag = False
     if ans == corAns:
-        team.score += tq.score
-        team.save()
+        if tq.score <= 0:
+            tq.score += ques.points
+            tq.save()
+            team.score += tq.score
+            team.save()
         flag = True
 
     # Returning response
-    return Response({'questionId':ques.id, 'isCorrect':flag, 'score':team.score})
+    return Response({'questionId': ques.id, 'isCorrect': flag, 'score': team.score})
+
 
 @api_view(['GET'])
 def getLB(request):
@@ -191,4 +184,4 @@ def getLB(request):
         tlist.append(team_data)
 
     # Response
-    return Response({'teamList':tlist})
+    return Response({'teamList': tlist})
