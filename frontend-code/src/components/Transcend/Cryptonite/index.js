@@ -1,34 +1,100 @@
 import React from 'react';
 import styles from './css/crypt.module.css';
-import { imgAdd } from './imgAddress.js';
-
+import TitleWithLine from '../../RenderingComponents/TitleWithLine';
+import { imgAdd, inip, inop } from './addComp.js';
 import { baseRequest } from '../../../constants';
+import Tabhead from './addComp.js';
 
 class Cryptonite extends React.Component {
 	state = {
-		inputVal: 'List of Integers',
-		inputSeq: [{ input: 'List of Integers', output: 'Output here' }],
+		inputVal: inip,
+		inputSeq: [{ input: inip, output: inop }],
 		rotation: 0,
 	};
-	currId = this.props.match.params.id;
-	numInputKey = `inputs used ${this.currId}`;
-	InputObjectKey = `array current ${this.currId}`;
+	validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+	currId =
+		Number(this.props.match.params.id) in this.validId
+			? Number(this.props.match.params.id)
+			: 1;
+	numInputKey = `inputs used ${this.currId.toString()}`;
+	InputObjectKey = `array current ${this.currId.toString()}`;
 	componentDidMount() {
-		const numInputs = localStorage.getItem(this.numInputKey);
-		console.log(numInputs);
-		if (numInputs !== null) {
+		const numInputs = Number(localStorage.getItem(this.numInputKey));
+		if (numInputs) {
 			//TODO: Load up the data for the user here
 			const initialarray = JSON.parse(localStorage.getItem(this.InputObjectKey))
 				? JSON.parse(localStorage.getItem(this.InputObjectKey)).arr
-				: [{ input: 'List of integers', output: 'Output here' }];
+				: [{ input: inip, output: inop }];
 			this.setState({
 				inputSeq: initialarray,
-				inputVal: initialarray[0] ? initialarray[0].input : 'List of integers',
+				inputVal: initialarray[0] ? initialarray[0].input : inip,
 			});
 			return;
 		}
 		localStorage.setItem(this.numInputKey, 0);
 		localStorage.setItem(this.InputObjectKey, JSON.stringify({ arr: [] }));
+	}
+	componentDidUpdate() {
+		if (Number(this.props.match.params.id) !== this.currId) {
+			console.log(Number(this.props.match.params.id));
+			console.log(0 in this.validId);
+			console.log(this.validId);
+			if (
+				Number(this.props.match.params.id) in this.validId &&
+				Number(this.props.match.params.id) !== 0
+			) {
+				this.currId = Number(this.props.match.params.id);
+				this.numInputKey = `inputs used ${this.currId.toString()}`;
+				this.InputObjectKey = `array current ${this.currId.toString()}`;
+				const numInputs = Number(localStorage.getItem(this.numInputKey));
+				if (numInputs) {
+					//TODO: Load up the data for the user here
+					const initialarray = JSON.parse(
+						localStorage.getItem(this.InputObjectKey)
+					)
+						? JSON.parse(localStorage.getItem(this.InputObjectKey)).arr
+						: [{ input: inip, output: inop }];
+					this.setState({
+						inputSeq: initialarray,
+						inputVal: initialarray[0] ? initialarray[0].input : inip,
+					});
+					return;
+				}
+				localStorage.setItem(this.numInputKey, 0);
+				localStorage.setItem(this.InputObjectKey, JSON.stringify({ arr: [] }));
+				this.setState({
+					inputSeq: [{ input: inip, output: inop }],
+					inputVal: inip,
+				});
+				return;
+			} else if (this.currId !== 1) {
+				this.currId = 1;
+				this.numInputKey = `inputs used ${this.currId.toString()}`;
+				this.InputObjectKey = `array current ${this.currId.toString()}`;
+				const numInputs = Number(localStorage.getItem(this.numInputKey));
+				if (numInputs) {
+					//TODO: Load up the data for the user here
+					const initialarray = JSON.parse(
+						localStorage.getItem(this.InputObjectKey)
+					)
+						? JSON.parse(localStorage.getItem(this.InputObjectKey)).arr
+						: [{ input: inip, output: inop }];
+					this.setState({
+						inputSeq: initialarray,
+						inputVal: initialarray[0] ? initialarray[0].input : inip,
+					});
+					// this.forceUpdate();
+					return;
+				}
+				localStorage.setItem(this.numInputKey, 0);
+				localStorage.setItem(this.InputObjectKey, JSON.stringify({ arr: [] }));
+				this.setState({
+					inputSeq: [{ input: inip, output: inop }],
+					inputVal: inip,
+				});
+				return;
+			}
+		}
 	}
 	onChangeHandler = (e) => {
 		this.setState({ inputVal: e.target.value });
@@ -38,7 +104,7 @@ class Cryptonite extends React.Component {
 		this.setState({ rotation: 1 });
 		baseRequest
 			.post('/cryptonite/blackbox/', {
-				id: this.currId,
+				id: this.currId.toString(),
 				input: this.state.inputVal,
 			})
 			.then((res) => {
@@ -68,6 +134,13 @@ class Cryptonite extends React.Component {
 	render() {
 		return (
 			<div>
+				<div className={styles.tabHead}>
+					<Tabhead idtab={this.currId} />
+				</div>
+
+				<div className={styles.title}>
+					<TitleWithLine title={`Question ${this.currId}`} />
+				</div>
 				<label htmlFor="inputString">
 					<div className={styles.container}>
 						<div className={`center ${styles.input}`}>
@@ -83,7 +156,7 @@ class Cryptonite extends React.Component {
 						<div className={styles.blackBoxCon}>
 							<div className={styles.blackBoxContainer}>
 								<div className={styles.blackBox}>
-									<img src={imgAdd} className={styles.image} />
+									<img src={imgAdd} className={styles.image} alt="Black Box" />
 								</div>
 							</div>
 
@@ -100,7 +173,7 @@ class Cryptonite extends React.Component {
 							) : (
 								<div className={styles.btncon}>
 									<button
-										className={`btn indigo ${styles.btn}`}
+										className={`btn ${styles.btn}`}
 										onClick={this.callAPI}
 									>
 										Generate Output
@@ -111,9 +184,7 @@ class Cryptonite extends React.Component {
 						<div className={`center ${styles.output}`}>
 							<div className={styles.heading}>Output</div>
 							<div className={styles.opresult}>
-								{this.state.inputSeq[0]
-									? this.state.inputSeq[0].output
-									: 'Output here'}
+								{this.state.inputSeq[0] ? this.state.inputSeq[0].output : inop}
 							</div>
 						</div>
 					</div>

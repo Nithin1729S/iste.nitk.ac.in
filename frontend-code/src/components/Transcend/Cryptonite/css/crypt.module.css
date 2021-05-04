@@ -58,6 +58,11 @@
 .btn {
 	margin-top: 16%;
 	width: 100%;
+	background-color: var(--primary);
+}
+
+.btn:hover {
+	background-color: var(--primary);
 }
 
 .btncon {
@@ -96,4 +101,12 @@
 	border: 1px solid black !important;
 	border-collapse: collapse;
 	width: 50%;
+}
+
+.title {
+	padding-bottom: 2%;
+}
+
+.tabHead {
+	padding-top: 1%;
 }

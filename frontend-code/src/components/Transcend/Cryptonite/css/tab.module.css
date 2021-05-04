@@ -1,0 +1,29 @@
+.btn {
+	display: inline-block;
+	padding-left: 1%;
+	width: 10%;
+}
+
+.btn1 {
+	display: inline-block;
+	width: 10%;
+}
+
+.btnIn {
+	width: 100%;
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+.btnIn:hover {
+	background-color: var(--primary);
+}
+
+.btnDec {
+	width: 100%;
+}
+
+.mainBtn {
+	padding-left: 10%;
+	padding-right: 10%;
+}
