@@ -1,0 +1,99 @@
+.container {
+	display: grid !important ;
+	grid-template-columns: 25% 50% 25%;
+	/* gap: 1em; */
+	grid-template-areas: 'a b c';
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.blackBoxCon {
+	grid-area: b;
+}
+
+.blackBoxContainer {
+	width: 100%;
+	padding-left: 30%;
+	padding-right: 30%;
+}
+
+.blackBox {
+	width: 100%;
+	aspect-ratio: 1.2;
+	background-color: black;
+	color: white;
+	animation-name: spin;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	/* transform: rotate(3deg); */
+	/* transform: rotate(0.3rad);/ */
+	/* transform: rotate(3grad); */
+	/* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.input {
+	grid-area: a !important;
+	max-height: 100% !important;
+	margin-top: 35% !important;
+}
+
+.output {
+	color: black;
+	font-size: 16px;
+	grid-area: c;
+	max-height: 100%;
+	margin-top: 35%;
+}
+
+.btn {
+	margin-top: 16%;
+	width: 100%;
+}
+
+.btncon {
+	width: 100%;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.heading {
+	color: var(--primary);
+	font-size: 24px;
+}
+
+.opresult {
+	padding-top: 3%;
+}
+
+.image {
+	height: 100%;
+	width: 100%;
+}
+.tableMain {
+	padding-left: 10%;
+	padding-right: 15%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.table {
+	width: 100%;
+	border: 1px solid black !important;
+	border-collapse: collapse;
+}
+.table tr td,
+.table tr th {
+	text-align: center;
+	border: 1px solid black !important;
+	border-collapse: collapse;
+	width: 50%;
+}
