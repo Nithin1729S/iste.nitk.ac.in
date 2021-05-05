@@ -5,12 +5,13 @@
 
 .btnIn {
     width: 100%;
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--primary) !important;
+    color: var(--secondary) !important;
 }
 
 .btnIn:hover {
     background-color: var(--primary);
+    color: var(--secondary);
 }
 
 .btnDec {

@@ -1,3 +1,19 @@
+.main {
+    --primary: #190a2e;
+    --secondary: #40a8af;
+    background: linear-gradient(
+        to bottom,
+        var(--primary),
+        #001838,
+        black,
+        black,
+        black,
+        #001838,
+        var(--primary)
+    );
+    min-height: 70vh;
+}
+
 .container {
     display: grid !important ;
     grid-template-columns: 25% 50% 25%;
@@ -18,37 +34,37 @@
 }
 
 .blackBox {
+    transform-style: preserve-3d;
     width: 100%;
-    aspect-ratio: 1.2;
-    background-color: black;
-    color: white;
     animation-name: spin;
-    animation-duration: 5000ms;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    /* transform: rotate(3deg); */
-    /* transform: rotate(0.3rad);/ */
-    /* transform: rotate(3grad); */
-    /* transform: rotate(.03turn);  */
+    animation-timing-function: cubic-bezier(0, 2, -1, 1);
 }
 
 @keyframes spin {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg) rotateY(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(1turn) rotateY(1turn);
     }
 }
-
+.blackBoxText {
+    color: var(--secondary);
+    transform: translateZ(100px);
+}
 .input {
     grid-area: a !important;
     max-height: 100% !important;
     margin-top: 35% !important;
 }
+.input input {
+    color: var(--secondary);
+}
 
 .output {
-    color: black;
+    color: var(--secondary);
     font-size: 16px;
     grid-area: c;
     max-height: 100%;
@@ -58,11 +74,13 @@
 .btn {
     margin-top: 16%;
     width: 100%;
-    background-color: var(--primary);
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 .btn:hover {
-    background-color: var(--primary);
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 .btncon {
     width: 100%;
@@ -71,7 +89,7 @@
 }
 
 .heading {
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 24px;
 }
 
@@ -82,6 +100,7 @@
 .image {
     height: 100%;
     width: 100%;
+    border-radius: 15%;
 }
 .tableMain {
     padding-left: 10%;
@@ -97,15 +116,27 @@
 .table tr td,
 .table tr th {
     text-align: center;
-    border: 1px solid black !important;
+    border: 1px solid var(--secondary) !important;
     border-collapse: collapse;
     width: 50%;
+    color: var(--secondary);
 }
 
-.title {
+.title * {
     padding-bottom: 2%;
+    color: var(--secondary);
 }
 
 .tabHead {
     padding-top: 1%;
+}
+@media only screen and (max-width: 1260px) {
+    .blackBoxText{
+        display: none;
+    }
+    .btn{
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        height: min-content;
+    }
 }
