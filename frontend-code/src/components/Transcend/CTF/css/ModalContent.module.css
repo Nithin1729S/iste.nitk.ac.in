@@ -1,35 +1,40 @@
+.main {
+    --primary: #00405b;
+    --secondary: #fff;
+    --tertiary: #0083e0;
+    background: var(--primary);
+}
 .header {
-    background: var(--sigCardReveal);
+    background: var(--primary);
     color: var(--secondary);
     padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 .content {
     padding: 1.5rem 1rem;
-    margin-bottom: 1rem;
+    margin: 0% 5%;
 }
 .questionBlock {
+    background: var(--tertiary);
+    text-align: center;
+    color: var(--secondary);
     font-size: 1rem;
-    background: var(--navBarPrimary);
-    color: var(--primary);
     padding: 1rem;
     margin: 1rem 0 2rem 0;
 }
 
 .close {
-    background: var(--primary) !important;
+    background: var(--tertiary) !important;
+    color: var(--secondary);
 }
-
-.top {
-    background: var(--sigCardReveal) !important;
-}
-
 .questionLink {
     display: inline-block;
     padding: 1rem;
     margin: 1rem 0 2rem 0;
+}
+.questionLink > * {
+    color: rgb(78, 187, 145);
 }
 .hintLink {
     padding: 1rem;
@@ -38,4 +43,32 @@
 
 .flag {
     font-size: 3rem !important;
+    color: var(--tertiary) !important;
+}
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexRow > * {
+    margin: 0% 5%;
+}
+.input {
+    color: var(--secondary);
+}
+.title {
+    width: 100%;
+}
+.title > h3 {
+    color: var(--secondary);
+}
+.hintButton{
+    margin: 2% 5% 2% 0%;
+    background: var(--tertiary);
+}
+.hintRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }

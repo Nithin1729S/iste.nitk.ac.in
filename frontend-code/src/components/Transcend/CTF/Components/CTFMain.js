@@ -17,7 +17,6 @@ class CTFMain extends React.Component {
                 score: res.data.score,
                 name: res.data.team_name,
             });
-            console.log(res.data);
         });
     }
 
@@ -29,6 +28,21 @@ class CTFMain extends React.Component {
                         name={this.state.name}
                         score={this.state.score}
                     />
+                    <div className={`${styles.para} center`}>
+                        <p>
+                            <i>Backstory will be here</i>
+                        </p>
+                    </div>
+                    <div className={`${styles.instructions} center`}>
+                        <h3>Instructions</h3>
+                        <ul>
+                            <li>
+                                Each hint leads to a direct reduction of 33%
+                                score for any question
+                            </li>
+                            <li>This is the second instruction</li>
+                        </ul>
+                    </div>
                 </div>
                 <QuestionList data={this.state.questions} />
             </div>

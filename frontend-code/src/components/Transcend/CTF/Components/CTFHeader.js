@@ -31,7 +31,7 @@ const CTFHeader = ({ name, score }) => {
                     </button>
                 </div>
             </div>
-            <h3 className={styles.score}>{score}</h3>
+            <h3 className={styles.score}>Current Score: {score}</h3>
         </>
     );
 };

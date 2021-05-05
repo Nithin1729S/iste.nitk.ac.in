@@ -1,11 +1,12 @@
 .box {
     --titleColor: #f0f0f0;
-    --titleHoverColor:#000;
-    --titleAttemptedColor:#2d494b;
-    --primary: #0071C3;
-    --secondary: #00B8D9;
-    --primaryDarker: #5EFBD6;
+    --titleHoverColor: #000;
+    --titleAttemptedColor: #2d494b;
+    --primary: #0071c3;
+    --secondary: #00b8d9;
+    --primaryDarker: #5efbd6;
     --fontColor: #000;
+    --rotateDegree: 2.5;
     background: var(--primary);
     color: var(--fontColor);
     display: flex;
@@ -13,18 +14,23 @@
     justify-content: center;
     flex-direction: column;
     border-radius: 1%;
+    transform: rotate(calc(var(--rotateDegree) * 1deg));
 }
 .box:hover {
+    --rotateDegree: -2.5;
     cursor: pointer;
     background: var(--primaryDarker);
     color: var(--fontColor);
+}
+.content {
+    transform: rotate(calc(var(--rotateDegree) * -1deg));
 }
 .attempted {
     border: black 1px solid;
     background: var(--secondary);
     color: var(--fontColor);
 }
-.attempted .title{
+.attempted .title {
     color: var(--titleColor);
 }
 .title {
