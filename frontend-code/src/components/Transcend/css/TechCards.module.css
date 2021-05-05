@@ -13,6 +13,9 @@
     flex-shrink: 1;
     flex-grow: 0;
 }
+.desc {
+    font-size: 0.73rem;
+}
 .card {
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
