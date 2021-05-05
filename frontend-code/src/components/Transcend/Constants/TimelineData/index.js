@@ -17,18 +17,18 @@ const TimelineData = [
     },
     {
         title: "Hardware CTF, 24hr Challenge",
-        date: "7th May, 8PM - 8th May, 8PM",
+        date: "7th May, 8PM\n8th May, 8PM",
     },
     {
         title: "Wing It",
         date: "8th May, 7PM",
     },
     {
-        title: "Cryptonite round-1, blacbox",
+        title: "Cryptonite Round-1, BlackBox",
         date: "9th May, 11AM",
     },
     {
-        title: "Cryptonite round-2, hackathon",
+        title: "Cryptonite Round-2, Hackathon",
         date: "9th May, 3PM",
     },
 ];

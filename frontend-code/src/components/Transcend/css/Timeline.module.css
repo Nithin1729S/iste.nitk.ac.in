@@ -15,7 +15,18 @@
         flex-direction: column;
     }
 }
-
+.title,
+.date {
+    word-wrap: normal;
+    font-family: GothamPro;
+}
+.title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.date {
+    font-size: 1.2rem;
+}
 .main {
     margin: 10% 5%;
 }
@@ -32,6 +43,6 @@
     border-radius: 50%;
     background: var(--primary);
 }
-.date{
+.date {
     color: #333;
 }
