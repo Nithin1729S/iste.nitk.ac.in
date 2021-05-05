@@ -1,29 +1,30 @@
-.btn {
-	display: inline-block;
-	padding-left: 1%;
-	width: 10%;
-}
-
-.btn1 {
-	display: inline-block;
-	width: 10%;
+.btn .btnDec {
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
 }
 
 .btnIn {
-	width: 100%;
-	background-color: var(--primary);
-	color: var(--secondary);
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 .btnIn:hover {
-	background-color: var(--primary);
+    background-color: var(--primary);
 }
 
 .btnDec {
-	width: 100%;
+    width: 100%;
 }
 
 .mainBtn {
-	padding-left: 10%;
-	padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.mainBtn>*{
+	margin: 1%;
+	flex-grow: 1;
 }

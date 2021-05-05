@@ -1,9 +1,10 @@
 import React from 'react';
+
 import styles from './css/crypt.module.css';
 import TitleWithLine from '../../RenderingComponents/TitleWithLine';
-import { imgAdd, inip, inop } from './addComp.js';
+import { imgAdd, inip, inop } from './TabHead.js';
 import { baseRequest } from '../../../constants';
-import Tabhead from './addComp.js';
+import TabHead from './TabHead.js';
 
 class Cryptonite extends React.Component {
 	state = {
@@ -21,7 +22,6 @@ class Cryptonite extends React.Component {
 	componentDidMount() {
 		const numInputs = Number(localStorage.getItem(this.numInputKey));
 		if (numInputs) {
-			//TODO: Load up the data for the user here
 			const initialarray = JSON.parse(localStorage.getItem(this.InputObjectKey))
 				? JSON.parse(localStorage.getItem(this.InputObjectKey)).arr
 				: [{ input: inip, output: inop }];
@@ -48,7 +48,6 @@ class Cryptonite extends React.Component {
 				this.InputObjectKey = `array current ${this.currId.toString()}`;
 				const numInputs = Number(localStorage.getItem(this.numInputKey));
 				if (numInputs) {
-					//TODO: Load up the data for the user here
 					const initialarray = JSON.parse(
 						localStorage.getItem(this.InputObjectKey)
 					)
@@ -73,7 +72,6 @@ class Cryptonite extends React.Component {
 				this.InputObjectKey = `array current ${this.currId.toString()}`;
 				const numInputs = Number(localStorage.getItem(this.numInputKey));
 				if (numInputs) {
-					//TODO: Load up the data for the user here
 					const initialarray = JSON.parse(
 						localStorage.getItem(this.InputObjectKey)
 					)
@@ -83,7 +81,6 @@ class Cryptonite extends React.Component {
 						inputSeq: initialarray,
 						inputVal: initialarray[0] ? initialarray[0].input : inip,
 					});
-					// this.forceUpdate();
 					return;
 				}
 				localStorage.setItem(this.numInputKey, 0);
@@ -100,7 +97,6 @@ class Cryptonite extends React.Component {
 		this.setState({ inputVal: e.target.value });
 	};
 	callAPI = () => {
-		//TODO: add API call. increment number of inputs ONLY on successful return from API
 		this.setState({ rotation: 1 });
 		baseRequest
 			.post('/cryptonite/blackbox/', {
@@ -135,7 +131,7 @@ class Cryptonite extends React.Component {
 		return (
 			<div>
 				<div className={styles.tabHead}>
-					<Tabhead idtab={this.currId} />
+					<TabHead idTab={this.currId} />
 				</div>
 
 				<div className={styles.title}>

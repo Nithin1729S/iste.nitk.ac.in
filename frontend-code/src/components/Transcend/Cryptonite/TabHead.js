@@ -7,12 +7,12 @@ export const imgAdd =
 
 const validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const Tabhead = ({ idtab }) => {
+const TabHead = ({ idTab }) => {
 	return (
 		<div className={styles.mainBtn}>
 			{validId.map((item) => (
-				<div className={item === 1 ? styles.btn1 : styles.btn}>
-					{idtab === item ? (
+				<div className={styles.btn}>
+					{idTab === item ? (
 						<div class={`btn white-text dark disabled ${styles.btnDec}`}>
 							Q{item}
 						</div>
@@ -30,4 +30,4 @@ const Tabhead = ({ idtab }) => {
 	);
 };
 
-export default Tabhead;
+export default TabHead;
