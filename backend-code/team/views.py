@@ -3,6 +3,7 @@ from account.models import User,Core, AuxCore
 from account.serializers import CoreSerializer, AuxCoreSerializer, UserSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from datetime import datetime
 
 # Create your views here.
 
@@ -35,13 +36,18 @@ def indexView(request):
     core_data = CoreSerializer(core_objs, many=True).data
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
 
+    this_year = datetime.now().year
+    this_month = datetime.now().month
+    if this_month<7:
+        this_year = this_year-1
+        
     core_names = []
     for member in core_objs:
         core_names.append(member.user.first_name + member.user.last_name)
     for member in aux_core_objs:
         core_names.append(member.user.first_name + member.user.last_name)
     members = []
-    for member in User.objects.all().order_by('first_name','last_name'):
+    for member in User.objects.filter(batch_of__gt=this_year-4).order_by('first_name','last_name'):
         if member.first_name+member.last_name not in core_names and member.first_name!='ISTE' and member.is_active:
             members.append(member)
 
