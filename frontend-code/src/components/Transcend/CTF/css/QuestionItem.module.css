@@ -33,10 +33,12 @@
 .attempted .title {
     color: var(--titleColor);
 }
-.title {
+.title,
+.points {
     color: var(--titleColor);
 }
-.box:hover .title {
+.box:hover .title,
+.box:hover .points {
     color: var(--titleHoverColor);
 }
 .points {
