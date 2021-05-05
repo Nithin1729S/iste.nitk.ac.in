@@ -3,6 +3,8 @@
     --secondary: #fff;
     --tertiary: #0083e0;
     background: var(--primary);
+    height: 100%;
+    width: 100%;
 }
 .header {
     background: var(--primary);
@@ -22,6 +24,10 @@
     font-size: 1rem;
     padding: 1rem;
     margin: 1rem 0 2rem 0;
+}
+
+.questionBlock > p {
+    overflow: hidden;
 }
 
 .close {
@@ -52,7 +58,7 @@
     align-items: center;
 }
 .flexRow > * {
-    margin: 0% 5%;
+    margin: 0% 2.5%;
 }
 .input {
     color: var(--secondary);
@@ -63,12 +69,22 @@
 .title > h3 {
     color: var(--secondary);
 }
-.hintButton{
+.hintButton {
     margin: 2% 5% 2% 0%;
     background: var(--tertiary);
 }
-.hintRow{
-    width: 100%;
+.hintRow {
     display: flex;
     flex-direction: row;
+}
+@media only screen and (max-width: 1260px) {
+    .main{
+        overflow: scroll;
+    }
+    .questionBlock > p {
+        font-size: 1rem;
+    }
+    .hintRow{
+        flex-direction: column;
+    }
 }

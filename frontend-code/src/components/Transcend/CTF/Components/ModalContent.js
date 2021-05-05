@@ -39,6 +39,7 @@ class ModalContent extends React.Component {
             });
         });
     };
+
     render() {
         const {
             isAns,
@@ -74,8 +75,6 @@ class ModalContent extends React.Component {
                             Reveal Hint 1
                         </button>
                     ) : null}
-                </div>
-                <div className={styles.hintRow}>
                     {usedHint2 ? (
                         <a
                             className={`${styles.hintButton} btn`}
