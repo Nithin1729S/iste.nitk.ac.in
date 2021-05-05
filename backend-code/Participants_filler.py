@@ -1,5 +1,7 @@
 import importlib
 import os
+import string
+import random
 import django
 import xlsxwriter
 import xlrd
@@ -32,8 +34,10 @@ def excel_write(dataset, file, worksheet_name="Sheet1"):
         n += 1
     workbook.close()
 
+def getPassword(N=8):
+    return ''.join(random.choices(string.ascii_uppercase + string.digits, k=N))
 
-def createUserQ(obj):
+def createUserQ(obj):''.join(random.choices(string.ascii_uppercase + string.digits, k=N))
     objQ = Question.objects.all()
     for i in objQ:
         curObj = UserQuestion(userId=obj, questionId=i)
@@ -45,10 +49,10 @@ data = excel_read("Participants.xlsx", "Sheet1")[1:]
 for row in data:
     team_name = row[0].strip()
     rollNo = str(row[1]).strip()
-    password = row[2].strip()
+    password = getPassword()
     username = team_name.lower().replace(' ', '')
 
-    objUser = User(username=username, first_name=team_name)
+    objUser = User(username=username, first_name=team_name, batch_of=2000)
     objUser.save()
     objUser.set_password(password)
     objUser.save()
