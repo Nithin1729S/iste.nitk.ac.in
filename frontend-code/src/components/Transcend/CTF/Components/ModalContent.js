@@ -30,7 +30,6 @@ class ModalContent extends React.Component {
         };
         baseRequest.post("/ctf/checkAns/", APIBody).then((res) => {
             if (res.data.isCorrect) {
-                window.scrollTo(0, 0);
                 window.location.reload();
                 return;
             }
