@@ -39,3 +39,6 @@
 .box:hover .title {
     color: var(--titleHoverColor);
 }
+.points {
+    text-align: center;
+}

@@ -51,7 +51,7 @@ class QuestionItem extends React.Component {
                 >
                     <div className={styles.content}>
                         <h3 className={styles.title}>{title}</h3>
-                        <h5>{points}</h5>
+                        <h5 className={styles.points}>{points}</h5>
                     </div>
                 </div>
                 <Modal
