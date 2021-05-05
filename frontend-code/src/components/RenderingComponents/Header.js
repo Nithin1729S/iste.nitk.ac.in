@@ -138,7 +138,6 @@ class Header extends React.Component {
                 <li>
                     <Link
                         className="dropdown-trigger"
-                        to="/"
                         data-target="user-action"
                     >
                         Hi {this.state.loggedInName}
@@ -195,7 +194,6 @@ class Header extends React.Component {
                 <li>
                     <Link
                         className="dropdown-trigger"
-                        to="/"
                         data-target="event-action"
                     >
                         Events
@@ -267,7 +265,6 @@ class Header extends React.Component {
                         <ul className="collapsible collapsible-accordion">
                             <li>
                                 <Link
-                                    to="/"
                                     className="collapsible-header waves-effect white-text"
                                 >
                                     SIGs
@@ -296,7 +293,6 @@ class Header extends React.Component {
                                 <img width="75" src={logopath} alt="" />
                             </Link>
                             <Link
-                                to="/"
                                 data-target="mobile-menu"
                                 className="sidenav-trigger "
                             >
@@ -310,7 +306,6 @@ class Header extends React.Component {
                                 <li>
                                     <Link
                                         className="dropdown-trigger"
-                                        to="/"
                                         data-target="sig-action"
                                     >
                                         SIGs
