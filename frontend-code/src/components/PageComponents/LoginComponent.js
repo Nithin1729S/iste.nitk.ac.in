@@ -1,11 +1,11 @@
 import React from "react";
 import Cookies from "universal-cookie";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 import styles from "../../css/login.module.css";
 import { baseRequest } from "../../constants";
 class LoginComponent extends React.Component {
-    state = { username: "", password: "", errorMessage: "" };
+    state = { username: "", password: "", errorMessage: <></> };
     handleSubmit = (e) => {
         e.preventDefault();
         if (this.state.username === "") {
@@ -18,6 +18,16 @@ class LoginComponent extends React.Component {
                 password: this.state.password,
             };
             if (this.state.username !== "istenitk") {
+                this.setState({
+                    errorMessage: (
+                        <>
+                            <p>incorrect credentials, please try again.</p>
+                            <br />
+                            If you're trying to login for CTF{" "}
+                            <Link to="/transcend/charge">click here!</Link>
+                        </>
+                    ),
+                });
                 return;
             }
             const { history } = this.props;
@@ -63,7 +73,7 @@ class LoginComponent extends React.Component {
                                     Member Login
                                 </span>
                                 <form onSubmit={this.handleSubmit}>
-                                    <p>{this.state.errorMessage}</p>
+                                    <>{this.state.errorMessage}</>
                                     <div className="row">
                                         <div className="col s12">
                                             <div className="row">
@@ -123,7 +133,7 @@ class LoginComponent extends React.Component {
                                         </div>
                                     </div>
                                     <button
-                                        className="btn waves-effect waves-light"
+                                        className="btn waves-effect"
                                         type="submit"
                                     >
                                         Submit
