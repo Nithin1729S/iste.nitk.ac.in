@@ -22,9 +22,6 @@
 .node {
     margin: 1em;
 }
-.node > * {
-    word-wrap: break-word;
-}
 .nodeContainer {
     display: flex;
     flex-wrap: wrap;
