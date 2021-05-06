@@ -51,46 +51,40 @@ class ModalContent extends React.Component {
             usedHint1,
             usedHint2,
             makeRequest,
+            hint1URL,
+            hint2URL,
         } = this.props;
 
         const hintButtons = (
             <>
                 <div className={styles.hintRow}>
                     {usedHint1 ? (
-                        <a
-                            className={`${styles.hintButton} btn`}
-                            href={this.props.hint1URL}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Open Hint 1
-                        </a>
+                        <p className={`${styles.hintButton}`}>
+                            In each case, find what effect the voltage at pin 5
+                            (control pin) has on the 555 timer’s working using
+                            its internal block diagram. You will have to derive
+                            the formula for duty cycle and time period in Case 1
+                            and Case 2. Case 3 is straightforward.
+                        </p>
                     ) : null}
                     {isHint1 && !usedHint1 && !isAns ? (
-                        <button
-                            className={`${styles.hintButton} btn`}
+                        <p
+                            className={`${styles.hintButton} ${styles.reveal}`}
                             onClick={() => makeRequest(1)}
                         >
                             Reveal Hint 1
-                        </button>
+                        </p>
                     ) : null}
                     {usedHint2 ? (
-                        <a
-                            className={`${styles.hintButton} btn`}
-                            href={this.props.hint2URL}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Open Hint 2
-                        </a>
+                        <p className={`${styles.hintButton}`}>{hint2URL}</p>
                     ) : null}
                     {isHint2 && !usedHint2 && !isAns ? (
-                        <button
-                            className={`${styles.hintButton} btn`}
+                        <p
+                            className={`${styles.hintButton} ${styles.reveal}`}
                             onClick={() => makeRequest(2)}
                         >
                             Reveal Hint 2
-                        </button>
+                        </p>
                     ) : null}
                 </div>
             </>
