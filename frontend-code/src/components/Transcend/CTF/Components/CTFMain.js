@@ -55,10 +55,53 @@ class CTFMain extends React.Component {
                         <h3>Instructions</h3>
                         <ul>
                             <li>
-                                Each hint leads to a direct reduction of 33%
+                                Each hint leads to a direct reduction of 20%
                                 score for any question
                             </li>
-                            <li>This is the second instruction</li>
+                            <li>
+                                Link to install LTSpice:
+                                <a
+                                    href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {" "}
+                                    Click Here
+                                </a>
+                            </li>
+                            <li>
+                                Link to install Logism:
+                                <a
+                                    href="https://sourceforge.net/projects/circuit/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {" "}
+                                    Click Here
+                                </a>
+                            </li>
+                            <li>
+                                Link to install Ghidra:
+                                <a
+                                    href="https://ghidra-sre.org/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {" "}
+                                    Click Here
+                                </a>
+                            </li>
+                            <li>
+                                Link to install Python:
+                                <a
+                                    href="https://www.python.org/downloads/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {" "}
+                                    Click Here
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
