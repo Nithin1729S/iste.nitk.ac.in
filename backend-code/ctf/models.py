@@ -8,6 +8,7 @@ class Team(models.Model):
     userId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     team_name = models.CharField(max_length = 100)
     score = models.IntegerField(default=0)
+    timestamp = models.CharField(max_length=100, default="")
     roll_number = models.CharField(max_length=20)
 
     def __str__(self):

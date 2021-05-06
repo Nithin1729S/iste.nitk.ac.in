@@ -13,6 +13,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.core.files.storage import default_storage
 from django.contrib.auth import update_session_auth_hash
+from datetime import datetime
 
 from .models import *
 from account.models import User
@@ -164,6 +165,7 @@ def ansQuestion(request):
             tq.score += ques.points
             tq.save()
             team.score += tq.score
+            team.timestamp = str(datetime.now())
             team.save()
         flag = True
 
@@ -174,7 +176,7 @@ def ansQuestion(request):
 @api_view(['GET'])
 def getLB(request):
     # Get list of team objects
-    teamList = Team.objects.all().order_by("-score")
+    teamList = Team.objects.all().order_by("-score","timestamp")
     tlist = []
     for i in teamList:
         team_data = TeamSerializer(i).data
