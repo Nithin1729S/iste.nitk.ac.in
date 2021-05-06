@@ -44,3 +44,15 @@
 .points {
     text-align: center;
 }
+@font-face {
+    font-family: jura;
+    src: url("./jura.ttf");
+}
+.title,
+.points {
+    font-family: jura;
+    font-weight: 600;
+}
+.title{
+    font-size: 2.5rem;
+}

@@ -60,11 +60,7 @@ class ModalContent extends React.Component {
                 <div className={styles.hintRow}>
                     {usedHint1 ? (
                         <p className={`${styles.hintButton}`}>
-                            In each case, find what effect the voltage at pin 5
-                            (control pin) has on the 555 timer’s working using
-                            its internal block diagram. You will have to derive
-                            the formula for duty cycle and time period in Case 1
-                            and Case 2. Case 3 is straightforward.
+                            {hint1URL}
                         </p>
                     ) : null}
                     {isHint1 && !usedHint1 && !isAns ? (
@@ -99,7 +95,7 @@ class ModalContent extends React.Component {
                     </div>
                     <span>
                         <button
-                            className={`waves-effect waves-light btn-large ${styles.close}`}
+                            className={`waves-effect waves-light btn-large ${styles.close} ${styles.top}`}
                             onClick={onCloseHandler}
                         >
                             <i className="material-icons">close</i>
