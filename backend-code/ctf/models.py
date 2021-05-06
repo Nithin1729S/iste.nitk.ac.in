@@ -18,8 +18,8 @@ class Question(models.Model):
     description = models.TextField()
     points = models.IntegerField(default=100)
     url = models.URLField()
-    hint_1_url = models.URLField(null=True)
-    hint_2_url = models.URLField(null=True)
+    hint_1_url = models.CharField(max_length=500,null=True)
+    hint_2_url = models.CharField(null=True, max_length=500)
     answer = models.CharField(max_length=100)
     
 

@@ -131,13 +131,13 @@ def getHints(request):
     if hid == 1:
         if not tq.hint_1:
             tq.hint_1 = True
-            tq.score -= ques.points//3
+            tq.score -= ques.points//5
             tq.save()
         hintUrl = ques.hint_1_url
     elif hid == 2:
         if not tq.hint_2:
             tq.hint_2 = True
-            tq.score -= ques.points//3
+            tq.score -= ques.points//5
             tq.save()
         hintUrl = ques.hint_2_url
     # Response
