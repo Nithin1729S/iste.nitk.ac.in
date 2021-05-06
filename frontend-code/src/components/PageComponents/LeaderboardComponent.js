@@ -42,9 +42,9 @@ class LeaderboardComponent extends React.Component {
         const leaderboardElements = this.calcRank(unRankedElements);
         const LeaderboardData = leaderboardElements
             .filter((item) =>
-                item[this.state.selectedFilter].includes(
-                    this.state.searchInput.toLowerCase()
-                )
+                item[this.state.selectedFilter]
+                    .toLowerCase()
+                    .includes(this.state.searchInput.toLowerCase())
             )
             .slice(0, 15)
             .map(({ team_name, roll_number, score, rank }) => {
