@@ -9,12 +9,11 @@
 .header {
     background: var(--primary);
     color: var(--secondary);
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     display: flex;
 }
 .content {
-    padding: 1.5rem 1rem;
-    margin: 0% 3%;
+    padding: 0rem 1rem 1rem 1rem;
 }
 .questionBlock {
     background: var(--tertiary);
