@@ -37,7 +37,7 @@ def excel_write(dataset, file, worksheet_name="Sheet1"):
 def getPassword(N=8):
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=N))
 
-def createUserQ(obj):''.join(random.choices(string.ascii_uppercase + string.digits, k=N))
+def createUserQ(obj):
     objQ = Question.objects.all()
     for i in objQ:
         curObj = UserQuestion(userId=obj, questionId=i)
