@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Card extends React.Component {
+class SigCard extends React.Component {
     state = { show: false };
 
     OnCLick = () => {
@@ -55,4 +55,4 @@ class Card extends React.Component {
     }
 }
 
-export default Card;
+export default SigCard;

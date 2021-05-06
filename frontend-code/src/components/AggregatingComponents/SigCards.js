@@ -1,6 +1,6 @@
 import React from "react";
 
-import Card from "../RenderingComponents/Cards";
+import SigCard from "../RenderingComponents/SigCard";
 
 import "../../css/sigCards.css";
 import { baseUrl } from "../../constants";
@@ -15,7 +15,7 @@ const SigCards = (props) => {
         console.log(summaryText);
         const linkOuter = isSig ? "/sig/" : "/smp/";
         return (
-            <Card
+            <SigCard
                 key={name}
                 name={name}
                 avatar={`${baseUrl}${avatar}`}
