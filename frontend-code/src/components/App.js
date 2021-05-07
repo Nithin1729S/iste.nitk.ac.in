@@ -45,7 +45,7 @@ class App extends React.Component {
                         component={SGPSigComponent}
                     />
                     <Route
-                        path="/transcend/testingOnlyTime"
+                        path="/transcend/charge"
                         exact
                         component={CTFComponent}
                     />

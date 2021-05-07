@@ -11,7 +11,8 @@ const eventData = [
         desc:
             "A 24-hour CTF event involving a series of challenges related to microprocessors, signal and image processing, analog and digital electronics. Winning teams take home prizes worth upto 5K!",
         img: micro,
-        formLink: "https://forms.gle/D43gezFgybNyn9tp6",
+        formLink: "/transcend/charge",
+        isLive: true,
     },
     {
         title: "WingIt",
