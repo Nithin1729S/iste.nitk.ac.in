@@ -44,12 +44,13 @@ def createUserQ(obj):
         curObj.save()
 
 
-l = [['Team Names', 'Roll No.', 'Username', 'Password']]
+l = [['Team Names', 'Roll No.', 'Username', 'Password','Email']]
 data = excel_read("Participants.xlsx", "Sheet1")[1:]
 for row in data:
     team_name = row[0].strip()
     rollNo = str(row[1]).strip()
     password = getPassword()
+    email = row[3].strip()
     username = team_name.lower().replace(' ', '')
 
     objUser = User(username=username, first_name=team_name, batch_of=2000)
@@ -58,7 +59,7 @@ for row in data:
     objUser.save()
     objTeam = Team(userId=objUser, team_name=team_name, roll_number=rollNo)
     objTeam.save()
-    l.append([team_name, rollNo, username, password])
+    l.append([team_name, rollNo, username, password,email])
     createUserQ(objTeam)
 
 excel_write(l, 'LoginDetails.xlsx')
