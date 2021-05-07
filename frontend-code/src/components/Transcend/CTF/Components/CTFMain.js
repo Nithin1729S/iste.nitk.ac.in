@@ -8,7 +8,12 @@ import CTFHeader from "./CTFHeader";
 import styles from "../css/CTFMain.module.css";
 import { baseRequest } from "../../../../constants";
 class CTFMain extends React.Component {
-    state = { questions: [], name: "", score: "" };
+    state = {
+        questions: [],
+        name: "",
+        score: "",
+        showSolvedQuestions: false,
+    };
     componentDidMount() {
         const cookie = new Cookies();
         const APIBody = { teamId: cookie.get("teamId") };
@@ -22,6 +27,27 @@ class CTFMain extends React.Component {
     }
 
     render() {
+        let questionData = [...this.state.questions];
+        if (this.state.showSolvedQuestions) {
+            questionData = questionData.filter((item) => !item.isAns);
+        }
+        const allAnswered = (
+            <h3 className={styles.header}>
+                You've answered all questions,{" "}
+                <a
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    click here for your reward!{" "}
+                </a>
+            </h3>
+        );
+        const questionList = questionData.length ? (
+            <QuestionList data={questionData} />
+        ) : (
+            allAnswered
+        );
         return (
             <div className={styles.main}>
                 <div className="container">
@@ -134,7 +160,26 @@ class CTFMain extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <QuestionList data={this.state.questions} />
+                <div className="container">
+                    <div className={`${styles.flexRowEnd} container`}>
+                        <button
+                            className={`${styles.solvedButton} ${
+                                this.state.showSolvedQuestions ? styles.alt : ""
+                            } btn`}
+                            onClick={() =>
+                                this.setState({
+                                    showSolvedQuestions: !this.state
+                                        .showSolvedQuestions,
+                                })
+                            }
+                        >
+                            {this.state.showSolvedQuestions
+                                ? "Show solved questions"
+                                : "Hide Solved Questions"}
+                        </button>
+                    </div>
+                </div>
+                {questionList}
             </div>
         );
     }
