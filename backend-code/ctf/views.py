@@ -160,7 +160,7 @@ def ansQuestion(request):
 
     # Checking if correct
     flag = False
-    if ans == corAns:
+    if ans.strip().lower() == corAns.strip().lower():
         if tq.score <= 0:
             tq.score += ques.points
             tq.save()
