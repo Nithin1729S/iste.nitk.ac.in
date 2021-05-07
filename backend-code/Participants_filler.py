@@ -45,7 +45,7 @@ def createUserQ(obj):
 
 
 l = [['Team Names', 'Roll No.', 'Username', 'Password','Email']]
-data = excel_read("Participants.xlsx", "Sheet1")[1:]
+data = excel_read("Participants.xlsx", "Sheet2")[1:]
 for row in data:
     team_name = row[0].strip()
     rollNo = str(row[1]).strip()
