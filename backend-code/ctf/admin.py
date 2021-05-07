@@ -5,7 +5,7 @@ from .models import Team, Question, UserQuestion
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ('id', 'team_name', 'score','timestamp')
+    list_display = ('id', 'team_name','score','timestamp')
 
 
 @admin.register(Question)
