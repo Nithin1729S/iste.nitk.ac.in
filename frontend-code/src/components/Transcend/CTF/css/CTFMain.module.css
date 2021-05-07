@@ -16,4 +16,6 @@
 }
 .instructions li {
     margin-top: 1%;
+    max-width: min(80vw, 50em);
+    margin-inline: auto;
 }

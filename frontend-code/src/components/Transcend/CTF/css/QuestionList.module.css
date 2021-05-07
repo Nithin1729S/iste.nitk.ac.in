@@ -4,7 +4,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10em;
-    margin-top: 10%;
+    margin-top: 5em;
 }
 .main > * {
     flex-basis: calc(min(20em, 80vw));

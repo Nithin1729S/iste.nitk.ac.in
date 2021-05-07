@@ -1,5 +1,6 @@
 import React from "react";
 import Cookies from "universal-cookie";
+import { Link } from "react-router-dom";
 
 import QuestionList from "./QuestionList";
 import CTFHeader from "./CTFHeader";
@@ -55,8 +56,36 @@ class CTFMain extends React.Component {
                         <h3>Instructions</h3>
                         <ul>
                             <li>
-                                Each hint leads to a direct reduction of 20%
-                                score for any question
+                                Each hint leads to a direct reduction of 20% of
+                                total score for the same question.
+                            </li>
+                            <li>
+                                The flag is a string of alphanumeric characters
+                                without any spaces (if need be, use _ for
+                                space).
+                            </li>
+                            <li>
+                                There may be multiple approaches towards solving
+                                each question, each approach leads to the same
+                                alphanumeric flag, thus, each question has only
+                                one correct answer.
+                            </li>
+                            <li>
+                                The leaderboard{" "}
+                                <Link
+                                    to="/leaderboard"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    (Click here to view)
+                                </Link>{" "}
+                                displays the correct score, with appropriate
+                                deduction of score for all correctly answered
+                                questions.
+                            </li>
+                            <li>
+                                All ties will be broken in favour of the team
+                                reaching the score first.
                             </li>
                             <li>
                                 Link to install LTSpice:

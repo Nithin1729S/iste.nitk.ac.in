@@ -15,6 +15,7 @@
     flex-direction: column;
     border-radius: 1%;
     transform: rotate(calc(var(--rotateDegree) * 1deg));
+    transition: transform 400ms ease-in-out;
 }
 .box:hover {
     --rotateDegree: -2.5;
@@ -53,6 +54,6 @@
     font-family: jura;
     font-weight: 600;
 }
-.title{
+.title {
     font-size: 2.5rem;
 }
