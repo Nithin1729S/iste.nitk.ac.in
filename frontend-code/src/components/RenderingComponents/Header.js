@@ -86,19 +86,74 @@ class Header extends React.Component {
             </a>
         </li>
     );
+    transcendNavHeaderMobile = (
+        <li className="no-padding">
+            <ul className="collapsible collapsible-accordion">
+                <li>
+                    <Link className="collapsible-header waves-effect white-text">
+                        Transcend
+                        <i className="material-icons white-text ">
+                            arrow_drop_down
+                        </i>
+                    </Link>
+                    <div className="collapsible-body">
+                        <ul>
+                            <li>
+                                <Link
+                                    to={`/transcend`}
+                                    className="waves-effect white-text"
+                                >
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to={`/transcend/charge`}
+                                    className="waves-effect white-text"
+                                >
+                                    CTF
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    );
     transcendNavHeader = (
         <>
             <li>
-                <Link to="/transcend" className="white-text">
+                <Link
+                    className="dropdown-trigger"
+                    data-target="transcend-action"
+                >
                     Transcend
+                    <i className="material-icons right">arrow_drop_down</i>
                 </Link>
             </li>
-            <li>
-                <Link to="/smp" className="white-text">
-                    SMPs
-                </Link>
-            </li>
+            <ul id="transcend-action" className="dropdown-content frontsig">
+                <li>
+                    <Link to={`/transcend`} className="waves-effect white-text">
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to={`/transcend/charge`}
+                        className="waves-effect white-text"
+                    >
+                        CTF
+                    </Link>
+                </li>
+            </ul>
         </>
+    );
+    smpNavHeader = (
+        <li>
+            <Link to="/smp" className="white-text">
+                SMPs
+            </Link>
+        </li>
     );
     render() {
         const cookie = new Cookies();
@@ -264,9 +319,7 @@ class Header extends React.Component {
                     <li className="no-padding">
                         <ul className="collapsible collapsible-accordion">
                             <li>
-                                <Link
-                                    className="collapsible-header waves-effect white-text"
-                                >
+                                <Link className="collapsible-header waves-effect white-text">
                                     SIGs
                                     <i className="material-icons white-text ">
                                         arrow_drop_down
@@ -280,7 +333,8 @@ class Header extends React.Component {
                     </li>
                     {this.teamNavHeader}
                     {this.blogNavHeader}
-                    {this.transcendNavHeader}
+                    {this.transcendNavHeaderMobile}
+                    {this.smpNavHeader}
                 </ul>
 
                 <div className="navbar-fixed">
@@ -323,6 +377,7 @@ class Header extends React.Component {
                                 {this.teamNavHeader}
                                 {this.blogNavHeader}
                                 {this.transcendNavHeader}
+                                {this.smpNavHeader}
                             </ul>
                         </div>
                     </nav>
