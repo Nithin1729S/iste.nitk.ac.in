@@ -1,5 +1,6 @@
 import React from "react";
 import Cookies from "universal-cookie";
+import { Link } from "react-router-dom";
 
 import QuestionList from "./QuestionList";
 import CTFHeader from "./CTFHeader";
@@ -7,7 +8,12 @@ import CTFHeader from "./CTFHeader";
 import styles from "../css/CTFMain.module.css";
 import { baseRequest } from "../../../../constants";
 class CTFMain extends React.Component {
-    state = { questions: [], name: "", score: "" };
+    state = {
+        questions: [],
+        name: "",
+        score: "",
+        showSolvedQuestions: false,
+    };
     componentDidMount() {
         const cookie = new Cookies();
         const APIBody = { teamId: cookie.get("teamId") };
@@ -21,6 +27,27 @@ class CTFMain extends React.Component {
     }
 
     render() {
+        let questionData = [...this.state.questions];
+        if (this.state.showSolvedQuestions) {
+            questionData = questionData.filter((item) => !item.isAns);
+        }
+        const allAnswered = (
+            <h3 className={styles.header}>
+                You've answered all questions,{" "}
+                <a
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    click here for your reward!{" "}
+                </a>
+            </h3>
+        );
+        const questionList = questionData.length ? (
+            <QuestionList data={questionData} />
+        ) : (
+            allAnswered
+        );
         return (
             <div className={styles.main}>
                 <div className="container">
@@ -55,8 +82,36 @@ class CTFMain extends React.Component {
                         <h3>Instructions</h3>
                         <ul>
                             <li>
-                                Each hint leads to a direct reduction of 20%
-                                score for any question
+                                Each hint leads to a direct reduction of 20% of
+                                total score for the same question.
+                            </li>
+                            <li>
+                                The flag is a string of alphanumeric characters
+                                without any spaces (if need be, use _ for
+                                space).
+                            </li>
+                            <li>
+                                There may be multiple approaches towards solving
+                                each question, each approach leads to the same
+                                alphanumeric flag, thus, each question has only
+                                one correct answer.
+                            </li>
+                            <li>
+                                The leaderboard{" "}
+                                <Link
+                                    to="/leaderboard"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    (Click here to view)
+                                </Link>{" "}
+                                displays the correct score, with appropriate
+                                deduction of score for all correctly answered
+                                questions.
+                            </li>
+                            <li>
+                                All ties will be broken in favour of the team
+                                reaching the score first.
                             </li>
                             <li>
                                 Link to install LTSpice:
@@ -105,7 +160,26 @@ class CTFMain extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <QuestionList data={this.state.questions} />
+                <div className="container">
+                    <div className={`${styles.flexRowEnd} container`}>
+                        <button
+                            className={`${styles.solvedButton} ${
+                                this.state.showSolvedQuestions ? styles.alt : ""
+                            } btn`}
+                            onClick={() =>
+                                this.setState({
+                                    showSolvedQuestions: !this.state
+                                        .showSolvedQuestions,
+                                })
+                            }
+                        >
+                            {this.state.showSolvedQuestions
+                                ? "Show solved questions"
+                                : "Hide Solved Questions"}
+                        </button>
+                    </div>
+                </div>
+                {questionList}
             </div>
         );
     }
