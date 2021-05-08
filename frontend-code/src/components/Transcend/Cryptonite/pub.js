@@ -12,12 +12,15 @@ class Cryptonite extends React.Component {
                 className={styles.main}
                 style={{ paddingTop: "20%", paddingBottom: "20%" }}
             >
+                <div
+                    className={`${styles.title} ${styles.cryptonite}`}
+                >
+                    <pre>Cryptonite</pre>
+                </div>
                 <div className={styles.title} style={{ marginBottom: "10%" }}>
-                    <h3>
-                        Cryptonite Coming Soon ...
-                        <br />
-                        9th May @ 11am!
-                    </h3>
+                    <pre>
+                        Stay tuned and get the chance to win exciting prices!
+                    </pre>
                 </div>
                 <div className={styles.container}>
                     <div className={styles.mainContent}>
