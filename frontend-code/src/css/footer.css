@@ -2,8 +2,8 @@
     background-color: var(--primary);
 }
 .crypt {
-    background-color: #1b0225 !important;
-    background-image: url("../components/Transcend/Cryptonite/background.jpg");
+    background-color: #110018 !important;
+    background-image: url("../components/Transcend/Cryptonite/background.png");
 }
 .charge {
     background-color: #00405b !important;
