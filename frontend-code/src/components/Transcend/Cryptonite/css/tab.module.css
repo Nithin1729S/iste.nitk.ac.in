@@ -1,12 +1,12 @@
 .btn .btnDec {
-    background-color: var(--secondary) !important;
-    color: var(--primary) !important;
+    background-color: var(--primary) !important;
+    color: var(--secondary) !important;
 }
 
 .btnIn {
     width: 100%;
-    background-color: var(--primary) !important;
-    color: var(--secondary) !important;
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
 }
 
 .btnIn:hover {
@@ -25,7 +25,7 @@
     padding-left: 10%;
     padding-right: 10%;
 }
-.mainBtn>*{
-	margin: 1%;
-	flex-grow: 1;
+.mainBtn > * {
+    margin: 1%;
+    flex-grow: 1;
 }

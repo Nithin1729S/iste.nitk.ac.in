@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import "../../css/footer.css";
 
@@ -25,9 +25,10 @@ class Footer extends React.Component {
         },
     ];
     render() {
+        const val = this.props.value ? this.props.value : "";
         return (
-            <div className="footer">
-                <footer className="page-footer ">
+            <div className={`${val} footer`}>
+                <footer className={`${val} page-footer`}>
                     <div className="container">
                         <div className="row">
                             <div className="col l6 s12">

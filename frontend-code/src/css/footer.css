@@ -1,11 +1,17 @@
 .footer .page-footer {
-  background-color: var(--primary) !important;
+    background-color: var(--primary);
 }
-
+.crypt {
+    background-color: #1b0225 !important;
+    background-image: url("../components/Transcend/Cryptonite/background.jpg");
+}
+.charge {
+    background-color: #00405b !important;
+}
 .footer .anchor {
-  padding-left: 30px;
+    padding-left: 30px;
 }
 
 .footer .text {
-  color: var(--secondary);
+    color: var(--secondary);
 }

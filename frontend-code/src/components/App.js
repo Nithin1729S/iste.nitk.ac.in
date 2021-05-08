@@ -25,9 +25,12 @@ import Cryptonite from "./Transcend/Cryptonite";
 import "../css/constants.css";
 
 class App extends React.Component {
-    state = { headerShouldRender: true };
+    state = { headerShouldRender: true, footerBackgroundVariant: "" };
     changeHeaderFooterStatus = (val) => {
         this.setState({ headerShouldRender: val });
+    };
+    changeFooterBackground = (val) => {
+        this.setState({ footerBackgroundVariant: val });
     };
     render() {
         return (
@@ -47,12 +50,26 @@ class App extends React.Component {
                     <Route
                         path="/transcend/charge"
                         exact
-                        component={CTFComponent}
+                        render={(props) => (
+                            <CTFComponent
+                                {...props}
+                                setFooterVal={(val) =>
+                                    this.changeFooterBackground(val)
+                                }
+                            />
+                        )}
                     />
                     <Route
                         path="/transcend/crypt/:id"
                         exact
-                        component={Cryptonite}
+                        render={(props) => (
+                            <Cryptonite
+                                {...props}
+                                setFooterVal={(val) =>
+                                    this.changeFooterBackground(val)
+                                }
+                            />
+                        )}
                     />
                     <Route
                         path="/expo"
@@ -90,7 +107,7 @@ class App extends React.Component {
                     <Route path="/event/add" exact component={EventAdd} />
                 </div>
                 <Wrapper shouldRender={this.state.headerShouldRender}>
-                    <Footer />
+                    <Footer value={this.state.footerBackgroundVariant} />
                 </Wrapper>
             </HashRouter>
         );
