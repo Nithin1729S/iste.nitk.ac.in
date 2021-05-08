@@ -20,7 +20,7 @@ import CTFComponent from "./Transcend/CTF/Components";
 import SGPComponent from "./PageComponents/SGPComponent";
 import SGPSigComponent from "./PageComponents/SGPSigComponent";
 import Transcend from "./Transcend";
-import Cryptonite from "./Transcend/Cryptonite";
+import Cryptonite from "./Transcend/Cryptonite/pub";
 
 import "../css/constants.css";
 
@@ -60,7 +60,7 @@ class App extends React.Component {
                         )}
                     />
                     <Route
-                        path="/transcend/crypt/:id"
+                        path="/transcend/crypt/"
                         exact
                         render={(props) => (
                             <Cryptonite
