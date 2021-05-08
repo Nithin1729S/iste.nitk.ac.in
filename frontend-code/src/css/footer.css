@@ -15,3 +15,9 @@
 .footer .text {
     color: var(--secondary);
 }
+.crypt.footer .text {
+    color: #60fb52;
+}
+.crypt.footer .white-text {
+    color: #60fb52 !important;
+}
