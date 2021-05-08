@@ -16,7 +16,6 @@ import EventAdd from "./PageComponents/EventAdd";
 import ExpoHomeComponent from "../expo/Components/ExpoHomeComponent";
 import DescPage from "../expo/Components/DescPage";
 import LeaderboardComponent from "./PageComponents/LeaderboardComponent";
-import CTFComponent from "./Transcend/CTF/Components";
 import SGPComponent from "./PageComponents/SGPComponent";
 import SGPSigComponent from "./PageComponents/SGPSigComponent";
 import Transcend from "./Transcend";
@@ -46,18 +45,6 @@ class App extends React.Component {
                         path="/smp/:name"
                         exact
                         component={SGPSigComponent}
-                    />
-                    <Route
-                        path="/transcend/charge"
-                        exact
-                        render={(props) => (
-                            <CTFComponent
-                                {...props}
-                                setFooterVal={(val) =>
-                                    this.changeFooterBackground(val)
-                                }
-                            />
-                        )}
                     />
                     <Route
                         path="/transcend/crypt/"
