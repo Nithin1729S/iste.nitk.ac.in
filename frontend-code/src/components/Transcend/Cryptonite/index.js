@@ -1,7 +1,6 @@
 import React from "react";
 
 import styles from "./css/crypt.module.css";
-import TitleWithLine from "../../RenderingComponents/TitleWithLine";
 import { imgAdd, inip, inop } from "./TabHead.js";
 import { baseRequest } from "../../../constants";
 import TabHead from "./TabHead.js";
