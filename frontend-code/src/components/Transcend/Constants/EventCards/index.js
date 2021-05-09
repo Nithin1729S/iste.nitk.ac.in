@@ -11,8 +11,7 @@ const eventData = [
         desc:
             "A 24-hour CTF event involving a series of challenges related to microprocessors, signal and image processing, analog and digital electronics. Winning teams take home prizes worth upto 5K!",
         img: micro,
-        formLink: "/transcend/charge",
-        isLive: true,
+        formLink: "https://forms.gle/D43gezFgybNyn9tp6",
     },
     {
         title: "WingIt",
@@ -26,7 +25,8 @@ const eventData = [
         desc:
             "A design only mini-hackathon catered towards first years to provide an experience towards hackathons without the underlying tech needed",
         img: oops,
-        formLink: "https://forms.gle/eo8r6xYYnLtGB6BNA",
+        formLink: "/transcend/crypt/1",
+        isLive: true,
     },
     {
         title: "AutoCAD Workshop",

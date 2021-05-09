@@ -108,10 +108,10 @@ class Header extends React.Component {
                             </li>
                             <li>
                                 <Link
-                                    to={`/transcend/charge`}
+                                    to={`/transcend/crypt/1`}
                                     className="waves-effect white-text"
                                 >
-                                    CTF
+                                    Cryptonite
                                 </Link>
                             </li>
                         </ul>
@@ -139,10 +139,10 @@ class Header extends React.Component {
                 </li>
                 <li>
                     <Link
-                        to={`/transcend/charge`}
+                        to={`/transcend/crypt/1`}
                         className="waves-effect white-text"
                     >
-                        CTF
+                        Cryptonite
                     </Link>
                 </li>
             </ul>

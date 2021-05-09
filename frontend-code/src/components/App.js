@@ -19,7 +19,7 @@ import LeaderboardComponent from "./PageComponents/LeaderboardComponent";
 import SGPComponent from "./PageComponents/SGPComponent";
 import SGPSigComponent from "./PageComponents/SGPSigComponent";
 import Transcend from "./Transcend";
-import Cryptonite from "./Transcend/Cryptonite/pub";
+import Cryptonite from "./Transcend/Cryptonite";
 
 import "../css/constants.css";
 
@@ -47,7 +47,7 @@ class App extends React.Component {
                         component={SGPSigComponent}
                     />
                     <Route
-                        path="/transcend/crypt/"
+                        path="/transcend/crypt/:id"
                         exact
                         render={(props) => (
                             <Cryptonite
