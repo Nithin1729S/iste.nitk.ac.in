@@ -1,2 +1,0 @@
-realpath() of uwsgi.ini failed: No such file or directory [core/utils.c line 3654]
-realpath() of uwsgi.ini failed: No such file or directory [core/utils.c line 3654]

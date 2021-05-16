@@ -4,5 +4,4 @@ from home import views
 app_name = 'home'
 urlpatterns = [
     path('', views.indexView, name='index'),
-    path('deploy/', views.deployView, name='deploy'),
 ]

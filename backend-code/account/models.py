@@ -14,43 +14,6 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
 
-class SIG(models.Model):
-    name = models.CharField(
-        max_length=9, 
-        choices=SIG_CHOICES
-    )
-    #Picture of the SIG
-    avatar = models.ImageField(
-        upload_to=sig_avatar_upload_path,
-        blank=True
-    )
-    description = models.TextField(
-        blank=False,
-        editable=True,
-    )
-    reg_url = models.TextField(
-        blank=False,
-        editable=True,
-        default=''
-    )
-    test_url = models.TextField(
-        blank=False,
-        editable=True,
-        default=''
-    )
-    summary = models.TextField(
-        default='SIG Summary',
-        blank=False,
-        editable=True
-    )
-    website_talk_url = models.TextField(
-        blank=False,
-        editable=True,
-        default=''
-    )
-    def __str__(self):      
-        return self.name
-
 class User(AbstractUser):
     GENDER_CHOICES = (
         ('F', 'Female',),
@@ -71,68 +34,26 @@ class User(AbstractUser):
         upload_to=user_avatar_upload_path,
         blank=True
     )
-    sigs = models.ManyToManyField(
-        SIG, 
-        editable=True,
-        blank=True
+    username = models.CharField(
+        max_length=200,
+        unique=True
     )
     batch_of = models.IntegerField(
-        default=2021, 
+        default=2023, 
         editable=True,
         blank=True
     )
     gender = models.CharField(
         max_length=1,
         choices=GENDER_CHOICES,
-        blank=True
+        default='M',
     )
-    #Used as contact details for girls in case they are the point of contact for an event
+    #Used as contact details for girls in case they are the points of contact for an event
     hostel_address = models.CharField(
         default='N/A',
         editable=True,
         max_length=50
     )
-
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)
 
-class Core(models.Model):
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE
-    )
-    #Role within the core - Convener, President, Crypt SIG Head etc.
-    role = models.CharField(
-        default="",
-        max_length=100
-    )
-    description = models.TextField(
-        default=""
-    )
-    email = models.EmailField(
-        blank=True
-    )
-    linkedin_url = models.CharField(
-        blank=True,
-        max_length=100
-    )
-
-class AuxCore(models.Model):
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE
-    )
-    role = models.CharField(
-        default="",
-        max_length=100
-    )
-    description = models.TextField(
-        default=""
-    )
-    email = models.EmailField(
-        blank=True
-    )
-    linkedin_url = models.CharField(
-        blank=True,
-        max_length=100
-    )

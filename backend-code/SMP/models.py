@@ -1,14 +1,17 @@
 from django.db import models
-from account.models import SIG
+from sig.models import SIG
 
 # Create your models here.
+
+
 class SMP(models.Model):
     name = models.CharField(
-        default = "",
-        max_length = 200
+        default="",
+        max_length=200
     )
     sigs = models.ManyToManyField(
-        to=SIG)
+        to=SIG
+    )
     summary = models.TextField(
         default="SMP Summary",
         blank=False,
@@ -30,5 +33,6 @@ class SMP(models.Model):
         blank=True,
         editable=True
     )
+
     def __str__(self):
-        return self.name 
+        return self.name

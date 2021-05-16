@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from account.models import SIG
-from .models import Round
-from account.models import Core
+from sig.models import SIG
+from recruitment.models import Round
+from team.models import Core
 
 # Create your views here.
 def indexView(request):

@@ -1,5 +1,5 @@
 from rest_framework.permissions import BasePermission
-from account.models import Core
+from team.models import Core
 
 class IsCoreMember(BasePermission):
     def has_permission(self, request, view):

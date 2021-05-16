@@ -1,7 +1,7 @@
 from datetime import datetime
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.decorators import login_required
-from account.models import Core
+from team.models import Core
 
 def check_member_year(*years):
     def decorator(view):

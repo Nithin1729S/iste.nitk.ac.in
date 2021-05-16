@@ -13,14 +13,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.core.files.storage import default_storage
 from django.contrib.auth import update_session_auth_hash
-from datetime import datetime
 
 from .models import *
 from account.models import User
 from ctf.serializers import TeamSerializer
 
 # Create your views here.
-
 
 class CustomAuthToken(ObtainAuthToken):
 
@@ -37,11 +35,9 @@ class CustomAuthToken(ObtainAuthToken):
             'email': user.email
         })
 
-
 @api_view(['GET'])
 def questionsView(request):
-    return Response({'message': 'Questions View here'})
-
+    return Response({'message': 'Questions View'})
 
 @api_view(['POST'])
 def isLogin(request):
@@ -58,38 +54,36 @@ def isLogin(request):
     )
     if user is not None:
         login(request, user)
-        objUser = User.objects.filter(username=username)[0]
-        objTeam = Team.objects.filter(userId=objUser)[0]
-        teamid = objTeam.id
-        return Response({'isLogin': True, 'msg': 'Login Successful', 'teamId': teamid})
+        return Response({'isLogin': True, 'msg': 'Login Successful'})
     else:
         return Response({'isLogin': False, 'msg': 'Login Unsuccessful'}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
-
-@api_view(['POST'])
+@api_view(['GET'])
 def getQuestions(request):
-    # Get team id from frontend
-    teamId = int(request.data['teamId'])
-    team = Team.objects.filter(id=teamId)[0]
-    teamQ = UserQuestion.objects.filter(userId=team)
+    # user = request.user 
+
+    user = User.objects.filter(username='Arjun')[0]
+    team = Team.objects.filter(userId=user)[0]
+    teamQ= UserQuestion.objects.filter(userId=team)
     questions = []
     for i in Question.objects.all().order_by('id'):
         cur = i.__dict__
         del cur['_state']
-        del cur['answer']
         cur['isAns'] = False
         curQ = teamQ.filter(questionId=i)[0]
-        if curQ.score > 0:
+        if curQ.score >= 0:
             cur['isAns'] = True
         cur['isHint1'] = True
         cur['isHint2'] = True
+        if cur['hint_1_url'] == None:
+            print('True')
         if cur['hint_1_url'] == None:
             cur['isHint1'] = False
         else:
             if curQ.hint_1:
                 cur['usedHint1'] = True
             else:
-                cur['usedHint1'] = False
+                cur['usedHint1'] = False 
         del cur['hint_1_url']
         if cur['hint_2_url'] == None:
             cur['isHint2'] = False
@@ -98,85 +92,94 @@ def getQuestions(request):
                 cur['usedHint2'] = True
             else:
                 cur['usedHint2'] = False
-        del cur['hint_2_url']
-        questions.append(cur)
+        del cur['hint_2_url']     
+        questions.append(cur)  
 
-    return Response({'questions': questions, 'score': team.score, 'team_name': team.team_name, 'team_roll_number': team.roll_number, 'teamid': team.id})
+    return Response({'questions':questions, 'score':team.score, 'team_name':team.team_name, 'team_roll_number':team.roll_number, 'teamid':team.id})
 
-
-@api_view(['POST'])
+@api_view(['GET'])
 def getHints(request):
-    # Retrieving data
-    qid = int(request.data['questionId'])
-    teamid = int(request.data['teamId'])
-    hid = int(request.data['hintId'])
+    #Retrieving data
+    qid = request.data['questionId']
+    teamid = request.data['teamId']
+    hid = request.data['hintId']
+    if type(qid) == str:
+        qid = int(qid)
+    if type(teamid) == str:
+        teamid = int(teamid)
+    if type(hid) == str:
+        hid = int(qid)
 
     # Finding corresponding objects
     team = Team.objects.filter(id=teamid)[0]
     ques = Question.objects.filter(id=qid)[0]
-    tq = UserQuestion.objects.filter(questionId=ques, userId=team)[0]
+    tq = UserQuestion.objects.filter(questionId=ques,userId=team)[0]
 
-    # Few fail cases, not exhaustive
+    # Few fail cases, not exhaustive 
     hintUrl = ''
     flag = False
     if hid != 1 and hid != 2:
         flag = True
-    if hid == 1 and ques.hint_1_url == None:
-        flag = True
     if hid == 2 and ques.hint_2_url == None:
         flag = True
     if flag:
-        return Response({'hintUrl': '', 'checkFail': True})
+        return Response({'hintUrl':'', 'checkFail':True})
 
     # For hid 1 and hid 2
     if hid == 1:
         if not tq.hint_1:
             tq.hint_1 = True
-            tq.score -= ques.points//5
             tq.save()
-        hintUrl = ques.hint_1_url
+            hintUrl= ques.hint_1_url
+            tq.score -= ques.points//3
+            tq.save()
+        else:
+            hintUrl= ques.hint_1_url
     elif hid == 2:
         if not tq.hint_2:
             tq.hint_2 = True
-            tq.score -= ques.points//5
             tq.save()
-        hintUrl = ques.hint_2_url
+            hintUrl = ques.hint_2_url
+            tq.score -= ques.points//3
+            tq.save()
+        else:
+            hintUrl = ques.hint_2_url
+
     # Response
-    return Response({'hintUrl': hintUrl, f'usedHint{hid}': True, 'checkFail': False})
+    return Response({'hintUrl':hintUrl, f'usedHint{hid}':True, 'checkFail':False})
 
-
-@api_view(['POST'])
+@api_view(['GET'])
 def ansQuestion(request):
-    # Get data
-    qid = int(request.data['questionId'])
-    teamid = int(request.data['teamId'])
+    #Get data
+    qid = request.data['questionId']
+    teamid = request.data['teamId']
     ans = request.data['answer']
+    if type(qid) == str:
+        qid = int(qid)
+    if type(teamid) == str:
+        teamid = int(teamid)
 
     # Finding corresponding objects
     team = Team.objects.filter(id=teamid)[0]
     ques = Question.objects.filter(id=qid)[0]
-    tq = UserQuestion.objects.filter(questionId=ques, userId=team)[0]
+    tq = UserQuestion.objects.filter(questionId=ques,userId=team)[0]
     corAns = ques.answer
 
     # Checking if correct
     flag = False
-    if ans.strip().lower() == corAns.strip().lower():
-        if tq.score <= 0:
-            tq.score += ques.points
-            tq.save()
-            team.score += tq.score
-            team.timestamp = str(datetime.now())
-            team.save()
+    if ans == corAns:
+        team.score += tq.score
+        team.save()
         flag = True
+    print(flag, team.score)
 
     # Returning response
-    return Response({'questionId': ques.id, 'isCorrect': flag, 'score': team.score})
-
+    return Response({'questionId':ques.id, 'isCorrect':flag, 'score':team.score})
 
 @api_view(['GET'])
 def getLB(request):
     # Get list of team objects
-    teamList = Team.objects.all().order_by("-score","timestamp")
+    teamList = Team.objects.all().order_by("-score")
     tlist = []
     for i in teamList:
         team_data = TeamSerializer(i).data
@@ -186,4 +189,4 @@ def getLB(request):
         tlist.append(team_data)
 
     # Response
-    return Response({'teamList': tlist})
+    return Response({'teamList':tlist})

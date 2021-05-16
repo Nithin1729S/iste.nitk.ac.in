@@ -1,8 +1,10 @@
 from django.db import models
+from ckeditor_uploader.fields import RichTextUploadingField
+
+from account.models import User
+from sig.models import SIG
 from website.settings import SIG_CHOICES
 from website.helperFunctions import event_poster_upload_path, default_event_poster_path
-from account.models import User, SIG
-from ckeditor_uploader.fields import RichTextUploadingField
 
 class Event(models.Model):
     name = models.CharField(
@@ -16,6 +18,7 @@ class Event(models.Model):
     no_of_participants = models.IntegerField(
         default=3
     )
+    # Points of contact
     contacts = models.ManyToManyField(
         to=User
     )
@@ -24,14 +27,14 @@ class Event(models.Model):
         to=User,
         related_name='editable_by'
     )
-    # poster = models.ImageField(
-    #     default=default_event_poster_path,
-    #     upload_to=event_poster_upload_path,
-    #     blank=True
-    # )
-    poster = models.TextField(
-        default=""
+    poster = models.ImageField(
+        default=default_event_poster_path,
+        upload_to=event_poster_upload_path,
+        blank=True
     )
+    # poster = models.TextField(
+    #     default=""
+    # )
     sigs = models.ManyToManyField(
         to=SIG,
         related_name='sigs'
@@ -47,6 +50,7 @@ class Event(models.Model):
         editable=True
     )
     venue = models.CharField(
+        default="MS Teams",
         max_length=100,
         blank=True,
         editable=True

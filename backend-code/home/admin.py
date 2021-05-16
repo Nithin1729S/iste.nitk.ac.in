@@ -3,4 +3,4 @@ from home.models import Carousel
 
 @admin.register(Carousel)
 class CarouselAdmin(admin.ModelAdmin):
-    list_display = ('name','url',)
+    list_display = ('name','image',)

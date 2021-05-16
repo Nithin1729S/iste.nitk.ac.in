@@ -25,9 +25,9 @@ SECRET_KEY = '!26-jz#r3v+n+k&4rf0%1iz*w5!#nh=eooup#(rf163@3c$1&6'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'iste.nitk.ac.in', #Production Server
-    'localhost', #Local Server 1
-    '127.0.0.1', #Local Server 2
+    'iste.nitk.ac.in',  # Production Server
+    'localhost',  # Local Server 1
+    '127.0.0.1',  # Local Server 2
 ]
 
 LOGIN_URL = '/account/login'
@@ -42,14 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #3rd party apps
+    # 3rd party apps
     'ckeditor',
     'ckeditor_uploader',
     'compressor',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    #Developed apps
+    # Developed apps
     'home',
     'account',
     'event',
@@ -58,8 +58,7 @@ INSTALLED_APPS = [
     'sig',
     'team',
     'ctf',
-    'SMP',
-    'cryptonite'
+    'SMP'
 ]
 
 MIDDLEWARE = [
@@ -70,7 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #For django-cors-headers
+    # For django-cors-headers
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
@@ -80,7 +79,7 @@ ROOT_URLCONF = 'website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -144,7 +143,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-COMPRESS_ROOT = os.path.join(BASE_DIR,'static')
+COMPRESS_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -153,15 +152,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-SIG_CHOICES=(
-    ('Crypt','CRYPT'),
-    ('Charge','CHARGE'),
-    ('Credit','CREDIT'),
-    ('Chronicle','CHRONICLE'),
-    ('Clutch','CLUTCH'),
-    ('Concrete','CONCRETE'),
-    ('Create','CREATE'),
-    ('Catalyst','CATALYST'),
+SIG_CHOICES = (
+    ('Crypt', 'CRYPT'),
+    ('Charge', 'CHARGE'),
+    ('Credit', 'CREDIT'),
+    ('Chronicle', 'CHRONICLE'),
+    ('Clutch', 'CLUTCH'),
+    ('Concrete', 'CONCRETE'),
+    ('Create', 'CREATE'),
+    ('Catalyst', 'CATALYST'),
     ('All Club', 'ALL CLUB')
 )
 
@@ -187,7 +186,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-#For whitelisting CORS
+# For whitelisting CORS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]

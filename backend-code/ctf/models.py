@@ -8,7 +8,6 @@ class Team(models.Model):
     userId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     team_name = models.CharField(max_length = 100)
     score = models.IntegerField(default=0)
-    timestamp = models.CharField(max_length=100, default="")
     roll_number = models.CharField(max_length=20)
 
     def __str__(self):
@@ -19,8 +18,8 @@ class Question(models.Model):
     description = models.TextField()
     points = models.IntegerField(default=100)
     url = models.URLField()
-    hint_1_url = models.CharField(max_length=500,null=True)
-    hint_2_url = models.CharField(null=True, max_length=500)
+    hint_1_url = models.URLField(null=True)
+    hint_2_url = models.URLField(null=True)
     answer = models.CharField(max_length=100)
     
 
@@ -32,7 +31,7 @@ class UserQuestion(models.Model):
     questionId = models.ForeignKey(Question,on_delete = models.CASCADE)
     hint_1 = models.BooleanField(default=False)
     hint_2 = models.BooleanField(default=False)
-    score = models.IntegerField(default=0)
+    score = models.IntegerField(default=-1)
 
     def __str__(self):
         return str(self.userId) + ' ' + str(self.questionId) + ' ' + str(self.score)

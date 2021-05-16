@@ -1,7 +1,10 @@
 from django.db import models
-from account.models import SIG, User
 from datetime import datetime
 from ckeditor_uploader.fields import RichTextUploadingField
+
+from website.helperFunctions import project_poster_upload_path, default_project_image_path
+from account.models import User
+from sig.models import SIG
 
 def year_choices():
     return [(r,r) for r in range(2018, datetime.today().year +1)]
@@ -30,13 +33,10 @@ class Project(models.Model):
         editable=True
     )
     description = RichTextUploadingField()
-    isFeatured = models.BooleanField(
-        default = False
-    )
-    img_url = models.TextField(
-        default="",
-        blank=False,
-        editable=True
+    image = models.ImageField(
+        default=default_project_image_path,
+        upload_to=project_poster_upload_path,
+        blank=True
     )
 
     def __str__(self):

@@ -1,5 +1,5 @@
 from django.db import models
-from account.models import SIG
+from sig.models import SIG
 
 # Create your models here.
 class Round(models.Model):

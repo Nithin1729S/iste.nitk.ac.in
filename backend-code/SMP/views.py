@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from account.models import SIG
-from account.serializers import SIGSerializer
+from sig.models import SIG
+from sig.serializers import SIGSerializer
 from SMP.models import SMP
 from SMP.serializers import SMPSerializer
 

@@ -1,4 +1,7 @@
 from django.contrib import admin
-from .models import Event
+from event.models import Event
 
-admin.site.register(Event)
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('name', 'date_time')
+    search_fields = ('name',)
