@@ -22,7 +22,6 @@ class HomeCarousel extends React.Component {
 		setInterval(function () {
 			instance.next();
 		}, 3500);
-		console.log(this.props.photosList);
 	}
 	render() {
 		let carouselSortedList = this.props.photosList.sort((a, b) => a.id - b.id);
