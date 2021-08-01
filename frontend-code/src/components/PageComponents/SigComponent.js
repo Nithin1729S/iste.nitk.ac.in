@@ -14,7 +14,7 @@ class SigComponent extends React.Component {
 		var value = 'Crypt';
 		if (typeof this.props.match.params.name != 'undefined')
 			value = this.props.match.params.name;
-		this.state = { name: value };
+		this.state = { name: value, projectsThere: true };
 		this.fetchSig = this.fetchSig.bind(this);
 		this.printYear = this.printYear.bind(this);
 	}
@@ -38,6 +38,9 @@ class SigComponent extends React.Component {
 	componentDidMount() {
 		M.AutoInit();
 		this.fetchSig();
+
+		if (typeof this.state.projectData === 'undefined')
+			this.setState({ projectsThere: false });
 	}
 	componentDidUpdate() {
 		const { history, match } = this.props;
@@ -92,13 +95,24 @@ class SigComponent extends React.Component {
 					<div className="row">
 						<div className="col l10 offset-l1 s10 offset-s1">
 							<h4 className="center">
-								<span>
-									<TitleWithLine title="Projects" />
-									{/* {this.printYear(
+								{this.state.projectsThere ? (
+									<span>
+										<TitleWithLine
+											title={
+												'Project ' +
+												this.printYear(this.state.projectData[0].year)
+											}
+										/>
+									</span>
+								) : (
+									<span>
+										<TitleWithLine title="Projects" />
+										<h5>Coming soon!</h5>
+									</span>
+								)}
+								{/* {this.printYear(
                                         this.state.projectData[0].year
                                     )} */}
-									<h5>Coming soon!</h5>
-								</span>
 							</h4>
 						</div>
 					</div>
