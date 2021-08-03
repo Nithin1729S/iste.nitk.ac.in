@@ -27,3 +27,14 @@ export const dummy = {
 		},
 	],
 };
+
+const SIGs = [
+	'Crypt',
+	'Credit',
+	'Catalyst',
+	'Concrete',
+	'Credit',
+	'Create',
+	'Chronicle',
+	'Charge',
+];
