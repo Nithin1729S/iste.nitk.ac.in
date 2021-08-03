@@ -12,7 +12,7 @@ class RecruitmentComponent extends React.Component {
 				Recruitment page here
 				<center>
 					{/* Dummy button */}
-					<Link className="waves-light btn-small" to="/recs/crypt/">
+					<Link className="waves-light btn-small" to="/recs/Crypt/">
 						View More
 					</Link>
 				</center>

@@ -6,16 +6,16 @@ class RecsSIGComponent extends React.Component {
 	constructor(props) {
 		super(props);
 		var sigs = [
-			'catalyst',
-			'crypt',
-			'create',
-			'clutch',
-			'chronicle',
-			'charge',
-			'concrete',
-			'credit',
+			'Catalyst',
+			'Crypt',
+			'Create',
+			'Clutch',
+			'Chronicle',
+			'Charge',
+			'Concrete',
+			'Credit',
 		];
-		let curSIGname = 'catalyst';
+		let curSIGname = 'Catalyst';
 		if (typeof this.props.match.params !== 'undefined') {
 			let cur = this.props.match.params.name;
 			if (sigs.includes(cur)) curSIGname = cur;
