@@ -21,4 +21,16 @@ class Round(models.Model):
     )
 
     def __str__(self):
-        return self.name 
+        return self.name + " - " + self.sig.name + ' - ' + self.date_time
+
+
+class RegLink(models.Model):
+    sig = models.ForeignKey(
+        SIG,
+        on_delete=models.CASCADE,
+    )
+    link = models.URLField(max_length=200, default="")
+
+    def __str__(self):
+        return self.sig.name + " - " + self.link
+    

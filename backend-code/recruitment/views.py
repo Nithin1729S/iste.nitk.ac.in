@@ -1,32 +1,28 @@
 from django.shortcuts import render
 from sig.models import SIG
+
 from recruitment.models import Round
+from recruitment.models import RegLink
+from rest_framework.response import Response
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from recruitment.serializers import RoundSerializer
 from team.models import Core
 
-# Create your views here.
-def indexView(request):
+# GET API for recs backend
+@api_view(['GET'])
+def roundInfo(request,sig_name):
     context = {}
-    sigs = SIG.objects.all()
-    context['sigs'] = sigs
-    return render(request, 'recruitment/index.html',context)
-
-def detailView(request,sig_name):
-    if sig_name == 'faq':
-        return render(request, 'recruitment/faq.html')
-
-    context = {}
-    rounds = Round.objects.filter(
-        sig__name=sig_name,
-    ).order_by('name')
-
-    if sig_name!='Chronicle' and sig_name!='Create':
-        context['test_url'] = SIG.objects.get(
-            name=sig_name
-        ).test_url
-    reg_url = SIG.objects.get(
-        name=sig_name
-    ).reg_url
+    # sig = 
+    sig = SIG.objects.get(
+        name=sig_name )
+    
+    regLink = RegLink.objects.get(sig=sig).link
+    context['registerLink'] = regLink
+    roundData = Round.objects.filter(
+        sig=sig,
+    ).order_by('date_time')
+    rounds = RoundSerializer(roundData, many=True).data
     context['rounds'] = rounds
-    context['reg_url'] = reg_url
-    context['POC'] = Core.objects.filter(role__contains=sig_name) 
-    return render(request, 'recruitment/details.html', context)    
+
+    return Response(context)

@@ -4,5 +4,5 @@ from recruitment import views
 app_name = 'recruitment'
 urlpatterns = [
 
-    path('',views.detailView, name = 'recs'),
+    path('<sig_name>/',views.roundInfo, name = 'recs')
 ]
