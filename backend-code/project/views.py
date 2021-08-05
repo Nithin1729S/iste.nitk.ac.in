@@ -105,8 +105,11 @@ def indexViewCurrent(request, sig_name):
 
 @api_view(['GET'])
 def detailsView(request, project_id):
-    project_obj = Project.objects.get(
-        id=project_id
-    )
+    try:
+        project_obj = Project.objects.get(
+            id=project_id
+        )
+    except:
+        return Response({})
     project_data = ProjectSerializer(project_obj).data
     return Response(project_data)

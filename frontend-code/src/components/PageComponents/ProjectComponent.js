@@ -4,7 +4,7 @@ import ProjectDetails from "../RenderingComponents/ProjectDetails";
 class ProjectComponent extends React.Component {
     constructor(props) {
         super(props);
-        let value = 19;
+        let value = 1;
         if (typeof this.props.match.params !== "undefined") {
             value = this.props.match.params.id;
         }

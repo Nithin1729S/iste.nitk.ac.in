@@ -13,7 +13,6 @@ class ProjectDetails extends React.Component {
 		this.fetchHome = this.fetchHome.bind(this);
 	}
 	async fetchHome() {
-		console.log('Fetching. . .');
 		const response = await baseRequest.get(`/project/${this.props.id}/`);
 		this.setState({ data: response.data });
 	}
@@ -23,7 +22,8 @@ class ProjectDetails extends React.Component {
 	}
 
 	render() {
-		if (this.state.data.length === 0) return <div>loading</div>;
+		if(this.state.data.length === undefined) return <div>This project does not exist!</div>;
+		else if (this.state.data.length === 0) return <div>Loading...</div>;
 		return (
 			<div className="projectDetails container">
 				<div className="row-center">
