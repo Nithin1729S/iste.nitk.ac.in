@@ -64,6 +64,20 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	);
+	expoNavHeader = (
+		<li>
+			<Link className="white-text" to="/expo/">
+				Expo
+			</Link>
+		</li>
+	);
+	recsNavHeader = (
+		<li>
+			<Link className="white-text" to="/recs/">
+				Recruitments
+			</Link>
+		</li>
+	);
 	eventNavList = null;
 	eventNavHeaderMobile = (
 		<li>
@@ -298,6 +312,8 @@ class Header extends React.Component {
 					</li>
 					{this.teamNavHeader}
 					{this.blogNavHeader}
+					{this.expoNavHeader}
+					{/* {this.recsNavHeader} */}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
 				</ul>
@@ -330,6 +346,8 @@ class Header extends React.Component {
 								</ul>
 								{this.teamNavHeader}
 								{this.blogNavHeader}
+								{this.expoNavHeader}
+								{/* {this.recsNavHeader} */}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
 							</ul>
