@@ -13,6 +13,7 @@ class SigProjectCard extends React.Component {
             isImageLeft,
             isLinkExternal,
             tools,
+            isCurrentProject
         } = this.props;
         const imageCircle = (
             <div className="col l4 hide-on-med-and-down ">
@@ -57,6 +58,16 @@ class SigProjectCard extends React.Component {
                 >
                     View Details
                 </a>
+            );
+        }
+        if (isCurrentProject){
+            Hyperlink = (
+                <Link
+                to={`/project/${projID}`}
+                className="waves-light btn-small btnColor"
+            >
+                View Details
+            </Link>
             );
         }
         const Content = (

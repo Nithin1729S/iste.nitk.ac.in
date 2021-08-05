@@ -50,6 +50,10 @@ class SigComponent extends React.Component {
 				history.go(0);
 			}
 		}
+		if (typeof this.state.projectData === 'undefined' && this.state.projectsThere === true)
+		this.setState({ projectsThere: false });
+		if(typeof this.state.projectData !== 'undefined' && this.state.projectsThere === false) 
+		this.setState({projectsThere:true});
 	}
 	render() {
 		if (this.state.projectData != null) {
@@ -99,7 +103,7 @@ class SigComponent extends React.Component {
 									<span>
 										<TitleWithLine
 											title={
-												'Project ' +
+												'Projects ' +
 												this.printYear(this.state.projectData[0].year)
 											}
 										/>
@@ -127,6 +131,7 @@ class SigComponent extends React.Component {
 									name={name}
 									description={summary}
 									imgUrl={img_url}
+									isCurrentProject={true}
 								/>
 							</div>
 						);

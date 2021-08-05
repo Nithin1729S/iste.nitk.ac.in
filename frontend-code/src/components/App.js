@@ -53,7 +53,7 @@ class App extends React.Component {
 								setFooterVal={(val) => this.changeFooterBackground(val)}
 							/>
 						)}
-					/>
+					/> */}
 					<Route
 						path="/expo"
 						exact
@@ -65,9 +65,9 @@ class App extends React.Component {
 								}
 							/>
 						)}
-					/> */}
+					/>
 					{/* <Route path="/leaderboard" exact component={LeaderboardComponent} /> */}
-					{/* <Route path="/expo/:name" exact component={DescPage} /> */}
+					<Route path="/expo/:name" exact component={DescPage} />
 					<Route path="/" exact component={HomeComponent} />
 					<Route path="/event" exact component={EventComponent} />
 					<Route path="/sig/:name" exact component={SigComponent} />
