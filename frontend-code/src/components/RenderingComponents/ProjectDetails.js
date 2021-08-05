@@ -21,9 +21,14 @@ class ProjectDetails extends React.Component {
 		this.fetchHome();
 	}
 
+	// componentDidUpdate() {
+	// 	console.log(this.state.data);
+	// 	console.log(this.state.length);
+	// }
+
 	render() {
-		if(this.state.data.length === undefined) return <div>This project does not exist!</div>;
-		else if (this.state.data.length === 0) return <div>Loading...</div>;
+		if (this.state.data.length === 0) return <div>Loading...</div>;
+		else if(this.state.data.id === undefined) return <div>This project does not exist!</div>;
 		return (
 			<div className="projectDetails container">
 				<div className="row-center">
