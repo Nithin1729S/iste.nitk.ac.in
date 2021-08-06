@@ -1,0 +1,91 @@
+.container{
+    width: 60vw;
+}
+.descText{
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.75);
+}
+.arrow{
+    display: flex;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrow span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: rotate(-45deg);
+    animation: animate 2s infinite;
+}
+.arrowRight span {
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+}
+.arrow span:nth-child(1) {
+    margin-left: -10px;
+}
+.arrow span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.arrow span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.arrowRight span:nth-child(1) {
+    animation-delay: 0.4s;
+}
+.arrowRight span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.arrowRight span:nth-child(3) {
+    margin-right: 20px;
+    animation-delay: 0s;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(0px, 20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(0px, 20px);
+    }
+}
+.btn{
+    height: auto;
+    width: 100%;
+    line-height: 1.8;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: "GothamPro";
+}
+@media only screen and (max-width:  600px) {
+    .container{
+        width: 90vw;
+    }
+    .descText{
+        font-size: 1rem;
+    }
+    .arrow{
+        margin-left: -35px;
+    }
+    .arrowRight{
+        margin-right: -35px;
+    }
+    .btn{
+        padding-left: 40px ;
+    }
+    .btnprj{
+        padding-right: 40px;
+        padding-left: 10px;
+    }   
+}
