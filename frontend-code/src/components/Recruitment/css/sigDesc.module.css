@@ -1,11 +1,13 @@
-.container{
+ .container{
     width: 60vw;
-}
+    padding: 25px;
+} 
 .descText{
     font-size: 1.3rem;
     color: rgba(0, 0, 0, 0.75);
 }
 .arrow{
+    font-size:0.9rem;
     display: flex;
     margin: 0;
     top: 50%;
@@ -36,6 +38,8 @@
     animation-delay: 0.4s;
 }
 
+
+
 .arrowRight span:nth-child(1) {
     animation-delay: 0.4s;
 }
@@ -46,6 +50,8 @@
     margin-right: 20px;
     animation-delay: 0s;
 }
+
+
 @keyframes animate {
     0% {
         opacity: 0;
@@ -61,16 +67,31 @@
 }
 .btn{
     height: auto;
-    width: 100%;
+    width: 250px;
     line-height: 1.8;
-    padding: 10px;
+    padding: 15px;
     font-size: 0.9rem;
     font-weight: 600;
     font-family: "GothamPro";
+    margin:10px;
+    margin-bottom:25px;
+    border-radius:0.2em;
 }
+
+
+.btnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
+    margin: 20px;
+    padding:20px;
+}
+
+
 @media only screen and (max-width:  600px) {
     .container{
-        width: 90vw;
+        width: 90%;
     }
     .descText{
         font-size: 1rem;
@@ -82,10 +103,15 @@
         margin-right: -35px;
     }
     .btn{
-        padding-left: 40px ;
+        padding-left: 40px;
+        width:60%;
+        font-size: 0.7rem;
     }
     .btnprj{
         padding-right: 40px;
         padding-left: 10px;
     }   
+    .btnContainer{
+        flex-direction: column;
+    }
 }

@@ -5,6 +5,7 @@ import styles from "../css/sigDesc.module.css"
 class SigDescription extends Component {
     render() {
         return (
+                
                 <div className={`row ${styles.container}`} >
                     <div className={`col card center z-index-3`} >
                         <div className="card-content col s12" >
@@ -12,33 +13,29 @@ class SigDescription extends Component {
                                {this.props.desc}
                             </p>
                         </div>
-                        <div className="row"></div>
-                        <div className="row">
-                            <div className="col l3 offset-l3 m6 offset-m0 s6 offset-s0">
-                            <Link to={`/expo/${this.props.sig}`}>
+                    <div className="row"></div>
+                    <div className="btnContainer">
+                        <Link to={`/expo/`}>
                                 <button className={`waves-effect waves-light btn z-depth-0 ${styles.btn}`}>
-                                <i className={`material-icons left ${styles.arrow}`}>
+                                <i className={`material-icons left ${styles.arrow} `}>
                                     <span></span>
                                     <span></span>
                                     <span></span>
-                                </i>
-                                Expo Link  
+                                </i> 
+                                Expo  
                                 </button>
-                            </Link>
-                            </div>
-                            <div className="col l3 m6 s6">
-                            <Link to={`/sig/${this.props.sig}`}>
+                        </Link>
+                        <Link to={`/sig/${this.props.sig}`}>
                                 <button className={`waves-effect waves-light btn z-depth-0 ${styles.btn} ${styles.btnprj}`}>
                                 <i className={`material-icons right ${styles.arrow} ${styles.arrowRight}`}>
                                     <span></span>
                                     <span></span>
                                     <span></span>
-                                </i>
-                                Projects Link
+                                </i> 
+                                Projects
                                 </button>
-                            </Link>
-                            </div>
-                        </div>
+                        </Link>
+                    </div>
                     </div>
                 </div>
         );
