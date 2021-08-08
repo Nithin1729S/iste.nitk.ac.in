@@ -1,6 +1,7 @@
 import React from "react";
-import { Route, HashRouter } from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 
+import TestUI from "./UI/TestNewUIElement";
 import ScrollToTop from "./UtilityComponents/ScrollToTop";
 import Wrapper from "./UtilityComponents/Wrapper";
 import Header from "./RenderingComponents/Header";
@@ -41,12 +42,12 @@ class App extends React.Component {
                     <Header />
                 </Wrapper>
                 <div className="app-main">
-                    {/* <Route path="/transcend" exact component={Transcend} /> */}
-                    {/* <Route path="/smp" exact component={SGPComponent} /> */}
-                    {/* <Route path="/smp/:name" exact component={SGPSigComponent} /> */}
+                    {/* <Route path="/transcend"  component={Transcend} /> */}
+                    {/* <Route path="/smp"  component={SGPComponent} /> */}
+                    {/* <Route path="/smp/:name"  component={SGPSigComponent} /> */}
                     {/* <Route
 						path="/transcend/crypt/:id"
-						exact
+						
 						render={(props) => (
 							<Cryptonite
 								{...props}
@@ -54,46 +55,41 @@ class App extends React.Component {
 							/>
 						)}
 					/> */}
-                    <Route
-                        path="/expo"
-                        exact
-                        render={(props) => (
-                            <ExpoHomeComponent
-                                {...props}
-                                setHeaderFooterStatus={(val) =>
-                                    this.changeHeaderFooterStatus(val)
-                                }
-                            />
-                        )}
-                    />
-                    {/* <Route path="/leaderboard" exact component={LeaderboardComponent} /> */}
-                    <Route path="/expo/:name" exact component={DescPage} />
-                    <Route path="/" exact component={HomeComponent} />
-                    <Route path="/event" exact component={EventComponent} />
-                    <Route path="/sig/:name" exact component={SigComponent} />
-                    <Route path="/team" exact component={TeamComponent} />
-                    <Route
-                        path="/project/:id"
-                        exact
-                        component={ProjectComponent}
-                    />
-                    <Route path="/login" exact component={LoginComponent} />
-                    <Route
-                        path="/event/view/:name"
-                        exact
-                        component={EventDetails}
-                    />
-                    <Route path="/event/add" exact component={EventAdd} />
-                    <Route
-                        path="/recs"
-                        exact
-                        component={RecruitmentComponent}
-                    />
-                    <Route
-                        path="/recs/:name"
-                        exact
-                        component={RecsSIGComponent}
-                    />
+                    <Switch>
+                        <Route path="/test" component={TestUI} />
+                        <Route
+                            path="/expo"
+                            render={(props) => (
+                                <ExpoHomeComponent
+                                    {...props}
+                                    setHeaderFooterStatus={(val) =>
+                                        this.changeHeaderFooterStatus(val)
+                                    }
+                                />
+                            )}
+                        />
+                        {/* <Route path="/leaderboard"  component={LeaderboardComponent} /> */}
+                        <Route path="/expo/:name" component={DescPage} />
+                        <Route path="/sig/:name" component={SigComponent} />
+                        <Route path="/team" component={TeamComponent} />
+                        <Route
+                            path="/project/:id"
+                            component={ProjectComponent}
+                        />
+                        <Route path="/login" component={LoginComponent} />
+                        <Route
+                            path="/event/view/:name"
+                            component={EventDetails}
+                        />
+                        <Route path="/event/add" component={EventAdd} />
+                        <Route path="/event" component={EventComponent} />
+                        <Route
+                            path="/recs/:name"
+                            component={RecsSIGComponent}
+                        />
+                        <Route path="/recs" component={RecruitmentComponent} />
+                        <Route path="/" component={HomeComponent} />
+                    </Switch>
                 </div>
                 <Wrapper shouldRender={this.state.headerShouldRender}>
                     <Footer value={this.state.footerBackgroundVariant} />
