@@ -1,13 +1,13 @@
 import React from 'react';
 import '../css/Timeline.css';
-const Timeline = ({rounds}) => {
+const Timeline = ({ rounds }) => {
 	const listItems = rounds.map((round, index) => {
-		const date = new Date(round.date_time).toDateString().substring(0,11);
+		const date = new Date(round.date_time).toDateString().substring(0, 11);
 		return (
 			<li key={index}>
 				<span className="timeline-point"></span>
 				<span className="date">{date}</span>
-				<p>{round.name}</p>
+				<span className="roundName">{round.name}</span>
 			</li>
 		);
 	});
