@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { dummy } from './dummyData';
+
 import SigDescription from './components/SigDescription';
 import RegisterButton from './components/RegisterButton.jsx';
 import Timeline from './components/Timeline';
+import TitleWithLine from '../RenderingComponents/TitleWithLine';
+
+import { baseRequest } from '../../constants';
 
 class RecsSIGComponent extends React.Component {
 	constructor(props) {
 		super(props);
-		var sigs = [
+		const sigs = [
 			'Catalyst',
 			'Crypt',
 			'Create',
@@ -25,39 +27,37 @@ class RecsSIGComponent extends React.Component {
 		}
 		this.state = {
 			sigName: curSIGname,
-			data: {
-				desc: ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quas corporis maiores vero aut nostrum tempora voluptatem pariatur expedita deserunt itaque debitis quae dolorum commodi in consequuntur, animi enim unde!',
-			},
+			data: {},
+			roundsData:[]
 		};
+		this.fetchRecs=this.fetchRecs.bind(this)
+	}
+	async fetchRecs() {
+		await baseRequest.get(`/recs/${this.state.sigName}/`)
+			.then((res) => {
+				this.setState({
+					data: res.data,
+					roundsData:res.data.rounds
+				})
+			})
+			.catch(err=>console.log(err))
 	}
 
-	//Do axios request and get data from backend.
-	// URL is /recs/
-	// Make sure to pass the SIG name, which is stored in this.state.sigName
-	// Use state variable data to get request from backend
-
-	// Components on this page
-	// 1. Timeline
-	// 2. Cards (Take from an earlier implementation if possible, else build from scratch)
-	// 3. Register button (Component not really required)
+	componentDidMount() {
+		this.fetchRecs()
+	}
 
 	render() {
 		return (
 			<>
-				<div>Recruitment SIG page here {this.state.sigName}</div>
-				<Timeline rounds={dummy.rounds} />
-				{/* component for sig desc 
-				props: signame and description
-			*/}
-
-				<SigDescription sig={this.state.sigName} desc={this.state.data.desc} />
-				{/* 
-				component for registration butt  
-				props : link (link of Gform)
-			*/}
-				<RegisterButton link="" />
+				<TitleWithLine title={this.state.sigName}/>
+				<Timeline rounds={this.state.roundsData} />
+				<SigDescription sig={ this.state.sigName } desc={ this.state.data.descriptionSIG } />
+				<RegisterButton link={`${this.state.data.registerLink}`} />
+				{/*Round cards go here*/}
 			</>
 		);
 	}
 }
+
 export default RecsSIGComponent;
