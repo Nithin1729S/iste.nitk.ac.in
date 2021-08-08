@@ -1,17 +1,15 @@
 import React from 'react';
 import '../css/Timeline.css';
 
-
-
-const Timeline = ({rounds}) => {
+const Timeline = ({ rounds }) => {
 	const listItems = rounds.map((round, index) => {
-		let date = formattedDate(new Date(round.date_time))
-		
+		let date = formattedDate(new Date(round.date_time));
+
 		return (
 			<li key={index}>
 				<span className="timeline-point"></span>
 				<span className="date">{date}</span>
-				<p>{round.name}</p>
+				<span className="roundName">{round.name}</span>
 			</li>
 		);
 	});
@@ -28,10 +26,10 @@ const Timeline = ({rounds}) => {
 };
 
 function formattedDate(date) {
-    let year = date.getFullYear();
-    let month = (1 + date.getMonth()).toString().padStart(2, '0');
-    let day = date.getDate().toString().padStart(2, '0');
-	return day+'/'+month+'/'+ year;
+	let year = date.getFullYear();
+	let month = (1 + date.getMonth()).toString().padStart(2, '0');
+	let day = date.getDate().toString().padStart(2, '0');
+	return day + '/' + month + '/' + year;
 }
 
 export default Timeline;
