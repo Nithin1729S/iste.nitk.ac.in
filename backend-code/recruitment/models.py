@@ -21,7 +21,7 @@ class Round(models.Model):
     )
 
     def __str__(self):
-        return self.name + " - " + self.sig.name + ' - ' + self.date_time
+        return self.name + " - " + self.sig.name + ' - '
 
 
 class RegLink(models.Model):
