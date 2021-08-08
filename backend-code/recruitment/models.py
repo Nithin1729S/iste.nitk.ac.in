@@ -30,6 +30,7 @@ class RegLink(models.Model):
         on_delete=models.CASCADE,
     )
     link = models.URLField(max_length=200, default="")
+    descriptionSIG = models.TextField(max_length=200, default="SIG description")
 
     def __str__(self):
         return self.sig.name + " - " + self.link
