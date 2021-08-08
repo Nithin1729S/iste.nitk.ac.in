@@ -9,7 +9,7 @@ class SigDescription extends Component {
                 <div className={`col card center z-index-3`}>
                     <div className="card-content col s12">
                         <p className={`${styles.descText}`}>
-                            Crypt, an abbreviation of ‘Cryptography', is a SIG that aims to overcome technological barriers by implementing new versatile software and technologies. From hackathons, coding competitions, and web designing, to App development, AR/VR workshops, and Knowledge Exchange Programmes (KEPs), this SIG caters to those who are eager to showcase their skills in the field of Computers. While Crypt is primarily known for its annual flagship event Cryptonite, it is also the brain behind the ISTE Website and the Scotland Yard app.
+                            {this.props.desc}
                         </p>
                     </div>
                     <div className="row"></div>
