@@ -38,13 +38,11 @@
 }
 .mainz li p {
   padding: 0 10px 10px 0;
-  transition: 1.5s;
 }
 
 .mainz .date {
   position: absolute;
   left:-96px;
-  transition: 1.5s;
   font-size: 13px;
 }
 .mainz .timeline-line {
@@ -64,7 +62,6 @@
     height: 14px;
   top: 30px;
   left: -10px;
-  transition: 1.5s ease;
 }
 /* .mainz .timeline-innerline {
   position: absolute;
@@ -106,13 +103,10 @@
   }
   .mainz li p {
     transform: translateY(-10px);
-    transition: 1.5s;
-   padding: 0 58px;
+    padding: 0 58px;
   }
 
   .mainz .date {
- 
-    transition: 1.5s;
     font-size: 13px;
     position: absolute;
     top: -68px;
@@ -124,7 +118,6 @@
     height: 25px;
     top: -44px;
     left: 40%;
-    transition: 1.5s ease;
   }
 
   .mainz .timeline-line {

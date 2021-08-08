@@ -5,6 +5,7 @@
 .descText{
     font-size: 1.3rem;
     color: rgba(0, 0, 0, 0.75);
+    text-align: justify;
 }
 .arrow{
     font-size:0.9rem;
@@ -113,5 +114,8 @@
     }   
     .btnContainer{
         flex-direction: column;
+    }
+    span{
+        margin-bottom: 0.5em;
     }
 }
