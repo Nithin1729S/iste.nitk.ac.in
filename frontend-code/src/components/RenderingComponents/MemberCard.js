@@ -12,7 +12,7 @@ class MemberCard extends React.Component {
                     alt="member card"
                     src={`${baseUrl}${this.props.imgurl}`}
                     className="responsive-img circle"
-                    style={({ width: "300px" }, { height: "300px" })}
+                    style={{ width: "300px", height: "300px" }}
                 />
             </div>
         );
