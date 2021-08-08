@@ -15,13 +15,13 @@
 .coreImageDisplay .core_img {
     border-radius: 100%;
     display: flex;
-    flex: 0 0 150px;
-    height: 150px;
+    flex: 0 0 8em;
+    height: 8em;
     justify-content: center;
     overflow: hidden;
     position: relative;
     flex-direction: row;
-    width: 150px;
+    width: 8em;
     margin: 2%;
 }
 
