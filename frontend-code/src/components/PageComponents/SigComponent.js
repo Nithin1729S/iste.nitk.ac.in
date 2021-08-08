@@ -50,10 +50,18 @@ class SigComponent extends React.Component {
 				history.go(0);
 			}
 		}
-		if (this.state.projectData === undefined && this.state.projectsThere === true)
-		this.setState({ projectsThere: false });
-		else if(this.state.projectData !== undefined && this.state.projectsThere === false && this.state.projectData[0] !== undefined) 
-		this.setState({projectsThere:true});
+		if (
+			this.state.projectData === undefined &&
+			this.state.projectsThere === true
+		)
+			this.setState({ projectsThere: false });
+		else if (
+			this.state.projectData !== undefined &&
+			this.state.projectsThere === false &&
+			this.state.projectData[0] !== undefined
+		)
+			this.setState({ projectsThere: true });
+		console.log(this.state.projectData);
 	}
 	render() {
 		if (this.state.projectData != null) {
@@ -121,7 +129,7 @@ class SigComponent extends React.Component {
 						</div>
 					</div>
 					{this.state.projectData.map((project, index) => {
-						const { id, name, summary, img_url } = project;
+						const { id, name, summary, image } = project;
 						return (
 							<div className="row proj-item">
 								<SigProjectCard
@@ -130,7 +138,7 @@ class SigComponent extends React.Component {
 									projID={id}
 									name={name}
 									description={summary}
-									imgUrl={img_url}
+									imgUrl={`${baseUrl}${image}`}
 									isCurrentProject={true}
 								/>
 							</div>
