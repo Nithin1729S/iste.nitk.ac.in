@@ -71,19 +71,17 @@ class SigComponent extends React.Component {
 						<div className="col l12 s12">
 							<TitleWithLine title={this.state.name} />
 						</div>
+
+						{/* This is the Image for the SIG, uncomment if video in not activated. 
 						<div className="col l12 s12">
 							<img
 								src={`${baseUrl}${this.state.sigData.avatar}`}
 								className="responsive-img col s8 l4 center offset-l4 offset-s2"
 								alt="sig"
 							/>
-						</div>
-						<div className="row">
-							<div className="col l8 offset-l2 s10 offset-s1 description flow-text">
-								<br />
-								<span>{this.state.sigData.description}</span>
-							</div>
-						</div>
+						</div> */}
+
+						{/* This is the video component, use only if the video is ready */}
 						<div className="col l12 s12 center">
 							<h4>
 								<span className="videotitle">
@@ -101,6 +99,12 @@ class SigComponent extends React.Component {
 									alt="sigVideo"
 									title="Sig Video"
 								></iframe>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col l8 offset-l2 s10 offset-s1 description flow-text">
+								<br />
+								<span>{this.state.sigData.description}</span>
 							</div>
 						</div>
 					</div>
