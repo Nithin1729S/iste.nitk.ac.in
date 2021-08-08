@@ -17,6 +17,7 @@
         "disable-scroll": "^0.6.0",
         "faker": "^5.1.0",
         "html-react-parser": "^1.2.4",
+        "i": "^0.3.6",
         "materialize-css": "^1.0.0",
         "react": "^17.0.1",
         "react-countup": "^4.3.3",

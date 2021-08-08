@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { dummy } from "./dummyData";
-import SigDescription from "./components/SigDescription";
-import RegisterButton from "./components/RegisterButton";
+import SigDescription from "./Components/SigDescription";
+import RegisterButton from "./Components/RegisterButton.jsx";
+import Timeline from './Components/Timeline';
 
 class RecsSIGComponent extends React.Component {
     constructor(props) {
@@ -44,9 +45,11 @@ class RecsSIGComponent extends React.Component {
         return (
             <>
                 <div>Recruitment SIG page here {this.state.sigName}</div>
+                 <Timeline/>
                 {/* component for sig desc 
 				props: signame and description
 			*/}
+           
                 <SigDescription
                     sig={this.state.sigName}
                     desc={this.state.data.desc}
