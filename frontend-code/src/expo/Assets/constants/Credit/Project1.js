@@ -61,13 +61,12 @@ const mapper = () => {
     });
 };
 
-export default {
+const project1 = {
     id: 1,
     tags: ["Anti-Money Laundering", " Economy", " Demonetization", " Covid-19"],
     oneline:
         "To analyze the illegal process of money laundering in India and its impacts on the economy",
-    logo:
-        "https://www.clipartmax.com/png/middle/56-562832_money-laundering-icon-png.png",
+    logo: "https://www.clipartmax.com/png/middle/56-562832_money-laundering-icon-png.png",
     name: "Analysis of Money Laundering in India",
     imgUrl: [
         "https://drive.google.com/file/d/1s7nXWEAZpu1g_f0Nk3F0MDJkA17cVJtv/preview",
@@ -166,6 +165,7 @@ export default {
                                     src="https://drive.google.com/file/d/1QCsApLUMV8Yj9_OaYpL85gRstmadyXMY/preview"
                                     width="640"
                                     height="480"
+                                    title="PNB High Analysis"
                                 ></iframe>
                             </li>
                             <li>
@@ -177,6 +177,7 @@ export default {
                                     src="https://drive.google.com/file/d/1fEmzcCNUahy2DsllUaAWaYDsl90Rw7MV/preview"
                                     width="640"
                                     height="480"
+                                    title="PNB LOW Analysis"
                                 ></iframe>
                             </li>
                             <li>
@@ -188,6 +189,7 @@ export default {
                                     src="https://drive.google.com/file/d/1QCsApLUMV8Yj9_OaYpL85gRstmadyXMY/preview"
                                     width="640"
                                     height="480"
+                                    title="PNB OPEN Analysis"
                                 ></iframe>
                             </li>
                             <li>
@@ -199,6 +201,7 @@ export default {
                                     src="https://drive.google.com/file/d/1QhGw6e7hglQKqL7OMaRJ-YoWHQTPXUyK/preview"
                                     width="640"
                                     height="480"
+                                    title="PNB ADJUSTED CLOSE Analysis"
                                 ></iframe>
                             </li>
                         </ol>
@@ -308,3 +311,4 @@ export default {
         ),
     },
 };
+export default project1;

@@ -1,4 +1,4 @@
-export default {
+const project1 = {
     id: 1,
     tags: ["deep learning", "dsp"],
     oneline:
@@ -59,6 +59,7 @@ export default {
                     src="https://drive.google.com/file/d/12q1rlRxJcDNjtbQWVCLsd0EyGDhbaOw3/preview"
                     width="640"
                     height="480"
+                    title="Datapath"
                 ></iframe>{" "}
                 <br />
                 Control path :-
@@ -67,6 +68,7 @@ export default {
                     src="https://drive.google.com/file/d/1JLSypedzzRMLKSLiKPhvZ_s_g5oql0w7/preview"
                     width="640"
                     height="480"
+                    title="Control"
                 ></iframe>
                 <br />
                 There is currently support for these seven high level
@@ -97,6 +99,7 @@ export default {
                     src="https://drive.google.com/file/d/1WGlhyB4a-rssMQmE1SPDDvDeXv1N0Ft-/preview"
                     width="640"
                     height="480"
+                    title="Synthesis results"
                 ></iframe>
                 <br />
                 Simulation results:- <br />
@@ -114,6 +117,7 @@ export default {
                     src="https://drive.google.com/file/d/1A6z_lMYcm4svDTd_QDLSVqa93DVk-qme/preview"
                     width="640"
                     height="480"
+                    title="Simulation results"
                 ></iframe>
                 <br />
                 Sample extracted and quantised weights and biases:-
@@ -122,6 +126,7 @@ export default {
                     src="https://drive.google.com/file/d/150XAozifeE-vOHN_JnyWe1pyQ7TT8jvb/preview"
                     width="640"
                     height="480"
+                    title="Sample extracted and quantised weights and biases"
                 ></iframe>
             </div>
         ),
@@ -159,3 +164,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project1;

@@ -1,8 +1,7 @@
-export default {
+const project2 = {
     id: 2,
     tags: ["Modelling", "Simulink", "ASP", "ASM", "WWTP"],
-    logo:
-        "https://www.tpomag.com/uploads/inline/xcockrell_4.jpg.pagespeed.ic.NOVnhtHlC-.webp",
+    logo: "https://www.tpomag.com/uploads/inline/xcockrell_4.jpg.pagespeed.ic.NOVnhtHlC-.webp",
     name: "Modelling Of Waste Water Treatment Using ASM",
     oneline:
         "The objective of the project is to explore how industrial-scale water purification is executed through a widely implemented process known as Activated Sludge Model (ASM).",
@@ -194,6 +193,7 @@ export default {
                         src="https://drive.google.com/file/d/1wgKJrkucaHeQqAcPyRBjOFA6DKgnsBZG/preview"
                         width="640"
                         height="480"
+                        title="Simulation"
                     ></iframe>
                     <figcaption>
                         Graph: Variation Of Oxygen Concentration in Regulatory
@@ -206,6 +206,7 @@ export default {
                         src="https://drive.google.com/file/d/18TMIzSKL1RKQcAZXfmvDPOdOle0li_wa/preview"
                         width="640"
                         height="480"
+                        title="Simulation2"
                     ></iframe>
                     <figcaption>
                         Graph: Variation Of Oxygen Concentration in Servo mode.
@@ -218,6 +219,7 @@ export default {
                         src="https://drive.google.com/file/d/19qapAft4gS8M9Z2J3IcToTANdf_tdbxY/preview"
                         width="640"
                         height="480"
+                        title="Simulation3"
                     ></iframe>
                     <figcaption>
                         The ASM process developed on Simulink
@@ -228,6 +230,7 @@ export default {
                         src="https://drive.google.com/file/d/1_rXr0z-z_1LQ8_PR2QSO-oqmZxzYUvDO/preview"
                         width="640"
                         height="480"
+                        title="Simulation4"
                     ></iframe>
                     <figcaption>
                         {" "}
@@ -249,6 +252,7 @@ export default {
                     src="https://drive.google.com/file/d/1iyXMrELdGTal9f0_L9dWiSqyseLyiWdU/preview"
                     width="640"
                     height="480"
+                    title="Simulation5"
                 ></iframe>
                 <br />
                 Graph: Variation of Oxygen Concentration in open loop. <br />
@@ -318,6 +322,7 @@ export default {
                     src="https://drive.google.com/file/d/1mZtN97fwNzfaLDiOI_waAC89yNWe4y9l/preview"
                     width="640"
                     height="480"
+                    title="Simulation6"
                 ></iframe>
             </div>
         ),
@@ -339,5 +344,6 @@ export default {
             </div>
         ),
     },
-    meetLink: "This is the meet link",
+    // meetLink: "This is the meet link",
 };
+export default project2;

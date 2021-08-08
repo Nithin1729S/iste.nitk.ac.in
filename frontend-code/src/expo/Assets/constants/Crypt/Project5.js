@@ -1,10 +1,9 @@
-export default {
+const project5 = {
     id: 4,
     tags: ["Web Application", " Security", " Honeypot"],
     oneline:
         "Understand and document the codebase of SNARE and TANNER.Try to fix the issues present in the application. Optimisation of TANNER",
-    logo:
-        "https://cyberhoot.com/wp-content/uploads/2020/02/Honeypot-Structure.png",
+    logo: "https://cyberhoot.com/wp-content/uploads/2020/02/Honeypot-Structure.png",
     name: "Python web application honey pot",
     imgUrl: [
         "https://drive.google.com/file/d/1_31qRIpjcY4QMpz-SWamw_fYg6PWJxB2/preview",
@@ -115,3 +114,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project5;

@@ -1,5 +1,5 @@
 import logo from "./HASSL.png";
-export default {
+const project5 = {
     id: 5,
     tags: ["SSL", "cryptography", "aes", "fpga"],
     name: "Hardware Assisted SSL",
@@ -75,7 +75,7 @@ export default {
                 <iframe
                     class="descPage_imgSize__3WMSz"
                     src="https://drive.google.com/file/d/1NgX_R7gkVxzcJOWWmaFF788Dr5y8rwxo/preview"
-                    title="1"
+                    title="0"
                 />
                 <br />
                 <div style={{ textAlign: "center" }}>Architecture Diagram</div>
@@ -85,7 +85,9 @@ export default {
                     title="1"
                 />
                 <br />
-                <div style={{ textAlign: "center" }}>Input and Encrypted Message</div>
+                <div style={{ textAlign: "center" }}>
+                    Input and Encrypted Message
+                </div>
                 <br />
             </div>
         ),
@@ -104,3 +106,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project5;

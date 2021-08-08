@@ -1,4 +1,4 @@
-export default {
+const project2 = {
     id: 2,
     tags: ["Containers", " Kubernetes", " Jenkins", " DevOps tools", " CI/CD"],
     oneline:
@@ -117,15 +117,18 @@ export default {
                     src="https://drive.google.com/file/d/1PlZggYorOSqvFWUEDhbPm0A_9qj5Ptm_/preview"
                     width="600"
                     height="300"
+                    title="projec21"
                 ></iframe>
                 <iframe
                     src="https://drive.google.com/file/d/1MP9uT40jOp6Kap8mIYV0YPbY4YRFX7Wn/preview"
                     width="600"
                     height="300"
+                    title="projec22"
                 ></iframe>
                 <iframe
                     src="https://drive.google.com/file/d/1w1ejcamo3DPj0MXb4kSmBM1FKr-9vlWy/preview"
                     width="600"
+                    title="projec23"
                     height="200"
                 ></iframe>
                 <br />
@@ -156,6 +159,7 @@ export default {
                 <iframe
                     src="https://drive.google.com/file/d/1KQdBvJy5wxUUOWtlA0xwjEpOiux5qmlg/preview"
                     width="600"
+                    title="projec24"
                     height="300"
                 ></iframe>
                 <br />
@@ -174,6 +178,7 @@ export default {
                     src="https://drive.google.com/file/d/1W7fIYeyUmSVaTnb6P5wAbPCVr9vwfaAS/preview"
                     width="600"
                     height="300"
+                    title="projec25"
                 ></iframe>
                 <br />
                 Fig 3. Docker Hub success build <br />
@@ -201,3 +206,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project2;

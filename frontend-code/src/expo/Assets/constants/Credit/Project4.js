@@ -1,4 +1,4 @@
-export default {
+const project4 = {
     id: 4,
     tags: [
         "marketing",
@@ -10,10 +10,8 @@ export default {
     ],
     oneline:
         "Analyse consumer behaviour towards the market leaders in the beverage industry.",
-    logo:
-        "https://st2.depositphotos.com/1036149/6140/i/950/depositphotos_61407707-stock-photo-soda-bottle-with-dollar-sign.jpg",
-    name:
-        "Effective marketing strategies and study of consumer behaviour in the beverage industry",
+    logo: "https://st2.depositphotos.com/1036149/6140/i/950/depositphotos_61407707-stock-photo-soda-bottle-with-dollar-sign.jpg",
+    name: "Effective marketing strategies and study of consumer behaviour in the beverage industry",
     imgUrl: [
         "https://drive.google.com/file/d/136Vm9SR1jpH-ZGYcdmsRqsxZqSvxAMgZ/preview",
         "https://drive.google.com/file/d/141r5I6N2SAmg6u7nqOaCScyuY2oXwPdy/preview",
@@ -188,3 +186,4 @@ export default {
         ),
     },
 };
+export default project4;

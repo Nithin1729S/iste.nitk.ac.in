@@ -1,4 +1,4 @@
-export default {
+const project6 = {
     id: 6,
     name: "Medical Image Segmentation",
     tags: [
@@ -9,8 +9,7 @@ export default {
         "Image segmentation",
     ],
 
-    logo:
-        "https://upload.wikimedia.org/wikipedia/commons/6/6b/MI_with_contraction_bands_very_high_mag.jpg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/MI_with_contraction_bands_very_high_mag.jpg",
     oneline:
         "To segment nuclei from histopathology images for effective diagnosis and treatment of cancer.",
     imgUrl: [
@@ -68,17 +67,20 @@ export default {
                     src="https://drive.google.com/file/d/1p-bfoufwdkFnmf-EH0KWGARXAbhdGFde/preview"
                     width="640"
                     height="480"
+                    title="Results"
                 ></iframe>
                 <br />
                 It can be seen that UNET yielded the highest results in both
                 test and train sets. Following is a set of images which include
                 Original Images(from the dataset), Ground Truth (Expected
                 outcome which is also available in the dataset) and outputs from
-                different architectures.<br/>
+                different architectures.
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/1YUzuflHQttK6fMqFk_9wv6C_EfR04G97/preview"
                     width="640"
                     height="480"
+                    title="Results2"
                 ></iframe>
             </div>
         ),
@@ -106,3 +108,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project6;

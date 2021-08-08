@@ -1,10 +1,9 @@
-export default {
+const project3 = {
     id: 3,
     tags: ["ML", " Image Processing"],
     oneline:
         "To detect pothole in an image using trained weights and give output of the number of potholes.",
-    logo:
-        "https://www.autopilotreview.com/wp-content/uploads/2020/02/tesla-autopilot-pothole-detection-image-696x417.jpg",
+    logo: "https://www.autopilotreview.com/wp-content/uploads/2020/02/tesla-autopilot-pothole-detection-image-696x417.jpg",
     name: "Pothole Detector",
     imgUrl: [
         "https://drive.google.com/file/d/12d6ywemaTY74wZ9VuEEJD6Wn4NUuE5W4/preview",
@@ -102,3 +101,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project3;

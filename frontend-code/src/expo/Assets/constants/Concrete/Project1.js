@@ -1,10 +1,9 @@
-export default {
+const project1 = {
     id: 1,
     tags: ["BIM", " Revit", " Green Building"],
     oneline:
         "Design and Analysis of a Green Commercial Complex equipped with a Food Court in an Eco-Friendly and Sustainable manner within the NITK Campus in Revit using Building Information Modelling (BIM).",
-    logo:
-        "https://www.elevatorimagazine.com/wp-content/uploads/2018/01/corsi-di-autocad-disegni-dwg-a-trieste.jpg",
+    logo: "https://www.elevatorimagazine.com/wp-content/uploads/2018/01/corsi-di-autocad-disegni-dwg-a-trieste.jpg",
     name: "Design of a Green Commercial Complex in NITK using BIM",
     imgUrl: [
         "https://drive.google.com/file/d/1vX-hKt3NfdqysLZVyYkfTxJ_7Ojz452T/preview",
@@ -145,6 +144,7 @@ export default {
                     src="https://drive.google.com/file/d/1oZxAci8p2gvN1gEUHQucVlFTlHzggpPk/preview"
                     width="640"
                     height="300"
+                    title="Green Commercial Complex"
                 ></iframe>
                 <br />
                 <br />
@@ -152,6 +152,7 @@ export default {
                     src="https://drive.google.com/file/d/1bsbvWeLjtrdGZj5IKnFBpeHW9TR4POmK/preview"
                     width="640"
                     height="300"
+                    title="Green Commercial Complex2"
                 ></iframe>
                 <br />
                 <br />
@@ -160,6 +161,7 @@ export default {
                     src="https://drive.google.com/file/d/1nCsUZIHvjC1jTJKfKO55VGjx_AAjNG6J/preview"
                     width="500"
                     height="480"
+                    title="First Floor"
                 ></iframe>
                 <br />
                 <br />
@@ -168,6 +170,7 @@ export default {
                     src="https://drive.google.com/file/d/1mgsRb9ADoNL9toEhWa6CIZqER8S_-6kT/preview"
                     width="500"
                     height="480"
+                    title="Ground Floor"
                 ></iframe>
                 <br />
                 <br />
@@ -176,6 +179,7 @@ export default {
                     src="https://drive.google.com/file/d/1A-ebcQRYmsMV01mBt-eweyxv8HKN7JVD/preview"
                     width="500"
                     height="480"
+                    title="Top and Frontal View"
                 ></iframe>
                 <br />
                 <br />
@@ -184,6 +188,7 @@ export default {
                     src="https://drive.google.com/file/d/123nCz-GmF2h7KFHnNr2GwuJaodUab54w/preview"
                     width="500"
                     height="480"
+                    title="Top View"
                 ></iframe>
                 <br />
                 <br />
@@ -192,6 +197,7 @@ export default {
                     src="https://drive.google.com/file/d/1aHAb-qesLqMQnN2_eyVuJET8Qc6TFSgE/preview"
                     width="640"
                     height="480"
+                    title="Final Design"
                 ></iframe>{" "}
                 <br />
             </div>
@@ -241,3 +247,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project1;

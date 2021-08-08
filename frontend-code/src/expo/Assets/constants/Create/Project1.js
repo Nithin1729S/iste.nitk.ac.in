@@ -1,4 +1,4 @@
-export default {
+const project1 = {
     id: 1,
     tags: [
         "Astrophotography ",
@@ -9,8 +9,7 @@ export default {
     ],
     oneline:
         "Creating original cinematographic compositions of the Milky Way Galaxy as seen at different places throughout the year using Long Exposure Photography technique.",
-    logo:
-        "https://res.cloudinary.com/dogygnvzl/image/upload/v1595787585/WhatsApp_Image_2020-07-26_at_11.48.43_PM_o2d5sd.jpg",
+    logo: "https://res.cloudinary.com/dogygnvzl/image/upload/v1595787585/WhatsApp_Image_2020-07-26_at_11.48.43_PM_o2d5sd.jpg",
     name: "Long Exposure Photography",
     imgUrl: [],
     members: ["Nikhil Nair", "Mihir BL", "Ananta Shanbhag", "Amogh Manikkuwar"],
@@ -72,3 +71,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project1;

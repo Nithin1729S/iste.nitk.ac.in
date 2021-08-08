@@ -1,10 +1,9 @@
-export default {
+const project7 = {
     id: 7,
     tags: ["gigeconomy", " freelance", " future", " companies"],
     oneline:
         "This project would aim at taking in consideration the sentiments of workers and analysing their functioning in a gig economy.",
-    logo:
-        "https://www.safetyandhealthmagazine.com/ext/resources/images/2017/11-nov/gig.jpg?1508425591",
+    logo: "https://www.safetyandhealthmagazine.com/ext/resources/images/2017/11-nov/gig.jpg?1508425591",
     name: "Sentiments of Workers in the Gig Economy",
     imgUrl: [
         "https://drive.google.com/file/d/1x6TVfOvARzzMeEfDdwmDJGoIXQTUVNVJ/preview",
@@ -103,17 +102,20 @@ export default {
                     src="https://drive.google.com/file/d/1ufXiiHC7yKb5w-XROUTt502Q5iOsOvSu/preview"
                     width="640"
                     height="480"
+                    title="SWOT Analysis of the companies considered"
                 ></iframe>{" "}
                 <br /> <br />
                 <iframe
                     src="https://drive.google.com/file/d/1SqVFLJc9SG3qpAb5WflF_Y28Yaql8Vud/preview"
                     width="640"
                     height="480"
+                    title="Chi-Square Test"
                 ></iframe>{" "}
                 <br /> <br />
                 <iframe
                     src="https://drive.google.com/file/d/1De0l5stgNykU1aNHHjleqm5cux3H9llI/preview"
                     width="640"
+                    title="Fishers Exact Test"
                     height="480"
                 ></iframe>
                 <br /> <br />
@@ -121,6 +123,7 @@ export default {
                     src="https://drive.google.com/file/d/19UtOGXgAoqp5oeHSLBNoSKwRlVoLfmhM/preview"
                     width="640"
                     height="480"
+                    title="Need for Regulations"
                 ></iframe>{" "}
                 <br />
                 <p>Criteria considered in the survey - </p>
@@ -151,6 +154,7 @@ export default {
                     src="https://drive.google.com/file/d/1M_weuNRHM4quvoE0wIXNQkpC_aljfOVC/preview"
                     width="640"
                     height="480"
+                    title="Inferential Analysis on the Survey Data"
                 ></iframe>{" "}
                 <br /> <br />
                 <p>
@@ -167,6 +171,7 @@ export default {
                     src="https://drive.google.com/file/d/13VfsL361b5vjLIk7TfmKhBarBD13-6Px/preview"
                     width="640"
                     height="480"
+                    title="Fisher's Exact Test"
                 ></iframe>{" "}
                 <br />
                 <p>
@@ -180,6 +185,7 @@ export default {
                     src="https://drive.google.com/file/d/1GygtnjLsRN3Mbmfh72ivsajdqm2WQ509/preview"
                     width="640"
                     height="480"
+                    title="Chi-Square Test"
                 ></iframe>{" "}
                 <br />
                 <p>
@@ -452,6 +458,7 @@ export default {
                         src="https://drive.google.com/file/d/1SAE2c34MtTbBew2_pP3nFaODKsmawx_m/preview"
                         width="640"
                         height="480"
+                        title="UBER"
                     ></iframe>
                     <br />
                     <br />
@@ -459,6 +466,7 @@ export default {
                         src="https://drive.google.com/file/d/1oxyIYzyKc2Nbs9w0o0wd5w-5HGNcwl-q/preview"
                         width="640"
                         height="480"
+                        title="Uber2"
                     ></iframe>
                 </center>
                 <br />
@@ -472,6 +480,7 @@ export default {
                         src="https://drive.google.com/file/d/1x6TVfOvARzzMeEfDdwmDJGoIXQTUVNVJ/preview"
                         width="640"
                         height="480"
+                        title="Airbnb"
                     ></iframe>
                 </center>
                 <br />
@@ -485,6 +494,7 @@ export default {
                         src="https://drive.google.com/file/d/11fXlaCLpdZDo-pNQS3loFsFkm_BheTNe/preview"
                         width="640"
                         height="480"
+                        title="Lyft"
                     ></iframe>
                     <br />
                     <br />
@@ -492,6 +502,7 @@ export default {
                         src="https://drive.google.com/file/d/15sBHkHe9PPcuMs4XqSDFZAJobBD-w8t1/preview"
                         width="640"
                         height="480"
+                        title="Lyft2"
                     ></iframe>
                 </center>
                 <br />
@@ -519,3 +530,4 @@ export default {
         ),
     },
 };
+export default project7;

@@ -31,7 +31,7 @@ class EventAdd extends React.Component {
             name,
             no_of_participants,
             date_time,
-            contacts,
+            // contacts,
             editable_by,
             sigs,
             form_link,

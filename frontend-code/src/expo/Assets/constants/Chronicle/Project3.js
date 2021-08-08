@@ -1,9 +1,8 @@
-export default {
+const project3 = {
     id: 3,
     name: "Short Film",
     tags: ["Scripting", " Shooting", " Video Effects"],
-    logo:
-        "https://www.legalzoom.com/sites/legalzoom.com/files/uploaded/articles/film.jpg",
+    logo: "https://www.legalzoom.com/sites/legalzoom.com/files/uploaded/articles/film.jpg",
     oneline:
         "The aim of the project is to create a short film from scratch and understand the creative process behind it.",
     imgUrl: "",
@@ -72,6 +71,7 @@ export default {
                             src="https://drive.google.com/file/d/1VzlWKIIsaIhMHis1_CkqZ56idL94H7vS/preview"
                             width="640"
                             height="480"
+                            title="Video"
                         ></iframe>
                         Using the modern softwares (adobe premiere pro and adobe
                         after effects), the footage shot by the cast was edited
@@ -90,11 +90,13 @@ export default {
                     src="https://drive.google.com/file/d/1FA0yLbIItpwJTzk9V7vdPzQ4k8miTp18/preview"
                     width="640"
                     height="480"
+                    title="Finalized Script"
                 ></iframe>
                 <iframe
                     src="https://drive.google.com/file/d/1zoYMH5KaS_LY_wa3Y9rlJQaM4iQgHuEQ/preview"
                     width="640"
                     height="480"
+                    title="The final product"
                 ></iframe>
                 <br />
                 After some colour grading and adding a tinge of cinematic effect
@@ -103,9 +105,11 @@ export default {
                     src="https://drive.google.com/file/d/1-IA-FG1adOeJ0OlsLFKGhi5leeO_HQ1v/preview"
                     width="640"
                     height="480"
+                    title="Final Result"
                 ></iframe>
             </div>
-        )
+        ),
     },
     //meetLink: 'This is the meet link',
 };
+export default project3;

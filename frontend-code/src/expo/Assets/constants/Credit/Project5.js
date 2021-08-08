@@ -1,4 +1,4 @@
-export default {
+const project5 = {
     id: 5,
     tags: [
         "textileindustry",
@@ -13,10 +13,8 @@ export default {
     ],
     oneline:
         "Analyse the effectiveness of the 6 major Export schemes Implemented by the Ministry of Textiles.Recommend policy changes to the schemes in place.",
-    logo:
-        "https://images.moneycontrol.com/static-mcnews/2017/05/textile-cotton-arvind-1280-720-770x433.jpg?impolicy=website&width=770&height=431",
-    name:
-        "Analysis of 5 Major Schemes in the Indian Apparels and Textile Industry",
+    logo: "https://images.moneycontrol.com/static-mcnews/2017/05/textile-cotton-arvind-1280-720-770x433.jpg?impolicy=website&width=770&height=431",
+    name: "Analysis of 5 Major Schemes in the Indian Apparels and Textile Industry",
     imgUrl: [
         "https://drive.google.com/file/d/1kTo0g-q-orWZrkUGiTjIJDjHBA_RHxhi/preview",
         "https://drive.google.com/file/d/1a10-q1embuLFkgnl9CrXqfQQeKkUK2Pw/preview",
@@ -264,3 +262,4 @@ export default {
         ),
     },
 };
+export default project5;

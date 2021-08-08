@@ -1,5 +1,5 @@
 import image from "../../Glider.png";
-export default {
+const project3 = {
     id: 3,
     tags: [
         "glider",
@@ -10,8 +10,7 @@ export default {
         " analysis",
     ],
     name: "Energy efficient glider for delivery",
-    logo:
-        "https://www.fai.org/sites/default/files/styles/article_detail_xxlarge/public/mini-lak-4.jpg?itok=_1im8SxT",
+    logo: "https://www.fai.org/sites/default/files/styles/article_detail_xxlarge/public/mini-lak-4.jpg?itok=_1im8SxT",
     oneline:
         "The aim of this project is to design an aerodynamic glider and analyse its aerodynamic aspects.",
     imgUrl: [
@@ -90,6 +89,7 @@ export default {
                                     src="https://drive.google.com/file/d/12O7JhDF61kPVLTuVMHLubFf9elywOg3U/preview"
                                     width="640"
                                     height="480"
+                                    title="Taper at front wing"
                                 ></iframe>
                                 <figcaption>
                                     Comparison of different types of wings
@@ -107,6 +107,7 @@ export default {
                                     src="https://drive.google.com/file/d/1vDwVf8FflYbVgQC8Px_YwskrMPwcrrSP/preview"
                                     width="640"
                                     height="480"
+                                    title="Taper at back wing"
                                 ></iframe>
                                 <figcaption>
                                     Comparison of wing with different Taper
@@ -120,6 +121,7 @@ export default {
                                     src="https://drive.google.com/file/d/1eln5zKSaXWWhpYq_kUDzzCUmj9eVUdE6/preview"
                                     width="640"
                                     height="480"
+                                    title="Glider dimensions"
                                 ></iframe>
                                 <figcaption>
                                     Parameters of the glider
@@ -132,16 +134,19 @@ export default {
                                         src="https://drive.google.com/file/d/1c9DayC8jAELeKLQ0IzuBroaw5df50Udh/preview"
                                         width="300"
                                         height="300"
+                                        title="Glider parameters"
                                     ></iframe>
                                     <iframe
                                         src="https://drive.google.com/file/d/1Jd4tgCZz0HwYHVyT9EDpoSSrHw8gKa0b/preview"
                                         width="300"
                                         height="300"
+                                        title="Glider parameters2"
                                     ></iframe>
                                     <iframe
                                         src="https://drive.google.com/file/d/1nja8RYJ1n2O1ierAYSFZ_3gh6uVGwpBj/preview"
                                         width="300"
                                         height="300"
+                                        title="Glider parameters3"
                                     ></iframe>
                                     <figcaption style={{ marginLeft: "40%" }}>
                                         Variation of x,y,z
@@ -208,21 +213,25 @@ export default {
                                     src="https://drive.google.com/file/d/1kOjvue9JwlNd8LjE_GeVBo_n6dMo12Qv/preview"
                                     width="290"
                                     height="200"
+                                    title="Fuselage"
                                 ></iframe>
                                 <iframe
                                     src="https://drive.google.com/file/d/1RoG_6iVUY0jeJtZ6XqK0vG1kj7zITMyR/preview"
                                     width="290"
                                     height="200"
+                                    title="Fuselage2"
                                 ></iframe>
                                 <iframe
                                     src="https://drive.google.com/file/d/1NJv8ORBc8iM0IlKvkG1kym7Qx8lN5aPB/preview"
                                     width="290"
                                     height="200"
+                                    title="Fuselage3"
                                 ></iframe>
                                 <iframe
                                     src="https://drive.google.com/file/d/1icDm6o5VEwQMIgPQC59PuTVHXoes_hn9/preview"
                                     width="290"
                                     height="200"
+                                    title="Fuselage4"
                                 ></iframe>
                                 <figcaption style={{ "text-align": "center" }}>
                                     Shape 1,2,3,4
@@ -263,6 +272,7 @@ export default {
                     src={image}
                     width="500"
                     height="500"
+                    alt="2d-3d"
                 ></img>
             </div>
         ),
@@ -277,6 +287,7 @@ export default {
                             src="https://drive.google.com/file/d/1w2wTP2V2ayid5YtlcGOXJIw2lLNKtTPg/preview"
                             width="640"
                             height="480"
+                            title="Glider Assembly"
                         ></iframe>
                     </li>
                     <li>
@@ -297,6 +308,7 @@ export default {
                             src="https://drive.google.com/file/d/1Npsg-eiVOe2HOKlIQ2MQzcCfiCeYppqz/preview"
                             width="640"
                             height="480"
+                            title="Stability Analysis"
                         ></iframe>
                         <br />
                         It can be observed that the curve cuts the x-axis at
@@ -311,6 +323,7 @@ export default {
                             src="https://drive.google.com/file/d/13Ws-07K6IWYVAUmEAe3s1BwakuCK8MM-/preview"
                             width="640"
                             height="480"
+                            title="Stability Analysis2"
                         ></iframe>
                     </li>
                 </ol>
@@ -325,6 +338,7 @@ export default {
                     src="https://drive.google.com/file/d/15FbySynfCj0IJD1c3q4vWXaf8Vt8y3fh/preview"
                     width="715"
                     height="480"
+                    title="Simulink Model"
                 ></iframe>
                 <br />
                 <figcaption style={{ marginLeft: "23%" }}>
@@ -341,3 +355,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project3;

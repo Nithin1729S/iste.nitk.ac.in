@@ -1,12 +1,11 @@
 import image from "../../Podcast.png";
-export default {
+const project2 = {
     id: 2,
     tags: ["Podcasts"],
     oneline:
         "The ISTE's Late Night Podcast is a light-hearted take on the world-famous Late Night Show format, hosted by the members of ISTE Chronicle in the form of a podcast. It is filled with various segments offering a hilarious view of an otherwise hectic life of an engineering student.",
     name: "Podcast",
-    logo:
-        "https://i.ytimg.com/vi/ghncaMrKq6w/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAAqzdow9jh60w4fFl_FzlzNOQNQw",
+    logo: "https://i.ytimg.com/vi/ghncaMrKq6w/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAAqzdow9jh60w4fFl_FzlzNOQNQw",
     imgUrl: [],
     members: [
         "Aswin",
@@ -83,7 +82,7 @@ export default {
                 <br />
                 Poster
                 <br />
-                <img src={image} width="300" height="300"></img>
+                <img src={image} width="300" height="300" alt="podcast" />
             </div>
         ),
         res: (
@@ -116,3 +115,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project2;

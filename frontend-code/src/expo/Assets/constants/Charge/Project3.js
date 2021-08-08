@@ -1,11 +1,17 @@
-export default {
+const project3 = {
     id: 3,
     name: "Speech to Text Converter",
-    tags:["MEL Coefficients","Linear predictive coding","FFT","DFT","HMM","Neural Networks",],
+    tags: [
+        "MEL Coefficients",
+        "Linear predictive coding",
+        "FFT",
+        "DFT",
+        "HMM",
+        "Neural Networks",
+    ],
     oneline:
         "This project on Speech Recognition converts speech (limited) to text with a fairly decent accuracy of about 93% with a processing speed of only 1.5 seconds approximately for an audio clip 2 seconds long on a trained model.",
-    logo:
-        "https://d1sr9z1pdl3mb7.cloudfront.net/wp-content/uploads/2018/01/09162857/voice-biometrics-large2.jpg",
+    logo: "https://d1sr9z1pdl3mb7.cloudfront.net/wp-content/uploads/2018/01/09162857/voice-biometrics-large2.jpg",
     imgUrl: [
         "https://drive.google.com/file/d/1bPnu9ec-Q1WzDyGeW81eM4lFqKiGjUfk/preview",
         "https://drive.google.com/file/d/1ULC46VWpLCFEy4FtilZDyTIYmRR3DZsu/preview",
@@ -50,6 +56,7 @@ export default {
                     src="https://drive.google.com/file/d/1NaYBbmmz6IPs-8Hjn2qqKTt2zyUuxaXO/preview"
                     width="640"
                     height="480"
+                    title="Speech to Text Converter"
                 ></iframe>
                 <br />
                 An inbuilt set of functions was used to accept the input audio
@@ -69,10 +76,12 @@ export default {
                     src="https://drive.google.com/file/d/1ULC46VWpLCFEy4FtilZDyTIYmRR3DZsu/preview"
                     width="640"
                     height="480"
+                    title="Speech to Text Converter2"
                 ></iframe>
                 <br />
             </div>
-        )
+        ),
     },
     //meetLink: 'This is the meet link',
 };
+export default project3;

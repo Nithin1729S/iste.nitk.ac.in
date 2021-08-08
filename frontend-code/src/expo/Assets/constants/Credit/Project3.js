@@ -1,4 +1,4 @@
-export default {
+const project3 = {
     id: 3,
     tags: [
         "Space Commercialization",
@@ -12,8 +12,7 @@ export default {
     ],
     oneline:
         "To explore, analyze and lay out a starting path for expansion of space based industries.",
-    logo:
-        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-680804387-1562856431.jpg",
+    logo: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-680804387-1562856431.jpg",
     name: "Economics of Space Commercialization",
     imgUrl: [
         "https://drive.google.com/file/d/1JlWjreqcSNXHjEn6gpnVTZQ0eVwn0BGT/preview",
@@ -106,3 +105,4 @@ export default {
         ),
     },
 };
+export default project3;

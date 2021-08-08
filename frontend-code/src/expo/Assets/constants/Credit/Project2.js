@@ -1,11 +1,10 @@
-export default {
+const project2 = {
     id: 2,
     tags: ["finance", " personal", " literacy", " education"],
     oneline:
         "To understand the impact that personal finance measures make on the financial success of an individual",
     logo: "https://sun9-6.userapi.com/c621705/v621705743/867e2/EWdVd0pelUQ.jpg",
-    name:
-        "Importance of Financial Education and techniques for its effective implementation",
+    name: "Importance of Financial Education and techniques for its effective implementation",
     members: [
         "Aman Kureel",
         "Neil Poonatar",
@@ -149,3 +148,4 @@ export default {
         ),
     },
 };
+export default project2;

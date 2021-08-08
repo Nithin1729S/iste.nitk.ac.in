@@ -1,10 +1,8 @@
-export default {
+const project1 = {
     id: 1,
     tags: ["Biodiesel", "Simulation", "MPC", "PFR"],
-    logo:
-        "https://images-na.ssl-images-amazon.com/images/I/51D-9qGCi1L._SL1000_.jpg",
-    name:
-        "Simulation Model for Biodiesel Production Embedded with MPC using PFR",
+    logo: "https://images-na.ssl-images-amazon.com/images/I/51D-9qGCi1L._SL1000_.jpg",
+    name: "Simulation Model for Biodiesel Production Embedded with MPC using PFR",
     oneline:
         "The aim of this project was to model and simulate for Biodiesel Production embedded with Model Predictive Control(MPC) operating in a Plug Flow Reactor(PFR) using MATLAB-Simulink.",
     imgUrl: [],
@@ -78,6 +76,7 @@ export default {
                     src="https://drive.google.com/file/d/1rOZ867XD3nWmo6qL1Gc51flVYKnX69J4/preview"
                     width="640"
                     height="280"
+                    title="Component Balances"
                 ></iframe>
                 <br />
                 <br />
@@ -111,6 +110,7 @@ export default {
                         src="https://drive.google.com/file/d/1ZvzEfamyz5W8j4535VdYprXoW5FwGLCG/preview"
                         width="400"
                         height="300"
+                        title="FOPTD Model Parameters"
                     ></iframe>
                 </div>
                 <br />
@@ -124,6 +124,7 @@ export default {
                         src="https://drive.google.com/file/d/1gOvHwUuOLX-1jYF18ZcL8Y4PXsDvhJ66/preview"
                         width="400"
                         height="300"
+                        title="PI Controller Parameters"
                     ></iframe>
                 </div>
                 <br />
@@ -137,6 +138,7 @@ export default {
                         src="https://drive.google.com/file/d/1XDxl0XRBq2cWAKbtO4UL-XUUzTOPfLv_/preview"
                         width="400"
                         height="300"
+                        title="Error Tabulation"
                     ></iframe>
                 </div>
                 <br />
@@ -158,6 +160,7 @@ export default {
                             src="https://drive.google.com/file/d/1bLmzz-8kU6v2r5vpn776LzYIydoH1a0A/preview"
                             width="400"
                             height="300"
+                            title="Response Curve for comparing both the Controllers (PI and MPC)"
                         ></iframe>
                         <iframe
                             style={{
@@ -167,6 +170,7 @@ export default {
                             src="https://drive.google.com/file/d/1Eef3s9OksThOX-sPtZv1-K64Wj6AZfXE/preview"
                             width="400"
                             height="300"
+                            title="Response Curve for comparing both the Controllers (PI and MPC)2"
                         ></iframe>
                     </div>
                     <div style={{ paddingBottom: "2%" }}>
@@ -175,6 +179,7 @@ export default {
                             src="https://drive.google.com/file/d/1zkYaRpX_keU7ORWrKbrwl0uRFFVUp8d9/preview"
                             width="400"
                             height="300"
+                            title="Response Curve for comparing both the Controllers (PI and MPC)3"
                         ></iframe>
                         <iframe
                             style={{
@@ -184,6 +189,7 @@ export default {
                             src="https://drive.google.com/file/d/1WvkMe3uZbjLrTnC9IkoEPOybA21Zbp4w/preview"
                             width="400"
                             height="300"
+                            title="Response Curve for comparing both the Controllers (PI and MPC)4"
                         ></iframe>
                     </div>
                     <div style={{ paddingBottom: "2%" }}>
@@ -192,6 +198,7 @@ export default {
                             src="https://drive.google.com/file/d/11asPiZf1nYQQZ97YfsRJ3XObTpqByk8j/preview"
                             width="400"
                             height="300"
+                            title="Response Curve for comparing both the Controllers (PI and MPC)5"
                         ></iframe>
                         <iframe
                             style={{
@@ -201,6 +208,7 @@ export default {
                             src="https://drive.google.com/file/d/12yAx8jLCuW47iotrSCueujaixAtfYJvs/preview"
                             width="400"
                             height="300"
+                            title="Response Curve for comparing both the Controllers (PI and MPC)6"
                         ></iframe>
                     </div>
                 </div>
@@ -223,5 +231,6 @@ export default {
             </div>
         ),
     },
-    meetLink: "https://www.google.com/",
+    // meetLink: "https://www.google.com/",
 };
+export default project1;

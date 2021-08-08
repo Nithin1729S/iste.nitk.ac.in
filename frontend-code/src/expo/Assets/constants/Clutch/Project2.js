@@ -1,4 +1,4 @@
-export default {
+const project2 = {
     id: 2,
     name: "Exhaust tuning of IC Enginez",
     tags: [
@@ -8,8 +8,7 @@ export default {
         " Ricardo wave",
         " Scavenging",
     ],
-    logo:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQGLUhB27gINVnO-8Kp78q8M3FVt9QeJb3uQ&usqp=CAU",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQGLUhB27gINVnO-8Kp78q8M3FVt9QeJb3uQ&usqp=CAU",
     oneline:
         "The Aim of this project is to tune a KTM 390 engine’s performance to achieve peak torque at a low rpm by optimising the runner length.",
     imgUrl: [
@@ -72,10 +71,9 @@ export default {
                         src="https://drive.google.com/file/d/1nRaphs4q-RpbQevu9QKVi1nmYbERs2gT/preview"
                         width="640"
                         height="480"
+                        title="Ricardo WAVE"
                     ></iframe>
-                    <figcaption>
-                        Engine specifications
-                    </figcaption>
+                    <figcaption>Engine specifications</figcaption>
                 </figure>
             </div>
         ),
@@ -94,6 +92,7 @@ export default {
                         src="https://drive.google.com/file/d/13IlcEbprdPhUr52mQLs43SjoCpZ2k6Jf/preview"
                         width="640"
                         height="480"
+                        title="Brake Torque"
                     ></iframe>
                 </li>
                 <li>
@@ -102,6 +101,7 @@ export default {
                         src="https://drive.google.com/file/d/1DUwWrmcFBSGfsKMa9cnYQG6NIcaaELVx/preview"
                         width="640"
                         height="480"
+                        title="Brake Power"
                     ></iframe>
                 </li>
                 <li>
@@ -110,6 +110,7 @@ export default {
                         src="https://drive.google.com/file/d/1piBjjf7V8a-a3Nrgiy4C53GFYCaRd-ZY/preview"
                         width="640"
                         height="480"
+                        title="Volumetric Efficiency"
                     ></iframe>
                 </li>
             </ol>
@@ -145,3 +146,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project2;

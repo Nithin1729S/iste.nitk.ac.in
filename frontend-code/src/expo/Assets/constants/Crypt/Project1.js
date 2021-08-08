@@ -1,4 +1,4 @@
-export default {
+const project1 = {
     id: 1,
     tags: ["Networking", " NDN", " Reddit", " Webdev"],
     oneline:
@@ -234,6 +234,7 @@ export default {
                             src="https://drive.google.com/file/d/19eYOi7dQOQTAnerRL8zKXl5wglBH62-q/preview"
                             width="400"
                             height="300"
+                            title="project11"
                         ></iframe>
                         <iframe
                             style={{
@@ -242,6 +243,7 @@ export default {
                             }}
                             src="https://drive.google.com/file/d/1ksduY-cptKFXZ9bsOjFrcgl-JD0KhOdE/preview"
                             width="400"
+                            title="project12"
                             height="300"
                         ></iframe>
                     </div>
@@ -267,6 +269,7 @@ export default {
                         <iframe
                             style={{ border: "1px black solid" }}
                             src="https://drive.google.com/file/d/1GKjfvI8ju2umjSomlyBWjlEvuypf-rOZ/preview"
+                            title="project13"
                             width="400"
                             height="300"
                         ></iframe>
@@ -277,6 +280,7 @@ export default {
                             }}
                             src="https://drive.google.com/file/d/1rG5peYFxck_IrMwzk65Ove-IAhQ5sC8i/preview"
                             width="400"
+                            title="project14"
                             height="300"
                         ></iframe>
                     </div>
@@ -288,6 +292,7 @@ export default {
                             style={{ border: "1px black solid" }}
                             src="https://drive.google.com/file/d/1fwm8TkNzcwWH7ElbzFascYH98fTrWLbM/preview"
                             width="400"
+                            title="project15"
                             height="300"
                         ></iframe>
                     </div>
@@ -324,3 +329,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project1;

@@ -3,7 +3,7 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 import '../../css/carousel.css';
 import { baseUrl } from '../../constants';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class HomeCarousel extends React.Component {
 	state = {};

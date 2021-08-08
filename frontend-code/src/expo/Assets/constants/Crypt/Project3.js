@@ -1,11 +1,10 @@
 import Voice from "./Voice.png";
-export default {
+const project3 = {
     id: 6,
     tags: ["image processing", "YOLO", "OpenCV", "Web Dev", "Depth Extraction"],
     oneline:
         "Assist the visually impaired by capturing images and recognising objects in their surroundings.",
-    logo:
-        "https://www.ravepubs.com/wp-content/uploads/2018/04/Voice_Control-800x418.png",
+    logo: "https://www.ravepubs.com/wp-content/uploads/2018/04/Voice_Control-800x418.png",
     name: "Voice Navigator",
     imgUrl: [
         "https://drive.google.com/file/d/1qiHjEuBHjScyfWN6tbwqY16k6MZiEiNF/preview",
@@ -71,7 +70,8 @@ export default {
                     src={Voice}
                     width="75%"
                     height="auto"
-                ></img>
+                    alt="project3 img"
+                />
                 <br />
                 Desired Result - <br />
                 <div style={{ fontWeight: "lighter" }}>
@@ -91,3 +91,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project3;

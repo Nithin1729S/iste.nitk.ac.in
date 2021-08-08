@@ -1,10 +1,9 @@
-export default {
+const project6 = {
     id: 5,
     tags: ["Deep Learning", "Image Processing"],
     oneline:
         "This project aims to achieve colorization of black and white images using Generative Adversarial Networks(GAN) and improve performance by experimenting with different models of the same.",
-    logo:
-        "https://s23527.pcdn.co/wp-content/uploads/2017/05/Screenshot-2017-05-19-17.57.37.png",
+    logo: "https://s23527.pcdn.co/wp-content/uploads/2017/05/Screenshot-2017-05-19-17.57.37.png",
     name: "B&W Image Colorization Using GANs",
     imgUrl: [
         "https://drive.google.com/file/d/1LvJmLUdpxVEaFHBFlfOttO625vjXbBf4/preview",
@@ -90,3 +89,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project6;

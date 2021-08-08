@@ -1,10 +1,9 @@
-export default {
+const project7 = {
     id: 3,
     tags: ["Deep Learning", " Recurrent Neural Networks"],
     oneline:
         "This project aims to generate hand-drawn sketches of various animals and objects by using deep learning architectures like Generative Recurrent Neural Networks and Auto-encoders. Our goal is to train machines to draw and generalize simple drawings from a simple sequence of motor actions, in a manner similar to humans.",
-    logo:
-        "https://4.bp.blogspot.com/-oAPlGiBet6s/WO6VOPRPzkI/AAAAAAAABt4/vXkP4Yy8-0guIDU6AhKfP0VdnAJBx5ssgCLcB/s1600/image11.png",
+    logo: "https://4.bp.blogspot.com/-oAPlGiBet6s/WO6VOPRPzkI/AAAAAAAABt4/vXkP4Yy8-0guIDU6AhKfP0VdnAJBx5ssgCLcB/s1600/image11.png",
     name: "SketchGen",
     imgUrl: [
         "https://drive.google.com/file/d/1KXIVJCuATWYqJAe0L-sPB3sY_aA9sa5v/preview",
@@ -105,6 +104,7 @@ export default {
                     src="https://drive.google.com/file/d/1SsAF6_8PQsXYhVHG1ahUy2-UzSvkaVC1/preview"
                     width="600"
                     height="300"
+                    title="project7"
                     style={{ border: "1px black solid", marginLeft: "20%" }}
                 ></iframe>
                 <br />
@@ -138,3 +138,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project7;

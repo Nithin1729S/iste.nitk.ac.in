@@ -1,4 +1,4 @@
-export default {
+const project6 = {
     id: 6,
     tags: [
         "candlestickpatterns",
@@ -9,8 +9,7 @@ export default {
     ],
     oneline:
         "The study on the formation of candlestick patterns was done to find out the different candlestick patterns and identify their accuracy.",
-    logo:
-        "https://thumbs.dreamstime.com/t/forex-candlestick-chart-over-dark-background-58933797.jpg",
+    logo: "https://thumbs.dreamstime.com/t/forex-candlestick-chart-over-dark-background-58933797.jpg",
     name: "Analysis on the Effectiveness of Candlestick Patterns",
     imgUrl: [
         "https://drive.google.com/file/d/1bAXQzqCeUVtVmT7Pf83mohs5lYNeCB0s/preview",
@@ -61,6 +60,7 @@ export default {
                         src="https://drive.google.com/file/d/17sl6FC0JP2BH-WOIoht0B1hrEmzC43KE/preview"
                         width="640"
                         height="480"
+                        title="Nifty Index"
                     ></iframe>
                 </center>
                 <p>
@@ -137,6 +137,7 @@ export default {
                         src="https://drive.google.com/file/d/1gDoS3G6nBNjtpNsUL03Ma-hUxFLh27M0/preview"
                         width="640"
                         height="480"
+                        title="Nifty Index2"
                     ></iframe>
                 </center>
                 <br /> <br />
@@ -145,6 +146,7 @@ export default {
                         src="https://drive.google.com/file/d/1bAXQzqCeUVtVmT7Pf83mohs5lYNeCB0s/preview"
                         width="640"
                         height="480"
+                        title="Nifty Index3"
                     ></iframe>
                 </center>
                 <p>
@@ -156,6 +158,7 @@ export default {
                         src="https://drive.google.com/file/d/1eDBtd5gjM2yKV_qNiboERYRwV__yAzRN/preview"
                         width="640"
                         height="480"
+                        title="Nifty Index4"
                     ></iframe>
                 </center>
                 <p>
@@ -169,6 +172,7 @@ export default {
                         src="https://drive.google.com/file/d/1jy-3KcoQ_6ANzR20SdV9l17oRyzaVxTi/preview"
                         width="640"
                         height="480"
+                        title="Nifty Index5"
                     ></iframe>
                 </center>
                 <p>
@@ -187,6 +191,7 @@ export default {
                         src="https://drive.google.com/file/d/1V9OdG7T2N8b-nu00ksSgk78Q8PwLG-ir/preview"
                         width="640"
                         height="480"
+                        title="Nifty Index6"
                     ></iframe>
                 </center>
                 <p>
@@ -199,6 +204,7 @@ export default {
                         src="https://drive.google.com/file/d/17vMB31no3WMkkCckqX6QIsi-eXvFIREz/preview"
                         width="640"
                         height="480"
+                        title="Nifty Index7"
                     ></iframe>
                 </center>
                 <p>
@@ -237,6 +243,7 @@ export default {
                         src="https://drive.google.com/file/d/1VzcgPgqqQCoEsVqUqn6JgXQMesUYc07g/preview"
                         width="640"
                         height="480"
+                        title="Nifty Index8"
                     ></iframe>
                 </center>
                 <p>
@@ -255,3 +262,4 @@ export default {
         ),
     },
 };
+export default project6;

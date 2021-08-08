@@ -1,10 +1,9 @@
-export default {
+const project2 = {
     id: 2,
     tags: ["STAAD Pro"],
     oneline:
         "To obtain an efficient bridge girder design with optimised materials by analysing shear force and bending moment of different self designed bridge girders using STAAD PRO.",
-    logo:
-        "https://erkrishneelram.files.wordpress.com/2015/01/il-appr-span-21-23-003.jpg",
+    logo: "https://erkrishneelram.files.wordpress.com/2015/01/il-appr-span-21-23-003.jpg",
     name: "Design of Bridge Girders-Using Euro and AASHTO codes",
     imgUrl: [],
     members: ["Rashmi Raj", "Shreehari M", "Saurabh Tiwari", "Prathap Y"],
@@ -102,3 +101,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project2;

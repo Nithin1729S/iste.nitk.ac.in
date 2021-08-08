@@ -1,4 +1,4 @@
-export default {
+const project4 = {
     id: 4,
     name: "Wireless Solar charger",
     tags: [
@@ -10,8 +10,7 @@ export default {
     ],
     oneline:
         "To build a 10W portable, wireless solar lithium-ion battery charger. To harness maximum solar energy output, achieve MPPT(Max Power Point Tracking) and charge 8.4V lithium ion cells.",
-    logo:
-        "https://w0.pngwave.com/png/414/632/solar-panels-solar-power-voltaic-system-solar-energy-voltaics-solar-inverter-png-clip-art-thumbnail.png",
+    logo: "https://w0.pngwave.com/png/414/632/solar-panels-solar-power-voltaic-system-solar-energy-voltaics-solar-inverter-png-clip-art-thumbnail.png",
     imgUrl: [
         "https://drive.google.com/file/d/1Ktt7061k5CtmltDpJkWEu9pXEPpT785V/preview",
         "https://drive.google.com/file/d/1kbAaInOYkjIlmnZRbArNxZnYoAexDxFt/preview",
@@ -100,6 +99,7 @@ export default {
                     src="https://drive.google.com/file/d/1TgT_hsuqerjQWJnRmnwasET-lA6pYpvd/preview"
                     width="640"
                     height="480"
+                    title="Simulink Model"
                 ></iframe>
                 <br />
                 Here Yellow colour line represents the input power which slowly
@@ -109,6 +109,7 @@ export default {
                     src="https://drive.google.com/file/d/1ojs_-6t9h1ITFE4IkEd8ZNJZV8qWbs5p/preview"
                     width="640"
                     height="480"
+                    title="Simulink Model2"
                 ></iframe>
                 <br />
                 In the below figure yellow plot represents the output voltage
@@ -120,6 +121,7 @@ export default {
                     src="https://drive.google.com/file/d/1W7ai43hMkHnzHiqNFjdJSbFKDpEeCAG4/preview"
                     width="640"
                     height="480"
+                    title="Simulink Model3"
                 ></iframe>
                 <br />
             </div>
@@ -127,3 +129,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project4;

@@ -1,10 +1,9 @@
-export default {
+const project4 = {
     id: 4,
     tags: ["Deep learning", " Memes", " CNN", " Webdev"],
     oneline:
         "To Generate relevant meme caption given a meme template using Neural Networks based on ‘ Dank Learning’ Paper",
-    logo:
-        "https://d3i71xaburhd42.cloudfront.net/47ec091ba9d916e391c2f4e8ec36edcb59d104d6/2-Figure1-1.png",
+    logo: "https://d3i71xaburhd42.cloudfront.net/47ec091ba9d916e391c2f4e8ec36edcb59d104d6/2-Figure1-1.png",
     name: "Dank Learning",
     imgUrl: [],
     members: [
@@ -72,3 +71,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project4;

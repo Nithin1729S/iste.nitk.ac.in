@@ -1,4 +1,4 @@
-export default {
+const project4 = {
     id: 4,
     tags: [
         "Earthquakes",
@@ -16,8 +16,7 @@ export default {
     ],
     oneline:
         "In this project, we aim at analysing a structure in a seismic zone and design an earthquake resistant structure. Designing the building using StaadPro and performing a seismic analysis is the primary objective of this project.",
-    logo:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuMLRo-seHPGygbqRRnPCId-ao08TU6OvK4g&amp;usqp=CAU",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuMLRo-seHPGygbqRRnPCId-ao08TU6OvK4g&amp;usqp=CAU",
     name: "Design and seismic analysis of a building",
     imgUrl: [
         "https://drive.google.com/file/d/1Rc8nfBp1BMktcD5dxBNbEVUZsL3iMFZR/preview",
@@ -125,6 +124,7 @@ export default {
                     src="https://drive.google.com/file/d/1BjW2E6x4n6p79mVnJYD1MxRPNKEHyWK1/preview"
                     width="640"
                     height="400"
+                    title="Top View of the building"
                 ></iframe>
                 <br />
                 <br />
@@ -133,6 +133,7 @@ export default {
                 <iframe
                     src="https://drive.google.com/file/d/1wCkrjE4bWVTqVkT7c3iCX5ESoywh9V-V/preview"
                     width="640"
+                    title="Front View of the building"
                     height="400"
                 ></iframe>
                 <br />
@@ -143,6 +144,7 @@ export default {
                     src="https://drive.google.com/file/d/1lro1NCvoTwB5av9lKOFG4UDP3Sz0_mWp/preview"
                     width="640"
                     height="400"
+                    title="Isometric View of the building"
                 ></iframe>
                 <br />
                 <br />
@@ -207,6 +209,7 @@ export default {
                     src="https://drive.google.com/file/d/1d_hrPztWCnUo4Z2ndqNHuKJ-rihBl0fk/preview"
                     width="640"
                     height="400"
+                    title="Bridge design on STAAD-Pro"
                 ></iframe>
                 <br />
                 <br />
@@ -216,6 +219,7 @@ export default {
                     src="https://drive.google.com/file/d/1J8Ia4UwdyYmHEUNEw9PFPYnFKZAr2TQC/preview"
                     width="640"
                     height="400"
+                    title="Variation of bending moment in the bridge"
                 ></iframe>
                 <br />
                 <br />
@@ -224,6 +228,7 @@ export default {
                     src="https://drive.google.com/file/d/12VhMWWQFgxAFIzkDdtiJQDz35g3XVaoC/preview"
                     width="640"
                     height="400"
+                    title="Variation of shear force across Y direction in the bridge"
                 ></iframe>
                 <br />
                 <br />
@@ -242,3 +247,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project4;

@@ -1,4 +1,4 @@
-export default {
+const project1 = {
     id: 1,
     name: "Simulation of exhaust back pressure for engine braking",
     tags: [
@@ -10,8 +10,7 @@ export default {
         " bike",
         " motorcycle",
     ],
-    logo:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ1eYTAk6JZKfgMIfWyQA9NcK5Hju0A-mGVGg&usqp=CAU",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ1eYTAk6JZKfgMIfWyQA9NcK5Hju0A-mGVGg&usqp=CAU",
     oneline:
         "To simulate the models of KTM SX-F and KTM 390 on Ricardo Wave, To find the critical length and critical plate angle of the exhaust brake for each engine, To to analyse the models of KTM SX-F and KTM 390 engines with the exhaust brake and measure the effect on braking power and other engine parameters",
     imgUrl: "",
@@ -47,20 +46,18 @@ export default {
                         src="https://drive.google.com/file/d/1zjpjxi7qOK8wHW6hs5TNfmY5MPueVKoL/preview"
                         width="640"
                         height="480"
+                        title="KTM SX-F with Exhaust Brake"
                     ></iframe>
-                    <figcaption>
-                        KTM SX-F with Exhaust Brake
-                    </figcaption>
+                    <figcaption>KTM SX-F with Exhaust Brake</figcaption>
                 </figure>
                 <figure>
                     <iframe
                         src="https://drive.google.com/file/d/17RbJsmz2JkWFRbana_zBg8BOs3oohexZ/preview"
                         width="640"
                         height="480"
+                        title="KTM 390 with Exhaust Brake"
                     ></iframe>
-                    <figcaption>
-                        KTM 390 with Exhaust Brake
-                    </figcaption>
+                    <figcaption>KTM 390 with Exhaust Brake</figcaption>
                 </figure>
             </div>
         ),
@@ -85,16 +82,19 @@ export default {
                         src="https://drive.google.com/file/d/1OxXjKxXHBDd0vqpp80w0EYmJLlLAtGhc/preview"
                         width="210"
                         height="200"
+                        title="Plate Angle was varied from 0-90"
                     ></iframe>
                     <iframe
                         src="https://drive.google.com/file/d/1VEcMYBIKB_TwsJRxGbUD6X23qAMbJ3LD/preview"
                         width="210"
                         height="200"
+                        title="Brake Power stays just above 0, at 20 degrees"
                     ></iframe>
                     <iframe
                         src="https://drive.google.com/file/d/1tOEZSVK4eSFrBbmcbAd26iM-Z9kZs9z-/preview"
                         width="210"
                         height="200"
+                        title="Now Plate Angle is varied from 10 to 20"
                     ></iframe>{" "}
                 </figure>
                 <figure>
@@ -102,16 +102,19 @@ export default {
                         src="https://drive.google.com/file/d/1aY9sUGlQgahe8Pp8onYOgwxAEMH87Bkp/preview"
                         width="210"
                         height="350"
+                        title="Brake Power stays just above 0 at 11 degrees"
                     ></iframe>
                     <iframe
                         src="https://drive.google.com/file/d/1P-wRol8i6rPOnD2JcASREeChFhXJPPU5/preview"
                         width="210"
                         height="350"
+                        title="Now Plate Angle is varied from 10 to 11"
                     ></iframe>
                     <iframe
                         src="https://drive.google.com/file/d/1BZLzMlMviPVAfSyE1FT75ptv3a46Yzcw/preview"
                         width="210"
                         height="350"
+                        title="Brake Power stays above 0 at 10.4 degrees"
                     ></iframe>
                 </figure>
                 <em>Fixing Duct 9 length</em>
@@ -135,8 +138,9 @@ export default {
                         src="https://drive.google.com/file/d/1E6DEl2nn3Xklb4ez4sY2AiEsTezP9-Gq/preview"
                         width="640"
                         height="480"
+                        title="BHP Values for Duct 9 Lengths 100 - 300mm for 12000 RPM"
                     ></iframe>
-                    <figcaption >
+                    <figcaption>
                         BHP Values for Duct 9 Lengths 100 - 300mm for 12000 RPM
                     </figcaption>
                 </figure>
@@ -145,8 +149,9 @@ export default {
                         src="https://drive.google.com/file/d/1kbl3hAU1bpFOzG-p7yfwcAcglOaqnEnQ/preview"
                         width="640"
                         height="480"
+                        title="BHP Values for Duct 9 Lengths 100 - 300mm for 9000 RPM"
                     ></iframe>
-                    <figcaption >
+                    <figcaption>
                         BHP Values for Duct 9 Lengths 100 - 125mm for 12000 RPM
                     </figcaption>
                 </figure>
@@ -170,6 +175,7 @@ export default {
                         src="https://drive.google.com/file/d/1KBW1Xjg1Zmyw16PteKhAzWqS7zvl_2V9/preview"
                         width="640"
                         height="480"
+                        title="BHP Values for Duct 8 Lengths 30 - 70mm for 12000 RPM"
                     ></iframe>
                     <figcaption>
                         BHP Values for Duct 8 Lengths 30 - 70mm for 12000 RPM
@@ -190,16 +196,19 @@ export default {
                 braking:
                 <ol>
                     <li>
-                        Brake Power vs RPM<br/>
+                        Brake Power vs RPM
+                        <br />
                         <iframe
                             src="https://drive.google.com/file/d/1hnQIUF9OGnNFlOu6h8hOu9xcfbt3vI5W/preview"
                             width="640"
                             height="480"
+                            title="Brake Power"
                         ></iframe>
                         <iframe
                             src="https://drive.google.com/file/d/1D94Ero9kRQfhDj2BpunkTBw_WAJ116D9/preview"
                             width="640"
                             height="480"
+                            title="RPM"
                         ></iframe>
                     </li>
                     <li>
@@ -211,27 +220,33 @@ export default {
                         Same percentage reduction observed
                     </li>
                     <li>
-                        Friction Heat Energy loss<br/>
+                        Friction Heat Energy loss
+                        <br />
                         <iframe
                             src="https://drive.google.com/file/d/1FXx-j3_qMKJcVvU0P6F8c9n8z0QD1QUH/preview"
                             width="640"
                             height="480"
+                            title="Friction Heat Energy loss"
                         ></iframe>
                     </li>
                     <li>
-                        Cylinder Temperatures<br/>
+                        Cylinder Temperatures
+                        <br />
                         <iframe
                             src="https://drive.google.com/file/d/1_easbA54CJBwbpg5nY-OcRaGHYRRkRWd/preview"
                             width="640"
                             height="480"
+                            title="Cylinder Temperatures"
                         ></iframe>
                     </li>
                     <li>
-                        Pressure vs Crank Angle<br/>
+                        Pressure vs Crank Angle
+                        <br />
                         <iframe
                             src="https://drive.google.com/file/d/1se2YyRCMCz45kqQdXy7cTC_vXIh_FzCU/preview"
                             width="640"
                             height="480"
+                            title="Pressure vs Crank Angle"
                         ></iframe>
                     </li>
                 </ol>
@@ -289,3 +304,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project1;

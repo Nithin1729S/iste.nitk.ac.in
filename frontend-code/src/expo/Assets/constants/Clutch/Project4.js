@@ -1,9 +1,8 @@
-export default {
+const project4 = {
     id: 4,
     name: "Alloy Recommender System",
     tags: ["ML", "Material Science"],
-    logo:
-        "https://s3.amazonaws.com/prod-www-blackline-com/blog/wp-content/uploads/2019/01/29163118/A-Conversation-With-BlackLines-Machine-Learning-Experts-720x405.jpg",
+    logo: "https://s3.amazonaws.com/prod-www-blackline-com/blog/wp-content/uploads/2019/01/29163118/A-Conversation-With-BlackLines-Machine-Learning-Experts-720x405.jpg",
     oneline:
         "Build an alloy recommender system that gives theoretical composition of a hypothetical alloy with required mechanical property",
     imgUrl: [
@@ -40,6 +39,7 @@ export default {
                     src="https://drive.google.com/file/d/1GjuvLhBriTQxIfmm6yaqyaHv9kc-fV8o/preview"
                     width="640"
                     height="480"
+                    title="Alloy Recommender System"
                 ></iframe>
                 <ol>
                     <li>
@@ -144,6 +144,7 @@ export default {
                             src="https://drive.google.com/file/d/1Iqczub3OZl4WVBZLsPJnQT6Wwjiuf8TX/preview"
                             width="640"
                             height="480"
+                            title="Genetic Algorithm"
                         ></iframe>
                         <ol>
                             <li>
@@ -181,38 +182,46 @@ export default {
         res: (
             <div>
                 Prediction plots for Shear Modulus, Density and Specific Heat
-                Capacity for Iron alloys<br/>
+                Capacity for Iron alloys
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/1r1p6LnlsxIzQuDEUn6WzQFQD0_x5J5xX/preview"
                     width="235"
                     height="200"
+                    title="Prediction Plots"
                 ></iframe>
                 <iframe
                     src="https://drive.google.com/file/d/1_QCo-3faIQWdhqF0YcgjX_qA_GwwadXS/preview"
                     width="235"
                     height="200"
+                    title="Prediction Plots2"
                 ></iframe>
                 <iframe
                     src="https://drive.google.com/file/d/1XMM3SfOqFKdYZ-80Ya3Sqt_84JIxMSes/preview"
                     width="235"
                     height="200"
+                    title="Prediction Plots3"
                 ></iframe>
                 Prediction plot for Tensile Strength(TS),Yield Strength(YS) and
-                Elongation Limit(EL) for Steels<br/>
+                Elongation Limit(EL) for Steels
+                <br />
                 <iframe
                     src="https://drive.google.com/file/d/1FqHc0FK8kDCXPWkQuA_XvTlJechB5KHV/preview"
                     width="235"
                     height="200"
+                    title="Prediction Plots4"
                 ></iframe>
                 <iframe
                     src="https://drive.google.com/file/d/1y3nr6dfS6u-xx9Iy14PkTZ_8_XjcZuZP/preview"
                     width="235"
                     height="200"
+                    title="Prediction Plots5"
                 ></iframe>
                 <iframe
                     src="https://drive.google.com/file/d/1Ek9GOAJMP2VKnjyEqc79Q9tdOV2CBeT4/preview"
                     width="235"
                     height="200"
+                    title="Prediction Plots6"
                 ></iframe>
                 Since the graphs of predicted property v/s actual property
                 closely resemble the y=x line;we conclude that our Neural
@@ -225,3 +234,4 @@ export default {
     },
     //meetLink: 'This is the meet link',
 };
+export default project4;
