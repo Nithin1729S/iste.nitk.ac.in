@@ -4,6 +4,7 @@ import SigDescription from './components/SigDescription';
 import RegisterButton from './components/RegisterButton.jsx';
 import Timeline from './components/Timeline';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
+import RoundsCard from './components/RoundsCard';
 
 import { baseRequest } from '../../constants';
 
@@ -39,6 +40,7 @@ class RecsSIGComponent extends React.Component {
 					data: res.data,
 					roundsData:res.data.rounds
 				})
+				console.log(this.state.roundsData);
 			})
 			.catch(err=>console.log(err))
 	}
@@ -54,7 +56,11 @@ class RecsSIGComponent extends React.Component {
 				<Timeline rounds={this.state.roundsData} />
 				<SigDescription sig={ this.state.sigName } desc={ this.state.data.descriptionSIG } />
 				<RegisterButton link={`${this.state.data.registerLink}`} />
-				{/*Round cards go here*/}
+				{ this.state.roundsData.map((round, index) => {
+					return (
+						<RoundsCard data={ round } key={ index }/>
+					);
+				})}
 			</>
 		);
 	}

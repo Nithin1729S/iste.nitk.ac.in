@@ -1,0 +1,16 @@
+.roundMard{
+    background-color:  var(--primary);
+    width: 25px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.roundNo{
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 100%;
+    border: 5px solid var(--primary);
+    color: #fff;
+    box-shadow: inset 0px 0px 0px 3px #fff;
+}
