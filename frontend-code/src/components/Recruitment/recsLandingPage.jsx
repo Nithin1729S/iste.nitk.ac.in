@@ -4,7 +4,7 @@ import { baseRequest } from '../../constants';
 import RecSigCards from './RecSigContainer';
 import FAQ from './components/recsLandingPage/FAQComponent';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
-import RecInstructions from './recInstructions';
+import RecInstructions from './components/recsLandingPage/Instructions Component/recInstructions';
 // import { Link } from 'react-router-dom';
 
 class RecruitmentComponent extends React.Component {
