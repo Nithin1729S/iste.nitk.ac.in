@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Timeline.css';
+import './css/Timeline.css';
 
 const Timeline = ({ rounds }) => {
 	const listItems = rounds.map((round, index) => {
