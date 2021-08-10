@@ -1,15 +1,15 @@
 .register {
-    animation: animate 2.5s infinite both;
-    font-family: "GothamPro";
+	animation: animate 2s infinite both;
+	font-family: 'GothamPro';
 }
 @keyframes animate {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

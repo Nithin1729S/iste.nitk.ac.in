@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { questions } from '../../../dummyData';
 import SingleQuestion from './Question';
+import TitleWithLine from '../../../../RenderingComponents/TitleWithLine';
 
 const FAQ = () => {
 	//const [questions, setQuestions] = useState(data)
 	//console.log(questions);
 	return (
 		<div className="container">
-			<h3>FAQ</h3>
+			<TitleWithLine title="FAQ" />
 			<section className="info">
 				{questions.map((question) => {
-					console.log(question);
+					// console.log(question);
 					return <SingleQuestion key={question.id} {...question} />;
 				})}
 			</section>

@@ -41,19 +41,50 @@ export const sigs = [
 
 export const questions = [
 	{
-		question: 'How many programmers does it take to screw in a lightbulb?',
-		answer: "None. We don't address hardware issues.",
+		question: 'Can I apply for multiple SIGs?',
+		answer:
+			'Yes. You can apply for as many SIGs as you want to. Fill out the form for each SIG you want to apply for separately.',
 		open: true,
 	},
 	{
-		question: 'Who is the most awesome person?',
-		answer: 'You. The Viewer.',
+		question: 'How will I know if I am selected for the next round?',
+		answer:
+			'You will receive an email and a message on WhatsApp regarding your selection for each round.',
 		open: false,
 	},
 	{
-		question: 'How many questions does it take to make a successful FAQ Page?',
-		answer: 'This many.',
+		question:
+			'Where can I view the details of the recruitment process for a SIG?',
+		answer:
+			'Click the respective SIG card in the above panel to view the recruitment details! \n Additionally, if you want to see details about a particular SIG, use the drop-down on the navbar!',
 		open: false,
+	},
+	{
+		question: 'Does ISTE recruit 3rd years?',
+		answer:
+			'Yes we do! We do consider exceptional 3rd year candidates as well. However, a majority of our intake will comprise of 2nd years.',
+		open: false,
+	},
+	{
+		question: 'I have a query not listed here, who can I contact?',
+		answer: (
+			<>
+				Feel free to contact anyone below if you have any other doubts:<br></br>
+				<ul style={{ paddingLeft: '5%' }}>
+					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
+						Amodh Shenoy: 9110837927
+					</li>
+					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
+						Amodh Shenoy: 9110837927
+					</li>{' '}
+					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
+						Amodh Shenoy: 9110837927
+					</li>
+				</ul>
+			</>
+		),
+
+		open: true,
 	},
 ];
 
