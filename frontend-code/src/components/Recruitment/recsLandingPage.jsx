@@ -31,7 +31,7 @@ class RecruitmentComponent extends React.Component {
 	render() {
 		return (
 			<div>
-				<div style={{ marginBottom: '50px' }}>
+				<div style={{ marginBottom: '5vh' }}>
 					<RecInstructions />
 				</div>
 				<TitleWithLine title="Special Interest Groups SIG(s)" />
@@ -40,7 +40,7 @@ class RecruitmentComponent extends React.Component {
 						<RecSigCards cardList={this.state.sigCardData} linkOuter="/recs/" />
 					)}
 				</div>
-				<div style={{ marginBottom: '50px' }}>
+				<div style={{ marginBottom: '5vh' }}>
 					<FAQ />
 				</div>
 			</div>

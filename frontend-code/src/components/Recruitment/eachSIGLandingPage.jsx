@@ -7,20 +7,11 @@ import TitleWithLine from '../RenderingComponents/TitleWithLine';
 import RoundsCard from './components/eachSIGLandingPage/RoundsCard';
 
 import { baseRequest } from '../../constants';
+import { sigs } from './dummyData';
 
 class RecsSIGComponent extends React.Component {
 	constructor(props) {
 		super(props);
-		const sigs = [
-			'Catalyst',
-			'Crypt',
-			'Create',
-			'Clutch',
-			'Chronicle',
-			'Charge',
-			'Concrete',
-			'Credit',
-		];
 		let curSIGname = 'Catalyst';
 		if (typeof this.props.match.params !== 'undefined') {
 			let cur = this.props.match.params.name;
@@ -48,6 +39,18 @@ class RecsSIGComponent extends React.Component {
 
 	componentDidMount() {
 		this.fetchRecs();
+	}
+
+	// In case the param changes but the state does not change
+	componentDidUpdate() {
+		let curSIGname = 'Catalyst';
+		if (typeof this.props.match.params !== 'undefined') {
+			let cur = this.props.match.params.name;
+			if (sigs.includes(cur)) curSIGname = cur;
+		}
+		if (curSIGname !== this.state.sigName) {
+			this.setState({ sigName: curSIGname });
+		}
 	}
 
 	render() {

@@ -28,7 +28,7 @@ export const dummy = {
 	],
 };
 
-export const SIGs = [
+export const sigs = [
 	'Crypt',
 	'Credit',
 	'Catalyst',
@@ -39,27 +39,27 @@ export const SIGs = [
 	'Charge',
 ];
 
-export const questions=[
+export const questions = [
 	{
 		question: 'How many programmers does it take to screw in a lightbulb?',
-		answer: 'None. We don\'t address hardware issues.',
-		open: true
+		answer: "None. We don't address hardware issues.",
+		open: true,
 	},
 	{
 		question: 'Who is the most awesome person?',
 		answer: 'You. The Viewer.',
-		open: false
+		open: false,
 	},
 	{
 		question: 'How many questions does it take to make a successful FAQ Page?',
 		answer: 'This many.',
-		open: false
-	}
+		open: false,
+	},
 ];
 
 export const instructions = [
-	{instruction: "Instrction 1"},
-	{instruction: "Instrction 2"},
-	{instruction: "Instrction 3"},
-	{instruction: "Instrction 4"},
-]
+	{ instruction: 'Instrction 1' },
+	{ instruction: 'Instrction 2' },
+	{ instruction: 'Instrction 3' },
+	{ instruction: 'Instrction 4' },
+];
