@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { baseRequest } from '../../constants';
-import RecSigCards from './RecSigContainer';
+import RecSigCards from './components/recsLandingPage/Cards Component/RecSigContainer';
 import FAQ from './components/recsLandingPage/FAQComponent';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
 import RecInstructions from './components/recsLandingPage/Instructions Component/recInstructions';
