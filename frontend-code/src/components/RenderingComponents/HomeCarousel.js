@@ -2,7 +2,7 @@ import React from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 import '../../css/carousel.css';
-import { baseUrl } from '../../constants';
+import { baseUrl, enableRecs } from '../../constants';
 import { Link } from 'react-router-dom';
 
 class HomeCarousel extends React.Component {
@@ -38,15 +38,16 @@ class HomeCarousel extends React.Component {
 		});
 
 		// Uncomment and use when necessary
-		// let button = (
-		// 	<div className="carousel-fixed-item center">
-		// 		<Link to="/recs" className="btn white-text dark">
-		// 			APPLY FOR RECRUITMENTS!
-		// 		</Link>
-		// 	</div>
-		// );
+		let button = enableRecs ? (
+			<div className="carousel-fixed-item center">
+				<Link to="/recs" className="btn white-text dark">
+					APPLY FOR RECRUITMENTS!
+				</Link>
+			</div>
+		) : (
+			<></>
+		);
 
-		let button = <></>;
 		return (
 			<>
 				<div className="carousel carousel-slider slides" id="desktop-carousel">

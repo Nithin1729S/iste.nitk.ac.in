@@ -5,6 +5,7 @@ import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
+import { enableRecs } from '../../constants';
 
 class Header extends React.Component {
 	state = { loggedInName: '' };
@@ -97,57 +98,57 @@ class Header extends React.Component {
 			</a>
 		</li>
 	);
-	transcendNavHeaderMobile = (
-		<li className="no-padding">
-			<ul className="collapsible collapsible-accordion">
-				<li>
-					<Link className="collapsible-header waves-effect white-text">
-						Transcend
-						<i className="material-icons white-text ">arrow_drop_down</i>
-					</Link>
-					<div className="collapsible-body">
-						<ul>
-							<li>
-								<Link to={`/transcend`} className="waves-effect white-text">
-									Home
-								</Link>
-							</li>
-							<li>
-								<Link
-									to={`/transcend/crypt/1`}
-									className="waves-effect white-text"
-								>
-									Cryptonite
-								</Link>
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-		</li>
-	);
-	transcendNavHeader = (
-		<>
-			<li>
-				<Link className="dropdown-trigger" data-target="transcend-action">
-					Transcend
-					<i className="material-icons right">arrow_drop_down</i>
-				</Link>
-			</li>
-			<ul id="transcend-action" className="dropdown-content frontsig">
-				<li>
-					<Link to={`/transcend`} className="waves-effect white-text">
-						Home
-					</Link>
-				</li>
-				<li>
-					<Link to={`/transcend/crypt/1`} className="waves-effect white-text">
-						Cryptonite
-					</Link>
-				</li>
-			</ul>
-		</>
-	);
+	// transcendNavHeaderMobile = (
+	// 	<li className="no-padding">
+	// 		<ul className="collapsible collapsible-accordion">
+	// 			<li>
+	// 				<Link className="collapsible-header waves-effect white-text">
+	// 					Transcend
+	// 					<i className="material-icons white-text ">arrow_drop_down</i>
+	// 				</Link>
+	// 				<div className="collapsible-body">
+	// 					<ul>
+	// 						<li>
+	// 							<Link to={`/transcend`} className="waves-effect white-text">
+	// 								Home
+	// 							</Link>
+	// 						</li>
+	// 						<li>
+	// 							<Link
+	// 								to={`/transcend/crypt/1`}
+	// 								className="waves-effect white-text"
+	// 							>
+	// 								Cryptonite
+	// 							</Link>
+	// 						</li>
+	// 					</ul>
+	// 				</div>
+	// 			</li>
+	// 		</ul>
+	// 	</li>
+	// );
+	// transcendNavHeader = (
+	// 	<>
+	// 		<li>
+	// 			<Link className="dropdown-trigger" data-target="transcend-action">
+	// 				Transcend
+	// 				<i className="material-icons right">arrow_drop_down</i>
+	// 			</Link>
+	// 		</li>
+	// 		<ul id="transcend-action" className="dropdown-content frontsig">
+	// 			<li>
+	// 				<Link to={`/transcend`} className="waves-effect white-text">
+	// 					Home
+	// 				</Link>
+	// 			</li>
+	// 			<li>
+	// 				<Link to={`/transcend/crypt/1`} className="waves-effect white-text">
+	// 					Cryptonite
+	// 				</Link>
+	// 			</li>
+	// 		</ul>
+	// 	</>
+	// );
 	smpNavHeader = (
 		<li>
 			<Link to="/smp" className="white-text">
@@ -313,7 +314,7 @@ class Header extends React.Component {
 					{this.teamNavHeader}
 					{this.blogNavHeader}
 					{this.expoNavHeader}
-					{/* {this.recsNavHeader} */}
+					{enableRecs ? this.recsNavHeader : null}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
 				</ul>
@@ -347,7 +348,7 @@ class Header extends React.Component {
 								{this.teamNavHeader}
 								{this.blogNavHeader}
 								{this.expoNavHeader}
-								{/* {this.recsNavHeader} */}
+								{enableRecs ? this.recsNavHeader : null}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
 							</ul>

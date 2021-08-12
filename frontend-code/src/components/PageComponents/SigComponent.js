@@ -6,7 +6,7 @@ import { Link, withRouter } from 'react-router-dom';
 import SigProjectCard from '../RenderingComponents/SigProjectCard';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
 import '../../css/sigComponent.css';
-import { baseRequest, baseUrl } from '../../constants';
+import { baseRequest, baseUrl, enableRecs } from '../../constants';
 
 class SigComponent extends React.Component {
 	constructor(props) {
@@ -65,15 +65,15 @@ class SigComponent extends React.Component {
 	}
 	render() {
 		// Uncomment and use when necessary
-		let button = (
+		let button = enableRecs ? (
 			<div className="center">
 				<Link to={`/recs/${this.state.name}`} className="btn white-text dark">
 					APPLY FOR RECRUITMENTS!
 				</Link>
 			</div>
+		) : (
+			<></>
 		);
-
-		button = <></>;
 
 		if (this.state.projectData != null) {
 			return (

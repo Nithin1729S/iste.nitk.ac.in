@@ -8,3 +8,5 @@ export const baseUrl = 'https://iste.nitk.ac.in/api';
 export const baseRequest = axios.create({
 	baseURL: baseUrl,
 });
+
+export const enableRecs = false;
