@@ -1,26 +1,47 @@
 .sigComponent .video-container {
-  width:100%;
-  height: auto;
-  align-items: center;
+	width: 100%;
+	height: auto;
+	align-items: center;
 }
 
-.sigComponent{
-  padding-top: 5vh;
+.sigComponent {
+	padding-top: 5vh;
 }
 
 .videotitle {
-  font-weight: lighter;
+	font-weight: lighter;
 }
 
 .description {
-  line-height: 1.5;
-  text-align: justify;
-  padding:5%;
-  font-weight: lighter;
+	line-height: 1.5;
+	text-align: justify;
+	padding: 5%;
+	font-weight: lighter;
 }
 
+h3,
+h4 {
+	font-weight: lighter;
+	color: var(--primary);
+}
 
-h3, h4{
-  font-weight: lighter;
-  color:var(--primary)
+.btn {
+	background-color: var(--primary) !important;
+	animation: animate 2.5s infinite both;
+}
+
+.btn:hover {
+	background-color: var(--primaryDarker) !important;
+}
+
+@keyframes animate {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.08);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

@@ -27,7 +27,7 @@ class SigProjectCard extends React.Component {
 			</div>
 		);
 		const imageCircleSmall = (
-			<div className="col hide-on-large-only s12 proj-image">
+			<div className="col hide-on-large-only s12 proj-image center">
 				<img src={imgUrl} className="responsive-img cardImage center" alt="" />
 			</div>
 		);

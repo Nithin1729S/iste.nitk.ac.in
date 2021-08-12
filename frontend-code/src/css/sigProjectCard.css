@@ -14,7 +14,6 @@
 
 @media only screen and (max-width: 1260px) {
 	.cardImage {
-		padding-left: 5%;
 		width: 95%;
 		padding-top: 10%;
 		padding-bottom: 5%;
@@ -26,8 +25,7 @@
 	}
 }
 .cardImage {
-	
-	aspect-ratio: 1/1;
+	aspect-ratio: 1/1 !important;
 }
 .descCard {
 	padding-left: 5%;

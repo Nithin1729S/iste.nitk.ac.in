@@ -1,7 +1,7 @@
 import React from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import SigProjectCard from '../RenderingComponents/SigProjectCard';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
@@ -61,9 +61,20 @@ class SigComponent extends React.Component {
 			this.state.projectData[0] !== undefined
 		)
 			this.setState({ projectsThere: true });
-		console.log(this.state.projectData);
+		// console.log(this.state.projectData);
 	}
 	render() {
+		// Uncomment and use when necessary
+		let button = (
+			<div className="center">
+				<Link to={`/recs/${this.state.name}`} className="btn white-text dark">
+					APPLY FOR RECRUITMENTS!
+				</Link>
+			</div>
+		);
+
+		button = <></>;
+
 		if (this.state.projectData != null) {
 			return (
 				<div className="sigComponent">
@@ -71,7 +82,7 @@ class SigComponent extends React.Component {
 						<div className="col l12 s12">
 							<TitleWithLine title={this.state.name} />
 						</div>
-
+						{button}
 						{/* This is the Image for the SIG, uncomment if video in not activated. 
 						<div className="col l12 s12">
 							<img

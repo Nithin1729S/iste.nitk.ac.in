@@ -36,22 +36,25 @@ class HomeCarousel extends React.Component {
 				</a>
 			);
 		});
+
+		// Uncomment and use when necessary
+		// let button = (
+		// 	<div className="carousel-fixed-item center">
+		// 		<Link to="/recs" className="btn white-text dark">
+		// 			APPLY FOR RECRUITMENTS!
+		// 		</Link>
+		// 	</div>
+		// );
+
+		let button = <></>;
 		return (
 			<>
 				<div className="carousel carousel-slider slides" id="desktop-carousel">
-					<div className="carousel-fixed-item center">
-						<Link to="/recs" className="btn white-text dark">
-							APPLY FOR RECRUITMENTS!
-						</Link>
-					</div>
+					{button}
 					{carouselContent}
 				</div>
 				<div className="carousel carousel-slider slides" id="mobile-carousel">
-					<div className="carousel-fixed-item center">
-						<Link to="/recs" className="btn white-text dark">
-							APPLY FOR RECRUITMENTS!
-						</Link>
-					</div>
+					{button}
 					{carouselContent}
 				</div>
 			</>
