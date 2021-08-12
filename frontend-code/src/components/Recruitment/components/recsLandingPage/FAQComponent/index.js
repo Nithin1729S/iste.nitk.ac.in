@@ -1,5 +1,5 @@
 import React from 'react';
-import { questions } from '../../../dummyData';
+import { questions } from '../../../constants';
 import SingleQuestion from './Question';
 import TitleWithLine from '../../../../RenderingComponents/TitleWithLine';
 

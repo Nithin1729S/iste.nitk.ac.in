@@ -3,7 +3,7 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 import '../../css/carousel.css';
 import { baseUrl } from '../../constants';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class HomeCarousel extends React.Component {
 	state = {};
@@ -39,19 +39,19 @@ class HomeCarousel extends React.Component {
 		return (
 			<>
 				<div className="carousel carousel-slider slides" id="desktop-carousel">
-					{/* <div className="carousel-fixed-item center">
-						<Link to="/transcend" className="btn white-text dark">
-							REGISTER FOR TRANSCEND!
+					<div className="carousel-fixed-item center">
+						<Link to="/recs" className="btn white-text dark">
+							APPLY FOR RECRUITMENTS!
 						</Link>
-					</div> */}
+					</div>
 					{carouselContent}
 				</div>
 				<div className="carousel carousel-slider slides" id="mobile-carousel">
-					{/* <div className="carousel-fixed-item center">
-						<Link to="/transcend" className="btn white-text dark">
-							REGISTER FOR TRANSCEND!
+					<div className="carousel-fixed-item center">
+						<Link to="/recs" className="btn white-text dark">
+							APPLY FOR RECRUITMENTS!
 						</Link>
-					</div> */}
+					</div>
 					{carouselContent}
 				</div>
 			</>

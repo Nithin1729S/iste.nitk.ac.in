@@ -88,9 +88,4 @@ export const questions = [
 	},
 ];
 
-export const instructions = [
-	{ instruction: 'Instrction 1' },
-	{ instruction: 'Instrction 2' },
-	{ instruction: 'Instrction 3' },
-	{ instruction: 'Instrction 4' },
-];
+export const instructions = ['Instruction1', 'Instruction2', 'Instruction3'];

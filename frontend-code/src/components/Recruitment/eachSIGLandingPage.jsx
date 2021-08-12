@@ -7,7 +7,7 @@ import TitleWithLine from '../RenderingComponents/TitleWithLine';
 import RoundsCard from './components/eachSIGLandingPage/RoundsCard';
 
 import { baseRequest } from '../../constants';
-import { sigs } from './dummyData';
+import { sigs } from './constants';
 
 class RecsSIGComponent extends React.Component {
 	constructor(props) {
