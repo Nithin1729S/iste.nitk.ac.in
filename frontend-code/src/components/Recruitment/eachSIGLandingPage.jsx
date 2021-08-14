@@ -32,7 +32,6 @@ class RecsSIGComponent extends React.Component {
 					data: res.data,
 					roundsData: res.data.rounds,
 				});
-				console.log(this.state.roundsData);
 			})
 			.catch((err) => console.log(err));
 	}
