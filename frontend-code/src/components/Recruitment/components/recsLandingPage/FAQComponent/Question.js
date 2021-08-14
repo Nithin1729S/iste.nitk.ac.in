@@ -5,7 +5,7 @@ import styles from './css/Question.module.css';
 
 function Question(data) {
 	const [expanded, setExpanded] = useState(data.open);
-	console.log(data);
+	
 	return (
 		<div className="container row">
 			<header>
