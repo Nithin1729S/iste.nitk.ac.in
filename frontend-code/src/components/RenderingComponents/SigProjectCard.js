@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import parse from 'html-react-parser';
 import '../../css/sigProjectCard.css';
 
 class SigProjectCard extends React.Component {
@@ -68,7 +68,7 @@ class SigProjectCard extends React.Component {
 				<div className="row">
 					<h4 className="center">{name}</h4>
 					<h6 className="descCard">
-						<span>{description}</span>
+						<span>{parse(description)}</span>
 					</h6>
 					<div className="row center">
 						{toolsUsed}
