@@ -1,51 +1,51 @@
-import React from "react";
-import { Switch, Route, HashRouter } from "react-router-dom";
+import React from 'react';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 
-import TestUI from "./UI/TestNewUIElement";
-import ScrollToTop from "./UtilityComponents/ScrollToTop";
-import Wrapper from "./UtilityComponents/Wrapper";
-import Header from "./RenderingComponents/Header";
-import Footer from "./RenderingComponents/Footer";
-import HomeComponent from "./PageComponents/HomeComponent";
-import EventComponent from "./PageComponents/EventComponent";
-import SigComponent from "./PageComponents/SigComponent";
-import TeamComponent from "./PageComponents/TeamComponent";
-import ProjectComponent from "./PageComponents/ProjectComponent";
-import LoginComponent from "./PageComponents/LoginComponent";
-import EventDetails from "./PageComponents/EventDetails";
-import EventAdd from "./PageComponents/EventAdd";
-import ExpoHomeComponent from "../expo/Components/ExpoHomeComponent";
-import DescPage from "../expo/Components/DescPage";
+import TestUI from './UI/TestNewUIElement';
+import ScrollToTop from './UtilityComponents/ScrollToTop';
+import Wrapper from './UtilityComponents/Wrapper';
+import Header from './RenderingComponents/Header';
+import Footer from './RenderingComponents/Footer';
+import HomeComponent from './PageComponents/HomeComponent';
+import EventComponent from './PageComponents/EventComponent';
+import SigComponent from './PageComponents/SigComponent';
+import TeamComponent from './PageComponents/TeamComponent';
+import ProjectComponent from './PageComponents/ProjectComponent';
+import LoginComponent from './PageComponents/LoginComponent';
+import EventDetails from './PageComponents/EventDetails';
+import EventAdd from './PageComponents/EventAdd';
+import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
+import DescPage from '../expo/Components/DescPage';
 // import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
 // import Transcend from './Transcend';
 // import Cryptonite from './Transcend/Cryptonite';
-import RecruitmentComponent from "./Recruitment/recsLandingPage.jsx";
-import RecsSIGComponent from "./Recruitment/eachSIGLandingPage";
+import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
+import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
-import "../css/constants.css";
+import '../css/constants.css';
 
 class App extends React.Component {
-    state = { headerShouldRender: true, footerBackgroundVariant: "" };
-    changeHeaderFooterStatus = (val) => {
-        this.setState({ headerShouldRender: val });
-    };
-    changeFooterBackground = (val) => {
-        this.setState({ footerBackgroundVariant: val });
-    };
-    render() {
-        return (
-            <HashRouter>
-                <ScrollToTop />
-                <Wrapper shouldRender={this.state.headerShouldRender}>
-                    <Header />
-                </Wrapper>
-                <div className="app-main">
-                    {/* <Route path="/transcend"  component={Transcend} /> */}
-                    {/* <Route path="/smp"  component={SGPComponent} /> */}
-                    {/* <Route path="/smp/:name"  component={SGPSigComponent} /> */}
-                    {/* <Route
+	state = { headerShouldRender: true, footerBackgroundVariant: '' };
+	changeHeaderFooterStatus = (val) => {
+		this.setState({ headerShouldRender: val });
+	};
+	changeFooterBackground = (val) => {
+		this.setState({ footerBackgroundVariant: val });
+	};
+	render() {
+		return (
+			<HashRouter>
+				<ScrollToTop />
+				<Wrapper shouldRender={this.state.headerShouldRender}>
+					<Header />
+				</Wrapper>
+				<div className="app-main">
+					{/* <Route path="/transcend"  component={Transcend} /> */}
+					{/* <Route path="/smp"  component={SGPComponent} /> */}
+					{/* <Route path="/smp/:name"  component={SGPSigComponent} /> */}
+					{/* <Route
 						path="/transcend/crypt/:id"
 						
 						render={(props) => (
@@ -55,47 +55,38 @@ class App extends React.Component {
 							/>
 						)}
 					/> */}
-                    <Switch>
-                        <Route path="/test" component={TestUI} />
-                        <Route
-                            path="/expo"
-                            render={(props) => (
-                                <ExpoHomeComponent
-                                    {...props}
-                                    setHeaderFooterStatus={(val) =>
-                                        this.changeHeaderFooterStatus(val)
-                                    }
-                                />
-                            )}
-                        />
-                        {/* <Route path="/leaderboard"  component={LeaderboardComponent} /> */}
-                        <Route path="/expo/:name" component={DescPage} />
-                        <Route path="/sig/:name" component={SigComponent} />
-                        <Route path="/team" component={TeamComponent} />
-                        <Route
-                            path="/project/:id"
-                            component={ProjectComponent}
-                        />
-                        <Route path="/login" component={LoginComponent} />
-                        <Route
-                            path="/event/view/:name"
-                            component={EventDetails}
-                        />
-                        <Route path="/event/add" component={EventAdd} />
-                        <Route path="/event" component={EventComponent} />
-                        <Route
-                            path="/recs/:name"
-                            component={RecsSIGComponent}
-                        />
-                        <Route path="/recs" component={RecruitmentComponent} />
-                        <Route path="/" component={HomeComponent} />
-                    </Switch>
-                </div>
-                <Wrapper shouldRender={this.state.headerShouldRender}>
-                    <Footer value={this.state.footerBackgroundVariant} />
-                </Wrapper>
-            </HashRouter>
-        );
-    }
+					<Switch>
+						<Route path="/test" component={TestUI} />
+						<Route
+							path="/expo"
+							render={(props) => (
+								<ExpoHomeComponent
+									{...props}
+									setHeaderFooterStatus={(val) =>
+										this.changeHeaderFooterStatus(val)
+									}
+								/>
+							)}
+						/>
+						{/* <Route path="/leaderboard"  component={LeaderboardComponent} /> */}
+						<Route path="/expoPage/:name" component={DescPage} />
+						<Route path="/sig/:name" component={SigComponent} />
+						<Route path="/team" component={TeamComponent} />
+						<Route path="/project/:id" component={ProjectComponent} />
+						<Route path="/login" component={LoginComponent} />
+						<Route path="/event/view/:name" component={EventDetails} />
+						<Route path="/event/add" component={EventAdd} />
+						<Route path="/event" component={EventComponent} />
+						<Route path="/recs/:name" component={RecsSIGComponent} />
+						<Route path="/recs" component={RecruitmentComponent} />
+						<Route path="/" component={HomeComponent} />
+					</Switch>
+				</div>
+				<Wrapper shouldRender={this.state.headerShouldRender}>
+					<Footer value={this.state.footerBackgroundVariant} />
+				</Wrapper>
+			</HashRouter>
+		);
+	}
 }
 export default App;
