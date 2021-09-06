@@ -15,8 +15,8 @@ def roundInfo(request,sig_name):
     sig = SIG.objects.get(
         name=sig_name )
     objRegLink = RegLink.objects.get(sig=sig)
-    context['registerLink'] = objRegLink.descriptionSIG
-    context['descriptionSIG'] = objRegLink.link
+    context['registerLink'] = objRegLink.link
+    context['descriptionSIG'] = objRegLink.descriptionSIG 
     roundData = Round.objects.filter(
         sig=sig,
     ).order_by('date_time')
