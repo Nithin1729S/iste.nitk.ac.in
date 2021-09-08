@@ -5,8 +5,8 @@ import styles from './css/sigDesc.module.css';
 class SigDescription extends Component {
 	render() {
 		return (
-			<div className={`row ${styles.container}`}>
-				<div className={`col card center z-index-3`}>
+			<div className={`row ${styles.containerSig}`}>
+				<div className={`col s10  offset-s1 card center z-index-3`}>
 					<div className="card-content col s12">
 						<p className={`${styles.descText}`}>{this.props.desc}</p>
 					</div>

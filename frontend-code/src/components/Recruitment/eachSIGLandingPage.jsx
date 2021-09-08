@@ -2,7 +2,7 @@ import React from 'react';
 
 import SigDescription from './components/eachSIGLandingPage/SigDescription';
 import RegisterButton from './components/eachSIGLandingPage/RegisterButton.jsx';
-import Timeline from './components/eachSIGLandingPage/Timeline';
+import Timeline from './components/eachSIGLandingPage/Timeline.jsx';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
 import RoundsCard from './components/eachSIGLandingPage/RoundsCard';
 
@@ -56,6 +56,7 @@ class RecsSIGComponent extends React.Component {
 		return (
 			<>
 				<TitleWithLine title={this.state.sigName} />
+				
 				<Timeline rounds={this.state.roundsData} />
 				<SigDescription
 					sig={this.state.sigName}

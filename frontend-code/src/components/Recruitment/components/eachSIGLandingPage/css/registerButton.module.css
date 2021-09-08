@@ -1,6 +1,7 @@
 .register {
 	animation: animate 2s infinite both;
 	font-family: 'GothamPro';
+	margin-bottom: 20px;
 }
 @keyframes animate {
 	0% {

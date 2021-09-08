@@ -1,8 +1,10 @@
- .container{
+.containerSig{
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 60vw;
-    padding: 25px;
 } 
 .descText{
+    word-wrap: break-word;
     font-size: 1.3rem;
     color: rgba(0, 0, 0, 0.75);
     text-align: justify;
@@ -91,8 +93,8 @@
 
 
 @media only screen and (max-width:  600px) {
-    .container{
-        width: 90%;
+    .containerSig{
+        width: 90vw;
     }
     .descText{
         font-size: 1rem;
