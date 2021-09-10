@@ -11,8 +11,8 @@ class SigDescription extends Component {
 						<p className={`${styles.descText}`}>{this.props.desc}</p>
 					</div>
 					<div className="row"></div>
-					<div className="btnContainer">
-						<Link to={`/expo/`}>
+					<div className={styles.btnContainer}>
+						<Link to={`/expo/`} target="_blank">
 							<button
 								className={`waves-effect waves-light btn z-depth-0 ${styles.btn}`}
 							>
@@ -24,7 +24,7 @@ class SigDescription extends Component {
 								Expo
 							</button>
 						</Link>
-						<Link to={`/sig/${this.props.sig}`}>
+						<Link to={`/sig/${this.props.sig}`} target="_blank">
 							<button
 								className={`waves-effect waves-light btn z-depth-0 ${styles.btn} ${styles.btnprj}`}
 							>

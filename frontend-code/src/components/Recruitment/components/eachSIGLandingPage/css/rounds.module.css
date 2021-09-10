@@ -1,16 +1,35 @@
-.roundMard{
-    background-color:  var(--primary);
-    width: 25px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.roundMard {
+	background-color: var(--primary);
+	width: 25px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.roundNo{
-    font-size: 1.5rem;
-    padding: 10px;
-    border-radius: 100%;
-    border: 5px solid var(--primary);
-    color: #fff;
-    box-shadow: inset 0px 0px 0px 3px #fff;
+.roundNo {
+	font-size: 1.5rem;
+	padding: 10px;
+	border-radius: 100%;
+	border: 5px solid var(--primary);
+	color: #fff;
+	box-shadow: inset 0px 0px 0px 3px #fff;
+}
+
+.description {
+	font-weight: 300;
+}
+
+.date {
+	font-weight: 350;
+	font-size: 1.5rem;
+	padding-top: 0;
+}
+
+.heading {
+	padding-top: 0 !important;
+}
+
+.mainCard {
+	width: 70vw !important;
+	padding-bottom: 1vh;
 }

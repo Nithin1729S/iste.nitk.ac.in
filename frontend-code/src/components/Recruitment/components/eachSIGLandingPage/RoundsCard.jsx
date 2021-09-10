@@ -10,19 +10,19 @@ function formattedDate(date) {
 
 const RoundsCard = ({ data }) => {
 	return (
-		<div className="container" style={{ width: '70vw' }}>
+		<div className={`container ${Styles.mainCard}`}>
 			<div className="col s12 m7">
 				<div className="card horizontal">
 					<div className={`card-image ${Styles.roundMard}`}>
 						<p className={`${Styles.roundNo}`}> </p>
 					</div>
 					<div className="card-stacked">
-						<div className="card-content">
+						<div className={`card-content ${Styles.heading}`}>
 							<h3>{data.name}</h3>
-							<h5 className="center">
+							<h5 className={`center ${Styles.date}`}>
 								{formattedDate(new Date(data.date_time))}
 							</h5>
-							<p>{data.description}</p>
+							<p className={Styles.description}>{data.description}</p>
 						</div>
 					</div>
 				</div>

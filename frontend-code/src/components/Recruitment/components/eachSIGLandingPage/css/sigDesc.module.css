@@ -1,123 +1,123 @@
-.containerSig{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 60vw;
-} 
-.descText{
-    word-wrap: break-word;
-    font-size: 1.3rem;
-    color: rgba(0, 0, 0, 0.75);
-    text-align: justify;
+.containerSig {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 60vw;
 }
-.arrow{
-    font-size:0.9rem;
-    display: flex;
-    margin: 0;
-    top: 50%;
-    transform: translateY(-50%);
+
+.descText {
+	word-wrap: break-word;
+	font-size: 1.3rem;
+	color: rgba(0, 0, 0, 0.75);
+	text-align: justify;
+}
+.arrow {
+	font-size: 0.9rem;
+	display: flex;
+	margin: 0;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .arrow span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-top: 3px solid #fff;
-    border-left: 3px solid #fff;
-    transform: rotate(-45deg);
-    animation: animate 2s infinite;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-top: 3px solid #fff;
+	border-left: 3px solid #fff;
+	transform: rotate(-45deg);
+	animation: animateArrow 1s infinite;
 }
 .arrowRight span {
-    border-top: 0;
-    border-left: 0;
-    border-bottom: 3px solid #fff;
-    border-right: 3px solid #fff;
+	border-top: 0;
+	border-left: 0;
+	border-bottom: 3px solid #fff;
+	border-right: 3px solid #fff;
 }
 .arrow span:nth-child(1) {
-    margin-left: -10px;
+	margin-left: -10px;
 }
 .arrow span:nth-child(2) {
-    animation-delay: 0.2s;
+	animation-delay: 0.2s;
 }
 .arrow span:nth-child(3) {
-    animation-delay: 0.4s;
+	animation-delay: 0.4s;
 }
-
-
 
 .arrowRight span:nth-child(1) {
-    animation-delay: 0.4s;
+	animation-delay: 0.4s;
 }
 .arrowRight span:nth-child(2) {
-    animation-delay: 0.2s;
+	animation-delay: 0.2s;
 }
 .arrowRight span:nth-child(3) {
-    margin-right: 20px;
-    animation-delay: 0s;
+	margin-right: 20px;
+	animation-delay: 0s;
 }
 
-
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotate(-45deg) translate(0px, 20px);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(-45deg) translate(0px, 20px);
-    }
+@keyframes animateArrow {
+	0% {
+		opacity: 0;
+		transform: rotate(-45deg) translate(0px, 20px);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(-45deg) translate(0px, 20px);
+	}
 }
-.btn{
-    height: auto;
-    width: 250px;
-    line-height: 1.8;
-    padding: 15px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: "GothamPro";
-    margin:10px;
-    margin-bottom:25px;
-    border-radius:0.2em;
-}
-
-
-.btnContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: space-between;
-    margin: 20px;
-    padding:20px;
+.btn {
+	height: auto;
+	width: 250px;
+	line-height: 1.8;
+	padding: 15px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	font-family: 'GothamPro';
+	margin: 10px;
+	margin-bottom: 25px;
+	border-radius: 0.2em;
 }
 
+.btnContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: space-between;
+	margin: 20px;
+	/* padding: 20px; */
+}
 
-@media only screen and (max-width:  600px) {
-    .containerSig{
-        width: 90vw;
-    }
-    .descText{
-        font-size: 1rem;
-    }
-    .arrow{
-        margin-left: -35px;
-    }
-    .arrowRight{
-        margin-right: -35px;
-    }
-    .btn{
-        padding-left: 40px;
-        width:60%;
-        font-size: 0.7rem;
-    }
-    .btnprj{
-        padding-right: 40px;
-        padding-left: 10px;
-    }   
-    .btnContainer{
-        flex-direction: column;
-    }
-    span{
-        margin-bottom: 0.5em;
-    }
+.btnContainer > * {
+	padding: 0px 1vw 0px 1vw;
+}
+
+@media only screen and (max-width: 600px) {
+	.containerSig {
+		width: 90vw;
+	}
+	.descText {
+		font-size: 1rem;
+	}
+	.arrow {
+		margin-left: -35px;
+	}
+	.arrowRight {
+		margin-right: -35px;
+	}
+	.btn {
+		padding-left: 40px;
+		width: 60%;
+		font-size: 0.7rem;
+	}
+	.btnprj {
+		padding-right: 40px;
+		padding-left: 10px;
+	}
+	.btnContainer {
+		flex-direction: column;
+	}
+	span {
+		margin-bottom: 0.5em;
+	}
 }
