@@ -30,7 +30,7 @@ class RecruitmentComponent extends React.Component {
 
 	render() {
 		return (
-			<div style={{ width: '90%', paddingLeft: '15%' }}>
+			<div style={{ width: '90%', paddingLeft: '10%' }}>
 				<div style={{ marginBottom: '5vh' }}>
 					<RecInstructions />
 				</div>

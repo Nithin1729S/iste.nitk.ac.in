@@ -6,7 +6,7 @@ import styles from './instructions.module.css';
 
 const RecInstructions = () => {
 	return (
-		<div className="container">
+		<div>
 			<TitleWithLine title="Instructions" />
 			<ul>
 				{instructions.map((item) => {

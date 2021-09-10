@@ -2,3 +2,8 @@
 	font-size: 1.5rem !important;
 	font-weight: 350 !important;
 }
+
+.instructions > * {
+	padding-top: 1rem !important;
+	padding-left: 1rem !important;
+}

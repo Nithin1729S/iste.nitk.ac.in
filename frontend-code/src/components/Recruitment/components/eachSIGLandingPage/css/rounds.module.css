@@ -17,10 +17,11 @@
 
 .description {
 	font-weight: 300;
+	font-size: 1.2rem;
 }
 
 .date {
-	font-weight: 350;
+	font-weight: 400;
 	font-size: 1.5rem;
 	padding-top: 0;
 }
