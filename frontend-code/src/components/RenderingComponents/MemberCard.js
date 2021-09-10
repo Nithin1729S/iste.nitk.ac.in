@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
+import parse from 'html-react-parser';
 import { baseUrl } from '../../constants';
 
 class MemberCard extends React.Component {
@@ -25,7 +25,7 @@ class MemberCard extends React.Component {
 				<div className="row center">
 					<h4>{this.props.name}</h4>
 					<h6>{this.props.role}</h6>
-					<p>{this.props.content}</p>
+					<p>{parse(this.props.content)}</p>
 				</div>
 				<div className="row center">
 					<a
