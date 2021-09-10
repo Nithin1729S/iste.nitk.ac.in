@@ -1,6 +1,8 @@
 import React from 'react';
 import TitleWithLine from '../../../../RenderingComponents/TitleWithLine';
 import { instructions } from '../../../constants';
+import parse from 'html-react-parser';
+import styles from './instructions.module.css';
 
 const RecInstructions = () => {
 	return (
@@ -9,9 +11,9 @@ const RecInstructions = () => {
 			<ul>
 				{instructions.map((item) => {
 					return (
-						<h4 style={{ color: 'black' }}>
-							<li style={{ listStyleType: 'disc' }}>{item}</li>
-						</h4>
+						<div className={styles.instructions} style={{ color: 'black' }}>
+							<li style={{ listStyleType: 'disc' }}>{parse(item)}</li>
+						</div>
 					);
 				})}
 			</ul>
