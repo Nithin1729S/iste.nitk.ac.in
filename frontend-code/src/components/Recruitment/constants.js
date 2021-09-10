@@ -72,13 +72,13 @@ export const questions = [
 				Feel free to contact anyone below if you have any other doubts:<br></br>
 				<ul style={{ paddingLeft: '5%' }}>
 					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
-						Amodh Shenoy: 9110837927
+						Sai Shruti Prakhya: 9686749909
 					</li>
 					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
-						Amodh Shenoy: 9110837927
+						Arjun A.: 9895089920
 					</li>{' '}
 					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
-						Amodh Shenoy: 9110837927
+						Shreyas Bhat: 9623830564
 					</li>
 				</ul>
 			</>
@@ -90,10 +90,11 @@ export const questions = [
 
 export const instructions = [
 	'To view the details of the recruitment process for a SIG, select the appropriate card to go to that SIG\'s recruitment page. Click on the <a class="btn waves-effect indigo darken-4 white-text "><b>Register</b></a> button to be redirected to the registration form. ',
+	'You can also access the respective SIG\'s recruitment page from the <a class="btn waves-effect indigo darken-4 white-text "><b>Apply for recruitments!</b></a> button in the respective SIG\'s details page.',
 	'To view last year projects, click on the <a class="btn waves-effect grey darken-1 white-text "><b>Expo</b></a> button in the navbar or the <a class="btn waves-effect indigo darken-4 white-text "><b>Expo</b></a> button on the respective SIG\'s recruitment page.',
 	'To view the details of a SIG as well as this year\'s projects, select the respective SIG from the drop-down menu or click on the <a class="btn waves-effect indigo darken-4 white-text "><b>Projects</b></a> button in the respective SIG\'s recruitment page.',
 	'You can register <b>ONLY</b> through your nitk.edu email id.',
-	'The registration forms close on <b>16th August(Sunday), 9:00PM.</b>',
+	'The registration forms close on <b> New date goes here.</b>',
 	'You will be notified via email and WhatsApp about any recruitment round timing and required information. Make sure you check these frequently.',
 	'We will be having video interviews on Microsoft Teams, the details of which will be sent to you after the online tests.',
 	'If you have any issues, contact the POC for that SIG directly.',
