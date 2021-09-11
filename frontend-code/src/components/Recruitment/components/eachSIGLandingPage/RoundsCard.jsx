@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Styles from './css/rounds.module.css';
 
 function formattedDate(date) {

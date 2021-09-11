@@ -63,7 +63,7 @@
 .arrowBtn {
 	display: none;
 	border: 0px;
-	color: #ffff;
+	color: #000;
 }
 .arrowBtn:active {
 	background-color: var(--navBarPrimary) !important;
