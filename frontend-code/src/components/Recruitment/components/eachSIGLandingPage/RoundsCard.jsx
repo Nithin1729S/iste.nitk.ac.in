@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import Styles from './css/rounds.module.css';
 
 function formattedDate(date) {
+	//date filter 
+
+	let dateFilter = new Date('2021-12-31');
+	if (dateFilter.getTime() === date.getTime()) {
+		return "TBD";
+	}
+
+	//formatting date as DD-MM-YYYY in case of proper date
 	let year = date.getFullYear();
 	let month = (1 + date.getMonth()).toString().padStart(2, '0');
 	let day = date.getDate().toString().padStart(2, '0');

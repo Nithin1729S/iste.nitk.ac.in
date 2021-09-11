@@ -7,6 +7,13 @@ class Timeline extends Component {
         this.timelineRef = React.createRef();
     }
     formattedDate(date) {
+        //date filter 
+        let dateFilter = new Date('2021-12-31');
+        console.log(dateFilter);
+	    if (dateFilter.getTime() === date.getTime()) {
+		    return "TBD";
+        }
+        //return formatted date
         let year = date.getFullYear();
         let month = (1 + date.getMonth()).toString().padStart(2, '0');
         let day = date.getDate().toString().padStart(2, '0');
