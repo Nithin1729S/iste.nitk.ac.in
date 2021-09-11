@@ -9,7 +9,6 @@ class Timeline extends Component {
     formattedDate(date) {
         //date filter 
         let dateFilter = new Date('2021-12-31');
-        console.log(dateFilter);
 	    if (dateFilter.getTime() === date.getTime()) {
 		    return "TBD";
         }
