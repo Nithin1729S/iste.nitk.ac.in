@@ -1,5 +1,5 @@
 .register {
-	animation: animate 2s infinite both;
+	animation: animate 2.5s infinite both;
 	font-family: 'GothamPro';
 	margin-bottom: 20px;
 }
@@ -8,7 +8,7 @@
 		transform: scale(1);
 	}
 	50% {
-		transform: scale(1.2);
+		transform: scale(1.07);
 	}
 	100% {
 		transform: scale(1);

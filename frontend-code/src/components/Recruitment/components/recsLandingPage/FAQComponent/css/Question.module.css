@@ -1,4 +1,4 @@
-.arrowButton {
+/* .arrowButton {
 	animation: animate 1.5s infinite both;
 }
 @keyframes animate {
@@ -11,7 +11,7 @@
 	100% {
 		transform: scale(1);
 	}
-}
+} */
 
 /* @media screen and (max-width: 1260px) {
 	.arrowButtonContainer {

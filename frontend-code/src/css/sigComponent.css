@@ -27,7 +27,7 @@ h4 {
 
 .btn {
 	background-color: var(--primary) !important;
-	animation: animate 2.5s infinite both;
+	/* animation: animate 2.5s infinite both; */
 }
 
 .btn:hover {
