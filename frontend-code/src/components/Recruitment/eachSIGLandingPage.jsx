@@ -56,7 +56,6 @@ class RecsSIGComponent extends React.Component {
 		return (
 			<>
 				<TitleWithLine title={this.state.sigName} />
-				
 				<Timeline rounds={this.state.roundsData} />
 				<SigDescription
 					sig={this.state.sigName}

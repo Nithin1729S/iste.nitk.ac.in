@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './css/sigDesc.module.css';
+import parse from 'html-react-parser';
 
 class SigDescription extends Component {
 	render() {
@@ -8,7 +9,9 @@ class SigDescription extends Component {
 			<div className={`row ${styles.containerSig}`}>
 				<div className={`col s10  offset-s1 card center z-index-3`}>
 					<div className="card-content col s12">
-						<p className={`${styles.descText}`}>{this.props.desc}</p>
+						<p className={`${styles.descText}`}>
+							{parse(String(this.props.desc))}
+						</p>
 					</div>
 					<div className="row"></div>
 					<div className={styles.btnContainer}>

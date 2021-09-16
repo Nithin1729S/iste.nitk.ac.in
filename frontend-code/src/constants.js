@@ -9,4 +9,4 @@ export const baseRequest = axios.create({
 	baseURL: baseUrl,
 });
 
-export const enableRecs = false;
+export const enableRecs = true;

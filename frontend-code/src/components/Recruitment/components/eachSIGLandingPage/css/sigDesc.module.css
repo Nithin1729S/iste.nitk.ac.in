@@ -1,14 +1,15 @@
 .containerSig {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	width: 60vw;
+	width: 70vw;
 }
 
 .descText {
 	word-wrap: break-word;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	color: rgba(0, 0, 0, 0.75);
 	text-align: justify;
+	font-weight: 350;
 }
 .arrow {
 	font-size: 0.9rem;
@@ -93,8 +94,8 @@
 }
 
 @media only screen and (max-width: 960px) {
-	.containerSig{
-		width:90vw;
+	.containerSig {
+		width: 90vw;
 	}
 }
 
@@ -122,7 +123,7 @@
 	}
 	.btnContainer {
 		flex-direction: column;
-		padding : 0px;
+		padding: 0px;
 	}
 	span {
 		margin-bottom: 0.5em;
