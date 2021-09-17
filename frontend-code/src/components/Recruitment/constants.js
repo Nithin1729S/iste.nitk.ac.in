@@ -33,7 +33,7 @@ export const sigs = [
 	'Credit',
 	'Catalyst',
 	'Concrete',
-	'Credit',
+	'Clutch',
 	'Create',
 	'Chronicle',
 	'Charge',
