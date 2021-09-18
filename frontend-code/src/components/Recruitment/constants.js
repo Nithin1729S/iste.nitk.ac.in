@@ -47,6 +47,12 @@ export const questions = [
 		open: true,
 	},
 	{
+		question: 'Is there a limit to the number of SIGs you can apply for?',
+		answer:
+			'No, you can apply for as many SIGs as you want to. However we recommend that you be a part of only 3 SIGs to ensure that you will be able to balance your time.',
+		open: true,
+	},
+	{
 		question: 'How will I know if I am selected for the next round?',
 		answer:
 			'You will receive an email and a message on WhatsApp regarding your selection for each round.',
