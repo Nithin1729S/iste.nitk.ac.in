@@ -7,7 +7,7 @@ class RegisterButton extends Component {
 			<div className="row center">
 				<a href={this.props.link} rel="noopener noreferrer" target="_blank">
 					<button
-						className={`center-align waves-effect waves-light z-depth-3 btn-large ${styles.register}`}
+						className={`center-align waves-light z-depth-3 btn-large ${styles.register}`}
 						style={{ backgroundColor: 'var(--primaryDarker)' }}
 					>
 						REGISTER NOW !

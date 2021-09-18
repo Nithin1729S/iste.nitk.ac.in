@@ -17,7 +17,7 @@ class SigDescription extends Component {
 					<div className={styles.btnContainer}>
 						<Link to={`/expo/`} target="_blank">
 							<button
-								className={`waves-effect waves-light btn z-depth-0 ${styles.btn}`}
+								className={`btn z-depth-0 ${styles.btn}`}
 							>
 								<i className={`material-icons left ${styles.arrow} `}>
 									<span></span>
@@ -29,7 +29,7 @@ class SigDescription extends Component {
 						</Link>
 						<Link to={`/sig/${this.props.sig}`} target="_blank">
 							<button
-								className={`waves-effect waves-light btn z-depth-0 ${styles.btn} ${styles.btnprj}`}
+								className={`btn z-depth-0 ${styles.btn} ${styles.btnprj}`}
 							>
 								<i
 									className={`material-icons right ${styles.arrow} ${styles.arrowRight}`}

@@ -95,10 +95,10 @@ export const questions = [
 ];
 
 export const instructions = [
-	'To view the details of the recruitment process for a SIG, select the appropriate card to go to that SIG\'s recruitment page. Click on the <a class="btn waves-effect indigo darken-4 white-text "><b>Register</b></a> button to be redirected to the registration form. ',
-	'You can also access the respective SIG\'s recruitment page from the <a class="btn waves-effect indigo darken-4 white-text "><b>Apply for recruitments!</b></a> button in the respective SIG\'s details page.',
-	'To view last year projects, click on the <a class="btn waves-effect grey darken-1 white-text "><b>Expo</b></a> button in the navbar or the <a class="btn waves-effect indigo darken-4 white-text "><b>Expo</b></a> button on the respective SIG\'s recruitment page.',
-	'To view the details of a SIG as well as this year\'s projects, select the respective SIG from the drop-down menu or click on the <a class="btn waves-effect indigo darken-4 white-text "><b>Projects</b></a> button in the respective SIG\'s recruitment page.',
+	'To view the details of the recruitment process for a SIG, select the appropriate card to go to that SIG\'s recruitment page. Click on the <a class="btn indigo darken-4 white-text "><b>Register</b></a> button to be redirected to the registration form. ',
+	'You can also access the respective SIG\'s recruitment page from the <a class="btn indigo darken-4 white-text "><b>Apply for recruitments!</b></a> button in the respective SIG\'s details page.',
+	'To view last year projects, click on the <a class="btn grey darken-1 white-text "><b>Expo</b></a> button in the navbar or the <a class="btn indigo darken-4 white-text "><b>Expo</b></a> button on the respective SIG\'s recruitment page.',
+	'To view the details of a SIG as well as this year\'s projects, select the respective SIG from the drop-down menu or click on the <a class="btn indigo darken-4 white-text "><b>Projects</b></a> button in the respective SIG\'s recruitment page.',
 	'You can register <b>ONLY</b> through your nitk.edu email id.',
 	'The registration forms close on <b> 25th September, 11.59pm, IST.</b>',
 	'You will be notified via email and WhatsApp about any recruitment round timing and required information. Make sure you check these frequently.',
