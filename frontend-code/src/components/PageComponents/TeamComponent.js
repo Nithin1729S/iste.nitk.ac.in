@@ -13,6 +13,8 @@ const DataHeader = (props) => {
 };
 
 const DataItem = (props) => {
+    // default email address if email missing in backend
+    const email=props.data.email ? props.data.email : 'iste@nitk.edu.in' 
     return (
         <div className="row proj-item">
             <MemberCard
@@ -22,7 +24,7 @@ const DataItem = (props) => {
                 role={props.data.role}
                 content={props.data.description}
                 linkedin={props.data.linkedin_url}
-                email={"mailto:" + props.data.email}
+                email={"mailto:" + email}
                 imgurl={props.data.user.avatar}
             />
         </div>
