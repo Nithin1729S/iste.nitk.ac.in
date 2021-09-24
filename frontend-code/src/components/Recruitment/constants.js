@@ -100,7 +100,7 @@ export const instructions = [
 	'To view last year projects, click on the <a class="btn grey darken-1 white-text "><b>Expo</b></a> button in the navbar or the <a class="btn indigo darken-4 white-text "><b>Expo</b></a> button on the respective SIG\'s recruitment page.',
 	'To view the details of a SIG as well as this year\'s projects, select the respective SIG from the drop-down menu or click on the <a class="btn indigo darken-4 white-text "><b>Projects</b></a> button in the respective SIG\'s recruitment page.',
 	'You can register <b>ONLY</b> through your nitk.edu email id.',
-	'The registration forms close on <b> 25th September, 11.59pm, IST.</b>',
+	'The registration forms close on <b> 26th September, 11.59pm, IST.</b>',
 	'You will be notified via email and WhatsApp about any recruitment round timing and required information. Make sure you check these frequently.',
 	'We will be having video interviews on Microsoft Teams, the details of which will be sent to you after the online tests.',
 	'If you have any issues, contact the POC for that SIG directly.',
