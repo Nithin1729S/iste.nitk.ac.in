@@ -56,7 +56,7 @@ class App extends React.Component {
 						)}
 					/> */}
 					<Switch>
-						<Route path="*" component={HomeComponent} />
+						{/* <Route path="*" component={HomeComponent} /> */}
 						<Route path="/test" component={TestUI} />
 						{/* <Route
 							path="/expo"
