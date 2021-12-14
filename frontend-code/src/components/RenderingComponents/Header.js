@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableRecs } from '../../constants';
+import { enableExpo, enableRecs } from '../../constants';
 
 class Header extends React.Component {
 	state = { loggedInName: '' };
@@ -313,7 +313,7 @@ class Header extends React.Component {
 					</li>
 					{this.teamNavHeader}
 					{this.blogNavHeader}
-					{this.expoNavHeader}
+					{enableExpo ? this.expoNavHeader : null}
 					{enableRecs ? this.recsNavHeader : null}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
@@ -347,7 +347,7 @@ class Header extends React.Component {
 								</ul>
 								{this.teamNavHeader}
 								{this.blogNavHeader}
-								{this.expoNavHeader}
+								{enableExpo ? this.expoNavHeader : null}
 								{enableRecs ? this.recsNavHeader : null}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}

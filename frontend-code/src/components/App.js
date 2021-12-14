@@ -56,8 +56,9 @@ class App extends React.Component {
 						)}
 					/> */}
 					<Switch>
+						<Route path="*" component={HomeComponent} />
 						<Route path="/test" component={TestUI} />
-						<Route
+						{/* <Route
 							path="/expo"
 							render={(props) => (
 								<ExpoHomeComponent
@@ -67,9 +68,9 @@ class App extends React.Component {
 									}
 								/>
 							)}
-						/>
+						/> */}
 						{/* <Route path="/leaderboard"  component={LeaderboardComponent} /> */}
-						<Route path="/expoPage/:name" component={DescPage} />
+						{/* <Route path="/expoPage/:name" component={DescPage} /> */}
 						<Route path="/sig/:name" component={SigComponent} />
 						<Route path="/team" component={TeamComponent} />
 						<Route path="/project/:id" component={ProjectComponent} />
@@ -77,8 +78,8 @@ class App extends React.Component {
 						<Route path="/event/view/:name" component={EventDetails} />
 						<Route path="/event/add" component={EventAdd} />
 						<Route path="/event" component={EventComponent} />
-						<Route path="/recs/:name" component={RecsSIGComponent} />
-						<Route path="/recs" component={RecruitmentComponent} />
+						{/* <Route path="/recs/:name" component={RecsSIGComponent} />
+						<Route path="/recs" component={RecruitmentComponent} /> */}
 						<Route path="/" component={HomeComponent} />
 					</Switch>
 				</div>
