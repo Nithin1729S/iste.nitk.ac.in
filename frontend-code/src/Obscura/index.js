@@ -4,11 +4,19 @@ import Cookies from 'universal-cookie'
 import {Link} from 'react-router-dom'
 
 import { FlexContainerCentered } from '../components/UI/FlexContainers';
+import Dashboard from './components/Dashboard';
 class Home extends Component {
-
+  componentDidMount() {
+    //changing footer
+    //this.props.setFooterVal("charge")
+  }
+  checkLogin = () => {
+    const cookie = new Cookies()
+    return cookie.get('userName')
+  }
   render() {
-    let Container = styled(FlexContainerCentered)`
-      margin-top: 5%; `;
+    if (this.checkLogin()) return <Dashboard />;
+    const Container = styled(FlexContainerCentered)`margin-top: 5%; `;
     return (
       <>
       <Container>
@@ -24,6 +32,9 @@ class Home extends Component {
         </Container>
       </>
     )
+  }
+  componentWillUnmount() {
+    this.props.setFooterVal("")
   }
 }
 

@@ -1,0 +1,13 @@
+.instructions h3,
+.instructions ul {
+    font-size : 2rem;
+    color: var(--primary);
+}
+.instructions ul {
+    margin-top: 2.5%;
+}
+.instructions li {
+    margin-top: 1%;
+    max-width: min(80vw, 50em);
+    margin-inline: auto;
+}

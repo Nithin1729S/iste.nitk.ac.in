@@ -16,10 +16,10 @@ import EventDetails from './PageComponents/EventDetails';
 import EventAdd from './PageComponents/EventAdd';
 //import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 //import DescPage from '../expo/Components/DescPage';
-// import LeaderboardComponent from './PageComponents/LeaderboardComponent';
+import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
-// import Transcend from './Transcend';
+//import Transcend from './Transcend';
 // import Cryptonite from './Transcend/Cryptonite';
 //import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 //import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
@@ -29,6 +29,7 @@ import Obscura from '../Obscura'
 import Instructions from '../Obscura/components/Instructions'
 import ObscuraLogin from '../Obscura/components/ObscuraLogin'
 import Dashboard from '../Obscura/components/Dashboard';
+import Year1 from '../Obscura/components/year/Year1'
 
 import '../css/constants.css';
 
@@ -48,7 +49,7 @@ class App extends React.Component {
 					<Header />
 				</Wrapper>
 				<div className="app-main">
-					{/* <Route path="/transcend"  component={Transcend} /> */}
+					{/* <Route path="/transcend"  component={Transcend} />  */}
 					{/* <Route path="/smp"  component={SGPComponent} /> */}
 					{/* <Route path="/smp/:name"  component={SGPSigComponent} /> */}
 					{/* <Route
@@ -66,10 +67,13 @@ class App extends React.Component {
 						{/* 
 						Obscura routes 
 							*/ }
+						<Route path="/obscura/year1" component={Year1}/>
 						<Route path='/obscura/dashboard' component={Dashboard}/>
 						<Route path="/obscura/login" component={ObscuraLogin} />
 						<Route path="/obscura/instructions" component={Instructions} />
-						<Route path="/obscura" component={ Obscura } />	
+						<Route path="/obscura" 
+							render={ (props) => (<Obscura { ...props } setFooterVal={ (val) => this.changeFooterBackground(val) } />)}
+						/>	
 						<Route path="/test" component={TestUI} />
 						{/* <Route
 							path="/expo"
@@ -82,7 +86,7 @@ class App extends React.Component {
 								/>
 							)}
 						/> */}
-						{/* <Route path="/leaderboard"  component={LeaderboardComponent} /> */}
+						<Route path="/leaderboard"  component={LeaderboardComponent} />
 						{/* <Route path="/expoPage/:name" component={DescPage} /> */}
 						<Route path="/sig/:name" component={SigComponent} />
 						<Route path="/team" component={TeamComponent} />

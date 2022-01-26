@@ -1,62 +1,50 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { FlexContainerCentered as Container } from '../../components/UI/FlexContainers';
+import YearCard from './YearCard'
 
 
 class Dashboard extends Component {
   render() {
-      return (
+    return (
+      <>
         <Container isColumn>
-            <h1>Name Year Score</h1>
+          <h1>Hello name </h1>
+          <div className="container">
             <div className="row">
-              <div className="card" style={{width:"300px"}}>
-                <div className="card-content">
-                    <h2 className="card-title">Year 1</h2>
-                    <h5>Score</h5>
-                </div>
-                <div className="card-action">
-                    <Link to='/obscura/year1'> <button className="btn btn-primary"> Enter </button></Link>
-                </div>
+              <div className="col s6">
+                <YearCard
+                  title="Year 1"
+                  link="/obscura/year1"
+                  score="10000"
+                />
               </div>
-            
+              <div className="col s6">
+                <YearCard
+                  title="Year 2"
+                  link="/obscura/year2"
+                  score="10000"
+                />
+              </div>
             </div>
             <div className="row">
-              <div className="card" style={{width:"300px"}}>
-                <div className="card-content">
-                    <h2 className="card-title">Year 2</h2>
-                    <h5>Score</h5>
-                </div>
-                <div className="card-action">
-                    <Link to='/obscura/year2'> <button className="btn btn-primary"> Enter </button></Link>
-                </div>
+              <div className="col s6">
+                <YearCard
+                  title="Year 3"
+                  link="/obscura/year3"
+                  score="10000"
+                />
               </div>
-            
-            </div>
-            <div className="row">
-              <div className="card" style={{width:"300px"}}>
-                <div className="card-content">
-                    <h2 className="card-title">Year 3</h2>
-                    <h5>Score</h5>
-                </div>
-                <div className="card-action">
-                    <Link to='/obscura/year3'> <button className="btn btn-primary"> Enter </button></Link>
-                </div>
+              <div className="col s6">
+                <YearCard
+                  title="Year 4"
+                  link="/obscura/year4"
+                  score="10000"
+                />
               </div>
-            
             </div>
-            <div className="row">
-              <div className="card" style={{width:"300px"}}>
-                <div className="card-content">
-                    <h2 className="card-title">Year 4</h2>
-                    <h5>Score</h5>
-                </div>
-                <div className="card-action">
-                    <Link to='/obscura/year4'> <button className="btn btn-primary"> Enter </button></Link>
-                </div>
-              </div>
-            
-            </div>
+          </div>
         </Container>
+      </>
     );
   }
 }
