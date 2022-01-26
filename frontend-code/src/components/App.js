@@ -14,15 +14,21 @@ import ProjectComponent from './PageComponents/ProjectComponent';
 import LoginComponent from './PageComponents/LoginComponent';
 import EventDetails from './PageComponents/EventDetails';
 import EventAdd from './PageComponents/EventAdd';
-import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
-import DescPage from '../expo/Components/DescPage';
+//import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
+//import DescPage from '../expo/Components/DescPage';
 // import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
 // import Transcend from './Transcend';
 // import Cryptonite from './Transcend/Cryptonite';
-import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
-import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
+//import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
+//import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
+
+/* Obscura imports start here */
+import Obscura from '../Obscura'
+import Instructions from '../Obscura/components/Instructions'
+import ObscuraLogin from '../Obscura/components/ObscuraLogin'
+import Dashboard from '../Obscura/components/Dashboard';
 
 import '../css/constants.css';
 
@@ -56,7 +62,14 @@ class App extends React.Component {
 						)}
 					/> */}
 					<Switch>
-						{/* <Route path="*" component={HomeComponent} /> */}
+						{/* <Route path="*" component={HomeComponent} /> */ }
+						{/* 
+						Obscura routes 
+							*/ }
+						<Route path='/obscura/dashboard' component={Dashboard}/>
+						<Route path="/obscura/login" component={ObscuraLogin} />
+						<Route path="/obscura/instructions" component={Instructions} />
+						<Route path="/obscura" component={ Obscura } />	
 						<Route path="/test" component={TestUI} />
 						{/* <Route
 							path="/expo"
@@ -80,7 +93,8 @@ class App extends React.Component {
 						<Route path="/event" component={EventComponent} />
 						{/* <Route path="/recs/:name" component={RecsSIGComponent} />
 						<Route path="/recs" component={RecruitmentComponent} /> */}
-						<Route path="/" component={HomeComponent} />
+						<Route path="/" component={ HomeComponent } />
+						
 					</Switch>
 				</div>
 				<Wrapper shouldRender={this.state.headerShouldRender}>
