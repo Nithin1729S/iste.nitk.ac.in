@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import QuestionList from '../QuestionsList'
+import QuestionWrapper from '../QuestionWrapper'
 import {firstYear} from '../../constants/questions.js'
 class Year1 extends Component {
     state = {
         numberQuestionSolved: 0,
-        questions : []
+        questions: [],
+        questionScore: 0,
+        
     }
-    componentDidMount(){
+    componentDidMount() {
+        console.log(firstYear)
         const shuffled = firstYear.sort(() => 0.5 - Math.random())
         this.setState({
             questions : shuffled.slice(0,2)
@@ -17,6 +20,14 @@ class Year1 extends Component {
             numberQuestionSolved: this.state.numberQuestionSolved + 1,
         })
     }
+    changeScore=(val)=>{
+        //update score on question attempt
+        // -30 for incorrect
+        // 300 for correct 
+        this.setState({
+            questionScore : this.state.questionScore + val 
+        })
+    }
     render() {
         //add two components here
         // Questions component
@@ -24,14 +35,22 @@ class Year1 extends Component {
         // when all questions are solved 
         // make game component visible and hide game component when all questions are solved
         return (
-            <div className="container">
+            <div className="container" style={{margin:"10%"}} >
                 <h1>Welcome to Year 1</h1>
-                <h2>You have solved { this.state.numberQuestionSolved } questions</h2>
-                <QuestionList
-                    updateQuestionSolved={ this.updateQuestionSolved } 
-                    questions={ this.state.questions }
-                    numQuestions = {2}
-                />
+                <h2>Score: {this.state.questionScore}</h2>
+                {   this.state.numberQuestionSolved <2 ? 
+                    (<>
+                        <h3>Remaining Questions : { this.state.numberQuestionSolved }</h3>
+                        <QuestionWrapper
+                            changeScore={ this.changeScore } 
+                            questions={ this.state.questions }
+                            numQuestions={ 2 }
+                            updateQuestionSolved = {this.updateQuestionSolved}
+                        />
+                    </>
+                    ) : 
+                    <h1>Game Placeholder</h1>
+                }
             </div>
     )
   }
