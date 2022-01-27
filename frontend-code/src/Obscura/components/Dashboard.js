@@ -4,6 +4,16 @@ import YearCard from './YearCard'
 
 
 class Dashboard extends Component {
+  state = {
+    yearPassed: 0,
+    scores : []
+  }
+  componentDidMount() {
+    this.setState({
+      yearPassed: 2, 
+      scores : [1000,500,0,0]
+    })
+  }
   render() {
     return (
       <>
@@ -11,36 +21,47 @@ class Dashboard extends Component {
           <h1>Hello name </h1>
           <div className="container">
             <div className="row">
-              <div className="col s6">
-                <YearCard
-                  title="Year 1"
-                  link="/obscura/year1"
-                  score="10000"
-                />
-              </div>
-              <div className="col s6">
+              <YearCard
+                title="Year 1"
+                link="/obscura/year1"
+                score={this.state.scores[0]}
+              />
+              { this.state.yearPassed >= 2 ? 
                 <YearCard
                   title="Year 2"
                   link="/obscura/year2"
-                  score="10000"
-                />
-              </div>
+                  score= {this.state.scores[1]}
+                /> :
+                <YearCard
+                  title="Year 2"
+                  link="/obscura/dashboard"
+                /> 
+              }
             </div>
             <div className="row">
-              <div className="col s6">
+              { this.state.yearPassed >= 3 ? 
                 <YearCard
                   title="Year 3"
                   link="/obscura/year3"
-                  score="10000"
+                  score= {this.state.scores[2]}
+                /> : 
+                <YearCard
+                  title="Year 3"
+                  link = "/obscura/dashboard"
                 />
-              </div>
-              <div className="col s6">
+              }
+              { this.state.yearPassed === 4 ? 
                 <YearCard
                   title="Year 4"
                   link="/obscura/year4"
-                  score="10000"
+                  score= {this.state.scores[3]}
+                /> : 
+                <YearCard
+                  title="Year 4"
+                  link="/obscura/dashboard"
                 />
-              </div>
+              }
+              
             </div>
           </div>
         </Container>

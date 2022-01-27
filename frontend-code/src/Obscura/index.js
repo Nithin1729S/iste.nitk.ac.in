@@ -1,40 +1,41 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
 import Cookies from 'universal-cookie'
 import {Link} from 'react-router-dom'
 
-import { FlexContainerCentered } from '../components/UI/FlexContainers';
+import { FlexContainerCentered as Container} from '../components/UI/FlexContainers';
 import Dashboard from './components/Dashboard';
 class Home extends Component {
   componentDidMount() {
-    //changing footer
-    //this.props.setFooterVal("charge")
+    //TODO : figure out how to persist footer 
+    //this.props.setFooterVal("crypt")
   }
   checkLogin = () => {
     const cookie = new Cookies()
     return cookie.get('userName')
   }
   render() {
-    if (this.checkLogin()) return <Dashboard />;
-    const Container = styled(FlexContainerCentered)`margin-top: 5%; `;
+    if (this.checkLogin()) return <Dashboard />; // forwards user to Dashboard if already logged in
+
     return (
       <>
-      <Container>
+      <Container isColumn>
         <h3>Obscura Homepage Placeholder</h3>
-      </Container>
-        <Container isColumn>
-          <Link to="/obscura/instructions">
-            <button class="btn btn-primary waves-effect" style={{margin:"10%"}}>Instructions</button>
-          </Link>
+        <Container isColumn style={{alignItems: 'center'}}>
+          <div>
+              <Link to="/obscura/instructions">
+                <button class="btn btn-primary waves-effect" style={{margin:"10%"}}>Instructions</button>
+              </Link>
+          </div>
           <Link to="/obscura/login">
             <button class="btn btn-primary waves-effect">Login</button>
           </Link>
         </Container>
+      </Container>
       </>
     )
   }
   componentWillUnmount() {
-    this.props.setFooterVal("")
+    //this.props.setFooterVal("")
   }
 }
 

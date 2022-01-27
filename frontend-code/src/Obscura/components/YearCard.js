@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const YearCard = ({title,link,score}) => {
     return (
-        <>
+        <div className="col s6">
             <Link to={ `${link}` }>
                 <div className="card">
                   <div className="card-content">
@@ -14,7 +14,7 @@ const YearCard = ({title,link,score}) => {
                   </div>
                   </div>
             </Link>
-        </>
+        </div>
     );
 };
 
