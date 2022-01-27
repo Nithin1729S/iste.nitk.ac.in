@@ -40,11 +40,10 @@ class Year1 extends Component {
                 <h2>Score: {this.state.questionScore}</h2>
                 {   this.state.numberQuestionSolved <2 ? 
                     (<>
-                        <h3>Remaining Questions : { this.state.numberQuestionSolved }</h3>
+                        <h3>Remaining Questions : { 2 - this.state.numberQuestionSolved }</h3>
                         <QuestionWrapper
                             changeScore={ this.changeScore } 
                             questions={ this.state.questions }
-                            numQuestions={ 2 }
                             updateQuestionSolved = {this.updateQuestionSolved}
                         />
                     </>

@@ -1,9 +1,8 @@
 import React,{useState} from 'react';
 import Question from './Question'
 
-const QuestionWrapper = ({ changeScore, questions, numQuestions,updateQuestionSolved }) => {
+const QuestionWrapper = ({ changeScore, questions,updateQuestionSolved }) => {
     const [currQues, setCurrQues] = useState(0)
-    console.log(questions)
 
     // const QuestionItems =
     //     questions.map((question) => {
