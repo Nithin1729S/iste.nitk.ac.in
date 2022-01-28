@@ -98,6 +98,14 @@ class Header extends React.Component {
 			</a>
 		</li>
 	);
+	squareOneHeader = (
+		<li>
+			<Link to="/squareone/" className="waves-effect white-text">
+				Square One
+			</Link>
+		</li>
+	);
+
 	// transcendNavHeaderMobile = (
 	// 	<li className="no-padding">
 	// 		<ul className="collapsible collapsible-accordion">
@@ -311,6 +319,7 @@ class Header extends React.Component {
 							</li>
 						</ul>
 					</li>
+					{this.squareOneHeader}
 					{this.teamNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
@@ -345,6 +354,7 @@ class Header extends React.Component {
 								<ul id="sig-action" className="dropdown-content frontsig">
 									{this.sigLinks}
 								</ul>
+								{this.squareOneHeader}
 								{this.teamNavHeader}
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}

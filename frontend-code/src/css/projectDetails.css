@@ -14,7 +14,7 @@
   min-height: 100vh;
   flex-direction: column;
   background-color: var(--projectDetailsBackground);
-  font-family: "GothamPro";
+  /* font-family: "GothamPro"; */
 }
 
 .projectDetails .member {

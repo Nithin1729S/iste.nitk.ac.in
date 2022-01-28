@@ -38,14 +38,22 @@ class HomeCarousel extends React.Component {
 		});
 
 		// Uncomment and use when necessary
-		let button = enableRecs ? (
+		// let button = enableRecs ? (
+		// 	<div className="carousel-fixed-item center">
+		// 		<Link to="/recs" className="btn white-text dark">
+		// 			APPLY FOR RECRUITMENTS!
+		// 		</Link>
+		// 	</div>
+		// ) : (
+		// 	<></>
+		// );
+
+		let button = (
 			<div className="carousel-fixed-item center">
-				<Link to="/recs" className="btn white-text dark">
-					APPLY FOR RECRUITMENTS!
+				<Link to="/squareone" className="btn white-text dark">
+					APPLY FOR SQUARE ONE!
 				</Link>
 			</div>
-		) : (
-			<></>
 		);
 
 		return (

@@ -14,15 +14,17 @@ import ProjectComponent from './PageComponents/ProjectComponent';
 import LoginComponent from './PageComponents/LoginComponent';
 import EventDetails from './PageComponents/EventDetails';
 import EventAdd from './PageComponents/EventAdd';
-import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
-import DescPage from '../expo/Components/DescPage';
+// import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
+// import DescPage from '../expo/Components/DescPage';
 // import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
 // import Transcend from './Transcend';
 // import Cryptonite from './Transcend/Cryptonite';
-import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
-import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
+import SquareOne from './SquareOne';
+import SIGSquareOne from './SquareOne/eachSIG';
+// import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
+// import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 import '../css/constants.css';
 
@@ -58,6 +60,9 @@ class App extends React.Component {
 					<Switch>
 						{/* <Route path="*" component={HomeComponent} /> */}
 						<Route path="/test" component={TestUI} />
+						<Route path="/squareonesig/:name" component={SIGSquareOne} />
+						<Route path="/squareone" component={SquareOne} />
+
 						{/* <Route
 							path="/expo"
 							render={(props) => (
