@@ -8,7 +8,8 @@ import { FlexContainerCentered as Container} from '../components/UI/FlexContaine
 import Dashboard from './components/Dashboard';
 class Home extends Component {
   componentDidMount() {
-    this.props.setFooterVal("crypt")
+    // the footer background and color can be update in css/footer.css
+    this.props.setFooterVal("obscura")
   }
   checkLogin = () => {
     // use localStorage to see if user is already logged in

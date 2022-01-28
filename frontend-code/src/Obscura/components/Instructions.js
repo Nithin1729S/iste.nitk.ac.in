@@ -1,8 +1,11 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom'
 import styles from '../css/instructions.module.css'
 
-const Instructions = () => {
+const Instructions = ({ setFooterVal }) => {
+    useEffect(() => {
+        setFooterVal("obscura")
+    })
     return (
         <div className={`${styles.instructions} center`}>
             <h1>Instructions</h1>

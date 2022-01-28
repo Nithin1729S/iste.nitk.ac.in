@@ -80,7 +80,10 @@ class App extends React.Component {
 						<Route path="/obscura/login" 
 							render={ () => (<ObscuraLogin  setFooterVal={this.changeFooterBackground} />)}
 						/>
-						<Route path="/obscura/instructions" component={Instructions} />
+						
+						<Route path="/obscura/instructions" 
+							render={ () => (<Instructions setFooterVal={this.changeFooterBackground} />)}
+						/>	
 						<Route path="/obscura" 
 							render={ () => (<Obscura setFooterVal={this.changeFooterBackground} />)}
 						/>	

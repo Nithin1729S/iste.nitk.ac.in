@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 export class ObscuraLogin extends Component {
   
   componentDidMount() {
-    this.props.setFooterVal("crypt")
+    this.props.setFooterVal("obscura")
   }
   
   // TODO : add login page

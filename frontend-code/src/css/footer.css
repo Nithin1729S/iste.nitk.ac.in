@@ -5,6 +5,10 @@
     background-color: #0c0013 !important;
     background-image: url("../components/Transcend/Cryptonite/background.png");
 }
+.obscura {
+    background-color: #0c0013 !important;
+    background-image: url("../Obscura/constants/obscurabannerv2.png");
+}
 .charge {
     background-color: #00405b !important;
 }

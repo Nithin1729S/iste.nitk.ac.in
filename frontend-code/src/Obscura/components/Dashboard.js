@@ -9,7 +9,7 @@ class Dashboard extends Component {
     scores : [] 
   }
   componentDidMount() {
-    this.props.setFooterVal("crypt")
+    this.props.setFooterVal("obscura")  // the footer can be edited at css/footer.css
     // fetch this data from the localStorage or make API request to fetch it
     this.setState({
       yearPassed: 2, 
