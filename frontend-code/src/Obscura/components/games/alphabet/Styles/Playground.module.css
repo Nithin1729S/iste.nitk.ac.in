@@ -3,7 +3,7 @@
     flex-direction: column;
     box-sizing: border-box;
     background-color: grey;
-    background: url('../../../../constants/obscurabannerv2.png');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../../../../constants/obscurabannerv2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,6 +15,7 @@
     font-size: 36px;
     /* margin-top:50px; */
     padding: 90px 50px 0 50px;
+    margin-top: -64px;
 }
 
 .infoBoard {
