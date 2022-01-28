@@ -17,6 +17,11 @@ const Question = ({ currQues,setCurrQues,questions,correct,changeScore,updateQue
       setErrorMessage("Incorrect selection! -30 Penalty")
     }
   }
+  const skipQuestion = () => {
+    changeScore(-50)
+    setCurrQues(currQues + 1)
+    updateQuestionSolved()
+  }
 
   return (
     <>
@@ -34,6 +39,9 @@ const Question = ({ currQues,setCurrQues,questions,correct,changeScore,updateQue
               Option { index }
             </button>
           )) }
+          <div className="container">
+            <button className="btn" onClick={()=>skipQuestion()} style={{backgroundColor:"red !important"}} >Skip(-50)</button>
+          </div>
         </div>
       </div>
     </>
