@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FlexContainerCentered as Container } from '../../components/UI/FlexContainers';
 import YearCard from './YearCard'
+import styled from 'styled-components'
+import obscurabannerv2 from '../constants/obscurabannerv2.png'
 
 
 class Dashboard extends Component {
@@ -20,8 +21,8 @@ class Dashboard extends Component {
   render() {
     return (
       <>
-        <Container isColumn>
-          <h1>Hello name </h1>
+        <Container>
+          <Name>Hello name </Name>
           <Link to="/obscura/leaderboard">Leaderboard</Link>
           <div className="container">
             <div className="row">
@@ -83,4 +84,25 @@ class Dashboard extends Component {
   // }
 }
 
+
+
+const Container = styled.div`
+  padding : 100px;
+  width: 100%;
+  height: 100%;
+  background-color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${obscurabannerv2});
+  background-size: cover;
+  overflow-x: hidden;
+  margin-top: -64px;
+  background-size: cover;
+`;
+
+const Name = styled.h1`
+  color : #fff !important;
+`;
 export default Dashboard;

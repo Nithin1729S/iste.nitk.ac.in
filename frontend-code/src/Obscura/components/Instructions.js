@@ -16,13 +16,14 @@ const Instructions = ({ setFooterVal }) => {
     );
 };
 const LoginContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #2c2c2c;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${obscurabannerv2});
+  background-size: cover;
   overflow-x: hidden;
   margin-top: -64px;
   background-size: cover;
