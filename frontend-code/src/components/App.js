@@ -38,7 +38,7 @@ class App extends React.Component {
 	changeHeaderFooterStatus = (val) => {
 		this.setState({ headerShouldRender: val });
 	};
-	changeFooterBackground = (val) => {
+	changeFooterBackground=(val)=>{
 		this.setState({ footerBackgroundVariant: val });
 	};
 	render() {
@@ -68,11 +68,15 @@ class App extends React.Component {
 						Obscura routes 
 							*/ }
 						<Route path="/obscura/year1" component={Year1}/>
-						<Route path='/obscura/dashboard' component={Dashboard}/>
-						<Route path="/obscura/login" component={ObscuraLogin} />
+						<Route path='/obscura/dashboard' 
+							render={() => (<Dashboard setFooterVal={this.changeFooterBackground} />)}
+						/>
+						<Route path="/obscura/login" 
+							render={ () => (<ObscuraLogin  setFooterVal={this.changeFooterBackground} />)}
+						/>
 						<Route path="/obscura/instructions" component={Instructions} />
 						<Route path="/obscura" 
-							render={ (props) => (<Obscura { ...props } setFooterVal={ (val) => this.changeFooterBackground(val) } />)}
+							render={ () => (<Obscura setFooterVal={this.changeFooterBackground} />)}
 						/>	
 						<Route path="/test" component={TestUI} />
 						{/* <Route

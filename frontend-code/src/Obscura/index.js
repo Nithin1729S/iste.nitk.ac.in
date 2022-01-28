@@ -1,42 +1,48 @@
 import React, { Component } from 'react';
-import Cookies from 'universal-cookie'
+import {withRouter} from 'react-router'
+
+//import Cookies from 'universal-cookie'
 import {Link} from 'react-router-dom'
 
 import { FlexContainerCentered as Container} from '../components/UI/FlexContainers';
 import Dashboard from './components/Dashboard';
 class Home extends Component {
   componentDidMount() {
-    //TODO : figure out how to persist footer 
-    //this.props.setFooterVal("crypt")
+    console.log(this.props)
+    this.props.setFooterVal("crypt")
   }
   checkLogin = () => {
-    const cookie = new Cookies()
-    return cookie.get('userName')
+    // use cookies or localStorage to see if user is already logged in
+    // const cookie = new Cookies()
+    // return cookie.get('userName')
+    return false;
   }
-  render() {
-    if (this.checkLogin()) return <Dashboard />; // forwards user to Dashboard if already logged in
-
-    return (
-      <>
-      <Container isColumn>
-        <h3>Obscura Homepage Placeholder</h3>
-        <Container isColumn style={{alignItems: 'center'}}>
-          <div>
-              <Link to="/obscura/instructions">
-                <button class="btn btn-primary waves-effect" style={{margin:"10%"}}>Instructions</button>
-              </Link>
-          </div>
-          <Link to="/obscura/login">
-            <button class="btn btn-primary waves-effect">Login</button>
-          </Link>
-        </Container>
+  // homePage will contain the jsx to render the home-page 
+  homePage = (
+    <Container isColumn>
+      <h3>Obscura Homepage Placeholder</h3>
+      <Container isColumn style={{alignItems: 'center'}}>
+        <div>
+            <Link to="/obscura/instructions">
+              <button class="btn btn-primary waves-effect" style={{margin:"10%"}}>Instructions</button>
+            </Link>
+        </div>
+        <Link to="/obscura/login">
+          <button class="btn btn-primary waves-effect">Login</button>
+        </Link>
       </Container>
-      </>
-    )
+    </Container>
+  );
+  render() {
+    if (!this.checkLogin()) {
+      return this.homePage;
+    }
+    return <Dashboard />
   }
+
   componentWillUnmount() {
-    //this.props.setFooterVal("")
+    this.props.setFooterVal("")
   }
 }
 
-export default Home;
+export default withRouter(Home);

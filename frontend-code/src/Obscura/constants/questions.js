@@ -1,3 +1,6 @@
+export const numQuestions = [2, 4, 6, 8];
+
+
 export const firstYear = [
     {
         title: "Placeholder Question 1 (Correct Option : 13)",
@@ -15,3 +18,4 @@ export const firstYear = [
         correctOption : 2,
     },
 ]
+
