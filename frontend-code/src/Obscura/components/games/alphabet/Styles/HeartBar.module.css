@@ -1,0 +1,13 @@
+.heartInfo {
+    text-align: center;
+    border: 5px solid #999;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: pink;
+}
+
+.heartBar {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}

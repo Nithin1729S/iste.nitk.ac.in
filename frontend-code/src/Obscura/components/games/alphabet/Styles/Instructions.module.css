@@ -1,0 +1,40 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 25px;
+    align-items: center;
+    padding: 10px;
+}
+
+.heading {
+    font-size: 50px;
+    color: #fff;
+}
+
+.points {
+    color: #aaa;
+    font-size: 40px;
+    line-height: 70px;
+}
+
+li {
+    list-style-type: circle;
+}
+
+.play {
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 30px;
+    outline: none;
+    border: 2px solid black;
+    background-color: teal;
+    margin-bottom: 10px;
+}
+
+.play:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px black;
+    text-shadow: 0 0 5px #fff;
+}

@@ -1,0 +1,11 @@
+.container {
+    align-self: flex-end;
+    border: 5px solid #888;
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: teal;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}

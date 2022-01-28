@@ -1,0 +1,45 @@
+.box {
+    width: 100%;
+    height: 80vh;
+    border: 5px dashed pink;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    color: #abc;
+}
+
+.heading {
+    font-size: 60px;
+}
+
+.score {
+    margin: 20px 0;
+    font-size: 50px;
+    color: #603a24;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restart {
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 30px;
+    outline: none;
+    border: 2px solid black;
+    background-color: teal;
+}
+
+.restart:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px black;
+    text-shadow: 0 0 5px #fff;
+}

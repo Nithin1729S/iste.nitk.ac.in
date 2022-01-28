@@ -1,0 +1,59 @@
+.playground {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: url('../../../../constants/obscurabannerv2.png');
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    font-size: 36px;
+    margin-top:50px;
+    padding: 90px 50px 0 50px;
+}
+
+.infoBoard {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.words {
+    background: repeating-linear-gradient(58deg, #999, #300a24, #00f 35px);
+    margin-top: 50px;
+    text-align: center;
+    border: 2px dashed #000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 50px;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    box-shadow: 0 0 5px;
+}
+
+.text {
+    font-size: 40px !important;
+    background-color: #333;
+    text-align: center;
+    color : #fff;
+    font-family: inherit;
+}
+
+.invisible {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    bottom : 250px;
+}
