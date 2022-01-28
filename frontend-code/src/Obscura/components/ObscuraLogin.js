@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import {useHistory} from 'react-router-dom'
 import axios from "axios";
+import obscurabannerv2 from '../constants/obscurabannerv2.png'
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -103,6 +104,10 @@ const LoginContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${obscurabannerv2});
+  overflow-x: hidden;
+  margin-top: -64px;
+  background-size: cover;
 `;
 const StyledLogin = styled.div`
   max-width: 450px;
