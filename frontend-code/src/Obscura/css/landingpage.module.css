@@ -9,6 +9,7 @@
   background-size: cover;
   overflow: hidden;
 }
+
 .btnGroup {
   position: absolute;
   top: 80vh;
@@ -18,41 +19,57 @@
   justify-content: center;
   align-items: center;
 }
-
-.instructionBtn {
+.btn{
   top: 0;
   left: 0;
   width: 180px;
   height: 55px;
-  background-color: #e83e7d !important;
   border-radius: 20%/50%;
   text-transform: capitalize;
-  box-shadow: 0px 0px 15px #e83e7d;
-  margin-left: -2rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
-
-.instructionBtn::before {
+.instructionBtn {
+  background-color: #e83e7d !important;
+  box-shadow: 0px 0px 15px #e83e7d;
+  margin-left: -2rem;
+}
+.instructionBtn::before, .loginBtn::before{
   width: 150%;
   height: 150%;
-  background: linear-gradient(to right, #fff, #e83e7d);
   content: "";
   position: absolute;
   left: -25%;
   top: -25%;
   animation: rotate 2s infinite linear;
-  content: "";
 }
-.instructionBtn:after {
+.instructionBtn:after, .loginBtn:after{
   width: 94%;
   height: 94%;
-  background-color: #e83e7d !important;
   border-radius: 20%/50%;
   position: absolute !important;
-  content: "Instructions";
   left: 3%;
   top: 3%;
+}
+.instructionBtn::before {
+  background: linear-gradient(to right, #fff, #e83e7d);
+}
+.instructionBtn:after {
+  background-color: #e83e7d !important;
+  content: "Instructions";
+}
+
+.loginBtn {
+  background-color: #12a389 !important;
+  box-shadow: 0px 0px 15px #12a389;
+  margin-left: 2rem;
+}
+.loginBtn::before {
+  background: linear-gradient(to right, #fff, #12a389);
+}
+.loginBtn:after {
+  background-color: #12a389 !important;
+  content: "Login";
 }
 
 @keyframes rotate {
@@ -61,40 +78,6 @@
   }
 }
 
-.loginBtn {
-  top: 0;
-  left: 0;
-  width: 180px;
-  height: 55px;
-  border-radius: 20%/50%;
-  background-color: #12a389 !important;
-  text-transform: capitalize;
-  box-shadow: 0px 0px 15px #12a389;
-  margin-left: 2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-.loginBtn::before {
-  width: 150%;
-  height: 150%;
-  background: linear-gradient(to right, #fff, #12a389);
-  content: "";
-  position: absolute;
-  left: -25%;
-  top: -25%;
-  animation: rotate 2s infinite linear;
-  content: "";
-}
-.loginBtn:after {
-  width: 94%;
-  height: 94%;
-  background-color: #12a389 !important;
-  border-radius: 20%/50%;
-  position: absolute !important;
-  content: "Login";
-  left: 3%;
-  top: 3%;
-}
 @media only screen and (max-width: 1260px) {
   .mainSection {
     height: 30vh;

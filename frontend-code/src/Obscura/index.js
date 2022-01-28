@@ -23,7 +23,7 @@ class Home extends Component {
         <div>
           <Link to="/obscura/instructions">
             <button
-              className={`btn btn-primary waves-effect white-text btn-large ${Styles.instructionBtn}`}
+              className={`btn btn-primary waves-effect white-text btn-large ${Styles.instructionBtn} ${Styles.btn}`}
             >
             </button>
           </Link>
@@ -31,7 +31,7 @@ class Home extends Component {
         <div>
           <Link to="/obscura/login">
             <button
-              className={`btn btn-primary waves-effect white-text btn-large ${Styles.loginBtn}`}
+              className={`btn btn-primary waves-effect white-text btn-large ${Styles.loginBtn} ${Styles.btn}`}
             >
             </button>
           </Link>
