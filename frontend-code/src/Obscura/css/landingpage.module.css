@@ -1,0 +1,118 @@
+.mainSection {
+  background-color: #262626 !important;
+  width: 100%;
+  margin-top: -64px;
+  height: 100vh;
+  background-image: url("../constants/obscurabanner.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.btnGroup {
+  position: absolute;
+  top: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructionBtn {
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 55px;
+  background-color: #e83e7d !important;
+  border-radius: 20%/50%;
+  text-transform: capitalize;
+  box-shadow: 0px 0px 15px #e83e7d;
+  margin-left: -2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.instructionBtn::before {
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(to right, #fff, #e83e7d);
+  content: "";
+  position: absolute;
+  left: -25%;
+  top: -25%;
+  animation: rotate 2s infinite linear;
+  content: "";
+}
+.instructionBtn:after {
+  width: 94%;
+  height: 94%;
+  background-color: #e83e7d !important;
+  border-radius: 20%/50%;
+  position: absolute !important;
+  content: "Instructions";
+  left: 3%;
+  top: 3%;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loginBtn {
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 55px;
+  border-radius: 20%/50%;
+  background-color: #12a389 !important;
+  text-transform: capitalize;
+  box-shadow: 0px 0px 15px #12a389;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.loginBtn::before {
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(to right, #fff, #12a389);
+  content: "";
+  position: absolute;
+  left: -25%;
+  top: -25%;
+  animation: rotate 2s infinite linear;
+  content: "";
+}
+.loginBtn:after {
+  width: 94%;
+  height: 94%;
+  background-color: #12a389 !important;
+  border-radius: 20%/50%;
+  position: absolute !important;
+  content: "Login";
+  left: 3%;
+  top: 3%;
+}
+@media only screen and (max-width: 1260px) {
+  .mainSection {
+    height: 30vh;
+    margin-top: 0px;
+  }
+  .btnGroup {
+    top: 45vh;
+  }
+}
+@media only screen and (max-width: 395px) {
+  .btnGroup {
+    flex-direction: column;
+  }
+  .loginBtn {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .instructionBtn {
+    margin: 0;
+  }
+}

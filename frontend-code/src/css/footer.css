@@ -1,27 +1,27 @@
 .footer .page-footer {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
 .crypt {
-    background-color: #0c0013 !important;
-    background-image: url("../components/Transcend/Cryptonite/background.png");
+  background-color: #0c0013 !important;
+  background-image: url("../components/Transcend/Cryptonite/background.png");
 }
 .obscura {
-    background-color: #0c0013 !important;
-    background-image: url("../Obscura/constants/obscurabannerv2.png");
+  background-color: #0c0013 !important;
+  background-image: linear-gradient(315deg, #12a389 0%, #e83e7d 74%);
 }
 .charge {
-    background-color: #00405b !important;
+  background-color: #00405b !important;
 }
 .footer .anchor {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .footer .text {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 .crypt.footer .text {
-    color: #60fb52;
+  color: #60fb52;
 }
 .crypt.footer .white-text {
-    color: #60fb52 !important;
+  color: #60fb52 !important;
 }

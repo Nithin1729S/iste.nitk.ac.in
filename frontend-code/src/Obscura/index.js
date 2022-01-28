@@ -3,8 +3,7 @@ import {withRouter} from 'react-router'
 
 //import Cookies from 'universal-cookie'
 import {Link} from 'react-router-dom'
-
-import { FlexContainerCentered as Container} from '../components/UI/FlexContainers';
+import Styles from "./css/landingpage.module.css";
 import Dashboard from './components/Dashboard';
 class Home extends Component {
   componentDidMount() {
@@ -13,23 +12,32 @@ class Home extends Component {
   }
   checkLogin = () => {
     // use localStorage to see if user is already logged in
-    return true;
+    return false;
   }
   // homePage will contain the jsx to render the home-page 
   homePage = (
-    <Container isColumn>
-      <h3>Obscura Homepage Placeholder</h3>
-      <Container isColumn style={{alignItems: 'center'}}>
+    <section
+      className={Styles.mainSection}
+    >
+      <div className={`row ${Styles.btnGroup}`}>
         <div>
-            <Link to="/obscura/instructions">
-              <button class="btn btn-primary waves-effect" style={{margin:"10%"}}>Instructions</button>
-            </Link>
+          <Link to="/obscura/instructions">
+            <button
+              className={`btn btn-primary waves-effect white-text btn-large ${Styles.instructionBtn}`}
+            >
+            </button>
+          </Link>
         </div>
-        <Link to="/obscura/login">
-          <button class="btn btn-primary waves-effect">Login</button>
-        </Link>
-      </Container>
-    </Container>
+        <div>
+          <Link to="/obscura/login">
+            <button
+              className={`btn btn-primary waves-effect white-text btn-large ${Styles.loginBtn}`}
+            >
+            </button>
+          </Link>
+        </div>
+      </div>
+    </section>
   );
   render() {
     if (!this.checkLogin()) {
