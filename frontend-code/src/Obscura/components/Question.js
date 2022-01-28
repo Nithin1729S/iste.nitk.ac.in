@@ -31,7 +31,7 @@ const Question = ({ currQues,setCurrQues,questions,correct,changeScore,updateQue
               key={ i }
               onClick={()=>handleCheck(index)}
             >
-              {i}
+              Option { index }
             </button>
           )) }
         </div>

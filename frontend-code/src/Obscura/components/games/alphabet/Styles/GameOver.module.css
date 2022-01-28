@@ -30,16 +30,15 @@
 }
 
 .restart {
+    color : #fff;
     box-sizing: border-box;
     padding: 30px;
     border-radius: 30px;
     outline: none;
-    border: 2px solid black;
-    background-color: teal;
+    background-color: #12a389;
 }
 
 .restart:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 5px black;
     text-shadow: 0 0 5px #fff;
 }

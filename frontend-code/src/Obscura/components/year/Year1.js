@@ -10,7 +10,7 @@ class Year1 extends Component {
         //questions: [],
         questionScore: 0,
         gameScore: 0,
-        showQuestion: true,
+        showQuestion: false,
     }
     componentDidMount() {
         window.onbeforeunload = function() {
