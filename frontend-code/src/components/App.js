@@ -33,6 +33,7 @@ import Year1 from '../Obscura/components/year/Year1'
 import Year3 from '../Obscura/components/year/Year3'
 import Year2 from '../Obscura/components/year/Year2'
 import Year4 from '../Obscura/components/year/Year4'
+import Leaderboard from '../Obscura/components/Leaderboard'
 
 import '../css/constants.css';
 
@@ -70,10 +71,21 @@ class App extends React.Component {
 						{/* 
 						Obscura routes 
 							*/ }
-						<Route path="/obscura/year4" component={Year4}/>
-						<Route path="/obscura/year3" component={Year3}/>
-						<Route path="/obscura/year2" component={Year2}/>
-						<Route path="/obscura/year1" component={Year1}/>
+						<Route path='/obscura/leaderboard'
+							render={ () => (<Leaderboard setFooterVal={ this.changeFooterBackground } />) } 
+						/>
+						<Route path="/obscura/year4"
+							render={ () => (<Year4 setFooterVal={ this.changeFooterBackground } />) } 
+						/>
+						<Route path="/obscura/year3"
+							render={ () => (<Year3 setFooterVal={ this.changeFooterBackground } />) } 
+						/>
+						<Route path="/obscura/year2"
+							render={ () => (<Year2 setFooterVal={ this.changeFooterBackground } />) } 
+						/>
+						<Route path="/obscura/year1"
+							render={ () => (<Year1 setFooterVal={ this.changeFooterBackground } />) } 
+						/>
 						<Route path='/obscura/dashboard' 
 							render={() => (<Dashboard setFooterVal={this.changeFooterBackground} />)}
 						/>

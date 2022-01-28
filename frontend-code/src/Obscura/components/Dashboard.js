@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FlexContainerCentered as Container } from '../../components/UI/FlexContainers';
 import YearCard from './YearCard'
 
@@ -21,7 +22,7 @@ class Dashboard extends Component {
       <>
         <Container isColumn>
           <h1>Hello name </h1>
-          
+          <Link to="/obscura/leaderboard">Leaderboard</Link>
           <div className="container">
             <div className="row">
               {/* year 1 card is never disabled  */}
