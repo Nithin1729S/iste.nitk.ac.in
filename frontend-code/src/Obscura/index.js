@@ -8,14 +8,11 @@ import { FlexContainerCentered as Container} from '../components/UI/FlexContaine
 import Dashboard from './components/Dashboard';
 class Home extends Component {
   componentDidMount() {
-    console.log(this.props)
     this.props.setFooterVal("crypt")
   }
   checkLogin = () => {
-    // use cookies or localStorage to see if user is already logged in
-    // const cookie = new Cookies()
-    // return cookie.get('userName')
-    return false;
+    // use localStorage to see if user is already logged in
+    return true;
   }
   // homePage will contain the jsx to render the home-page 
   homePage = (
@@ -37,7 +34,7 @@ class Home extends Component {
     if (!this.checkLogin()) {
       return this.homePage;
     }
-    return <Dashboard />
+    return <Dashboard setFooterVal={ this.props.setFooterVal }/>
   }
 
   componentWillUnmount() {

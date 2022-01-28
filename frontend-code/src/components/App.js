@@ -30,6 +30,9 @@ import Instructions from '../Obscura/components/Instructions'
 import ObscuraLogin from '../Obscura/components/ObscuraLogin'
 import Dashboard from '../Obscura/components/Dashboard';
 import Year1 from '../Obscura/components/year/Year1'
+import Year3 from '../Obscura/components/year/Year3'
+import Year2 from '../Obscura/components/year/Year2'
+import Year4 from '../Obscura/components/year/Year4'
 
 import '../css/constants.css';
 
@@ -67,6 +70,9 @@ class App extends React.Component {
 						{/* 
 						Obscura routes 
 							*/ }
+						<Route path="/obscura/year4" component={Year4}/>
+						<Route path="/obscura/year3" component={Year3}/>
+						<Route path="/obscura/year2" component={Year2}/>
 						<Route path="/obscura/year1" component={Year1}/>
 						<Route path='/obscura/dashboard' 
 							render={() => (<Dashboard setFooterVal={this.changeFooterBackground} />)}
