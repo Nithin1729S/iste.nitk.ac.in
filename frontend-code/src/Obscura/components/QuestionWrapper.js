@@ -1,12 +1,14 @@
 import React,{useState} from 'react';
 import Question from './Question'
+import styled from 'styled-components'
+
 
 const QuestionWrapper = ({ changeScore, questions,updateQuestionSolved }) => {
     const [currQues, setCurrQues] = useState(0)
     
     return (
         <>
-            <div className="container">
+            <Container>
                 <Question
                     currQues={ currQues }
                     setCurrQues={ setCurrQues }
@@ -15,9 +17,18 @@ const QuestionWrapper = ({ changeScore, questions,updateQuestionSolved }) => {
                     changeScore={ changeScore }
                     updateQuestionSolved={ updateQuestionSolved }
                 />
-            </div>
+            </Container>
         </>
     );
 };
 
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 5%;
+`
+
+
 export default QuestionWrapper;
+

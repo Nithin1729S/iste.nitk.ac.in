@@ -26,6 +26,12 @@ const Login = () => {
     if (password.length < 3 && username.length < 3) {
       return;
     } else {
+      const data = {
+        userName: username,
+        yearPassed: 2,
+        scores : [1000,500,0,0]
+      }
+      localStorage.setItem("userInfo",JSON.stringify(data));
       history.push('/obscura/dashboard')
       // axios
       //   .post("/user/login", {

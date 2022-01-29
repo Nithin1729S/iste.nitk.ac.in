@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { firstYear,numQuestions } from '../../constants/questions.js'
+import { firstYear, numQuestions } from '../../constants/questions.js'
+import obscurabannerv2 from '../../constants/obscurabannerv2.png'
+
 
 import Alphabet from '../games/alphabet'
 class Year1 extends Component {
@@ -70,15 +73,17 @@ class Year1 extends Component {
     render() {
         const questionRender = (
             // the jsx to render the questions
-            <>
-                <h2>Question Score : { this.state.questionScore }</h2>
-                <h3>Remaining Questions : { 2 - this.state.numberQuestionSolved }</h3>
+            <Container>
+                <QuestionInfo>
+                    <h3>Question Score : { this.state.questionScore }</h3>
+                    <h3>Remaining Questions : { numQuestions[0] - this.state.numberQuestionSolved - 1 }</h3>
+                </QuestionInfo>    
                 <QuestionWrapper
                     changeScore={ this.changeScore }
                     questions={ firstYear }
                     updateQuestionSolved={ this.updateQuestionSolved }
                 />
-            </>
+            </Container>
         );
     
         const gameRender = (
@@ -101,3 +106,32 @@ class Year1 extends Component {
 }
 
 export default withRouter(Year1);
+
+const Container = styled.div`
+    padding : 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${obscurabannerv2});
+    background-size: cover;
+    overflow-x: hidden;
+    margin-top: -64px;
+    background-size: cover;
+    h1,h2,h3{
+        color: #fff !important;
+    }
+`;
+
+const QuestionInfo = styled.div`
+    display : flex;
+    flex-direction: row;
+    width:90%;
+    justify-content: space-between;
+    h1,h2,h3{
+        color: #fff !important;
+    }
+`;

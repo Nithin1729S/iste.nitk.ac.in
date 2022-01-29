@@ -12,7 +12,7 @@ class Home extends Component {
   }
   checkLogin = () => {
     // use localStorage to see if user is already logged in
-    return false;
+    return !localStorage.getItem("userInfo")
   }
   // homePage will contain the jsx to render the home-page 
   homePage = (
@@ -40,7 +40,7 @@ class Home extends Component {
     </section>
   );
   render() {
-    if (!this.checkLogin()) {
+    if (this.checkLogin()) {
       return this.homePage;
     }
     return <Dashboard setFooterVal={ this.props.setFooterVal }/>

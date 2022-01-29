@@ -7,22 +7,27 @@ import obscurabannerv2 from '../constants/obscurabannerv2.png'
 
 class Dashboard extends Component {
   state = {
+    userName : "",
     yearPassed: 0,
     scores : [] 
   }
   componentDidMount() {
+    const data = JSON.parse(localStorage.getItem('userInfo'))
+    //console.log(data)
     this.props.setFooterVal("obscura")  // the footer can be edited at css/footer.css
     // fetch this data from the localStorage or make API request to fetch it
     this.setState({
-      yearPassed: 2, 
-      scores : [1000,500,0,0]
+      userName : data.userName,
+      yearPassed: data.yearPassed,
+      scores : data.scores
     })
   }
   render() {
+    console.log(this.state)
     return (
       <>
         <Container>
-          <Name>Hello name </Name>
+          <Name>Hello {this.state.userName} </Name>
           <Link to="/obscura/leaderboard">Leaderboard</Link>
           <div className="container">
             <div className="row">
@@ -79,9 +84,7 @@ class Dashboard extends Component {
       </>
     );
   }
-  // componentWillUnmount() {
-  //   this.props.setFooterVal("")
-  // }
+
 }
 
 
