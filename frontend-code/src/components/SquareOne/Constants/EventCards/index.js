@@ -7,29 +7,18 @@ import chronicle from '../images/EventCards/Chronicle.jpg';
 
 const eventData = [
 	{
-		title: 'Synergy',
+		title: 'EC-pEEzy',
 		desc: (
 			<>
-				Research, Ideate, Innovate to Solve a Case!
-				<br />A unique case study competition to tickle the creative part of
-				your brain as you build solutions for the puzzling questions that we
-				pose to you!
+				Square One is one of the flagship events of ISTE for the Even Semester.
+				Charge yourselves up because ISTE Charge is here with ECE-Peazy, a fun
+				and enthralling event, full of learning. This year we bring you a 2
+				round event, that will test your technical and logical proficiency, and
+				visual inference skills.
 			</>
 		),
-		img: catalyst,
-		formLink: '/squareonesig/1/',
-	},
-	{
-		title: 'Obscura',
-		desc: (
-			<>
-				Answer the questions. Play the games. Escape the Obscura.💦<br></br>
-				ISTE Crypt brings to you, Obscura, the biggest and the meanest online
-				Clash of Crews this season, and it is here to get your brains zapping.
-			</>
-		),
-		img: crypt,
-		formLink: '/squareonesig/0/',
+		img: charge,
+		formLink: '/squareonesig/4/',
 	},
 	{
 		title: 'Pantheon',
@@ -58,21 +47,7 @@ const eventData = [
 		formLink: '/squareonesig/3/',
 	},
 	{
-		title: 'EC-pEEzy',
-		desc: (
-			<>
-				Square One is one of the flagship events of ISTE for the Even Semester.
-				Charge yourselves up because ISTE Charge is here with ECE-Peazy, a fun
-				and enthralling event, full of learning. This year we bring you a 2
-				round event, that will test your technical and logical proficiency, and
-				visual inference skills.
-			</>
-		),
-		img: charge,
-		formLink: '/squareonesig/4/',
-	},
-	{
-		title: 'Now you see me',
+		title: 'Now You See Me',
 		desc: (
 			<>
 				Ever wondered how reconnaissance airplanes go unnoticed in the sky? Or
@@ -84,6 +59,31 @@ const eventData = [
 		),
 		img: clutch,
 		formLink: '/squareonesig/5/',
+	},
+	{
+		title: 'Obscura',
+		desc: (
+			<>
+				Answer the questions. Play the games. Escape the Obscura.💦<br></br>
+				ISTE Crypt brings to you, Obscura, the biggest and the meanest online
+				Clash of Crews this season, and it is here to get your brains zapping.
+			</>
+		),
+		img: crypt,
+		formLink: '/squareonesig/0/',
+	},
+	{
+		title: 'Synergy',
+		desc: (
+			<>
+				Research, Ideate, Innovate to Solve a Case!
+				<br />A unique case study competition to tickle the creative part of
+				your brain as you build solutions for the puzzling questions that we
+				pose to you!
+			</>
+		),
+		img: catalyst,
+		formLink: '/squareonesig/1/',
 	},
 ];
 
@@ -286,7 +286,7 @@ export const sigsdata = [
 		link: 'https://docs.google.com/forms/d/e/1FAIpQLSfoP3DAY2mrNcSSeiyuf0b_GHEGKyzI5vKmMfCXSZC4ujmP6w/viewform?usp=sf_link',
 	},
 	{
-		eventName: 'Now you see me',
+		eventName: 'Now You See Me',
 		sig: 'Clutch|2022',
 		desc: (
 			<>

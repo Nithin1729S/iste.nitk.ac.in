@@ -31,11 +31,11 @@ class SIGSquareOne extends React.Component {
 								{sigsdata[this.state.name]['sig']}
 							</h3>
 							<h4 className={styles.heading}>
-								<i className="material-icons">description</i>Details and Rules
+								<i className="material-icons">description</i> Description
 							</h4>
 							{sigsdata[this.state.name]['desc']}
 							<h4 className={styles.heading}>
-								<i className="material-icons">call</i>Points of Contact
+								<i className="material-icons">call</i> Points of Contact
 							</h4>
 							{sigsdata[this.state.name]['poc']}
 							<div className={styles.buttonContainer}>
