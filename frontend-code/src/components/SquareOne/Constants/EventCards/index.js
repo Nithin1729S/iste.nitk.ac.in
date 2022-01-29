@@ -221,9 +221,9 @@ export const sigsdata = [
 				<ol>
 					<li>Registrations are open till 3rd February 2022, 12 Noon IST.</li>
 					<li>
-						Only one person from each team is required to fill-up the form.
-						Please ensure we do not receive multiple registrations from the same
-						team.{' '}
+						Each team may consist of 2-3 members. Only one person from each team
+						is required to fill-up the form. Please ensure we do not receive
+						multiple registrations from the same team.
 					</li>
 					<li>
 						Each participant is required to enter their name, roll number and
@@ -247,17 +247,17 @@ export const sigsdata = [
 			<>
 				Welcome everyone,<br></br> Square One is one of the flagship events of
 				ISTE for the Even Semester. Charge yourselves up because ISTE Charge is
-				here with ECE-Peazy, a fun and enthralling event, full of learning. This
+				here with EC-pEEzy, a fun and enthralling event, full of learning. This
 				year we bring you a 2 round event, that will test your technical and
-				logical proficiency, and visual inference skills.<br></br> ECE-Peazy
-				will consist of rounds where you have to think on your feet and use your
-				wits to showcase your aptitude prowess. <br></br>Round-1, which will put
-				your pictionary skills to the test and make you crave for more.{' '}
-				<br></br>Round -2,Which is for all the crosswords lovers, filled with
-				diverse words and “extremely” helpful hints which would make you wish it
-				never ends. <br></br>Do keep an eye for easter eggs throughout the
-				event.<br></br> A fun journey awaits you, so wait no more and register
-				yourself up for the event:).
+				logical proficiency, and visual inference skills.<br></br> EC-pEEzy will
+				consist of rounds where you have to think on your feet and use your wits
+				to showcase your aptitude prowess. <br></br>Round-1, which will put your
+				pictionary skills to the test and make you crave for more. <br></br>
+				Round -2,Which is for all the crosswords lovers, filled with diverse
+				words and “extremely” helpful hints which would make you wish it never
+				ends. <br></br>Do keep an eye for easter eggs throughout the event.
+				<br></br> A fun journey awaits you, so wait no more and register
+				yourself up for the event:.
 				<br></br>
 				<div stlye={{ fontWeight: 'bold' }}>Rules and Regulations</div>
 				<ol>
