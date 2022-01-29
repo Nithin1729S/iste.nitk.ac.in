@@ -27,7 +27,8 @@ class Dashboard extends Component {
     return (
       <>
         <Container>
-          <Name>Hello {this.state.userName} </Name>
+          <Name>Hello { this.state.userName } </Name>
+          
           <Link to="/obscura/leaderboard">Leaderboard</Link>
           <div className="container">
             <div className="row">

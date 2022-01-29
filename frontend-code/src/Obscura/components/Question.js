@@ -115,9 +115,9 @@ const QuestionTop = styled.div`
   flex-direction : row;
   align-items : center;
   justify-content : space-between;
-  Skip : hover{
+    & : hover{
     transform: scale(0.97);
-  }
+    }
 `
 
 export default Question;
