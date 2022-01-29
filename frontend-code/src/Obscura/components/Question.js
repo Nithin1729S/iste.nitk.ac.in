@@ -50,6 +50,7 @@ const Question = ({ currQues,setCurrQues,questions,correct,changeScore,updateQue
   );
 };
 const Wrapper = styled.div`
+  width : 60vw !important;
   max-width: 550px;
   height: 80%;
   width: 100%;
@@ -58,7 +59,7 @@ const Wrapper = styled.div`
   background-color: #262626;
   border-radius: 8px;
   box-shadow: 9px 4px 32px 0px #000000b3;
-  h2 {
+  * {
     font-size: 20px;
     color: #ffeaea;
   }
