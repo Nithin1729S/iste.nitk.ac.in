@@ -32,6 +32,7 @@ def userView(request):
         team_details = team.objects.get(username = username) 
         status = {}
         status['username'] = username
+        status['yearPassed'] = team_details.yearPassed
         status['total_score'] = team_details.total_score
         scores = score.objects.filter(username = username)
         team_scores = ScoreSerializer(scores, many=True).data
@@ -82,7 +83,10 @@ def updatescoreView(request,year):
         if year_score < total :
             year_score = total
         scores.fourthYear = year_score
-        
+    
+    if int(year) > team_details.yearPassed:
+        team_details.yearPassed = int(year)
+    
     team_details.total_score = int(scores.firstYear + scores.secondYear + scores.thirdYear + scores.fourthYear)
     team_details.save()
     scores.save()
