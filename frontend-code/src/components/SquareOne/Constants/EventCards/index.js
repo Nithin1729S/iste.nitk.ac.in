@@ -113,7 +113,7 @@ export const sigsdata = [
 						reduce the score the team has attained.
 					</li>
 					<li>
-						The teams may consist of 1-3 people.And by the end of the event, the
+						The teams may consist of 1-3 people and by the end of the event, the
 						team with the highest score wins.{' '}
 					</li>
 					<li>
