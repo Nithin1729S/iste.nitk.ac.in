@@ -13,6 +13,7 @@ urlpatterns = [
     path('event/', include('event.urls', namespace='event')),
     path('recs/', include('recruitment.urls', namespace='recruitment')),
     path('sig/', include('sig.urls', namespace='sig')),
+    path('obscura/', include('obscura.urls', namespace='obscura')),
     path('team/', include('team.urls', namespace='team')),
     path('smp/', include('SMP.urls', namespace='SMP')),
     path('ctf/', include('ctf.urls', namespace='CTF')),

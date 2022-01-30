@@ -31,11 +31,6 @@ class Migration(migrations.Migration):
             name='batch_of',
             field=models.IntegerField(blank=True, default=2023),
         ),
-        migrations.AlterField(
-            model_name='user',
-            name='sigs',
-            field=models.ManyToManyField(blank=True, to='sig.SIG'),
-        ),
         migrations.DeleteModel(
             name='AuxCore',
         ),
