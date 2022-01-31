@@ -5,20 +5,29 @@ import LeaderboardItem from '../RenderingComponents/LeaderboardItem';
 import styles from '../../css/leaderboard.module.css';
 import { baseRequest } from '../../constants';
 class LeaderboardComponent extends React.Component {
-	state = { searchInput: '', selectedFilter: 'roll_number', elements: [] };
+	state = {
+		searchInput: '',
+		selectedFilter: 'rollno',
+		elements: [],
+		test: [],
+	};
 	componentDidMount() {
 		console.log('Test');
-		// baseRequest.get('/ctf/leaderboard/').then((res) => {
-		// 	this.setState({ elements: res.data.teamList });
-		// });
+		baseRequest.get('/squareoneleaderboard/').then((res) => {
+			this.setState({ elements: res.data.teamList });
+		});
 		console.log('Test2');
 		console.log(this.state.elements);
 		this.setState({
 			elements: [
-				{ team_name: 'Team 1', roll_number: '1', score: 200 },
-				{ team_name: 'Team 2', roll_number: '2', score: 100 },
+				{ name: 'Team 1', rollno: '1', score: 200 },
+				{ name: 'Team 2', rollno: '2', score: 100 },
 			],
 		});
+	}
+
+	componentDidUpdate() {
+		console.log(this.state.test);
 	}
 
 	handleClick = (e) => {
@@ -44,8 +53,8 @@ class LeaderboardComponent extends React.Component {
 	render() {
 		if (!this.state.elements[0]) return null;
 		const unRankedElements = [
-			...this.state.elements.map(({ roll_number, team_name, score }) => {
-				return { roll_number, team_name, score };
+			...this.state.elements.map(({ rollno, name, score }) => {
+				return { rollno, name, score };
 			}),
 		];
 		const leaderboardElements = this.calcRank(unRankedElements);
@@ -56,13 +65,13 @@ class LeaderboardComponent extends React.Component {
 					.includes(this.state.searchInput.toLowerCase())
 			)
 			.slice(0, 15)
-			.map(({ team_name, roll_number, score, rank }) => {
+			.map(({ name, rollno, score, rank }) => {
 				return (
 					<LeaderboardItem
-						key={roll_number}
+						key={rollno}
 						rank={rank}
-						name={team_name}
-						rollNum={roll_number}
+						name={name}
+						rollNum={rollno}
 						score={score}
 					/>
 				);
@@ -83,23 +92,23 @@ class LeaderboardComponent extends React.Component {
 				<label>Filter:</label>
 				<button
 					className={
-						this.state.selectedFilter === 'roll_number'
+						this.state.selectedFilter === 'rollno'
 							? `${styles.button} ${styles.active}`
 							: styles.button
 					}
 					onClick={this.handleClick}
-					id="roll_number"
+					id="rollno"
 				>
 					Roll Number
 				</button>
 				<button
 					className={
-						this.state.selectedFilter === 'team_name'
+						this.state.selectedFilter === 'name'
 							? `${styles.button} ${styles.active}`
 							: styles.button
 					}
 					onClick={this.handleClick}
-					id="team_name"
+					id="name"
 				>
 					Name
 				</button>
@@ -118,7 +127,7 @@ class LeaderboardComponent extends React.Component {
 							<br />
 							<label htmlFor="search">
 								Search by{' '}
-								{this.state.selectedFilter === 'roll_number'
+								{this.state.selectedFilter === 'rollno'
 									? 'Roll Number'
 									: 'Name'}{' '}
 								:

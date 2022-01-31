@@ -77,9 +77,7 @@ class App extends React.Component {
 						/> */}
 						{enableLeaderboard ? (
 							<Route path="/leaderboard" component={LeaderboardComponent} />
-						) : (
-							<></>
-						)}
+						) : null}
 						{/* <Route path="/expoPage/:name" component={DescPage} /> */}
 						<Route path="/sig/:name" component={SigComponent} />
 						<Route path="/team" component={TeamComponent} />
