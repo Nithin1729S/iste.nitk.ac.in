@@ -40,3 +40,43 @@ class score(models.Model):
 
     def __str__(self):
         return str(self.firstYear+self.secondYear+self.thirdYear+self.fourthYear)
+
+class attempt(models.Model):
+    username = models.CharField(
+        max_length=200,
+        unique=True
+    )
+    firstYear = models.IntegerField(
+        default=0
+    )
+    secondYear = models.IntegerField(
+        default=0
+    )
+    thirdYear = models.IntegerField(
+        default=0
+    )
+    fourthYear = models.IntegerField(
+        default=0
+    )
+    def __str__(self):
+        return str(self.firstYear+self.secondYear+self.thirdYear+self.fourthYear)
+    
+class question(models.Model):
+    username = models.CharField(
+        max_length=200,
+        unique=True
+    )
+    firstYear = models.IntegerField(
+        default=0
+    )
+    secondYear = models.IntegerField(
+        default=0
+    )
+    thirdYear = models.IntegerField(
+        default=0
+    )
+    fourthYear = models.IntegerField(
+        default=0
+    )
+    def __str__(self):
+        return str(self.firstYear+self.secondYear+self.thirdYear+self.fourthYear)

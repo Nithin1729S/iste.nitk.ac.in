@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from obscura.models import team
 from obscura.models import score
+from obscura.models import attempt
+from obscura.models import question
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from obscura.serializers import ScoreSerializer
@@ -68,32 +70,66 @@ def updatescoreView(request, year):
     username = request.GET['username']
     total = int(request.GET['score'])
     has_passed = int(request.GET['has_passed'])
+    numberQuestionSolved = int(request.GET['numberQuestionSolved'])  
     team_details = team.objects.get(username=username)
     scores = score.objects.get(username=username)
+    questions = question.objects.get(username=username)
+    attempts = attempt.objects.get(username=username)
     if year == '1':
         year_score = int(scores.firstYear)
         if year_score < total:
             year_score = total
         scores.firstYear = year_score
+        questions.firstYear = numberQuestionSolved
+        attempts.firstYear += 1
     elif year == '2':
         year_score = int(scores.secondYear)
         if year_score < total:
             year_score = total
         scores.secondYear = year_score
+        questions.secondYear = numberQuestionSolved
+        attempts.secondYear += 1
     elif year == '3':
         year_score = int(scores.thirdYear)
         if year_score < total:
             year_score = total
         scores.thirdYear = year_score
+        questions.thirdYear = numberQuestionSolved
+        attempts.thirdYear += 1
     elif year == '4':
         year_score = int(scores.fourthYear)
         if year_score < total:
             year_score = total
         scores.fourthYear = year_score
+        questions.fourthYear = numberQuestionSolved
+        attempts.fourthYear += 1
     if has_passed==1 and int(year) > team_details.yearPassed:
         team_details.yearPassed = int(year)
     
     team_details.total_score = int(scores.firstYear + scores.secondYear + scores.thirdYear + scores.fourthYear)
     team_details.save()
     scores.save()
+    questions.save()
+    attempts.save()
     return Response({'msg': 'Score Updated'})
+
+@api_view(['GET'])
+def questionView(request,year):
+    username = request.GET['username']
+    questions = question.objects.get(username=username)
+    attempts = attempt.objects.get(username=username)
+    result = {}
+    if year == '1':
+        result['numAttempts'] = attempts.firstYear
+        result['numQuestionsSolved'] = questions.firstYear
+    elif year == '2':
+        result['numAttempts'] = attempts.secondYear
+        result['numQuestionsSolved'] = questions.secondYear
+    elif year == '3':
+        result['numAttempts'] = attempts.thirdYear
+        result['numQuestionsSolved'] = questions.thirdYear
+    elif year == '4':
+        result['numAttempts'] = attempts.fourthYear
+        result['numQuestionsSolved'] = questions.fourthYear
+    return Response(result)
+
