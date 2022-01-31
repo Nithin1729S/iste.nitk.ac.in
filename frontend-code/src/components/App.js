@@ -16,7 +16,7 @@ import EventDetails from './PageComponents/EventDetails';
 import EventAdd from './PageComponents/EventAdd';
 // import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 // import DescPage from '../expo/Components/DescPage';
-// import LeaderboardComponent from './PageComponents/LeaderboardComponent';
+import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
 // import Transcend from './Transcend';
@@ -27,6 +27,7 @@ import SIGSquareOne from './SquareOne/eachSIG';
 // import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 import '../css/constants.css';
+import { enableLeaderboard } from '../constants.js';
 
 class App extends React.Component {
 	state = { headerShouldRender: true, footerBackgroundVariant: '' };
@@ -74,7 +75,11 @@ class App extends React.Component {
 								/>
 							)}
 						/> */}
-						{/* <Route path="/leaderboard"  component={LeaderboardComponent} /> */}
+						{enableLeaderboard ? (
+							<Route path="/leaderboard" component={LeaderboardComponent} />
+						) : (
+							<></>
+						)}
 						{/* <Route path="/expoPage/:name" component={DescPage} /> */}
 						<Route path="/sig/:name" component={SigComponent} />
 						<Route path="/team" component={TeamComponent} />

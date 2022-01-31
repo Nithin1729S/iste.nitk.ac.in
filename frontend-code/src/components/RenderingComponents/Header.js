@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableExpo, enableRecs } from '../../constants';
+import { enableExpo, enableRecs, enableLeaderboard } from '../../constants';
 
 class Header extends React.Component {
 	state = { loggedInName: '' };
@@ -319,7 +319,42 @@ class Header extends React.Component {
 							</li>
 						</ul>
 					</li>
-					{this.squareOneHeader}
+					{enableLeaderboard ? (
+						<li className="no-padding">
+							<ul className="collapsible collapsible-accordion">
+								<li>
+									<Link className="collapsible-header waves-effect white-text">
+										Square One
+										<i className="material-icons white-text ">
+											arrow_drop_down
+										</i>
+									</Link>
+									<div className="collapsible-body">
+										<ul>
+											<li>
+												<Link
+													to="/squareone/"
+													className="waves-effect white-text"
+												>
+													Events
+												</Link>
+											</li>
+											<li>
+												<Link
+													to="/leaderboard"
+													className="waves-effect white-text"
+												>
+													Leaderboard
+												</Link>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</li>
+					) : (
+						this.squareOneHeader
+					)}
 					{this.teamNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
@@ -354,7 +389,43 @@ class Header extends React.Component {
 								<ul id="sig-action" className="dropdown-content frontsig">
 									{this.sigLinks}
 								</ul>
-								{this.squareOneHeader}
+
+								{enableLeaderboard ? (
+									<>
+										<li>
+											<Link
+												className="dropdown-trigger"
+												data-target="square-one-action"
+											>
+												Square One
+												<i className="material-icons right">arrow_drop_down</i>
+											</Link>
+										</li>
+										<ul
+											id="square-one-action"
+											className="dropdown-content frontsig"
+										>
+											<li>
+												<Link
+													to="/squareone/"
+													className="waves-effect white-text"
+												>
+													Events
+												</Link>
+											</li>
+											<li>
+												<Link
+													to="/leaderboard"
+													className="waves-effect white-text"
+												>
+													Leaderboard
+												</Link>
+											</li>
+										</ul>
+									</>
+								) : (
+									this.squareOneHeader
+								)}
 								{this.teamNavHeader}
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
