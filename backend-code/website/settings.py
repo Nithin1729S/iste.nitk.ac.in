@@ -58,7 +58,8 @@ INSTALLED_APPS = [
     'sig',
     'team',
     'ctf',
-    'SMP'
+    'SMP',
+    'squareonelb'
 ]
 
 MIDDLEWARE = [
