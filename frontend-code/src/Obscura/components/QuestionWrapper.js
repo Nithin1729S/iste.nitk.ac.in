@@ -3,7 +3,7 @@ import Question from './Question'
 import styled from 'styled-components'
 
 
-const QuestionWrapper = ({ changeScore, questions,updateQuestionSolved }) => {
+const QuestionWrapper = ({ changeScore, questions,updateQuestionSolved,updateQuestionAttempted }) => {
     const [currQues, setCurrQues] = useState(0)
     
     return (
@@ -16,6 +16,7 @@ const QuestionWrapper = ({ changeScore, questions,updateQuestionSolved }) => {
                     correct={ questions[currQues]?.correctOption }
                     changeScore={ changeScore }
                     updateQuestionSolved={ updateQuestionSolved }
+                    updateQuestionAttempted={ updateQuestionAttempted }
                 />
             </Container>
         </>

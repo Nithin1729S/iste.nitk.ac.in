@@ -1,13 +1,23 @@
 import { useState, useEffect } from "react";
-import data from "./data.json";
 import styled from "styled-components";
+import { baseRequest } from "../../constants";
 
 const Leaderboard = ({ setFooterVal }) => {
-  useEffect(() => setFooterVal("obscura"))
+  
   const [resultData, setResultData] = useState(null);
   useEffect(() => {
-    setResultData(data);
-  }, []);
+    setFooterVal("obscura")
+    baseRequest.get('/obscura/leaderboard/')
+      .then((response) => {
+        //console.log(response)
+        let leaderBoardData = [];
+        for (let key in response.data) {
+          leaderBoardData.push(response.data[key])
+        }
+        //console.log(leaderBoardData)
+        setResultData(leaderBoardData);
+    })
+  },[]);
   return (
     <LeaderboardContainer>
       <Heading>Leaderboard</Heading>
@@ -23,9 +33,9 @@ const Leaderboard = ({ setFooterVal }) => {
             <Result
               rank={index + 1}
               key={index}
-              name={result.name}
-              score={result.score}
-              year={result.year}
+              name={result.username}
+              score={result.total_score}
+              year={result.yearPassed}
             />
           ))}
       </Results>
@@ -36,13 +46,15 @@ const Leaderboard = ({ setFooterVal }) => {
 const Result = ({ name, rank, score, year }) => {
   const yearSuffix = (year) => {
     switch (year) {
-      case "1":
+      case 0:
+        return "0";
+      case 1:
         return "1st";
-      case "2":
+      case 2:
         return "2nd";
-      case "3":
+      case 3:
         return "3rd";
-      case "4":
+      case 4:
         return "4th";
       default:
         return "Invalid";
@@ -61,13 +73,15 @@ const Result = ({ name, rank, score, year }) => {
 // function that returns background colour on basis of year
 const bgColorForResultElement = (year) => {
   switch (year) {
-    case "1":
+    case 0:
+      return "#fff";
+    case 1:
       return "#B1FFFD";
-    case "2":
+    case 2:
       return "#FDD2BF";
-    case "3":
+    case 3:
       return "#FFF1AF";
-    case "4":
+    case 4:
       return "#F9E4C8";
     default:
       return "#DADDFC";

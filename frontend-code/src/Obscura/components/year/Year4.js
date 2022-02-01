@@ -2,42 +2,68 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { fourthYear, numQuestions } from '../../constants/questions.js'
+import { fourthYear, numQuestions,maxGameScore } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
+import { baseRequest } from '../../../constants'
 
 
-import Alphabet from '../games/alphabet'
+
+// When users enters this page for the first time,
+// he is shown the questions (showQuestion : true)
+// if he is able to get >=50% of marks, he is determined passed (has_passed : false)
+// failing to get 50% of the scores, he is sent to the failed attempt screen where he is sent back to the dashboard
+
+//final game goes here
 class Year4 extends Component {
     state = {
+        questions : [],
         numberQuestionSolved: 0,
-        //questions: [],
+        has_passed: 0,
         questionScore: 0,
         gameScore: 0,
         showQuestion: true,
+        numberQuestionAttempted: 0,
+        attemptNumber: 0,
     }
-    componentDidMount() {
-        window.onbeforeunload = function() {
-            return true;
-        };  
+
+    componentDidMount() { 
         this.props.setFooterVal("obscura")
-        //TODO : api requests to update the states
-        // shuffles the questions from the list of first year question and select 2 from the shuffled list
+        //TODO : make a GET request and set values for showQuestions and the attempt penalty
+        const { username,yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
         const shuffled = fourthYear.sort(() => 0.5 - Math.random())
-        this.setState({
-            questions: shuffled.slice(0, numQuestions[3])
+        
+        baseRequest.get('/obscura/user/year/4', {
+            params : { username : username }
+        })
+            .then(res => {
+                const { numQuestionsSolved, numAttempts } = res.data
+                console.log(numQuestionsSolved)
+                this.setState({
+                    showQuestion: !(numQuestionsSolved === numQuestions[3]),
+                    attemptNumber: numAttempts,
+                    has_passed: yearPassed >= 4,
+                    questions : shuffled.slice(0, numQuestions[3])
+                })
         })
     }
+
     updateQuestionSolved = () => {
-        //upon a correct answer increase the number of correct questions
-        // once the number of solved question equals 
+        this.updateQuestionAttempted()
         this.setState({
-            numberQuestionSolved: this.state.numberQuestionSolved + 1,
+            numberQuestionSolved : this.state.numberQuestionSolved+1
         }, () => {
-            console.log(this.state.numberQuestionSolved)
-            if (this.state.numberQuestionSolved === numQuestions[3]) {
-                // make an API request to update the score from the question
-                window.alert('Score updated to the backend')
-                window.alert(this.state.gameScore+this.state.questionScore)
+            if (this.state.questionScore >= 0.5*numQuestions[3]*200) {
+                this.setState({
+                    has_passed : 1
+                })
+            }
+        })
+    }
+    updateQuestionAttempted = () => {
+        this.setState({
+            numberQuestionAttempted: this.state.numberQuestionAttempted + 1,
+        }, () => {
+            if (this.state.numberQuestionAttempted === numQuestions[3]) {
                 this.setState({
                     showQuestion: false
                 })
@@ -45,8 +71,6 @@ class Year4 extends Component {
         })
     }
     changeScore = (val) => {
-        //update score here
-        // if the questions are visible : update the score for the question as 
         if (this.state.showQuestion) {
             this.setState({
                 questionScore: this.state.questionScore + val
@@ -58,50 +82,77 @@ class Year4 extends Component {
             })
         }
     }
-
     gameOver = () => {
-        // TODO : update the game score here
-        // TODO : make API request to update score on the backend
-        // show some sort of congratulations or something
-        // go back to dashboard 
-        window.alert('Total Score: ' + this.state.gameScore)
-        this.props.history.push('/obscura/dashboard')
-        //history.go(0)
+        const { username } = JSON.parse(localStorage.getItem("userInfo"));
+        const finalScore = Math.min(maxGameScore[3], this.state.gameScore) + this.state.questionScore - 5 * this.state.attemptNumber;
+        baseRequest.post('/obscura/user/updatescore/4', {},
+            {
+                params:
+                {
+                    username: username,
+                    score: finalScore,
+                    has_passed: this.state.has_passed | 0,
+                    numberQuestionSolved : this.state.numberQuestionSolved
+                }
+            })
+            .then(response => {
+                console.log(response)
+                if (response.data.msg === "Score Updated") {
+                    this.props.history.push('/obscura/dashboard')
+                    window.location.reload();
+                }
+            })
+            .catch(err => console.log(err))
     }
-
     
     render() {
+        console.log(this.state)
         const questionRender = (
-            // the jsx to render the questions
             <Container>
                 <QuestionInfo>
                     <h3>Question Score : { this.state.questionScore }</h3>
-                    <h3>Remaining Questions : { numQuestions[3] - this.state.numberQuestionSolved - 1 }</h3>
+                    <h3>Remaining Questions : { numQuestions[3] - this.state.numberQuestionAttempted - 1 }</h3>
                 </QuestionInfo>    
                 <QuestionWrapper
                     changeScore={ this.changeScore }
-                    questions={ fourthYear }
-                    updateQuestionSolved={ this.updateQuestionSolved }
+                    questions={ this.state.questions }
+                    updateQuestionAttempted={ this.updateQuestionAttempted }
+                    updateQuestionSolved = {this.updateQuestionSolved }
                 />
             </Container>
         );
     
         const gameRender = (
-            <Alphabet
-                changeScore={ this.changeScore } 
-                gameOver = {this.gameOver}
-            />
+            // TODO : add the question score in the end game screen
+            // game goes here
+            <>
+                <h1>PacMan goes here</h1>
+                <button onClick={ () => this.gameOver() }>Go to Dashboard</button>
+            </>
         );
-        // two components : Questions Component and Game Component
-        return (
-            <div>
-                {/* Adding a go back to dashboard button */}
-                {/* <h1>Welcome to Year 1</h1>
-                <span><Link to="/obscura/dashboard"><button className="btn btn-primary bg-red">Go Back</button></Link></span> */}
-                {/* <h2>Overall Score: {this.state.questionScore+this.state.gameScore}</h2> */}
-                { this.state.showQuestion ? questionRender : gameRender}
-            </div>
-        )
+
+
+        if (this.state.showQuestion) {
+
+            return (<>{ questionRender }</>);
+        }
+        else if(this.state.has_passed === false){
+            return (
+                <>
+                    <Container>
+                    <FinalResult>
+                        <h1>Attempt Failed (Get 50% to pass)</h1>
+                        <h2>Final Score : { this.state.questionScore }</h2>
+                            <button onClick={ () => {
+                                this.gameOver()
+                        }}>Go to Dashboard</button>
+                    </FinalResult></Container>
+                </>
+            );
+        }
+        else {
+            return <Container>{ gameRender }</Container>
+        }
     }
 }
 
@@ -122,7 +173,7 @@ const Container = styled.div`
     margin-top: -64px;
     background-size: cover;
     h1,h2,h3{
-        color: #fff !important;
+        color: #fff ;
     }
 `;
 
@@ -135,3 +186,31 @@ const QuestionInfo = styled.div`
         color: #fff !important;
     }
 `;
+
+const FinalResult = styled.div`
+  width: 100%;
+  max-width: 500px;
+  height: 50vh;
+  background-color: #262626;
+  padding: 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+  box-shadow: 9px 4px 32px 0px #000000b3;
+  color: white;
+  font-size: 32px;
+  margin: 0px 12px;
+    button{
+    padding: 12px 32px;
+    width: 60%;
+    font-size: 24px;
+    border: none;
+    border-radius:8px;
+    margin: 16px 0px;
+    cursor: pointer;
+    color: white;
+    background-color: #12a389;
+    }
+`

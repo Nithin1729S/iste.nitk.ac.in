@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const YearCard = ({ title, link, score, disabled, year }) => {
+const YearCard = ({ title, link, score, disabled, year,yearPassed }) => {
 
   const PassedCard = (
     <Link to={ `${link}` }>
@@ -14,12 +14,12 @@ const YearCard = ({ title, link, score, disabled, year }) => {
         </div>
         <div>
         {
-          year===1 || year===4 ? <Triangle /> : year===2 ? <Circle /> : <Rectangle/> 
+          year===1 ? <Diamond/> : year===4 ? <Triangle /> : year===2 ? <Circle /> : <Rectangle/> 
         }
         </div>
         <div className='row valign-wrapper' style={{marginTop: "150px"}}>
           <div className='col s6'><h5>Score: { score }</h5></div>
-          <div className='col s6 '><h6>Passed</h6></div>
+          { yearPassed >= year  ? <div className='col s6 '><h6>Passed</h6></div> : "" }
         </div>
       </div>
     </Card>
@@ -36,12 +36,11 @@ const YearCard = ({ title, link, score, disabled, year }) => {
         </div>
         <div>
         {
-          year===1 || year===4 ? <Triangle /> : year===2 ? <Circle /> : <Rectangle/> 
+          year===1 ? <Diamond/> : year===4 ? <Triangle /> : year===2 ? <Circle /> : <Rectangle/> 
         }
         </div>
         <div className='row valign-wrapper' style={{marginTop: "150px"}}>
           <div className='col s6'><h5>Score: </h5></div>
-          <div className='col s6 '><h6>Passed</h6></div>
         </div>
       </div>
     </Card>
@@ -137,6 +136,16 @@ const Rectangle = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+`
+const Diamond = styled.div`
+  width: 100px;
+  height: 100px;
+  background-color: #e83e7d;
+  box-shadow: 0px 0px 15px #e83e7d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(45deg) rotateZ(45deg);
 `
 
 export default YearCard;

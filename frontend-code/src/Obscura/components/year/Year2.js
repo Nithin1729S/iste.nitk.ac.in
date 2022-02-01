@@ -2,41 +2,65 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { secondYear, numQuestions } from '../../constants/questions.js'
+import { secondYear, numQuestions,maxGameScore } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
+import { baseRequest } from '../../../constants'
+
+
+
+
 
 import Color from '../games/color-game'
 class Year2 extends Component {
     state = {
+        questions : [],
         numberQuestionSolved: 0,
-        //questions: [],
+        has_passed: 0,
         questionScore: 0,
         gameScore: 0,
-        showQuestion: false,
+        showQuestion: true,
+        numberQuestionAttempted: 0,
+        attemptNumber: 0,
     }
-    componentDidMount() {
-        window.onbeforeunload = function() {
-            return true;
-        };  
+
+    componentDidMount() { 
         this.props.setFooterVal("obscura")
-        //TODO : api requests to update the states
-        // shuffles the questions from the list of first year question and select 2 from the shuffled list
+        //TODO : make a GET request and set values for showQuestions and the attempt penalty
+        const { username,yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
         const shuffled = secondYear.sort(() => 0.5 - Math.random())
-        this.setState({
-            questions: shuffled.slice(0, numQuestions[1])
+        
+        baseRequest.get('/obscura/user/year/2', {
+            params : { username : username }
+        })
+            .then(res => {
+                const { numQuestionsSolved, numAttempts } = res.data
+                console.log(numQuestionsSolved)
+                this.setState({
+                    showQuestion: !(numQuestionsSolved === numQuestions[1]),
+                    attemptNumber: numAttempts,
+                    has_passed: yearPassed >= 2,
+                    questions : shuffled.slice(0, numQuestions[1])
+                })
         })
     }
+
     updateQuestionSolved = () => {
-        //upon a correct answer increase the number of correct questions
-        // once the number of solved question equals 
+        this.updateQuestionAttempted()
         this.setState({
-            numberQuestionSolved: this.state.numberQuestionSolved + 1,
+            numberQuestionSolved : this.state.numberQuestionSolved+1
         }, () => {
-            console.log(this.state.numberQuestionSolved)
-            if (this.state.numberQuestionSolved === numQuestions[1]) {
-                // make an API request to update the score from the question
-                window.alert('Score updated to the backend')
-                window.alert(this.state.gameScore+this.state.questionScore)
+            if (this.state.questionScore >= 0.5*numQuestions[1]*200) {
+                this.setState({
+                    has_passed : 1
+                })
+            }
+        })
+    }
+    updateQuestionAttempted = () => {
+        this.setState({
+            numberQuestionAttempted: this.state.numberQuestionAttempted + 1,
+        }, () => {
+            if (this.state.numberQuestionAttempted === numQuestions[1]) {
                 this.setState({
                     showQuestion: false
                 })
@@ -44,8 +68,6 @@ class Year2 extends Component {
         })
     }
     changeScore = (val) => {
-        //update score here
-        // if the questions are visible : update the score for the question as 
         if (this.state.showQuestion) {
             this.setState({
                 questionScore: this.state.questionScore + val
@@ -57,50 +79,76 @@ class Year2 extends Component {
             })
         }
     }
-
     gameOver = () => {
-        // TODO : update the game score here
-        // TODO : make API request to update score on the backend
-        // show some sort of congratulations or something
-        // go back to dashboard 
-        window.alert('Total Score: ' + this.state.gameScore)
-        this.props.history.push('/obscura/dashboard')
-        //history.go(0)
+        const { username } = JSON.parse(localStorage.getItem("userInfo"));
+        const finalScore = Math.min(maxGameScore[1], this.state.gameScore) + this.state.questionScore - 5 * this.state.attemptNumber;
+        baseRequest.post('/obscura/user/updatescore/2', {},
+            {
+                params:
+                {
+                    username: username,
+                    score: finalScore,
+                    has_passed: this.state.has_passed | 0,
+                    numberQuestionSolved : this.state.numberQuestionSolved
+                }
+            })
+            .then(response => {
+                console.log(response)
+                if (response.data.msg === "Score Updated") {
+                    this.props.history.push('/obscura/dashboard')
+                    window.location.reload();
+                }
+            })
+            .catch(err => console.log(err))
     }
-
     
     render() {
+        console.log(this.state)
         const questionRender = (
-            // the jsx to render the questions
             <Container>
                 <QuestionInfo>
                     <h3>Question Score : { this.state.questionScore }</h3>
-                    <h3>Remaining Questions : { numQuestions[1] - this.state.numberQuestionSolved - 1 }</h3>
+                    <h3>Remaining Questions : { numQuestions[1] - this.state.numberQuestionAttempted - 1 }</h3>
                 </QuestionInfo>    
                 <QuestionWrapper
                     changeScore={ this.changeScore }
-                    questions={ secondYear }
-                    updateQuestionSolved={ this.updateQuestionSolved }
+                    questions={ this.state.questions }
+                    updateQuestionAttempted={ this.updateQuestionAttempted }
+                    updateQuestionSolved = {this.updateQuestionSolved }
                 />
             </Container>
         );
     
         const gameRender = (
+            // TODO : add the question score in the end game screen 
             <Color
                 changeScore={ this.changeScore } 
                 gameOver = {this.gameOver}
             />
         );
-        // two components : Questions Component and Game Component
-        return (
-            <Container>
-                {/* Adding a go back to dashboard button */}
-                {/* <h1>Welcome to Year 1</h1>
-                <span><Link to="/obscura/dashboard"><button className="btn btn-primary bg-red">Go Back</button></Link></span> */}
-                {/* <h2>Overall Score: {this.state.questionScore+this.state.gameScore}</h2> */}
-                { this.state.showQuestion ? questionRender : gameRender}
-            </Container>
-        )
+
+
+        if (this.state.showQuestion) {
+
+            return (<>{ questionRender }</>);
+        }
+        else if(this.state.has_passed === false){
+            return (
+                <>
+                    <Container>
+                    <FinalResult>
+                        <h1>Attempt Failed (Get 50% to pass)</h1>
+                        <h2>Final Score : { this.state.questionScore }</h2>
+                            <button onClick={ () => {
+                                this.gameOver()
+                        }}>Go to Dashboard</button>
+                    </FinalResult></Container>
+                </>
+            );
+        }
+        else {
+            return <Container>{ gameRender }</Container>
+        }
     }
 }
 
@@ -134,3 +182,31 @@ const QuestionInfo = styled.div`
         color: #fff !important;
     }
 `;
+
+const FinalResult = styled.div`
+  width: 100%;
+  max-width: 500px;
+  height: 50vh;
+  background-color: #262626;
+  padding: 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+  box-shadow: 9px 4px 32px 0px #000000b3;
+  color: white;
+  font-size: 32px;
+  margin: 0px 12px;
+    button{
+    padding: 12px 32px;
+    width: 60%;
+    font-size: 24px;
+    border: none;
+    border-radius:8px;
+    margin: 16px 0px;
+    cursor: pointer;
+    color: white;
+    background-color: #12a389;
+    }
+`

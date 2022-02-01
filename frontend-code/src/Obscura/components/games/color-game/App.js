@@ -46,7 +46,7 @@ export default function App({changeScore,gameOver}) {
     setFinalAnswer(questionList)
   }
   return (
-    <>
+    <QuizContainer>
       {
         isQuizStarted ?
           (isQuizFinishsed ?
@@ -71,16 +71,17 @@ export default function App({changeScore,gameOver}) {
             <button onClick={startQuiz}>Start</button>
           </Container>
       }
-    </>
+    </QuizContainer>
   )
 }
 const QuizContainer = styled.div`
-height: 100%;
 width: 100vw;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: #2c2c2c;
+h1,h2,h3{
+  color : #fff;
+}
 `;
 const Container = styled.div`
 width: 100%;
@@ -136,7 +137,6 @@ const FinalResult = styled.div`
   margin: 16px 0px;
   cursor: pointer;
   color: white;
-  
 }
 .dashboard{
   background-color: red;

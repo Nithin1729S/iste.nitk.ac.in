@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react';
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import styled from "styled-components";
 import obscurabannerv2 from '../constants/obscurabannerv2.png'
 

@@ -1,17 +1,25 @@
 // code starts
+import {
+  baseRequest
+} from "../../constants";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import {useHistory} from 'react-router-dom'
-import axios from "axios";
 import obscurabannerv2 from '../constants/obscurabannerv2.png'
 
-const Login = () => {
+const Login = ({setFooterVal}) => {
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [usernameError, setUsernameError] = useState("");
   const [errorPassword, setErrorPassword] = useState("");
   let history = useHistory();
-
+  useEffect(() => {
+    if (localStorage.getItem("userInfo")) {
+      history.push('/obscura/dashboard');
+    }
+    setFooterVal("obscura")
+  },[])
   const handleLoginClick = () => {
     if (username.length < 3) {
       setUsernameError("Invalid username");
@@ -26,28 +34,27 @@ const Login = () => {
     if (password.length < 3 && username.length < 3) {
       return;
     } else {
-      const data = {
-        userName: username,
-        yearPassed: 2,
-        scores : [1000,500,0,0]
-      }
-      localStorage.setItem("userInfo",JSON.stringify(data));
-      history.push('/obscura/dashboard')
-      // axios
-      //   .post("/user/login", {
-      //     email: username,
-      //     password: password,
-      //   })
-      //   .then((res) => {
-      //     if (res.data.success) {
-      //       localStorage.setItem("username", username);
-      //     } else {
-      //       console.log(res.data);
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     console.log(err);
-      //   });
+      baseRequest.get('/obscura/login/', { params: { username: username, password: password } })
+        .then(response => {
+          if (response.data.hasOwnProperty('isLogin')) {
+            if (response.data.msg === "Password") {
+                setErrorPassword(response.data.msg)
+            }
+            else {
+              setUsernameError(response.data.msg)
+            }
+          }
+          else {
+            baseRequest.get('/obscura/user/', { params: { username: username } })
+              .then(response => {
+                const attempts = [0, 0, 0, 0];
+                localStorage.setItem('attempts',JSON.stringify(attempts));
+                localStorage.setItem('userInfo', JSON.stringify(response.data));
+                console.log(response.data)
+                history.push('/obscura/dashboard')
+              })
+          }
+        })
     }
   };
 
@@ -77,15 +84,15 @@ const Login = () => {
         <button onClick={handleLoginClick}>Login</button>
 
         {/* if you want to show message */}
-        {/* <br />
-        {emailError.length > 0 && (
+        <br />
+        {usernameError.length > 0 && (
           <span
             style={{
               color: "red",
               fontSize: "16px",
             }}
           >
-            {emailError}
+            {usernameError}
           </span>
         )}
         <br />
@@ -98,7 +105,7 @@ const Login = () => {
           >
             {errorPassword}
           </span>
-        )} */}
+        )}
       </StyledLogin>
     </LoginContainer>
   );

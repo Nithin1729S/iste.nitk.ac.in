@@ -2,37 +2,41 @@ import React, { useState } from 'react';
 import styled from 'styled-components'
 
 
-const Question = ({ currQues,setCurrQues,questions,correct,changeScore,updateQuestionSolved }) => {
+const Question = ({ currQues, setCurrQues, questions, correct, changeScore, updateQuestionSolved, updateQuestionAttempted }) => {
+  
   const [error, setErrorMessage] = useState(false)
+  const [numAttempts, setnumAttempts] = useState(0)
   const options = questions[currQues]?.options
 
-  const handleCheck=(i) => {
+  const handleCheck = (i) => {
+    setErrorMessage(false)
     if (i === correct) {
-      setErrorMessage("")
-      changeScore(300)
+      setErrorMessage(false)
+      numAttempts === 3 ? changeScore(0) : changeScore(200 - 30*numAttempts)
       updateQuestionSolved()
       setCurrQues(currQues + 1)
     }
     else {
-      changeScore(-30)
+      setnumAttempts(numAttempts+1)
       setErrorMessage(true)
     }
   }
   const skipQuestion = () => {
-    changeScore(-50)
+    changeScore(-100)
     setCurrQues(currQues + 1)
-    updateQuestionSolved()
+    updateQuestionAttempted()
   }
 
   return (
     <Wrapper>
+      <h1>{ correct }</h1>
       <QuestionTop>
         <h1 className="center">Question { currQues + 1 }</h1>
         <Skip  onClick={()=>skipQuestion()} style={{backgroundColor:"red !important"}} >Skip(-50)</Skip>
       </QuestionTop>
       <div>
         <h2>{ questions[currQues]?.title }</h2>
-        {error && <Error>Wrong Option! Try again! <br/>-30 Penalty</Error>}
+        {error && <Error>Wrong Option! Try again! <br/>-50 Penalty</Error>}
         <ButtonGroup>
           { options && options.map((i,index) => (
             <button
@@ -51,7 +55,6 @@ const Question = ({ currQues,setCurrQues,questions,correct,changeScore,updateQue
 };
 const Wrapper = styled.div`
   width : 60vw !important;
-  max-width: 550px;
   height: 80%;
   width: 100%;
   padding: 40px;
@@ -60,7 +63,8 @@ const Wrapper = styled.div`
   border-radius: 8px;
   box-shadow: 9px 4px 32px 0px #000000b3;
   * {
-    font-size: 20px;
+    text-align : left;
+    font-size: 25px;
     color: #ffeaea;
   }
 `;
@@ -71,9 +75,9 @@ const ButtonGroup = styled.div`
   align-items: center;
   justify-content: space-between;
   button {
-    width: 120px;
-    padding : 10px;
-    border-radius: 20%/50%;
+    width: 60%;
+    padding : 20px;
+    border-radius: 5%/50%;
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 500;
@@ -81,6 +85,7 @@ const ButtonGroup = styled.div`
     margin : 10px;
     border : 0;
     cursor: pointer;
+    text-align:center;
   }
   & : nth-of-type(2n){
     background-color: #e83e7d;

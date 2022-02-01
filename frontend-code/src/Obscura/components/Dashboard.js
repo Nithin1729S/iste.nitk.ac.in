@@ -1,51 +1,68 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
 import YearCard from './YearCard'
 import styled from 'styled-components'
 import obscurabannerv2 from '../constants/obscurabannerv2.png'
+import { baseRequest } from '../../constants';
 
 
 class Dashboard extends Component {
   state = {
     userName : "",
-    yearPassed: 0,
-    scores : [] 
+    yearPassed: 1,
+    scores: [],
+    totalScore : 0,
   }
   componentDidMount() {
-    const data = JSON.parse(localStorage.getItem('userInfo'))
-    //console.log(data)
-    this.props.setFooterVal("obscura")  // the footer can be edited at css/footer.css
-    // fetch this data from the localStorage or make API request to fetch it
-    this.setState({
-      userName : data.userName,
-      yearPassed: data.yearPassed,
-      scores : data.scores
+    this.props.setFooterVal("obscura")
+    const { username } = JSON.parse(localStorage.getItem("userInfo"))
+    baseRequest.get('/obscura/user/',
+    {
+      params:
+      {
+        username: username
+      }
+    })
+    .then((res) => {
+        const {username,yearPassed,total_score,scores} = res.data
+        const yearScores = [];
+        for (let i in scores[0]) {
+          yearScores.push(scores[0][i])
+        }
+        this.setState({
+          userName :username,
+          yearPassed:yearPassed,
+          scores: yearScores,
+          totalScore :total_score
+        })
+        localStorage.setItem("userInfo", JSON.stringify({username:username,yearPassed:yearPassed}))
     })
   }
+  
   render() {
-    console.log(this.state)
     return (
       <>
         <Container>
           <Name>Hello { this.state.userName } </Name>
-          {/* <Link to="/obscura/leaderboard">Leaderboard</Link> */}
             <div className="row mt-3">
-              {/* year 1 card is never disabled  */}
               <div className='col l3 m6 s12'>
               <YearCard
                 title="Year 1"
                 link="/obscura/year1"
                 score={this.state.scores[0]}
-                year={1}
+                year={ 1 }
+                yearPassed={ this.state.yearPassed}
               />
               </div>
               <div className='col l3 m6 s12'>
-              { this.state.yearPassed >= 2 ? 
+              { this.state.yearPassed >= 1 ? 
                 <YearCard
                   title="Year 2"
                   link="/obscura/year2"
                   score= {this.state.scores[1]}
-                  year={2}
+                  year={ 2 }
+                  yearPassed={ this.state.yearPassed}
                 /> :
                 <YearCard
                   title="Year 2"
@@ -56,12 +73,13 @@ class Dashboard extends Component {
               }
               </div>
               <div className='col l3 m6 s12'>
-              { this.state.yearPassed >= 3 ? 
+              { this.state.yearPassed >= 2 ? 
                 <YearCard
                   title="Year 3"
                   link="/obscura/year3"
                   score= {this.state.scores[2]}
                   year={3}
+                  yearPassed={ this.state.yearPassed}
                 /> : 
                 <YearCard
                   title="Year 3"
@@ -72,12 +90,13 @@ class Dashboard extends Component {
               }
               </div>
               <div className='col l3 m6 s12'>
-              { this.state.yearPassed === 4 ? 
+              { this.state.yearPassed >=3 ? 
                 <YearCard
                   title="Year 4"
                   link="/obscura/year4"
                   score= {this.state.scores[3]}
-                  year={4}
+                  year={ 4 }
+                  yearPassed={ this.state.yearPassed}
                 /> : 
                 <YearCard
                   title="Year 4"
@@ -131,6 +150,9 @@ const StyledButton = styled.button`
     position: absolute;
     color: #FFD700;
     text-shadow: 0px 0px 15px #FFD700;
+  }
+  &:hover{
+    background-color: #12a389 !important;
   }
 `
 export default Dashboard;
