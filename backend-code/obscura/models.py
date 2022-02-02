@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class team(models.Model):
     username = models.CharField(
         max_length=200,
@@ -20,6 +21,7 @@ class team(models.Model):
     def __str__(self):
         return self.username
 
+
 class score(models.Model):
     username = models.CharField(
         max_length=200,
@@ -37,9 +39,22 @@ class score(models.Model):
     fourthYear = models.IntegerField(
         default=0
     )
+    firstYearQuestion = models.IntegerField(
+        default=0
+    )
+    secondYearQuestion = models.IntegerField(
+        default=0
+    )
+    thirdYearQuestion = models.IntegerField(
+        default=0
+    )
+    fourthYearQuestion = models.IntegerField(
+        default=0
+    )
 
     def __str__(self):
-        return str(self.firstYear+self.secondYear+self.thirdYear+self.fourthYear)
+        return str(self.firstYear+self.secondYear+self.thirdYear+self.fourthYear+self.firstYearQuestion+self.secondYearQuestion+self.thirdYearQuestion+self.fourthYearQuestion)
+
 
 class attempt(models.Model):
     username = models.CharField(
@@ -58,9 +73,11 @@ class attempt(models.Model):
     fourthYear = models.IntegerField(
         default=0
     )
+
     def __str__(self):
         return str(self.firstYear+self.secondYear+self.thirdYear+self.fourthYear)
-    
+
+
 class question(models.Model):
     username = models.CharField(
         max_length=200,
@@ -78,5 +95,6 @@ class question(models.Model):
     fourthYear = models.IntegerField(
         default=0
     )
+
     def __str__(self):
         return str(self.firstYear+self.secondYear+self.thirdYear+self.fourthYear)

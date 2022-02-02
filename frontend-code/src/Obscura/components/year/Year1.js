@@ -24,11 +24,11 @@ class Year1 extends Component {
         showQuestion: true,
         numberQuestionAttempted: 0,
         attemptNumber: 0,
+        penaltyAttempt : false
     }
 
     componentDidMount() { 
         this.props.setFooterVal("obscura")
-        //TODO : make a GET request and set values for showQuestions and the attempt penalty
         const { username,yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
         const shuffled = firstYear.sort(() => 0.5 - Math.random())
         
@@ -36,13 +36,16 @@ class Year1 extends Component {
             params : { username : username }
         })
             .then(res => {
-                const { numQuestionsSolved, numAttempts } = res.data
-                console.log(numQuestionsSolved)
+                const { numQuestionsSolved, numAttempts,questionScore } = res.data
+                const doesQuestionShow = !(numQuestionsSolved === numQuestions[0]); 
                 this.setState({
-                    showQuestion: !(numQuestionsSolved === numQuestions[0]),
+                    showQuestion: doesQuestionShow,
+                    penaltyAttempt : doesQuestionShow,
+                    questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
                     has_passed: yearPassed >= 1,
-                    questions : shuffled.slice(0, numQuestions[0])
+                    questions: shuffled.slice(0, numQuestions[0]),
+                    numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
         })
     }
@@ -84,7 +87,8 @@ class Year1 extends Component {
     }
     gameOver = () => {
         const { username } = JSON.parse(localStorage.getItem("userInfo"));
-        const finalScore = Math.min(maxGameScore[0], this.state.gameScore) + this.state.questionScore - 5 * this.state.attemptNumber;
+        const penalty = this.state.penaltyAttempt ? 5*this.state.attemptNumber : 0;
+        const finalScore = Math.min(maxGameScore[0], this.state.gameScore) + this.state.questionScore - penalty;
         baseRequest.post('/obscura/user/updatescore/1', {},
             {
                 params:
@@ -92,7 +96,8 @@ class Year1 extends Component {
                     username: username,
                     score: finalScore,
                     has_passed: this.state.has_passed | 0,
-                    numberQuestionSolved : this.state.numberQuestionSolved
+                    numberQuestionSolved: this.state.numberQuestionSolved,
+                    questionScore : this.state.questionScore,
                 }
             })
             .then(response => {

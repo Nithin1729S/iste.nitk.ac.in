@@ -29,7 +29,6 @@ const Question = ({ currQues, setCurrQues, questions, correct, changeScore, upda
 
   return (
     <Wrapper>
-      <h1>{ correct }</h1>
       <QuestionTop>
         <h1 className="center">Question { currQues + 1 }</h1>
         <Skip  onClick={()=>skipQuestion()} style={{backgroundColor:"red !important"}} >Skip(-50)</Skip>

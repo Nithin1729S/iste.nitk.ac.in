@@ -65,7 +65,7 @@ export default function App({changeScore,gameOver}) {
                 <li>You will be given a coloured text(word) and you have to select the "colour" of the word and not the "word" from the options.</li>
                 <li>Remember to <strong> click NEXT</strong> after you select the option else the answer <strong> wont be counted </strong></li>
                 <li>Every correct answer grants you 10 points</li>
-                <li>Each question has a time limit of 2 seconds,so better be quick :)</li>
+                <li>Each question has a time limit of 4 seconds,so better be quick :)</li>
               </ul>
             <h2>Start the quiz now !</h2>
             <button onClick={startQuiz}>Start</button>
