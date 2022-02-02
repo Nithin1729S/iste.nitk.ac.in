@@ -5,6 +5,7 @@ import QuestionWrapper from '../QuestionWrapper'
 import { fourthYear, numQuestions,maxGameScore } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
 import { baseRequest } from '../../../constants'
+import SquidGame from '../games/squid-game';
 
 
 
@@ -134,10 +135,10 @@ class Year4 extends Component {
         const gameRender = (
             // TODO : add the question score in the end game screen
             // game goes here
-            <>
-                <h1>PacMan goes here</h1>
+            <Container>
+                <SquidGame/>
                 <button onClick={ () => this.gameOver() }>Go to Dashboard</button>
-            </>
+            </Container>
         );
 
 
@@ -160,7 +161,7 @@ class Year4 extends Component {
             );
         }
         else {
-            return <Container>{ gameRender }</Container>
+            return <>{ gameRender }</>
         }
     }
 }
@@ -183,6 +184,9 @@ const Container = styled.div`
     background-size: cover;
     h1,h2,h3{
         color: #fff ;
+    }
+    canvas{
+        width : 80vw;
     }
 `;
 
