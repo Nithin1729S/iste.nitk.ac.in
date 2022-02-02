@@ -1,6 +1,8 @@
 .leaderboard {
     --Primary: #f2fdff;
-    --Secondary: #005795;
+    /* --Secondary: #005795; */
+    --Secondary: var(--primary);
+    opacity: 0.9;
 }
 .input {
     margin: 10px 10px !important;

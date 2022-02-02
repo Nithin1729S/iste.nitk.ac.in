@@ -1,0 +1,48 @@
+@media only screen and (min-width: 1260px) {
+    .node {
+        border-top: 4px solid var(--primary);
+        width: 7.5%;
+    }
+    .nodeContainer {
+        flex-direction: row;
+    }
+}
+@media only screen and (max-width: 1260px) {
+    .node {
+        border-left: 4px solid var(--primary);
+    }
+    .nodeContainer {
+        flex-direction: column;
+    }
+}
+.title,
+.date {
+    word-wrap: normal;
+    font-family: GothamPro;
+}
+.title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.date {
+    font-size: 1.2rem;
+}
+.main {
+    margin: 10% 5%;
+}
+.node {
+    margin: 1em;
+}
+.nodeContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.colorDot {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background: var(--primary);
+}
+.date {
+    color: #333;
+}

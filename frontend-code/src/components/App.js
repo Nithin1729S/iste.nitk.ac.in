@@ -14,8 +14,8 @@ import ProjectComponent from './PageComponents/ProjectComponent';
 import LoginComponent from './PageComponents/LoginComponent';
 import EventDetails from './PageComponents/EventDetails';
 import EventAdd from './PageComponents/EventAdd';
-//import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
-//import DescPage from '../expo/Components/DescPage';
+// import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
+// import DescPage from '../expo/Components/DescPage';
 import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
@@ -34,8 +34,13 @@ import Year3 from '../Obscura/components/year/Year3'
 import Year2 from '../Obscura/components/year/Year2'
 import Year4 from '../Obscura/components/year/Year4'
 import Leaderboard from '../Obscura/components/Leaderboard'
+import SquareOne from './SquareOne';
+import SIGSquareOne from './SquareOne/eachSIG';
+// import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
+// import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 import '../css/constants.css';
+import { enableLeaderboard } from '../constants.js';
 
 class App extends React.Component {
 	state = { headerShouldRender: true, footerBackgroundVariant: '' };
@@ -100,6 +105,9 @@ class App extends React.Component {
 							render={ () => (<Obscura setFooterVal={this.changeFooterBackground} />)}
 						/>	
 						<Route path="/test" component={TestUI} />
+						<Route path="/squareonesig/:name" component={SIGSquareOne} />
+						<Route path="/squareone" component={SquareOne} />
+
 						{/* <Route
 							path="/expo"
 							render={(props) => (
@@ -112,6 +120,9 @@ class App extends React.Component {
 							)}
 						/> */}
 						<Route path="/leaderboard"  component={LeaderboardComponent} />
+						{enableLeaderboard ? (
+							<Route path="/leaderboard" component={LeaderboardComponent} />
+						) : null}
 						{/* <Route path="/expoPage/:name" component={DescPage} /> */}
 						<Route path="/sig/:name" component={SigComponent} />
 						<Route path="/team" component={TeamComponent} />
