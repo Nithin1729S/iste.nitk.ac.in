@@ -80,9 +80,7 @@ class Year1 extends Component {
         else {
             this.setState({
                 gameScore: val
-            },
-            () =>     
-            window.alert(this.state.gameScore))
+            })
         }
     }
     gameOver = () => {
@@ -179,9 +177,8 @@ const Container = styled.div`
     }
 `;
 const PacmanContainer = styled.div`
-    padding : 100px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #2c2c2c;
     display: flex;
     flex-direction: column;
