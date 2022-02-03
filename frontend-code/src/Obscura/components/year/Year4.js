@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { fourthYear, numQuestions,maxGameScore } from '../../constants/questions.js'
+import { fourthYear, numQuestions,maxGameScore,shuffle } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
 import { baseRequest } from '../../../constants'
 import SquidGame from '../games/squid-game';
@@ -30,12 +30,11 @@ class Year4 extends Component {
 
     componentDidMount() { 
         this.props.setFooterVal("obscura")
-        //TODO : make a GET request and set values for showQuestions and the attempt penalty
         const { username, yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
         if (yearPassed < 3) {
             this.props.history.push('/obscura/dashboard')
         }
-        const shuffled = fourthYear.sort(() => 0.5 - Math.random())
+        const shuffled = shuffle(fourthYear,numQuestions[3])
         
         baseRequest.get('/obscura/user/year/4', {
             params : { username : username }
@@ -49,12 +48,11 @@ class Year4 extends Component {
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
                     has_passed: yearPassed >= 1,
-                    questions: shuffled.slice(0, numQuestions[3]),
+                    questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
         })
     }
-
     updateQuestionSolved = () => {
         this.updateQuestionAttempted()
         this.setState({
@@ -116,7 +114,6 @@ class Year4 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>

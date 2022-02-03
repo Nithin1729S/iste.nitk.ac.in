@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { secondYear, numQuestions,maxGameScore } from '../../constants/questions.js'
+import { secondYear, numQuestions,maxGameScore,shuffle } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
 import { baseRequest } from '../../../constants'
 
@@ -32,7 +32,7 @@ class Year2 extends Component {
         if (yearPassed < 1) {
             this.props.history.push('/obscura/dashboard')
         }
-        const shuffled = secondYear.sort(() => 0.5 - Math.random())
+        const shuffled = shuffle(secondYear,numQuestions[1])
         
         baseRequest.get('/obscura/user/year/2', {
             params : { username : username }
@@ -46,7 +46,7 @@ class Year2 extends Component {
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
                     has_passed: yearPassed >= 1,
-                    questions: shuffled.slice(0, numQuestions[1]),
+                    questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
         })

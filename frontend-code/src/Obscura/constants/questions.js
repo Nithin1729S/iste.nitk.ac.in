@@ -4,19 +4,19 @@ export const maxGameScore = [1000, 1000, 1000, 1000];
 
 
 export const firstYear = [
-    {
-        title: <>
-                If drake was a cs student, what would    he name his album?
-                <ul>
-                    <li>A. certified algo boy</li>
-                    <li>B. javafornication</li>
-                    <li>C. certified boy lover</li>
-                    <li>D. my dear time complexity</li>
-                </ul>
-            </>,
-        options: ['A', 'B', 'C', 'D'],
-        correctOption : 0,
-    },
+    // {
+    //     title: <>
+    //             If drake was a cs student, what would    he name his album?
+    //             <ul>
+    //                 <li>A. certified algo boy</li>
+    //                 <li>B. javafornication</li>
+    //                 <li>C. certified boy lover</li>
+    //                 <li>D. my dear time complexity</li>
+    //             </ul>
+    //         </>,
+    //     options: ['A', 'B', 'C', 'D'],
+    //     correctOption : 0,
+    // },
     {
         title: <>Melt : Liquid :: Freeze : ? ____
                 <br/>A) Ice
@@ -617,3 +617,16 @@ D. All of the above <br /><br />
 ];
 
 
+export const shuffle = (arr, n) => {
+    var result = new Array(n),
+        len = arr.length,
+        taken = new Array(len);
+    if (n > len)
+        throw new RangeError("getRandom: more elements taken than available");
+    while (n--) {
+        var x = Math.floor(Math.random() * len);
+        result[n] = arr[x in taken ? taken[x] : x];
+        taken[x] = --len in taken ? taken[len] : len;
+    }
+    return result;
+}

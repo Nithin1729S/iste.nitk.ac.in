@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { firstYear, numQuestions,maxGameScore } from '../../constants/questions.js'
+import { firstYear, numQuestions,maxGameScore,shuffle } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
 import pacmanImg from '../games/Pacman/mapbg.png'
 import { baseRequest } from '../../../constants'
@@ -28,7 +28,7 @@ class Year1 extends Component {
     componentDidMount() { 
         this.props.setFooterVal("obscura")
         const { username,yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
-        const shuffled = firstYear.sort(() => 0.5 - Math.random())
+        const shuffled = shuffle(firstYear,numQuestions[0])
         
         baseRequest.get('/obscura/user/year/1', {
             params : { username : username }
@@ -42,7 +42,7 @@ class Year1 extends Component {
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
                     has_passed: yearPassed >= 1,
-                    questions: shuffled.slice(0, numQuestions[0]),
+                    questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
         })
