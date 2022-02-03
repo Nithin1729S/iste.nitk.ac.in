@@ -4,16 +4,14 @@ import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
 import { firstYear, numQuestions,maxGameScore } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
+import pacmanImg from '../games/Pacman/mapbg.png'
 import { baseRequest } from '../../../constants'
 
 
 
-// When users enters this page for the first time,
-// he is shown the questions (showQuestion : true)
-// if he is able to get >=50% of marks, he is determined passed (has_passed : false)
-// failing to get 50% of the scores, he is sent to the failed attempt screen where he is sent back to the dashboard
 
-import Alphabet from '../games/alphabet'
+
+import Pacman from '../games/Pacman'
 class Year1 extends Component {
     state = {
         questions : [],
@@ -82,12 +80,14 @@ class Year1 extends Component {
         else {
             this.setState({
                 gameScore: val
-            })
+            },
+            () =>     
+            window.alert(this.state.gameScore))
         }
     }
     gameOver = () => {
         const { username } = JSON.parse(localStorage.getItem("userInfo"));
-        const penalty = this.state.penaltyAttempt ? 5*this.state.attemptNumber : 0;
+        const penalty = this.state.penaltyAttempt ? 5 * this.state.attemptNumber : 0;
         const finalScore = Math.min(maxGameScore[0], this.state.gameScore) + this.state.questionScore - penalty;
         baseRequest.post('/obscura/user/updatescore/1', {},
             {
@@ -101,7 +101,6 @@ class Year1 extends Component {
                 }
             })
             .then(response => {
-                console.log(response)
                 if (response.data.msg === "Score Updated") {
                     this.props.history.push('/obscura/dashboard')
                     window.location.reload();
@@ -128,9 +127,8 @@ class Year1 extends Component {
         );
     
         const gameRender = (
-            // TODO : add the question score in the end game screen 
-            <Alphabet
-                changeScore={ this.changeScore } 
+            <Pacman
+                changeScore={this.changeScore} 
                 gameOver = {this.gameOver}
             />
         );
@@ -155,7 +153,7 @@ class Year1 extends Component {
             );
         }
         else {
-            return <>{ gameRender }</>
+            return <PacmanContainer>{ gameRender }</PacmanContainer>
         }
     }
 }
@@ -172,6 +170,24 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${obscurabannerv2});
+    background-size: cover;
+    overflow-x: hidden;
+    margin-top: -64px;
+    background-size: cover;
+    h1,h2,h3{
+        color: #fff !important;
+    }
+`;
+const PacmanContainer = styled.div`
+    padding : 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${pacmanImg});
     background-size: cover;
     overflow-x: hidden;
     margin-top: -64px;

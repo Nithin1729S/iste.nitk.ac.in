@@ -14,6 +14,7 @@ import { baseRequest } from '../../../constants'
 // failing to get 50% of the scores, he is sent to the failed attempt screen where he is sent back to the dashboard
 
 //import game here
+import Color from '../games/color-game'
 class Year3 extends Component {
     state = {
         questions : [],
@@ -134,8 +135,10 @@ class Year3 extends Component {
         const gameRender = (
             // TODO : add the question score in the end game screen 
             <>
-                <h1>PacMan goes here</h1>
-                <button onClick={()=> this.gameOver()}>Go to Dashboard</button>
+                <Color
+                    changeScore={ this.changeScore } 
+                    gameOver = {this.gameOver}
+                />
             </>    
         );
 

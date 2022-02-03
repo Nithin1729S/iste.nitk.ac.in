@@ -6,7 +6,8 @@ import Score from "./Score";
 import Word from "./Word";
 import GameOver from "./GameOver";
 import Instructions from "./Instructions";
-
+import { SpinnerDotted } from 'spinners-react';
+import styled from 'styled-components'
 
 function getRandomNumberBetween(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -69,15 +70,21 @@ class Playground extends React.Component {
     
     resetGame = () => {
         this.setState({
-            text: "",
-            words: "",
-            visible: false,
-            found: false,
-            lives: 3,
-            score: 0,
-            status: "playing",
-            word: `${this.words[getRandomNumberBetween(0, this.words.length-1)]}`,
-        });
+            status : "Loading"
+        }, () => {
+            setTimeout(() => {
+                this.setState({
+                    text: "",
+                    words: "",
+                    visible: false,
+                    found: false,
+                    lives: 3,
+                    score: 0,
+                    status: "playing",
+                    word: `${this.words[getRandomNumberBetween(0, this.words.length-1)]}`,
+                });
+            },4000)
+        })
     }
     
     toggleGame = () => {
@@ -120,6 +127,14 @@ class Playground extends React.Component {
         } else if (this.state.status === "instructions") {
             return <Instructions startGame={ this.resetGame } />;
         }
+        else {
+            return (
+                <>
+                    <Heading>Get Ready!</Heading>
+                    <SpinnerDotted size="30%" color="#12a389" />
+                </>
+            );
+        }
     }
 
     render() {
@@ -132,3 +147,7 @@ class Playground extends React.Component {
 }
 
 export default Playground;
+
+const Heading = styled.h4`
+    color : white;
+`

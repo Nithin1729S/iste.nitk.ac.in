@@ -9,8 +9,9 @@ import { baseRequest } from '../../../constants'
 
 
 
+import Alphabet from '../games/alphabet'
 
-import Color from '../games/color-game'
+
 class Year2 extends Component {
     state = {
         questions : [],
@@ -112,7 +113,6 @@ class Year2 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -130,7 +130,7 @@ class Year2 extends Component {
     
         const gameRender = (
             // TODO : add the question score in the end game screen 
-            <Color
+            <Alphabet
                 changeScore={ this.changeScore } 
                 gameOver = {this.gameOver}
             />
@@ -156,7 +156,7 @@ class Year2 extends Component {
             );
         }
         else {
-            return <Container>{ gameRender }</Container>
+            return <>{ gameRender }</>
         }
     }
 }

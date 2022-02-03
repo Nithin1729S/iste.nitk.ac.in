@@ -1,0 +1,12 @@
+bl_corner: 12
+br_corner: 16
+bl_edge: 17
+br_edge: 19
+bc_edge: 18
+bml_edge: 13
+bmr_edge: 15
+bcc_edge: 14
+cl_edge: 10
+cr_edge: 11
+tl_edge: 8
+tr_edge: 9
