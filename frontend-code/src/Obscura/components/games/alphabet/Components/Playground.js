@@ -31,7 +31,9 @@ class Playground extends React.Component {
         event.preventDefault();
         this.setState({text: event.target.value});
     }
-    
+    clearText = () => {
+        this.setState({text: ""});
+    }
     onSubmit = (event) => {
         event.preventDefault();
         const w = this.state.text;
@@ -111,7 +113,9 @@ class Playground extends React.Component {
                         found={ this.state.found }
                         word={ this.state.word }
                         nextRound={ this.nextRound }
-                        pause={ this.props.pause } />
+                        pause={ this.props.pause } 
+                        clearText = {this.clearText}
+                        />
                 </>
             );
         }

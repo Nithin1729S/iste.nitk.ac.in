@@ -31,7 +31,7 @@ const Question = ({ currQues, setCurrQues, questions, correct, changeScore, upda
     <Wrapper>
       <QuestionTop>
         <h1 className="center">Question { currQues + 1 }</h1>
-        <p>{correct+1}</p>
+        
         <Skip  onClick={()=>skipQuestion()} style={{backgroundColor:"red !important"}} >Skip(-100)</Skip>
       </QuestionTop>
       <div>
@@ -114,6 +114,12 @@ const Skip = styled.button`
   box-shadow: 0px 0px 6px red;
   border-radius :5px;
   cursor: pointer;
+  &:active{
+    background-color : red;
+  }
+  &:hover{
+    background-color : red;
+  }
 `
 const QuestionTop = styled.div`
   display : flex;

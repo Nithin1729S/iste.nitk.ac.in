@@ -8,7 +8,7 @@
 }
 
 .animation {
-    animation: moveDown 3s ease-in;
+    animation: moveDown 2.5s ease;
     animation-iteration-count: infinite;
 }
 @keyframes moveDown {
@@ -16,6 +16,6 @@
     top: 0px;
   }
   to {
-    top : 1000px;
+    top : 100vh;
   }
 }
