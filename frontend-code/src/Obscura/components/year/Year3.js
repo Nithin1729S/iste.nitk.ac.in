@@ -48,7 +48,7 @@ class Year3 extends Component {
                     penaltyAttempt : doesQuestionShow,
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
-                    has_passed: yearPassed >= 1,
+                    has_passed: yearPassed >= 3,
                     questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
@@ -63,6 +63,11 @@ class Year3 extends Component {
             if (this.state.questionScore >= 0.5*numQuestions[2]*200) {
                 this.setState({
                     has_passed : 1
+                })
+            }
+            else {
+                this.setState({
+                    has_passed: 0
                 })
             }
         })
@@ -116,7 +121,6 @@ class Year3 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -134,12 +138,12 @@ class Year3 extends Component {
     
         const gameRender = (
             // TODO : add the question score in the end game screen 
-            <>
+            <Container>
                 <Color
                     changeScore={ this.changeScore } 
                     gameOver = {this.gameOver}
                 />
-            </>    
+            </Container>    
         );
 
 
@@ -147,7 +151,7 @@ class Year3 extends Component {
 
             return (<>{ questionRender }</>);
         }
-        else if(this.state.has_passed === false){
+        else if(this.state.has_passed === 0){
             return (
                 <>
                     <Container>
@@ -184,7 +188,7 @@ const Container = styled.div`
     margin-top: -64px;
     background-size: cover;
     h1,h2,h3{
-        color: #fff !important;
+        color: #fff ;
     }
 `;
 

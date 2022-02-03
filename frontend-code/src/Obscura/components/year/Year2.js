@@ -45,7 +45,7 @@ class Year2 extends Component {
                     penaltyAttempt : doesQuestionShow,
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
-                    has_passed: yearPassed >= 1,
+                    has_passed: yearPassed >= 2,
                     questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
@@ -60,6 +60,11 @@ class Year2 extends Component {
             if (this.state.questionScore >= 0.5*numQuestions[1]*200) {
                 this.setState({
                     has_passed : 1
+                })
+            }
+            else {
+                this.setState({
+                    has_passed:0
                 })
             }
         })
@@ -141,7 +146,7 @@ class Year2 extends Component {
 
             return (<>{ questionRender }</>);
         }
-        else if(this.state.has_passed === false){
+        else if(this.state.has_passed === 0){
             return (
                 <>
                     <Container>

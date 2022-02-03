@@ -58,6 +58,11 @@ class Year1 extends Component {
                     has_passed : 1
                 })
             }
+            else {
+                this.setState({
+                    has_passed : 0
+                })
+            }
         })
     }
     updateQuestionAttempted = () => {
@@ -108,7 +113,6 @@ class Year1 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -136,7 +140,7 @@ class Year1 extends Component {
 
             return (<>{ questionRender }</>);
         }
-        else if(this.state.has_passed === false){
+        else if(this.state.has_passed === 0){
             return (
                 <>
                     <Container>

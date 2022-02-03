@@ -36,7 +36,7 @@ export default function Question({ finishQuiz, final_answer, finalScore }) {
         time_id = setInterval(() => {
             console.log('oops late')
             nextQuestion(currentQuestion.id)
-        }, 4000)
+        }, 2500)
     }, [currentQuestion.id])
 
     //these are just used for styles

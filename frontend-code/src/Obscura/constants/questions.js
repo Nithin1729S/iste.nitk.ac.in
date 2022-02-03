@@ -3,6 +3,7 @@ export const numQuestions = [2, 4, 6, 8];
 export const maxGameScore = [1000, 1000, 1000, 1000];
 
 
+
 export const firstYear = [
     // {
     //     title: <>
