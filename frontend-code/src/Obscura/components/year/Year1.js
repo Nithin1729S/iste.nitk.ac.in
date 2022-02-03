@@ -53,7 +53,7 @@ class Year1 extends Component {
         this.setState({
             numberQuestionSolved : this.state.numberQuestionSolved+1
         }, () => {
-            if (this.state.questionScore >= 0.5*numQuestions[0]*200) {
+            if (this.state.questionScore >= (numQuestions[0]*100)) {
                 this.setState({
                     has_passed : 1
                 })
