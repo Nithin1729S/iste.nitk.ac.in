@@ -16,7 +16,7 @@ class Year2 extends Component {
     state = {
         questions : [],
         numberQuestionSolved: 0,
-        has_passed: 0,
+        has_passed: false,
         questionScore: 0,
         gameScore: 0,
         showQuestion: true,
@@ -62,14 +62,14 @@ class Year2 extends Component {
         this.setState({
             numberQuestionSolved : this.state.numberQuestionSolved+1
         }, () => {
-            if (this.state.questionScore >= 0.5*numQuestions[1]*200) {
+            if (this.state.questionScore >= numQuestions[1]*100) {
                 this.setState({
-                    has_passed : 1
+                    has_passed : true
                 })
             }
             else {
                 this.setState({
-                    has_passed:0
+                    has_passed:false
                 })
             }
         })
@@ -123,6 +123,7 @@ class Year2 extends Component {
     }
     
     render() {
+        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -151,7 +152,7 @@ class Year2 extends Component {
 
             return (<>{ questionRender }</>);
         }
-        else if(this.state.has_passed === 0){
+        else if(this.state.has_passed === false){
             return (
                 <>
                     <Container>
