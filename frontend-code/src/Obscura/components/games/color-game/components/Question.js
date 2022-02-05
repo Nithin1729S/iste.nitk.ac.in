@@ -8,7 +8,6 @@ export default function Question({ finishQuiz, final_answer, finalScore }) {
 
     //this function gets called whenever we click on any option.
     function active(id) {
-        console.log('hii')
         setCurrentQuestion((prev) => {
             return {
                 ...prev,
@@ -34,7 +33,6 @@ export default function Question({ finishQuiz, final_answer, finalScore }) {
     //used to set the timer whenever the question changes.
     React.useEffect(() => {
         time_id = setInterval(() => {
-            console.log('oops late')
             nextQuestion(currentQuestion.id)
         }, 2500)
     }, [currentQuestion.id])
@@ -47,6 +45,7 @@ export default function Question({ finishQuiz, final_answer, finalScore }) {
         backgroundColor: 'red',
         color: 'white'
     }
+
     return (
         <QuestionContainer>
             <h3>Question : {currentQuestion.id + 1}</h3>

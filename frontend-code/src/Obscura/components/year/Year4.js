@@ -138,6 +138,9 @@ class Year4 extends Component {
             // TODO : add the question score in the end game screen
             // game goes here
             <Container>
+                <h1>The Game is Simple!</h1>
+                <h5>Hop through the tiles and reach the other end</h5>
+                <h6>Use W,S,A,D to move and space to JUMP</h6>
                 <SquidGame/>
                 <StyledButton onClick={ () => this.gameOver() }>Go to Dashboard</StyledButton>
             </Container>
@@ -184,7 +187,7 @@ const Container = styled.div`
     overflow-x: hidden;
     margin-top: -64px;
     background-size: cover;
-    h1,h2,h3{
+    h1,h2,h3,h4,h5,h6{
         color: #fff ;
     }
     canvas{
@@ -230,9 +233,7 @@ const FinalResult = styled.div`
     }
 `
 
-const Name = styled.h1`
-  color : #fff !important;
-`;
+
 
 const StyledButton = styled.button`
   padding: 12px 32px;
