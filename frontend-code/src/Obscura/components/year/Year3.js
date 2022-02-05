@@ -126,6 +126,8 @@ class Year3 extends Component {
     }
     
     render() {
+        console.log(this.state)
+
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -142,7 +144,6 @@ class Year3 extends Component {
         );
     
         const gameRender = (
-            // TODO : add the question score in the end game screen 
             <Container>
                 <Color
                     changeScore={ this.changeScore } 
@@ -150,10 +151,7 @@ class Year3 extends Component {
                 />
             </Container>    
         );
-
-
         if (this.state.showQuestion) {
-
             return (<>{ questionRender }</>);
         }
         else if(this.state.has_passed === false){

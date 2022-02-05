@@ -117,7 +117,6 @@ class Year1 extends Component {
             .catch(err => console.log(err))
     }
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
