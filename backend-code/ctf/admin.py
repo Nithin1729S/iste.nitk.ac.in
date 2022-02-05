@@ -7,7 +7,8 @@ class TeamAdmin(admin.ModelAdmin):
     list_display = ('team_name','score',)
 
 @admin.register(Question)
-class QuestionAdmin(admin.ModelAdmin):
+class QuestionAdmin(admin.ModelAdmin):  
+    
     list_display = ('title','description', 'points', )
 
 @admin.register(UserQuestion)
