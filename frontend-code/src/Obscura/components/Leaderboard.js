@@ -12,7 +12,8 @@ const Leaderboard = ({ setFooterVal }) => {
         //console.log(response)
         let leaderBoardData = [];
         for (let key in response.data) {
-          leaderBoardData.push(response.data[key])
+          if(response.data[key].username !== "test")
+            leaderBoardData.push(response.data[key])
         }
         //console.log(leaderBoardData)
         setResultData(leaderBoardData);
