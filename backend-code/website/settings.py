@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'team',
     'ctf',
     'SMP',
-    'obscura'
+    'obscura',
     'squareonelb'
 ]
 
