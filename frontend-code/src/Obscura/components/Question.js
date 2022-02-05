@@ -12,7 +12,7 @@ const Question = ({ currQues, setCurrQues, questions, correct, changeScore, upda
     setErrorMessage(false)
     if (i === correct) {
       setErrorMessage(false)
-      numAttempts === 3 ? changeScore(0) : changeScore(200 - 30*numAttempts)
+      numAttempts === 3 ? changeScore(0) : changeScore(200 - 50*numAttempts)
       updateQuestionSolved()
       setCurrQues(currQues + 1)
     }
