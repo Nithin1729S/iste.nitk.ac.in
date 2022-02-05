@@ -27,25 +27,30 @@ class Year1 extends Component {
 
     componentDidMount() { 
         this.props.setFooterVal("obscura")
-        const { username,yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
-        const shuffled = shuffle(firstYear,numQuestions[0])
-        
-        baseRequest.get('/obscura/user/year/1', {
-            params : { username : username }
-        })
-            .then(res => {
-                const { numQuestionsSolved, numAttempts,questionScore } = res.data
-                const doesQuestionShow = !(numQuestionsSolved === numQuestions[0]); 
-                this.setState({
-                    showQuestion: doesQuestionShow,
-                    penaltyAttempt : doesQuestionShow,
-                    questionScore: doesQuestionShow ? 0 : questionScore,
-                    attemptNumber: numAttempts,
-                    has_passed: yearPassed >= 1,
-                    questions: shuffled,
-                    numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
+        if (localStorage.getItem("userInfo")) {
+            const { username, yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
+            const shuffled = shuffle(firstYear, numQuestions[0])
+            
+            baseRequest.get('/obscura/user/year/1', {
+                params: { username: username }
+            })
+                .then(res => {
+                    const { numQuestionsSolved, numAttempts, questionScore } = res.data
+                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[0]);
+                    this.setState({
+                        showQuestion: doesQuestionShow,
+                        penaltyAttempt: doesQuestionShow,
+                        questionScore: doesQuestionShow ? 0 : questionScore,
+                        attemptNumber: numAttempts,
+                        has_passed: yearPassed >= 1,
+                        questions: shuffled,
+                        numberQuestionSolved: doesQuestionShow ? 0 : numQuestionsSolved
+                    })
                 })
-        })
+        }
+        else {
+            this.props.history.push("/obscura/login/")
+        }
     }
 
     updateQuestionSolved = () => {

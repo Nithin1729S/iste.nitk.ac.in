@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import { withRouter } from 'react-router-dom';
 import YearCard from './YearCard'
 import styled from 'styled-components'
 import obscurabannerv2 from '../constants/obscurabannerv2.png'
@@ -16,28 +16,33 @@ class Dashboard extends Component {
   }
   componentDidMount() {
     this.props.setFooterVal("obscura")
-    const { username } = JSON.parse(localStorage.getItem("userInfo"))
-    baseRequest.get('/obscura/user/',
-    {
-      params:
-      {
-        username: username
-      }
-    })
-    .then((res) => {
-        const {username,yearPassed,total_score,scores} = res.data
-        const yearScores = [];
-        for (let i in scores[0]) {
-          yearScores.push(scores[0][i])
-        }
-        this.setState({
-          userName :username,
-          yearPassed:yearPassed,
-          scores: yearScores,
-          totalScore :total_score
+    if (localStorage.getItem("userInfo")) {
+      const { username } = JSON.parse(localStorage.getItem("userInfo"))
+      baseRequest.get('/obscura/user/',
+        {
+          params:
+          {
+            username: username
+          }
         })
-        localStorage.setItem("userInfo", JSON.stringify({username:username,yearPassed:yearPassed}))
-    })
+        .then((res) => {
+          const { username, yearPassed, total_score, scores } = res.data
+          const yearScores = [];
+          for (let i in scores[0]) {
+            yearScores.push(scores[0][i])
+          }
+          this.setState({
+            userName: username,
+            yearPassed: yearPassed,
+            scores: yearScores,
+            totalScore: total_score
+          })
+          localStorage.setItem("userInfo", JSON.stringify({ username: username, yearPassed: yearPassed }))
+        })
+    }
+    else {
+      this.props.history.push("/obscura/login/")
+    }
   }
   
   render() {
@@ -163,4 +168,4 @@ const StyledButton = styled.button`
     background-color: #12a389 !important;
   }
 `
-export default Dashboard;
+export default withRouter(Dashboard);

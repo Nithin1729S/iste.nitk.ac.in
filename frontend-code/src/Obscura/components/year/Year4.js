@@ -30,28 +30,33 @@ class Year4 extends Component {
 
     componentDidMount() { 
         this.props.setFooterVal("obscura")
-        const { username, yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
-        if (yearPassed < 3) {
-            this.props.history.push('/obscura/dashboard')
-        }
-        const shuffled = shuffle(fourthYear,numQuestions[3])
-        
-        baseRequest.get('/obscura/user/year/4', {
-            params : { username : username }
-        })
-            .then(res => {
-                const { numQuestionsSolved, numAttempts,questionScore } = res.data
-                const doesQuestionShow = !(numQuestionsSolved === numQuestions[3]); 
-                this.setState({
-                    showQuestion: doesQuestionShow,
-                    penaltyAttempt : doesQuestionShow,
-                    questionScore: doesQuestionShow ? 0 : questionScore,
-                    attemptNumber: numAttempts,
-                    has_passed: yearPassed === 4,
-                    questions: shuffled,
-                    numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
+        if (localStorage.getItem("userInfo")) {
+            const { username, yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
+            if (yearPassed < 3) {
+                this.props.history.push('/obscura/dashboard')
+            }
+            const shuffled = shuffle(fourthYear, numQuestions[3])
+            
+            baseRequest.get('/obscura/user/year/4', {
+                params: { username: username }
+            })
+                .then(res => {
+                    const { numQuestionsSolved, numAttempts, questionScore } = res.data
+                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[3]);
+                    this.setState({
+                        showQuestion: doesQuestionShow,
+                        penaltyAttempt: doesQuestionShow,
+                        questionScore: doesQuestionShow ? 0 : questionScore,
+                        attemptNumber: numAttempts,
+                        has_passed: yearPassed === 4,
+                        questions: shuffled,
+                        numberQuestionSolved: doesQuestionShow ? 0 : numQuestionsSolved
+                    })
                 })
-        })
+        }
+        else {
+            this.props.history.push("/obscura/login/")
+        }
     }
     updateQuestionSolved = () => {
         this.updateQuestionAttempted()
