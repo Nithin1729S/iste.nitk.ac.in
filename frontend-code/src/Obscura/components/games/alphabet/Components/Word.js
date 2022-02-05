@@ -14,6 +14,7 @@ class Word extends React.Component {
 
     render() {
         if (this.props.found) {
+            this.props.clearText()
             this.setState({animation: false})
             setTimeout(() => {
                 this.setState({animation: true});

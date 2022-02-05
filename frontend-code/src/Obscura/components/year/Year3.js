@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { thirdYear, numQuestions,maxGameScore } from '../../constants/questions.js'
+import { thirdYear, numQuestions,maxGameScore,shuffle } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
 import { baseRequest } from '../../../constants'
 
@@ -14,6 +14,7 @@ import { baseRequest } from '../../../constants'
 // failing to get 50% of the scores, he is sent to the failed attempt screen where he is sent back to the dashboard
 
 //import game here
+import Color from '../games/color-game'
 class Year3 extends Component {
     state = {
         questions : [],
@@ -34,7 +35,7 @@ class Year3 extends Component {
         if (yearPassed < 2) {
             this.props.history.push('/obscura/dashboard')
         }
-        const shuffled = thirdYear.sort(() => 0.5 - Math.random())
+        const shuffled = shuffle(thirdYear,numQuestions[2])
         
         baseRequest.get('/obscura/user/year/3', {
             params : { username : username }
@@ -47,8 +48,8 @@ class Year3 extends Component {
                     penaltyAttempt : doesQuestionShow,
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
-                    has_passed: yearPassed >= 1,
-                    questions: shuffled.slice(0, numQuestions[2]),
+                    has_passed: yearPassed >= 3,
+                    questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
         })
@@ -62,6 +63,11 @@ class Year3 extends Component {
             if (this.state.questionScore >= 0.5*numQuestions[2]*200) {
                 this.setState({
                     has_passed : 1
+                })
+            }
+            else {
+                this.setState({
+                    has_passed: 0
                 })
             }
         })
@@ -115,7 +121,6 @@ class Year3 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -133,10 +138,12 @@ class Year3 extends Component {
     
         const gameRender = (
             // TODO : add the question score in the end game screen 
-            <>
-                <h1>PacMan goes here</h1>
-                <button onClick={()=> this.gameOver()}>Go to Dashboard</button>
-            </>    
+            <Container>
+                <Color
+                    changeScore={ this.changeScore } 
+                    gameOver = {this.gameOver}
+                />
+            </Container>    
         );
 
 
@@ -144,7 +151,7 @@ class Year3 extends Component {
 
             return (<>{ questionRender }</>);
         }
-        else if(this.state.has_passed === false){
+        else if(this.state.has_passed === 0){
             return (
                 <>
                     <Container>
@@ -181,7 +188,7 @@ const Container = styled.div`
     margin-top: -64px;
     background-size: cover;
     h1,h2,h3{
-        color: #fff !important;
+        color: #fff ;
     }
 `;
 

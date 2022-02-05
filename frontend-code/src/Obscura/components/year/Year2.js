@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { secondYear, numQuestions,maxGameScore } from '../../constants/questions.js'
+import { secondYear, numQuestions,maxGameScore,shuffle } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
 import { baseRequest } from '../../../constants'
 
 
 
 
+import Alphabet from '../games/alphabet'
 
-import Color from '../games/color-game'
+
 class Year2 extends Component {
     state = {
         questions : [],
@@ -31,7 +32,7 @@ class Year2 extends Component {
         if (yearPassed < 1) {
             this.props.history.push('/obscura/dashboard')
         }
-        const shuffled = secondYear.sort(() => 0.5 - Math.random())
+        const shuffled = shuffle(secondYear,numQuestions[1])
         
         baseRequest.get('/obscura/user/year/2', {
             params : { username : username }
@@ -44,8 +45,8 @@ class Year2 extends Component {
                     penaltyAttempt : doesQuestionShow,
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
-                    has_passed: yearPassed >= 1,
-                    questions: shuffled.slice(0, numQuestions[1]),
+                    has_passed: yearPassed >= 2,
+                    questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
         })
@@ -59,6 +60,11 @@ class Year2 extends Component {
             if (this.state.questionScore >= 0.5*numQuestions[1]*200) {
                 this.setState({
                     has_passed : 1
+                })
+            }
+            else {
+                this.setState({
+                    has_passed:0
                 })
             }
         })
@@ -112,7 +118,6 @@ class Year2 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -130,7 +135,7 @@ class Year2 extends Component {
     
         const gameRender = (
             // TODO : add the question score in the end game screen 
-            <Color
+            <Alphabet
                 changeScore={ this.changeScore } 
                 gameOver = {this.gameOver}
             />
@@ -141,7 +146,7 @@ class Year2 extends Component {
 
             return (<>{ questionRender }</>);
         }
-        else if(this.state.has_passed === false){
+        else if(this.state.has_passed === 0){
             return (
                 <>
                     <Container>
@@ -156,7 +161,7 @@ class Year2 extends Component {
             );
         }
         else {
-            return <Container>{ gameRender }</Container>
+            return <>{ gameRender }</>
         }
     }
 }

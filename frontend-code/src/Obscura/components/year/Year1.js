@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { firstYear, numQuestions,maxGameScore } from '../../constants/questions.js'
+import { firstYear, numQuestions,maxGameScore,shuffle } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
+import pacmanImg from '../games/Pacman/mapbg.png'
 import { baseRequest } from '../../../constants'
 
 
 
-// When users enters this page for the first time,
-// he is shown the questions (showQuestion : true)
-// if he is able to get >=50% of marks, he is determined passed (has_passed : false)
-// failing to get 50% of the scores, he is sent to the failed attempt screen where he is sent back to the dashboard
 
-import Alphabet from '../games/alphabet'
+
+import Pacman from '../games/Pacman'
 class Year1 extends Component {
     state = {
         questions : [],
@@ -30,7 +28,7 @@ class Year1 extends Component {
     componentDidMount() { 
         this.props.setFooterVal("obscura")
         const { username,yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
-        const shuffled = firstYear.sort(() => 0.5 - Math.random())
+        const shuffled = shuffle(firstYear,numQuestions[0])
         
         baseRequest.get('/obscura/user/year/1', {
             params : { username : username }
@@ -44,7 +42,7 @@ class Year1 extends Component {
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
                     has_passed: yearPassed >= 1,
-                    questions: shuffled.slice(0, numQuestions[0]),
+                    questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
         })
@@ -55,9 +53,14 @@ class Year1 extends Component {
         this.setState({
             numberQuestionSolved : this.state.numberQuestionSolved+1
         }, () => {
-            if (this.state.questionScore >= 0.5*numQuestions[0]*200) {
+            if (this.state.questionScore >= (numQuestions[0]*100)) {
                 this.setState({
                     has_passed : 1
+                })
+            }
+            else {
+                this.setState({
+                    has_passed : 0
                 })
             }
         })
@@ -87,7 +90,7 @@ class Year1 extends Component {
     }
     gameOver = () => {
         const { username } = JSON.parse(localStorage.getItem("userInfo"));
-        const penalty = this.state.penaltyAttempt ? 5*this.state.attemptNumber : 0;
+        const penalty = this.state.penaltyAttempt ? 5 * this.state.attemptNumber : 0;
         const finalScore = Math.min(maxGameScore[0], this.state.gameScore) + this.state.questionScore - penalty;
         baseRequest.post('/obscura/user/updatescore/1', {},
             {
@@ -101,7 +104,6 @@ class Year1 extends Component {
                 }
             })
             .then(response => {
-                console.log(response)
                 if (response.data.msg === "Score Updated") {
                     this.props.history.push('/obscura/dashboard')
                     window.location.reload();
@@ -111,7 +113,6 @@ class Year1 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -128,9 +129,8 @@ class Year1 extends Component {
         );
     
         const gameRender = (
-            // TODO : add the question score in the end game screen 
-            <Alphabet
-                changeScore={ this.changeScore } 
+            <Pacman
+                changeScore={this.changeScore} 
                 gameOver = {this.gameOver}
             />
         );
@@ -140,7 +140,7 @@ class Year1 extends Component {
 
             return (<>{ questionRender }</>);
         }
-        else if(this.state.has_passed === false){
+        else if(this.state.has_passed === 0){
             return (
                 <>
                     <Container>
@@ -155,7 +155,7 @@ class Year1 extends Component {
             );
         }
         else {
-            return <>{ gameRender }</>
+            return <PacmanContainer>{ gameRender }</PacmanContainer>
         }
     }
 }
@@ -172,6 +172,23 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${obscurabannerv2});
+    background-size: cover;
+    overflow-x: hidden;
+    margin-top: -64px;
+    background-size: cover;
+    h1,h2,h3{
+        color: #fff !important;
+    }
+`;
+const PacmanContainer = styled.div`
+    width: 100%;
+    height: 100vh;
+    background-color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${pacmanImg});
     background-size: cover;
     overflow-x: hidden;
     margin-top: -64px;

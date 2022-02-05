@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components'
 import QuestionWrapper from '../QuestionWrapper'
-import { fourthYear, numQuestions,maxGameScore } from '../../constants/questions.js'
+import { fourthYear, numQuestions,maxGameScore,shuffle } from '../../constants/questions.js'
 import obscurabannerv2 from '../../constants/obscurabannerv2.png'
 import { baseRequest } from '../../../constants'
 import SquidGame from '../games/squid-game';
@@ -30,12 +30,11 @@ class Year4 extends Component {
 
     componentDidMount() { 
         this.props.setFooterVal("obscura")
-        //TODO : make a GET request and set values for showQuestions and the attempt penalty
         const { username, yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
         if (yearPassed < 3) {
             this.props.history.push('/obscura/dashboard')
         }
-        const shuffled = fourthYear.sort(() => 0.5 - Math.random())
+        const shuffled = shuffle(fourthYear,numQuestions[3])
         
         baseRequest.get('/obscura/user/year/4', {
             params : { username : username }
@@ -48,21 +47,25 @@ class Year4 extends Component {
                     penaltyAttempt : doesQuestionShow,
                     questionScore: doesQuestionShow ? 0 : questionScore,
                     attemptNumber: numAttempts,
-                    has_passed: yearPassed >= 1,
-                    questions: shuffled.slice(0, numQuestions[3]),
+                    has_passed: yearPassed === 4,
+                    questions: shuffled,
                     numberQuestionSolved : doesQuestionShow ? 0 : numQuestionsSolved
                 })
         })
     }
-
     updateQuestionSolved = () => {
         this.updateQuestionAttempted()
         this.setState({
             numberQuestionSolved : this.state.numberQuestionSolved+1
         }, () => {
-            if (this.state.questionScore >= 0.5*numQuestions[3]*200) {
+            if (this.state.questionScore >= (numQuestions[3]*100)) {
                 this.setState({
                     has_passed : 1
+                })
+            }
+            else {
+                this.setState({
+                    has_passed : 0
                 })
             }
         })
@@ -106,7 +109,6 @@ class Year4 extends Component {
                 }
             })
             .then(response => {
-                console.log(response)
                 if (response.data.msg === "Score Updated") {
                     this.props.history.push('/obscura/dashboard')
                     window.location.reload();
@@ -116,7 +118,6 @@ class Year4 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>
@@ -133,11 +134,12 @@ class Year4 extends Component {
         );
     
         const gameRender = (
+            
             // TODO : add the question score in the end game screen
             // game goes here
             <Container>
                 <SquidGame/>
-                <button onClick={ () => this.gameOver() }>Go to Dashboard</button>
+                <StyledButton onClick={ () => this.gameOver() }>Go to Dashboard</StyledButton>
             </Container>
         );
 
@@ -146,7 +148,7 @@ class Year4 extends Component {
 
             return (<>{ questionRender }</>);
         }
-        else if(this.state.has_passed === false){
+        else if(this.state.has_passed === 0){
             return (
                 <>
                     <Container>
@@ -226,4 +228,20 @@ const FinalResult = styled.div`
     color: white;
     background-color: #12a389;
     }
+`
+
+const Name = styled.h1`
+  color : #fff !important;
+`;
+
+const StyledButton = styled.button`
+  padding: 12px 32px;
+    width: 60%;
+    font-size: 24px;
+    border: none;
+    border-radius:8px;
+    margin: 16px 0px;
+    cursor: pointer;
+    color: white;
+    background-color: #12a389;
 `

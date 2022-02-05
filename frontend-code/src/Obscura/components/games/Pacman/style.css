@@ -1,0 +1,9 @@
+/* body {
+    margin:40px;
+} */
+
+.pacman {
+    position: relative;
+    width: 12px * 50;
+}
+

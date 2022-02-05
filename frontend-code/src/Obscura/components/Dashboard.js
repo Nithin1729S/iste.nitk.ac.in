@@ -44,7 +44,8 @@ class Dashboard extends Component {
     return (
       <>
         <Container>
-          <Name>Hello { this.state.userName } </Name>
+          <Name>Hey { this.state.userName } </Name>
+          <Name>Score : { this.state.totalScore } </Name>
             <div className="row mt-3">
               <div className='col l3 m6 s12'>
               <YearCard
@@ -113,6 +114,12 @@ class Dashboard extends Component {
                 Leaderboard
               </StyledButton>
             </Link>
+            <Link to="/obscura/instructions">
+              <StyledButton className='btn btn-large'>
+                <i className="large material-icons" style={{marginLeft: "-40px", marginTop: "-25px"}}>integration_instructions</i>
+                Instructions
+              </StyledButton>
+            </Link>
         </Container>
       </>
     );
@@ -141,6 +148,7 @@ const Name = styled.h1`
 `;
 
 const StyledButton = styled.button`
+  margin : 15px;
   background-color: #12a389 !important;
   font: Roboto;
   font-size: 2rem;
