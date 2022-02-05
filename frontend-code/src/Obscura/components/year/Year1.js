@@ -36,7 +36,7 @@ class Year1 extends Component {
             })
                 .then(res => {
                     const { numQuestionsSolved, numAttempts, questionScore } = res.data
-                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[0]);
+                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[0] && questionScore > 100*numQuestions[0]);
                     this.setState({
                         showQuestion: doesQuestionShow,
                         penaltyAttempt: doesQuestionShow,

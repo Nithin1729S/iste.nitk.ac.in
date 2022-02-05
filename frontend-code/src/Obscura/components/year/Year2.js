@@ -40,7 +40,7 @@ class Year2 extends Component {
             })
                 .then(res => {
                     const { numQuestionsSolved, numAttempts,questionScore } = res.data
-                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[1]); 
+                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[1] && questionScore > 100*numQuestions[1]); 
                     this.setState({
                         showQuestion: doesQuestionShow,
                         penaltyAttempt : doesQuestionShow,
@@ -58,9 +58,10 @@ class Year2 extends Component {
     }
 
     updateQuestionSolved = () => {
+        console.log(this.state)
         this.updateQuestionAttempted()
         this.setState({
-            numberQuestionSolved : this.state.numberQuestionSolved+1
+            numberQuestionSolved : this.state.numberQuestionSolved + 1
         }, () => {
             if (this.state.questionScore >= numQuestions[1]*100) {
                 this.setState({
@@ -123,6 +124,7 @@ class Year2 extends Component {
     }
     
     render() {
+        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>

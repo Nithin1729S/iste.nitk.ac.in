@@ -3,7 +3,7 @@ import Unity, { UnityContent } from 'react-unity-webgl'
 
 const SquidGame = () => {
     const unityContent = new UnityContent(
-        "Build/build1.0v.json",
+        "Build/buildv1.3.json",
         "Build/UnityLoader.js"
     );
     // unityContent.on("loaded", () => {

@@ -33,9 +33,9 @@ class Year3 extends Component {
         //TODO : make a GET request and set values for showQuestions and the attempt penalty
         if (localStorage.getItem("userInfo")) {
             const { username, yearPassed } = JSON.parse(localStorage.getItem("userInfo"))
-            if (yearPassed < 2) {
-                this.props.history.push('/obscura/dashboard')
-            }
+            // if (yearPassed < 2) {
+            //     this.props.history.push('/obscura/dashboard')
+            // }
             const shuffled = shuffle(thirdYear, numQuestions[2])
             
             baseRequest.get('/obscura/user/year/3', {
@@ -43,7 +43,7 @@ class Year3 extends Component {
             })
                 .then(res => {
                     const { numQuestionsSolved, numAttempts, questionScore } = res.data
-                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[2]);
+                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[2] && questionScore > 100*numQuestions[2]);
                     this.setState({
                         showQuestion: doesQuestionShow,
                         penaltyAttempt: doesQuestionShow,
