@@ -58,7 +58,6 @@ class Year2 extends Component {
     }
 
     updateQuestionSolved = () => {
-        console.log(this.state)
         this.updateQuestionAttempted()
         this.setState({
             numberQuestionSolved : this.state.numberQuestionSolved + 1
