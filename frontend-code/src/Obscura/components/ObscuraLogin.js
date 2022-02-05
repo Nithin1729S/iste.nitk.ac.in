@@ -109,8 +109,8 @@ const Login = ({setFooterVal}) => {
   );
 };
 const LoginContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
+  padding : 20px 20px;
+  height: 100%;
   background-color: #2c2c2c;
   display: flex;
   justify-content: center;
@@ -125,7 +125,7 @@ const StyledLogin = styled.div`
   height: 80%;
   width: 100%;
   padding: 64px;
-  margin: 0px 16px;
+  margin: 100px;
   background-color: #262626;
   border-radius: 8px;
   box-shadow: 9px 4px 32px 0px #000000b3;
