@@ -42,7 +42,7 @@ class Year4 extends Component {
             })
                 .then(res => {
                     const { numQuestionsSolved, numAttempts, questionScore } = res.data
-                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[3]);
+                    const doesQuestionShow = !(numQuestionsSolved === numQuestions[3] && questionScore > 100*numQuestions[3]);
                     this.setState({
                         showQuestion: doesQuestionShow,
                         penaltyAttempt: doesQuestionShow,
