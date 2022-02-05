@@ -47,8 +47,6 @@ const Login = ({setFooterVal}) => {
           else {
             baseRequest.get('/obscura/user/', { params: { username: username } })
               .then(response => {
-                const attempts = [0, 0, 0, 0];
-                localStorage.setItem('attempts',JSON.stringify(attempts));
                 localStorage.setItem('userInfo', JSON.stringify(response.data));
                 console.log(response.data)
                 history.push('/obscura/dashboard')
