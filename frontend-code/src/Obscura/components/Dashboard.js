@@ -44,7 +44,10 @@ class Dashboard extends Component {
       this.props.history.push("/obscura/login/")
     }
   }
-  
+  logOut = () => {
+    localStorage.removeItem("userInfo")
+    this.props.history.push("/obscura")
+  }
   render() {
     return (
       <>
@@ -124,8 +127,10 @@ class Dashboard extends Component {
                 <i className="large material-icons" style={{marginLeft: "-40px", marginTop: "-25px"}}>integration_instructions</i>
                 Instructions
               </StyledButton>
-            </Link>
+          </Link>
+          <LogoutButton className="btn btn-small"onClick={()=>this.logOut()}>Logout</LogoutButton>
         </Container>
+
       </>
     );
   }
@@ -166,6 +171,17 @@ const StyledButton = styled.button`
   }
   &:hover{
     background-color: #12a389 !important;
+  }
+`
+const LogoutButton = styled.button`
+  margin : 15px;
+  background-color: #e83e7d !important;
+  color : #fff;
+  font: Roboto;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  &:hover{
+    background-color: #e83e7d !important;
   }
 `
 export default withRouter(Dashboard);
