@@ -187,7 +187,9 @@ export const sigsdata = [
 				registering in teams well-versed with a varied range of pop-culture.
 				<ol>
 					<li>Register in teams of 3-4.</li>
-					<li>Registrations will be open till 𝟳 𝗣𝗠 𝗜𝗦𝗧 𝟯𝗿𝗱 𝗙𝗲𝗯𝗿𝘂𝗮𝗿𝘆, 𝟮𝟬𝟮𝟮.</li>
+					<li>
+						Registrations will be open till 10:30 PM IST 3rd February, 2022
+					</li>
 					<li>The event will be held on 𝟰𝘁𝗵 𝗮𝗻𝗱 𝟱𝘁𝗵 𝗙𝗲𝗯𝗿𝘂𝗮𝗿𝘆, 𝟮𝟬𝟮𝟮.</li>
 				</ol>
 			</>

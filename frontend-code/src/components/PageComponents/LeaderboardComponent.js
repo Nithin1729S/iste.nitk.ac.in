@@ -12,17 +12,8 @@ class LeaderboardComponent extends React.Component {
 		test: [],
 	};
 	componentDidMount() {
-		console.log('Test');
 		baseRequest.get('/squareoneleaderboard/').then((res) => {
 			this.setState({ elements: res.data.teamList });
-		});
-		console.log('Test2');
-		console.log(this.state.elements);
-		this.setState({
-			elements: [
-				{ name: 'Team 1', rollno: '1', score: 200 },
-				{ name: 'Team 2', rollno: '2', score: 100 },
-			],
 		});
 	}
 
@@ -64,7 +55,7 @@ class LeaderboardComponent extends React.Component {
 					.toLowerCase()
 					.includes(this.state.searchInput.toLowerCase())
 			)
-			.slice(0, 15)
+			.slice(0, 50)
 			.map(({ name, rollno, score, rank }) => {
 				return (
 					<LeaderboardItem

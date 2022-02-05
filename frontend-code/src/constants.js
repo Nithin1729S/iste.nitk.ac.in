@@ -11,4 +11,4 @@ export const baseRequest = axios.create({
 
 export const enableRecs = false;
 export const enableExpo = false;
-export const enableLeaderboard = false;
+export const enableLeaderboard = true;
