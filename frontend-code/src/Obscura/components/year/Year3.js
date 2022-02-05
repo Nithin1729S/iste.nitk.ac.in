@@ -126,8 +126,6 @@ class Year3 extends Component {
     }
     
     render() {
-        console.log(this.state)
-
         const questionRender = (
             <Container>
                 <QuestionInfo>

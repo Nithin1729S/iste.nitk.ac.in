@@ -113,7 +113,6 @@ class Year2 extends Component {
                 }
             })
             .then(response => {
-                console.log(response)
                 if (response.data.msg === "Score Updated") {
                     this.props.history.push('/obscura/dashboard')
                     window.location.reload();
@@ -123,7 +122,6 @@ class Year2 extends Component {
     }
     
     render() {
-        console.log(this.state)
         const questionRender = (
             <Container>
                 <QuestionInfo>

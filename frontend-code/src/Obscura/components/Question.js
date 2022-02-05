@@ -15,6 +15,7 @@ const Question = ({ currQues, setCurrQues, questions, correct, changeScore, upda
       numAttempts === 3 ? changeScore(0) : changeScore(200 - 50*numAttempts)
       updateQuestionSolved()
       setCurrQues(currQues + 1)
+      setnumAttempts(0)
     }
     else {
       setnumAttempts(numAttempts+1)
@@ -25,6 +26,7 @@ const Question = ({ currQues, setCurrQues, questions, correct, changeScore, upda
     changeScore(-100)
     setCurrQues(currQues + 1)
     updateQuestionAttempted()
+    setnumAttempts(0)
   }
 
   return (
