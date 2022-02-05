@@ -25,7 +25,7 @@ const Instructions = ({ setFooterVal }) => {
                 <li style={{ listStyleType: 'disc' }}>You are allowed to reattempt the questions for a year at a penalty of -5</li>
                 <li style={ { listStyleType: 'disc' } }>Once you have solved 100% of the question for the year, you are allowed direct access to the game without penalty</li>
                 <li style={ { listStyleType: 'disc' } }>
-                IMPORTANT : Your progress for the year is LOST if you <Warning>refresh or go back to the dashboard</Warning>. mid year<br/>
+                IMPORTANT : Your progress for the year is LOST if you <Warning>refresh or go back to the dashboard</Warning> mid attempt<br/>
                 Scores are saved ONLY after clicking the <Warning>Go to dashboard</Warning> after finishing the game
                 </li>
 
