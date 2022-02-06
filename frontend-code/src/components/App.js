@@ -25,15 +25,15 @@ import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 //import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 /* Obscura imports start here */
-import Obscura from '../Obscura'
-import Instructions from '../Obscura/components/Instructions'
-import ObscuraLogin from '../Obscura/components/ObscuraLogin'
-import Dashboard from '../Obscura/components/Dashboard';
-import Year1 from '../Obscura/components/year/Year1'
-import Year3 from '../Obscura/components/year/Year3'
-import Year2 from '../Obscura/components/year/Year2'
-import Year4 from '../Obscura/components/year/Year4'
-import Leaderboard from '../Obscura/components/Leaderboard'
+// import Obscura from '../Obscura'
+// import Instructions from '../Obscura/components/Instructions';
+// import ObscuraLogin from '../Obscura/components/ObscuraLogin';
+// import Dashboard from '../Obscura/components/Dashboard';
+// import Year1 from '../Obscura/components/year/Year1';
+// import Year3 from '../Obscura/components/year/Year3';
+// import Year2 from '../Obscura/components/year/Year2';
+// import Year4 from '../Obscura/components/year/Year4';
+// import Leaderboard from '../Obscura/components/Leaderboard';
 import SquareOne from './SquareOne';
 import SIGSquareOne from './SquareOne/eachSIG';
 // import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
@@ -47,7 +47,7 @@ class App extends React.Component {
 	changeHeaderFooterStatus = (val) => {
 		this.setState({ headerShouldRender: val });
 	};
-	changeFooterBackground=(val)=>{
+	changeFooterBackground = (val) => {
 		this.setState({ footerBackgroundVariant: val });
 	};
 	render() {
@@ -72,38 +72,65 @@ class App extends React.Component {
 						)}
 					/> */}
 					<Switch>
-						{/* <Route path="*" component={HomeComponent} /> */ }
+						{/* <Route path="*" component={HomeComponent} /> */}
 						{/* 
 						Obscura routes 
-							*/ }
-						<Route path='/obscura/leaderboard'
-							render={ () => (<Leaderboard setFooterVal={ this.changeFooterBackground } />) } 
+							*/}
+						{/* <Route
+							path="/obscura/leaderboard"
+							render={() => (
+								<Leaderboard setFooterVal={this.changeFooterBackground} />
+							)}
 						/>
-						<Route path="/obscura/year4"
-							render={ () => (<Year4 setFooterVal={ this.changeFooterBackground } />) } 
+						<Route
+							path="/obscura/year4"
+							render={() => (
+								<Year4 setFooterVal={this.changeFooterBackground} />
+							)}
 						/>
-						<Route path="/obscura/year3"
-							render={ () => (<Year3 setFooterVal={ this.changeFooterBackground } />) } 
+						<Route
+							path="/obscura/year3"
+							render={() => (
+								<Year3 setFooterVal={this.changeFooterBackground} />
+							)}
 						/>
-						<Route path="/obscura/year2"
-							render={ () => (<Year2 setFooterVal={ this.changeFooterBackground } />) } 
+						<Route
+							path="/obscura/year2"
+							render={() => (
+								<Year2 setFooterVal={this.changeFooterBackground} />
+							)}
 						/>
-						<Route path="/obscura/year1"
-							render={ () => (<Year1 setFooterVal={ this.changeFooterBackground } />) } 
+						<Route
+							path="/obscura/year1"
+							render={() => (
+								<Year1 setFooterVal={this.changeFooterBackground} />
+							)}
 						/>
-						<Route path='/obscura/dashboard' 
-							render={() => (<Dashboard setFooterVal={this.changeFooterBackground} />)}
+						<Route
+							path="/obscura/dashboard"
+							render={() => (
+								<Dashboard setFooterVal={this.changeFooterBackground} />
+							)}
 						/>
-						<Route path="/obscura/login" 
-							render={ () => (<ObscuraLogin  setFooterVal={this.changeFooterBackground} />)}
+						<Route
+							path="/obscura/login"
+							render={() => (
+								<ObscuraLogin setFooterVal={this.changeFooterBackground} />
+							)}
 						/>
-						
-						<Route path="/obscura/instructions" 
-							render={ () => (<Instructions setFooterVal={this.changeFooterBackground} />)}
-						/>	
-						<Route path="/obscura" 
-							render={ () => (<Obscura setFooterVal={this.changeFooterBackground} />)}
-						/>	
+
+						<Route
+							path="/obscura/instructions"
+							render={() => (
+								<Instructions setFooterVal={this.changeFooterBackground} />
+							)}
+						/>
+						<Route
+							path="/obscura"
+							render={() => (
+								<Obscura setFooterVal={this.changeFooterBackground} />
+							)}
+						/> */}
 						<Route path="/test" component={TestUI} />
 						<Route path="/squareonesig/:name" component={SIGSquareOne} />
 						<Route path="/squareone" component={SquareOne} />
@@ -119,7 +146,7 @@ class App extends React.Component {
 								/>
 							)}
 						/> */}
-						<Route path="/leaderboard"  component={LeaderboardComponent} />
+						<Route path="/leaderboard" component={LeaderboardComponent} />
 						{enableLeaderboard ? (
 							<Route path="/leaderboard" component={LeaderboardComponent} />
 						) : null}
@@ -133,8 +160,7 @@ class App extends React.Component {
 						<Route path="/event" component={EventComponent} />
 						{/* <Route path="/recs/:name" component={RecsSIGComponent} />
 						<Route path="/recs" component={RecruitmentComponent} /> */}
-						<Route path="/" component={ HomeComponent } />
-						
+						<Route path="/" component={HomeComponent} />
 					</Switch>
 				</div>
 				<Wrapper shouldRender={this.state.headerShouldRender}>
