@@ -18,7 +18,7 @@ const Question = ({ currQues, setCurrQues, questions, correct, changeScore, upda
       setnumAttempts(0)
     }
     else {
-      setnumAttempts(numAttempts+1)
+      setnumAttempts(Math.min(3,numAttempts+1))
       setErrorMessage(true)
     }
   }
