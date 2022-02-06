@@ -41,6 +41,7 @@ export default function App({changeScore,gameOver}) {
     setIsQuizFinished(true)
   }
   function restartGame() {
+    score = 0;
     setIsQuizStarted(false)
     setIsQuizFinished(false)
     setFinalAnswer(questionList)
