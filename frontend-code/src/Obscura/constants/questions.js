@@ -500,7 +500,7 @@ C.Daughter<br />
 D.None of these<br />
         </>,
         options: ['A', 'B', 'C', 'D'],
-        correctOption : 2,
+        correctOption : 3,
     },
     {
         title: <>
