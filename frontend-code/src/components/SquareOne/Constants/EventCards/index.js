@@ -214,7 +214,7 @@ export const sigsdata = [
 				<br></br> You are a builder in the Viking Kingdom and you are all set to
 				revolutionize the construction techniques in this kingdom. <br></br>{' '}
 				<br></br> You have to produce Roman Concrete blocks to rebuild Viking.
-				You will be allocated an initial budget of 1,25,00,000 krona. You have
+				You will be allocated an initial budget of 1,00,00,000 krona. You have
 				to set up plants to manufacture concrete blocks to distribute and sell
 				in the regions of Viking. There are a total of 10 locations available,
 				2-4 manufacturing plants under each region. You need to determine the
