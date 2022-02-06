@@ -101,7 +101,7 @@ class Year4 extends Component {
     gameOver = () => {
         const { username } = JSON.parse(localStorage.getItem("userInfo"));
         const penalty = this.state.penaltyAttempt ? 5*this.state.attemptNumber : 0;
-        const finalScore = 250 + this.state.questionScore - penalty;
+        const finalScore = 400 + this.state.questionScore - penalty;
         baseRequest.post('/obscura/user/updatescore/4', {},
             {
                 params:

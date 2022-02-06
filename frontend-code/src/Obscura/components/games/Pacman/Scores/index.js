@@ -9,7 +9,7 @@ export default function Scores({ score, lost,changeScore,gameOver }) {
     
     rendergameOver = (
         <GameOverContainer>
-            <h5>{ 'Game over!' }</h5>
+            
             <h6>Score : { score }</h6>
             <Button
                 onClick={ () => {
@@ -29,7 +29,7 @@ export default function Scores({ score, lost,changeScore,gameOver }) {
             <span className="running-score">
                 {'Score: '}{score}
             </span>
-            {lost ? rendergameOver : ""}
+            { rendergameOver }
         </div>
     );
 }
