@@ -166,7 +166,7 @@ d) Father<br />
 (a)316 (b)158 (c)38 (d)8<br />
         </>,
         options: ['A', 'B', 'C', 'D'],
-        correctOption : 1,
+        correctOption : 0,
     },
     {
         title: <>
@@ -279,7 +279,7 @@ D. drassodresso<br />
     },
     {
         title: <>
-            In a certain code AWAKE is written as ZVZID. How is FRIEND written in that code?<br />
+            In a certain code AWAKE is written as ZVZJD. How is FRIEND written in that code?<br />
 A. UOHDMF<br />
 B.  EQHDMC<br />
 C. UHODMF<br />
@@ -303,7 +303,7 @@ Which of the following means that C is the son of M?<br />
 4. M x N – C + F<br />
         </>,
         options: ['A', 'B', 'C', 'D'],
-        correctOption : 1,
+        correctOption : 3,
     },
     {
         title: <>
@@ -414,7 +414,7 @@ C.	pumpernickel<br />
 D.	sourdough<br />
         </>,
         options: ['A', 'B', 'C', 'D'],
-        correctOption : 2,
+        correctOption : 1,
     },
     {
         title: <>
@@ -462,7 +462,7 @@ C.	10 points<br />
 D.	12 points<br />
         </>,
         options: ['A', 'B', 'C', 'D'],
-        correctOption : 3,
+        correctOption : 2,
     },
     {
         title: <>
@@ -474,7 +474,7 @@ D. 9 2/5 days<br />
 
         </>,
         options: ['A', 'B', 'C', 'D'],
-        correctOption : 1,
+        correctOption : 2,
     },
     {
         title: <>
