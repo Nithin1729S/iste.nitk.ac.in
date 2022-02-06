@@ -98,11 +98,13 @@ class Header extends React.Component {
 			</a>
 		</li>
 	);
-	// obscuraNavHeader = (
-	// 	<li>
-	// 		<Link to="/obscura/" className="waves-effect white-text">Obscura</Link>
-	// 	</li>
-	// )
+	obscuraNavHeader = (
+		<li>
+			<Link to="/obscura/leaderboard/" className="waves-effect white-text">
+				Obscura
+			</Link>
+		</li>
+	);
 	squareOneHeader = (
 		<li>
 			<Link to="/squareone/" className="waves-effect white-text">
@@ -324,7 +326,7 @@ class Header extends React.Component {
 							</li>
 						</ul>
 					</li>
-					{/* {this.obscuraNavHeader} */}
+					{this.obscuraNavHeader}
 					{enableLeaderboard ? (
 						<li className="no-padding">
 							<ul className="collapsible collapsible-accordion">
@@ -436,7 +438,7 @@ class Header extends React.Component {
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{enableRecs ? this.recsNavHeader : null}
-								{/* {this.obscuraNavHeader} */}
+								{this.obscuraNavHeader}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
 							</ul>

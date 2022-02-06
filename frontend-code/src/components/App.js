@@ -33,7 +33,7 @@ import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import Year3 from '../Obscura/components/year/Year3';
 // import Year2 from '../Obscura/components/year/Year2';
 // import Year4 from '../Obscura/components/year/Year4';
-// import Leaderboard from '../Obscura/components/Leaderboard';
+import Leaderboard from '../Obscura/components/Leaderboard';
 import SquareOne from './SquareOne';
 import SIGSquareOne from './SquareOne/eachSIG';
 // import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
@@ -76,13 +76,13 @@ class App extends React.Component {
 						{/* 
 						Obscura routes 
 							*/}
-						{/* <Route
+						<Route
 							path="/obscura/leaderboard"
 							render={() => (
 								<Leaderboard setFooterVal={this.changeFooterBackground} />
 							)}
 						/>
-						<Route
+						{/* <Route
 							path="/obscura/year4"
 							render={() => (
 								<Year4 setFooterVal={this.changeFooterBackground} />
