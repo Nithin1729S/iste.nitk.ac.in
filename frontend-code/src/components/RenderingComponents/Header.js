@@ -397,7 +397,7 @@ class Header extends React.Component {
 								<ul id="sig-action" className="dropdown-content frontsig">
 									{this.sigLinks}
 								</ul>
-
+								{this.obscuraNavHeader}
 								{enableLeaderboard ? (
 									<>
 										<li>
@@ -438,7 +438,7 @@ class Header extends React.Component {
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{enableRecs ? this.recsNavHeader : null}
-								{this.obscuraNavHeader}
+
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
 							</ul>
