@@ -107,7 +107,7 @@ class Header extends React.Component {
 	);
 	squareOneHeader = (
 		<li>
-			<Link to="/squareone/" className="waves-effect white-text">
+			<Link to="/leaderboard/" className="waves-effect white-text">
 				Square One
 			</Link>
 		</li>
