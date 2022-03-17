@@ -14,9 +14,9 @@ import ProjectComponent from './PageComponents/ProjectComponent';
 import LoginComponent from './PageComponents/LoginComponent';
 import EventDetails from './PageComponents/EventDetails';
 import EventAdd from './PageComponents/EventAdd';
-// import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
+import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 // import DescPage from '../expo/Components/DescPage';
-import LeaderboardComponent from './PageComponents/LeaderboardComponent';
+// import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
 //import Transcend from './Transcend';
@@ -132,10 +132,10 @@ class App extends React.Component {
 							)}
 						/> */}
 						<Route path="/test" component={TestUI} />
-						<Route path="/squareonesig/:name" component={SIGSquareOne} />
-						<Route path="/squareone" component={SquareOne} />
+						{/* <Route path="/squareonesig/:name" component={SIGSquareOne} /> */}
+						{/* <Route path="/squareone" component={SquareOne} /> */}
 
-						{/* <Route
+						<Route
 							path="/expo"
 							render={(props) => (
 								<ExpoHomeComponent
@@ -145,11 +145,11 @@ class App extends React.Component {
 									}
 								/>
 							)}
-						/> */}
-						<Route path="/leaderboard" component={LeaderboardComponent} />
-						{enableLeaderboard ? (
+						/>
+						{/* <Route path="/leaderboard" component={LeaderboardComponent} /> */}
+						{/* {enableLeaderboard ? (
 							<Route path="/leaderboard" component={LeaderboardComponent} />
-						) : null}
+						) : null} */}
 						{/* <Route path="/expoPage/:name" component={DescPage} /> */}
 						<Route path="/sig/:name" component={SigComponent} />
 						<Route path="/team" component={TeamComponent} />

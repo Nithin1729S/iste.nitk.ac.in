@@ -10,6 +10,6 @@ export const baseRequest = axios.create({
 });
 
 export const enableRecs = false;
-export const enableExpo = false;
+export const enableExpo = true;
 
 export const enableLeaderboard = false;

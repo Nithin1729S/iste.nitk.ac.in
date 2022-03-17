@@ -68,7 +68,7 @@ class Header extends React.Component {
 	expoNavHeader = (
 		<li>
 			<Link className="white-text" to="/expo/">
-				Expo
+				Previous Expo
 			</Link>
 		</li>
 	);
@@ -326,8 +326,8 @@ class Header extends React.Component {
 							</li>
 						</ul>
 					</li>
-					{this.obscuraNavHeader}
-					{enableLeaderboard ? (
+					{/* {this.obscuraNavHeader} */}
+					{/* {enableLeaderboard ? (
 						<li className="no-padding">
 							<ul className="collapsible collapsible-accordion">
 								<li>
@@ -362,7 +362,7 @@ class Header extends React.Component {
 						</li>
 					) : (
 						this.squareOneHeader
-					)}
+					)} */}
 					{this.teamNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
@@ -397,8 +397,8 @@ class Header extends React.Component {
 								<ul id="sig-action" className="dropdown-content frontsig">
 									{this.sigLinks}
 								</ul>
-								{this.obscuraNavHeader}
-								{enableLeaderboard ? (
+								{/* {this.obscuraNavHeader} */}
+								{/* {enableLeaderboard ? (
 									<>
 										<li>
 											<Link
@@ -433,7 +433,7 @@ class Header extends React.Component {
 									</>
 								) : (
 									this.squareOneHeader
-								)}
+								)} */}
 								{this.teamNavHeader}
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}

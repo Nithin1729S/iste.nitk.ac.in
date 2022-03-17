@@ -48,22 +48,14 @@ class HomeCarousel extends React.Component {
 		// 	<></>
 		// );
 
-		let button = (
-			<div className="carousel-fixed-item center">
-				<Link to="/squareone" className="btn white-text dark">
-					APPLY FOR SQUARE ONE!
-				</Link>
-			</div>
-		);
-
 		return (
 			<>
 				<div className="carousel carousel-slider slides" id="desktop-carousel">
-					{button}
+					{/* {button} */}
 					{carouselContent}
 				</div>
 				<div className="carousel carousel-slider slides" id="mobile-carousel">
-					{button}
+					{/* {button} */}
 					{carouselContent}
 				</div>
 			</>
