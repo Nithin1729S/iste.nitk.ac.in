@@ -5,7 +5,8 @@ import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableExpo, enableRecs, enableLeaderboard } from '../../constants';
+import { enableExpo, enableRecs } from '../../constants';
+// import {  enableLeaderboard } from '../../constants';
 
 class Header extends React.Component {
 	state = { loggedInName: '' };

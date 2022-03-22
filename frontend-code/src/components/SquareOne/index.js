@@ -2,7 +2,7 @@ import React from 'react';
 
 import Description from './components/Description';
 import EventCards from './components/EventCards';
-import { description, techData, eventData, timelineData } from './Constants';
+import { description,  eventData,  } from './Constants';
 import Timeline from './components/Timeline';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
 class SquareOne extends React.Component {

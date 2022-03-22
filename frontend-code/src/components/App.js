@@ -32,15 +32,15 @@ import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 // import Year1 from '../Obscura/components/year/Year1';
 // import Year3 from '../Obscura/components/year/Year3';
 // import Year2 from '../Obscura/components/year/Year2';
-// import Year4 from '../Obscura/components/year/Year4';
-import Leaderboard from '../Obscura/components/Leaderboard';
-import SquareOne from './SquareOne';
-import SIGSquareOne from './SquareOne/eachSIG';
+// // import Year4 from '../Obscura/components/year/Year4';
+// import Leaderboard from '../Obscura/components/Leaderboard';
+// import SquareOne from './SquareOne';
+// import SIGSquareOne from './SquareOne/eachSIG';
 // import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 // import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 import '../css/constants.css';
-import { enableLeaderboard } from '../constants.js';
+// import { enableLeaderboard } from '../constants.js';
 
 class App extends React.Component {
 	state = { headerShouldRender: true, footerBackgroundVariant: '' };
@@ -76,12 +76,12 @@ class App extends React.Component {
 						{/* 
 						Obscura routes 
 							*/}
-						<Route
+						{/* <Route
 							path="/obscura/leaderboard"
 							render={() => (
 								<Leaderboard setFooterVal={this.changeFooterBackground} />
 							)}
-						/>
+						/> */}
 						{/* <Route
 							path="/obscura/year4"
 							render={() => (
