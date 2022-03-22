@@ -54,7 +54,7 @@ class Header extends React.Component {
 	loginNavList = null;
 	loginNavHeaderMobile = (
 		<li>
-			<Link to="/login/" className="waves-effect white-text">
+			<Link to="/login/" className="white-text">
 				Login
 			</Link>
 		</li>
@@ -113,7 +113,13 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	);
-
+	cryptoniteNavHeader = (
+		<li>
+			<Link className="white-text" to="/cryptonite/1">
+				Cryptonite
+			</Link>
+		</li>
+	);
 	// transcendNavHeaderMobile = (
 	// 	<li className="no-padding">
 	// 		<ul className="collapsible collapsible-accordion">
@@ -367,7 +373,8 @@ class Header extends React.Component {
 					{this.teamNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
-					{enableRecs ? this.recsNavHeader : null}
+					{ enableRecs ? this.recsNavHeader : null }
+					
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
 				</ul>
@@ -439,7 +446,7 @@ class Header extends React.Component {
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{enableRecs ? this.recsNavHeader : null}
-
+								{this.cryptoniteNavHeader}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
 							</ul>

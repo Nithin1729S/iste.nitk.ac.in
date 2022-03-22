@@ -109,8 +109,8 @@
 .btn {
     margin-top: 16%;
     width: 100%;
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
 }
 
 .btn:hover {

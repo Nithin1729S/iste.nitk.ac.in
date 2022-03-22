@@ -20,7 +20,7 @@ import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
 //import Transcend from './Transcend';
-// import Cryptonite from './Transcend/Cryptonite';
+import Cryptonite from './Transcend/Cryptonite';
 //import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 //import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
@@ -38,6 +38,11 @@ import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 // import SIGSquareOne from './SquareOne/eachSIG';
 // import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 // import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
+
+/* Transcend imports go here */
+// import Cryptonite from '../components/Cryptonite'
+
+
 
 import '../css/constants.css';
 // import { enableLeaderboard } from '../constants.js';
@@ -61,8 +66,9 @@ class App extends React.Component {
 					{/* <Route path="/transcend"  component={Transcend} />  */}
 					{/* <Route path="/smp"  component={SGPComponent} /> */}
 					{/* <Route path="/smp/:name"  component={SGPSigComponent} /> */}
-					{/* <Route
-						path="/transcend/crypt/:id"
+					<Switch>
+					<Route
+						path="/cryptonite/:id"
 						
 						render={(props) => (
 							<Cryptonite
@@ -70,8 +76,7 @@ class App extends React.Component {
 								setFooterVal={(val) => this.changeFooterBackground(val)}
 							/>
 						)}
-					/> */}
-					<Switch>
+					/>
 						{/* <Route path="*" component={HomeComponent} /> */}
 						{/* 
 						Obscura routes 
@@ -131,6 +136,8 @@ class App extends React.Component {
 								<Obscura setFooterVal={this.changeFooterBackground} />
 							)}
 						/> */}
+						
+						
 						<Route path="/test" component={TestUI} />
 						{/* <Route path="/squareonesig/:name" component={SIGSquareOne} /> */}
 						{/* <Route path="/squareone" component={SquareOne} /> */}
