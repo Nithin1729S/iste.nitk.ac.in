@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./css/crypt.module.css";
 import {  inip, inop } from "./TabHead.js";
-import { baseRequest } from "../../../constants";
+import { baseRequest } from "../../constants";
 import TabHead from "./TabHead.js";
 import Background from "./Background.js";
 
@@ -15,7 +15,7 @@ class Cryptonite extends React.Component {
         errorMessage: <></>,
     };
     validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    questionType = ['placeholder', 'placeholder', 'placeholder', 'placeholder', 'placeholder', 'placeholder', 'placeholder', 'placeholder', 'placeholder', 'placeholder'];
+    questionType = ['Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type'];
     currId =
         Number(this.props.match.params.id) in this.validId
             ? Number(this.props.match.params.id)
@@ -24,7 +24,7 @@ class Cryptonite extends React.Component {
     InputObjectKey = `array current ${this.currId.toString()}`;
 
     componentDidMount() {
-        this.props.setFooterVal("crypt");
+        this.props.setFooterVal("cryptonite");
 
         const numInputs = Number(localStorage.getItem(this.numInputKey));
         
@@ -124,7 +124,7 @@ class Cryptonite extends React.Component {
                 ).arr;
                 const ObjectToBeStored = {
                     arr: [
-                        { input: this.state.inputVal, output: 'output' },
+                        { input: this.state.inputVal, output: this.state.inputVal },
                         ...arrayToBeEntered,
                     ],
                 };
@@ -193,8 +193,8 @@ class Cryptonite extends React.Component {
                 </div>
 
                 <div className={styles.title}>
-                    <h3>{ `Question ${this.currId}` }</h3>
-                    <p>{this.questionType[this.currId-1]}</p>
+                    <h2>{ `Question ${this.currId} (${this.questionType[this.currId-1]})` }</h2> 
+                    {/* <p>{this.questionType[this.currId-1]}</p> */}
                 </div>
                 <div className={styles.container}>
                     <div className={`center ${styles.input}`}>
@@ -210,22 +210,11 @@ class Cryptonite extends React.Component {
                     </div>
 
                     <div className={styles.mainContent}>
-                        <div className={styles.blackBoxContainer}>
+                        {/* <div className={styles.blackBoxContainer}>
                             <div className={styles.blackBox}>
-                                {/* <div className={styles.blackBoxFront}>
-                                    <img
-                                        src={imgAdd}
-                                        className={styles.image}
-                                        alt="Black Box"
-                                    />
-                                </div> */}
-                                {/* <div className={styles.blackBoxA} />
-                                <div className={styles.blackBoxB} />
-                                <div className={styles.blackBoxC} />
-                                <div className={styles.blackBoxD} />
-                                <div className={styles.blackBoxE} /> */}
+                                
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className={styles.btncon}>
                             <button

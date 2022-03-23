@@ -21,6 +21,9 @@
 
 .mainContent {
     grid-area: b;
+    display : flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .blackBoxContainer {
@@ -109,16 +112,19 @@
 .btn {
     margin-top: 16%;
     width: 100%;
+    height : 100%;
     background-color: var(--secondary) !important;
     color: var(--primary) !important;
+    padding : 2px;
+    font-family: inherit;
 }
 
 .btn:hover {
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
 }
 .btncon {
-    margin-top: calc(var(--baseUnit) * 1.5);
+    /* margin-top: calc(var(--baseUnit) * 1.0); */
     width: 100%;
     padding-inline: 20%;
 }
@@ -126,7 +132,7 @@
 .heading,
 .error {
     color: var(--secondary);
-    font-size: 24px;
+    font-size: 2em;
 }
 
 .error {
@@ -190,5 +196,26 @@
         font-size: 0.8rem;
         line-height: 1.5rem;
         height: min-content;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .btn{
+        padding : 5px;
+    }
+    .container {
+        display: grid !important ;
+        grid-template-columns: 50%;
+        align-items: center;
+        justify-content: center;
+        
+        grid-template-areas: 
+            "a" 
+            "b" 
+            "c" ;
+        
+    }
+    .output{
+        margin-top : 2%;
     }
 }

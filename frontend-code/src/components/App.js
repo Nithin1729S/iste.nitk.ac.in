@@ -20,7 +20,7 @@ import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
 //import Transcend from './Transcend';
-import Cryptonite from './Transcend/Cryptonite';
+import Cryptonite from './Cryptonite';
 //import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 //import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
