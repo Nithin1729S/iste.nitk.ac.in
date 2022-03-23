@@ -5,6 +5,10 @@
   background-color: #0c0013 !important;
   background-image: url("../components/Transcend/Cryptonite/background.png");
 }
+.crypt {
+  background-color: #0c0013 !important;
+  /* background-image: url("../components/Transcend/Cryptonite/background.png"); */
+}
 .obscura {
   background-color: #0c0013 !important;
   background-image: linear-gradient(315deg, #12a389 0%, #e83e7d 74%);

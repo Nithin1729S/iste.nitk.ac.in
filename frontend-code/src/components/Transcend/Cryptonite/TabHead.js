@@ -18,7 +18,7 @@ const TabHead = ({ idTab }) => {
 						</div>
 					) : (
 						<Link
-							to={`/transcend/crypt/${item}`}
+							to={`/cryptonite/${item}`}
 							class={`btn white-text dark ${styles.btnIn}`}
 						>
 							Q{item}

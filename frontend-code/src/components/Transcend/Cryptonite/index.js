@@ -4,8 +4,8 @@ import styles from "./css/crypt.module.css";
 import {  inip, inop } from "./TabHead.js";
 import { baseRequest } from "../../../constants";
 import TabHead from "./TabHead.js";
+import Background from "./Background.js";
 
-// TODO : add particle background
 // TODO : set up the API connection
 
 class Cryptonite extends React.Component {
@@ -180,13 +180,14 @@ class Cryptonite extends React.Component {
                     errorMessage: <> </>,
                 });
             })
-            .catch(() => {
-                console.log("error");
+            .catch((err) => {
+                console.error(err);
             });
     };
     render() {
         return (
             <div className={styles.main}>
+                <Background/>
                 <div className={styles.tabHead}>
                     <TabHead idTab={this.currId} />
                 </div>
