@@ -42,10 +42,9 @@ import Cryptonite from './Cryptonite';
 /* Transcend imports go here */
 // import Cryptonite from '../components/Cryptonite'
 
-
-
 import '../css/constants.css';
 // import { enableLeaderboard } from '../constants.js';
+import { enableCryptonite } from '../constants.js';
 
 class App extends React.Component {
 	state = { headerShouldRender: true, footerBackgroundVariant: '' };
@@ -67,16 +66,17 @@ class App extends React.Component {
 					{/* <Route path="/smp"  component={SGPComponent} /> */}
 					{/* <Route path="/smp/:name"  component={SGPSigComponent} /> */}
 					<Switch>
-					<Route
-						path="/cryptonite/:id"
-						
-						render={(props) => (
-							<Cryptonite
-								{...props}
-								setFooterVal={(val) => this.changeFooterBackground(val)}
+						{enableCryptonite ? (
+							<Route
+								path="/cryptonite/:id"
+								render={(props) => (
+									<Cryptonite
+										{...props}
+										setFooterVal={(val) => this.changeFooterBackground(val)}
+									/>
+								)}
 							/>
-						)}
-					/>
+						) : null}
 						{/* <Route path="*" component={HomeComponent} /> */}
 						{/* 
 						Obscura routes 
@@ -136,8 +136,7 @@ class App extends React.Component {
 								<Obscura setFooterVal={this.changeFooterBackground} />
 							)}
 						/> */}
-						
-						
+
 						<Route path="/test" component={TestUI} />
 						{/* <Route path="/squareonesig/:name" component={SIGSquareOne} /> */}
 						{/* <Route path="/squareone" component={SquareOne} /> */}
