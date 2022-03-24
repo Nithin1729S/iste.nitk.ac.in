@@ -15,7 +15,7 @@ import LoginComponent from './PageComponents/LoginComponent';
 import EventDetails from './PageComponents/EventDetails';
 import EventAdd from './PageComponents/EventAdd';
 import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
-// import DescPage from '../expo/Components/DescPage';
+import DescPage from '../expo/Components/DescPage';
 // import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 // import SGPComponent from './PageComponents/SGPComponent';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
@@ -156,7 +156,7 @@ class App extends React.Component {
 						{/* {enableLeaderboard ? (
 							<Route path="/leaderboard" component={LeaderboardComponent} />
 						) : null} */}
-						{/* <Route path="/expoPage/:name" component={DescPage} /> */}
+						<Route path="/expoPage/:name" component={DescPage} />
 						<Route path="/sig/:name" component={SigComponent} />
 						<Route path="/team" component={TeamComponent} />
 						<Route path="/project/:id" component={ProjectComponent} />
