@@ -5,6 +5,8 @@ const Mexican = () => {
   return (
     <General
       heading="After Everything, I'm Going Back Home"
+      writer="Anjishnu Laskar"
+      branch="EEE"
     >
     <p>The world was devoid of everything but the inky darkness. The faintest of footsteps echoed around him. Voices, barely audible over the void, seemed to call out to him, but he was too far to hear them. He saw a flash of light to his right, and his world suddenly shifted.</p>
 

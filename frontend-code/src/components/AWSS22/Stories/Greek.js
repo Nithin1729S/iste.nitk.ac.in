@@ -5,6 +5,8 @@ const Greek = () => {
   return (
     <General
       heading="Thicker Than Wine"
+      writer="Vishnu Radhakrishnan"
+      branch="Chemical"
     >
     <p>It looked as if someone had poured blood into her kantharos[1]. Maybe that was why she took such a liking to wine. Being the princess of Crete, the wine was always made from the first harvested grapes. The reflection of cherry wine on her pupils could only capture an ounce of the fury she felt. It had been 9 years since the death of her adelphos[2], Androgeus. Time did nothing to anguish the suffering one goes through the loss of a loved one. Greek princesses were not absolved from feeling grief.</p>
 
@@ -136,7 +138,7 @@ const Greek = () => {
     <li id="36">[36] Hades - God of the underworld </li>
     <li id="37">[37] Ambrosia - Food or drink of the Greek gods </li>
     <li id="38">[38] Mount Olympus - Home of the Greek gods </li>
-    <li id="39"><a href="#39">39</a> Plutus - God of wealth, son of Hades</li>
+    <li id="39">[39] Plutus - God of wealth, son of Hades</li>
     </ul>
   </p>
     </General>

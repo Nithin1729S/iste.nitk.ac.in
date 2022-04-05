@@ -12,6 +12,13 @@ const General = (props) => {
       <div style={{fontSize: 30}}>
         {props.children}
       </div>
+      <div
+        className="center-align"
+        style={{color: 'black', fontSize: 20}}
+      >
+        This story was written by <strong style={{fontWeight: 'bold'}}>{props.writer}</strong>, a
+        second year <strong style={{fontWeight: 'bold'}}>{props.branch}</strong> BTech student
+      </div>
     </div>
   );
 }

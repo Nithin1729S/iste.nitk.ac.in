@@ -5,6 +5,8 @@ const Italian = () => {
   return (
     <General
       heading="Reincarnation"
+      writer="Harsha Satija"
+      branch="Meta"
     >
     <p>The breezy cold wind, snow falling steadily on the little German girl &ldquo;Anja&rdquo;.Anja, a 14-year-old girl travelling at her own risk, is fearless about her future. Chasing her dreams, she ran from Germany from her jail, the home of her stepmom. The longest journey she has ever taken in her 14 years of life was to Italy. The Bus Driver Leon, his mom&rsquo;s childhood friend, was her guide to fly in her life. The languages she knew were German and English, though everything in this seems to be seen, felt familiar, which made her think more and more about how her life would be in this new country. Her guide took her to the church as she starts the journey, interestingly she got stuck in Deja Vu, She said to herself &ldquo; why everything seems so familiar, I have some sort of connection with this place, but this is the first time that I have stepped on this land of Romans.&rdquo; Her guide then helped her to find a rented room near the church. The room was small as she couldn't afford to stay in luxury at the beginning of the journey. She unpacked her clothes to set them in the old dusty wooden almirah, but as she opened it her mind went blue. She kept her clothes on the small wooden table and went near the almirah where there was a large book, she was astonished to see the book. As she touched the book it start speaking in some roman words, she screamed &ldquo;Ouch, who are you? I don't understand anything?&rdquo;</p>
 

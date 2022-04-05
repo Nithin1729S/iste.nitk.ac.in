@@ -5,6 +5,8 @@ const Egyptian = () => {
   return (
     <General
       heading="The Gods of Egypt"
+      writer="Adarsh Kishore"
+      branch="IT"
     >
 
 <h3>Prologue</h3>
