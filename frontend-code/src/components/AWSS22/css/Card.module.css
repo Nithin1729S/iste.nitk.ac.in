@@ -1,0 +1,107 @@
+.container{
+    font-size: 20px;
+    margin: 4vw 0 1vw 0;
+    box-sizing: border-box;
+    padding: 1vw;
+    width: 60vw;
+    font-family: serif;
+    padding: 2px 16px;
+    box-shadow: 0 2px 4px 0 rgb(245, 164, 164);
+    transition: 0.3s;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ccc;
+  }
+
+  /* On mouse-over, add a deeper shadow */
+.container:hover {
+    box-shadow: 0 4px 12px 0 rgba(48, 10, 36, 0.938);
+}
+
+  /* Add some padding inside the card container */
+.img {
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.name {
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+}
+
+
+.description {
+    font-size: medium;
+    margin-top: 1vw;
+}
+
+.button {
+  margin-bottom: 20px;
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+.add_button, .buy_button {
+    background-color: rgb(241, 67, 67);
+    border: 0;
+    padding: 1vw 2vw;
+    font-size: large;
+    transition: 0.3s;
+    border-radius: 0.4vw;
+}
+
+.add_button:hover, .buy_button:hover {
+    transform: scale(1.05);
+}
+
+.add_button:active, .buy_button:active{
+    transform: scale(0.95);
+}
+
+.buy_button{
+    background-color: rgb(255, 205, 205);
+}
+
+.button_container{
+    display: flex;
+    justify-content: space-around;
+    gap: 3vw;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        width: 40vw;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .container {
+        width: 30vw;
+    }
+}

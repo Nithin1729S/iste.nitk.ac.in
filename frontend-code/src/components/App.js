@@ -21,6 +21,11 @@ import DescPage from '../expo/Components/DescPage';
 // import SGPSigComponent from './PageComponents/SGPSigComponent';
 //import Transcend from './Transcend';
 import Cryptonite from './Cryptonite';
+import AWSS from "./AWSS22/AWSS";
+import Egyptian from "./AWSS22/Stories/Egyptian";
+import Italian from "./AWSS22/Stories/Italian";
+import Greek from "./AWSS22/Stories/Greek";
+import Mexican from "./AWSS22/Stories/Mexican";
 //import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 //import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
@@ -78,8 +83,8 @@ class App extends React.Component {
 							/>
 						) : null}
 						{/* <Route path="*" component={HomeComponent} /> */}
-						{/* 
-						Obscura routes 
+						{/*
+						Obscura routes
 							*/}
 						{/* <Route
 							path="/obscura/leaderboard"
@@ -166,6 +171,11 @@ class App extends React.Component {
 						<Route path="/event" component={EventComponent} />
 						{/* <Route path="/recs/:name" component={RecsSIGComponent} />
 						<Route path="/recs" component={RecruitmentComponent} /> */}
+						<Route path="/awss/egyptian" component={Egyptian} />
+						<Route path="/awss/mexican" component={Mexican} />
+						<Route path="/awss/greek" component={Greek} />
+						<Route path="/awss/italian" component={Italian} />
+						<Route path="/awss" component={AWSS} />
 						<Route path="/" component={HomeComponent} />
 					</Switch>
 				</div>
