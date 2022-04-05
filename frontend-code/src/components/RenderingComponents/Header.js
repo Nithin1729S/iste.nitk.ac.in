@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableExpo, enableRecs, enableCryptonite, enableAWSS } from '../../constants';
+import { enableExpo, enableRecs, enableCryptonite } from '../../constants';
 // import {  enableLeaderboard } from '../../constants';
 
 class Header extends React.Component {
@@ -120,13 +120,6 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	);
-	awssHeader = (
-		<li>
-			<Link to="/awss">
-				AWSS
-			</Link>
-		</li>
-	)
 	// transcendNavHeaderMobile = (
 	// 	<li className="no-padding">
 	// 		<ul className="collapsible collapsible-accordion">
@@ -454,7 +447,6 @@ class Header extends React.Component {
 								{enableExpo ? this.expoNavHeader : null}
 								{enableRecs ? this.recsNavHeader : null}
 								{enableCryptonite ? this.cryptoniteNavHeader : null}
-								{enableAWSS ? this.awssHeader : null}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
 							</ul>

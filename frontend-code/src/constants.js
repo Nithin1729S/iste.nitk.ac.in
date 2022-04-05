@@ -13,4 +13,3 @@ export const enableRecs = false;
 export const enableExpo = true;
 export const enableCryptonite = false;
 export const enableLeaderboard = false;
-export const enableAWSS = true;
