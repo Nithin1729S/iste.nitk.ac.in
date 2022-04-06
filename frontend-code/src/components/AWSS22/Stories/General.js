@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const General = (props) => {
 	return (
-		<div className="container">
+		<div style={{padding: '0 5vw'}}>
 			<Link
 				to="/awss"
 				style={{ color: 'black', fontWeight: 'bold', fontSize: 20 }}

@@ -21,7 +21,7 @@ const Egyptian = () => {
 
 <p>Now they traded mostly in things like rare stones, oil, or what little could be found in their caves. All this of course meant that the common people, who used to be mostly agricultural, struggled to make ends meet now. They now had to work as slaves for the royalty, or workers in building the large monuments. It was the Dark Age of Egypt under the Amenhoteps.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>Aisha was the typical example of the everyday Egyptian. Her father Kamal was her only family. They lived in Thebes, which was around 800 kilometres away from the Mediterranean near the banks of the Nile. Kamal worked as a labourer in building the Ramesseum Necropolis near Thebes. In other words, they were part of the lower classes of Egyptian society.</p>
 
@@ -31,7 +31,7 @@ const Egyptian = () => {
 
 <p>Aisha was no exception. To her, Ra was the original Egyptian god, as all other Egyptian gods were merged into Him and made Him all the more powerful. He was the king of all deities. She also worshipped Amun, who was the God of the air. His fusion with Ra was &ldquo;Amun-Ra&rdquo; and it represented the raw, universal power of the sun, something which always awed Aisha. No matter how bleak things looked, she was comforted by the fact that He was always looking over her.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>One day, Aisha was spending the evening strolling across the road. Her father had gone to work for the construction of the Necropolis. Of late, he had been sort of jumpy, as if nervous about something. He tried to stay away from her, though normally he was a very loving father to her. Upon entering alleys, he would look in all directions, as if he were expecting someone to follow him.</p>
 
@@ -49,7 +49,7 @@ const Egyptian = () => {
 
 <p>As she stood there, her sadness turned to anger. Anger against the pharaoh and his agents, for what they had done. Dislike for the pharaoh flared to hatred and animosity. Her father had been onto something, and had been discovered by the pharaoh. She vowed then and there, &ldquo;I&rsquo;ll not let you down Ab, I&rsquo;ll finish up what you started. I&rsquo;ll make sure that these men pay for what they&rsquo;ve done to you!&rdquo;</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>Aisha contemplated what to do next. She knew that her father was onto something before he was killed. She had to find out what that was. The best way to do that was to ask people around who served in the palace. So she set about doing just that.</p>
 
@@ -61,7 +61,7 @@ const Egyptian = () => {
 
 <p>&ldquo;Oh?&rdquo; Aisha perked up. Her efforts had paid off after all. Even though no one told her anything, they did gossip around themselves. This could be a good chance to gather information about the strengths and weaknesses of Amenhotep. So she said, concealing her sudden interest lest it seemed suspicious, &ldquo;That is great indeed.&rdquo;</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>&ldquo;Magic runs in their family line. The pharaoh is a skilled wizard. I once saw him push away some of his subjects in annoyance. He just raised his hand and the people got blown away, as though his mere push was like a tornado wind to them&rdquo;.</p>
 
@@ -75,7 +75,7 @@ const Egyptian = () => {
 
 <p>However before she could ask the question, she heard a shout, &ldquo;There she is, the runt!&rdquo;. A group of soldiers from the palace were running along their way, and they looked very angry and menacing.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>Aisha ran away from the place, quite sure that her father&rsquo;s killers had decided to get rid of her too. Making sure that no one was still behind her, she hid into the nearby bushes, hoping that no one had seen her.</p>
 
@@ -97,7 +97,7 @@ const Egyptian = () => {
 
 <p>&ldquo;Noble woman, I am Heka, the God of all things magical. I will help you, my child.&rdquo;</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>Aisha stood dumbfounded. She was not certain if she was hallucinating, But the guards stood frozen in their motions. Certainly she could not hallucinate that. At least not if she was alive, that is. But for the time being, being alive and hallucinating was a much better option than being dead.</p>
 
@@ -117,7 +117,7 @@ const Egyptian = () => {
 <p>Amina cut her off, saying &ldquo;You must defeat Amenhotep! What he&rsquo;s done to my family&#8230;&rdquo; She was sobbing, but then rubbed her eyes which reflected sorrow but also determination. &ldquo;Promise me. You&rsquo;ll kill that monster.&rdquo; <br />
 And Aisha said, &ldquo;By the Lord Ra, I shall defeat him. For you. For all the people of Egypt.&rdquo;</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>She had been unable to save Amina&rsquo;s family. Memories of her own father&rsquo;s execution came to haunt her back. It had been the same back then. Sure, she had intervened later and even got help from Heka, but it took two executions to force her into action.</p>
 
@@ -139,7 +139,7 @@ And Aisha said, &ldquo;By the Lord Ra, I shall defeat him. For you. For all the 
 
 <p>And to put an end to it once and for all, she knew what she had to do: go to the palace and confront Amenhotep.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>
 Aisha thought about what to do. The guards would certainly stop her from entering the palace, and a direct confrontation would be bad for her. The Pharaoh had over a thousand palace soldiers. Even with her magic, Aisha was not sure if she could take so many head-ons.</p>
@@ -150,7 +150,7 @@ Aisha thought about what to do. The guards would certainly stop her from enterin
 
 <p>&ldquo;You&rsquo;ll see. I have a plan. Snooping around the palace has its benefits&rdquo;, said Kamal, with a mischievous grin on his face.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>They stood outside the palace gates, just out of the eyeshot of the two guards guarding it. Kamal had turned himself invisible, and only his sound indicated where he was. He told Aisha, &lsquo;I&rsquo;ll move those two out of the way. Then you go in&rdquo;.</p>
 
@@ -172,7 +172,7 @@ Aisha thought about what to do. The guards would certainly stop her from enterin
 
 <p>&ldquo;What if I snatch it from you?&rdquo;, snapped Aisha. &ldquo;Oh well, I&rsquo;d love to see you try&rdquo;, said Amenhotep, with a malicious and disturbing smile.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 
 <p>Amenhotep and Aisha engaged in battle. Amenhotep had his Pharaoh Sword with him, and he swung it at Aisha, who deftly tried to dodge it. By his magic he disappeared and reappeared at places, so Aisha had to keep her eyes and ears extremely focused. One small misstep could result in her getting sliced by his sword.</p>
 
