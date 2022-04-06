@@ -44,7 +44,7 @@ const Mexican = () => {
 
 <p>&quot;Se- Yeah,&quot; said Ikal, looking back for a moment. &quot;See you around, Gabriel,&quot; he turned back, waving him goodbye.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 <p> The station wasn't too far out from the base. Gabriel didn't quite remember the exact number, but it was a few kilometres away. He bit back a curse as he checked the time on his watch. He started a light jog, slowly picking up the pace as he contemplated whether he'd make it on time. From what he remembered, the regional line left sharp at 6 AM. That gave him a little over half an hour. Worst case scenario, he'd have to take the express line. Even then, that gave him barely an hour to work with, and he wasn't sure if the express line had a spontaneous booking.</p>
 
 <p>Gabriel put those thoughts at the back of his mind. For now, he had to focus on getting there first. If he was lucky, he might be able to hitch a ride. He looked back to see if anyone was coming the same way as him. No one was. Gabriel cursed at his decision to travel by foot. If anyone ever asked, he'd blame Alejandro's fitness</p>
@@ -67,7 +67,7 @@ const Mexican = () => {
 
 <p>And so, with his backpack on his lap and his head leaning against the window, Gabriel drifted to sleep.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 <p> The world was devoid of everything but the inky darkness. Footsteps shuffled around him- with him. Familiar voices travelled through the void, speaking in hushed tones, though he could only discern a few words- Seeker... hostages... cartel... backup. A muffled voice cried out his name as he turned. There was a flash of light to his right, and his world suddenly shifted.</p>
 
 <p>Gabriel awoke with a start, knocking away the hand on his shoulder in surprise. &quot;Se&ntilde;or, are you alright?&quot; a soft voice asked him. He turned slightly to see a young lady looking concernedly at him. She had a conductor's cap and uniform on and held a ticket machine in one of her hands. &quot;Se&ntilde;or?&quot; she repeated once again. &quot;I'm fine, I'm fine,&quot; he replied. &quot;Just a headache, &quot; he said, flashing her a small smile, &quot;that, and a weird dream.&quot; &quot;Ah,&quot; she nodded in understanding, &quot;so, where are you off to?&quot; &quot;Last stop. Los Mochis,&quot; he replied. &quot;Mhm,&quot; she punched a few buttons on the machine and handed him the ticket, &quot;here you go. Drop it off in that box in the corner before you leave. Buen viaje!&quot; He took the ticket and asked, &quot;How much?&quot; &quot;Huh?&quot; &quot;Like, how much do I need to pay? For the ticket?&quot; She chuckled, &quot;You don't have to pay here, silly.&quot; With that, she left for the coach ahead. Gabriel tilted his head, confused. While he was lost in his thoughts, the compartment went dark.</p>
@@ -78,7 +78,7 @@ const Mexican = () => {
 
 <p>&quot;Passengers, we have arrived at Creel. We will be making a stop for five minutes. We will also be passing along the Copper Canyon for the next segment of our journey.&quot;</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 <p> Gabriel walked back to his seat with a handful of snacks that he had taken from the onboard dining room. Se&ntilde;orita Conductor had been kind enough to point him to it.</p>
 
 <p>He sat down, dumping the snacks on a nearby seat. He took a pack of Takis chips and started happily snacking on them. Soon, they would enter the Sierra Madre mountain range, where the canyons are located. Gabriel looked out of the window and saw a tunnel coming up. He took a deep breath... and just closed his eyes. He didn't want to deal with his irrational fear of darkness with the Copper Canyon so close.</p>
@@ -105,7 +105,7 @@ const Mexican = () => {
 
 <p>and made his way back to his seat. After stashing the trinkets in his backpack, he dug into his taco as the train resumed its journey.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 <p> Gabriel spent the next few hours looking at the scenery through the window while reflecting on his time in the military. He still remembered the day he set foot in the boot camp five years ago. He had been nervous and easily flustered but determined. The training had been harsh and would often leave him completely drained by sunset. That was where he had first met Ikal.</p>
 
 <p>A particularly gruelling day of training had left Gabriel dead on his feet. He couldn't even muster the energy to drag himself back to the barracks. He had been fully prepared to be chewed out by the drill sergeant before someone had come to lend him a hand. The darker-skinned figure helped him to his feet and subtly supported him till they reached the barracks.</p>
@@ -138,7 +138,7 @@ const Mexican = () => {
 
 <p>He was home.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 <p> Gabriel stepped off the train and took a deep breath. The warm, humid air that filled the air would've made a visitor scrunch their face in repugnance, but it only made Gabriel smile. It greeted him like an old friend and welcomed him home. He was back home.</p>
 
 <p>With a grin on his face, Gabriel set out towards the city. He really should catch a taxi and go straight home. He knew this, but he didn't want to. As much as he wanted to see his family, he hadn't been here for so long! He would still go straight home, he told himself, just on foot so he could take in the sights better.</p>
@@ -169,7 +169,7 @@ const Mexican = () => {
 
 <p>Now he knew where to find his family.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 <p> Gabriel tossed his backpack onto the porch and dashed out to the street. The petals were laid from the cemeteries to homes so that they could guide the souls of the departed ones. He followed the trail, letting it guide him, dashing past revellers in calavera masks and paint.</p>
 
 <p>He soon found himself in front of the local cemetery. His head had started aching again and felt strangely heavy, but he couldn't let that bother him now. Gabriel made his way through the cemetery, searching for his family. It wasn't easy as there were plenty of people milling about, more than he had ever seen over there. He clenched his fists in frustration, biting back a silent scream. He</p>
@@ -224,7 +224,7 @@ const Mexican = () => {
 
 <p>One moment he felt his head splitting open and the next, nothing. And then the darkness took him.</p>
 
-<h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<h3>-X-X-X-X-</h3>
 <p> The world was devoid of the inky darkness that surrounded him. He was in a room with his comrades around him. The room was dimly lit, and several people were tied up by the wall. He helped his team untie and steady them. Ikal dialled into the squad frequency.</p>
 
 <p>Ikal: &quot;Seeker White 6, Seeker Red 6, over.&quot;</p>
