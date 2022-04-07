@@ -4,28 +4,28 @@
 const project3 = {
     id: 3,
     oneline:
-        "Title",
+        "This project models the transport phenomena in electrodialysis, an electrically driven process for the desalination of saline water.",
     // copy the abstract here
     // logo: logo,
-    name: "Name", // replace the name here
+    name: "Computational Modelling of Transport Phenomena in Electrodialysis", // replace the name here
     imgUrl: [],
     members: [
-        "members"
+        "R Raghavendra"
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
             <div>
-                Abstract goes here
+                This project models the transport phenomena in electrodialysis, an electrically driven process for the desalination of saline water.
             </div>
         ),
         des: (
             <div>
-                General introduction goes here
+                This project models the transport phenomena occurring in electrodialysis, an electrically driven separation process for the desalination of saline water. The model is a 2D steady state model. The momentum and species transport equations are solved using the finite difference method in MATLAB. The effects of sodium ion concentration in the diluate channel feed and the inlet velocity to the diluate channel on the concentration profile at a given potential drop were studied.
             </div>
         ),
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
+                {<iframe src="https://drive.google.com/file/d/1BiH4Zt4zKwuirzEPoEI7AWCPZWppYoQX/preview" width="640" height="480" allow="autoplay"></iframe>}
             </div>
         )
     },

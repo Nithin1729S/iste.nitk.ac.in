@@ -1,4 +1,4 @@
-import logo from "../images/project expo_Vfinal_Crypt1.png"
+import logo from "./project_expo_Vfinal_Crypt1.png"
 
 const project1 = {
     id: 1,

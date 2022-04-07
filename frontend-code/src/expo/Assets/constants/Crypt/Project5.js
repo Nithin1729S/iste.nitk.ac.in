@@ -1,4 +1,4 @@
-import logo from "../images/project expo_Vfinal_Crypt4.png"
+import logo from "./project_expo_Vfinal_Crypt4.png"
 const project5 = {
     id: 5,
     oneline:
