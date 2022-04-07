@@ -1,4 +1,4 @@
-// import logo from "../images/project expo_Vfinal_Crypt1.png"
+import logo from "./credit2.jpg"
 
 
 const project2 = {
@@ -6,7 +6,7 @@ const project2 = {
     oneline:
         "Conducting a business case study on IKEA using business, operation, strategic, marketing and quantiative analysis frameworks",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "IKEA: A Business Case Study", // replace the name here
     imgUrl: [],
     members: [

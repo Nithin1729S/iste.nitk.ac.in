@@ -1,4 +1,4 @@
-// import logo from "../images/project expo_Vfinal_Crypt1.png"
+import logo from './credit1.jpg'
 
 
 const project1 = {
@@ -6,7 +6,7 @@ const project1 = {
     oneline:
         "A look into why consumers make irrational decisions in their day to day lives, business instances and financial goals. ",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "The effect of biases on economic decision-making and exploring these biases using Behavioral Economics", // replace the name here
     imgUrl: [],
     members: [

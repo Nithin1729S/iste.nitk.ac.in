@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './create.jpg'
 
 const project1 = {
     id: 1,
     oneline:
         "Visualization of ISTE Special interest Groups through 3D Animation and graphics",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "3D pop animation project", // replace the name here
     imgUrl: [],
     members: [

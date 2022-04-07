@@ -1,4 +1,5 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
+import logo from './credit4.jpg'
 
 
 const project3 = {
@@ -6,7 +7,7 @@ const project3 = {
     oneline:
         "Demonstrate that the weekly google search volume of cryptocurrencies/NIFTY 50 companies has correlation with the weekly market price and volume changes.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "INFLUENCE OF GOOGLE TRENDS ON STOCK AND CRYPTO MARKET- EMPIRICAL ANALYSIS", // replace the name here
     imgUrl: [],
     members: [

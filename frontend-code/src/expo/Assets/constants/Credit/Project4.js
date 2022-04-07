@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './credit5.jpg'
 
 const project4 = {
     id: 4,
     oneline:
         "Analysing how various economic parameters and consumer centric industries were impacted due to the pandemic.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Studying the economic impact of Covid-19 and analysing how it led to the growth of newer forms of management in the business sector", // replace the name here
     imgUrl: [],
     members: [

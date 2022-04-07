@@ -1,4 +1,5 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
+import logo from './credit6.jpg'
 
 
 const project5 = {
@@ -6,7 +7,7 @@ const project5 = {
     oneline:
         "Understanding consumer behavior in the food retail industry using market basket analysis.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Analysing consumer behaviour  in the food retail industry using Market basket Analysis ", // replace the name here
     imgUrl: [],
     members: [

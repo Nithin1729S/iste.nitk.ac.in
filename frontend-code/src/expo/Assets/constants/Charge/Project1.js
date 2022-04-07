@@ -10,7 +10,7 @@ const project1 = {
     name: "Image processing using verilog", // replace the name here
     imgUrl: [],
     members: [
-        'Harshavardhan', 'Vishal', 'Fouzan', 'Achyut', 
+        'Fouzan','Harshavardhan', 'Vishal',  'Achyut', 
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
