@@ -1,4 +1,4 @@
-import logo from "../images/project expo_Vfinal_Crypt3.png";
+import logo from "./project_expo_Vfinal_Crypt3.png";
 const project3 = {
     id: 3,
     // tags: ["Networking", " NDN", " Reddit", " Webdev"],

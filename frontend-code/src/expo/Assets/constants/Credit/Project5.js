@@ -4,28 +4,28 @@
 const project5 = {
     id: 5,
     oneline:
-        "Title.",
+        "Understanding consumer behavior in the food retail industry using market basket analysis.",
     // copy the abstract here
     // logo: logo,
-    name: "Name", // replace the name here
+    name: "Analysing consumer behaviour  in the food retail industry using Market basket Analysis ", // replace the name here
     imgUrl: [],
     members: [
-        "members"
+        "Gayathri Nisha", "Ranjeet Sonawane"
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
             <div>
-                Abstract goes here
+                Understanding consumer behavior in the food retail industry using market basket analysis.
             </div>
         ),
         des: (
             <div>
-                General introduction goes here
+                We also performed time series forecasting analysis to predict future stock prices of consumer-centric companies in automobiles, pharmaceuticals, and FMCG. Predicted stock prices were then compared with the actual prices to understand the reasons behind these deviations.
             </div>
         ),
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
+                {<iframe src="https://drive.google.com/file/d/14QDo5qm8iK_HcHj_KSBYgA7riib3b8Cm/preview" width="640" height="480" allow="autoplay"></iframe> }
             </div>
         )
     },

@@ -4,7 +4,7 @@
 const project1 = {
     id: 1,
     oneline:
-        "Around the world in Short Stories",
+        " In this project we wrote short stories based on different cultures. We’ve received feedback on said stories and modified them. The collection of the final modified stories is the end product.",
     // copy the abstract here
     // logo: logo,
     name: "Around the world in Short Stories" ,// replace the name here

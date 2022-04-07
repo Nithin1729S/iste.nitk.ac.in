@@ -4,28 +4,28 @@
 const project2 = {
     id: 2,
     oneline:
-        "Title.",
+        "Analyzing and designing the various technologies of solar cells ",
     // copy the abstract here
     // logo: logo,
-    name: "Name", // replace the name here
+    name: "Mathematical and Design Analysis of Solar Cell Technologies", // replace the name here
     imgUrl: [],
     members: [
-        "members"
+        "Ankit Stephen Thomas", "Rohaan Sunil"
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
             <div>
-                Abstract goes here
+                Analyzing and designing the various technologies of solar cells 
             </div>
         ),
         des: (
             <div>
-                General introduction goes here
+                In this project, we have designed multiple solar cell technologies from the first and second generation types using MATLAB-Simulink and GPVDM. The solar cell types used in this project are: Si-single junction solar cell, Perovskite solar cell and Triple junction solar cell. MATLAB-Simulink was used in mathematically designing solar cells using certain fundamental mathematical equations, whereas, GPVDM was used as a design software on the basis of materials, thermal and optical properties. The models are simulated using varying materials, conditions and parameters, to obtain suitable device performances which can be used for commercialization. 
             </div>
         ),
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
+                {<iframe src="https://drive.google.com/file/d/18c2CyFeapGz6a3mXQzQsdfde1ehSYXyj/preview" width="640" height="480" allow="autoplay"></iframe>}
             </div>
         )
     },

@@ -4,29 +4,34 @@
 const project4 = {
     id: 4,
     oneline:
-        "Title",
+        "The aim of this study is modeling of biokinetics of anaerobic digestion",
     // copy the abstract here
     // logo: logo,
-    name: "Name", // replace the name here
+    name: "Modelling and Simulation for Biogas Production from Organic Waste", // replace the name here
     imgUrl: [],
-    members: [
-        "members"
+    members: ["Dhruv Banerjee", "Rahul Maheshwari", "Rugved Pande"
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
             <div>
-                Abstract goes here
+                The aim of this study is modeling of biokinetics of
+anaerobic digestion 
             </div>
         ),
         des: (
             <div>
-                General introduction goes here
+                This project models the anaerobic digestion process used for the production of biogas from biomass.
+The search for appropriate models to be use in control theory is
+now a major priority for optimizing the fermentation process and solve important problems, such as renewable
+energy development from biodegradable organic waste.In this project, we present a simple mathematical model
+with a reduces set of state variables and parameters. Our
+kinetic model involves biological reactions (acidogenesis
+and methanogenesis) with two groups of microorganism.The differential equations obtained in the mass balances of biomass,substrate and biogas are represented in a simulink model.We study the plots obtained for each transfer function using PID controller in our model .At last this project also includes the error analysis using various methods.
             </div>
         ),
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
-            </div>
+{<iframe src="https://drive.google.com/file/d/1Rl6PE0uSy6M8DTQMdtaG8GMGzY64fWOO/preview" width="640" height="480" allow="autoplay"></iframe>}            </div>
         )
     },
 };
