@@ -18,25 +18,25 @@ const DescContent = ({ sn, id }) => {
 		if (arr[index].id === id) {
 			curProj = arr[index];
 			curmeet = garr[index].meetLink;
-			curFur = gFur[index].fur;
+			// curFur = gFur[index].fur;
 			break;
 		}
 		if (id > arr.length) {
 			curProj = arr[0];
 			curmeet = garr[0].meetLink;
-			curFur = gFur[0].fur;
+			// curFur = gFur[0].fur;
 		}
 	}
 
 	// For heading components
 	var comp = <div>No Content</div>;
 	if (typeof curProj.description['aim'] === 'object') {
-		let content = ['aim', 'res', 'meth', 'con'];
+		let content = ['aim', 'des', 'res', 'con'];
 		const titleObject = {
 			aim: 'Aim',
-			meth: 'Methodology',
-			res: 'Results',
-			con: 'Conclusion and Future work',
+			des: 'Description',
+			res: 'Report/Results',
+			// con: 'Conclusion and Future work',
 		};
 		comp = content.map((item, index) => {
 			let inter = curProj.description[item];
@@ -83,28 +83,28 @@ const DescContent = ({ sn, id }) => {
 	}
 
 	//For further reading section
-	var furComponent = <></>;
-	if (!(typeof curFur === 'undefined' || curFur === '')) {
-		furComponent = (
-			<>
-				<div className={styles.subheading}>
-					<div className={styles.subheadingtext}>Further Reading</div>
-				</div>
-				<div className={styles.description}>
-					Visit{' '}
-					<a
-						className={styles.meet}
-						href={curFur}
-						target="_blank"
-						rel="noreferrer"
-					>
-						this link
-					</a>{' '}
-					to view a GitHub repo or a full report to get the whole picture!
-				</div>
-			</>
-		);
-	}
+	// var furComponent = <></>;
+	// if (!(typeof curFur === 'undefined' || curFur === '')) {
+	// 	furComponent = (
+	// 		<>
+	// 			<div className={styles.subheading}>
+	// 				<div className={styles.subheadingtext}>Further Reading</div>
+	// 			</div>
+	// 			<div className={styles.description}>
+	// 				Visit{' '}
+	// 				<a
+	// 					className={styles.meet}
+	// 					href={curFur}
+	// 					target="_blank"
+	// 					rel="noreferrer"
+	// 				>
+	// 					this link
+	// 				</a>{' '}
+	// 				to view a GitHub repo or a full report to get the whole picture!
+	// 			</div>
+	// 		</>
+	// 	);
+	// }
 
 	//Return function
 	return (
@@ -115,7 +115,7 @@ const DescContent = ({ sn, id }) => {
 				</Link>
 				<div className={styles.heading}>{curProj.name}</div>
 				<div className={styles.headingSub}>
-					{sn.charAt(0).toUpperCase() + sn.slice(1)} | 2020
+					{sn.charAt(0).toUpperCase() + sn.slice(1)} | 2021
 				</div>
 
 				{/* <div className={styles.subheading}>
@@ -147,7 +147,7 @@ const DescContent = ({ sn, id }) => {
 					</ol>
 				</div>
 				{comp}
-				{furComponent}
+				{/* {furComponent} */}
 				{images}
 			</div>
 		</div>

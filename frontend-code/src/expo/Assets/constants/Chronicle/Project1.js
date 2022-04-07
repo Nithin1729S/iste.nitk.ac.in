@@ -1,101 +1,34 @@
+// import logo from "../images/project expo_Vfinal_Crypt1.png"
+
+
 const project1 = {
     id: 1,
-    name: "The Way you Make me Feel : Background Score Analysis",
-    tags: ["Music analysis"],
     oneline:
-        "To understand the purpose of background scores, to see how people react to different background scores and to understand the relation between different film genre and the various parameters like range, pace, pitch etc.",
-    logo: "https://pocket-syndicated-images.s3.amazonaws.com/5d23458634dde.jpg",
-    imgUrl: "",
+        "Around the world in Short Stories",
+    // copy the abstract here
+    // logo: logo,
+    name: "Around the world in Short Stories" ,// replace the name here
+    imgUrl: [],
     members: [
-        "Keerthana Kanapuram",
-        "Dwija Bagwe",
-        "Joshitha Reddy Dongala",
-        "Nitya Kuchimanchi",
-        "Pratik Kumar Shivnani",
-        "Sahana Praveen Bhandari",
-        "Kumar Vitthal",
-    ],
+        'Susmita Saha', 'Joshitha Reddy Dongala', 'Pratik Kumar Shivnani','Anjishnu Laskar',' Adarsh Kishore', 'Harsha Satija', 'Vishnu Radhakrishnan'
+    ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
             <div>
-                <ol>
-                    <li>To understand the purpose of background scores.</li>
-                    <li>
-                        To see how people react to different background scores
-                    </li>
-                    <li>
-                        To understand the relation between different film genre
-                        and the various parameters like range, pace, pitch etc.
-                    </li>
-                </ol>
+                In this project we wrote short stories based on different cultures. We’ve received feedback on said stories and modified them. The collection of the final modified stories is the end product.
             </div>
         ),
-        meth: (
+        des: (
             <div>
-                <ol>
-                    <li>Research on background scores and parameters. </li>
-                    <li>
-                        Parameters decided like range, pace, pitch etc. for the
-                        research and interviews.
-                    </li>
-                    <li>
-                        Conducting interviews to collect data on the audience
-                        reactions:
-                        <ol>
-                            <li>
-                                Referred to the research and decided on the
-                                questions.
-                            </li>
-                            <li>
-                                Picking background scores from TV shows and
-                                movies across various genres.
-                            </li>
-                            <li>Data collected through interviews.</li>
-                            <li>
-                                Based on the data collected, graphs and results
-                                were inferred.
-                            </li>
-                        </ol>
-                    </li>
-                    <li>
-                        A report was written based on the research, independent
-                        from the interviews.
-                        <ol>
-                            <li>
-                                A few movies/shows were selected and the
-                                background scores in these were analysed.
-                            </li>
-                            <li>
-                                The research done in the beginning helped in
-                                understanding how to go about the analysis.
-                            </li>
-                            <li>
-                                The data collected through the interviews were
-                                analysed to find patterns and anomalies.
-                            </li>
-                        </ol>
-                    </li>
-                </ol>
+                What we aim to do in this project is create a collection of short stories that showcase different cultures and better understand what impact such a collection might have on society. We also will be looking into the aspect of ‘what exactly sells in the current day’. That is when we’ll be looking into questions like ‘What do people want to read?’. How can we make our short stories more appealing to the audience?
             </div>
         ),
         res: (
-            <div>
-                <ol>
-                    <li>
-                        We found the effect pace and range have on people’s
-                        perception of the scene.
-                    </li>
-                    <li>
-                        We found what helps people remember tunes and scenes
-                        better.{" "}
-                    </li>
-                    <li>
-                        Purpose of background scores for different movies/shows.
-                    </li>
-                </ol>
+            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
+                {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
+                <iframe src="https://drive.google.com/file/d/1dz7aA0w0unsMQF-Vz5iuWIp3CtrKiZJh/preview" width="1280" height="480" allow="autoplay" title="AWSS"></iframe>
             </div>
-        ),
+        )
     },
-    //meetLink: 'This is the meet link',
 };
 export default project1;
