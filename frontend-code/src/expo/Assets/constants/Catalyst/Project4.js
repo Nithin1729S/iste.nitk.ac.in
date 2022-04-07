@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_catalyst4.png'
 
 const project4 = {
     id: 4,
     oneline:
         "The aim of this study is modeling of biokinetics of anaerobic digestion",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Modelling and Simulation for Biogas Production from Organic Waste", // replace the name here
     imgUrl: [],
     members: ["Dhruv Banerjee", "Rahul Maheshwari", "Rugved Pande"

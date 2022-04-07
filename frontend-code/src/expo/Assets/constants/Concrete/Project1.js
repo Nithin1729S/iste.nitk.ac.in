@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CONCRETE1.png'
 
 const project1 = {
     id: 1,
     oneline:
         "Utilizing DEM and raster data operations to delineate watersheds and derive features using geographic information system (GIS)",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Watershed Analysis on the Netravati River Basin", // replace the name here
     imgUrl: [],
     members: [

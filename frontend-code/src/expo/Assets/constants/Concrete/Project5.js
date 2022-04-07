@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CONCRETE5.png'
 
 const project5 = {
     id: 5,
     oneline:
         "Preservice analyses are performed to ensure structural integrity of an offshore jacket for all anticipated loading conditions prior the unit is in place for its expected functions.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Pre-Service Analyses of offshore Jacket Structure", // replace the name here
     imgUrl: [],
     members: [

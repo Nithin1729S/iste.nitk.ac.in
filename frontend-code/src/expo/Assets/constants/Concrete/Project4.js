@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CONCRETE4.png' 
 
 const project4 = {
     id: 4,
     oneline:
         "Increasing world population and natural resource limitations has led to a growing demand for more efficient structural systems to achieve a sustainable economy and society. Cold-formed steel CFS) Structural systems are increasingly adopted as primary or secondary structural members in modern building construction because of their light weight, speed of construction, recyclability, and sustainability. We attempted same here, to compare the economic and structural aspects of CFS steel and hot rolled steel.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "FEM analysis of Industrial/Residential Building made of CFS and Normal Steel", // replace the name here
     imgUrl: [],
     members: [

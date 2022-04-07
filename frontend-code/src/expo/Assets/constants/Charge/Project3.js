@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CHARGE3.png'
 
 const project3 = {
     id: 3,
     oneline:
         "Walking stick with an inbuilt heartattack detector to detect heartattack, notifies the person and call for an emergency aid",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Walking stick with Heart-attack Detection", // replace the name here
     imgUrl: [],
     members: [

@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './AMSim_Poster.png'
 
 const project4 = {
     id: 4,
     oneline:
         "The main objective of this project is to build a simulation model of Directed Energy Deposition (DED), a well-known additive manufacturing process.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Simulation of Additive Manufacturing Process", // replace the name here
     imgUrl: [],
     members: [

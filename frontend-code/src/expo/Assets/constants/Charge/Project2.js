@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CHARGE2.png'
 
 const project2 = {
     id: 2,
     oneline:
         "Creating verilog model for lossless data compression algorithms, optimizing them and finally comparing their performances",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Data compression on FPGA", // replace the name here
     imgUrl: [],
     members: [

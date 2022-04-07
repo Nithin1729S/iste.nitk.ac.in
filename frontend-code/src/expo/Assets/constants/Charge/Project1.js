@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CHARGE1.png'
 
 const project1 = {
     id: 1,
     oneline:
         "Developing HDL realizations of a various image processing algorithms for various applications such as smoothing, edge detection, morphological filters, etc.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Image processing using verilog", // replace the name here
     imgUrl: [],
     members: [

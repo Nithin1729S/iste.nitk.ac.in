@@ -21,7 +21,7 @@
     font-weight: lighter;
 }
 .image {
-    padding: 20%;
+    padding: 10%;
     aspect-ratio: 1;
     max-width: 100%;
     object-fit: cover;

@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './MT_Opt.png'
 
 const project3 = {
     id: 3,
     oneline:
         "The main objective of this project is to optimize CCHP integrated microturbine generator in order to maximize its efficiency.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Optimization of Microturbine system", // replace the name here
     imgUrl: [],
     members: [

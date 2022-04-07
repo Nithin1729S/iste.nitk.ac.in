@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_catalyst1.png'
 
 const project1 = {
     id: 1,
     oneline:
         "Comparing yields of phenol produced by two different processes.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Design and Comparative Analysis for Phenol Production", // replace the name here
     imgUrl: [],
     members: [

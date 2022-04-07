@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './Car_Opt.png'
 
 const project2 = {
     id: 2,
     oneline:
         "Designing and Optimizing a wheel base of Supra 2019",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Aerodynamic optimization of a wheel base of a car", // replace the name here
     imgUrl: [],
     members: [

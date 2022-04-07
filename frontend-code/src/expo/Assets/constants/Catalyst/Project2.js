@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_catalyst2.png'
 
 const project2 = {
     id: 2,
     oneline:
         "Analyzing and designing the various technologies of solar cells ",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Mathematical and Design Analysis of Solar Cell Technologies", // replace the name here
     imgUrl: [],
     members: [

@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CHARGE5.png'
 
 const project4 = {
     id: 4,
     oneline:
         "This project aims to ensure secure and fast communication through wireless radio frequency",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "RF System with encryption", // replace the name here
     imgUrl: [],
     members: [

@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CONCRETE2.png'
 
 const project2 = {
     id: 2,
     oneline:
         "Analyze the importance of retrofitting techniques in a structure in a Zone IV region",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Seismic Analysis of Building before and after Retrofitting", // replace the name here
     imgUrl: [],
     members: [

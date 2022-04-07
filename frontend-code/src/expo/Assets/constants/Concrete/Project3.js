@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_CONCRETE3.png'
 
 const project3 = {
     id: 3,
     oneline:
         "Analyzed the impact of passive design strategies on EUI (Energy Use Intensity) and Annual Energy Costs on buildings in India using Whole building energy simulation.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Impact of passive design features on energy efficiency of buildings ", // replace the name here
     imgUrl: [],
     members: [

@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './project expo_Vfinal_catalyst3.png'
 
 const project3 = {
     id: 3,
     oneline:
         "This project models the transport phenomena in electrodialysis, an electrically driven process for the desalination of saline water.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Computational Modelling of Transport Phenomena in Electrodialysis", // replace the name here
     imgUrl: [],
     members: [

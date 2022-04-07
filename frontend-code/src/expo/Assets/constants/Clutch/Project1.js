@@ -1,12 +1,12 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-
+import logo from './Bluffbody.png'
 
 const project1 = {
     id: 1,
     oneline:
         "Aeroacoustic analysis of a Bluff body with spikes at supersonic speed and also at different angles of attack.",
     // copy the abstract here
-    // logo: logo,
+    logo: logo,
     name: "Aeroacoustic Analysis of Bluff Bodies with Spikes at Supersonic Speeds", // replace the name here
     imgUrl: [],
     members: [
