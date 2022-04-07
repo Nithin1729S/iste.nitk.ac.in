@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from '../css/project.module.css';
 import logo from '../Assets//crypt.jpg';
 const ProjectContent = ({ projectData, sig }) => {
+	
 	var desc = projectData.oneline;
 	if (typeof desc === 'undefined') {
 		desc = 'Description.';
