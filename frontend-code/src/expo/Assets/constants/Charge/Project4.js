@@ -4,23 +4,23 @@
 const project4 = {
     id: 4,
     oneline:
-        "Title.",
+        "This project aims to ensure secure and fast communication through wireless radio frequency",
     // copy the abstract here
     // logo: logo,
-    name: "Name", // replace the name here
+    name: "RF System with encryption", // replace the name here
     imgUrl: [],
     members: [
-        "members"
+        "Vennela", "Sai Rohit"
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
             <div>
-                Abstract goes here
+                This project aims to ensure secure and fast communication through wireless radio frequency
             </div>
         ),
         des: (
             <div>
-                General introduction goes here
+                Through this project, we look to achieve a highly secure and safer mode of communication through the use of encryption techniques and algorithms like AES. The message being communicated cannot be intercepted or read without a password set by the user. The use of radio frequency further enables faster communication over short distances.
             </div>
         ),
         res: (
