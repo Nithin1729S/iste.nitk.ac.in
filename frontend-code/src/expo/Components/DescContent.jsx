@@ -1,9 +1,15 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { constant, gmeets, furContent } from '../Assets/constants';
 import styles from '../css/descPage.module.css';
 import { Link } from 'react-router-dom';
 
 const DescContent = ({ sn, id }) => {
+	useEffect(() => {
+		return () => {
+			// window.alert("unmounted")	
+			window.location.reload()
+		}
+	})
 	let arr = constant[sn],
 		garr = gmeets[sn],
 		gFur = furContent[sn],
