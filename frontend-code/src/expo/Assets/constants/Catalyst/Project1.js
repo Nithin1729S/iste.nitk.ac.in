@@ -43,7 +43,7 @@ const project1 = {
 			>
 				{
 					<iframe
-						src="https://drive.google.com/drive/folders/1b5QpY60CUslvaBZzqluFLLuF4MWpy1YN?usp=sharing"
+						src="https://drive.google.com/file/d/10eceerqDHRPkz4FqTH0Y9VjHzyd8bpgh/view?usp=sharing"
 						width="640"
 						height="480"
 						allow="autoplay"
