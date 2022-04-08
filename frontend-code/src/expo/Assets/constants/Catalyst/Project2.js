@@ -10,7 +10,8 @@ const project2 = {
     name: "Mathematical and Design Analysis of Solar Cell Technologies", // replace the name here
     imgUrl: [],
     members: [
-        "Ankit Stephen Thomas", "Rohaan Sunil"
+        "Ankit Stephen Thomas", "Rohaan Sunil", "Vishnu Radhakrishnan", "Somayajula Aswin	"
+
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
