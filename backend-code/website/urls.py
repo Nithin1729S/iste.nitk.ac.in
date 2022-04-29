@@ -20,4 +20,5 @@ urlpatterns = [
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("squareoneleaderboard/",include("squareonelb.urls", namespace="squareonelb")),
     path('obscura/', include('obscura.urls', namespace='obscura')),
+    path('cryptonite/', include('cryptonite.urls', namespace='cryptonite')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

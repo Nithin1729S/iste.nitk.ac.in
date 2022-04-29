@@ -60,7 +60,8 @@ INSTALLED_APPS = [
     'ctf',
     'SMP',
     'obscura',
-    'squareonelb'
+    'squareonelb',
+    'cryptonite'
 ]
 
 MIDDLEWARE = [
