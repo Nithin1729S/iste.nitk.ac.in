@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { constant, gmeets, furContent } from '../Assets/constants';
 import styles from '../css/descPage.module.css';
 import { Link } from 'react-router-dom';
@@ -6,30 +6,30 @@ import { Link } from 'react-router-dom';
 const DescContent = ({ sn, id }) => {
 	useEffect(() => {
 		return () => {
-			// window.alert("unmounted")	
-			window.location.reload()
-		}
-	})
+			// window.alert("unmounted")
+			window.location.reload();
+		};
+	});
 	let arr = constant[sn],
-		garr = gmeets[sn],
-		gFur = furContent[sn],
+		// garr = gmeets[sn],
+		// gFur = furContent[sn],
 		index = 0,
-		curProj = {},
-		curmeet = {},
-		curFur = {};
+		curProj = {};
+	// curmeet = {},
+	// curFur = {};
 	//Dummy address
 	// let imgAddr =
 	// 	'https://drive.google.com/file/d/151fRJsNFIIjefxK9x_MkoTHBKFLcMzNh/preview';
 	for (index = 0; index < arr.length; index++) {
 		if (arr[index].id === id) {
 			curProj = arr[index];
-			curmeet = garr[index].meetLink;
+			// curmeet = garr[index].meetLink;
 			// curFur = gFur[index].fur;
 			break;
 		}
 		if (id > arr.length) {
 			curProj = arr[0];
-			curmeet = garr[0].meetLink;
+			// curmeet = garr[0].meetLink;
 			// curFur = gFur[0].fur;
 		}
 	}
