@@ -14,8 +14,18 @@ class Cryptonite extends React.Component {
         inputSeq: [{ input: inip, output: inop }],
         errorMessage: <></>,
     };
-    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    questionType = ['Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type', 'Question Type'];
+    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    questionType = [
+        'Expects single non-negative integer. Find the function',
+        'Expects single non-negative integer. Find the function',
+        'Expects single integer. Find the function',
+        'Expects single capital character. What does I,M,P map to?',
+        'Expects single non negative integer. Find the function',
+        'Expects single non negative integer. Find the sequence',
+        'Expects a word. Guess the function',
+        'Expects a single capital character. Find the mapping of DOG',
+        'Expects a single integer. Find the function'
+    ];
     currId =
         Number(this.props.match.params.id) in this.validId
             ? Number(this.props.match.params.id)
@@ -118,39 +128,19 @@ class Cryptonite extends React.Component {
     onChangeHandler = (e) => {
         this.setState({ inputVal: e.target.value });
     };
-    dummyAPICall = () => {
-        const arrayToBeEntered = JSON.parse(
-                    localStorage.getItem(this.InputObjectKey)
-                ).arr;
-                const ObjectToBeStored = {
-                    arr: [
-                        { input: this.state.inputVal, output: this.state.inputVal },
-                        ...arrayToBeEntered,
-                    ],
-                };
-                localStorage.setItem(
-                    this.InputObjectKey,
-                    JSON.stringify(ObjectToBeStored)
-                );
-                localStorage.setItem(
-                    this.numInputKey,
-                    Number(localStorage.getItem(this.numInputKey)) + 1
-                );
-                this.setState({
-                    inputSeq: ObjectToBeStored.arr,
-                    rotation: 0,
-                    errorMessage: <> </>,
-                });
-    }
     callAPI = () => {
-        this.setState({ rotation: 1 });
+        // this.setState({ rotation: 1 });
         baseRequest
-            .post("/cryptonite/blackbox/", {
-                id: this.currId.toString(),
-                input: this.state.inputVal,
+            .get("/cryptonite/q"+this.currId.toString()+"/", {
+                // id: this.currId.toString(),
+                // // input: this.state.inputVal,
+                params: {
+                    query : this.state.inputVal
+                }
             })
             .then((res) => {
-                if (res.data.answer === "Input not viable.") {
+                // console.log(res)
+                if (res.data.msg === "Wrong Input") {
                     this.setState({
                         rotation: 0,
                         errorMessage: <>Invalid input! Try again.</>,
@@ -162,7 +152,7 @@ class Cryptonite extends React.Component {
                 ).arr;
                 const ObjectToBeStored = {
                     arr: [
-                        { input: this.state.inputVal, output: res.data.answer },
+                        { input: this.state.inputVal, output: res.data.ans },
                         ...arrayToBeEntered,
                     ],
                 };
@@ -193,7 +183,7 @@ class Cryptonite extends React.Component {
                 </div>
 
                 <div className={styles.title}>
-                    <h2>{ `Question ${this.currId} (${this.questionType[this.currId-1]})` }</h2> 
+                    <h2>{ `Question ${this.currId} : ${this.questionType[this.currId-1]}` }</h2> 
                     {/* <p>{this.questionType[this.currId-1]}</p> */}
                 </div>
                 <div className={styles.container}>
@@ -220,8 +210,9 @@ class Cryptonite extends React.Component {
                             <button
                                 className={`btn ${styles.btn}`}
                                 onClick={ () => {
-                                    window.alert('Button clicked')
-                                    this.dummyAPICall()
+                                    // window.alert('Button clicked')
+                                    // this.dummyAPICall()
+                                    this.callAPI()
                                 }}
                             >
                                 Generate Output
