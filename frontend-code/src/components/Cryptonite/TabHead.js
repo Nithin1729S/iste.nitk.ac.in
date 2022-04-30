@@ -1,6 +1,6 @@
 import styles from './css/tab.module.css';
 import { Link } from 'react-router-dom';
-export const inip = '';
+export const inip = 'Input Here';
 export const inop = 'Output Here';
 
 

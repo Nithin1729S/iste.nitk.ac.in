@@ -189,12 +189,13 @@ class Cryptonite extends React.Component {
                 <div className={styles.container}>
                     <div className={`center ${styles.input}`}>
                         <div className={styles.heading}>Input</div>
-                        <label htmlFor="inputString">
+                        <label htmlFor="inputString"> 
                             <input
                                 type="text"
                                 onChange={this.onChangeHandler}
                                 name="inputString"
-                                value={this.state.inputVal}
+                                value={ this.state.inputVal }
+                                onClick={(e)=>{e.target.value=''}}
                             />
                         </label>
                     </div>
