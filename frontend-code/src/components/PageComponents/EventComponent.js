@@ -37,7 +37,7 @@ class EventComponent extends React.Component {
             <div key={event.name} className="col s4">
                 <div className="card hoverable large z-depth-3">
                     <div className="card-image">
-                        <img src={`${baseUrl}/media/${event.poster}`} alt='event poster' />
+                        <img src={`${baseUrl}${event.poster}`} alt='event poster' />
                     </div>
                     <div className="card-content">
                         <h5 className="center card-title">{event.name}</h5>
