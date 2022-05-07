@@ -71,7 +71,7 @@ class App extends React.Component {
 					{/* <Route path="/smp"  component={SGPComponent} /> */}
 					{/* <Route path="/smp/:name"  component={SGPSigComponent} /> */}
 					<Switch>
-						{enableCryptonite ? (
+						{/* {enableCryptonite ? (
 							<Route
 								path="/cryptonite/:id"
 								render={(props) => (
@@ -81,7 +81,7 @@ class App extends React.Component {
 									/>
 								)}
 							/>
-						) : null}
+						) : null} */}
 						{/* <Route path="*" component={HomeComponent} /> */}
 						{/*
 						Obscura routes

@@ -106,20 +106,20 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	);
-	squareOneHeader = (
-		<li>
-			<Link to="/leaderboard/" className="waves-effect white-text">
-				Square One
-			</Link>
-		</li>
-	);
-	cryptoniteNavHeader = (
-		<li>
-			<Link className="white-text" to="/cryptonite/1">
-				Cryptonite
-			</Link>
-		</li>
-	);
+	// squareOneHeader = (
+	// 	<li>
+	// 		<Link to="/leaderboard/" className="waves-effect white-text">
+	// 			Square One
+	// 		</Link>
+	// 	</li>
+	// );
+	// cryptoniteNavHeader = (
+	// 	<li>
+	// 		<Link className="white-text" to="/cryptonite/1">
+	// 			Cryptonite
+	// 		</Link>
+	// 	</li>
+	// );
 	// transcendNavHeaderMobile = (
 	// 	<li className="no-padding">
 	// 		<ul className="collapsible collapsible-accordion">
@@ -446,7 +446,7 @@ class Header extends React.Component {
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{enableRecs ? this.recsNavHeader : null}
-								{enableCryptonite ? this.cryptoniteNavHeader : null}
+								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
 							</ul>
