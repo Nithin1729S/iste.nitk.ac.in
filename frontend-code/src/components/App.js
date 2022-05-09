@@ -17,8 +17,8 @@ import EventAdd from './PageComponents/EventAdd';
 import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 import DescPage from '../expo/Components/DescPage';
 // import LeaderboardComponent from './PageComponents/LeaderboardComponent';
-// import SGPComponent from './PageComponents/SGPComponent';
-// import SGPSigComponent from './PageComponents/SGPSigComponent';
+import SGPComponent from './PageComponents/SGPComponent';
+import SGPSigComponent from './PageComponents/SGPSigComponent';
 //import Transcend from './Transcend';
 import Cryptonite from './Cryptonite';
 import AWSS from "./AWSS22/AWSS";
@@ -68,9 +68,9 @@ class App extends React.Component {
 				</Wrapper>
 				<div className="app-main">
 					{/* <Route path="/transcend"  component={Transcend} />  */}
-					{/* <Route path="/smp"  component={SGPComponent} /> */}
-					{/* <Route path="/smp/:name"  component={SGPSigComponent} /> */}
 					<Switch>
+					<Route path="/smp/:name"  component={SGPSigComponent} />
+					<Route path="/smp"  component={SGPComponent} /> 
 						{/* {enableCryptonite ? (
 							<Route
 								path="/cryptonite/:id"
