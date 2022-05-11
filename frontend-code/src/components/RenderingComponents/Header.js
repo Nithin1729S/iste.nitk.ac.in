@@ -392,8 +392,8 @@ class Header extends React.Component {
 								<i className="material-icons">menu</i>
 							</Link>
 							<ul className="right hide-on-med-and-down">
-								{this.loginNavHeader}
-								{this.loginNavList}
+								{/* {this.loginNavHeader} */}
+								{/* {this.loginNavList} */}
 								{this.eventNavHeader}
 								{this.eventNavList}
 								<li>

@@ -69,8 +69,8 @@ class App extends React.Component {
 				<div className="app-main">
 					{/* <Route path="/transcend"  component={Transcend} />  */}
 					<Switch>
-					<Route path="/smp/:name"  component={SGPSigComponent} />
-					<Route path="/smp"  component={SGPComponent} /> 
+					<Route path="/smp/:name/"  component={SGPSigComponent} />
+					<Route path="/smp/"  component={SGPComponent} /> 
 						{/* {enableCryptonite ? (
 							<Route
 								path="/cryptonite/:id"

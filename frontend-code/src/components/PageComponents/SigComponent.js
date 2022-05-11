@@ -154,7 +154,8 @@ class SigComponent extends React.Component {
 									name={name}
 									description={summary}
 									imgUrl={`${baseUrl}${image}`}
-									isCurrentProject={true}
+									isCurrentProject={ true }
+									showButton={true}
 								/>
 							</div>
 						);

@@ -14,6 +14,7 @@ class SigProjectCard extends React.Component {
 			isLinkExternal,
 			tools,
 			isCurrentProject,
+			showButton
 		} = this.props;
 		const imageCircle = (
 			<div className="col l4 hide-on-med-and-down ">
@@ -36,28 +37,37 @@ class SigProjectCard extends React.Component {
 				Tools Used: {tools.map((item) => `\n${item}`)}
 			</pre>
 		) : null;
-		let Hyperlink = (
-			<Link to={`/expo/${projID}`} className="waves-light btn-small btnColor">
-				View Details
-			</Link>
-		);
-		if (isLinkExternal) {
+		let Hyperlink = null;
+		if (showButton) {
+			Hyperlink = (
+				<Link to={`/expo/${projID}`} className="waves-light btn-small btnColor">
+					View Details
+				</Link>
+			);
+		}
+		if (showButton && isLinkExternal) {
 			Hyperlink = (
 				<a
 					href={projID}
 					className="waves-light btn-small btnColor"
 					target="_blank"
 					rel="noreferrer"
+					style={ {
+						backgroundColor: 'var(--primary)',
+					}}
 				>
 					View Details
 				</a>
 			);
 		}
-		if (isCurrentProject) {
+		if (showButton && isCurrentProject) {
 			Hyperlink = (
 				<Link
 					to={`/project/${projID}`}
 					className="waves-light btn-small btnColor"
+					style={ {
+						backgroundColor: 'var(--primary)',
+					} }	
 				>
 					View Details
 				</Link>
