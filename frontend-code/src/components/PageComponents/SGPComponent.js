@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import SigCards from "../AggregatingComponents/SigCards";
 import TitleWithLine from "../RenderingComponents/TitleWithLine";
+import FAQ from "../Recruitment/components/recsLandingPage/FAQComponent"
+import { questions } from "../SMP22/faq";
 import { baseRequest, baseUrl } from "../../constants";
 
 class SMPComponent extends React.Component {
@@ -44,6 +46,9 @@ class SMPComponent extends React.Component {
                     />
                     
                 </div>
+                <div style={{ marginBottom: '5vh' }}>
+					<FAQ questions={questions}/>
+				</div>
             </PageContainer>
         );
     }

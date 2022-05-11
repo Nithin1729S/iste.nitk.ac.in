@@ -1,14 +1,13 @@
 import React from 'react';
-import { questions } from '../../../constants';
 import SingleQuestion from './Question';
 import TitleWithLine from '../../../../RenderingComponents/TitleWithLine';
 
-const FAQ = () => {
+const FAQ = ({questions}) => {
 	//const [questions, setQuestions] = useState(data)
 	//console.log(questions);
 	return (
 		<div className="container">
-			<TitleWithLine title="FAQ" />
+			<TitleWithLine title="Frequently Asked Questions" />
 			<section className="info">
 				{questions.map((question) => {
 					// console.log(question);

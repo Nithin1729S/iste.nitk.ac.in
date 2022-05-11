@@ -20,10 +20,14 @@ class SigProjectCard extends React.Component {
 			<div className="col l4 hide-on-med-and-down ">
 				<img
 					src={imgUrl}
-					className={`responsive-img cardImage valign-wrapper ${
+					className={`responsive-img valign-wrapper ${showButton ? 'cardImage' : ''} ${
 						isImageLeft ? 'left' : 'right'
 					}`}
 					alt=""
+					style={ {
+						paddingTop: '5%',
+						paddingBottom: '5%',
+					}}
 				/>
 			</div>
 		);

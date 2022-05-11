@@ -5,6 +5,8 @@ import RecSigCards from './components/recsLandingPage/Cards Component/RecSigCont
 import FAQ from './components/recsLandingPage/FAQComponent';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
 import RecInstructions from './components/recsLandingPage/Instructions Component/recInstructions';
+import { questions } from '../../../constants';
+
 // import { Link } from 'react-router-dom';
 
 class RecruitmentComponent extends React.Component {
@@ -41,7 +43,7 @@ class RecruitmentComponent extends React.Component {
 					)}
 				</div>
 				<div style={{ marginBottom: '5vh' }}>
-					<FAQ />
+					<FAQ questions={questions}/>
 				</div>
 			</div>
 		);
