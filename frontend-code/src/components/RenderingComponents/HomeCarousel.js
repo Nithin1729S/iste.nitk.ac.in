@@ -3,8 +3,8 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 import '../../css/carousel.css';
 import { baseUrl } from '../../constants';
-// import { enableRecs } from '../../constants';
-// import { Link } from 'react-router-dom';
+import { enableRecs,enableSMP } from '../../constants';
+import { Link } from 'react-router-dom';
 
 class HomeCarousel extends React.Component {
 	state = {};
@@ -48,15 +48,24 @@ class HomeCarousel extends React.Component {
 		// ) : (
 		// 	<></>
 		// );
+		let button = enableSMP ? (
+			<div className="carousel-fixed-item center">
+				<Link to="/smp" className="btn white-text dark">
+					Register for SMPs!!!
+				</Link>
+			</div>
+		) : (
+			<></>
+		);
 
 		return (
 			<>
 				<div className="carousel carousel-slider slides" id="desktop-carousel">
-					{/* {button} */}
+					{button}
 					{carouselContent}
 				</div>
 				<div className="carousel carousel-slider slides" id="mobile-carousel">
-					{/* {button} */}
+					{button}
 					{carouselContent}
 				</div>
 			</>
