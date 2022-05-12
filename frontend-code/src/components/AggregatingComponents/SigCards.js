@@ -10,7 +10,7 @@ const SigCards = (props) => {
 		const isSig = !Array.isArray(summary);
 		let summaryText = isSig
 			? summary
-			: summary.reduce((allSmps, item) => `${item}\n${allSmps}`, '');
+			: summary.reduce((allSmps, item) => `- ${item}\n${allSmps}`, '');
 
 		const linkOuter = isSig ? '/sig/' : '/smp/';
 		return (
