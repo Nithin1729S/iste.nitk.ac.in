@@ -29,7 +29,7 @@ class SMPComponent extends React.Component {
                         {this.state.data.why_smps_text}
                     </p>
                     <a
-                        href="https://forms.gle/FEHT79UVNvMzp9JMA"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdcYIZcDm08OHC7RY4rui9p3DbhbXJd4zYcq4vt8GR06QHa6w/viewform"
                         className="waves-light btn pulse"
                         target="_blank"
                         rel="noreferrer"
