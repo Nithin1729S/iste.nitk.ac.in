@@ -83,7 +83,7 @@ class SGPSigComponent extends React.Component {
                 
                 <div className="row">
                     <div className="col s12">
-                        <h5>For any queries, contact :</h5>
+                        <h5>For any queries, contact on WhatsApp :</h5>
                         {this.state.contacts}
                     </div>
                 </div>
