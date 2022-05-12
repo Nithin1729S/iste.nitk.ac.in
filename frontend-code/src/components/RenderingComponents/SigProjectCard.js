@@ -36,7 +36,7 @@ class SigProjectCard extends React.Component {
 				<img src={imgUrl} className="responsive-img cardImage center" alt="" />
 			</div>
 		);
-		const toolsUsed = tools ? (
+		const toolsUsed = tools && tools.length > 0 && tools[0] !== "" ? (
 			<pre className="toolsList">
 				Tools Used: {tools.map((item) => `\n${item}`)}
 			</pre>

@@ -14,7 +14,7 @@
 
 @media only screen and (max-width: 1260px) {
 	.cardImage {
-		width: 95%;
+		width: 80%;
 		padding-top: 10%;
 		padding-bottom: 5%;
 	}
@@ -24,6 +24,29 @@
 		margin-left: 5%;
 	}
 }
+@media only screen and (min-width: 500px) and (max-width:1000px) {
+	/* .row{
+		display : flex;
+		align-items : center;
+		justify-content : center;
+		flex-direction : row !important;
+	} */
+	.cardImage {
+		width: 60%;
+		padding-top: 10%;
+		padding-bottom: 5%;
+	}
+
+	.projectCard {
+		width: 70%;
+		margin-left: 15%;
+		/* margin : 20% !important; */
+	}
+}
+
+
+
+
 .cardImage {
 	aspect-ratio: 1/1 !important;
 }
