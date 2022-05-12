@@ -3,7 +3,7 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 import '../../css/carousel.css';
 import { baseUrl } from '../../constants';
-import { enableRecs,enableSMP } from '../../constants';
+import { enableSMP } from '../../constants';
 import { Link } from 'react-router-dom';
 
 class HomeCarousel extends React.Component {
@@ -28,13 +28,13 @@ class HomeCarousel extends React.Component {
 		let carouselSortedList = this.props.photosList.sort((a, b) => a.id - b.id);
 		let carouselContent = carouselSortedList.map((item) => {
 			return (
-				<a key={item.name} className="carousel-item" href="/">
+				<div key={item.name} className="carousel-item" >
 					<img
 						className="carousel_images"
 						alt={item.name}
 						src={`${baseUrl}${item.image}`}
 					></img>
-				</a>
+				</div>
 			);
 		});
 
