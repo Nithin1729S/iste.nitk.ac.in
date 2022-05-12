@@ -8,17 +8,24 @@ import {contacts} from '../SMP22/contacts';
 
 
 class SGPSigComponent extends React.Component {
-    state = { data: [],contacts : "" };
+    state = { data: [],contacts : "",poster_img:"" };
     componentDidMount() {
         const { match } = this.props;
         const sigName = match.params.name;
         baseRequest
             .get(`/smp/${match.params.name}/`)
-            .then((res) => this.setState(
-                {
-                    data: res.data,
-                    contacts : contacts[sigName]
-                }));
+            .then((res) => {
+                this.setState(
+                    {
+                        data: res.data,
+                        contacts: contacts[sigName],
+                        poster_img : res.data[0].file_url
+                    }
+                )
+                // console.log(res.data)
+                }
+                );
+        
         
     }
     render() {
@@ -59,27 +66,12 @@ class SGPSigComponent extends React.Component {
                 </a>
                 {/* The poster goes here */ }
                 <PosterImageContainer className="row center">
-                    <img src="https://via.placeholder.com/1920x1080.png?text=SMP+Poster" alt="SMP Poster" />
+                    <img src={this.state.poster_img} alt="SMP Poster" />
                 </PosterImageContainer>
                 <TitleWithLine title={ "SMPs Offered" } />
-                {/* <div className="row center">
-                </div> */}
+                
                 { smpsList }
-                {/* <div className="row project-item">
-                <SigProjectCard
-                        key={101}
-                        isImageLeft={true}
-                        // projID={file_url}
-                        name= "SMP Test"
-                        description= "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem magni dolor dignissimos enim dolorem neque, nobis officia ad dolorum, hic amet, sed modi. Dolor omnis suscipit aliquam perferendis neque quos?
-                Ullam, in explicabo labore cumque voluptatum repudiandae nihil ad obcaecati repellendus suscipit veniam, incidunt facilis maiores accusantium porro officiis aliquam cupiditate ipsa aperiam! Architecto expedita sed dolore. Atque, sint cumque!
-                Voluptatem quas eaque reprehenderit iste ratione, tempore eum corporis adipisci nobis blanditiis dicta ut quo! Quidem quam optio impedit sapiente, voluptas enim sequi at ab alias, nostrum ut cum nulla."
-                        imgUrl="https://via.placeholder.com/400?text=SMP image"
-                        isLinkExternal={true}
-                        // tools={softwares}
-                        showButton={false}
-                    />
-                </div> */}
+                
                 
                 <div className="row">
                     <div className="col s12">
@@ -96,6 +88,9 @@ export default SGPSigComponent;
 const PosterImageContainer = styled.div`
     width: 60%;
     img{
-        width: 100%;
+        width: 90%;
+    }
+    @media only screen and (max-width:700px){
+        width: 90%;
     }
 `
