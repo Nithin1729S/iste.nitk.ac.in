@@ -11,7 +11,7 @@ export const contacts = {
     </>,
     Charge: <>
         <h6>Harshavardhan D : <strong>7338589922</strong> </h6> 
-        <h6>Shridevi Kumar : <strong>7000340947</strong> </h6> 
+        <h6>Shridevi Kumar : <strong>8105289101</strong> </h6> 
     </>,
     Credit: <>
         <h6>Ranjeet Sonawane : <strong>8830736825</strong> </h6> 
