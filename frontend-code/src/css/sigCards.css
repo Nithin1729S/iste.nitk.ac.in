@@ -17,7 +17,7 @@
 
 .sigcard .card .card-reveal a {
   background-color: var(--primary);
-  padding: 2%;
+  /* padding: 2%; */
   color: var(--sigCardText);
 }
 .sigcard .card:hover{

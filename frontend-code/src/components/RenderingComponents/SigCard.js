@@ -42,7 +42,7 @@ class SigCard extends React.Component {
                             <center>
                                 <Link
                                     className="waves-light btn-small"
-                                    to={buttonLink}
+                                    to={ buttonLink }
                                 >
                                     View More
                                 </Link>
