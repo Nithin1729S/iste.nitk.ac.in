@@ -318,8 +318,8 @@ class Header extends React.Component {
 		return (
 			<div className="header">
 				<ul id="mobile-menu" className="sidenav white-text">
-					{this.loginNavHeaderMobile}
-					{this.eventNavHeaderMobile}
+					{/* {this.loginNavHeaderMobile}
+					{this.eventNavHeaderMobile} */}
 					<li className="no-padding">
 						<ul className="collapsible collapsible-accordion">
 							<li>
@@ -333,6 +333,7 @@ class Header extends React.Component {
 							</li>
 						</ul>
 					</li>
+					{enableSMP ? this.smpNavHeader : null}
 					{/* {this.obscuraNavHeader} */}
 					{/* {enableLeaderboard ? (
 						<li className="no-padding">
@@ -374,7 +375,6 @@ class Header extends React.Component {
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
 					{enableRecs ? this.recsNavHeader : null}
-					{enableSMP ? this.smpNavHeader : null}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
 				</ul>
@@ -394,8 +394,9 @@ class Header extends React.Component {
 							<ul className="right hide-on-med-and-down">
 								{/* {this.loginNavHeader} */}
 								{/* {this.loginNavList} */}
-								{this.eventNavHeader}
-								{this.eventNavList}
+								{enableSMP ? this.smpNavHeader : null}
+								{/* {this.eventNavHeader}
+								{this.eventNavList} */}
 								<li>
 									<Link className="dropdown-trigger" data-target="sig-action">
 										SIGs
@@ -446,7 +447,6 @@ class Header extends React.Component {
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{ enableRecs ? this.recsNavHeader : null }
-								{enableSMP ? this.smpNavHeader : null}
 								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
