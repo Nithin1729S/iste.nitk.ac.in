@@ -12,9 +12,11 @@ from rest_framework.response import Response
 @api_view(['GET'])
 def indexView(request):
     core_objs = Core.objects.all()
+
     aux_core_objs = AuxCore.objects.all()
 
     core_data = CoreSerializer(core_objs, many=True).data
+    print(core_data[0])
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
 
     core_names = []
