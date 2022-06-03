@@ -1,3 +1,4 @@
+import email
 from django.db import models
 from account.models import User
 
@@ -17,6 +18,9 @@ class Core(models.Model):
     description = models.TextField(
         default=""
     )
+    email = models.EmailField(
+        default=""
+    )
     linkedin_url = models.URLField(
         blank=True,
         max_length=100
@@ -33,6 +37,9 @@ class AuxCore(models.Model):
         max_length=100
     )
     description = models.TextField(
+        default=""
+    )
+    email = models.EmailField(
         default=""
     )
     linkedin_url = models.URLField(

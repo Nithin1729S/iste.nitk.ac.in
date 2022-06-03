@@ -12,9 +12,11 @@ from rest_framework.response import Response
 @api_view(['GET'])
 def indexView(request):
     core_objs = Core.objects.all()
+
     aux_core_objs = AuxCore.objects.all()
 
     core_data = CoreSerializer(core_objs, many=True).data
+    print(core_data[0])
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
 
     core_names = []
@@ -24,7 +26,7 @@ def indexView(request):
         core_names.append(member.user.first_name + member.user.last_name)
     members = []
     for member in User.objects.all().order_by('first_name', 'last_name'):
-        if member.first_name+member.last_name not in core_names and member.first_name != 'ISTE' and member.is_active:
+        if member.first_name+member.last_name not in core_names and member.first_name != 'ISTE' and member.first_name.strip() != '' and member.is_active:
             members.append(member)
 
     members_data = UserSerializer(members, many=True).data
