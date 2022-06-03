@@ -13,9 +13,9 @@ class MemberCard extends React.Component {
 					src={`${baseUrl}${this.props.imgurl}`}
 					className="responsive-img circle"
 					style={{
-						width: '300px',
-						height: '300px',
-						objectFit: 'contain',
+						width: '250px',
+						height: '250px',
+						objectFit: 'center',
 					}}
 				/>
 			</div>
