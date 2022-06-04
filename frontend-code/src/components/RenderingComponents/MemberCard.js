@@ -15,7 +15,7 @@ class MemberCard extends React.Component {
 					style={{
 						width: '250px',
 						height: '250px',
-						objectFit: 'center',
+						objectFit: 'contain',
 					}}
 				/>
 			</div>
