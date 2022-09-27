@@ -1,0 +1,221 @@
+.main {
+    --primary: #0c0013;
+    --secondary: #fb8721;
+    --baseUnit: 10vmax;
+    --boxShadowPrimary: #ffffff;
+    /* background-color: var(--primary);
+    background-image: url("../background.png"); */
+    background-repeat: repeat;
+    min-height: 90vh;
+    padding-top: 170px;
+    margin-top: -150px;
+    padding-bottom: 10px;
+}
+
+.container {
+    display: grid !important ;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas: "a b c";
+    padding-inline: 10%;
+}
+
+.mainContent {
+    grid-area: b;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blackBoxContainer {
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.blackBoxA,
+.blackBoxB,
+.blackBoxC,
+.blackBoxD,
+.blackBoxE,
+.blackBoxFront {
+    position: absolute;
+    height: var(--baseUnit);
+    width: var(--baseUnit);
+    box-shadow: 0 0 6px 3px var(--secondary),
+        3px 3px 3px 3px var(--boxShadowPrimary);
+    background: black;
+    transform-style: preserve-3d;
+    z-index: 1;
+}
+.blackBoxFront {
+    transform: translateZ(var(--baseUnit));
+}
+.blackBoxA {
+    transform: translateX(calc(var(--baseUnit) * 0.5))
+        translateZ(calc(var(--baseUnit) * 0.5)) rotateY(90deg);
+    left: 0;
+}
+.blackBoxB {
+    transform: translateX(calc(var(--baseUnit) * -0.5))
+        translateZ(calc(var(--baseUnit) * 0.5)) rotateY(-90deg);
+}
+.blackBoxC {
+    transform: translateZ(calc(var(--baseUnit) * 0.5))
+        translateY(calc(var(--baseUnit) * -0.5)) rotateX(90deg);
+    top: -150%;
+}
+.blackBoxD {
+    transform: translateZ(calc(var(--baseUnit) * 0.5))
+        translateY(calc(var(--baseUnit) * 0.5)) rotateX(-90deg);
+}
+.blackBoxE {
+    transform: rotateY(180deg);
+}
+
+.blackBox {
+    transform-style: preserve-3d;
+    width: 100%;
+    transform-origin: calc(var(--baseUnit) * 0.5) calc(var(--baseUnit) * 0.5);
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.blackBox:hover {
+    animation-play-state: paused;
+}
+@keyframes spin {
+    0% {
+        transform: rotateY(0turn) rotateX(0turn);
+    }
+    100% {
+        transform: rotateY(1turn) rotateX(1turn);
+    }
+}
+.input {
+    grid-area: a !important;
+    max-height: 100% !important;
+    margin-top: 35% !important;
+}
+.input input {
+    color: var(--secondary);
+}
+
+.output {
+    color: var(--secondary);
+    font-size: 16px;
+    grid-area: c;
+    max-height: 100%;
+    margin-top: 35%;
+}
+
+.btn {
+    margin-top: 16%;
+    width: 100%;
+    height : 100%;
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
+    padding : 2px;
+    font-family: inherit;
+}
+
+.btn:hover {
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
+}
+.btncon {
+    /* margin-top: calc(var(--baseUnit) * 1.0); */
+    width: 100%;
+    padding-inline: 20%;
+}
+
+.heading,
+.error {
+    color: var(--secondary);
+    font-size: 2em;
+}
+
+.error {
+    padding-top: 2%;
+}
+
+.opresult {
+    padding-top: 3%;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    margin-bottom: 10%;
+}
+.tableMain {
+    padding-left: 10%;
+    padding-right: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.table {
+    width: 100%;
+    border: 1px solid black !important;
+    border-collapse: collapse;
+}
+.table tr td,
+.table tr th {
+    text-align: center;
+    border: 1px solid var(--secondary) !important;
+    border-collapse: collapse;
+    width: 53%;
+    color: var(--secondary);
+}
+
+.title * {
+    padding-bottom: 2%;
+    margin-inline: 10%;
+    color: var(--secondary);
+    text-align: start;
+    font-size: 1.5rem;
+}
+@font-face {
+    font-family: cryptoniteFont;
+    src: url("../cryptonite.TTF");
+}
+.title.cryptonite * {
+    padding-top: 2%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: cryptoniteFont;
+}
+.tabHead {
+    padding-top: 1%;
+    margin-bottom: calc(var(--baseUnit) * 0.5);
+}
+@media only screen and (max-width: 1260px) {
+    .btn {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        height: min-content;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .btn{
+        padding : 5px;
+    }
+    .container {
+        display: grid !important ;
+        grid-template-columns: 50%;
+        align-items: center;
+        justify-content: center;
+        
+        grid-template-areas: 
+            "a" 
+            "b" 
+            "c" ;
+        
+    }
+    .output{
+        margin-top : 2%;
+    }
+}

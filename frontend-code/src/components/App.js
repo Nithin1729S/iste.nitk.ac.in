@@ -19,8 +19,7 @@ import DescPage from '../expo/Components/DescPage';
 // import LeaderboardComponent from './PageComponents/LeaderboardComponent';
 import SGPComponent from './PageComponents/SGPComponent';
 import SGPSigComponent from './PageComponents/SGPSigComponent';
-//import Transcend from './Transcend';
-import Cryptonite from './Cryptonite';
+//import Transcend from './Transcend'
 import AWSS from "./AWSS22/AWSS";
 import Egyptian from "./AWSS22/Stories/Egyptian";
 import Italian from "./AWSS22/Stories/Italian";
@@ -30,9 +29,9 @@ import Mexican from "./AWSS22/Stories/Mexican";
 //import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 /* Obscura imports start here */
-// import Obscura from '../Obscura'
-// import Instructions from '../Obscura/components/Instructions';
-// import ObscuraLogin from '../Obscura/components/ObscuraLogin';
+import Obscura from '../Obscura'
+import Instructions from '../Obscura/components/Instructions';
+import ObscuraLogin from '../Obscura/components/ObscuraLogin';
 // import Dashboard from '../Obscura/components/Dashboard';
 // import Year1 from '../Obscura/components/year/Year1';
 // import Year3 from '../Obscura/components/year/Year3';
@@ -45,11 +44,15 @@ import Mexican from "./AWSS22/Stories/Mexican";
 // import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 /* Transcend imports go here */
-// import Cryptonite from '../components/Cryptonite'
+import Cryptonite from '../components/Cryptonite'
+
+/* Obsidian imports */
+import Login from '../components/Obsidian/components/Login'
+import Blackbox from '../components/Obsidian/components/Blackbox'
 
 import '../css/constants.css';
 // import { enableLeaderboard } from '../constants.js';
-import { enableCryptonite } from '../constants.js';
+import { enableCryptonite, enableObsidian } from '../constants.js';
 
 class App extends React.Component {
 	state = { headerShouldRender: true, footerBackgroundVariant: '' };
@@ -71,7 +74,7 @@ class App extends React.Component {
 					<Switch>
 					<Route path="/smp/:name/"  component={SGPSigComponent} />
 					<Route path="/smp/"  component={SGPComponent} /> 
-						{/* {enableCryptonite ? (
+						{enableCryptonite ? (
 							<Route
 								path="/cryptonite/:id"
 								render={(props) => (
@@ -81,7 +84,30 @@ class App extends React.Component {
 									/>
 								)}
 							/>
-						) : null} */}
+						) : null }
+
+						<Route
+								path="/obsidian/:id"
+								render={(props) => (
+									<Blackbox
+										{...props}
+										setFooterVal={(val) => this.changeFooterBackground(val)}
+									/>
+								)}
+						/>
+					
+						{enableObsidian ? (
+							<Route
+								path="/obsidian/"
+								render={(props) => (
+									<Login
+										{...props}
+										setFooterVal={(val) => this.changeFooterBackground(val)}
+									/>
+								)}
+							/>
+						) : null }
+						
 						{/* <Route path="*" component={HomeComponent} /> */}
 						{/*
 						Obscura routes
@@ -141,6 +167,25 @@ class App extends React.Component {
 								<Obscura setFooterVal={this.changeFooterBackground} />
 							)}
 						/> */}
+						<Route
+							path="/obscura/login"
+							render={() => (
+								<ObscuraLogin setFooterVal={this.changeFooterBackground} />
+							)}
+						/>
+
+						<Route
+							path="/obscura/instructions"
+							render={() => (
+								<Instructions setFooterVal={this.changeFooterBackground} />
+							)}
+						/>
+						<Route
+							path="/obscura"
+							render={() => (
+								<Obscura setFooterVal={this.changeFooterBackground} />
+							)}
+						/>
 
 						<Route path="/test" component={TestUI} />
 						{/* <Route path="/squareonesig/:name" component={SIGSquareOne} /> */}

@@ -11,6 +11,7 @@ export const baseRequest = axios.create({
 
 export const enableRecs = false;
 export const enableExpo = true;
-export const enableCryptonite = false;
+export const enableCryptonite = true;
 export const enableLeaderboard = false;
 export const enableSMP = false;
+export const enableObsidian = true
