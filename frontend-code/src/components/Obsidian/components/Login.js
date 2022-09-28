@@ -13,10 +13,12 @@ const Login = ({ setFooterVal }) => {
 
     useEffect(() => {
         if (localStorage.getItem('obsidianUserInfo')) {
-            history.push('/obsidian/1');
+          history.push('/obsidian/1');
         }
+        // change this to update footer style
         setFooterVal('cryptonite');
     }, []);
+  
     const handleLoginClick = () => {
         if (username.length < 3) {
             setUsernameError('Invalid username');

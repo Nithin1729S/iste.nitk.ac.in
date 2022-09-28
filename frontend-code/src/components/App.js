@@ -32,6 +32,7 @@ import Mexican from "./AWSS22/Stories/Mexican";
 import Obscura from '../Obscura'
 import Instructions from '../Obscura/components/Instructions';
 import ObscuraLogin from '../Obscura/components/ObscuraLogin';
+
 // import Dashboard from '../Obscura/components/Dashboard';
 // import Year1 from '../Obscura/components/year/Year1';
 // import Year3 from '../Obscura/components/year/Year3';
@@ -86,7 +87,10 @@ class App extends React.Component {
 							/>
 						) : null }
 
-						<Route
+						{/* Obsidian Routes */ }
+						
+						{enableObsidian ? (
+							<Route
 								path="/obsidian/:id"
 								render={(props) => (
 									<Blackbox
@@ -94,8 +98,10 @@ class App extends React.Component {
 										setFooterVal={(val) => this.changeFooterBackground(val)}
 									/>
 								)}
-						/>
-					
+							/>)
+							: null
+						}
+						
 						{enableObsidian ? (
 							<Route
 								path="/obsidian/"

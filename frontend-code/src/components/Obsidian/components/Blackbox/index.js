@@ -9,14 +9,15 @@ import Background from "./Background.js";
 
 
 class Blackbox extends React.Component {
+    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     state = {
         inputVal: inip,
         inputSeq: [{ input: inip, output: inop }],
         errorMessage: <></>,
-        numberOfInputs : 0
+        currentScore : Array.from({length: 10}, () => Math.floor(Math.random() * 40))   
     };
-    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+    
+    // TODO : Update the questionType list
     questionType = [
         'Expects single non-negative integer. Find the function',
         'Expects single non-negative integer. Find the function',
@@ -38,26 +39,32 @@ class Blackbox extends React.Component {
     InputObjectKey = `input history : ${this.currId.toString()}`;
 
     componentDidMount() {
-        this.props.setFooterVal("cryptonite");
-
-        const numInputs = Number(localStorage.getItem(this.numInputKey));
+        /*
+            GET request to fetch current score goes here
+            Maybe sent as a list
+        */
         
+        // change this to update footer style
+        this.props.setFooterVal("cryptonite");
+        const numInputs = Number(localStorage.getItem(this.numInputKey));
         if (numInputs) {
             const initialarray = JSON.parse(
                 localStorage.getItem(this.InputObjectKey)
             )
                 ? JSON.parse(localStorage.getItem(this.InputObjectKey)).arr
                 : [{ input: inip, output: inop }];
+            
+            // TODO : Update scores list from backend API
             this.setState({
                 inputSeq: initialarray,
                 inputVal: initialarray[0] ? initialarray[0].input : inip,
-                numberOfInputs: numInputs
             });
             return;
         }
         localStorage.setItem(this.numInputKey, 0);
         localStorage.setItem(this.InputObjectKey, JSON.stringify({ arr: [] }));
     }
+
     componentDidUpdate() {
         if (Number(this.props.match.params.id) !== this.currId) {
             if (
@@ -81,7 +88,6 @@ class Blackbox extends React.Component {
                         inputVal: initialarray[0]
                             ? initialarray[0].input
                             : inip,
-                        numberOfInputs : numInputs
                     });
                     return;
                 }
@@ -93,7 +99,6 @@ class Blackbox extends React.Component {
                 this.setState({
                     inputSeq: [{ input: inip, output: inop }],
                     inputVal: inip,
-                    numberOfInputs : numInputs
                 });
                 return;
             } else if (this.currId !== 1) {
@@ -114,7 +119,6 @@ class Blackbox extends React.Component {
                         inputVal: initialarray[0]
                             ? initialarray[0].input
                             : inip,
-                        numberOfInputs : numInputs
                     });
                     return;
                 }
@@ -126,7 +130,6 @@ class Blackbox extends React.Component {
                 this.setState({
                     inputSeq: [{ input: inip, output: inop }],
                     inputVal: inip,
-                    numberOfInputs : numInputs
                 });
                 return;
             }
@@ -140,22 +143,21 @@ class Blackbox extends React.Component {
 
     //TODO : Update API calls 
     callAPI = () => {
-        // this.setState({ rotation: 1 });
+        // Placeholder for now
+        const currentQuestion = this.currId
         baseRequest
-            .get("/cryptonite/q"+this.currId.toString()+"/", {
-                // id: this.currId.toString(),
-                // // input: this.state.inputVal,
+            .get("/cryptonite/q" + currentQuestion.toString() + "/", {
+                // TODO : Add team name under params
                 params: {
                     query : this.state.inputVal,
                 }
             })
             .then((res) => {
-                
-                let numInputs = Number(localStorage.getItem(this.numInputKey))
                 if (res.data.msg === "Wrong Input") {
+                    // TODO : Update currentScore list from the API
                     this.setState({
                         errorMessage: <> Invalid input! Try again. </>,
-                        numberOfInputs : numInputs+1
+                        currentScore : [] 
                     });
                     return;
                 }
@@ -176,11 +178,10 @@ class Blackbox extends React.Component {
                     this.numInputKey,
                     Number(localStorage.getItem(this.numInputKey)) + 1
                 );
+                // TODO : Update currentScore list from the API
                 this.setState({
                     inputSeq: ObjectToBeStored.arr,
-                    rotation: 0,
-                    errorMessage: <> </>,
-                    numberOfInputs : numInputs+1
+                    errorMessage: <> </>, 
                 });
             })
             .catch((err) => {
@@ -189,18 +190,24 @@ class Blackbox extends React.Component {
     };
     render() {
         return (
-            <div className={styles.main}>
+            <div className={ styles.main }>
+                {/* 
+                    Update the Background component to change style
+                    or 
+                    leave as-is for me to update
+                 */}
                 <Background/>
-                <div className={styles.tabHead}>
+                <div className={ styles.tabHead }>
+                    {/*
+                        Component for the question selector
+                     */}
                     <TabHead idTab={this.currId} />
                 </div>
                 <div className={styles.title}>
-                    <h2>{ `Attempt Number : ${this.state.numberOfInputs}` }</h2> 
-                    {/* <p>{this.questionType[this.currId-1]}</p> */}
+                    <h2>{ `Current Score : ${this.state.currentScore[this.currId-1]}` }</h2> 
                 </div>
                 <div className={styles.title}>
                     <h2>{ `Question ${this.currId} : ${this.questionType[this.currId-1]}` }</h2> 
-                    {/* <p>{this.questionType[this.currId-1]}</p> */}
                 </div>
                 <div className={styles.container}>
                     <div className={`center ${styles.input}`}>
