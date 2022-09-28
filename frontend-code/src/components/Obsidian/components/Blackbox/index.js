@@ -45,7 +45,7 @@ class Blackbox extends React.Component {
         */
         
         // change this to update footer style
-        this.props.setFooterVal("cryptonite");
+        this.props.setFooterVal("obsidian");
         const numInputs = Number(localStorage.getItem(this.numInputKey));
         if (numInputs) {
             const initialarray = JSON.parse(
