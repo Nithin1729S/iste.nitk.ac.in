@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableExpo, enableRecs, enableCryptonite,enableSMP } from '../../constants';
+import { enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian } from '../../constants';
 // import {  enableLeaderboard } from '../../constants';
 
 class Header extends React.Component {
@@ -106,6 +106,13 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	);
+	obsidianNavHeader = (
+		<li>
+			<Link to="/obsidian" className="waves-effect white-text">
+				Obsidian
+			</Link>
+		</li>
+	)
 	// squareOneHeader = (
 	// 	<li>
 	// 		<Link to="/leaderboard/" className="waves-effect white-text">
@@ -374,7 +381,8 @@ class Header extends React.Component {
 					{this.teamNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
-					{enableRecs ? this.recsNavHeader : null}
+					{ enableRecs ? this.recsNavHeader : null }
+					{enableObsidian ? this.obsidianNavHeader : null}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
 				</ul>
@@ -447,6 +455,7 @@ class Header extends React.Component {
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{ enableRecs ? this.recsNavHeader : null }
+								{enableObsidian ? this.obsidianNavHeader : null}
 								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
