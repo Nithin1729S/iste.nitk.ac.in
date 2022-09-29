@@ -1,0 +1,39 @@
+.container {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
+  background-image: url('../background2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.links {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  background-color: #000;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  transition-delay: all 3s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px #fff;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #fff;
+}
+
+.links a {
+  color: #fff;
+  font-size: 2vw;
+  margin-top: 1vw;
+}

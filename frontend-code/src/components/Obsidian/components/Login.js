@@ -18,7 +18,7 @@ const Login = ({ setFooterVal }) => {
         // change this to update footer style
         setFooterVal('obsidian');
     }, []);
-  
+
     const handleLoginClick = () => {
         if (username.length < 3) {
             setUsernameError('Invalid username');
@@ -116,7 +116,7 @@ const Login = ({ setFooterVal }) => {
 const LoginContainer = styled.div`
   padding: 20px 20px;
   height: 100%;
-  background-color: #2c2c2c;
+  background-image: linear-gradient(30deg, #999, #300a24, #000);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,11 +130,13 @@ const StyledLogin = styled.div`
   width: 100%;
   padding: 64px;
   margin: 100px;
-  background-color: #262626;
+  background-image: radial-gradient(#222, #555);
   border-radius: 8px;
-  box-shadow: 9px 4px 32px 0px #000000b3;
+  text-align: center;
+  color: #999;
+  box-shadow: 9px 4px 32px 0px #000;
   h2 {
-    font-size: 26px;
+    font-size: 3vw;
     color: #ffeaea;
   }
   button {
@@ -144,10 +146,10 @@ const StyledLogin = styled.div`
     margin-bottom: 12px;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 30px;
     border-radius: 4px;
     color: #ffeaea;
-    background-color: #13a388;
+    background-color: #301a43;
     cursor: pointer;
   }
 `;
