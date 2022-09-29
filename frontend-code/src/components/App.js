@@ -29,9 +29,9 @@ import Mexican from "./AWSS22/Stories/Mexican";
 //import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 /* Obscura imports start here */
-import Obscura from '../Obscura'
-import Instructions from '../Obscura/components/Instructions';
-import ObscuraLogin from '../Obscura/components/ObscuraLogin';
+// import Obscura from '../Obscura'
+// import Instructions from '../Obscura/components/Instructions';
+// import ObscuraLogin from '../Obscura/components/ObscuraLogin';
 
 // import Dashboard from '../Obscura/components/Dashboard';
 // import Year1 from '../Obscura/components/year/Year1';
@@ -48,8 +48,10 @@ import ObscuraLogin from '../Obscura/components/ObscuraLogin';
 import Cryptonite from '../components/Cryptonite'
 
 /* Obsidian imports */
+import Obsidian from '../components/Obsidian'
 import Login from '../components/Obsidian/components/Login'
 import Blackbox from '../components/Obsidian/components/Blackbox'
+import Instructions from './Obsidian/components/Instructions';
 
 import '../css/constants.css';
 // import { enableLeaderboard } from '../constants.js';
@@ -89,6 +91,29 @@ class App extends React.Component {
 
 						{/* Obsidian Routes */ }
 						
+						
+						{enableObsidian ? (
+							<Route
+								exact path="/obsidian/instructions"
+								render={(props) => (
+									<Instructions
+										{...props}
+										setFooterVal={(val) => this.changeFooterBackground(val)}
+									/>
+								)}
+							/>
+						) : null }
+						{enableObsidian ? (
+							<Route
+								exact path="/obsidian/login"
+								render={(props) => (
+									<Login
+										{...props}
+										setFooterVal={(val) => this.changeFooterBackground(val)}
+									/>
+								)}
+							/>
+						) : null }
 						{enableObsidian ? (
 							<Route
 								path="/obsidian/:id"
@@ -101,12 +126,11 @@ class App extends React.Component {
 							/>)
 							: null
 						}
-						
 						{enableObsidian ? (
 							<Route
 								path="/obsidian/"
 								render={(props) => (
-									<Login
+									<Obsidian
 										{...props}
 										setFooterVal={(val) => this.changeFooterBackground(val)}
 									/>
@@ -173,30 +197,10 @@ class App extends React.Component {
 								<Obscura setFooterVal={this.changeFooterBackground} />
 							)}
 						/> */}
-						<Route
-							path="/obscura/login"
-							render={() => (
-								<ObscuraLogin setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-
-						<Route
-							path="/obscura/instructions"
-							render={() => (
-								<Instructions setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-						<Route
-							path="/obscura"
-							render={() => (
-								<Obscura setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-
+						
 						<Route path="/test" component={TestUI} />
 						{/* <Route path="/squareonesig/:name" component={SIGSquareOne} /> */}
 						{/* <Route path="/squareone" component={SquareOne} /> */}
-
 						<Route
 							path="/expo"
 							render={(props) => (

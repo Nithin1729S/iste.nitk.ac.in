@@ -16,7 +16,7 @@ const Login = ({ setFooterVal }) => {
           history.push('/obsidian/1');
         }
         // change this to update footer style
-        setFooterVal('cryptonite');
+        setFooterVal('obsidian');
     }, []);
   
     const handleLoginClick = () => {

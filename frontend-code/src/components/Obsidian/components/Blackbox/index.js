@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from 'react-router-dom';
 
 import styles from "./css/crypt.module.css";
 import {  inip, inop } from "./TabHead.js";
@@ -10,11 +11,13 @@ import Background from "./Background.js";
 
 class Blackbox extends React.Component {
     validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    //TODO : Rectify state
     state = {
         inputVal: inip,
         inputSeq: [{ input: inip, output: inop }],
         errorMessage: <></>,
-        currentScore : Array.from({length: 10}, () => Math.floor(Math.random() * 40))   
+        currentScore : Array.from({length: 10}, () => Math.floor(Math.random() * 2000))   
     };
     
     // TODO : Update the questionType list
@@ -46,6 +49,10 @@ class Blackbox extends React.Component {
         
         // change this to update footer style
         this.props.setFooterVal("obsidian");
+        
+        if (!localStorage.getItem("obsidianUserInfo")) {
+            this.props.history.push('/obsidian/login')
+        }
         const numInputs = Number(localStorage.getItem(this.numInputKey));
         if (numInputs) {
             const initialarray = JSON.parse(
@@ -203,11 +210,13 @@ class Blackbox extends React.Component {
                      */}
                     <TabHead idTab={this.currId} />
                 </div>
+
                 <div className={styles.title}>
                     <h2>{ `Current Score : ${this.state.currentScore[this.currId-1]}` }</h2> 
                 </div>
+
                 <div className={styles.title}>
-                    <h2>{ `Question ${this.currId} : ${this.questionType[this.currId-1]}` }</h2> 
+                    <h2>{ `question ${this.currId} : ${this.questionType[this.currId-1]}` }</h2> 
                 </div>
                 <div className={styles.container}>
                     <div className={`center ${styles.input}`}>
@@ -268,4 +277,4 @@ class Blackbox extends React.Component {
         this.props.setFooterVal("");
     }
 }
-export default Blackbox;
+export default withRouter(Blackbox);

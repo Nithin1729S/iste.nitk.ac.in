@@ -49,14 +49,14 @@
     width: 100%;
     height : 100%;
     background-color: var(--secondary) !important;
-    color: var(--primary) !important;
+    color: #0c0013 !important;
     padding : 2px;
     font-family: inherit;
 }
 
 .btn:hover {
     background-color: var(--secondary) !important;
-    color: var(--primary) !important;
+    color: #0c0013 !important;
 }
 .btncon {
     /* margin-top: calc(var(--baseUnit) * 1.0); */
@@ -104,24 +104,22 @@
     color: var(--secondary);
 }
 
+@font-face {
+    font-family: ObsidianFont;
+    src: url("../../../constants/customFont.TTF") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .title * {
     padding-bottom: 2%;
     margin-inline: 10%;
     color: var(--secondary);
     text-align: start;
     font-size: 1.5rem;
+    font-family: ObsidianFont;
 }
-@font-face {
-    font-family: cryptoniteFont;
-    src: url("../cryptonite.TTF");
-}
-.title.cryptonite * {
-    padding-top: 2%;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 500;
-    font-family: cryptoniteFont;
-}
+
+
 .tabHead {
     padding-top: 1%;
     margin-bottom: calc(var(--baseUnit) * 0.5);
