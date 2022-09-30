@@ -16,6 +16,9 @@ export class Obsidian extends Component {
             </div>
         )
     }
+    componentWillUnmount() {
+        this.props.setFooterVal("")
+    }
 }
 
 export default Obsidian

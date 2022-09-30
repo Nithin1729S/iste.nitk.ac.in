@@ -5,112 +5,113 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const Login = ({ setFooterVal }) => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [usernameError, setUsernameError] = useState('');
-    const [errorPassword, setErrorPassword] = useState('');
-    let history = useHistory();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [usernameError, setUsernameError] = useState('');
+  const [errorPassword, setErrorPassword] = useState('');
+  let history = useHistory();
 
-    useEffect(() => {
-        if (localStorage.getItem('obsidianUserInfo')) {
-          history.push('/obsidian/1');
-        }
-        // change this to update footer style
-        setFooterVal('obsidian');
-    }, []);
+  useEffect(() => {
+    if (localStorage.getItem('obsidianUserInfo')) {
+      history.push('/obsidian/1');
+    }
+    // change this to update footer style
+    setFooterVal('obsidian');
+    return () => {
+      setFooterVal('obsidian');
+    }
+  }, []);
 
-    const handleLoginClick = () => {
-        if (username.length < 3) {
-            setUsernameError('Invalid username');
-        } else {
-            setUsernameError('');
-        }
-        if (password.length < 3) {
-            setErrorPassword('Enter valid password');
-        } else {
-            setErrorPassword('');
-        }
-        if (password.length < 3 && username.length < 3) {
-            return;
-        } else {
-            const loginData = { username: username, password: password };
-            localStorage.setItem('obsidianUserInfo', JSON.stringify(loginData));
-            history.push('/obsidian/1');
-            //TODO : set endpoints for Obsidian
-
-            /*
-            baseRequest.get('/obscura/login/', { params: { username: username, password: password } })
+  const handleLoginClick = () => {
+    if (username.length < 3) {
+      setUsernameError('Invalid username');
+    } else {
+      setUsernameError('');
+    }
+    if (password.length < 3) {
+      setErrorPassword('Enter valid password');
+    } else {
+      setErrorPassword('');
+    }
+    if (password.length < 3 && username.length < 3) {
+      return;
+    } else {
+      const loginData = { username: username, password: password };
+      localStorage.setItem('obsidianUserInfo', JSON.stringify(loginData));
+      history.push('/obsidian/1');
+      //TODO : set endpoints for Obsidian
+      /*
+      baseRequest.get('/obsidian/login/', { params: { username: username, password: password } })
+        .then(response => {
+          if (response.data.hasOwnProperty('isLogin')) {
+            if (response.data.msg === "Password") {
+                setErrorPassword(response.data.msg)
+            }
+            else {
+              setUsernameError(response.data.msg)
+            }
+          }
+          else {
+            baseRequest.get('/obscura/user/', { params: { username: username } })
               .then(response => {
-                if (response.data.hasOwnProperty('isLogin')) {
-                  if (response.data.msg === "Password") {
-                      setErrorPassword(response.data.msg)
-                  }
-                  else {
-                    setUsernameError(response.data.msg)
-                  }
-                }
-                else {
-                  baseRequest.get('/obscura/user/', { params: { username: username } })
-                    .then(response => {
-                      localStorage.setItem('userInfo', JSON.stringify(response.data));
-                      history.push('/obscura/dashboard')
-                    })
-                }
+                localStorage.setItem('userInfo', JSON.stringify(response.data));
+                history.push('/obscura/dashboard')
               })
-              */
-        }
-    };
+          }
+        })
+        */
+    }
+  };
+  return (
+    <LoginContainer>
+      <StyledLogin>
+        <h1>Login</h1>
+        <StyledInputDiv usernameError={ usernameError }>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            value={ username }
+            onChange={ e => setUsername(e.target.value) }
+          />
+        </StyledInputDiv>
+        <StyledInputDiv errorPassword={ errorPassword }>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={ password }
+            onChange={ e => setPassword(e.target.value) }
+          />
+        </StyledInputDiv>
+        <button onClick={ handleLoginClick }>Login</button>
 
-    return (
-        <LoginContainer>
-            <StyledLogin>
-                <h1>Login</h1>
-                <StyledInputDiv usernameError={ usernameError }>
-                    <label htmlFor="username">Username</label>
-                    <input
-                        type="text"
-                        id="username"
-                        value={ username }
-                        onChange={ e => setUsername(e.target.value) }
-                    />
-                </StyledInputDiv>
-                <StyledInputDiv errorPassword={ errorPassword }>
-                    <label htmlFor="password">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        value={ password }
-                        onChange={ e => setPassword(e.target.value) }
-                    />
-                </StyledInputDiv>
-                <button onClick={handleLoginClick }>Login</button>
-
-                {/* if you want to show message */ }
-                <br />
-                { usernameError.length > 0 && (
-                    <span
-                        style={ {
-                            color: 'red',
-                            fontSize: '16px',
-                        } }
-                    >
-                        { usernameError }
-                    </span>
-                ) }
-                <br />
-                { errorPassword.length > 0 && (
-                    <span
-                        style={ {
-                            color: 'red',
-                            fontSize: '16px',
-                        } }
-                    >
-                        { errorPassword }
-                    </span>
-                ) }
-            </StyledLogin>
-        </LoginContainer>
-    );
+        {/* if you want to show message */ }
+        <br />
+        { usernameError.length > 0 && (
+          <span
+            style={ {
+              color: 'red',
+              fontSize: '16px',
+            } }
+          >
+            { usernameError }
+          </span>
+        ) }
+        <br />
+        { errorPassword.length > 0 && (
+          <span
+            style={ {
+              color: 'red',
+              fontSize: '16px',
+            } }
+          >
+            { errorPassword }
+          </span>
+        ) }
+      </StyledLogin>
+    </LoginContainer>
+  );
 };
 const LoginContainer = styled.div`
   padding: 20px 20px;
@@ -197,17 +198,17 @@ const StyledInputDiv = styled.div`
   }  
   input[type='text'] {
     border: ${props =>
-        props.usernameError?.length > 0 && '2px solid red'};
+    props.usernameError?.length > 0 && '2px solid red'};
     color: ${props => props.usernameError?.length > 0 && 'red'};
     background-color: ${props =>
-        props.usernameError?.length > 0 && '#ff84843b'};
+    props.usernameError?.length > 0 && '#ff84843b'};
   }
   input[type='password'] {
     border: ${props =>
-        props.errorPassword?.length > 0 && '2px solid red'};
+    props.errorPassword?.length > 0 && '2px solid red'};
     color: ${props => props.errorPassword?.length > 0 && 'red'};
     background-color: ${props =>
-        props.errorPassword?.length > 0 && '#ff84843b'};
+    props.errorPassword?.length > 0 && '#ff84843b'};
   }
   label[for='username'] {
     color: ${props => props.usernameError?.length > 0 && 'red'};

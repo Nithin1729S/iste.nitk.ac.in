@@ -21,6 +21,9 @@ export class Instructions extends Component {
       </div>
     )
   }
+  componentWillUnmount() {
+        this.props.setFooterVal("")
+  }
 }
 
 export default Instructions
