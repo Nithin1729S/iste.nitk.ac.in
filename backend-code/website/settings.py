@@ -61,7 +61,8 @@ INSTALLED_APPS = [
     'SMP',
     'obscura',
     'squareonelb',
-    'cryptonite'
+    'cryptonite',
+    'obsidian'
 ]
 
 MIDDLEWARE = [
