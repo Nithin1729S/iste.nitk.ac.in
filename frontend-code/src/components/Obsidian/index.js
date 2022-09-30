@@ -9,14 +9,9 @@ export class Obsidian extends Component {
     render() {
         return (
             <div className={ styles.container }>
-                {/* <h1 className={styles.header}>Obsidian</h1> */ }
                 <div className={ styles.links }>
-
                     <Link className={ styles.button } to='/obsidian/login'>Login</Link>
-
-
                     <Link className={ styles.button } to='/obsidian/instructions'>Instructions</Link>
-
                 </div>
             </div>
         )

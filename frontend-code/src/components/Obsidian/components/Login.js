@@ -154,8 +154,12 @@ const StyledLogin = styled.div`
     border-radius: 4px;
     color: #fff;
     background: rgb(177,32,249);
-background: linear-gradient(120deg, rgba(177,32,249,1) 41%, rgba(244,82,199,1) 57%);
+    background: linear-gradient(120deg, #f452c7 1%, #7111a1 100%);
     cursor: pointer;
+  }
+  button:hover {
+    /* transform: scale(1.01) ; */
+    box-shadow: 0 0 5px #f452c7;
   }
   
 `;

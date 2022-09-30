@@ -1,6 +1,6 @@
 .container {
   /* text-align: center; */
-  color: #fff;
+  color: #000 !important;
   /* padding: 20px; */
   height: 100vh;
   background-image: url('../background2.png');
@@ -15,7 +15,6 @@
   margin-top: 75vh;
   display: flex;
   flex-direction: row;
-  /* gap: 10vh; */
   justify-content: space-around;
   align-items: center;
 }

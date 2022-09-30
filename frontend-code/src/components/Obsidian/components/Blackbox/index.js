@@ -10,14 +10,14 @@ import Background from "./Background.js";
 
 
 class Blackbox extends React.Component {
-    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11];
 
     //TODO : Rectify state
     state = {
         inputVal: inip,
         inputSeq: [{ input: inip, output: inop }],
         errorMessage: <></>,
-        currentScore : Array.from({length: 10}, () => Math.floor(Math.random() * 2000))   
+        currentScore : Math.floor(Math.random() * 10) 
     };
     
     // TODO : Update the questionType list
@@ -47,7 +47,6 @@ class Blackbox extends React.Component {
             Maybe sent as a list
         */
         
-        // change this to update footer style
         this.props.setFooterVal("obsidian");
         
         if (!localStorage.getItem("obsidianUserInfo")) {
