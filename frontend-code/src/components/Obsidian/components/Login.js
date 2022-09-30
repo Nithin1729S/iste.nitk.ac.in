@@ -64,10 +64,9 @@ const Login = ({ setFooterVal }) => {
     return (
         <LoginContainer>
             <StyledLogin>
-                <h2>Login</h2>
+                <h1>Login</h1>
                 <StyledInputDiv usernameError={ usernameError }>
                     <label htmlFor="username">Username</label>
-
                     <input
                         type="text"
                         id="username"
@@ -84,7 +83,7 @@ const Login = ({ setFooterVal }) => {
                         onChange={ e => setPassword(e.target.value) }
                     />
                 </StyledInputDiv>
-                <button onClick={ handleLoginClick }>Login</button>
+                <button onClick={handleLoginClick }>Login</button>
 
                 {/* if you want to show message */ }
                 <br />
@@ -116,7 +115,10 @@ const Login = ({ setFooterVal }) => {
 const LoginContainer = styled.div`
   padding: 20px 20px;
   height: 100%;
-  background-image: linear-gradient(30deg, #999, #300a24, #000);
+  /* background: rgb(63,94,251) ;
+  background-image: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
+  background: rgb(14,14,14);
+  background: linear-gradient(171deg, rgba(14,14,14,1) 1%, rgba(12,12,12,1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,18 +128,19 @@ const LoginContainer = styled.div`
 `;
 const StyledLogin = styled.div`
   max-width: 450px;
-  height: 80%;
+  height: 100%;
   width: 100%;
-  padding: 64px;
+  padding: 0 5% 5%;
   margin: 100px;
-  background-image: radial-gradient(#222, #555);
-  border-radius: 8px;
+  background-color : #101010;
+  border-radius: 5px;
   text-align: center;
   color: #999;
   box-shadow: 9px 4px 32px 0px #000;
-  h2 {
-    font-size: 3vw;
+  h1 {
+    font-size: 5vw;
     color: #ffeaea;
+    font-weight : bold;
   }
   button {
     width: 100%;
@@ -146,45 +149,51 @@ const StyledLogin = styled.div`
     margin-bottom: 12px;
     border: none;
     outline: none;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight:500;
     border-radius: 4px;
-    color: #ffeaea;
-    background-color: #301a43;
+    color: #fff;
+    background: rgb(177,32,249);
+background: linear-gradient(120deg, rgba(177,32,249,1) 41%, rgba(244,82,199,1) 57%);
     cursor: pointer;
   }
+  
 `;
 const StyledInputDiv = styled.div`
-  margin: 20px 0px;
-  display: flex;
+  margin: 5px 20px;
+  display : flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   label {
     margin-top: 32px;
-    margin-bottom: 4px;
     font-size: 20px;
-    color: #fff;
+    color: #6e6e6e;
   }
   input {
-    padding: 16px 12px 4px;
+    padding: 5px 12px !important;
     width: 100%;
-    /* border-radius: 4px; */
     border: none;
     outline: none;
-    font-size: 20px;
+    text-decoration : none;
+    font-size: 18px;
     background: none;
-    border-bottom: 2px solid #ffeaea;
-    border-radius: 4px 4px 0px 0px;
-    color: #fff;
+    border-bottom: none !important;
+    border-radius: 5px !important;
+    color: #6e6e6e;
+    background-color: #171717 !important;
   }
+  input:focus {
+    box-shadow: none !important;
+  }  
   input[type='text'] {
-    border-bottom: ${props =>
+    border: ${props =>
         props.usernameError?.length > 0 && '2px solid red'};
     color: ${props => props.usernameError?.length > 0 && 'red'};
     background-color: ${props =>
         props.usernameError?.length > 0 && '#ff84843b'};
   }
   input[type='password'] {
-    border-bottom: ${props =>
+    border: ${props =>
         props.errorPassword?.length > 0 && '2px solid red'};
     color: ${props => props.errorPassword?.length > 0 && 'red'};
     background-color: ${props =>
