@@ -10,14 +10,14 @@ import Background from "./Background.js";
 
 
 class Blackbox extends React.Component {
-    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11];
 
     //TODO : Rectify state
     state = {
         inputVal: inip,
         inputSeq: [{ input: inip, output: inop }],
         errorMessage: <></>,
-        currentScore : Array.from({length: 10}, () => Math.floor(Math.random() * 2000))   
+        currentScore : Math.floor(Math.random() * 2000) 
     };
     
     // TODO : Update the questionType list
@@ -44,12 +44,8 @@ class Blackbox extends React.Component {
     componentDidMount() {
         /*
             GET request to fetch current score goes here
-            Maybe sent as a list
         */
-        
-        // change this to update footer style
         this.props.setFooterVal("obsidian");
-        
         if (!localStorage.getItem("obsidianUserInfo")) {
             this.props.history.push('/obsidian/login')
         }
@@ -60,8 +56,6 @@ class Blackbox extends React.Component {
             )
                 ? JSON.parse(localStorage.getItem(this.InputObjectKey)).arr
                 : [{ input: inip, output: inop }];
-            
-            // TODO : Update scores list from backend API
             this.setState({
                 inputSeq: initialarray,
                 inputVal: initialarray[0] ? initialarray[0].input : inip,
@@ -161,10 +155,10 @@ class Blackbox extends React.Component {
             })
             .then((res) => {
                 if (res.data.msg === "Wrong Input") {
-                    // TODO : Update currentScore list from the API
+                    // TODO : Update currentScore from the API
                     this.setState({
                         errorMessage: <> Invalid input! Try again. </>,
-                        currentScore : [] 
+                        currentScore : Math.floor(Math.random()*2000)
                     });
                     return;
                 }
@@ -185,10 +179,11 @@ class Blackbox extends React.Component {
                     this.numInputKey,
                     Number(localStorage.getItem(this.numInputKey)) + 1
                 );
-                // TODO : Update currentScore list from the API
+                // TODO : Update currentScore  from the API
                 this.setState({
                     inputSeq: ObjectToBeStored.arr,
                     errorMessage: <> </>, 
+                    currentScore : Math.floor(Math.random()*2000)
                 });
             })
             .catch((err) => {
@@ -212,7 +207,7 @@ class Blackbox extends React.Component {
                 </div>
 
                 <div className={styles.title}>
-                    <h2>{ `Current Score : ${this.state.currentScore[this.currId-1]}` }</h2> 
+                    <h2>{ `Current Score : ${this.state.currentScore}` }</h2> 
                 </div>
 
                 <div className={styles.title}>
