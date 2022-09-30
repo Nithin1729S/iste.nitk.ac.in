@@ -127,16 +127,23 @@ const LoginContainer = styled.div`
   background-size: cover;
 `;
 const StyledLogin = styled.div`
-  max-width: 450px;
+  max-width: 600px;
   height: 100%;
-  width: 100%;
+  width: 60%;
   padding: 0 5% 5%;
   margin: 100px;
-  background-color : #101010;
+  /* background-color : #101010; */
   border-radius: 5px;
   text-align: center;
   color: #999;
-  box-shadow: 9px 4px 32px 0px #000;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      #f452c7, 
+      #7111a1
+    ) 1 100%;
   h1 {
     font-size: 5vw;
     color: #ffeaea;
@@ -158,7 +165,6 @@ const StyledLogin = styled.div`
     cursor: pointer;
   }
   button:hover {
-    /* transform: scale(1.01) ; */
     box-shadow: 0 0 5px #f452c7;
   }
   
