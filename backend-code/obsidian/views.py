@@ -10,6 +10,7 @@ def deduct(username):
     team_details = team.objects.get(username=username)
     team_details.total_score=team_details.total_score-10
     team_details.save()
+    return team_details.total_score
 
 @api_view(['GET'])
 def loginView(request):
@@ -38,134 +39,134 @@ def userView(request):
 @api_view(['GET'])
 def q1(request):
     query= request.GET['query']
-    [query1,query2]=query.split(',')
+    [query1,query2]=query.strip().split(',')
     username = request.GET['username']
-    deduct(username)
+    score = deduct(username)
     try:
         if query1.isdigit() is False or query2.isdigit() is False:
             return Response({'msg': "Wrong Input"})
         else :
             answer = question1(int(query1),int(query2))
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})
 
 @api_view(['GET'])
 def q2(request):
     query = request.GET['query']
     username = request.GET['username']
-    deduct(username)
+    score = deduct(username)
     try:
         if query.isdigit() is False :
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         elif int(query) < 0:
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         else :
             answer = question2(int(query))
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})
 
 @api_view(['GET'])
 def q3(request):
     query = request.GET['query']
     username = request.GET['username']
-    deduct(username)
+    score = deduct(username)
     try:
         if query.isdigit() is False :
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         elif int(query) < 0:
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         else :
             answer = question3(int(query))
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})
 
 @api_view(['GET'])
 def q4(request):
     query= request.GET['query']
-    [query1,query2]=query.split(',')
+    [query1,query2]=query.strip().split(',')
     username = request.GET['username']
-    deduct(username)
+    score = deduct(username)
     try:
         if query1.isdigit() is False or query2.isdigit() is False :
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         else :
             answer = question4(int(query1),int(query2))
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})
     
 @api_view(['GET'])
 def q5(request):
     query = request.GET['query']
     username = request.GET['username']
-    deduct(username)
+    score = deduct(username)
     try:
         if query.isdigit() is False :
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         else :
             answer = question5(int(query))
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})
 
 @api_view(['GET'])
 def q6(request):
     query = request.GET['query']
     username = request.GET['username']
-    deduct(username)
+    score = deduct(username)
     try:
         if query.isdigit() is False :
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         elif int(query) < 0:
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         else :
             answer = question6(int(query))
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})
 
 @api_view(['GET'])
 def q7(request):
     query = request.GET['query']
     username = request.GET['username']
-    deduct(username)
+    score = deduct(username)
     try:
         if query.isdigit() is False :
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         else :
             answer = question7(int(query))
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})
     
 @api_view(['GET'])
 def q8(request):
     query = request.GET['query']
     username = request.GET['username']
-    deduct(username)
+    score = deduct(username)
     try:
         if query.isalpha() is False :
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         else :
             answer = question8(query)
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})
     
 @api_view(['GET'])
 def q9(request):
     query = request.GET['query']
     username = request.GET['username']
     res = query != '' and all(chr.isalpha() or chr.isspace() for chr in query)
-    deduct(username)
+    score = deduct(username)
     try:
         if res is False :
-            return Response({'msg': "Wrong Input"})
+            return Response({'msg': "Wrong Input","score" : score})
         else :
             answer = question9(query)
-            return Response({'ans': answer})
+            return Response({'ans': answer,'score' : score})
     except:
-        return Response({'msg': "Wrong Input"})
+        return Response({'msg': "Wrong Input","score" : score})

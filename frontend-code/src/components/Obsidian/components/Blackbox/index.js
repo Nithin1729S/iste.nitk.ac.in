@@ -22,15 +22,15 @@ class Blackbox extends React.Component {
     
     // TODO : Update the questionType list
     questionType = [
-        'Expects single non-negative integer. Find the function',
-        'Expects single non-negative integer. Find the function',
-        'Expects single integer. Find the function',
-        'Expects single capital character. What does I,M,P map to?',
-        'Expects single non negative integer. Find the function',
-        'Expects single non negative integer. Find the sequence',
-        'Expects a word. Guess the function',
-        'Expects a single capital character. Find the mapping of DOG',
-        'Expects a single integer. Find the function'
+        'Expects two comma-separated non-negative integer.',
+        'Expects single non-negative integer.',
+        'Expects single non-negative integer.',
+        'Expects two comma-separated non-negative integer.',
+        'Expects single non negative integer.',
+        'Expects single non negative integer.',
+        'Expects single non negative integer.',
+        'Expects a word.',
+        'Expects a word.'
     ];
 
     currId =
@@ -154,7 +154,6 @@ class Blackbox extends React.Component {
         console.log(typeof this.state.inputVal)
         baseRequest
             .get("/obsidian/q" + currentQuestion.toString() + "/", {
-                // TODO : Add team name under params
                 params: {
                     query: this.state.inputVal,
                     username : username
@@ -162,10 +161,9 @@ class Blackbox extends React.Component {
             })
             .then((res) => {
                 if (res.data.msg === "Wrong Input") {
-                    // TODO : Update currentScore from the API
                     this.setState({
                         errorMessage: <> Invalid input! Try again. </>,
-                        currentScore : Math.floor(Math.random()*2000)
+                        currentScore : res.data.score
                     });
                     return;
                 }
@@ -186,11 +184,10 @@ class Blackbox extends React.Component {
                     this.numInputKey,
                     Number(localStorage.getItem(this.numInputKey)) + 1
                 );
-                // TODO : Update currentScore  from the API
                 this.setState({
                     inputSeq: ObjectToBeStored.arr,
                     errorMessage: <> </>, 
-                    currentScore : Math.floor(Math.random()*2000)
+                    currentScore : res.data.score
                 });
             })
             .catch((err) => {
