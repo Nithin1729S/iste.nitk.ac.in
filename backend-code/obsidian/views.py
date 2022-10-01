@@ -37,8 +37,8 @@ def userView(request):
 
 @api_view(['GET'])
 def q1(request):
-    query1 = request.GET['query1']
-    query2 = request.GET['query2']
+    query= request.GET['query']
+    [query1,query2]=query.split(',')
     username = request.GET['username']
     deduct(username)
     try:
@@ -84,8 +84,8 @@ def q3(request):
 
 @api_view(['GET'])
 def q4(request):
-    query1 = request.GET['query1']
-    query2 = request.GET['query2']
+    query= request.GET['query']
+    [query1,query2]=query.split(',')
     username = request.GET['username']
     deduct(username)
     try:
