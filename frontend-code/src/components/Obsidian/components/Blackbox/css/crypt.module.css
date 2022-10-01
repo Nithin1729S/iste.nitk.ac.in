@@ -36,6 +36,7 @@
     color: var(--secondary);
 }
 
+
 .output {
     color: var(--secondary);
     font-size: 16px;
@@ -45,24 +46,32 @@
 }
 
 .btn {
-    margin-top: 16%;
+    margin-top: 30%;
     width: 100%;
     height : 100%;
     background-color: var(--secondary) !important;
     color: #0c0013 !important;
     padding : 2px;
     font-family: inherit;
+    font-size : 18px !important;
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
 }
 
 .btn:hover {
-    background-color: var(--secondary) !important;
-    color: #0c0013 !important;
+    box-shadow: none !important;
+    color: white !important; 
 }
+
 .btncon {
-    /* margin-top: calc(var(--baseUnit) * 1.0); */
     width: 100%;
-    padding-inline: 20%;
+    padding-inline: 10%;
 }
+
+
 
 .heading,
 .error {
