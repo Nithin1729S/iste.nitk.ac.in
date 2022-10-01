@@ -64,8 +64,13 @@ const Login = ({ setFooterVal }) => {
             }
           }
           else {
-            localStorage.setItem('obsidianUserInfo',loginData.username);
-            history.push('/obsidian/1')
+            baseRequest.get('/obsidian/team/', { params: { username: username } })
+              .then(response => {
+                let totalScore = response.data.total_score
+                localStorage.setItem('obsidianUserInfo', loginData.username);
+                localStorage.setItem('userTotalScore',totalScore)
+                history.push('/obsidian/1')
+            })
           }
         })
         

@@ -10,14 +10,14 @@ import Background from "./Background.js";
 
 
 class Blackbox extends React.Component {
-    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11];
+    validId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     //TODO : Rectify state
     state = {
         inputVal: inip,
         inputSeq: [{ input: inip, output: inop }],
         errorMessage: <></>,
-        currentScore : Math.floor(Math.random() * 2000) 
+        currentScore : 0
     };
     
     // TODO : Update the questionType list
@@ -42,14 +42,12 @@ class Blackbox extends React.Component {
     InputObjectKey = `input history : ${this.currId.toString()}`;
 
     componentDidMount() {
-        /*
-            GET request to fetch current score goes here
-        */
         this.props.setFooterVal("obsidian");
         if (!localStorage.getItem("obsidianUserInfo")) {
             this.props.history.push('/obsidian/login')
         }
         const numInputs = Number(localStorage.getItem(this.numInputKey));
+        const userScore = localStorage.getItem('userTotalScore');
         if (numInputs) {
             const initialarray = JSON.parse(
                 localStorage.getItem(this.InputObjectKey)
@@ -59,9 +57,14 @@ class Blackbox extends React.Component {
             this.setState({
                 inputSeq: initialarray,
                 inputVal: initialarray[0] ? initialarray[0].input : inip,
+                currentScore : userScore
             });
             return;
         }
+        // updating score value
+        this.setState({
+            currentScore: userScore
+        })
         localStorage.setItem(this.numInputKey, 0);
         localStorage.setItem(this.InputObjectKey, JSON.stringify({ arr: [] }));
     }
@@ -146,11 +149,15 @@ class Blackbox extends React.Component {
     callAPI = () => {
         // Placeholder for now
         const currentQuestion = this.currId
+        const username = localStorage.getItem("obsidianUserInfo")
+        console.log(this.state.inputVal)
+        console.log(typeof this.state.inputVal)
         baseRequest
-            .get("/cryptonite/q" + currentQuestion.toString() + "/", {
+            .get("/obsidian/q" + currentQuestion.toString() + "/", {
                 // TODO : Add team name under params
                 params: {
-                    query : this.state.inputVal,
+                    query: this.state.inputVal,
+                    username : username
                 }
             })
             .then((res) => {
