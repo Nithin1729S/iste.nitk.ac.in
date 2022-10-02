@@ -11,7 +11,7 @@ export class Obsidian extends Component {
             <div className={ styles.container }>
                 <div className={ styles.links }>
                     <Link className={ styles.button } to='/obsidian/login'>Login</Link>
-                    <Link className={ styles.button } to='/obsidian/instructions'>Instructions</Link>
+                    {/* <Link className={ styles.button } to='/obsidian/instructions'>Instructions</Link> */}
                 </div>
             </div>
         )
