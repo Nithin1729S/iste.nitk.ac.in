@@ -382,7 +382,7 @@ class Header extends React.Component {
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
 					{ enableRecs ? this.recsNavHeader : null }
-					{enableObsidian ? this.obsidianNavHeader : null}
+					{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
 				</ul>
@@ -455,7 +455,7 @@ class Header extends React.Component {
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{ enableRecs ? this.recsNavHeader : null }
-								{enableObsidian ? this.obsidianNavHeader : null}
+								{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
 								{/* {this.transcendNavHeader} */}
 								{/* {this.smpNavHeader} */}
