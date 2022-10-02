@@ -43,6 +43,7 @@ class Blackbox extends React.Component {
 
     componentDidMount() {
         this.props.setFooterVal("obsidian");
+
         if (!localStorage.getItem("obsidianUserInfo")) {
             this.props.history.push('/obsidian/login')
         }
@@ -59,6 +60,7 @@ class Blackbox extends React.Component {
                 inputVal: initialarray[0] ? initialarray[0].input : inip,
                 currentScore : userScore
             });
+
             return;
         }
         // updating score value
@@ -145,7 +147,6 @@ class Blackbox extends React.Component {
         });
     };
 
-    //TODO : Update API calls 
     callAPI = () => {
         // Placeholder for now
         const currentQuestion = this.currId
@@ -184,6 +185,7 @@ class Blackbox extends React.Component {
                     this.numInputKey,
                     Number(localStorage.getItem(this.numInputKey)) + 1
                 );
+                localStorage.setItem("userTotalScore",res.data.score)
                 this.setState({
                     inputSeq: ObjectToBeStored.arr,
                     errorMessage: <> </>, 
