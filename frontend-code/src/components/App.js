@@ -25,8 +25,8 @@ import Egyptian from "./AWSS22/Stories/Egyptian";
 import Italian from "./AWSS22/Stories/Italian";
 import Greek from "./AWSS22/Stories/Greek";
 import Mexican from "./AWSS22/Stories/Mexican";
-//import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
-//import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
+import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
+import RecsSIGComponent from './Recruitment/eachSIGLandingPage';
 
 /* Obscura imports start here */
 // import Obscura from '../Obscura'
@@ -91,7 +91,7 @@ class App extends React.Component {
 
 						{/* Obsidian Routes */ }
 						
-						
+{/* 						
 						{enableObsidian ? (
 							<Route
 								exact path="/obsidian/instructions"
@@ -137,11 +137,9 @@ class App extends React.Component {
 								)}
 							/>
 						) : null }
+						 */}
 						
-						{/* <Route path="*" component={HomeComponent} /> */}
-						{/*
-						Obscura routes
-							*/}
+						{/* Obscura routes	*/}
 						{/* <Route
 							path="/obscura/leaderboard"
 							render={() => (
@@ -224,8 +222,8 @@ class App extends React.Component {
 						<Route path="/event/view/:name" component={EventDetails} />
 						<Route path="/event/add" component={EventAdd} />
 						<Route path="/event" component={EventComponent} />
-						{/* <Route path="/recs/:name" component={RecsSIGComponent} />
-						<Route path="/recs" component={RecruitmentComponent} /> */}
+						<Route path="/recs/:name" component={RecsSIGComponent} />
+						<Route path="/recs" component={RecruitmentComponent} />
 						<Route path="/awss/egyptian" component={Egyptian} />
 						<Route path="/awss/mexican" component={Mexican} />
 						<Route path="/awss/greek" component={Greek} />
