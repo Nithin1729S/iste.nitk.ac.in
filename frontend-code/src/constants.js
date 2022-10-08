@@ -14,4 +14,4 @@ export const enableExpo = true;
 export const enableCryptonite = true;
 export const enableLeaderboard = false;
 export const enableSMP = false;
-export const enableObsidian = true
+export const enableObsidian = false;
