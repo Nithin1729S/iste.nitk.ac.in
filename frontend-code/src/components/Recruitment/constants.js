@@ -74,19 +74,35 @@ export const questions = [
 		open: false,
 	},
 	{
+		question: 'Does each SIG have a different recruitment procedure and do I have to fill out separate registration forms for each one?',
+		answer:
+			'Yes, each SIG has its own registration form and varied selection procedure. The form links and further details about the rounds are mentioned on our website.',
+		open: false,
+	},
+	{
+		question: 'Is it a must to have prior experience in the SIG of my interest?',
+		answer: 'Nope, it is not compulsory. You will need to know the basics of the SIG, however the most important traits we are seeking are genuine interest and enthusiasm.',
+		open : true
+	},
+	{
+		question: 'Once I join ISTE, Can I be a part of a SIG other than the one I applied for during recruitment?',
+		answer: 'Yes definitely! You can join any of our 8 SIGs based on your interest.',
+		open : false
+	},
+	{
 		question: 'I have a query not listed here, who can I contact?',
 		answer: (
 			<>
 				Feel free to contact anyone below if you have any other doubts:<br></br>
 				<ul style={{ paddingLeft: '5%' }}>
 					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
-						Sai Shruti Prakhya: 9686749909
+						Ankit Stephen Thomas: 9567097555
 					</li>
 					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
-						Arjun A. : 9895089920
+						Ayush Mangukia : 8105288410
 					</li>{' '}
 					<li style={{ listStyleType: 'disc', color: 'var(--primaryDarker)' }}>
-						Shreyas Bhat: 9623830564
+						Gayathri Nisha: 8296233742
 					</li>
 				</ul>
 			</>

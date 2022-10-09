@@ -57,6 +57,9 @@ import '../css/constants.css';
 // import { enableLeaderboard } from '../constants.js';
 import { enableCryptonite, enableObsidian } from '../constants.js';
 
+
+
+
 class App extends React.Component {
 	state = { headerShouldRender: true, footerBackgroundVariant: '' };
 	changeHeaderFooterStatus = (val) => {
@@ -73,7 +76,6 @@ class App extends React.Component {
 					<Header />
 				</Wrapper>
 				<div className="app-main">
-					{/* <Route path="/transcend"  component={Transcend} />  */}
 					<Switch>
 					<Route path="/smp/:name/"  component={SGPSigComponent} />
 					<Route path="/smp/"  component={SGPComponent} /> 

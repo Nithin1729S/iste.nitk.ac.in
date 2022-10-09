@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import YearCard from './YearCard'
 import styled from 'styled-components'
 import obscurabannerv2 from '../constants/obscurabannerv2.png'
-import { baseRequest } from '../../constants';
+import { baseRequest } from '../../../constants';
 
 
 class Dashboard extends Component {
