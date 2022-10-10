@@ -10,7 +10,7 @@ class Timeline extends Component {
         //date filter 
         let dateFilter = new Date('2022-12-31');
 	    if (dateFilter.getTime() === date.getTime()) {
-		    return "TBD";
+		    return "";
         }
         //return formatted date
         let year = date.getFullYear();
