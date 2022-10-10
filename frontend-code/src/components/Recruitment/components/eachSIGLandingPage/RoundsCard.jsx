@@ -6,7 +6,7 @@ function formattedDate(date) {
 
 	let dateFilter = new Date('2022-12-31');
 	if (dateFilter.getTime() === date.getTime()) {
-		return "TBD";
+		return "";
 	}
 
 	//formatting date as DD-MM-YYYY in case of proper date
