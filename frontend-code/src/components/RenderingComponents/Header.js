@@ -340,6 +340,7 @@ class Header extends React.Component {
 							</li>
 						</ul>
 					</li>
+					{ enableRecs ? this.recsNavHeader : null }
 					{enableSMP ? this.smpNavHeader : null}
 					{/* {this.obscuraNavHeader} */}
 					{/* {enableLeaderboard ? (
@@ -381,7 +382,6 @@ class Header extends React.Component {
 					{this.teamNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
-					{ enableRecs ? this.recsNavHeader : null }
 					{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
@@ -451,10 +451,10 @@ class Header extends React.Component {
 								) : (
 									this.squareOneHeader
 								)} */}
+								{ enableRecs ? this.recsNavHeader : null }
 								{this.teamNavHeader}
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
-								{ enableRecs ? this.recsNavHeader : null }
 								{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
 								{/* {this.transcendNavHeader} */}
