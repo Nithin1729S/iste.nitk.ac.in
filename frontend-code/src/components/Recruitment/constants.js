@@ -1,32 +1,3 @@
-export const dummy = {
-	regLink: 'google.com/',
-	rounds: [
-		{
-			roundName: 'Round 1',
-			date: '2021-05-19',
-			desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet turpis in diam elementum venenatis. Curabitur ut diam non ipsum euismod pharetra. Sed enim diam, euismod at nibh sit amet, consectetur maximus neque. Donec quis mauris nec libero eleifend suscipit blandit non metus. Nam risus dolor, faucibus eu lorem eget, egestas vulputate elit. Pellentesque sed nisi est. Suspendisse venenatis ullamcorper quam et mollis. Etiam nec turpis libero. Vivamus ac faucibus leo. Integer pulvinar, libero a accumsan rhoncus, lectus turpis consectetur libero, ac laoreet enim ex nec metus. ',
-			isOver: true,
-		},
-		{
-			roundName: 'Round 2',
-			date: '2021-05-21',
-			desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet turpis in diam elementum venenatis. Curabitur ut diam non ipsum euismod pharetra. Sed enim diam, euismod at nibh sit amet, consectetur maximus neque. Donec quis mauris nec libero eleifend suscipit blandit non metus. Nam risus dolor, faucibus eu lorem eget, egestas vulputate elit. Pellentesque sed nisi est. Suspendisse venenatis ullamcorper quam et mollis. Etiam nec turpis libero. Vivamus ac faucibus leo. Integer pulvinar, libero a accumsan rhoncus, lectus turpis consectetur libero, ac laoreet enim ex nec metus. ',
-			isOver: true,
-		},
-		{
-			roundName: 'Round 3',
-			date: '2021-05-23',
-			desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet turpis in diam elementum venenatis. Curabitur ut diam non ipsum euismod pharetra. Sed enim diam, euismod at nibh sit amet, consectetur maximus neque. Donec quis mauris nec libero eleifend suscipit blandit non metus. Nam risus dolor, faucibus eu lorem eget, egestas vulputate elit. Pellentesque sed nisi est. Suspendisse venenatis ullamcorper quam et mollis. Etiam nec turpis libero. Vivamus ac faucibus leo. Integer pulvinar, libero a accumsan rhoncus, lectus turpis consectetur libero, ac laoreet enim ex nec metus. ',
-			isOver: false,
-		},
-		{
-			roundName: 'Round 4',
-			date: '2021-05-25',
-			desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet turpis in diam elementum venenatis. Curabitur ut diam non ipsum euismod pharetra. Sed enim diam, euismod at nibh sit amet, consectetur maximus neque. Donec quis mauris nec libero eleifend suscipit blandit non metus. Nam risus dolor, faucibus eu lorem eget, egestas vulputate elit. Pellentesque sed nisi est. Suspendisse venenatis ullamcorper quam et mollis. Etiam nec turpis libero. Vivamus ac faucibus leo. Integer pulvinar, libero a accumsan rhoncus, lectus turpis consectetur libero, ac laoreet enim ex nec metus. ',
-			isOver: false,
-		},
-	],
-};
 
 export const sigs = [
 	'Crypt',
@@ -49,10 +20,16 @@ export const questions = [
 		open: true,
 	},
 	{
+		question: 'Does each SIG have a different recruitment procedure and do I have to fill out separate registration forms for each one?',
+		answer:
+			'Yes, each SIG has its own registration form and varied selection procedure. The form links and further details about the rounds are mentioned on our website.',
+		open: false,
+	},
+	{
 		question: 'Is there a limit to the number of SIGs you can apply for?',
 		answer:
 			'No, you can apply for as many SIGs as you want to. However we recommend that you be a part of only 3 SIGs to ensure that you will be able to balance your time.',
-		open: true,
+		open: false,
 	},
 	{
 		question: 'How will I know if I am selected for the next round?',
@@ -71,12 +48,6 @@ export const questions = [
 		question: 'Does ISTE recruit 3rd years?',
 		answer:
 			'Yes we do! We do consider exceptional 3rd year candidates as well. However, a majority of our intake will comprise of 2nd years.',
-		open: false,
-	},
-	{
-		question: 'Does each SIG have a different recruitment procedure and do I have to fill out separate registration forms for each one?',
-		answer:
-			'Yes, each SIG has its own registration form and varied selection procedure. The form links and further details about the rounds are mentioned on our website.',
 		open: false,
 	},
 	{

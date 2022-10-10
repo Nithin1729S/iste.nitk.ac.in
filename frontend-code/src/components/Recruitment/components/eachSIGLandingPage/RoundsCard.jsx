@@ -4,7 +4,7 @@ import Styles from './css/rounds.module.css';
 function formattedDate(date) {
 	//date filter 
 
-	let dateFilter = new Date('2021-12-31');
+	let dateFilter = new Date('2022-12-31');
 	if (dateFilter.getTime() === date.getTime()) {
 		return "TBD";
 	}
