@@ -21,16 +21,21 @@ class RecsSIGComponent extends React.Component {
 			sigName: curSIGname,
 			data: {},
 			roundsData: [],
+			isLoading : true
 		};
 		this.fetchRecs = this.fetchRecs.bind(this);
 	}
 	async fetchRecs() {
+		this.setState({
+			isLoading: true
+		})
 		await baseRequest
 			.get(`/recs/${this.state.sigName}/`)
 			.then((res) => {
 				this.setState({
 					data: res.data,
 					roundsData: res.data.rounds,
+					isLoading : false
 				});
 			})
 			.catch((err) => console.log(err));
@@ -55,12 +60,13 @@ class RecsSIGComponent extends React.Component {
 	render() {
 		return (
 			<>
-				<TitleWithLine title={this.state.sigName} />
-				<Timeline rounds={this.state.roundsData} />
+				<TitleWithLine title={ this.state.sigName } />
+				{this.state.isLoading ? <h3>Loading...</h3>  : <><Timeline rounds={this.state.roundsData} />
 				<SigDescription
 					sig={this.state.sigName}
 					desc={this.state.data.descriptionSIG}
-				/>
+				/> </>    }
+				
 				<RegisterButton link={`${this.state.data.registerLink}`} />
 				{this.state.roundsData.map((round, index) => {
 					return <RoundsCard data={round} key={index} />;
