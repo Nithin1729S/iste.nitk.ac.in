@@ -9,7 +9,7 @@ export const baseRequest = axios.create({
 	baseURL: baseUrl,
 });
 
-export const enableRecs = true;
+export const enableRecs = false;
 export const enableExpo = true;
 export const enableCryptonite = true;
 export const enableLeaderboard = false;
