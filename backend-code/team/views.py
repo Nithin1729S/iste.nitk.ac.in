@@ -16,7 +16,8 @@ def indexView(request):
     aux_core_objs = AuxCore.objects.all()
 
     core_data = CoreSerializer(core_objs, many=True).data
-    print(core_data[0])
+    admin_core_data = core_data[:4]
+    core_data = core_data[4:]
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
 
     core_names = []
@@ -30,9 +31,10 @@ def indexView(request):
             members.append(member)
 
     members_data = UserSerializer(members, many=True).data
-    return Response({'core': core_data,
+    return Response({'admin_core':admin_core_data,
+                    'core': core_data,
                     'aux_core': aux_core_data,
-                     'members': members_data})
+                    'members': members_data})
 
 
 @api_view(['GET'])
@@ -42,6 +44,8 @@ def coreView(request):
 
     core_data = CoreSerializer(core_objs, many=True).data
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
-
-    return Response({'core': core_data,
+    admin_core_data = core_data[:4]
+    core_data = core_data[4:]
+    return Response({'admin_core':admin_core_data,
+                    'core': core_data,
                     'aux_core': aux_core_data})
