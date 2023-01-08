@@ -2,12 +2,21 @@ import React from "react";
 
 import MemberCard from "../RenderingComponents/MemberCard";
 import { baseRequest } from "../../constants";
+import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 const DataHeader = (props) => {
     return (
-        <div className="col l12 s12">
-            <h3>{props.header}</h3>
-            <br />
+        <div>
+            <div className="col l12 s12">
+                <h3>
+                    <span style={{marginRight: 10}}>{props.header}</span>
+                    {
+                        props.visible ? 
+                        <button className="btn" onClick={props.toggleVisible}><AiOutlineArrowDown /></button> : 
+                        <button className="btn" onClick={props.toggleVisible}><AiOutlineArrowUp /></button>
+                    }
+                </h3>
+            </div>
         </div>
     );
 };
@@ -43,17 +52,24 @@ const MemberList = (props) => {
 class TeamComponent extends React.Component {
     state = {
         memberData: {
+            admin_core: [],
             core: [],
             aux_core: [],
             members: [],
         },
+        visible: {
+            admin_core: true,
+            core: false,
+            aux_core: false,
+            members: false,
+        }
     };
 
     componentDidMount() {
         console.log("Fetching. . .");
         baseRequest.get("/team/").then((res) => {
             this.setState({
-                memberData: res.data,
+                memberData: {...this.state.memberData, ...res.data},
             });
         });
     }
@@ -63,22 +79,60 @@ class TeamComponent extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="row center">
-                        <DataHeader header="Core Members" />
-                        {this.state.memberData.core.map((data, index) => {
+                        <DataHeader
+                            header="Admin Core Members" 
+                            toggleVisible={() => {
+                                this.setState({ visible: {
+                                    admin_core: !this.state.visible.admin_core }
+                                });
+                            }}
+                            visible={this.state.visible.admin_core}
+                        />
+                        {this.state.visible.admin_core ? this.state.memberData.admin_core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
-                        })}
-                        <DataHeader header="Auxiliary Core Members" />
-                        {this.state.memberData.aux_core.map((data, index) => {
+                        }) : null}
+                        
+                        <DataHeader 
+                            header="Core Members" 
+                            toggleVisible={() => {
+                                this.setState({ visible: {
+                                    core: !this.state.visible.core }
+                                });
+                            }}
+                            visible={this.state.visible.core}
+                        />
+                        {this.state.visible.core ? this.state.memberData.core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
-                        })}
+                        }) : null}
+
+                        <DataHeader 
+                            header="Auxiliary Core Members"
+                            toggleVisible={() => {
+                                this.setState({ visible: {
+                                    aux_core: !this.state.visible.aux_core }
+                                });
+                            }}
+                            visible={this.state.visible.aux_core}
+                        />
+                        {this.state.visible.aux_core ? this.state.memberData.aux_core.map((data, index) => {
+                            return <DataItem data={data} index={index} />;
+                        }) : null}
                     </div>
                 </div>
                 <div className="row">
                     <div className="row center">
-                        <DataHeader header="Executive Members" />
-                        {this.state.memberData.members.map((memberInfo) => {
+                        <DataHeader 
+                            header="Executive Members" 
+                            toggleVisible={() => {
+                                this.setState({ visible: {
+                                    members: !this.state.visible.members }
+                                });
+                            }}
+                            visible={this.state.visible.members}
+                        />
+                        {this.state.visible.members ? this.state.memberData.members.map((memberInfo) => {
                             return <MemberList memberInfo={memberInfo} />;
-                        })}
+                        }) : null}
                     </div>
                 </div>
             </div>
