@@ -10,10 +10,14 @@ const DataHeader = (props) => {
             <div className="col l12 s12">
                 <h3>
                     <span style={{marginRight: 10}}>{props.header}</span>
-                    {
-                        props.visible ? 
-                        <button className="btn" onClick={props.toggleVisible}><AiOutlineArrowDown /></button> : 
-                        <button className="btn" onClick={props.toggleVisible}><AiOutlineArrowUp /></button>
+                    { props.showButton ?
+                        <>
+                            {
+                                props.visible ? 
+                                <button className="btn" onClick={props.toggleVisible}><AiOutlineArrowDown /></button> : 
+                                <button className="btn" onClick={props.toggleVisible}><AiOutlineArrowUp /></button>
+                            }
+                        </> : null
                     }
                 </h3>
             </div>
@@ -58,7 +62,7 @@ class TeamComponent extends React.Component {
             members: [],
         },
         visible: {
-            admin_core: true,
+            // admin_core: true,
             core: false,
             aux_core: false,
             members: false,
@@ -81,17 +85,10 @@ class TeamComponent extends React.Component {
                     <div className="row center">
                         <DataHeader
                             header="Admin Core Members" 
-                            toggleVisible={() => {
-                                this.setState({ visible: {
-                                    admin_core: !this.state.visible.admin_core }
-                                });
-                            }}
-                            visible={this.state.visible.admin_core}
                         />
-                        {this.state.visible.admin_core ? this.state.memberData.admin_core.map((data, index) => {
+                        {this.state.memberData.admin_core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
-                        }) : null}
-                        
+                        }) }
                         <DataHeader 
                             header="Core Members" 
                             toggleVisible={() => {
@@ -99,7 +96,8 @@ class TeamComponent extends React.Component {
                                     core: !this.state.visible.core }
                                 });
                             }}
-                            visible={this.state.visible.core}
+                            visible={ this.state.visible.core }
+                            showButton
                         />
                         {this.state.visible.core ? this.state.memberData.core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
@@ -113,6 +111,7 @@ class TeamComponent extends React.Component {
                                 });
                             }}
                             visible={this.state.visible.aux_core}
+                            showButton
                         />
                         {this.state.visible.aux_core ? this.state.memberData.aux_core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
@@ -128,7 +127,8 @@ class TeamComponent extends React.Component {
                                     members: !this.state.visible.members }
                                 });
                             }}
-                            visible={this.state.visible.members}
+                            visible={ this.state.visible.members }
+                            showButton
                         />
                         {this.state.visible.members ? this.state.memberData.members.map((memberInfo) => {
                             return <MemberList memberInfo={memberInfo} />;

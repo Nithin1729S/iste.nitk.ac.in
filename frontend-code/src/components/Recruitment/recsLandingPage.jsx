@@ -1,6 +1,6 @@
 import React from 'react';
 import { baseRequest } from '../../constants';
-import RecSigCards from './components/recsLandingPage/Cards Component/RecSigContainer';
+// import RecSigCards from './components/recsLandingPage/Cards Component/RecSigContainer';
 import FAQ from './components/recsLandingPage/FAQComponent';
 import TitleWithLine from '../RenderingComponents/TitleWithLine';
 import RecInstructions from './components/recsLandingPage/Instructions Component/recInstructions';
@@ -35,12 +35,12 @@ class RecruitmentComponent extends React.Component {
 				<div style={{ marginBottom: '5vh' }}>
 					<RecInstructions />
 				</div>
-				<TitleWithLine title="Special Interest Groups SIG(s)" />
-				<div className="container" style={{ marginBottom: '50px' }}>
+				{/* <TitleWithLine title="Special Interest Groups SIG(s)" /> */}
+				{/* <div className="container" style={{ marginBottom: '50px' }}>
 					{this.state.sigCardData.length > 0 && (
 						<RecSigCards cardList={this.state.sigCardData} linkOuter="/recs/" />
 					)}
-				</div>
+				</div> */}
 				<div style={{ marginBottom: '5vh' }}>
 					<FAQ questions={questions}/>
 				</div>

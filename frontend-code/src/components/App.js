@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, HashRouter } from 'react-router-dom';
+	import { Switch, Route, HashRouter } from 'react-router-dom';
 
 import TestUI from './UI/TestNewUIElement';
 import ScrollToTop from './UtilityComponents/ScrollToTop';
@@ -91,112 +91,6 @@ class App extends React.Component {
 							/>
 						) : null }
 
-						{/* Obsidian Routes */ }
-						
-{/* 						
-						{enableObsidian ? (
-							<Route
-								exact path="/obsidian/instructions"
-								render={(props) => (
-									<Instructions
-										{...props}
-										setFooterVal={(val) => this.changeFooterBackground(val)}
-									/>
-								)}
-							/>
-						) : null }
-						{enableObsidian ? (
-							<Route
-								exact path="/obsidian/login"
-								render={(props) => (
-									<Login
-										{...props}
-										setFooterVal={(val) => this.changeFooterBackground(val)}
-									/>
-								)}
-							/>
-						) : null }
-						{enableObsidian ? (
-							<Route
-								path="/obsidian/:id"
-								render={(props) => (
-									<Blackbox
-										{...props}
-										setFooterVal={(val) => this.changeFooterBackground(val)}
-									/>
-								)}
-							/>)
-							: null
-						}
-						{enableObsidian ? (
-							<Route
-								path="/obsidian/"
-								render={(props) => (
-									<Obsidian
-										{...props}
-										setFooterVal={(val) => this.changeFooterBackground(val)}
-									/>
-								)}
-							/>
-						) : null }
-						 */}
-						
-						{/* Obscura routes	*/}
-						{/* <Route
-							path="/obscura/leaderboard"
-							render={() => (
-								<Leaderboard setFooterVal={this.changeFooterBackground} />
-							)}
-						/> */}
-						{/* <Route
-							path="/obscura/year4"
-							render={() => (
-								<Year4 setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-						<Route
-							path="/obscura/year3"
-							render={() => (
-								<Year3 setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-						<Route
-							path="/obscura/year2"
-							render={() => (
-								<Year2 setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-						<Route
-							path="/obscura/year1"
-							render={() => (
-								<Year1 setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-						<Route
-							path="/obscura/dashboard"
-							render={() => (
-								<Dashboard setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-						<Route
-							path="/obscura/login"
-							render={() => (
-								<ObscuraLogin setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-
-						<Route
-							path="/obscura/instructions"
-							render={() => (
-								<Instructions setFooterVal={this.changeFooterBackground} />
-							)}
-						/>
-						<Route
-							path="/obscura"
-							render={() => (
-								<Obscura setFooterVal={this.changeFooterBackground} />
-							)}
-						/> */}
 						
 						<Route path="/test" component={TestUI} />
 						{/* <Route path="/squareonesig/:name" component={SIGSquareOne} /> */}
