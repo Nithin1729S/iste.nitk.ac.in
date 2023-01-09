@@ -2,11 +2,10 @@ import React from 'react';
 import { baseRequest } from '../../constants';
 // import RecSigCards from './components/recsLandingPage/Cards Component/RecSigContainer';
 import FAQ from './components/recsLandingPage/FAQComponent';
-import TitleWithLine from '../RenderingComponents/TitleWithLine';
+import RegisterButton from './components/eachSIGLandingPage/RegisterButton';
 import RecInstructions from './components/recsLandingPage/Instructions Component/recInstructions';
 import { questions } from './constants';
 
-// import { Link } from 'react-router-dom';
 
 class RecruitmentComponent extends React.Component {
 	constructor(props) {
@@ -31,8 +30,9 @@ class RecruitmentComponent extends React.Component {
 
 	render() {
 		return (
-			<div style={{ width: '90%', paddingLeft: '10%' }}>
-				<div style={{ marginBottom: '5vh' }}>
+			<div style={{ width: '90%', padding: '2% 0 0 10%' }}>
+				<RegisterButton link={null} />
+				<div style={ { marginBottom: '5vh' } }>
 					<RecInstructions />
 				</div>
 				{/* <TitleWithLine title="Special Interest Groups SIG(s)" /> */}

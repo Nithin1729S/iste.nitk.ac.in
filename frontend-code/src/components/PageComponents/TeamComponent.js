@@ -89,6 +89,8 @@ class TeamComponent extends React.Component {
                         {this.state.memberData.admin_core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
                         }) }
+                </div>
+                <div className="row center">
                         <DataHeader 
                             header="Core Members" 
                             toggleVisible={() => {
@@ -101,8 +103,9 @@ class TeamComponent extends React.Component {
                         />
                         {this.state.visible.core ? this.state.memberData.core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
-                        }) : null}
-
+                        }) : null }
+                </div>
+                    <div className="row center">
                         <DataHeader 
                             header="Auxiliary Core Members"
                             toggleVisible={() => {
@@ -117,8 +120,6 @@ class TeamComponent extends React.Component {
                             return <DataItem data={data} index={index} />;
                         }) : null}
                     </div>
-                </div>
-                <div className="row">
                     <div className="row center">
                         <DataHeader 
                             header="Executive Members" 
@@ -134,6 +135,8 @@ class TeamComponent extends React.Component {
                             return <MemberList memberInfo={memberInfo} />;
                         }) : null}
                     </div>
+                </div>
+                <div className="row">
                 </div>
             </div>
         );
