@@ -85,7 +85,7 @@ export const questions = [
 
 export const instructions = [
 	// 'Make sure to register <b>individually</b> for all the sigs you wish to apply to',
-	'To view the details of the recruitment process for a ISTE, read through the instructions and FAQs. Click on the <a class="btn indigo darken-4 white-text "><b>Register</b></a> button to be redirected to the registration form. ',
+	'To view the details of the recruitment process for a ISTE, read through the instructions and FAQs. Click on the <a class="btn indigo darken-4 white-text" href="https://forms.gle/26wALjm3MBKgn93aA" target="_blank"><b>Register</b></a> button to be redirected to the registration form. ',
 	// 'You can also access the respective SIG\'s recruitment page from the <a class="btn indigo darken-4 white-text "><b>Apply for recruitments!</b></a> button in the respective SIG\'s details page.',
 	'To view last year projects, click on the <a class="btn grey darken-1 white-text "><b>Expo</b></a> button in the navbar or the <a class="btn indigo darken-4 white-text "><b>Expo</b></a> button on the respective SIG\'s recruitment page.',
 	'To view the details of a SIG as well as this year\'s projects, select the respective SIG from the drop-down menu or click on the <a class="btn indigo darken-4 white-text "><b>Projects</b></a> button in the respective SIG\'s recruitment page.',
