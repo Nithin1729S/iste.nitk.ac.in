@@ -31,7 +31,7 @@ class RecruitmentComponent extends React.Component {
 	render() {
 		return (
 			<div style={{ width: '90%', padding: '2% 0 0 10%' }}>
-				<RegisterButton link={null} />
+				<RegisterButton link={"https://forms.gle/26wALjm3MBKgn93aA	"} />
 				<div style={ { marginBottom: '5vh' } }>
 					<RecInstructions />
 				</div>
