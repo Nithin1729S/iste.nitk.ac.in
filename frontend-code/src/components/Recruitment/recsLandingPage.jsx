@@ -28,6 +28,7 @@ class RecruitmentComponent extends React.Component {
 		this.fetchHome();
 	}
 
+	
 	render() {
 		return (
 			<div style={{ width: '90%', padding: '2% 0 0 10%' }}>
