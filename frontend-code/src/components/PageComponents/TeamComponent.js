@@ -2,23 +2,13 @@ import React from "react";
 
 import MemberCard from "../RenderingComponents/MemberCard";
 import { baseRequest } from "../../constants";
-import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 const DataHeader = (props) => {
     return (
         <div>
             <div className="col l12 s12">
                 <h3>
-                    <span style={{marginRight: 10}}>{props.header}</span>
-                    { props.showButton ?
-                        <>
-                            {
-                                props.visible ? 
-                                <button className="btn" onClick={props.toggleVisible}><AiOutlineArrowDown /></button> : 
-                                <button className="btn" onClick={props.toggleVisible}><AiOutlineArrowUp /></button>
-                            }
-                        </> : null
-                    }
+                    {props.header}
                 </h3>
             </div>
         </div>
@@ -61,12 +51,7 @@ class TeamComponent extends React.Component {
             aux_core: [],
             members: [],
         },
-        visible: {
-            // admin_core: true,
-            core: false,
-            aux_core: false,
-            members: false,
-        }
+        teamVisible : false
     };
 
     componentDidMount() {
@@ -89,54 +74,54 @@ class TeamComponent extends React.Component {
                         {this.state.memberData.admin_core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
                         }) }
-                </div>
-                <div className="row center">
-                        <DataHeader 
-                            header="Core Members" 
-                            toggleVisible={() => {
-                                this.setState({ visible: {
-                                    core: !this.state.visible.core }
-                                });
-                            }}
-                            visible={ this.state.visible.core }
-                            showButton
-                        />
-                        {this.state.visible.core ? this.state.memberData.core.map((data, index) => {
-                            return <DataItem data={data} index={index} />;
-                        }) : null }
-                </div>
-                    <div className="row center">
-                        <DataHeader 
-                            header="Auxiliary Core Members"
-                            toggleVisible={() => {
-                                this.setState({ visible: {
-                                    aux_core: !this.state.visible.aux_core }
-                                });
-                            }}
-                            visible={this.state.visible.aux_core}
-                            showButton
-                        />
-                        {this.state.visible.aux_core ? this.state.memberData.aux_core.map((data, index) => {
-                            return <DataItem data={data} index={index} />;
-                        }) : null}
                     </div>
-                    <div className="row center">
-                        <DataHeader 
-                            header="Executive Members" 
-                            toggleVisible={() => {
-                                this.setState({ visible: {
-                                    members: !this.state.visible.members }
-                                });
-                            }}
-                            visible={ this.state.visible.members }
-                            showButton
-                        />
-                        {this.state.visible.members ? this.state.memberData.members.map((memberInfo) => {
-                            return <MemberList memberInfo={memberInfo} />;
-                        }) : null}
-                    </div>
-                </div>
-                <div className="row">
+                    { !this.state.teamVisible ? 
+                        <div className="row center">
+                            <button
+                                className="btn center"
+                                onClick={
+                                    () => {
+                                        this.setState({
+                                            teamVisible : !this.state.teamVisible
+                                        })
+                                    }
+                                }
+                                >Show More</button>
+                        </div>
+                        : null
+                    }
+                    {
+                        this.state.teamVisible ?
+                            <>
+                                <div className="row center">
+                                        <DataHeader 
+                                            header="Core Members" 
+                                            
+                                        />
+                                        { this.state.memberData.core.map((data, index) => {
+                                            return <DataItem data={ data } index={ index } />;
+                                        }) } 
+                                </div> 
+                                <div className="row center">
+                                    <DataHeader 
+                                        header="Auxiliary Core Members"
+                                    />
+                                    {this.state.memberData.aux_core.map((data, index) => {
+                                        return <DataItem data={data} index={index} />;
+                                    })}
+                                </div>
+                                <div className="row center">
+                                    <DataHeader 
+                                        header="Executive Members" 
+                                    />
+                                    {this.state.memberData.members.map((memberInfo) => {
+                                        return <MemberList memberInfo={memberInfo} />;
+                                    })}
+                                </div>
+                            </>
+                            : null
+                    }
+                
                 </div>
             </div>
         );
