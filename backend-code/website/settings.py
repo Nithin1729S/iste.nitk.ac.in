@@ -62,7 +62,8 @@ INSTALLED_APPS = [
     'obscura',
     'squareonelb',
     'cryptonite',
-    'obsidian'
+    'obsidian',
+    'gallery'
 ]
 
 MIDDLEWARE = [

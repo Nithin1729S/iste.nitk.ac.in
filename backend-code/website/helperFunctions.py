@@ -21,6 +21,9 @@ def default_carousel_image_path():
     return 'carousel_home/familyistemobile.jpg'
 
 
+def default_gallery_image_path():
+    return 'logo_2.png'
+
 # UPLOAD PATHS
 
 
@@ -42,3 +45,7 @@ def carousel_upload_path(instance, filename):
 
 def project_poster_upload_path(instance, filename):
     return 'project_posters/{}_{}'.format(instance.id, filename)
+
+
+def gallery_image_upload_path(instance, filename):
+    return 'gallery_images/{}_{}'.format(instance.id, filename)
