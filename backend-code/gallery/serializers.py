@@ -1,9 +1,9 @@
-from .models import GalleryImages
+from .models import GalleryImage
 from rest_framework import serializers
 from website.serializers import DynamicFieldsModelSerializer
 
 
 class GallerySerializer(DynamicFieldsModelSerializer):
     class Meta:
-        model = GalleryImages
+        model = GalleryImage
         fields = "__all__"
