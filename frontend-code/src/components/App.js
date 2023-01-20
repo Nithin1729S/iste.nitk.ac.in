@@ -11,6 +11,7 @@ import EventComponent from './PageComponents/EventComponent';
 import SigComponent from './PageComponents/SigComponent';
 import TeamComponent from './PageComponents/TeamComponent';
 import ProjectComponent from './PageComponents/ProjectComponent';
+import Gallery from "./PageComponents/GalleryComponent";
 import ExpoHomeComponent from '../expo/Components/ExpoHomeComponent';
 import DescPage from '../expo/Components/DescPage';
 import SGPComponent from './PageComponents/SGPComponent';
@@ -68,6 +69,7 @@ class App extends React.Component {
 						<Route path="/awss/greek" component={Greek} />
 						<Route path="/awss/italian" component={Italian} />
 						<Route path="/awss" component={AWSS} />
+						<Route path="/gallery" component={Gallery} />
 						<Route path="/" component={HomeComponent} />
 					</Switch>
 				</div>

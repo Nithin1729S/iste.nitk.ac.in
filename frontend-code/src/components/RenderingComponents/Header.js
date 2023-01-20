@@ -66,6 +66,13 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	);
+	galleryNavHeader = (
+		<li>
+			<Link className="white-text" to="/gallery/">
+				Gallery
+			</Link>
+		</li>
+	);
 	expoNavHeader = (
 		<li>
 			<Link className="white-text" to="/expo/">
@@ -454,6 +461,7 @@ class Header extends React.Component {
 								{ enableRecs ? this.recsNavHeader : null }
 								{this.teamNavHeader}
 								{this.blogNavHeader}
+								{this.galleryNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
