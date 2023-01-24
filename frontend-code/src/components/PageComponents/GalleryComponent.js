@@ -25,12 +25,17 @@ class GalleryComponent extends React.Component {
           images: [...this.state.images, ...res.images],
       });
     });
+    console.log(this.state.images)
   }
 
   render() {
     return (
       <>
         <DataHeader header="Gallery" />
+
+        <div className="card">
+          <img className="card-image" src={this.state.images[0].imageLink} alt={this.state.images[0].caption} /> 
+        </div>
       </>
     );
   }
