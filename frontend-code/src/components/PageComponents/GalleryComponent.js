@@ -1,5 +1,10 @@
 import React from "react";
 import { baseRequest } from "../../constants";
+// Import the Cloudinary classes. 
+import {fill} from "@cloudinary/url-gen/actions/resize";
+import {CloudinaryImage} from '@cloudinary/url-gen';
+import { AdvancedImage } from '@cloudinary/react';
+
 
 const DataHeader = (props) => {
   return (
@@ -15,28 +20,41 @@ const DataHeader = (props) => {
 
 class GalleryComponent extends React.Component {
   state = {
-    images: []
+    images: [
+      {
+        caption: "The Best Crypt SIG Head",
+        imageLink: "../logo.png",
+        event: "Rahul OnlyFans"
+      }
+    ]
   }
 
   componentDidMount() {
     console.log("Fetching...");
-    baseRequest.get("/gallery/").then((res) => {
-      this.setState({
-          images: [...this.state.images, ...res.images],
-      });
-    });
-    console.log(this.state.images)
-  }
+    
+    // baseRequest.get("/gallery/").then((res) => {
+    //   this.setState({
+    //       images: [...this.state.images, ...res.images],
+    //   });
+    // });
+    // this.initialize();
+  } 
 
   render() {
     return (
-      <>
+      <div className="container">
         <DataHeader header="Gallery" />
 
-        <div className="card">
-          <img className="card-image" src={this.state.images[0].imageLink} alt={this.state.images[0].caption} /> 
+        <div className="card center" style={{width: '20vw', padding: 5}}>
+          <figure>
+            <AdvancedImage 
+              style={{width: '15vw'}} 
+              cldImg={new CloudinaryImage('sample', {cloudName: 'dlbqbd5pe'}).resize(fill().width(150).height(150))} 
+            />
+            <figcaption>{this.state.images[0].caption}</figcaption>
+          </figure>
         </div>
-      </>
+      </div>
     );
   }
 }
