@@ -22,11 +22,60 @@ class GalleryComponent extends React.Component {
   state = {
     images: [
       {
-        caption: "The Best Crypt SIG Head",
+        caption: "This is a test",
         imageLink: "../logo.png",
         event: "Rahul OnlyFans"
+      },
+      {
+        caption: "This is a test"
+      },
+      {
+        caption: "This is a test"
+      },
+      {
+        caption: "This is a test"
+      },
+      {
+        caption: "This is a test"
+      },
+      {
+        caption: "This is a test"
+      },{
+        caption: "This is a test"
+      },{
+        caption: "This is a test"
+      },{
+        caption: "This is a test"
+      },{
+        caption: "This is a test"
+      },{
+        caption: "This is a test"
+      },{
+        caption: "This is a test"
       }
     ]
+  }
+
+  renderCards() {
+    return (
+      <div className="row">
+        {this.state.images.map(image => {
+          return (
+            <div className="col">
+              <div className="card center" style={{width: '20vw', padding: 5}}>
+                <figure>
+                  <AdvancedImage 
+                    style={{width: '15vw'}} 
+                    cldImg={new CloudinaryImage('sample', {cloudName: 'dlbqbd5pe'}).resize(fill().width(150).height(150))} 
+                  />
+                  <figcaption>{image.caption}</figcaption>
+                </figure>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
   }
 
   componentDidMount() {
@@ -45,15 +94,7 @@ class GalleryComponent extends React.Component {
       <div className="container">
         <DataHeader header="Gallery" />
 
-        <div className="card center" style={{width: '20vw', padding: 5}}>
-          <figure>
-            <AdvancedImage 
-              style={{width: '15vw'}} 
-              cldImg={new CloudinaryImage('sample', {cloudName: 'dlbqbd5pe'}).resize(fill().width(150).height(150))} 
-            />
-            <figcaption>{this.state.images[0].caption}</figcaption>
-          </figure>
-        </div>
+        {this.renderCards()}
       </div>
     );
   }
