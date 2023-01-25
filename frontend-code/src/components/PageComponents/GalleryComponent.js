@@ -62,10 +62,10 @@ class GalleryComponent extends React.Component {
         {this.state.images.map(image => {
           return (
             <div className="col">
-              <div className="card center" style={{width: '20vw', padding: 5}}>
+              <div className="card center" style={{width: '45vw', padding: 5}}>
                 <figure>
                   <AdvancedImage 
-                    style={{width: '15vw'}} 
+                    style={{width: '30vw'}} 
                     cldImg={new CloudinaryImage('sample', {cloudName: 'dlbqbd5pe'}).resize(fill().width(150).height(150))} 
                   />
                   <figcaption>{image.caption}</figcaption>
