@@ -5,25 +5,19 @@ import { baseRequest } from "../../constants";
 
 const DataHeader = (props) => {
     return (
-
-        <div className="col l12 s12">
-            <div className="z-depth-2 margin-tb-16 padding-all-16">
+        <div>
+            <div className="col l12 s12">
                 <h3>
                     {props.header}
                 </h3>
-                <div className="bg-color-primary btn-large" >
-                    <i className="material-icons ">expand_more</i>
-                </div>
             </div>
-
         </div>
-
     );
 };
 
 const DataItem = (props) => {
     // default email address if email missing in backend
-    const email = props.data.email ? props.data.email : 'iste@nitk.edu.in'
+    const email=props.data.email ? props.data.email : 'iste@nitk.edu.in' 
     return (
         <div className="row proj-item">
             <MemberCard
@@ -43,7 +37,7 @@ const DataItem = (props) => {
 const MemberList = (props) => {
     const name = props.memberInfo.first_name + " " + props.memberInfo.last_name;
     return (
-        <div className="col l4 m6 s12 center ">
+        <div className="col l4 m6 s12 center">
             <h6 key={props.memberInfo.id}>{name}</h6>
         </div>
     );
@@ -57,14 +51,14 @@ class TeamComponent extends React.Component {
             aux_core: [],
             members: [],
         },
-        teamVisible: false
+        teamVisible : false
     };
 
     componentDidMount() {
         console.log("Fetching. . .");
         baseRequest.get("/team/").then((res) => {
             this.setState({
-                memberData: { ...this.state.memberData, ...res.data },
+                memberData: {...this.state.memberData, ...res.data},
             });
         });
     }
@@ -75,24 +69,24 @@ class TeamComponent extends React.Component {
                 <div className="row">
                     <div className="row center">
                         <DataHeader
-                            header="Admin Core Members"
+                            header="Admin Core Members" 
                         />
                         {this.state.memberData.admin_core.map((data, index) => {
                             return <DataItem data={data} index={index} />;
-                        })}
+                        }) }
                     </div>
-                    {!this.state.teamVisible ?
+                    { !this.state.teamVisible ? 
                         <div className="row center">
                             <button
                                 className="btn center"
                                 onClick={
                                     () => {
                                         this.setState({
-                                            teamVisible: !this.state.teamVisible
+                                            teamVisible : !this.state.teamVisible
                                         })
                                     }
                                 }
-                            >Show More</button>
+                                >Show More</button>
                         </div>
                         : null
                     }
@@ -100,16 +94,16 @@ class TeamComponent extends React.Component {
                         this.state.teamVisible ?
                             <>
                                 <div className="row center">
-                                    <DataHeader
-                                        header="Core Members"
-
-                                    />
-                                    {this.state.memberData.core.map((data, index) => {
-                                        return <DataItem data={data} index={index} />;
-                                    })}
-                                </div>
+                                        <DataHeader 
+                                            header="Core Members" 
+                                            
+                                        />
+                                        { this.state.memberData.core.map((data, index) => {
+                                            return <DataItem data={ data } index={ index } />;
+                                        }) } 
+                                </div> 
                                 <div className="row center">
-                                    <DataHeader
+                                    <DataHeader 
                                         header="Auxiliary Core Members"
                                     />
                                     {this.state.memberData.aux_core.map((data, index) => {
@@ -117,20 +111,17 @@ class TeamComponent extends React.Component {
                                     })}
                                 </div>
                                 <div className="row center">
-                                    <DataHeader
-                                        header="Executive Members"
+                                    <DataHeader 
+                                        header="Executive Members" 
                                     />
-
                                     {this.state.memberData.members.map((memberInfo) => {
                                         return <MemberList memberInfo={memberInfo} />;
                                     })}
-
-
                                 </div>
                             </>
                             : null
                     }
-
+                
                 </div>
             </div>
         );
