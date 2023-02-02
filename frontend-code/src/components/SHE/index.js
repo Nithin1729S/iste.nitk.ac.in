@@ -63,9 +63,9 @@ export class SHE extends Component {
                             </ul>
                         </div>
                     </SectionContainer>
-                    <section>
+                    <SectionOneLiner>
                         SHE’s core values are Inclusion, Integrity, Teamwork, Respect, and Dedication.
-                    </section>
+                    </SectionOneLiner>
                     <section>
                         <h2>The Team </h2>
                         <ImageDisplay data={teamData} />
@@ -84,12 +84,27 @@ const Header = styled.h1`
     text-align: center;
 `;
 
+const SectionOneLiner = styled.section`
+font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+    @media screen and (max-width:750px) {
+        font-size: 24px;
+
+    }
+`;
+
 const SectionContainer = styled.section`
 display:grid ;
 min-width: 90%;
-padding: 16px;
+padding: 0 16px;
 grid-template-columns: 2fr 5fr;
 align-items: center;
+border:2px solid var(--primary) ;
+margin: 16px ;
+background-color: #f2f3fe;
+box-shadow: 0px 0px 18px 7px #e1e3ff8a;
 h2{
     text-transform: uppercase;
     font-size:48px;
@@ -97,18 +112,22 @@ h2{
 div{
     font-size: 18px;
     margin-left: 16px;
+    padding: 24px;
     p{
         text-align: justify;
     }
+    border-left: 2px solid var(--primary);
 }
 @media screen and (max-width:750px) {
     grid-template-columns: 1fr;
     div{
     font-size: 16px;
     margin-left: 0px;
+    border: none;
+}
 
 }
-}
+
 
 
 
