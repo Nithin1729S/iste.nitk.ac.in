@@ -44,7 +44,7 @@ export class SHE extends Component {
                         <div>
                             <p>
                                 The Society for Her Empowerment (SHE) is a women's group that focuses on helping female
-                                students in ISTE NITK advance in their careers in engineering, business, and everything beyond. This group is dedicated to empowering women and providing them with the tools and resources they need to succeed in any environment. Through a plethora of events, we aim to create valuable and career-defining milestones for women and support their cause in pursuing a career of their choice. Using treasured skills and network obtained through this platform, we aim to enhance women’s creative and technical minds to the best for the society. These connections can be invaluable for members as they navigate their careers in tech, and can provide valuable guidance and support as they progress in their careers.
+                                students in ISTE NITK advance in their careers in engineering, business, and everything beyond. This group is dedicated to empowering women and providing them with the tools and resources they need to succeed in any environment. Through a plethora of events, we aim to create valuable and career-defining milestones for women and support their cause in pursuing a career of their choice. Using treasured skills and network obtained through this platform, we aim to enhance women’s creative and technical minds to the best for the society. These connections can be invaluable for members as they navigate their careers in tech, and can provide valuable guidance and support as they progress in their careers. 
                             </p>
                             {!this.state.showMore ? <ShowMore data-inline="true" onClick={() => this.setState({ showMore: true})}>Show More</ShowMore> : 
                             <p>
@@ -71,7 +71,15 @@ export class SHE extends Component {
                                 </ul>
                             </ListContainer>
                             <p>
-                                Our motto <b>‘Lead the Change’</b> is aptly put forward for women to seek inspiration and prepare you specifically for professional practice and future leadership roles.
+                                Our motto <b>'Empowering Women, Engineering the Future'</b> is aptly put forward for women to seek inspiration and prepare you specifically for professional practice and future leadership roles.
+                            </p>
+                        </div>
+                    </SectionContainer>
+                    <SectionContainer>
+                        <SectionHeader>Our Events</SectionHeader>
+                        <div>
+                            <p>
+                                SHE aims to host a variety of events and activities throughout the year, including guest lectures from successful female engineers, workshops on resume building and interview skills, events focused on topics such as coding, data science and networking opportunities with alumni that support the advancement of women in engineering.
                             </p>
                         </div>
                     </SectionContainer>
