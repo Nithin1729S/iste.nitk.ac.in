@@ -122,7 +122,7 @@ const ShowMore = styled.button`
 `
 
 const SectionHeader = styled.h2`
-    font-family: 'Dancing Script', cursive;    
+    font-family: 'PannaCotta', cursive;    
     text-transform: capitalize !important;
     color : #EA1B91;
 `;
@@ -143,7 +143,7 @@ const ListContainer = styled.div`
 
 const SectionOneLiner = styled.section`
     font-weight : 600;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'PannaCotta', cursive;
     text-align: center;
     font-size: 32px;
     padding: 16px;
@@ -152,7 +152,7 @@ const SectionOneLiner = styled.section`
     }
     span {
         color : #EA1B91;
-        font-family: 'Dancing Script', cursive;
+        font-family: 'PannaCotta', cursive;
     }
 `;
 

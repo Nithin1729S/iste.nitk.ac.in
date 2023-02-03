@@ -118,12 +118,12 @@ class Header extends React.Component {
 			<Link to="/she" className="waves-effect white-text"
 				style={
 					{
-						fontFamily: "'Dancing Script', cursive",
+						fontFamily: "'PannaCotta', cursive",
 						textTransform: "capitalize !important",
 						fontSize: "1.1em",
 						letterSpacing: "2px"
 					}}>
-				She
+				SHE
 			</Link>
 		</li>
 	)
