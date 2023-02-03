@@ -44,7 +44,17 @@ class App extends React.Component {
 				</Wrapper>
 				<div className="app-main">
 					<Switch>
-						<Route path="/she/" component={SHE}/>
+						<Route
+							path="/she/"
+							render={(props) => (
+								<SHE
+									{...props}
+									changeFooterVal={(val) =>
+										this.changeFooterBackground(val)
+									}
+								/>
+							)}
+						/>
 						<Route path="/smp/:name/"  component={SGPSigComponent} />
 						<Route path="/smp/"  component={SGPComponent} />
 						<Route path="/test" component={TestUI} />

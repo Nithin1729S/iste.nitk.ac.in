@@ -2,22 +2,22 @@ const teamData = [
     {
         "first_name" : "Andrea",
         "last_name" : "Thomas",
-        "image" : "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        "image" : "https://iste.nitk.ac.in/api//media/profile_pictures/677_Andrea.JPG"
     },
     {
         "first_name" : "Malvika",
         "last_name" : "Koushik",
-        "image" : "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        "image" : "https://iste.nitk.ac.in/api//media/profile_pictures/700_Malvika.jpg"
     },
     {
         "first_name" : "Shalaka",
         "last_name" : "Shankar",
-        "image" : "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        "image" : "https://iste.nitk.ac.in/api//media/profile_pictures/709_Shalaka.JPG"
     },
     {
         "first_name" : "Vanessa",
         "last_name" : "Fernandes",
-        "image" : "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        "image" : "https://iste.nitk.ac.in/api//media/profile_pictures/710_Vanessa.jpg"
     }
 ]
 

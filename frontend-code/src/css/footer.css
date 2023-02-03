@@ -1,6 +1,10 @@
 .footer .page-footer {
   background-color: var(--primary);
 }
+
+.she {
+  background-color: #EA1B91 !important;
+}
 .crypt {
   background-color: #0c0013 !important;
   background-image: url("../components/Transcend/Cryptonite/background.png");
