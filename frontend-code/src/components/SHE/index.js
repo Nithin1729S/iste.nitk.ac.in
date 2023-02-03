@@ -14,9 +14,12 @@ export class SHE extends Component {
     render() {
         return (
             <>
+                <br></br>
                 <Header>
                     <img src={sheLogo} alt="SHE Logo" />
                 </Header>
+                <br></br><br></br><br></br><br></br><br></br>
+
                 <div className="container">
                     <SectionContainer>
                         <SectionHeader>Our Mission</SectionHeader>
