@@ -136,7 +136,7 @@ const ListContainer = styled.div`
         list-style: none;
     }
     ul li::before {
-        content : "⭐ " ;
+        content : "♡ " ;
         color : #EA1B91;
     }
 `;
