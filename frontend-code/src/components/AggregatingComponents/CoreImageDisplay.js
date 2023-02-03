@@ -14,12 +14,13 @@ const CoreImageDisplay = (props) => {
                         return (
                             <div key={member.id} className="core_img z-depth-2">
                                 <div className="img__overlay">
-                                    {member.user.first_name}{" "}
+                                    {member.user.first_name} {" "}
                                     {member.user.last_name}
                                     <br />
                                     {member.role}
                                 </div>
                                 <img
+                                    loading = "lazy"
                                     src={`${baseUrl}${member.user.avatar}`}
                                     alt="person"
                                 />
