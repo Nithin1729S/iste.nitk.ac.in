@@ -6,8 +6,9 @@ class GalleryImage(models.Model):
         default="",
         max_length=100
     )
-    imageLink= models.ImageField(
-        blank=True
+    imageLink= models.CharField(
+        blank=True,
+        max_length=200
     )
     event= models.CharField(
         default="",
