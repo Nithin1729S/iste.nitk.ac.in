@@ -7,6 +7,7 @@ import Wrapper from './UtilityComponents/Wrapper';
 import Header from './RenderingComponents/Header';
 import Footer from './RenderingComponents/Footer';
 import HomeComponent from './PageComponents/HomeComponent';
+import EventComponent from './PageComponents/EventComponent';
 import SigComponent from './PageComponents/SigComponent';
 import TeamComponent from './PageComponents/TeamComponent';
 import ProjectComponent from './PageComponents/ProjectComponent';
@@ -21,7 +22,6 @@ import Italian from "./AWSS22/Stories/Italian";
 import Greek from "./AWSS22/Stories/Greek";
 import Mexican from "./AWSS22/Stories/Mexican";
 import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
-import SHE from './SHE'
 
 
 import '../css/constants.css';
@@ -45,17 +45,6 @@ class App extends React.Component {
 				</Wrapper>
 				<div className="app-main">
 					<Switch>
-						<Route
-							path="/she/"
-							render={(props) => (
-								<SHE
-									{...props}
-									changeFooterVal={(val) =>
-										this.changeFooterBackground(val)
-									}
-								/>
-							)}
-						/>
 						<Route path="/smp/:name/"  component={SGPSigComponent} />
 						<Route path="/smp/"  component={SGPComponent} />
 						<Route path="/test" component={TestUI} />

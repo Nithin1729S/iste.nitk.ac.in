@@ -42,7 +42,6 @@
     top: 0;
     transform: opacity 0.25s;
     z-index: 1;
-    font-size: 0.9em !important;
 }
 
 .coreImageDisplay .img__overlay:hover {

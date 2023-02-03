@@ -120,20 +120,6 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	)
-	sheNavHeader = (
-		<li>
-			<Link to="/she" className="waves-effect white-text"
-				style={
-					{
-						fontFamily: "'PannaCotta', cursive",
-						textTransform: "capitalize !important",
-						fontSize: "1.1em",
-						letterSpacing: "2px"
-					}}>
-				SHE
-			</Link>
-		</li>
-	)
 	// squareOneHeader = (
 	// 	<li>
 	// 		<Link to="/leaderboard/" className="waves-effect white-text">
@@ -346,7 +332,6 @@ class Header extends React.Component {
 		return (
 			<div className="header">
 				<ul id="mobile-menu" className="sidenav white-text">
-					{this.sheNavHeader}
 					{/* {this.loginNavHeaderMobile}
 					{this.eventNavHeaderMobile} */}
 					<li className="no-padding">
@@ -427,7 +412,6 @@ class Header extends React.Component {
 								{enableSMP ? this.smpNavHeader : null}
 								{/* {this.eventNavHeader}
 								{this.eventNavList} */}
-								{this.sheNavHeader}
 								<li>
 									<Link className="dropdown-trigger" data-target="sig-action">
 										SIGs
