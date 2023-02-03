@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian } from '../../constants';
+import { enableGallery, enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian } from '../../constants';
 // import {  enableLeaderboard } from '../../constants';
 
 class Header extends React.Component {
@@ -389,6 +389,7 @@ class Header extends React.Component {
 					{this.teamNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
+					{enableGallery? this.galleryNavHeader : null}
 					{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
@@ -461,8 +462,9 @@ class Header extends React.Component {
 								{ enableRecs ? this.recsNavHeader : null }
 								{this.teamNavHeader}
 								{this.blogNavHeader}
-								{this.galleryNavHeader}
+								{/* {this.galleryNavHeader} */}
 								{enableExpo ? this.expoNavHeader : null}
+								{enableGallery? this.galleryNavHeader : null}
 								{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
 								{/* {this.transcendNavHeader} */}

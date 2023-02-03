@@ -17,38 +17,6 @@ const DataHeader = (props) => {
 class GalleryComponent extends React.Component {
   state = {
     images: [
-//       {
-//         caption: "This is a test",
-//         imageLink: "../logo.png",
-//         event: "Rahul OnlyFans"
-//       },
-//       {
-//         caption: "This is a test"
-//       },
-//       {
-//         caption: "This is a test"
-//       },
-//       {
-//         caption: "This is a test"
-//       },
-//       {
-//         caption: "This is a test"
-//       },
-//       {
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       }
     ]
   }
 
