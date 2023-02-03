@@ -10,7 +10,7 @@ const ImageDisplay = (props) => {
                         return (
                             <ImageContainer key={member.id} className=" z-depth-2">
                                 <div className="img__overlay">
-                                    {member.first_name}
+                                    {member.first_name}{" "}
                                     {member.last_name}
                                     <br />
                                     {member.role}
@@ -29,17 +29,14 @@ const ImageDisplay = (props) => {
 }
 
 const ImageContainer = styled.div`
-width: 200px;
-height: 200px;
-border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
     display: flex;
-
-
     justify-content: center;
     overflow: hidden;
     position: relative;
     flex-direction: row;
-
     margin: 2%;
 `;
 
