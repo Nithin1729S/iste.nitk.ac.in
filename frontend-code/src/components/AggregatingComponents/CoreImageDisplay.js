@@ -20,6 +20,7 @@ const CoreImageDisplay = (props) => {
                                     {member.role}
                                 </div>
                                 <img
+                                    loading = "lazy"
                                     src={`${baseUrl}${member.user.avatar}`}
                                     alt="person"
                                 />
