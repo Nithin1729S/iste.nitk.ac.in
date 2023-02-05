@@ -16,43 +16,16 @@ const DataHeader = (props) => {
 
 class GalleryComponent extends React.Component {
   state = {
-    images: [
-//       {
-//         caption: "This is a test",
-//         imageLink: "../logo.png",
-//         event: "Rahul OnlyFans"
-//       },
-//       {
-//         caption: "This is a test"
-//       },
-//       {
-//         caption: "This is a test"
-//       },
-//       {
-//         caption: "This is a test"
-//       },
-//       {
-//         caption: "This is a test"
-//       },
-//       {
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       },{
-//         caption: "This is a test"
-//       }
-    ]
+    images: []
   }
 
+  
   renderCards() {
+    const imageStyle = {
+      width: "20vw",
+      // height: "45vw",
+    }
+
     return (
       <div className="row">
         {this.state.images.map(image => {
@@ -60,6 +33,7 @@ class GalleryComponent extends React.Component {
             <div className="col">
               <div className="card center" style={{width: '45vw', padding: 5}}>
                 <figure>
+                  <img src={image.imageLink} alt={image.caption} style={imageStyle} />
                   <figcaption>{image.caption}</figcaption>
                 </figure>
               </div>
@@ -74,11 +48,13 @@ class GalleryComponent extends React.Component {
     console.log("Fetching...");
     
     baseRequest.get("/gallery/").then((res) => {
+      console.log(res);
       this.setState({
-          images: [...this.state.images, ...res.images],
-      });
+          images: [...res.data.images],
+      }); 
+    }).then(() => {
+      console.log(this.state.images);
     });
-    this.initialize();
   } 
 
   render() {
