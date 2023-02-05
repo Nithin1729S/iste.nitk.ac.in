@@ -142,7 +142,7 @@ const ListContainer = styled.div`
 `;
 
 const SectionOneLiner = styled.section`
-    font-weight : 500;
+    font-weight : 600;
     font-family: 'PannaCotta', cursive;
     text-align: center;
     font-size: 32px;

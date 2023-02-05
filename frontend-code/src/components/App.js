@@ -1,5 +1,5 @@
 import React from 'react';
-	import { Switch, Route, HashRouter } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 
 import TestUI from './UI/TestNewUIElement';
 import ScrollToTop from './UtilityComponents/ScrollToTop';
@@ -22,6 +22,7 @@ import Mexican from "./AWSS22/Stories/Mexican";
 import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 import SHE from './SHE'
 
+import {enableSHE} from '../constants'
 
 import '../css/constants.css';
 
@@ -44,7 +45,8 @@ class App extends React.Component {
 				</Wrapper>
 				<div className="app-main">
 					<Switch>
-						<Route
+						{ enableSHE ? 
+							<Route
 							path="/she/"
 							render={(props) => (
 								<SHE
@@ -54,7 +56,9 @@ class App extends React.Component {
 									}
 								/>
 							)}
-						/>
+							/> : null
+						}
+						
 						<Route path="/smp/:name/"  component={SGPSigComponent} />
 						<Route path="/smp/"  component={SGPComponent} />
 						<Route path="/test" component={TestUI} />
