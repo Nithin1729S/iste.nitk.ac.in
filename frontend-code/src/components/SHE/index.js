@@ -45,14 +45,17 @@ export class SHE extends Component {
                     <SectionContainer>
                         <SectionHeader>What is SHE?</SectionHeader>
                         <div>
-                                The Society for Her Empowerment (SHE) is a women's group that focuses on helping female
-                                students in ISTE NITK advance in their careers in engineering, business, and everything beyond. This group is dedicated to empowering women and providing them with the tools and resources they need to succeed in any environment. Through a plethora of events, we aim to create valuable and career-defining milestones for women and support their cause in pursuing a career of their choice.  
-                                {!this.state.showMore ? <ShowMore data-inline="true" onClick={() => this.setState({ showMore: true})}>Show More</ShowMore> : 
-                                <p>
-                                    Using treasured skills and network obtained through this platform, we aim to enhance women’s creative and technical minds to the best for the society. These connections can be invaluable for members as they navigate their careers in tech, and can provide valuable guidance and support as they progress in their careers.
-                                    
-                                    Along with being an abode for professional development, SHE also provides a supportive community for its members. The group offers a safe and inclusive space for women in ISTE to connect with one another, share their experiences, and offer support and guidance to one another. SHE is an irreplaceable resource for women in ISTE NITK who are interested in pursuing careers in technology and beyond. By providing support, resources, and community to its members, this group is committed to helping women succeed and advance in their careers.
-                                </p>
+                            The Society for Her Empowerment (SHE) is a women's group that focuses on helping female
+                            students in ISTE NITK advance in their careers in engineering, business, and everything beyond. This group is dedicated to empowering women and providing them with the tools and resources they need to succeed in any environment. Through a plethora of events, we aim to create valuable and career-defining milestones for women and support their cause in pursuing a career of their choice.
+                            {!this.state.showMore ? <ShowMore data-inline="true" onClick={() => this.setState({ showMore: true })}>Show More</ShowMore> :
+                                <>
+                                    <p>
+                                        Using treasured skills and network obtained through this platform, we aim to enhance women’s creative and technical minds to the best for the society. These connections can be invaluable for members as they navigate their careers in tech, and can provide valuable guidance and support as they progress in their careers.
+
+                                        Along with being an abode for professional development, SHE also provides a supportive community for its members. The group offers a safe and inclusive space for women in ISTE to connect with one another, share their experiences, and offer support and guidance to one another. SHE is an irreplaceable resource for women in ISTE NITK who are interested in pursuing careers in technology and beyond. By providing support, resources, and community to its members, this group is committed to helping women succeed and advance in their careers.
+                                    </p>
+                                    <ShowMore data-inline="true" onClick={() => this.setState({ showMore: false })}>Show Less</ShowMore>
+                                </>
                             }
                         </div>
                     </SectionContainer>
@@ -122,7 +125,7 @@ const ShowMore = styled.button`
 `
 
 const SectionHeader = styled.h2`
-    font-family: 'PannaCotta', cursive;    
+    font-family: 'PannaCotta', cursive;
     text-transform: capitalize !important;
     color : #EA1B91;
 `;
