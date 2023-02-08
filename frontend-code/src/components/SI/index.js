@@ -79,7 +79,7 @@ export class SI extends Component {
           <HeaderH2>ISTE through the years</HeaderH2>
           <br></br>
           <OneSection>
-            {/* <SectionHeader>Why SHE?</SectionHeader> */}
+
             <div>
 
               <NumberList>

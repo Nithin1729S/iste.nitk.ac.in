@@ -25,7 +25,7 @@ import SHE from './SHE'
 import { enableSHE } from '../constants'
 
 import '../css/constants.css';
-import SI from './SI';
+
 
 
 
@@ -46,7 +46,7 @@ class App extends React.Component {
 				</Wrapper>
 				<div className="app-main">
 					<Switch>
-						<Route path="/si" component={SI} />
+
 						{enableSHE ?
 							<Route
 								path="/she/"
