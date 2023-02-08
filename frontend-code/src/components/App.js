@@ -22,9 +22,10 @@ import Mexican from "./AWSS22/Stories/Mexican";
 import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 import SHE from './SHE'
 
-import {enableSHE} from '../constants'
+import { enableSHE } from '../constants'
 
 import '../css/constants.css';
+import SI from './SI';
 
 
 
@@ -45,22 +46,23 @@ class App extends React.Component {
 				</Wrapper>
 				<div className="app-main">
 					<Switch>
-						{ enableSHE ? 
+						<Route path="/si" component={SI} />
+						{enableSHE ?
 							<Route
-							path="/she/"
-							render={(props) => (
-								<SHE
-									{...props}
-									changeFooterVal={(val) =>
-										this.changeFooterBackground(val)
-									}
-								/>
-							)}
+								path="/she/"
+								render={(props) => (
+									<SHE
+										{...props}
+										changeFooterVal={(val) =>
+											this.changeFooterBackground(val)
+										}
+									/>
+								)}
 							/> : null
 						}
-						
-						<Route path="/smp/:name/"  component={SGPSigComponent} />
-						<Route path="/smp/"  component={SGPComponent} />
+
+						<Route path="/smp/:name/" component={SGPSigComponent} />
+						<Route path="/smp/" component={SGPComponent} />
 						<Route path="/test" component={TestUI} />
 						<Route
 							path="/expo"
@@ -78,12 +80,13 @@ class App extends React.Component {
 						<Route path="/team" component={TeamComponent} />
 						<Route path="/project/:id" component={ProjectComponent} />
 						<Route path="/recs" component={RecruitmentComponent} />
-						<Route path="/awss/egyptian" component={ Egyptian } />
+						<Route path="/awss/egyptian" component={Egyptian} />
 						<Route path="/awss/mexican" component={Mexican} />
 						<Route path="/awss/greek" component={Greek} />
 						<Route path="/awss/italian" component={Italian} />
 						<Route path="/awss" component={AWSS} />
 						<Route path="/" component={HomeComponent} />
+
 					</Switch>
 				</div>
 				<Wrapper shouldRender={this.state.headerShouldRender}>
