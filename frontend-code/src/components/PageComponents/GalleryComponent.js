@@ -52,7 +52,7 @@ class GalleryComponent extends React.Component {
             </div>
           </div> */}
           <img src={image.imageLink} alt={image.caption} />
-          <p>{image.caption}</p>
+          <p>{image.event}</p>
         </div>
       );
     }
@@ -63,7 +63,7 @@ class GalleryComponent extends React.Component {
 
         <div className="row">
           <div className="col s6 push-s3">
-            <Carousel infiniteLoop useKeyboardArrows autoPlay style={{backgroundColor: 'none'}}>
+            <Carousel infiniteLoop dynamicHeight={true}>
               {cards} 
             </Carousel>
           </div>
