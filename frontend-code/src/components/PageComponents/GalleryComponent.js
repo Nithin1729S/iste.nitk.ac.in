@@ -1,9 +1,7 @@
 import React from "react";
 import { baseRequest } from "../../constants";
 
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import ImageGallery from 'react-image-gallery';
 
 const DataHeader = (props) => {
   return (
@@ -37,6 +35,21 @@ class GalleryComponent extends React.Component {
   } 
 
   render() {
+    const images = [
+      {
+        original: 'https://picsum.photos/id/1018/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1018/250/150/',
+      },
+      {
+        original: 'https://picsum.photos/id/1015/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1015/250/150/',
+      },
+      {
+        original: 'https://picsum.photos/id/1019/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1019/250/150/',
+      },
+    ];
+
     let cards = []
     for (let image of this.state.images) {
       cards.push(
@@ -50,7 +63,7 @@ class GalleryComponent extends React.Component {
               <i class="material-icons right">close</i><br/>{image.caption}
               </span>
             </div>
-          </div>
+          </div>  
         </div>
       );
     }
@@ -61,7 +74,7 @@ class GalleryComponent extends React.Component {
 
         <div className="row">
           <div className="col s6 push-s3">
-            {cards}
+            <ImageGallery items={images} />
           </div>
         </div>
       </div>
