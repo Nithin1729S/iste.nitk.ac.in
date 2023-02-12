@@ -10,7 +10,7 @@ import HomeComponent from './PageComponents/HomeComponent';
 import SigComponent from './PageComponents/SigComponent';
 import TeamComponent from './PageComponents/TeamComponent';
 import ProjectComponent from './PageComponents/ProjectComponent';
-import Gallery from "./PageComponents/GalleryComponent";
+import Gallery from "./Gallery";
 import ExpoHomeComponent from './expo/Components/ExpoHomeComponent';
 import DescPage from './expo/Components/DescPage';
 import SGPComponent from './PageComponents/SGPComponent';
