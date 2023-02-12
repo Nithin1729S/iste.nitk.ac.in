@@ -4,4 +4,5 @@ from gallery import views
 app_name = 'team'
 urlpatterns = [
     path('', views.indexView, name='index'),
+    path('socialInitiative/',views.socialView,name='social')
 ]
