@@ -2,7 +2,7 @@ import React from "react";
 import { baseRequest } from "../../constants";
 
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "../../css/gallery-carousel.css";
 
 
 const DataHeader = (props) => {
@@ -52,7 +52,7 @@ class GalleryComponent extends React.Component {
             </div>
           </div> */}
           <img src={image.imageLink} alt={image.caption} />
-          <p>{image.event}</p>
+          <p className="legend">Test Caption</p>
         </div>
       );
     }
@@ -61,6 +61,13 @@ class GalleryComponent extends React.Component {
       <div>
         <DataHeader header="Gallery" />
 
+        <div className="row">
+          <div className="col s6 push-s3">
+            <Carousel infiniteLoop dynamicHeight={true}>
+              {cards} 
+            </Carousel>
+          </div>
+        </div>
         <div className="row">
           <div className="col s6 push-s3">
             <Carousel infiniteLoop dynamicHeight={true}>
