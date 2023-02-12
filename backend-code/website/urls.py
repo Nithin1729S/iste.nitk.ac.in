@@ -3,6 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 admin.site.site_header = "ISTE Website Admin Page"
 admin.site.index_title = "Admin page"
 urlpatterns = [
@@ -22,5 +23,5 @@ urlpatterns = [
     path('obscura/', include('obscura.urls', namespace='obscura')),
     path('cryptonite/', include('cryptonite.urls', namespace='cryptonite')),
     path('obsidian/', include('obsidian.urls', namespace="obsidian")),
-    path('gallery',include("gallery.urls",namespace="gallery"))
+    path('gallery/',include("gallery.urls",namespace="gallery"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

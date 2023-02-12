@@ -9,6 +9,7 @@ export const baseRequest = axios.create({
 	baseURL: baseUrl,
 });
 
+export const enableGallery = false;
 export const enableRecs = false;
 export const enableExpo = true;
 export const enableSMP = false;
