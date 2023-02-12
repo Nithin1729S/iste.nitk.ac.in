@@ -41,7 +41,7 @@ class GalleryComponent extends React.Component {
     for (let image of this.state.images) {
       cards.push(
         <div>
-          {/* <div className="card">
+          <div className="card">
             <div className="card-image waves-block waves-light">
               <img className="activator responsive_img" src={image.imageLink} alt={image.caption} />
             </div>
@@ -50,9 +50,7 @@ class GalleryComponent extends React.Component {
               <i class="material-icons right">close</i><br/>{image.caption}
               </span>
             </div>
-          </div> */}
-          <img src={image.imageLink} alt={image.caption} />
-          <p>{image.event}</p>
+          </div>
         </div>
       );
     }
@@ -63,9 +61,7 @@ class GalleryComponent extends React.Component {
 
         <div className="row">
           <div className="col s6 push-s3">
-            <Carousel infiniteLoop dynamicHeight={true}>
-              {cards} 
-            </Carousel>
+            {cards}
           </div>
         </div>
       </div>
