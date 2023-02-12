@@ -1,7 +1,9 @@
 import React from "react";
 import { baseRequest } from "../../constants";
 
-import ImageGallery from 'react-image-gallery';
+import { Carousel } from 'react-responsive-carousel';
+import "../../css/gallery-carousel.css";
+
 
 const DataHeader = (props) => {
   return (
@@ -54,7 +56,7 @@ class GalleryComponent extends React.Component {
     for (let image of this.state.images) {
       cards.push(
         <div>
-          <div className="card">
+          {/* <div className="card">
             <div className="card-image waves-block waves-light">
               <img className="activator responsive_img" src={image.imageLink} alt={image.caption} />
             </div>
@@ -63,7 +65,9 @@ class GalleryComponent extends React.Component {
               <i class="material-icons right">close</i><br/>{image.caption}
               </span>
             </div>
-          </div>  
+          </div> */}
+          <img src={image.imageLink} alt={image.caption} />
+          <p className="legend">Test Caption</p>
         </div>
       );
     }
@@ -74,7 +78,9 @@ class GalleryComponent extends React.Component {
 
         <div className="row">
           <div className="col s6 push-s3">
-            <ImageGallery items={images} />
+            <Carousel infiniteLoop dynamicHeight={true}>
+              {cards} 
+            </Carousel>
           </div>
         </div>
       </div>

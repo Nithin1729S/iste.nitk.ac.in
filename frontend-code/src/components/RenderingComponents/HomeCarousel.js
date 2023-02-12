@@ -1,7 +1,7 @@
 import React from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-import '../../css/carousel.css';
+import '../../css/homeCarousel.css';
 import { baseUrl } from '../../constants';
 import { enableSMP,enableRecs } from '../../constants';
 import { Link } from 'react-router-dom';
