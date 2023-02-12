@@ -37,21 +37,6 @@ class GalleryComponent extends React.Component {
   } 
 
   render() {
-    const images = [
-      {
-        original: 'https://picsum.photos/id/1018/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1018/250/150/',
-      },
-      {
-        original: 'https://picsum.photos/id/1015/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1015/250/150/',
-      },
-      {
-        original: 'https://picsum.photos/id/1019/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1019/250/150/',
-      },
-    ];
-
     let cards = []
     for (let image of this.state.images) {
       cards.push(
@@ -67,7 +52,7 @@ class GalleryComponent extends React.Component {
             </div>
           </div> */}
           <img src={image.imageLink} alt={image.caption} />
-          <p className="legend">Test Caption</p>
+          <p className="legend">{image.event}</p>
         </div>
       );
     }
