@@ -16,14 +16,20 @@ class GalleryComponent extends React.Component {
     state = {
         images: [
             {
-                imageLink:
+                "event": "tested",
+                "imageLinks": [
                     'https://res.cloudinary.com/iste-nitk-website/image/upload/v1675586733/Gallery/pics_2022/To_be_honest_kcq7tv.png',
+                    'https://res.cloudinary.com/iste-nitk-website/image/upload/v1675586732/Gallery/pics_2022/Obscura_mlbhy5.png'
+                ]            
             },
             {
-                imageLink:
-                    'https://res.cloudinary.com/iste-nitk-website/image/upload/v1675586732/Gallery/pics_2022/Obscura_mlbhy5.png',
-            },
+                "event": "default",
+                "imageLinks": [
+                    "https://res.cloudinary.com/dmxcn1knn/image/upload/v1675444601/Gallery/Blueprint.png"
+                ]
+            }
         ],
+        events: ["tested", "default"]
     };
 
     componentDidMount() {
@@ -32,30 +38,41 @@ class GalleryComponent extends React.Component {
         baseRequest.get('/gallery/').then(res => {
             console.log(res);
             this.setState({
-                images: [...this.state.images, ...res.data.images],
+                // images: [...this.state.images, ...res.data.images],
             });
         });
     }
     Loading() { 
         return <h2>🌀 Loading...</h2>;
     }
-    render() {
-        let cards = [];
+
+    getImageArray(event) {
         for (let image of this.state.images) {
-            cards.push(
-                <div>
-                    {/* <div className="card">
-            <div className="card-image waves-block waves-light">
-              <img className="activator responsive_img" src={image.imageLink} alt={image.caption} />
-            </div>
-            <div className="card-reveal" style={{opacity: 0.8}}>
-              <span className="card-title grey-text text-darken-4">
-              <i class="material-icons right">close</i><br/>{image.caption}
-              </span>
-            </div>
-          </div> */}
-                    <img src={ image.imageLink } alt={ image.caption } loading="lazy" />
-                    <p className="legend">Test Caption</p>
+            console.log(image);
+            if (image.event === event) {
+                let cards = [];
+                for (let link of image.imageLinks) {
+                    cards.push(
+                        <div>
+                            <img src={ link } alt={ image.event } loading="lazy" />
+                        </div>
+                    );
+                }
+                return cards;
+            }
+        }
+        return [];
+    }
+    render() {
+        let res = []
+        for (let event of this.state.events) {
+            res.push(
+                <div className="row">
+                    <div className="col s6 push-s3">
+                        <Carousel infiniteLoop dynamicHeight={ true }>
+                            { this.getImageArray(event) }
+                        </Carousel>
+                    </div>
                 </div>
             );
         }
@@ -64,22 +81,7 @@ class GalleryComponent extends React.Component {
             <div>
                 <DataHeader header="Gallery" />
                 <Suspense fallback={ <this.Loading /> }>
-                    {/* Put each of the row divs in separate component
-                    will be cleaner when you use map to render */}
-                    <div className="row">
-                        <div className="col s6 push-s3">
-                            <Carousel infiniteLoop dynamicHeight={ true }>
-                                { cards }
-                            </Carousel>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col s6 push-s3">
-                            <Carousel infiniteLoop dynamicHeight={ true }>
-                                { cards }
-                            </Carousel>
-                        </div>
-                    </div>
+                    { res }
                 </Suspense>
             </div>
         );
