@@ -53,7 +53,7 @@ class GalleryComponent extends React.Component {
                 let cards = [];
                 for (let link of image.imageLinks) {
                     cards.push(
-                        <div>
+                        <div className='image-box'>
                             <img src={ link } alt={ image.event } loading="lazy" />
                         </div>
                     );
@@ -68,10 +68,11 @@ class GalleryComponent extends React.Component {
         for (let event of this.state.events) {
             res.push(
                 <div className="row">
-                    <div className="col s6 push-s3">
+                    <div className="col s6 push-s3 main-box">
                         <Carousel infiniteLoop dynamicHeight={ true }>
                             { this.getImageArray(event) }
                         </Carousel>
+                        <span>{event}</span>
                     </div>
                 </div>
             );
