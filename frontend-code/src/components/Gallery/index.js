@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 import { baseRequest } from '../../constants';
 
-import { Carousel } from 'react-responsive-carousel';
-import './constants/gallery-carousel.css';
+
+
+import EventCarousel from './EventCarousel';
 
 const DataHeader = props => {
     return (
@@ -35,10 +36,11 @@ class GalleryComponent extends React.Component {
     componentDidMount() {
         console.log('Fetching...');
 
-        baseRequest.get('/gallery/').then(res => {
-            console.log(res);
+        baseRequest.get('/gallery/event/').then(res => {
+            console.log(res.data.images);
             this.setState({
                 // images: [...this.state.images, ...res.data.images],
+                events : res.data.images
             });
         });
     }
@@ -46,43 +48,68 @@ class GalleryComponent extends React.Component {
         return <h2>🌀 Loading...</h2>;
     }
 
-    getImageArray(event) {
-        for (let image of this.state.images) {
-            console.log(image);
-            if (image.event === event) {
-                let cards = [];
-                for (let link of image.imageLinks) {
-                    cards.push(
-                        <div className='image-box'>
-                            <img src={ link } alt={ image.event } loading="lazy" />
-                        </div>
-                    );
-                }
-                return cards;
-            }
+    getImageArray(eventData) {
+        console.log(eventData)
+        console.log(eventData.imageLinks)
+        let imageLinks = eventData.imageLinks
+        console.log(imageLinks.length)
+        for (const imageLink of imageLinks) {
+            console.log(imageLink)
         }
+        // for (let image of eventData.imageLinks) {
+        //     console.log(image);
+        //     let cards = [];
+        //     cards.push(
+        //         <div className='image-box'>
+        //             <img src={ image } alt={ eventData.event } loading="lazy" />
+        //         </div>
+        //     );
+        //     // for (let link of image.imageLinks) {
+        //     // }
+        //     return cards;
+        //     // if (image.event === event) {
+        //     // }
+        // }
         return [];
     }
     render() {
-        let res = []
-        for (let event of this.state.events) {
-            res.push(
-                <div className="row">
-                    <div className="col s6 push-s3 main-box">
-                        <Carousel infiniteLoop dynamicHeight={ true }>
-                            { this.getImageArray(event) }
-                        </Carousel>
-                        <span>{event}</span>
-                    </div>
-                </div>
-            );
-        }
+        // let res = []
+        // for (let event of this.state.events) {
+        //     console.log(event)
+        //     res.push(
+        //         <div className="row">
+        //             <div className="col s6 push-s3 main-box">
+        //                 <Carousel infiniteLoop dynamicHeight={ true }>
+        //                     { this.getImageArray(event) }
+        //                 </Carousel>
+        //                 <span>{event}</span>
+        //             </div>
+        //         </div>
+        //     );
+        // }
 
         return (
             <div>
                 <DataHeader header="Gallery" />
                 <Suspense fallback={ <this.Loading /> }>
-                    { res }
+                    {
+                        this.state.eventData.length === 0 ?
+                            null :
+                            this.state.eventData.map((index, eventData) => {
+                                const {event,imageLinks} = eventData
+                                return (
+                                        <div className="row" key={index}>
+                                            <div className="col s6 push-s3 main-box">
+                                                <EventCarousel 
+                                                    eventName={ event }
+                                                    links = {imageLinks}
+                                                />
+                                                <span>{event}</span>
+                                            </div>
+                                        </div>
+                                )
+                        })   
+                    }
                 </Suspense>
             </div>
         );
