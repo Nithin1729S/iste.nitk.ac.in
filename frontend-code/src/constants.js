@@ -13,3 +13,4 @@ export const enableGallery = true;
 export const enableRecs = false;
 export const enableExpo = true;
 export const enableSMP = false;
+export const enableSHE = true;
