@@ -44,7 +44,7 @@ class GalleryComponent extends React.Component {
                                 const { event, imageLinks } = eventData
                                 return (
                                     <CarouselContainer className="row" key={ index }>
-                                        <div className="col s6 push-s3">
+                                        <div className="col l6 push-l3 m6 push-m3 s9 push-s2">
                                             <EventCarousel
                                                 eventName={ event }
                                                 links={ imageLinks }
@@ -54,7 +54,6 @@ class GalleryComponent extends React.Component {
                                 )
                             })
                     }
-
                 </Suspense>
             </div>
         );

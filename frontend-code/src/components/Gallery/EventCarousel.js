@@ -4,7 +4,6 @@ import { Carousel } from 'react-responsive-carousel';
 import './constants/gallery-carousel.css';
 
 const EventCarousel = ({ eventName, links }) => {
-    console.log(eventName)
     return (
         <CarouselFrame>
             <Carousel className="eventCarousel" infiniteLoop dynamicHeight={ true }>
