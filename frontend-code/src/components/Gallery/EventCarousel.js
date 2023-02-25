@@ -9,10 +9,10 @@ const EventCarousel = ({ eventName, links }) => {
             <Carousel className="eventCarousel" infiniteLoop dynamicHeight={ true }>
                 { links.map((link) => {
                     return (
-                        <div>
-                            <img src={ link } alt={ eventName} loading="lazy" />
+                        <CarouselImageContainer>
+                            <img src={ link } alt={ eventName} loading = "lazy" />
                             <p className="legend">{eventName}</p>
-                        </div>
+                        </CarouselImageContainer>
                     )
                 })}
             </Carousel>
@@ -20,6 +20,13 @@ const EventCarousel = ({ eventName, links }) => {
         </CarouselFrame>
     )
 }
+
+const CarouselImageContainer = styled.div`
+    img {
+        height : auto;
+        max-width : 100%;
+    }
+`
 
 const CarouselFrame = styled.div`
     padding : 20px;

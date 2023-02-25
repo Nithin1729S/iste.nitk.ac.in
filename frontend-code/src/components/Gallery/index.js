@@ -36,15 +36,15 @@ class GalleryComponent extends React.Component {
             <div>
                 <DataHeader header="Gallery" />
                 <Suspense fallback={ <this.Loading /> }>
-
+                <CarouselTopContainer>
                     {
                         this.state.eventData.length === 0 ?
                             null :
                             this.state.eventData.map((eventData, index) => {
                                 const { event, imageLinks } = eventData
                                 return (
-                                    <CarouselContainer className="row" key={ index }>
-                                        <div className="col l6 push-l3 m6 push-m3 s9 push-s2">
+                                    <CarouselContainer key={ index }>
+                                        <div>
                                             <EventCarousel
                                                 eventName={ event }
                                                 links={ imageLinks }
@@ -54,11 +54,25 @@ class GalleryComponent extends React.Component {
                                 )
                             })
                     }
+                </CarouselTopContainer>        
                 </Suspense>
             </div>
         );
     }
 }
+
+const CarouselTopContainer = styled.div`
+    display : flex;
+    flex-direction : column;
+    max-width :100vw;
+    width : 60%;
+    justify-content : center;
+    align-items : center;
+    margin : auto;
+    @media (max-width : 500px) {
+        width : 80%;
+    }
+`
 
 const CarouselContainer = styled.div`
     margin : 65px 0 50px 0; 
