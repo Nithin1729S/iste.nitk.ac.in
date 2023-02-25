@@ -1,7 +1,6 @@
 import React from 'react';
 import M from 'materialize-css';
 import { Link } from 'react-router-dom';
-import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
