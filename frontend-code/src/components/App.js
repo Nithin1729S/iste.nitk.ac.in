@@ -20,6 +20,7 @@ import Greek from "./AWSS22/Stories/Greek";
 import Mexican from "./AWSS22/Stories/Mexican";
 import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 import SHE from "./SHE"
+import SI from './SI';
 
 import { enableSHE } from '../constants'
 
@@ -58,6 +59,7 @@ class App extends React.Component {
 								)}
 							/> : null
 						}
+						<Route path="/SocialInitiatives" component={SI}/>
 						<Route path="/test" component={TestUI} />
 						<Route
 							path="/expo"

@@ -45,6 +45,13 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	);
+	siNavHeader = (
+		<li>
+			<Link className="white-text" to="SocialInitiatives">
+				SI
+			</Link>
+		</li>
+	)
 	expoNavHeader = (
 		<li>
 			<Link className="white-text" to="/expo/">
@@ -190,8 +197,6 @@ class Header extends React.Component {
 		return (
 			<div className="header">
 				<ul id="mobile-menu" className="sidenav white-text">
-					{enableSHE ? this.sheNavHeader : null}
-					
 					<li className="no-padding">
 						<ul className="collapsible collapsible-accordion">
 							<li>
@@ -205,6 +210,8 @@ class Header extends React.Component {
 							</li>
 						</ul>
 					</li>
+					{ enableSHE ? this.sheNavHeader : null }
+					{this.siNavHeader}
 					{ enableRecs ? this.recsNavHeader : null }
 					{enableSMP ? this.smpNavHeader : null}
 					{/* {this.obscuraNavHeader} */}
@@ -267,7 +274,6 @@ class Header extends React.Component {
 							</Link>
 							<ul className="right hide-on-med-and-down">
 								{enableSMP ? this.smpNavHeader : null}
-								{ enableSHE ? this.sheNavHeader : null }
 								<li>
 									<Link className="dropdown-trigger" data-target="sig-action">
 										SIGs
@@ -314,6 +320,8 @@ class Header extends React.Component {
 								) : (
 									this.squareOneHeader
 								)} */}
+								{ enableSHE ? this.sheNavHeader : null }
+								{this.siNavHeader}
 								{ enableRecs ? this.recsNavHeader : null }
 								{ this.teamNavHeader }
 								{this.galleryNavHeader}

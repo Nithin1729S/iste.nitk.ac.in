@@ -3,7 +3,7 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 import '../../css/homeCarousel.css';
 import { baseUrl } from '../../constants';
-import { enableSMP,enableRecs } from '../../constants';
+import { enableRecs } from '../../constants';
 import { Link } from 'react-router-dom';
 
 class HomeCarousel extends React.Component {
