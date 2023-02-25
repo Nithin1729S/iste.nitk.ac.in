@@ -5,7 +5,6 @@ export const baseUrl = 'https://iste.nitk.ac.in/api/';
 //* uncomment the line below and comment the line with baseURL if you want to test the backend that is in dev mode
 // export const baseUrl = 'http://localhost:8000';
 
-
 export const baseRequest = axios.create({
 	baseURL: baseUrl,
 });
