@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableGallery, enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian,enableSHE } from '../../constants';
+import { enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian,enableSHE } from '../../constants';
 // import {  enableLeaderboard } from '../../constants';
 
 class Header extends React.Component {
@@ -39,26 +39,6 @@ class Header extends React.Component {
 			</li>
 		);
 	});
-	loginNavHeader = (
-		<li>
-			<Link to="/login/" className="waves-effect white-text">
-				Login
-			</Link>
-		</li>
-	);
-	eventNavHeader = (
-		<li>
-			<Link to="/event/">Events</Link>
-		</li>
-	);
-	loginNavList = null;
-	loginNavHeaderMobile = (
-		<li>
-			<Link to="/login/" className="white-text">
-				Login
-			</Link>
-		</li>
-	);
 	teamNavHeader = (
 		<li>
 			<Link className="white-text" to="/team/">
@@ -66,32 +46,10 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	);
-	galleryNavHeader = (
-		<li>
-			<Link className="white-text" to="/gallery/">
-				Gallery
-			</Link>
-		</li>
-	);
 	expoNavHeader = (
 		<li>
 			<Link className="white-text" to="/expo/">
 				Expo 2022
-			</Link>
-		</li>
-	);
-	recsNavHeader = (
-		<li>
-			<Link className="white-text" to="/recs/">
-				Recruitments
-			</Link>
-		</li>
-	);
-	eventNavList = null;
-	eventNavHeaderMobile = (
-		<li>
-			<Link to="/event/" className="waves-effect white-text">
-				Events
 			</Link>
 		</li>
 	);
@@ -104,6 +62,36 @@ class Header extends React.Component {
 			>
 				Blog
 			</a>
+		</li>
+	);
+	sheNavHeader = (
+		<li>
+			<Link to="/she" className="waves-effect white-text"
+				style={
+					{
+						fontFamily: "'PannaCotta', cursive",
+						textTransform: "capitalize !important",
+						fontSize: "1.1em",
+						letterSpacing: "2px"
+					}}>
+				SHE
+			</Link>
+		</li>
+	)
+	galleryNavHeader = (
+		<li>
+			<Link to="/gallery" className="waves-effect white-text">
+				Gallery
+			</Link>
+		</li>
+	)
+
+	// Navigation headers for one time events
+	recsNavHeader = (
+		<li>
+			<Link className="white-text" to="/recs/">
+				Recruitments
+			</Link>
 		</li>
 	);
 	obscuraNavHeader = (
@@ -185,6 +173,7 @@ class Header extends React.Component {
 	// 		</ul>
 	// 	</>
 	// );
+
 	smpNavHeader = (
 		<li>
 			<Link to="/smp" className="white-text">
@@ -193,18 +182,17 @@ class Header extends React.Component {
 		</li>
 	);
 	render() {
-		const cookie = new Cookies();
-		if (cookie.get('firstName') !== undefined) {
-			if (this.state.loggedInName !== cookie.get('firstName')) {
-				this.setState({ loggedInName: cookie.get('firstName') });
-			}
-		}
+		// const cookie = new Cookies();
+		// if (cookie.get('firstName') !== undefined) {
+		// 	if (this.state.loggedInName !== cookie.get('firstName')) {
+		// 		this.setState({ loggedInName: cookie.get('firstName') });
+		// 	}
+		// }
 		return (
 			<div className="header">
 				<ul id="mobile-menu" className="sidenav white-text">
 					{enableSHE ? this.sheNavHeader : null}
-					{/* {this.loginNavHeaderMobile}
-					{this.eventNavHeaderMobile} */}
+					
 					<li className="no-padding">
 						<ul className="collapsible collapsible-accordion">
 							<li>
@@ -257,10 +245,10 @@ class Header extends React.Component {
 					) : (
 						this.squareOneHeader
 					)} */}
-					{this.teamNavHeader}
+					{ this.teamNavHeader }
+					{this.galleryNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
-					{enableGallery? this.galleryNavHeader : null}
 					{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
@@ -279,12 +267,8 @@ class Header extends React.Component {
 								<i className="material-icons">menu</i>
 							</Link>
 							<ul className="right hide-on-med-and-down">
-								{/* {this.loginNavHeader} */}
-								{/* {this.loginNavList} */}
 								{enableSMP ? this.smpNavHeader : null}
-								{/* {this.eventNavHeader}
-								{this.eventNavList} */}
-								{enableSHE ? this.sheNavHeader : null}
+								{ enableSHE ? this.sheNavHeader : null }
 								<li>
 									<Link className="dropdown-trigger" data-target="sig-action">
 										SIGs
@@ -332,11 +316,10 @@ class Header extends React.Component {
 									this.squareOneHeader
 								)} */}
 								{ enableRecs ? this.recsNavHeader : null }
-								{this.teamNavHeader}
+								{ this.teamNavHeader }
+								{this.galleryNavHeader}
 								{this.blogNavHeader}
-								{/* {this.galleryNavHeader} */}
 								{enableExpo ? this.expoNavHeader : null}
-								{enableGallery? this.galleryNavHeader : null}
 								{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
 								{/* {this.transcendNavHeader} */}
