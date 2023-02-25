@@ -46,6 +46,7 @@ class App extends React.Component {
 				</Wrapper>
 				<div className="app-main">
 					<Switch>
+						<Route path="/SocialInitiatives/" component={SI}/>
 						{enableSHE ?
 							<Route
 								path="/she/"
@@ -59,7 +60,7 @@ class App extends React.Component {
 								)}
 							/> : null
 						}
-						<Route path="/SocialInitiatives" component={SI}/>
+						
 						<Route path="/test" component={TestUI} />
 						<Route
 							path="/expo"

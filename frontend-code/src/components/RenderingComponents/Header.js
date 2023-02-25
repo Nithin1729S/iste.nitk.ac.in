@@ -47,7 +47,7 @@ class Header extends React.Component {
 	);
 	siNavHeader = (
 		<li>
-			<Link className="white-text" to="SocialInitiatives">
+			<Link className="white-text" to="/SocialInitiatives">
 				SI
 			</Link>
 		</li>

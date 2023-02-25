@@ -24,8 +24,8 @@ const EventCarousel = ({ eventName, links }) => {
 
 const CarouselImageContainer = styled.div`
     img {
-        height : auto;
-        max-width : 100%;
+        height : 400px;
+        width : 400px;
     }
 `
 

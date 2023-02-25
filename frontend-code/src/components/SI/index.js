@@ -89,25 +89,21 @@ export class SI extends Component {
                         </div>
                     </SectionContainer>
                     <br></br>
-                    <div>
                     <HeaderH2>Through the years</HeaderH2>
                     <br></br>
-                    <Carousel className="eventCarousel" infiniteLoop dynamicHeight={true} >
-                            { this.carouselImageLinks.map((link, index) => {
-                                console.log(link)
-                                return (
-                                    <CarouselImageContainer>
-                                        <img src={link} alt="Social Initiatives" />
-                                    </CarouselImageContainer>
-                                )
-                            }) }
-                        </Carousel>
-                    </div>
-                    
+                    <CarouselContainer>
+                        <GalleryCarousel className="eventCarousel" infiniteLoop dynamicHeight={true} >
+                                { this.carouselImageLinks.map((link, index) => {
+                                    return (
+                                        <CarouselImageContainer>
+                                            <img src={link} alt="Social Initiatives" />
+                                        </CarouselImageContainer>
+                                    )
+                                }) }
+                        </GalleryCarousel>
+                </CarouselContainer>
                     <OneSection>
-                        
                         <div>
-
                             <NumberList>
                                 <ul>
                                     <li>
@@ -282,11 +278,24 @@ const OneSection = styled.section`
   }
 `;
 
+const GalleryCarousel = styled(Carousel)`
+    height : 100%;
+    width : 100%;
+`
+
 const CarouselImageContainer = styled.div`
     img {
-        max-height : 100%;
+        max-height : auto;
         max-width : 100%;
     }
+`
+
+const CarouselContainer = styled.div`
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    margin : auto;
+    width : 60%;
 `
 
 
