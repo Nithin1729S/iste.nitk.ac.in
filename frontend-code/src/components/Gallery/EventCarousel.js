@@ -6,7 +6,7 @@ import './css/gallery-carousel.css';
 const EventCarousel = ({ eventName, links }) => {
     return (
         <CarouselFrame>
-            <Carousel className="eventCarousel" infiniteLoop dynamicHeight={ true }>
+            <Carousel className="eventCarousel" infiniteLoop dynamicHeight={ true } autoPlay>
                 { links.map((link) => {
                     return (
                         <CarouselImageContainer>
@@ -21,11 +21,10 @@ const EventCarousel = ({ eventName, links }) => {
     )
 }
 
-
 const CarouselImageContainer = styled.div`
     img {
-        height : 400px;
-        width : 400px;
+        height : auto;
+        max-width : 100%;
     }
 `
 

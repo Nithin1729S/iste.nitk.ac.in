@@ -92,7 +92,7 @@ export class SI extends Component {
                     <HeaderH2>Through the years</HeaderH2>
                     <br></br>
                     <CarouselContainer>
-                        <GalleryCarousel className="eventCarousel" infiniteLoop dynamicHeight={true} >
+                        <GalleryCarousel className="eventCarousel" infiniteLoop dynamicHeight={true} autoPlay >
                                 { this.carouselImageLinks.map((link, index) => {
                                     return (
                                         <CarouselImageContainer>

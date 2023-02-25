@@ -19,10 +19,7 @@ class GalleryComponent extends React.Component {
     };
 
     componentDidMount() {
-        console.log('Fetching...');
-
         baseRequest.get('/gallery/event/').then(res => {
-            console.log(res.data.images);
             this.setState({
                 eventData: res.data.images
             });
