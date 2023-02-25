@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Carousel } from 'react-responsive-carousel';
-import './constants/gallery-carousel.css';
+import './css/gallery-carousel.css';
 
 const EventCarousel = ({ eventName, links }) => {
     return (
@@ -20,6 +20,7 @@ const EventCarousel = ({ eventName, links }) => {
         </CarouselFrame>
     )
 }
+
 
 const CarouselImageContainer = styled.div`
     img {

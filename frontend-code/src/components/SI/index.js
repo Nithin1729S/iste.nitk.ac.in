@@ -1,12 +1,28 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Carousel } from 'react-responsive-carousel'
+import "../Gallery/css/gallery-carousel.css"
 
 export class SI extends Component {
     state = {
         showMore: false,
     };
 
-    
+    carouselImageLinks = [
+        "../images/SI/image1.jpg",
+        "../images/SI/image2.jpg",
+        "../images/SI/image3.jpg",
+        "../images/SI/image4.jpg",
+        "../images/SI/image5.jpg",
+        "../images/SI/image6.jpg",
+        "../images/SI/image7.jpg",
+        "../images/SI/image8.jpg",
+        "../images/SI/image9.jpg",
+        "../images/SI/image10.jpg",
+        "../images/SI/image11.jpg",
+        "../images/SI/image12.jpg",
+        "../images/SI/image13.jpg",
+    ]
 
     render() {
         return (
@@ -73,10 +89,25 @@ export class SI extends Component {
                         </div>
                     </SectionContainer>
                     <br></br>
+                    <div>
                     <HeaderH2>Through the years</HeaderH2>
                     <br></br>
+                    <Carousel className="eventCarousel" infiniteLoop dynamicHeight={true} >
+                            { this.carouselImageLinks.map((link, index) => {
+                                console.log(link)
+                                return (
+                                    <CarouselImageContainer>
+                                        <img src={link} alt="Social Initiatives" />
+                                    </CarouselImageContainer>
+                                )
+                            }) }
+                        </Carousel>
+                    </div>
+                    
                     <OneSection>
+                        
                         <div>
+
                             <NumberList>
                                 <ul>
                                     <li>
@@ -99,9 +130,9 @@ export class SI extends Component {
                                         !this.state.showMore ?
                                             <ShowButtonContainer>
                                                 <ShowMore
-                                                data-inline="true"
-                                                onClick={
-                                                    () => this.setState({ showMore: true }) }>Show More</ShowMore>
+                                                    data-inline="true"
+                                                    onClick={
+                                                        () => this.setState({ showMore: true }) }>Show More</ShowMore>
                                             </ShowButtonContainer>
                                             :
                                             <>
@@ -132,11 +163,11 @@ export class SI extends Component {
                                                     The Rotaract Club of NITK and ISTE NITK hosted an open mic event called 'It's okay not to be okay' to raise awareness on mental health issues and combat the stigma surrounding them. The event was a light but very insightful game of 'Put a Finger Down' where everyone realized the myriad number of mental health related issues a person might face on a daily basis. The game brought together the participants and provided a platform to air one's views. If you missed it, be sure to follow ISTE NITK's Social Initiatives on Instagram for updates on future events.
                                                 </li>
                                                 <ShowButtonContainer>
-                                                <ShowMore
-                                                data-inline="true"
-                                                onClick={
-                                                    () => this.setState({ showMore: false }) }>Show Less</ShowMore>
-                                            </ShowButtonContainer>
+                                                    <ShowMore
+                                                        data-inline="true"
+                                                        onClick={
+                                                            () => this.setState({ showMore: false }) }>Show Less</ShowMore>
+                                                </ShowButtonContainer>
                                             </>
                                     }
                                 </ul>
@@ -250,6 +281,13 @@ const OneSection = styled.section`
     }
   }
 `;
+
+const CarouselImageContainer = styled.div`
+    img {
+        max-height : 100%;
+        max-width : 100%;
+    }
+`
 
 
 const ShowButtonContainer = styled.div`
