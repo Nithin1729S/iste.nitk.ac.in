@@ -59,13 +59,23 @@ class Footer extends React.Component {
                                     <h5 className="text">Quick Access</h5>
                                     <ul>
                                         <li>
-                                            <Link to="/event" className="text">
-                                                Events
+                                            <Link to="/team" className="text">
+                                                Our Team
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/team" className="text">
-                                                Our Team
+                                            <Link to="/she" className="text">
+                                                SHE
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/SocialInitiatives" className="text">
+                                                Social Initiatives
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/gallery" className="text">
+                                                Event Gallery
                                             </Link>
                                         </li>
                                         <li>
