@@ -61,7 +61,7 @@ class GalleryComponent extends React.Component {
 const CarouselTopContainer = styled.div`
     display : flex;
     flex-direction : column;
-    max-width :100vw;
+    max-width :90vw;
     width : 60%;
     justify-content : center;
     align-items : center;

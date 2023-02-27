@@ -42,7 +42,10 @@ const CarouselFrame = styled.div`
 
         background-repeat: no-repeat;
         background-size: 60px 60px;
-
+        width : 50vw;
+        @media (max-width : 700px) {
+            width : 80vw;
+        }
 `
 
 export default EventCarousel
