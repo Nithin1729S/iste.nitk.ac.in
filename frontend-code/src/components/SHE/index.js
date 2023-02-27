@@ -11,6 +11,7 @@ export class SHE extends Component {
     componentDidMount() {
         this.props.changeFooterVal("she");
     }
+    
     render() {
         return (
             <>
