@@ -17,6 +17,24 @@ def indexView(request):
 
     core_data = CoreSerializer(core_objs, many=True).data
     admin_core_data = core_data[:4]
+
+    print(admin_core_data)
+    fac_ad_data = {
+            "id": 19,
+            "user": {
+                "id": 587,
+                "first_name": "Shashi",
+                "last_name": "Bushan Arya",
+                "avatar": "/media/profile_pictures/587_Ankit_Stephen_Thomas.jpeg"
+            },
+            "role": "Faculty Advisor",
+            "description": "Dr. S. B. Arya is the faculty advisor for ISTE NITK and an assistant professor in the Metallurgical and Materials Engineering at NITK. He is an expert in all things corrosion, novel materials developments and metallic passivation. Currently, he is researching in niche and innovative fields such as Li-ion Battery monitoring, corrosion behaviour and steel response to stimuli. Having multiple funded research projects, delivered lectures at several organizations and published 45+ papers, he is more than just a specialist when it comes to his field of study.",
+            "email": "sbarya@nitk.edu.in",
+            "linkedin_url": "https://www.linkedin.com/in/shashi-bhushan-arya-4a06236/"
+    }
+
+    admin_core_data.append(fac_ad_data)
+
     core_data = core_data[4:]
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
 
