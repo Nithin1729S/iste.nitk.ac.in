@@ -48,7 +48,7 @@ class Header extends React.Component {
 	siNavHeader = (
 		<li>
 			<Link className="white-text" to="/SocialInitiatives">
-				SI
+				Social Initiatives
 			</Link>
 		</li>
 	)
@@ -72,14 +72,7 @@ class Header extends React.Component {
 	);
 	sheNavHeader = (
 		<li>
-			<Link to="/she" className="waves-effect white-text"
-				style={
-					{
-						fontFamily: "'PannaCotta', cursive",
-						textTransform: "capitalize !important",
-						fontSize: "1.1em",
-						letterSpacing: "2px"
-					}}>
+			<Link to="/she" className="waves-effect white-text">
 				SHE
 			</Link>
 		</li>
@@ -89,6 +82,18 @@ class Header extends React.Component {
 			<Link to="/gallery" className="waves-effect white-text">
 				Gallery
 			</Link>
+		</li>
+	)
+
+	fortniteNavHeader = (
+		<li>
+			<a
+				href="https://istenitk.wordpress.com/fortnightflair/"
+				className="white-text"
+				target="blank"
+			>
+				Fortnight Flair
+			</a>
 		</li>
 	)
 
@@ -325,6 +330,7 @@ class Header extends React.Component {
 								{ enableRecs ? this.recsNavHeader : null }
 								{ this.teamNavHeader }
 								{this.galleryNavHeader}
+								{this.fortniteNavHeader}
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
 								{/* {enableObsidian ? this.obsidianNavHeader : null} */}

@@ -28,7 +28,7 @@ def indexView(request):
                 "avatar": "/media/profile_pictures/586_Shashi_Bushan_Arya.jpeg"
             },
             "role": "Faculty Advisor",
-            "description": "Dr. S. B. Arya is the faculty advisor for ISTE NITK and an assistant professor in the Metallurgical and Materials Engineering at NITK. He is an expert in all things corrosion, novel materials developments and metallic passivation. Currently, he is researching in niche and innovative fields such as Li-ion Battery monitoring, corrosion behaviour and steel response to stimuli. Having multiple funded research projects, delivered lectures at several organizations and published 45+ papers, he is more than just a specialist when it comes to his field of study.",
+            "description": "Dr. S. B. Arya is the faculty advisor for ISTE NITK and an assistant professor in the Metallurgical and Materials Engineering at NITK. He is an expert in all things corrosion, novel materials developments and metallic passivation. Currently, he is researching in niche and innovative fields such as Li-ion Battery monitoring, corrosion behaviour and steel response to stimuli. Having multiple funded research projects, delivered lectures at several organizations and published 80+ papers, he is more than just a specialist when it comes to his field of study.",
             "email": "sbarya@nitk.edu.in",
             "linkedin_url": "https://www.linkedin.com/in/shashi-bhushan-arya-4a06236/"
     }
