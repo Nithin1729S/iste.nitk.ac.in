@@ -1,3 +1,5 @@
+## Main frontend files for ISTE NITK 
+
 # Code Structure
 The SRC folder is the only one to be altered, public is to be left as is.
 The following folders and files are present in SRC:
