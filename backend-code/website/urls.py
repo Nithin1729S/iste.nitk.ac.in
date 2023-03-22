@@ -23,5 +23,6 @@ urlpatterns = [
     path('obscura/', include('obscura.urls', namespace='obscura')),
     path('cryptonite/', include('cryptonite.urls', namespace='cryptonite')),
     path('obsidian/', include('obsidian.urls', namespace="obsidian")),
-    path('gallery/',include("gallery.urls",namespace="gallery"))
+    path('gallery/',include("gallery.urls",namespace="gallery")),
+    path('clutchMysteryBox/',include("clutchMysteryBox.urls",namespace="clutchMysteryBox"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -63,7 +63,8 @@ INSTALLED_APPS = [
     'squareonelb',
     'cryptonite',
     'obsidian',
-    'gallery'
+    'gallery',
+    'clutchMysteryBox'
 ]
 
 MIDDLEWARE = [
