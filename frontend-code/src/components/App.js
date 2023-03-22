@@ -21,8 +21,12 @@ import Mexican from "./AWSS22/Stories/Mexican";
 import RecruitmentComponent from './Recruitment/recsLandingPage.jsx';
 import SHE from "./SHE"
 import SI from './SI';
+import ClutchMB from "./ClutchMysteryBox/index";
+import Obsidian from "./Obsidian";
+import Blackbox from '../components/Obsidian/components/Blackbox'
 
-import { enableSHE } from '../constants'
+
+import { enableClutchMB, enableSHE } from '../constants';
 
 import '../css/constants.css';
 
@@ -57,6 +61,26 @@ class App extends React.Component {
 											this.changeFooterBackground(val)
 										}
 									/>
+								)}
+							/> : null
+						}
+						
+							<Route
+								path="/obsidian/:id"
+								render={(props) => (
+									<Blackbox
+										{...props}
+										setFooterVal={(val) => this.changeFooterBackground(val)}
+									/>
+								)}
+							/>
+						
+						<Route path="/clutchmb" component={Obsidian} />
+						{enableClutchMB ?
+							<Route
+								path="/clutchmb/"
+								render={(prop) => (
+									<ClutchMB />
 								)}
 							/> : null
 						}

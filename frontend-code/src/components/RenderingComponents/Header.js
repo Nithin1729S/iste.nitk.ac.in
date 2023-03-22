@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian,enableSHE } from '../../constants';
+import { enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian,enableSHE, enableClutchMB } from '../../constants';
 // import {  enableLeaderboard } from '../../constants';
 
 class Header extends React.Component {
@@ -42,6 +42,13 @@ class Header extends React.Component {
 		<li>
 			<Link className="white-text" to="/team/">
 				Our Team
+			</Link>
+		</li>
+	);
+	clutchMBHeader = (
+		<li>
+			<Link className="white-text" to="/clutchmb/">
+				Clutch Mystery Box
 			</Link>
 		</li>
 	);
@@ -325,6 +332,7 @@ class Header extends React.Component {
 								) : (
 									this.squareOneHeader
 								)} */}
+								{ enableClutchMB ? this.clutchMBHeader : null }
 								{ enableSHE ? this.sheNavHeader : null }
 								{this.siNavHeader}
 								{ enableRecs ? this.recsNavHeader : null }

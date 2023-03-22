@@ -22,15 +22,15 @@ class Blackbox extends React.Component {
     
     // TODO : Update the questionType list
     questionType = [
-        'Expects two comma-separated non-negative integer.',
+        'Expects two comma-separated non-negative integers.',
         'Expects single non-negative integer.',
         'Expects single non-negative integer.',
-        'Expects two comma-separated non-negative integer.',
+        'Expects two comma-separated non-negative integers.',
         'Expects single non negative integer.',
         'Expects single non negative integer.',
         'Expects single non negative integer.',
-        'Expects a word.',
-        'Expects a word.'
+        'Expects two comma-separated non-negative integers.',
+        'Expects two comma-separated non-negative integers.'
     ];
 
     currId =
@@ -44,9 +44,7 @@ class Blackbox extends React.Component {
     componentDidMount() {
         this.props.setFooterVal("obsidian");
 
-        if (!localStorage.getItem("obsidianUserInfo")) {
-            this.props.history.push('/obsidian/login')
-        }
+        
         const numInputs = Number(localStorage.getItem(this.numInputKey));
         const userScore = localStorage.getItem('userTotalScore');
         if (numInputs) {
