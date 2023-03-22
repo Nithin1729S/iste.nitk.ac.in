@@ -155,14 +155,14 @@ class Blackbox extends React.Component {
             .get("/obsidian/q" + currentQuestion.toString() + "/", {
                 params: {
                     query: this.state.inputVal,
-                    username : username
+                    username : username||'b'
                 }
             })
             .then((res) => {
                 if (res.data.msg === "Wrong Input") {
                     this.setState({
                         errorMessage: <> Invalid input! Try again. </>,
-                        currentScore : res.data.score
+                        currentScore : res.data.score||0
                     });
                     return;
                 }

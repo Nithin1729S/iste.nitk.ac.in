@@ -101,30 +101,7 @@ def question8(s):
     return ns
 
 #  Question 9:
-def num2hex(num):
-    res = ""
-    while (num != 0):
-        rem = num % 16
-        c = 0   
-        if (rem < 10):
-            c = rem + 48
-        else:
-            c = rem + 87      
-        res += chr(c)
-        num = num // 16
-    return res
-def question9(str):
-    fin = ""
-    i = 0
-    n = len(str)
-    while(i<n):
-        k = str[i]
-        count = 0
-        while(i<n and str[i] == k):
-            count = count+1
-            i = i+1
-        num = num2hex(count)
-        fin = fin + k
-        fin = fin + num
-    fin = fin[::-1]
-    return fin
+# def num2hex(a,b):
+#     return a*a+b*b
+def question9(a,b):
+    return a*a+b*b
