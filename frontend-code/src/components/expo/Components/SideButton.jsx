@@ -37,7 +37,7 @@ const SideButton = ({
                 ignoreCancelEvents
             >
                 <img src={logoSide === "" ? logo : logoSide} alt="" />
-                <h4>{name}</h4>
+                <h4 className={styles.link_text}>{name}</h4>
             </Link>
         </div>
     );

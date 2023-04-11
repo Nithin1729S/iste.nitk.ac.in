@@ -67,5 +67,8 @@
             "not dead",
             "not op_mini all"
         ]
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.3.1"
     }
 }

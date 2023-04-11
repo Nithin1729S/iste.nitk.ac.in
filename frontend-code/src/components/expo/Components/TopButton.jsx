@@ -13,7 +13,7 @@ const TopButton = ({ isActive, handleClick, name, logoSIG }) => {
 			<Link to={'1'} offset={window.innerHeight * offsetCoefficient}>
 				<img src={logoSIG} alt="" onClick={projectClick} />
 			</Link>
-			<h2 className={styles.buttonHeader}>
+			<h2 className={`${styles.buttonHeader}`}>
 				{name.charAt(0).toUpperCase() + name.slice(1)}
 			</h2>
 		</div>
