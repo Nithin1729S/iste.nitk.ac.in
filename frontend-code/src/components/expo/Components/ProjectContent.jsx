@@ -15,7 +15,7 @@ const ProjectContent = ({ projectData, sig }) => {
 			.slice(0, 6)
 			.map((item) => <div key={item}>{item}</div>);
 	return (
-		<div className={`${styles.main}`} id={projectData.id}>
+		<div className={styles.main} id={projectData.id}>
 			<div className={styles.imageContent}>
 				<img
 					alt="project"
@@ -28,11 +28,11 @@ const ProjectContent = ({ projectData, sig }) => {
 			<div className={styles.content}>
 				<h2 className={styles.header}>{projectData.name}</h2>
 				<div className={styles.tagContainer}>{renderingTags}</div>
-				<div className={styles.desc}>{desc}</div>
+				<div>{desc}</div>
 				<div className={styles.buttonContent}>
 					<Link
 						to={`/expoPage/${sig.concat(projectData.id)}`}
-						className=""
+						className="waves-light btn-small btnColor"
 					>
 						View Details
 					</Link>

@@ -9,12 +9,6 @@
     --smallMarginSize: 1%;
     --primary: #1a237e;
     font-family: GothamPro;
-    /* background-color: #000000; */
-    background: linear-gradient(#000000, #000000de);
-    /* background: linear-gradient(-45deg, #ffffff, #d1eff9, #abe9ff, #baf4f9); */
-	/* background-size: 400% 400%; */
-	/* animation: gradient 15s ease infinite; */
-	/* height: 100%;  */
 }
 .main h1 {
     font-size: 4vh;
@@ -22,7 +16,7 @@
 .main h2 {
     font-size: 3vh;
 }
-/* .sideContent {
+.sideContent {
     position: fixed;
     left: 0;
     display: flex;
@@ -30,9 +24,8 @@
     align-items: center;
     justify-content: center;
     width: var(--sideNavWidth);
-    width: 20%;
     height: 100%;
-} */
+}
 
 @media only screen and (max-width: 1260px) {
     .sideContent {
@@ -46,44 +39,19 @@
 .content {
     position: sticky;
     top: 0;
-    align-items: center;
-    margin: 1% 5% 1% 5%;
-    /* align-self: flex-start; */
-    /* width: calc(100% - var(--sideNavWidth));
+    align-self: flex-start;
+    width: calc(100% - var(--sideNavWidth));
     margin: var(--smallMarginSize);
-    margin-left: calc(var(--smallMarginSize) + var(--sideNavWidth)); */
+    margin-left: calc(var(--smallMarginSize) + var(--sideNavWidth));
 }
 .topNav {
-    /* position: sticky; */
+    position: sticky;
     top: 0;
-    margin: auto;
-    /* margin-left: 50px; */
-    /* margin: auto; */
     align-self: flex-start;
     width: 100%;
+    background: white;
 }
 .projectContent {
-    width: 95%;
-    margin-left: 4%;
-    /* margin-left: 20px; */
-    /* margin-bottom: -5vh; */
-    background: transparent;
-    position: relative;
-    z-index: -1;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 100px 100px;
-    padding: 7%;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    width: 100%;
+    margin-bottom: -5vh;
 }
