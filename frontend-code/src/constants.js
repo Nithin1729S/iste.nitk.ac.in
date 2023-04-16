@@ -6,7 +6,6 @@ export const baseUrl = 'https://iste.nitk.ac.in/api/';
 // export const baseUrl = 'http://localhost:8000';
 
 
-
 export const baseRequest = axios.create({
 	baseURL: baseUrl,
 });
