@@ -14,4 +14,4 @@ export const enableRecs = false;
 export const enableExpo = true;
 export const enableSMP = false;
 export const enableSHE = true;
-export const enableClutchMB = true;
+export const enableClutchMB = false;
