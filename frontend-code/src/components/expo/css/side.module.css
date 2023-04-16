@@ -5,8 +5,16 @@
     align-self: flex-start;
     margin-left: 10%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 10%;
+    height: 15%;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .link {
     width: 90%;
@@ -14,20 +22,43 @@
     align-items: center;
     justify-content: center;
 }
+.link_text{
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    align-items: center;
+
+    overflow: hidden;
+}
 .main:hover {
     opacity: 1;
     cursor: pointer;
+    /* background: linear-gradient(to right, rgb(20, 20, 164), rgb(145, 50, 204)); */
+    transform: scale(1.1);
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 5px 5px 1px;
+    border-radius: 5px;
+    transition: .5s ease;
 }
 .main img {
     height: 10vh;
     width: 10vh;
     border-radius: 50%;
-    align-self: flex-start;
+    /* align-self: flex-start; */
     object-fit: cover;
 }
 .active {
     opacity: 1;
     transform: scale(1.1);
+    background: rgb(255, 255, 255);
+    transition: all;
+    transition-delay: 150ms;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 5px 5px 1px;
+    border-radius: 5px;
 }
 .main h1,
 .main h2,
@@ -44,5 +75,5 @@
 .active h5,
 .active h6 {
     margin-left: 5%;
-    align-self: flex-end;
+    align-self: center;
 }
