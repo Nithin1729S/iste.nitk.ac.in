@@ -1,5 +1,6 @@
 import React from 'react';
 import DescContent from './DescContent';
+import styles from '../css/descPage.module.css';
 
 class DescPage extends React.Component {
 	constructor(props) {
@@ -35,7 +36,7 @@ class DescPage extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className={`${styles.descContent}`}>
 				<DescContent sn={this.state.sigName} id={this.state.id} />
 			</div>
 		);

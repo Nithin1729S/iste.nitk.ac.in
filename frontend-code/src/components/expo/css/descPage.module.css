@@ -1,18 +1,34 @@
 .main {
 	width: 80%;
 	align-self: center;
-	margin: 5% auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	color: white;
+	/* margin: 5% auto; */
+	/* background-color: black; */
+    /* background: linear-gradient(#000000, #000000de); */
+}
+.descContent{
+    background: linear-gradient(#000000, #000000de);
 }
 
 .card {
 	padding: 2.5%;
-	box-shadow: 5px 5px 10px 5px gray;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.38);
+    border-width: 1px;
+    border-radius: 5px;
+	/* filter: drop-shadow(0px -1px 5px rgba(233, 223, 255, 0.3)) drop-shadow(0px -1px 20px rgba(187, 155, 255, 0.15)); */
+    
 }
 
 .heading {
 	text-align: center;
 	color: var(--primary);
-	font-weight: lighter !important;
+	font-weight: bold !important;
 	font-size: 300%;
 	padding-bottom: 1%;
 }
@@ -29,8 +45,10 @@
 	font-weight: 1000;
 	font-size: 150%;
 	text-align: left;
-	border-bottom: 1px black solid;
+	border-bottom: 1px rgba(255, 255, 255, 0.38) solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	margin-bottom: 1%;
+	color: blue;
 }
 
 .subheadingtext {
@@ -86,12 +104,27 @@
 	list-style-type: disc;
 }
 .description table{
-	border: 1px solid black;
+	/* border: 1px solid black; */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.38);
+    border-width: 1px;
+    border-radius: 5px;
 	width: 100%;
 }
 .description th{
-	border: 2px 0px solid black ;
+	/* border: 2px 0px solid black ; */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.38);
+    border-width: 1px;
+    border-radius: 5px;
 }
 .description tr{
-	border-bottom: 1px solid black ;
+	/* border-bottom: 1px solid black ; */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.38);
+    border-width: 1px;
+    border-radius: 5px;
 }
