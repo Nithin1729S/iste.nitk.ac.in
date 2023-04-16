@@ -5,11 +5,61 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	background-color: white;
+	/* background: linear-gradient(to right, rgb(221, 189, 241), rgb(228, 228, 238)); */
+	/* color: beige;*/ 
+	background: linear-gradient(270deg, #370C94 0%, #20055d 61.12%);	
+	/* background: transparent; */
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	z-index: 10;
+}
+.head{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.slash{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	/* width: 1.1%; */
+	height: 80px;
+	background: linear-gradient(to bottom,#ce6363, #ad2dc7);
+  	-webkit-background-clip: content-box;
+  	-webkit-text-fill-color: transparent;
+	border-radius: 12px;
+	border-style: solid;
+	border-color: transparent;
+	/* transform: rotate(40deg); */
 }
 .header {
+	display: flex;
+	justify-content: end;
+	width: 63%;
+	/* margin-right: 35px; */
 	text-transform: capitalize;
-	font-weight: lighter;
+	font-weight:900;
+	font-size: 5rem;
+	background: linear-gradient(to right,#ce6363, #ad2dc7);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	filter: drop-shadow(0px -1px 5px rgba(233, 223, 255, 0.3)) drop-shadow(0px -1px 20px rgba(187, 155, 255, 0.15));
+}
+.logo{
+	width: 37%;
+	margin-right: 35px;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	background-color: transparent;
+	filter: drop-shadow(0px -1px 5px rgba(233, 223, 255, 0.3)) drop-shadow(0px -1px 20px rgba(187, 155, 255, 0.15));
+
 }
 .content {
 	display: flex;
@@ -18,16 +68,21 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	margin-top: 15px;
+	/* margin-bottom: 7px; */
 }
 .navElement {
 	width: 12.5%;
 	margin: 1%;
 	border-radius: 50%;
+	box-shadow: inset 0px 0.25px 0px rgba(255, 255, 255, 0.5);
+	filter: drop-shadow(0px -1px 5px rgba(233, 223, 255, 0.3)) drop-shadow(0px -1px 20px rgba(187, 155, 255, 0.15));
 	opacity: 0.75;
 }
 .navElement:hover {
 	opacity: 1 !important;
 	cursor: pointer;
+	border-color: white;
 }
 .active {
 	opacity: 1 !important;
@@ -37,12 +92,16 @@
 	aspect-ratio: 1;
 	border-radius: 50%;
 	object-fit: cover;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.245);
 }
 .buttonHeader {
 	margin-top: 10%;
 	visibility: hidden;
 	text-align: center;
 	padding-bottom: 0%;
+	color: white;
+	filter: drop-shadow(0px -1px 5px rgba(233, 223, 255, 0.3)) drop-shadow(0px -1px 20px rgba(187, 155, 255, 0.15));
 }
 .navElement:hover .buttonHeader {
 	visibility: visible;

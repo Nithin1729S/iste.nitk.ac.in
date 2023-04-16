@@ -3,10 +3,16 @@ import React from "react";
 import TopNav from "./TopNav";
 import Projects from "./Projects";
 import SideNav from "./SideNav";
+import TextEffect from "./TextEffect";
 
 import styles from "../css/app.module.css";
 import logo from "../Assets/istenitk.png";
 import { constant, sigNames } from "../Assets/constants";
+import Landing from "./Landing";
+
+
+
+
 class ExpoHomeComponent extends React.Component {
     componentDidMount() {
         this.props.setHeaderFooterStatus(false);
@@ -24,8 +30,11 @@ class ExpoHomeComponent extends React.Component {
     render() {
         const { projectId, sig } = this.state;
         return (
+            <div className={styles.parent}>
+            {/* <TextEffect></TextEffect> */}
+            <Landing></Landing>
             <div className={styles.main}>
-                <div className={styles.sideContent}>
+                {/* <div className={styles.sideContent}>
                     <SideNav
                         handleClick={(project) =>
                             this.handleProjectChange(project)
@@ -34,23 +43,10 @@ class ExpoHomeComponent extends React.Component {
                         projectId={projectId}
                         data={constant[sig]}
                     />
-                </div>
+                </div> */}
                 <div className={styles.content}>
                     <div className={styles.topNav}>
-                        <a
-                            href="/"
-                            style={{
-                                backgroundColor: "white",
-                            }}
-                        >
-                            <img
-                                src={logo}
-                                width="60"
-                                height="50"
-                                style={{ float: "right", marginRight: "5%" }}
-                                alt="ISTE Logo"
-                            />
-                        </a>
+                        {/*  */}
                         <TopNav
                             sig={sig}
                             handleClick={(sig) => this.handleSigChange(sig)}
@@ -62,6 +58,7 @@ class ExpoHomeComponent extends React.Component {
                         <Projects sig={sig} />
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
