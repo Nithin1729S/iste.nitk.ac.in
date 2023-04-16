@@ -1,4 +1,4 @@
-# Club Website
+# Club Website for ISTE NITK
 
 ## About
 This repository contains code of the website currently live at http://iste.nitk.ac.in. The website allows members of the club to showcase their projects,
