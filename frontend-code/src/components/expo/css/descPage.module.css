@@ -31,6 +31,9 @@
 	font-weight: bold !important;
 	font-size: 300%;
 	padding-bottom: 1%;
+	background: linear-gradient(to right,#ce6363, #ad2dc7);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .headingSub {
