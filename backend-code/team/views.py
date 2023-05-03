@@ -32,10 +32,12 @@ def indexView(request):
             "email": "sbarya@nitk.edu.in",
             "linkedin_url": "https://www.linkedin.com/in/shashi-bhushan-arya-4a06236/"
     }
-
+    admin_core_data.append(core_data[21])
+    admin_core_data.append(core_data[22])
+    admin_core_data.append(core_data[23])
     admin_core_data.append(fac_ad_data)
 
-    core_data = core_data[4:]
+    core_data = core_data[4:21]
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
 
     core_names = []
