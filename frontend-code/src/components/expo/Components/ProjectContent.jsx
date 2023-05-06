@@ -32,7 +32,7 @@ const ProjectContent = ({ projectData, sig }) => {
 				<div className={styles.buttonContent}>
 					<Link
 						to={`/expoPage/${sig.concat(projectData.id)}`}
-						className=""
+						className=" "
 					>
 						View Details
 					</Link>
