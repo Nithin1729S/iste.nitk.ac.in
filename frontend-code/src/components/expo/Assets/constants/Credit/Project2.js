@@ -1,62 +1,36 @@
-import logo from './credit2.jpg';
-
-const project2 = {
-	id: 2,
-	oneline:
-		'Conducting a business case study on IKEA using business, operation, strategic, marketing and quantiative analysis frameworks',
-	// copy the abstract here
-	logo: logo,
-	name: 'IKEA: A Business Case Study', // replace the name here
-	imgUrl: [],
-	members: [
-		'Ankit Stephen Thomas',
-		'Rohaan Sunil',
-		'Ojas Agrawal',
-		'Harsha Satija',
-		'Matcha Nitin',
-		'Akshat Raj',
-		'Solayappan Arunachallam',
-	], // add both mentors and mentees here, each name has to under quotes
-	description: {
-		aim: (
-			<div>
-				Conducting a business case study on IKEA using business, operation,
-				strategic, marketing and quantiative analysis frameworks
-			</div>
-		),
-		des: (
-			<div>
-				In this project we have conducted a business analysis that included a
-				PESTLE, McKinsey 7S Strategy analysis. The operation analysis included a
-				business model and value proposition canvas, IKEA's digital dominance,
-				its controversies, challenges and failures. In the marketing analysis we
-				studied the 'Buy with your Time' and 'My Son' campaigns on certain
-				parameters. The strategy analysis included a Porter's 5 forces, 5C and
-				VRIO analysis. The quantiative analysis included a coherent study of
-				IKEA's ba;ance sheet from FY'15-FY'20 and using Google Data Studio,
-				graphs, plots and charts were pictorially reporesented to draw
-				inferences.
-			</div>
-		),
-		res: (
-			<div
-				style={{
-					paddingBottom: '2%',
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-				}}
-			>
-				{
-					<iframe
-						src="https://drive.google.com/file/d/1Vj4DZdYtoYwh6vuCn4XMOGS1Vh_Blkq1/preview"
-						width="640"
-						height="480"
-						allow="autoplay"
-					></iframe>
-				}
-			</div>
-		),
-	},
+import logo from './FCI.jpeg';
+const Project2 = {
+    id: 2,
+    oneline:
+        "Using ML to predict inflation rates and developing investment portfolios to combat earlier predicted inflation.",
+    logo: logo,
+    name: "Forecasting and Combating Inflation",
+    imgUrl: [],
+    members: [
+        "Vishnu", "Prathamesh", "Abhay", "Raghav", "Ayushmaan", "Alfaiz"
+        ],
+    description: {
+        aim: (
+            <div>
+            Using ML to predict inflation rates and developing investment portfolios to combat earlier predicted inflation.
+            </div>
+        ),
+        des: (
+            <div>
+            Using the SARIMA ML model, we predict inflation rates using CPI data from the World Bank from the past 50 years. These inflation rates are then taken into account when devising three investment portfolios - high, medium, low risk portfolios.
+            </div>
+        ),
+        res: (
+            <>
+                <div
+                     style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                    {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
+                    <iframe>
+                    src="https://docs.google.com/document/d/1me2Bhxn6Gj5kvmWJLXvHmcnbgEsXBaEH/edit?usp=sharing&ouid=111562483932442710839&rtpof=true&sd=true" width="640" height="480" allow="autoplay"
+                     </iframe>
+                </div>
+            </>
+        )
+    },
 };
-export default project2;
+export default Project2;

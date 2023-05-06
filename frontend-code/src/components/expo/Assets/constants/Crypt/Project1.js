@@ -1,33 +1,45 @@
-import logo from "./project_expo_Vfinal_Crypt1.png"
-
-const project1 = {
+// the name of the variable corresponds the name of the file in lower case
+import logo from './NFTs.png'
+const Project1 = {
+    // Id is same as the number on the file name
     id: 1,
-    // tags: ["Networking", " NDN", " Reddit", " Webdev"],
+    // Self explanatory one liner
     oneline:
-        "3D checkers game that has different levels of AI that a user can play against.",
-    logo: logo,
-    name: "Checkers",
-    imgUrl: [],
+        "To build an NFT marketplace where the users can trade their NFTs ",
+    logo: logo, //Ignore this for now
+    name: "ISTE's NFT Marketplace", // Name of project
+    imgUrl: [], //Keep this as is
+    // Team members has both mentors and mentees, all names inside quotes
     members: [
-        "Joshitha", "Pranav Surendran", 'Aditya Santhosh','Akshay B', 'Reshma Tresa Antony','Ananta', 'Marthi N V S Sri Harsha', 'Anjishnu Laskar', 'D Karan', 'Chandini Rongali', 'Bhuvan N M', 'Somayajula Krishna Aswin', "Malvika Koushik"
+        "Hanuma", "Prathamesh", "Jitin","Pranav Salunkhe", "Sujan", "Akul", "Meghana Iyenger"
     ],
     description: {
         aim: (
+            // Aim : self explanatory, keep it inside the div
             <div>
-                3D checkers game that has different levels of AI that a user can play against
+                To create a personalized NFT marketplace for members to buy and sell NFTs
             </div>
         ),
         des: (
+            // Description : self explanatory, keep it inside the div
             <div>
-                We created a Checkers AI with nice 3D board game play experience, which initially had the minimax algorithm, and then worked our way into creating a reinforcement learning model to train against the minimax algorithm. The game was created on Unity using C sharp. Both the alpha beta minimax algorithm and RL algorithm are coded in python. Both the agents were integrated with unity using flask as the python backend. 
+                An NFT marketplace is a digital platform where unique digital assets represented by NFTs can be bought, sold, and traded by creators and collectors. It allows creators to upload their digital assets and set prices for them, while buyers can purchase them using cryptocurrency. The blockchain ensures that the NFT is immutable and secures the ownership.
             </div>
         ),
         res: (
-            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                <iframe src="https://drive.google.com/file/d/1QRhNKFasUVRScL75jEEwRbHi6ZaFNfBO/preview" width="780" height="560" allow="autoplay" title="Project1" ></iframe>
-                
-            </div>
+            // This contains all the images and reports
+            
+            <>
+                {/* For multiple images/report, copy the entire div and put one embed tag in each */}
+                <div
+                     style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                    {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
+                    <iframe>
+                    src="https://drive.google.com/file/d/1jjH1lrcM3Ddqqj_w31jET2Ms_oDwD48F/preview" width="640" height="480" allow="autoplay"
+                     </iframe>
+                </div>
+            </>
         )
     },
 };
-export default project1;
+export default Project1; // make sure this matches the name of the js object variable

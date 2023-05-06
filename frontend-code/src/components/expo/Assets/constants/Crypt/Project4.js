@@ -1,33 +1,42 @@
-import logo from "./project_expo_Vfinal_Crypt5.png"
-const project4 = {
+// the name of the variable corresponds the name of the file in lower case
+import logo from './chatbot.png';
+const Project4 = {
+    // Id is same as the number on the file name
     id: 4,
-    // tags: ["Networking", " NDN", " Reddit", " Webdev"],
+    // Self explanatory one liner
     oneline:
-        "A  software based router built on the high performance XDP framework",
-    // logo: "https://drive.google.com/file/d/1SqH5C-Wfd5Kdjo62wrTv1eiXR9jpkplP/preview",
-    name: "Xdp Router ",
-    imgUrl: [],
-    logo : logo,
+        "ChatBot for general use that can have a normal conversation with a human being ",
+    logo: logo, //Ignore this for now
+    name: "CHITTI the Chatbot", // Name of project
+    imgUrl: [], //Keep this as is
+    // Team members has both mentors and mentees, all names inside quotes
     members: [
-        'Shriroop','Balaji','Raghav','Akshay B', 'Rahul K', 'Achyut Shegade', 'Vanessa', 'Harsh', 'Priyansh', 'Zeeshan'
+        "Harsha", "Karan", "Hanuma", "S.K.Aswin","Ayushmaan", "Meghana", "Pranav", "Saliq", "Kushangi", "Divyangana", "Shivam", "Hemanth", "Siddarth"
     ],
     description: {
         aim: (
+            // Aim : self explanatory, keep it inside the div
             <div>
-                A  software based router built on the high performance XDP framework.
+                To create a personalized general purpose chat-bot.
             </div>
         ),
         des: (
+            // Description : self explanatory, keep it inside the div
             <div>
-                "XDP is a recently proposed, high-performance packet-processing framework allowing one to write custom packet-processing and execute them directly in the kernel. The general-purpose networking framework provided by the kernel is very flexible and secure, at the cost of performance. XDP solves this issue by utilizing this by processing packets being entering the kernel-networking stack but still doing so in the kernel context.
-                We utilize the high-performance capabilities of XDP and build a software-based router processing TCP and UDP and doing so with reduced latency."
+                The bot uses a transformer based model as the base for conversation. It uses the BERT model for the classdication of the multiple bots in the backend. The multiple bots in the backend consist of webscraping bots, story bot and the transformer. The front end is made using html, css and javascript. Flask is used as the server for communication between the frontend and the backend.
             </div>
         ),
         res: (
-            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                        <iframe src="https://drive.google.com/file/d/1PAE_JGOH3-27r_GsWiyzo3Yi-Uy1oOKd/preview" width="640" height="480" allow="autoplay" title="Project4"></iframe>
-            </div>
+            // This contains all the images and reports
+            
+            <>
+                {/* For multiple images/report, copy the entire div and put one embed tag in each */}
+                <div style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                <iframe src="https://drive.google.com/drive/folders/1SVdLS65SRDx_yTsvqldUvqtlVqexKkEv" width="640" height="480" allow="autoplay">
+                </iframe>
+                </div>
+            </>
         )
     },
 };
-export default project4;
+export default Project4; // make sure this matches the name of the js object variable

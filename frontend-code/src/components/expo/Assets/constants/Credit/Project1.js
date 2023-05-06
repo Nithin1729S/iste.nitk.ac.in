@@ -1,33 +1,36 @@
-import logo from './credit1.jpg'
-
-
-const project1 = {
+import logo from './UnicornImage.jpeg';
+const Project1 = {
     id: 1,
     oneline:
-        "A look into why consumers make irrational decisions in their day to day lives, business instances and financial goals. ",
-    // copy the abstract here
+        "The project aims to find out the major factors that helped Indian Startups of different fields to become a unicorn",
     logo: logo,
-    name: "The effect of biases on economic decision-making and exploring these biases using Behavioral Economics", // replace the name here
+    name: "Indian Unicorn Boom-An In depth Analysis",
     imgUrl: [],
     members: [
-        "Susmita Saha", "Krishna Prasad", "Abel G", "Adith", "Akash Kori", "Arjun Anil Kumar", "Harsha Satija", "Vishnu Radhakrishnan"
-    ], // add both mentors and mentees here, each name has to under quotes
+        "Adhith", "Saloni", "Alupana Varun Teja", "Buddha Teja", "Balachandra Vasan"
+        ],
     description: {
         aim: (
             <div>
-                A look into why consumers make irrational decisions in their day to day lives, business instances and financial goals. 
+            The project aims to find out the major factors that helped Indian Startups of different fields to become a unicorn
             </div>
         ),
         des: (
             <div>
-                Under this project we would like to understand the behavioral aspects while taking any decisions by consumers. As per the traditional economic theory, it says a consumer will alsways tend to take decision rationally, which is often not the reality and also proved by behavioral economics. In this project we have dwelled into scenarios in business, stock market and day to day instances by performing qualitative analysis (EAST Framework) and quantitative analysis (Survey and Chi-Squared Test). With this study we have arrived at conclusions on how behavioural economic theory dominate over the traditional economic theory. 
+            The project aims to find out the major factors in building up a unicorn. SWOT analysis for the following companies was done: Zomato, Swiggy,BharatPe,PhonePe,Myntra,Nykaa,My11 Circle and Dream 11. Exploratory data analysis for the companies Zomato,Swiggy,Myntra and nykaa were done to understand more about the company.Comparison between the policies undertaken by India , US, China and Singapore for the setting up of startups was done.
             </div>
         ),
         res: (
-            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                {<iframe src="https://drive.google.com/file/d/1Y9_bKpT8X846AVlIo7RRzL06EIRbVQ32/preview" width="640" height="480" allow="autoplay"></iframe> }
-            </div>
+            <>
+                <div
+                     style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                    {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
+                    <iframe>
+                    src="https://docs.google.com/document/d/1dnkPUhasOCAJ0ySTTaDCpPyvAcBoVHlM/edit?usp=sharing&ouid=103876456411797622392&rtpof=true&sd=true" width="640" height="480" allow="autoplay"
+                     </iframe>
+                </div>
+            </>
         )
     },
 };
-export default project1;
+export default Project1;

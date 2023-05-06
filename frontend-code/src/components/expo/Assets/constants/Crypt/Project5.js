@@ -1,31 +1,42 @@
-import logo from "./project_expo_Vfinal_Crypt4.png"
-const project5 = {
+// the name of the variable corresponds the name of the file in lower case
+import logo from './speechtosign.png';
+const Project5 = {
+    // Id is same as the number on the file name
     id: 5,
+    // Self explanatory one liner
     oneline:
-        "Deep learning based search engine, but for images.",
-    // logo: "https://drive.google.com/file/d/1SqH5C-Wfd5Kdjo62wrTv1eiXR9jpkplP/preview",
-    name: "Image Cataloguer ",
-    logo : logo,
-    imgUrl: [],
+        "A web application that takes in audio input from a user and converts it to Indian Sign Language in real time",
+    logo: logo, //Ignore this for now
+    name: "Voice to Sign Language", // Name of project
+    imgUrl: [], //Keep this as is
+    // Team members has both mentors and mentees, all names inside quotes
     members: [
-        "Aakarshee Jain", 'Aneesh Kulkarni', 'Gayatri Nisha', 'Harini T', 'Mansi Singh', 'Nihal Radhakrishna', 'Pratik Shivnani', 'Rahul Kumar',  'Saloni Mathur', 'Sanket Hanagandi'
+        "Shalaka Sankar", "Kishlay Singh", "Adith", "Chandini Rongali","Gulshan Goyal", "Mehta Hriday Niraj", "Swati Agarwal", "Alfaiz Shaikh", "Piyush Kumar Rauniyar"
     ],
     description: {
         aim: (
+            // Aim : self explanatory, keep it inside the div
             <div>
-                Deep learning based search engine, but for images.
+                To design a real-time voice to sign language interpretor
             </div>
         ),
         des: (
+            // Description : self explanatory, keep it inside the div
             <div>
-                Image Cataloguers is a search engine for images built on Flask. Like Google image search, the application takes an input image from a user. It outputs many similar images and a list of "tags," which can be applied as a filter to get a specific set of images. This classic machine learning project uses a clustering algorithm to find a cluster of similar images, PCA and CNNs for feature extraction, and object and color detection for generating tags. 
+                The primary goal of this project is to create a speech to sign language translating system that accepts English audio input and first converts it to English text. This is implemented using Two Dimensional Convolutional Networks (CNN), Recurrent Neural Networks (RNN), and  Connectionist Temporal Classification (CTC) loss. This text is then parsed to create a structured grammar representation, on which Sign Language grammar rules are applied and the corresponding signs are displayed to the user.
             </div>
         ),
         res: (
-            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                        <iframe src="https://drive.google.com/file/d/1XPgevcYReBtKRt8sEDEKol-Smz__6UK4/preview" width="640" height="480" allow="autoplay"></iframe>
-            </div>
+            // This contains all the images and reports
+            
+            <>
+                {/* For multiple images/report, copy the entire div and put one embed tag in each */}
+                <div style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                <iframe src="https://docs.google.com/document/d/18BJ_orhLwM5N4dJdJyH3h6lxFC9gDW0q/edit?usp=sharing&ouid=104610143182281087322&rtpof=true&sd=true" width="640" height="480" allow="autoplay">
+                </iframe>
+                </div>
+            </>
         )
     },
 };
-export default project5;
+export default Project5; // make sure this matches the name of the js object variable

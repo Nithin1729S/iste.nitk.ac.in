@@ -1,56 +1,48 @@
-// import logo from "../images/project expo_Vfinal_Crypt1.png"
-import logo from './project expo_Vfinal_catalyst1.png';
-
+// the name of the variable corresponds the name of the file in lower case
+import logo from './p1.jpg';
 const project1 = {
-	id: 1,
-	oneline: 'Comparing yields of phenol produced by two different processes.',
-	// copy the abstract here
-	logo: logo,
-	name: 'Design and Comparative Analysis for Phenol Production', // replace the name here
-	imgUrl: [],
-	members: [
-		'Rohan Suratkal',
-		'Sanyu Dsouza',
-		'DS Krishna Souri',
-		'Soumyakanta Sahoo',
-	], // add both mentors and mentees here, each name has to under quotes
-	description: {
-		aim: (
-			<div>Comparing yields of phenol produced by two different processes.</div>
-		),
-		des: (
-			<div>
-				Two different methods of phenol production have been chosen for this
-				project. The first is the peroxidation of cumene to produce phenol and
-				acetone. The second one involves the oxidation of benzene by nitrous
-				oxide to produce phenol as the primary product. The process designs are
-				then chalked out as a flowsheet using the DWSIM software. Various
-				properties of product streams, feed streams, and recycle are tabulated
-				in a property master table. This table is then used to perform a
-				comparative analysis between the two selected processes and then
-				conclude which one is the most efficient and suitable method for high
-				yield phenol production.
-			</div>
-		),
-		res: (
-			<div
-				style={{
-					paddingBottom: '2%',
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-				}}
-			>
-				{
-					<iframe
-						src="https://drive.google.com/file/d/10eceerqDHRPkz4FqTH0Y9VjHzyd8bpgh/view?usp=sharing"
-						width="640"
-						height="480"
-						allow="autoplay"
-					></iframe>
-				}
-			</div>
-		),
-	},
-};
-export default project1;
+    // Id is same as the number on the file name
+    id: 1,
+    // Self explanatory one liner
+    oneline: "Optimization of solar-wind hybrid system",
+    logo: logo, //Ignore this for now
+    name: "Solar Wind", // Name of project - not provided
+    imgUrl: [], //Keep this as is
+    // Team members has both mentors and mentees, all names inside quotes
+    members: [
+      "Radhika Rathi", 
+      "S.K. Aswin",
+      "Akshat Raj Singh",
+      "Amoghavarsha G J", 
+      "Arjun Junagal", 
+      "Abhishek"
+    ],
+    description: {
+      aim: (
+        // Aim : self explanatory, keep it inside the div
+        <div>
+          Optimization of solar-wind hybrid system
+        </div>
+      ),
+      des: (
+        // Description : self explanatory, keep it inside the div
+        <div>
+          The objective of this project is to design a Solar and Wind Energy Hybrid model using SIMULINK, and Compare the output power obtained from the hybrid model with the standalone solar and wind energy models. The project has been done in three stages. First the standalone Solar PV mode was made. Next the standalone Wind model was simulated and analysed, and finally the Solar and Wind energy Hybrid model was simulated and analyzed. The value of the output power obtained in all the three models is analyzed to conclude which model is highly efficient.
+        </div>
+      ),
+      res: (
+        // This contains all the images and reports
+        <>
+          {/* For multiple images/report, copy the entire div and put one embed tag in each */}
+          <div style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+            {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
+            <embed src="https://docs.google.com/document/d/1YrTpxkVz4PCyC8e0tdhH0LaFsK2oJQ0l/edit?usp=sharing&ouid=112827894770243770276&rtpof=true&sd=true" width="780" height="560" title="Project2" ></embed>
+          </div>
+
+        </>
+      )
+    },
+  };
+  
+  export default project1; // make sure this matches the name of the js object variable
+  

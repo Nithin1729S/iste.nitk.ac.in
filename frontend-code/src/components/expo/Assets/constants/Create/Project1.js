@@ -1,35 +1,45 @@
-// import logo from "../images/project expo_Vfinal_Crypt1.png"
-import logo from './create.jpg'
-
-const project1 = {
+import logo from './comicstripseries_coverpage.PNG';
+// the name of the variable corresponds the name of the file in lower case
+const Project1 = {
+    // Id is same as the number on the file name
     id: 1,
+    // Self explanatory one liner
     oneline:
-        "Visualization of ISTE Special interest Groups through 3D Animation and graphics",
-    // copy the abstract here
-    logo: logo,
-    name: "3D pop animation project", // replace the name here
-    imgUrl: [],
+        "Understanding the comic design process and designing comic strips.",
+    logo: logo, //Ignore this for now
+    name: "Comic Strip Series", // Name of project
+    imgUrl: [], //Keep this as is
+    // Team members has both mentors and mentees, all names inside quotes
     members: [
-        'Ananta', "Amogh", "Radhika Rathi", "Praneeth S", 
-    ], // add both mentors and mentees here, each name has to under quotes
+        "Abhigyan", "Anjishnu", "Nithila", "Seetha", "Soumyakanta","Aanchal", "Shradha", "Soumi", "Swati", "Umika"
+    ],
     description: {
         aim: (
+            // Aim : self explanatory, keep it inside the div
             <div>
-                Visualization of ISTE Special interest Groups through 3D Animation and graphics
+                To utilize different editing softwares to analyze comip strip design techniques and create new projects
             </div>
         ),
         des: (
+            // Description : self explanatory, keep it inside the div
             <div>
-                What exactly is engineering? If you know that then what is mechanical engineering?... 
-                I think everyone asks these questions at least once in their lifetime. And yet many are still searching for the answers. Engineering is a concept and concepts are best learnt when they can be visualized. Giving shape to any idea/concept has always been very challenging. We like challenges ;) The key idea for the project will be to visualize the important concepts of every sig in ISTE and build a model of the concept with the help of 3D softwares. We will be visualizing, creating and animating in a 3D environment to render a final POPping animation.
+                Designed 3 comic strips involving the steps of ideation, storyboarding, sketching, Digitalising and colouring. Softwares used for the project were Adobe Photoshop and Adobe Illustrator
             </div>
         ),
         res: (
-            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
-                <iframe src="https://drive.google.com/file/d/1uEQhRGMj77YjZYmOoJz6ZQNrkJaAwphj/preview" width="720" height="540" allow="autoplay" title="Create1"></iframe>
-            </div>
+            // This contains all the images and reports
+            
+            <>
+                {/* For multiple images/report, copy the entire div and put one embed tag in each */}
+                <div
+                     style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                    {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
+                    <iframe>
+                    src="https://drive.google.com/file/d/1jjH1lrcM3Ddqqj_w31jET2Ms_oDwD48F/preview" width="640" height="480" allow="autoplay"
+                     </iframe>
+                </div>
+            </>
         )
     },
 };
-export default project1;
+export default Project1; // make sure this matches the name of the js object variable

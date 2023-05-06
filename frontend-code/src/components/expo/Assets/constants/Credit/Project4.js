@@ -1,33 +1,36 @@
-// import logo from "../images/project expo_Vfinal_Crypt1.png"
-import logo from './credit5.jpg'
-
-const project4 = {
+import logo from './spotify.jpg';
+const Project4 = {
     id: 4,
     oneline:
-        "Analysing how various economic parameters and consumer centric industries were impacted due to the pandemic.",
-    // copy the abstract here
+        "Study of the importance of psychology in business and marketing strategies that Spotify uses.",
     logo: logo,
-    name: "Studying the economic impact of Covid-19 and analysing how it led to the growth of newer forms of management in the business sector", // replace the name here
+    name: "Spotify business Analysis",
     imgUrl: [],
     members: [
-        "Rohan Surathkal", "Mohona Mukherjee", "Abhigyan Pathak", "Saloni Mathur", "Lakshmi Bharathi M", "Abhishek Kumar"
-    ], // add both mentors and mentees here, each name has to under quotes
+        "Arun", "Ojas", "Shiva", "Mukund", "Reuben", "Pavitra", "Shreyansh"
+        ],
     description: {
         aim: (
             <div>
-                Analysing how various economic parameters and consumer centric industries were impacted due to the pandemic.
+            Study of the importance of psychology in business and marketing strategies that Spotify uses.
             </div>
         ),
         des: (
             <div>
-                Three economic parameters have been selected: inflation, unemployment, industrial production, and GDP growth. A comparative analysis was carried out for these three parameters across India, South Korea, and the United Kingdom. Post and pre-pandemic values were analyzed, and valuable conclusions were drawn from them.
+            Perform various analysis of Spotify like the Porters 5 forces, Blue Ocean Analysis, SWOT, etc. Use tableau to visualize the sales and profit data of Spotify and also studied how Spotify uses psychology in its recomendation algorithms and its subscriptions.
             </div>
         ),
         res: (
-            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                {<iframe src="https://drive.google.com/file/d/1VV5hZ4FzKhd3DZ6Vprvl9wOg0V-ZEUUw/preview" width="640" height="480" allow="autoplay"></iframe>}
-            </div>
+            <>
+                <div
+                     style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                    {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
+                    <iframe>
+                    src="https://drive.google.com/drive/folders/1ycuIVYFnKVvb1Kpm4GG1E9hmU_5Fopob" width="640" height="480" allow="autoplay"
+                     </iframe>
+                </div>
+            </>
         )
     },
 };
-export default project4;
+export default Project4;
