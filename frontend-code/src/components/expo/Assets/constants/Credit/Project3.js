@@ -1,35 +1,35 @@
-// import logo from "../images/project expo_Vfinal_Crypt1.png"
-import logo from './credit4.jpg'
-
-
+import logo from './SurveyResults.png';
 const project3 = {
     id: 3,
     oneline:
-        "Demonstrate that the weekly google search volume of cryptocurrencies/NIFTY 50 companies has correlation with the weekly market price and volume changes.",
-    // copy the abstract here
+        "To study the consumer shift from traditional DTH services to OTT platforms in the Indian Market.",
     logo: logo,
-    name: "INFLUENCE OF GOOGLE TRENDS ON STOCK AND CRYPTO MARKET- EMPIRICAL ANALYSIS", // replace the name here
+    name: "Exploratory Data Analysis on OTT Platforms",
     imgUrl: [],
     members: [
-        "Rahul Harikumar", "Cyriac", "Rehan", "Gurjot", "Kaushal", "Praneeth"
-    ], // add both mentors and mentees here, each name has to under quotes
+        "Anagha Dileep", "Deepam Damu Naik", "Soumyakanta Sahoo", "Ananya", "Hritik", "Piyush", "Reeve", "Soumi"
+        ],
     description: {
         aim: (
             <div>
-                Demonstrate that the weekly google search volume of cryptocurrencies/NIFTY 50 companies has correlation with the weekly market price and volume changes.
+            To study the consumer shift from traditional DTH services to OTT platforms in the Indian Market.
             </div>
         ),
         des: (
             <div>
-                By analyzing changes in Google query volumes for search terms related to finance, we find patterns that may be interpreted as “early warning signs” of stock market moves. Our results illustrate the potential that combining extensive behavioral data sets offers for a better understanding of collective human behavior.
-
-We examine the closing prices and volume growth of a stock in the NSE and Cryptocurrency to discover the relationship between the volume of search inquiries for a certain term and the overall direction of trading decisions. We utilise Google Trends to establish how many searches for a specific search phrase, such as ""Bitcoin"", were conducted in a given week compared to the overall number of searches conducted on Google during that time period.
+            Conduct an elaborate Exploratory Data Analysis (EDA) on two of the most popular OTT platforms as well as Hindi Television channels. This will involve preprocessing the datasets from each platform/channel followed by drawing insights from them. Analyse the factors affecting the shift from traditional media to the Digital Entertainment Market with the help of a quantitative consumer survey. Conduct a business model analysis on Netflix (tentative) and provide insightful strategies that could improve the performance of OTT platforms and broaden and develop their consumer base in line with the Indian Market.
             </div>
         ),
         res: (
-            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                {<iframe src="https://drive.google.com/file/d/1jIHi7Gz5TiJS8A6S2G5ZBv9Hos84Ekgj/preview" width="640" height="480" allow="autoplay"></iframe> }
-            </div>
+            <>
+                <div
+                     style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                    {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
+                    <iframe>
+                    src="https://drive.google.com/file/d/13ovq40tEFzha8qG9RC6FEtCNiw6M2vMB/view?usp=sharing" width="640" height="480" allow="autoplay"
+                     </iframe>
+                </div>
+            </>
         )
     },
 };

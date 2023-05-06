@@ -1,11 +1,12 @@
 // the name of the variable corresponds the name of the file in lower case
+import logo from './AudioSentimentAnalysis.jpeg';
 const Project2 = {
     // Id is same as the number on the file name
     id: 2,
     // Self explanatory one liner
     oneline:
         "Build an audio sentiment analysis model using CNN on RAVDESS dataset. Add live prediction for voice data. Build a web app for recording audio. Integrate the model with the website for live sentiment prediction. ",
-    logo: "", //Ignore this for now
+    logo: logo, //Ignore this for now
     name: "Audio Sentiment Analysis", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes
