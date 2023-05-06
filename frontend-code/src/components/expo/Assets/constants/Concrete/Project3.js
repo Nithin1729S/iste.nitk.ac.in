@@ -1,35 +1,34 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
-import logo from './project expo_Vfinal_CONCRETE3.png'
+import logo from './OpenStoryPic.png'
 
 const project3 = {
     id: 3,
     oneline:
-        "Analyzed the impact of passive design strategies on EUI (Energy Use Intensity) and Annual Energy Costs on buildings in India using Whole building energy simulation.",
+        "Effect of Open Story and Floor Plan Shape on Buildings under Earthquake Loads using Etabs.",
     // copy the abstract here
     logo: logo,
-    name: "Impact of passive design features on energy efficiency of buildings ", // replace the name here
+    name: "Soft storey.", // replace the name here
     imgUrl: [],
     members: [
-        "Y Prathap",
-        "Andrea Thomas",
-        "Anagha Dileep",
-        "Kaushal Nayak"
+        "Andrea"," Kaushal",
+        "Prateek", "Raghav", "Praneeth"
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
             <div>
-                Analyzed the impact of passive design strategies on EUI (Energy Use Intensity) and Annual Energy Costs on buildings in India using Whole building energy simulation.
+                Effect of Open Story and Floor Plan Shape on Buildings under Earthquake Loads using Etabs.
             </div>
         ),
         des: (
             <div>
-                Climate change is having a tremendous effect on our fragile ecosystem, where the acceleration of its impact is believed to have occurred due to human activities that release greenhouse gases into the atmosphere. It is estimated that the building sector accounts for 40% of the world’s energy consumption. Passive design strategies are features innate to the form and design of a building that channelizes available natural resources to ensure thermal comfort and reduce the usage of lighting devices. In this project we analyzed the impact of various passive design strategies that improve the energy efficiency of buildings in India.
+                The open-story segment in a building has only columns and no partition walls; its presence causes a discontinuity in the rigidity of the structure. Furthermore, irregular floor plans cause torsional effects on the building. Both features greatly affect a structure’s earthquake resistance. 
+                By observing the results (story drift and torsion) obtained after dynamically analyzing different building models on ETABS, this project aims to demonstrate how irregular floor plans and the presence of an open story (on varying floor levels) affects the behavior of a building when subjected to earthquake loads. 
             </div>
         ),
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
                 {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
-                <iframe src="https://drive.google.com/file/d/18HFOXoQJ3fW_1IRnQgD16K3uQNJgSdDq/preview" width="640" height="480" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/drive/folders/1PP7khdy-iWhKxZtDUb-AmfDUivHe0yDh" width="640" height="480" allow="autoplay"></iframe>
             </div>
         )
     },
