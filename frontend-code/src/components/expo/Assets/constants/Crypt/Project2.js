@@ -1,32 +1,42 @@
-import logo from "./project_expo_Vfinal_Crypt2.png";
-const project2 = {
+// the name of the variable corresponds the name of the file in lower case
+const Project2 = {
+    // Id is same as the number on the file name
     id: 2,
-    // tags: ["Networking", " NDN", " Reddit", " Webdev"],
+    // Self explanatory one liner
     oneline:
-        'Secure e-Auction uses the help of Blockchain technology to have an fraud-free auction',
-    // logo: "project_expo_Vfinal_Crypt1.png",
-    logo : logo,
-    name: "Blockchain auction",
-    imgUrl: [],
+        "Build an audio sentiment analysis model using CNN on RAVDESS dataset. Add live prediction for voice data. Build a web app for recording audio. Integrate the model with the website for live sentiment prediction. ",
+    logo: "", //Ignore this for now
+    name: "Audio Sentiment Analysis", // Name of project
+    imgUrl: [], //Keep this as is
+    // Team members has both mentors and mentees, all names inside quotes
     members: [
-        "Balaji Naidu", "Raghav", "Ayush Mangukia", "Nitesh", 'Abhishek Chavan', 'Prathamesh', 'Hanuma', 'Hari', 'Roshan Gupta',  'Adarsh', 'Nikhil'
+        "Malvika Koushik", "Prerna Prakash", "Vanessa Fernandes","Hemanth Somanna", "Ainesh Sinha", "Prateek Rajput", "Swati Agarwal", "Urvesh", "Garvit Goyal"
     ],
     description: {
         aim: (
+            // Aim : self explanatory, keep it inside the div
             <div>
-                Secure e-Auction uses the help of Blockchain technology to have an fraud-free auction
+                To perform sentiment analysis on the basis of audio clips using machine learning algorithms
             </div>
         ),
         des: (
+            // Description : self explanatory, keep it inside the div
             <div>
-                Auctions offer the unprecedented opportunity for sellers to control the entire selling process. Often these auctions are rigged and buyers are nit anymore competing fairly or on the same term as all the other buyers. This project helps us to tackle with this problem and uses Hyperledger Fabric to run an auction where bids are kept private until the auction period is over. Buyers can only see the hashes of other bids, preventing them to change their bid in response to the other bid. Thus securing the auction through Blockchain.  
+                Build an audio sentiment analysis model using CNN on RAVDESS dataset. Add live prediction for voice data. Build a web app for recording audio. Integrate the model with the website for live sentiment prediction.
             </div>
         ),
         res: (
-            <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
-                <iframe src="https://drive.google.com/file/d/1mx919QnsFG0QWqTX2JuLy2jjovC3nXbY/preview" width="780" height="560" allow="autoplay" title="Blockchain auction"></iframe>
-            </div>
+            // This contains all the images and reports
+            
+            <>
+                {/* For multiple images/report, copy the entire div and put one embed tag in each */}
+                <div style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
+                <iframe 
+                src="https://docs.google.com/document/d/1QH5_-wTO6UZWrabo_sceGTmVjqO1Ph6UHWxhp7b9r98/edit" width="640" height="480" allow="autoplay">
+                </iframe>
+                </div>
+            </>
         )
     },
 };
-export default project2;
+export default Project2; // make sure this matches the name of the js object variable
