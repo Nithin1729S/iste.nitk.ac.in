@@ -6,7 +6,7 @@ const Project4 = {
     // Self explanatory one liner
     oneline:
         "ChatBot for general use that can have a normal conversation with a human being ",
-    logo: {logo}, //Ignore this for now
+    logo: logo, //Ignore this for now
     name: "CHITTI the Chatbot", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes

@@ -6,7 +6,7 @@ const Project3 = {
     // Self explanatory one liner
     oneline:
         " A deep learning model that can apply a Monet-style filter to input images of various scenes. ",
-    logo: {logo}, //Ignore this for now
+    logo: logo, //Ignore this for now
     name: "ChitaE", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes

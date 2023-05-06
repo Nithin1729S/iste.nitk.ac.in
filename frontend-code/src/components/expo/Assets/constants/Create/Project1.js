@@ -1,4 +1,4 @@
-import logo from './comicstripseries_coverpage.png';
+import logo from './comicstripseries_coverpage.PNG';
 // the name of the variable corresponds the name of the file in lower case
 const Project1 = {
     // Id is same as the number on the file name
@@ -6,7 +6,7 @@ const Project1 = {
     // Self explanatory one liner
     oneline:
         "Understanding the comic design process and designing comic strips.",
-    logo: {logo}, //Ignore this for now
+    logo: logo, //Ignore this for now
     name: "Comic Strip Series", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes

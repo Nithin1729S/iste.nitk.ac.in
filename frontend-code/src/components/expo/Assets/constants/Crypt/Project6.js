@@ -6,7 +6,7 @@ const Project6 = {
     // Self explanatory one liner
     oneline:
         "A graph-theory based approach to intercity road networks",
-    logo: {logo}, //Ignore this for now
+    logo: logo, //Ignore this for now
     name: "Road Traffic Navigator", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes

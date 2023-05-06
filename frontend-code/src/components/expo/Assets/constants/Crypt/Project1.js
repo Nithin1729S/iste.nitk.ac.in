@@ -6,7 +6,7 @@ const Project1 = {
     // Self explanatory one liner
     oneline:
         "To build an NFT marketplace where the users can trade their NFTs ",
-    logo: {logo}, //Ignore this for now
+    logo: logo, //Ignore this for now
     name: "ISTE's NFT Marketplace", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes

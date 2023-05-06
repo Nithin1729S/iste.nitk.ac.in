@@ -7,7 +7,7 @@ const Project2 = {
     // Self explanatory one liner
     oneline:
         "To change the genre of a movie/series using Kuleshov effect ",
-    logo: {logo}, //Ignore this for now
+    logo: logo, //Ignore this for now
     name: "Recut Trailers", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes

@@ -6,7 +6,7 @@ const Project3 = {
     // Self explanatory one liner
     oneline:
         "Stranger Things ",
-    logo:{logo},//Ignore this for now
+    logo:logo,//Ignore this for now
     name: "Stranger Things ", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes

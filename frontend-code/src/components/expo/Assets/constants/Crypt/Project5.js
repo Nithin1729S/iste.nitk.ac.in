@@ -6,7 +6,7 @@ const Project5 = {
     // Self explanatory one liner
     oneline:
         "A web application that takes in audio input from a user and converts it to Indian Sign Language in real time",
-    logo: {logo}, //Ignore this for now
+    logo: logo, //Ignore this for now
     name: "Voice to Sign Language", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes
