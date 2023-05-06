@@ -2,7 +2,7 @@
 import logo from './RN.png'
 const Project6 = {
     // Id is same as the number on the file name
-    id: 1,
+    id: 6,
     // Self explanatory one liner
     oneline:
         "A graph-theory based approach to intercity road networks",

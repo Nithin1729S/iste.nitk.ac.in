@@ -1,5 +1,5 @@
 import logo from './FCI.jpeg';
-const project2 = {
+const Project2 = {
     id: 2,
     oneline:
         "Using ML to predict inflation rates and developing investment portfolios to combat earlier predicted inflation.",
@@ -33,4 +33,4 @@ const project2 = {
         )
     },
 };
-export default project2;
+export default Project2;

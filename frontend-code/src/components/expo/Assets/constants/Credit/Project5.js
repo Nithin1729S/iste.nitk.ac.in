@@ -1,6 +1,6 @@
 import logo from './csr.jpeg';
 
-const project5 = {
+const Project5 = {
     id: 5,
     oneline:
         "Comparing the CSR of two industry giants RIL and TATA by using different frameworks and quantitative analysis",
@@ -34,4 +34,4 @@ const project5 = {
         )
     },
 };
-export default project5;
+export default Project5;

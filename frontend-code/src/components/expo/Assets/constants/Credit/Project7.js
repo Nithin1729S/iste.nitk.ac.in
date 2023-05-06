@@ -1,5 +1,5 @@
 import logo from './inrusd.png'
-const project7 = {
+const Project7 = {
     id: 7,
     oneline:
         "Understanding how the recent Russia-Ukraine war has impacted on Indian Economy",
@@ -33,5 +33,5 @@ const project7 = {
         )
     },
 };
-export default project7;
+export default Project7;
 

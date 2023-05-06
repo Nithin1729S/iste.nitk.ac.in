@@ -1,5 +1,5 @@
 import logo from './None_Technical_Indicators.jpg';
-const project8 = {
+const Project8 = {
     id: 8,
     oneline:
         "A look into the indicators based on specific  parameters that are used in technical analysis of stocks, to compare the effectiveness of these indicators in the prediction of stock price movement",
@@ -34,4 +34,4 @@ const project8 = {
         )
     },
 };
-export default project8;
+export default Project8;

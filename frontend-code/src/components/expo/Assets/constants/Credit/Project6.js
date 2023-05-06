@@ -1,4 +1,4 @@
-const project6 = {
+const Project6 = {
     id: 6,
     oneline:
         "To implement a quantitative and qualitative predictive model to predict the future sales of a company which can be used to improve future sales predictions.",
@@ -33,4 +33,4 @@ const project6 = {
         )
     },
 };
-export default project6;
+export default Project6;

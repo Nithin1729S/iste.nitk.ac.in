@@ -1,5 +1,5 @@
 import logo from './UnicornImage.jpeg';
-const project1 = {
+const Project1 = {
     id: 1,
     oneline:
         "The project aims to find out the major factors that helped Indian Startups of different fields to become a unicorn",
@@ -33,4 +33,4 @@ const project1 = {
         )
     },
 };
-export default project1;
+export default Project1;
