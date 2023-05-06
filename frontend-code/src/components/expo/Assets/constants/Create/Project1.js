@@ -31,8 +31,8 @@ const Project1 = {
             
             <>
                 {/* For multiple images/report, copy the entire div and put one embed tag in each */}
-                <div>
-                     style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }
+                <div
+                     style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
                     {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
                     <iframe>
                     src="https://drive.google.com/file/d/1jjH1lrcM3Ddqqj_w31jET2Ms_oDwD48F/preview" width="640" height="480" allow="autoplay"
