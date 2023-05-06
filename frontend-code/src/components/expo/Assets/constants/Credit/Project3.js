@@ -1,5 +1,5 @@
 import logo from './SurveyResults.png';
-const project3 = {
+const Project3 = {
     id: 3,
     oneline:
         "To study the consumer shift from traditional DTH services to OTT platforms in the Indian Market.",
@@ -33,4 +33,4 @@ const project3 = {
         )
     },
 };
-export default project3;
+export default Project3;

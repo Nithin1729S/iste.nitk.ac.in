@@ -1,5 +1,5 @@
 import logo from './spotify.jpg';
-const project4 = {
+const Project4 = {
     id: 4,
     oneline:
         "Study of the importance of psychology in business and marketing strategies that Spotify uses.",
@@ -33,4 +33,4 @@ const project4 = {
         )
     },
 };
-export default project4;
+export default Project4;
