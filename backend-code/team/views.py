@@ -16,11 +16,11 @@ def indexView(request):
     aux_core_objs = AuxCore.objects.all()
 
     core_data = CoreSerializer(core_objs, many=True).data
-    admin_core_data = core_data[:4]
+    admin_core_data = core_data[:7]
 
     print(admin_core_data)
     fac_ad_data = {
-            "id": 19,
+            "id": 17,
             "user": {
                 "id": 587,
                 "first_name": "Shashi",
@@ -32,12 +32,10 @@ def indexView(request):
             "email": "sbarya@nitk.edu.in",
             "linkedin_url": "https://www.linkedin.com/in/shashi-bhushan-arya-4a06236/"
     }
-    admin_core_data.append(core_data[21])
-    admin_core_data.append(core_data[22])
-    admin_core_data.append(core_data[23])
+
     admin_core_data.append(fac_ad_data)
 
-    core_data = core_data[4:21]
+    core_data = core_data[7:]
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
 
     core_names = []
@@ -64,8 +62,8 @@ def coreView(request):
 
     core_data = CoreSerializer(core_objs, many=True).data
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
-    admin_core_data = core_data[:4]
-    core_data = core_data[4:]
+    admin_core_data = core_data[:7]
+    core_data = core_data[7:]
     return Response({'admin_core':admin_core_data,
                     'core': core_data,
                     'aux_core': aux_core_data})

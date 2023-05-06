@@ -10,7 +10,7 @@ const project1 = {
     name: "Digital Oscilloscope using FPGA", // replace the name here
     imgUrl: [],
     members: [
-        'Malkangouda S Patil','Nihar Gowda S' 
+        'Malkangouda S Patil','Nihar Gowda S',"Yash Malve", "Varun Teja", "Bhaskara Akhila", "Kunal Kumar" , "Mallishawri A" , "Vishnu Kumar" 
     ], // add both mentors and mentees here, each name has to under quotes
     description: {
         aim: (
