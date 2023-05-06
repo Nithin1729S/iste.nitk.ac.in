@@ -1,29 +1,29 @@
 // the name of the variable corresponds the name of the file in lower case
-import logo from './NFTs.png'
-const Project1 = {
+import logo from './RN.png'
+const Project6 = {
     // Id is same as the number on the file name
     id: 1,
     // Self explanatory one liner
     oneline:
-        "To build an NFT marketplace where the users can trade their NFTs ",
+        "A graph-theory based approach to intercity road networks",
     logo: {logo}, //Ignore this for now
-    name: "ISTE's NFT Marketplace", // Name of project
+    name: "Road Traffic Navigator", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes
     members: [
-        "Hanuma", "Prathamesh", "Jitin","Pranav Salunkhe", "Sujan", "Akul", "Meghana Iyenger"
+        "Adarsh", "Anjishnu", "Sanket","Kushangi Sharma", "Siddharth Kelkar", "Aakash Reddy", "Isha Prabhu", "Saliq Gowhar", "Aditya Chauhan", "Jayasimha"
     ],
     description: {
         aim: (
             // Aim : self explanatory, keep it inside the div
             <div>
-                To create a personalized NFT marketplace for members to buy and sell NFTs
+                A graph-theory based approach to intercity road networks
             </div>
         ),
         des: (
             // Description : self explanatory, keep it inside the div
             <div>
-                An NFT marketplace is a digital platform where unique digital assets represented by NFTs can be bought, sold, and traded by creators and collectors. It allows creators to upload their digital assets and set prices for them, while buyers can purchase them using cryptocurrency. The blockchain ensures that the NFT is immutable and secures the ownership.
+                Mainly a backend-based project. Cities were represented as vertices in the graph, and the edges connecting them with the edge distance being the distance between the two cities. This data was obtained from an API. Various graph algorithms have been implemented in the backend.
             </div>
         ),
         res: (
@@ -35,11 +35,11 @@ const Project1 = {
                      style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
                     {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
                     <iframe>
-                    src="https://drive.google.com/file/d/1jjH1lrcM3Ddqqj_w31jET2Ms_oDwD48F/preview" width="640" height="480" allow="autoplay"
+                    src="https://docs.google.com/document/d/13osPEZ2_LJefb8Ym9vki3KPQVosxEc5yE0MImC1QnGg/edit?usp=sharing" width="640" height="480" allow="autoplay"
                      </iframe>
                 </div>
             </>
         )
     },
 };
-export default Project1; // make sure this matches the name of the js object variable
+export default Project6; // make sure this matches the name of the js object variable

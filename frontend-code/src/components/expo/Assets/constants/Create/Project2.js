@@ -1,29 +1,30 @@
-import logo from './comicstripseries_coverpage.png';
 // the name of the variable corresponds the name of the file in lower case
-const Project1 = {
+import logo from './project_2.jpeg';
+
+const Project2 = {
     // Id is same as the number on the file name
-    id: 1,
+    id: 2,
     // Self explanatory one liner
     oneline:
-        "Understanding the comic design process and designing comic strips.",
+        "To change the genre of a movie/series using Kuleshov effect ",
     logo: {logo}, //Ignore this for now
-    name: "Comic Strip Series", // Name of project
+    name: "Recut Trailers", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes
     members: [
-        "Abhigyan", "Anjishnu", "Nithila", "Seetha", "Soumyakanta","Aanchal", "Shradha", "Soumi", "Swati", "Umika"
+        "Jitin" , "Hari","Allen" , "Siddhant"
     ],
     description: {
         aim: (
             // Aim : self explanatory, keep it inside the div
             <div>
-                To utilize different editing softwares to analyze comip strip design techniques and create new projects
+                To explore the Kuleshov Effect and its impact on the perception of genre in film and television
             </div>
         ),
         des: (
             // Description : self explanatory, keep it inside the div
             <div>
-                Designed 3 comic strips involving the steps of ideation, storyboarding, sketching, Digitalising and colouring. Softwares used for the project were Adobe Photoshop and Adobe Illustrator
+                Ideation followed by scripting and sourcing clips. Then created a rough version of trailer followed by addition of J&H cuts ,sound effects and bgm. 
             </div>
         ),
         res: (
@@ -34,12 +35,12 @@ const Project1 = {
                 <div>
                      style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }
                     {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
-                    <iframe>
-                    src="https://drive.google.com/file/d/1jjH1lrcM3Ddqqj_w31jET2Ms_oDwD48F/preview" width="640" height="480" allow="autoplay"
-                     </iframe>
+                    <iframe 
+                    src="https://drive.google.com/file/d/18r_2Pfh_oGcA_zp_rPa89jVb-yCTqsxE/preview" width="640" height="480" allow="autoplay">
+                    </iframe>
                 </div>
             </>
         )
     },
 };
-export default Project1; // make sure this matches the name of the js object variable
+export default Project2; // make sure this matches the name of the js object variable

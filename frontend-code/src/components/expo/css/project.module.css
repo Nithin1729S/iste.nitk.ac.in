@@ -92,7 +92,7 @@
 }
 .desc{
     color: rgba(255, 255, 255, 0.658);
-    position: absolute;
+    position: absolute; 
     width: 100%;
     top: 50%;
     left: 50%;

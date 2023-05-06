@@ -1,29 +1,29 @@
-import logo from './comicstripseries_coverpage.png';
 // the name of the variable corresponds the name of the file in lower case
-const Project1 = {
+import logo from './project_3.png';
+const Project3 = {
     // Id is same as the number on the file name
-    id: 1,
+    id: 3,
     // Self explanatory one liner
     oneline:
-        "Understanding the comic design process and designing comic strips.",
-    logo: {logo}, //Ignore this for now
-    name: "Comic Strip Series", // Name of project
+        "Stranger Things ",
+    logo:{logo},//Ignore this for now
+    name: "Stranger Things ", // Name of project
     imgUrl: [], //Keep this as is
     // Team members has both mentors and mentees, all names inside quotes
     members: [
-        "Abhigyan", "Anjishnu", "Nithila", "Seetha", "Soumyakanta","Aanchal", "Shradha", "Soumi", "Swati", "Umika"
+        "Praneeth S","Radhika Rathi","Vamshik", "Jashwanth"
     ],
     description: {
         aim: (
             // Aim : self explanatory, keep it inside the div
             <div>
-                To utilize different editing softwares to analyze comip strip design techniques and create new projects
+                Stranger Things Trailer
             </div>
         ),
         des: (
             // Description : self explanatory, keep it inside the div
             <div>
-                Designed 3 comic strips involving the steps of ideation, storyboarding, sketching, Digitalising and colouring. Softwares used for the project were Adobe Photoshop and Adobe Illustrator
+                The key idea of this project is to  make an intro scene for the famous Netflix TV series Stranger Things with the aid of 3D modeling software like Maya, Blender, unreal engine and finally compling the renders together by using video editing software like Premiere Pro
             </div>
         ),
         res: (
@@ -34,12 +34,12 @@ const Project1 = {
                 <div>
                      style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }
                     {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
-                    <iframe>
-                    src="https://drive.google.com/file/d/1jjH1lrcM3Ddqqj_w31jET2Ms_oDwD48F/preview" width="640" height="480" allow="autoplay"
-                     </iframe>
+                    <iframe 
+                    src="https://drive.google.com/file/d/11CSbZVxkkvHECcp3MIaY4OH7YGHBRxVw/preview" width="640" height="480" allow="autoplay">
+                    </iframe>
                 </div>
             </>
         )
     },
 };
-export default Project1; // make sure this matches the name of the js object variable
+export default Project3; // make sure this matches the name of the js object variable
