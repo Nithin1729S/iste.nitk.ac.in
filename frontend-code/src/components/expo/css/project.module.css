@@ -75,6 +75,9 @@
     transition: all .5s ease-out;
     width: 30%;
 }
+.buttonContent p{
+    font-size: 1.1vmax;
+}
 .buttonContent:hover{
     background-position: left bottom;
 }
@@ -111,6 +114,22 @@
     border-radius: 10%;
     color: white;
 }
+
+@media only screen and (max-width: 640px)  {
+    .buttonContent{
+        
+    }
+    .buttonContent p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        font-size: 2vmax;
+    }
+}
+
 @media only screen and (max-width: 1260px) {
     .tagContainer {
         visibility: hidden;

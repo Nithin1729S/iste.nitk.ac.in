@@ -43,7 +43,7 @@
 	/* margin-right: 35px; */
 	text-transform: capitalize;
 	font-weight:900;
-	font-size: 5rem;
+	font-size: 6vmax;
 	background: linear-gradient(to right,#ce6363, #ad2dc7);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
@@ -105,4 +105,29 @@
 }
 .navElement:hover .buttonHeader {
 	visibility: visible;
+}
+
+@media only	screen and (max-width: 640px) {
+	.logo{
+		display: none;
+	}
+	.head{
+		width: 100%;
+	}
+	.header{
+		font-size: 8vmax;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.content{
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		margin: 10px 10px 0 10px;
+	}
+	.navElement{
+		padding: 20px;
+		width: 100%;
+		align-items: center;
+	}
 }

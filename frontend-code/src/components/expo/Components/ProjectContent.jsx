@@ -34,7 +34,7 @@ const ProjectContent = ({ projectData, sig }) => {
 						to={`/expoPage/${sig.concat(projectData.id)}`}
 						className=" "
 					>
-						View Details
+						<p>View Details</p>
 					</Link>
 				</div>
 			</div>

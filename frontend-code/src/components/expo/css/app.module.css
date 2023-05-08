@@ -77,6 +77,13 @@
     padding: 7%;
 }
 
+@media only screen and (max-width: 640px) {
+    .projectContent{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    }
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
