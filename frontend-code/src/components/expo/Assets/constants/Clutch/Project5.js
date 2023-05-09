@@ -1,6 +1,6 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
 import logo from './cav.png'
-
+import pdf from './Report_Cavitation.pdf'
 const project5 = {
     id: 5,
     oneline:
@@ -26,7 +26,7 @@ const project5 = {
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
                 {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
-                <iframe src="https://drive.google.com/file/d/1nE7zKfbaPXD-VWn0hf8IWf4lHLtH1h9_/view?usp=sharing" width="640" height="480" allow="autoplay"></iframe>
+                <iframe src={pdf} width="640" height="480" allow="autoplay"></iframe>
             </div>
         )
     },

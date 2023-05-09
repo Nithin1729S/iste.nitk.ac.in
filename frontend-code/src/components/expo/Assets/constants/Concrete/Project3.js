@@ -1,6 +1,6 @@
 // import logo from "../images/project expo_Vfinal_Crypt1.png"
 import logo from './OpenStoryPic.png'
-
+import pdf from './ReportOpenStory.pdf'
 const project3 = {
     id: 3,
     oneline:
@@ -28,7 +28,7 @@ const project3 = {
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
                 {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
-                <iframe src="https://drive.google.com/drive/folders/1PP7khdy-iWhKxZtDUb-AmfDUivHe0yDh" width="640" height="480" allow="autoplay"></iframe>
+                <iframe src={pdf} width="640" height="480" allow="autoplay"></iframe>
             </div>
         )
     },

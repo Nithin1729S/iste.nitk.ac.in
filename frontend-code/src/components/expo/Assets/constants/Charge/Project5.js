@@ -26,7 +26,7 @@ const project5 = {
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
                 {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
-                
+                <iframe src="https://docs.google.com/document/d/1nf7Yt4Hja0TNQrGQLX6CmnVvw_MT-j_B/edit" width="640" height="480" allow="autoplay"></iframe>
             </div>
         )
     },

@@ -27,7 +27,7 @@ const project3 = {
         res: (
             <div style={{ paddingBottom: "2%", display: "flex", alignItems:"center",justifyContent:"center" }}>
                 {/* Find the report of the project here, click  on the three dots at the top right, Open in New Window, click on the three dots again and then again go to Embed Item */ }
-                {/* <iframe src="https://drive.google.com/file/d/1jctuLwfCNMR2ZyMszOQrFjMRJQOfJKyt/preview" width="640" height="480" allow="autoplay" title="Open in New Window"></iframe> */}
+                <iframe src="https://drive.google.com/file/d/1jctuLwfCNMR2ZyMszOQrFjMRJQOfJKyt/preview" width="640" height="480" allow="autoplay" title="Open in New Window"></iframe>
             </div>
         )
     },

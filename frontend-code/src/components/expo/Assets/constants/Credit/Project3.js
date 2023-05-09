@@ -1,4 +1,5 @@
 import logo from './SurveyResults.png';
+import pdf from './OTTReport.pdf';
 const Project3 = {
     id: 3,
     oneline:
@@ -25,8 +26,7 @@ const Project3 = {
                 <div
                      style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
                     {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
-                    <iframe>
-                    src="https://drive.google.com/file/d/13ovq40tEFzha8qG9RC6FEtCNiw6M2vMB/view?usp=sharing" width="640" height="480" allow="autoplay"
+                    <iframe src={pdf} width="640" height="480" allow="autoplay">
                      </iframe>
                 </div>
             </>

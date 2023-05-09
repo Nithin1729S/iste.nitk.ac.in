@@ -1,5 +1,6 @@
 // the name of the variable corresponds the name of the file in lower case
 import logo from './chatbot.png';
+import pdf from './ChatBot.pdf'
 const Project4 = {
     // Id is same as the number on the file name
     id: 4,
@@ -32,7 +33,7 @@ const Project4 = {
             <>
                 {/* For multiple images/report, copy the entire div and put one embed tag in each */}
                 <div style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
-                <iframe src="https://drive.google.com/drive/folders/1SVdLS65SRDx_yTsvqldUvqtlVqexKkEv" width="640" height="480" allow="autoplay">
+                <iframe src={pdf} width="640" height="480" allow="autoplay">
                 </iframe>
                 </div>
             </>

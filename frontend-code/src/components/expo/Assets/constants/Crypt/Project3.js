@@ -1,5 +1,6 @@
 // the name of the variable corresponds the name of the file in lower case
 import logo from './ChitraE.jpeg'
+import pdf from './ChitraE.pdf'
 const Project3 = {
     // Id is same as the number on the file name
     id: 3,
@@ -33,7 +34,7 @@ const Project3 = {
                 {/* For multiple images/report, copy the entire div and put one embed tag in each */}
                 <div style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
                 <iframe 
-                src="https://drive.google.com/file/d/1e-SBmrsoun89xB0fL47S0fWE5KVN7-7k/view?usp=sharing" width="640" height="480" allow="autoplay">
+                src={pdf} width="640" height="480" allow="autoplay">
                 </iframe>
                 </div>
             </>

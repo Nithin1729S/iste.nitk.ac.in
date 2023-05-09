@@ -1,4 +1,5 @@
 import logo from './spotify.jpg';
+import pdf from './SpotifyPoster.pdf';
 const Project4 = {
     id: 4,
     oneline:
@@ -25,8 +26,7 @@ const Project4 = {
                 <div
                      style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
                     {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
-                    <iframe>
-                    src="https://drive.google.com/drive/folders/1ycuIVYFnKVvb1Kpm4GG1E9hmU_5Fopob" width="640" height="480" allow="autoplay"
+                    <iframe src={pdf} width="640" height="480" allow="autoplay">
                      </iframe>
                 </div>
             </>

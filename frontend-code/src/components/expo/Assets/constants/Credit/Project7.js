@@ -25,8 +25,7 @@ const Project7 = {
                 <div
                      style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
                     {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
-                    <iframe>
-                    src="https://drive.google.com/drive/folders/1oZqYHnpnLiOa9YmHkrV-t2dwmUHBqEGA?usp=share_link" width="640" height="480" allow="autoplay"
+                    <iframe src="https://docs.google.com/document/d/13Xb4LK2xCQ_uz3DKFxF7oP029kusaTXau3jF0EZGYEY/edit" width="640" height="480" allow="autoplay">
                      </iframe>
                 </div>
             </>

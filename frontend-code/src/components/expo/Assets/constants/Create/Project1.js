@@ -34,8 +34,7 @@ const Project1 = {
                 <div
                      style={ { paddingBottom: "2%", display: "flex", alignItems: "center", justifyContent: "center" } }>
                     {/* Fetch the embed tag from the gdrive as shown in the meet and put this here */}
-                    <iframe>
-                    src="https://drive.google.com/file/d/1jjH1lrcM3Ddqqj_w31jET2Ms_oDwD48F/preview" width="640" height="480" allow="autoplay"
+                    <iframe src="https://drive.google.com/file/d/1jjH1lrcM3Ddqqj_w31jET2Ms_oDwD48F/preview" width="640" height="480" allow="autoplay">
                      </iframe>
                 </div>
             </>
