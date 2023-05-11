@@ -121,7 +121,7 @@ const DescContent = ({ sn, id }) => {
 				</Link>
 				<div className={styles.heading}>{curProj.name}</div>
 				<div className={styles.headingSub}>
-					{sn.charAt(0).toUpperCase() + sn.slice(1)} | 2023
+					{sn.charAt(0).toUpperCase() + sn.slice(1)} | 2022-23
 				</div>
 
 				{/* <div className={styles.subheading}>
