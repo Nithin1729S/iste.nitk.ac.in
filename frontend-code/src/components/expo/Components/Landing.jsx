@@ -4,7 +4,7 @@ import logo from "../Assets/istenitklogo.png";
 import DA from '../Assets/down-arrow.png';
 import expoBG from '../Assets/expoBG.jpeg';
 // import $ from 'jQuery';
-
+import video from '../Assets/ExpoLogo1.mp4';
 
     
 
@@ -13,6 +13,11 @@ function Landing() {
 
   return (
     <div className={`${styles.landing}`}>
+        <div>
+            <video className={`${styles.video}`} muted autoPlay>
+                <source src={video} type="video/mp4" />
+            </video>
+        </div>
         <div className={`${styles.container}`}>
             <div className={`${styles.top}`}>
             <div className={`${styles.logo}`}>
