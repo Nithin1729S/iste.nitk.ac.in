@@ -62,7 +62,7 @@ class Header extends React.Component {
 	expoNavHeader = (
 		<li>
 			<Link className="white-text" to="/expo/">
-				Expo 2022
+				Expo 2023
 			</Link>
 		</li>
 	);
