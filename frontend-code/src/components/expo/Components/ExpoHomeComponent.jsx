@@ -55,7 +55,7 @@ class ExpoHomeComponent extends React.Component {
                         />
                     </div>
                     <div className={styles.projectContent}>
-                        <Projects sig={sig} />
+                        <Projects sig={sig}  />
                     </div>
                 </div>
             </div>
