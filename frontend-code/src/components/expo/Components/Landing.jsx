@@ -41,7 +41,8 @@ function Landing() {
             <div className={`${styles.logo}`}>
                                 <img
                                     src={logo}
-                                    alt="ISTE Logo"
+                                    alt="ISTE NITK Logo"
+
                                 />
             </div>
             {/* <div className={`${styles.grad_line}`}></div> */}
