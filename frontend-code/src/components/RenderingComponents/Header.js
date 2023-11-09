@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 
 import logopath from '../logo.png';
 import '../../css/header.css';
-import { enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian,enableSHE, enableClutchMB } from '../../constants';
+import { enableExpo, enableRecs, enableCryptonite,enableSMP, enableObsidian,enableSHE, enableClutchMB, enableLeaderboard } from '../../constants';
 // import {  enableLeaderboard } from '../../constants';
+// import soPath from '../SquareOne23/index.html';
 
 class Header extends React.Component {
 	state = { loggedInName: '' };
@@ -126,6 +127,20 @@ class Header extends React.Component {
 			</Link>
 		</li>
 	)
+	squareOne23Header =(
+		<li>
+			{/* <Link to='/leaderboard' className="waves-effect white-text">
+				Square One 23
+			</Link> */}
+			<a
+				href='https://iste-squareone-leaderboard.vercel.app/' 
+				className="white-text"
+				target="blank"
+			>
+				Square One 23
+			</a>
+		</li>
+	);
 	// squareOneHeader = (
 	// 	<li>
 	// 		<Link to="/leaderboard/" className="waves-effect white-text">
@@ -227,46 +242,46 @@ class Header extends React.Component {
 					{ enableRecs ? this.recsNavHeader : null }
 					{enableSMP ? this.smpNavHeader : null}
 					{/* {this.obscuraNavHeader} */}
-					{/* {enableLeaderboard ? (
+					{enableLeaderboard ? (
 						<li className="no-padding">
 							<ul className="collapsible collapsible-accordion">
 								<li>
-									<Link className="collapsible-header waves-effect white-text">
-										Square One
-										<i className="material-icons white-text ">
+								<a
+									href='https://iste-squareone-leaderboard.vercel.app/' 
+									className="white-text"
+									target="blank"
+								>
+									Square One 23
+								</a>
+									{/* <Link to="/leaderboard" className="collapsible-header waves-effect white-text">
+										Square One 23 */}
+										{/* <i className="material-icons white-text ">
 											arrow_drop_down
-										</i>
-									</Link>
-									<div className="collapsible-body">
+										</i> */}
+									{/* </Link> */}
+									{/* <div className="collapsible-body">
 										<ul>
 											<li>
 												<Link
-													to="/squareone/"
-													className="waves-effect white-text"
-												>
-													Events
-												</Link>
-											</li>
-											<li>
-												<Link
-													to="/leaderboard"
+													to="/squareoneleaderboard"
 													className="waves-effect white-text"
 												>
 													Leaderboard
 												</Link>
 											</li>
 										</ul>
-									</div>
+									</div> */}
 								</li>
 							</ul>
 						</li>
 					) : (
-						this.squareOneHeader
-					)} */}
+						this.squareOne23Header
+					)}
 					{ this.teamNavHeader }
 					{this.galleryNavHeader}
 					{this.blogNavHeader}
 					{enableExpo ? this.expoNavHeader : null}
+					
 					{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 					{/* {this.transcendNavHeaderMobile} */}
 					{/* {this.smpNavHeader} */}
@@ -313,15 +328,7 @@ class Header extends React.Component {
 										>
 											<li>
 												<Link
-													to="/squareone/"
-													className="waves-effect white-text"
-												>
-													Events
-												</Link>
-											</li>
-											<li>
-												<Link
-													to="/leaderboard"
+													to="/squareoneleaderboard"
 													className="waves-effect white-text"
 												>
 													Leaderboard
@@ -330,7 +337,7 @@ class Header extends React.Component {
 										</ul>
 									</>
 								) : (
-									this.squareOneHeader
+									this.squareOne23Header
 								)} */}
 								{ enableClutchMB ? this.clutchMBHeader : null }
 								{ enableSHE ? this.sheNavHeader : null }
@@ -341,6 +348,7 @@ class Header extends React.Component {
 								{this.fortniteNavHeader}
 								{this.blogNavHeader}
 								{enableExpo ? this.expoNavHeader : null}
+								{enableLeaderboard ? this.squareOne23Header : null}
 								{/* {enableObsidian ? this.obsidianNavHeader : null} */}
 								{/* {enableCryptonite ? this.cryptoniteNavHeader : null} */}
 								{/* {this.transcendNavHeader} */}

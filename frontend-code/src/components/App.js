@@ -29,6 +29,9 @@ import Blackbox from '../components/Obsidian/components/Blackbox'
 import { enableClutchMB, enableSHE } from '../constants';
 
 import '../css/constants.css';
+import SquareOne from './SquareOne23/index.js';
+
+
 
 
 
@@ -41,6 +44,7 @@ class App extends React.Component {
 	changeFooterBackground = (val) => {
 		this.setState({ footerBackgroundVariant: val });
 	};
+	
 	render() {
 		return (
 			<HashRouter>
@@ -109,7 +113,7 @@ class App extends React.Component {
 						<Route path="/awss" component={AWSS} />
 						<Route path="/gallery" component={Gallery} />
 						<Route path="/" component={HomeComponent} />
-
+					    {/* <Route path="/leaderboard" component={SquareOne}/> */}
 					</Switch>
 				</div>
 				<Wrapper shouldRender={this.state.headerShouldRender}>
