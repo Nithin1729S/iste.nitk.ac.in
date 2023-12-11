@@ -45,7 +45,7 @@ def indexView(request):
         core_names.append(member.user.first_name + member.user.last_name)
     members = []
     for member in User.objects.all().order_by('first_name', 'last_name'):
-        if member.first_name+member.last_name not in core_names and member.first_name != 'ISTE' and member.first_name.strip() != '' and member.is_active:
+        if member.first_name+member.last_name not in core_names and member.first_name != 'ISTE' and member.first_name.strip() != '' and member.is_active and member.batch_of >= 2024:
             members.append(member)
 
     members_data = UserSerializer(members, many=True).data

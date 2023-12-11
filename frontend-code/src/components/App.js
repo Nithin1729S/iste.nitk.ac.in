@@ -29,7 +29,7 @@ import Blackbox from '../components/Obsidian/components/Blackbox'
 import { enableClutchMB, enableSHE } from '../constants';
 
 import '../css/constants.css';
-import SquareOne from './SquareOne23/index.js';
+// import SquareOne from './SquareOne23/index.js';
 
 
 

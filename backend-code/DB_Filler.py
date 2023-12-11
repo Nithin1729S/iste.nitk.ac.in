@@ -13,12 +13,19 @@ from SMP.models import SMP
 from account.models import User
 from sig.models import SIG
 
+from openpyxl import load_workbook
 
-def excel_read(file, sheet_name='Sheet1'):
-    book = xlrd.open_workbook(file)
-    sheet = book.sheet_by_name(sheet_name)
-    data = [[sheet.cell_value(r, c) for c in range(5)]
-            for r in range(sheet.nrows)]
+
+def excel_read(file, sheet_name='All members'):
+    workbook = load_workbook(file, read_only=True)
+    sheet = workbook[sheet_name]
+    data = []
+
+    for row in sheet.iter_rows(min_row=1, max_row=277, min_col=1, max_col=5):
+        row_data = [cell.value for cell in row]
+        # print(row_data)  # Add this line for debugging
+        data.append(row_data)
+
     return data
 
 def excel_write(dataset, file, worksheet_name="Usernames"):
@@ -34,7 +41,7 @@ def excel_write(dataset, file, worksheet_name="Usernames"):
         n += 1
     workbook.close()
 
-data = excel_read('ISTE 2021-22 members.xlsx')[1:]
+data = excel_read('ISTE-All member details.xlsx')[1:]
 i = 0
 while i < len(data):
     data[i][0] = int(data[i][0])
@@ -43,7 +50,7 @@ while i < len(data):
     else:
         data[i][-1] = str(data[i][-1])
     i += 1
-print(data[0:10])
+print(f"HERE: {data[0:10]}")
 
 final = [['Name', 'Rollno', 'Username', 'Pwd', 'Batch']]
 for row in data:
@@ -69,11 +76,14 @@ for row in data:
                 email=emailid,
                 batch_of=batch,
                 phone_number=contact)
-    user.save()
-    user.set_password(password)
-    user.avatar = ImageFile(open("media/profile_pictures/generic.png", "rb"))
-    user.save()
-    print(name + ' Done')
+    try:
+        user.save()
+        user.set_password(password)
+        user.avatar = ImageFile(open("media/profile_pictures/generic.png", "rb"))
+        user.save()
+        print(name + ' Done')
+    except:
+        print(f"problem: {user.get_username}")
     final.append([name, rollno, username, password, batch])
 
 excel_write(final, 'LoginDetails.xlsx')
