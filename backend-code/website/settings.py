@@ -78,6 +78,7 @@ MIDDLEWARE = [
     # For django-cors-headers
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'website.custom_cors_middleware.CustomCorsMiddleware'
 ]
 
 ROOT_URLCONF = 'website.urls'
@@ -194,7 +195,7 @@ REST_FRAMEWORK = {
 
 # For whitelisting CORS
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost",
 ]
 
 APPEND_SLASH = True

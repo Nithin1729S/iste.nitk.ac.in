@@ -18,7 +18,7 @@ def default_sig_poster_path():
 
 
 def default_carousel_image_path():
-    return 'carousel_home/familyistemobile.jpg'
+    return 'carousel_home/None_ISTE_Banner.jpg'
 
 
 def default_gallery_image_path():
