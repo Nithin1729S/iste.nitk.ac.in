@@ -17,7 +17,7 @@ def indexView(request):
 
     core_data = CoreSerializer(core_objs, many=True).data
     admin_core_data = core_data[:7]
-
+    admin_core_data.append(core_data[-1])
     print(admin_core_data)
     fac_ad_data = {
             "id": 17,
@@ -36,6 +36,7 @@ def indexView(request):
     admin_core_data.append(fac_ad_data)
 
     core_data = core_data[7:]
+    core_data.pop()
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
 
     core_names = []
@@ -63,6 +64,8 @@ def coreView(request):
     core_data = CoreSerializer(core_objs, many=True).data
     aux_core_data = AuxCoreSerializer(aux_core_objs, many=True).data
     admin_core_data = core_data[:7]
+    admin_core_data.append(core_data[-1])
+
     core_data = core_data[7:]
     return Response({'admin_core':admin_core_data,
                     'core': core_data,
