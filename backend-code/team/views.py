@@ -24,11 +24,12 @@ def indexView(request):
             "id": 17,
             "user": {
                 "id": 587,
-                "first_name": "Vaishakh",
+                "first_name": "Dr. Vaishakh",
                 "last_name": " Nair",
                 "avatar": "/media/profile_pictures/nair.jpeg"
             },
             "role": "Faculty Advisor",
+            "department":"Chemical Engineering",
             "description": "Dr. Vaishakh Nair is the Faculty Advisor for ISTE NITK and an Assistant Professor in the Department of Chemical Engineering at NITK Surathkal. A leading researcher in lignin valorization, photocatalysis, and nanotechnology, he has made groundbreaking contributions to sustainable chemical processes. With over 25 research papers published in high-impact journals, an h-index of 21, and more than 2,000 citations, his work is widely recognized in the scientific community. He has successfully secured multiple funded research projects, delivered expert lectures at renowned institutions, and continues to push the boundaries of chemical engineering innovation. His dedication to academia and research excellence cements his reputation as a thought leader in his field.",
             "email": "vaishakhnair@nitk.edu.in",
             "linkedin_url": "https://www.linkedin.com/in/dr-vaishakh-nair-32a31a1b/?originalSubdomain=in"
@@ -41,11 +42,12 @@ def indexView(request):
             "id": 18,
             "user": {
                 "id": 597,
-                "first_name": "Shashi",
+                "first_name": "Dr. Shashi",
                 "last_name": "Bushan Arya",
                 "avatar": "/media/profile_pictures/586_Shashi_Bushan_Arya.jpeg"
             },
             "role": "Professor In Charge of Technical Clubs at NITK",
+            "department":"Metallurgical and Materials Engineering",
             "description": "Dr. S. B. Arya is the Professor in Charge of Technical Clubs at NITK and an associate professor in the Metallurgical and Materials Engineering at NITK. He is an expert in all things corrosion, novel materials developments and metallic passivation. Currently, he is researching in niche and innovative fields such as Li-ion Battery monitoring, corrosion behaviour and steel response to stimuli. Having multiple funded research projects, delivered lectures at several organizations and published 100+ papers, he is more than just a specialist when it comes to his field of study.",
             "email": "sbarya@nitk.edu.in",
             "linkedin_url": "https://www.linkedin.com/in/shashi-bhushan-arya-4a06236/"

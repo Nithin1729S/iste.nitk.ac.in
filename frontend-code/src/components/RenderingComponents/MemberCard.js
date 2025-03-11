@@ -25,11 +25,11 @@ class MemberCard extends React.Component {
 				<div className="row center">
 					{this.props.name && <h4>{this.props.name}</h4>}
 					{this.props.role && <h6>{this.props.role}</h6>}
-					{this.props.content && <p>{parse(this.props.content)}</p>}
 					{this.props.department && <p><u>Department:</u> {this.props.department}</p>}
 					{this.props.about_me && <p><u>About Me:</u> {this.props.about_me}</p>}
 					{this.props.technical_interests && <p><u>Technical Interests:</u> {this.props.technical_interests}</p>}
 					{this.props.internships && <p><u>Internships:</u> {this.props.internships}</p>}
+					{this.props.content && <p>{parse(this.props.content)}</p>}
 				</div>
 
 				<div className="row center">
