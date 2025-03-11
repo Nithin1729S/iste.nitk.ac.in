@@ -29,6 +29,10 @@ const DataItem = (props) => {
                 linkedin={props.data.linkedin_url}
                 email={"mailto:" + email}
                 imgurl={props.data.user.avatar}
+                department={props.data.department}
+                about_me={props.data.about_me}
+                technical_interests={props.data.technical_interests}
+                internships={props.data.internships}
             />
         </div>
     );

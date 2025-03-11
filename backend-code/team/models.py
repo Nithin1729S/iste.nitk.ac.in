@@ -1,9 +1,7 @@
-import email
 from django.db import models
 from account.models import User
 
 # Create your models here.
-
 
 class Core(models.Model):
     user = models.ForeignKey(
@@ -25,7 +23,18 @@ class Core(models.Model):
         blank=True,
         max_length=100
     )
-
+    department = models.TextField(
+        default=""
+    )
+    about_me = models.TextField(
+        default=""
+    )
+    technical_interests = models.TextField(
+        default=""
+    )
+    internships = models.TextField(
+        default=""
+    )
 
 class AuxCore(models.Model):
     user = models.ForeignKey(
@@ -45,4 +54,16 @@ class AuxCore(models.Model):
     linkedin_url = models.URLField(
         blank=True,
         max_length=100
+    )
+    department = models.TextField(
+        default=""
+    )
+    about_me = models.TextField(
+        default=""
+    )
+    technical_interests = models.TextField(
+        default=""
+    )
+    internships = models.TextField(
+        default=""
     )
